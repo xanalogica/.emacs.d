@@ -13,8 +13,6 @@ Other Emacs files I've studied:
 - https://github.com/redguardtoo/emacs.d
 - https://github.com/purcell/emacs.d/blob/master/README.md
 
-
-
 * Getting Help
 :PROPERTIES:
 :VISIBILITY: children
