@@ -4,6 +4,13 @@
 #+OPTIONS:	toc:4 h:4
 #+STARTUP:	overview
 
+This is an ongoing copy of my Emacs configuration, annotated with explanations.
+
+;;;                           https://github.com/redguardtoo/emacs.d
+;;;                           https://github.com/purcell/emacs.d/blob/master/README.md
+
+
+
 * Getting Help
 :PROPERTIES:
 :VISIBILITY: children
