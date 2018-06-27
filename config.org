@@ -1,5 +1,6 @@
 # -*- eval: (git-auto-commit-mode 1) -*-
-#+TITLE:	My Emacs Configuration, Structured Using Org-Mode Babel
+#+TITLE:	My Emacs Configuration
+#+SUBTITLE:	Structured Using Org-Babel
 #+OPTIONS:	toc:4 h:4
 #+STARTUP:	overview
 
