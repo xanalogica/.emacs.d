@@ -8,8 +8,10 @@ This is an ongoing copy of my Emacs configuration, annotated with
 explanations.  I've learned a lot from other people's configuration and I
 wanted to share what I've ended up with.
 
-;;;                           https://github.com/redguardtoo/emacs.d
-;;;                           https://github.com/purcell/emacs.d/blob/master/README.md
+Other Emacs files I've studied:
+
+- https://github.com/redguardtoo/emacs.d
+- https://github.com/purcell/emacs.d/blob/master/README.md
 
 
 
