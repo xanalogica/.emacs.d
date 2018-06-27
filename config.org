@@ -1,0 +1,4420 @@
+# -*- eval: (git-auto-commit-mode 1) -*-
+#+TITLE:	My Emacs Configuration, Structured Using Org-Mode Babel
+#+OPTIONS:	toc:4 h:4
+#+STARTUP:	overview
+
+* Getting Help
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+** Where to Find Community Resources for Emacs
+
+- http://emacs.stackexchange.com/
+- http://planet.emacsen.org/			Best collection of Emacs-related blogs
+- https://github.com/languages/Emacs%20Lisp	Search for latest Elisp code
+   (and then click "Watch" to get notified of bugs and fixes automatically!)
+- http://www.emacswiki.org/emacs/		Community Wiki
+
+** Tips: Obtaining Emacs Help
+- C-h ?			:: help-for-help
+- C-h C-h			:: help-for-help
+- C-h a			:: apropos-command
+
+- C-h v			:: describe-variable
+- C-h f			:: describe-function
+- C-h k			:: describe-key
+- C-h c			:: describe-key-briefly
+- C-h b			:: describe-bindings
+
+- C-h C			:: describe-coding-system
+- C-h I			:: describe-input-method
+- C-h C-\			:: describe-input-method
+- C-h L			:: describe-language-environment
+- C-h C-l			:: describe-language-environment
+
+- C-h TAB			:: info-lookup-symbol
+- C-h C-k			:: Info-goto-emacs-key-command-node
+- C-h C-f			:: Info-goto-emacs-command-node
+- C-h i			:: info
+
+- F1			:: help
+- C-h F			:: view-emacs-FAQ
+- C-h			:: help
+- C-h C-p			:: describe-project
+- C-h C-w			:: describe-no-warranty
+- C-h C-d			:: describe-distribution
+- C-h C-c			:: describe-copying
+- C-h t			:: help-with-tutorial
+- C-h q			:: help-quit
+- C-h n			:: view-emacs-news
+- C-h C-n			:: view-emacs-news
+- C-h RET			:: view-order-manuals
+- C-h w			:: where-is
+- C-h s			:: describe-syntax
+- C-h P			:: view-emacs-problems
+- C-h p			:: finder-by-keyword
+- C-h m			:: describe-mode
+- C-h l			:: view-lossage
+- C-h h			:: view-hello-file
+
+** Reversing that Help-Lookup to Find Things Hanging Off Keystrokes
+
+- C-x C-h			:: list anything starting with C-x
+- C-c C-h			:: list anything starting with C-c
+- C-x r C-h			:: list the rectangular keystrokes
+
+* Introduction to Babel for Org-mode or What Is This File?
+
+Babel is Org-mode's ability to execute or extract source code within Org-mode
+documents.  The source can be different programming languages, all in the same
+=.org= file.
+
+Babel has special support for embedded your Emacs initialization code into
+Org-mode files, so that you can make use of the nice features of Org-mode such
+as outline folding, tags, notes, HTML export, etc.  The /org-babel-load-file/
+function can be used to load the Emacs Lisp code blocks embedded in a literate
+Org-mode file in the same way that you might load a regular Emacs Lisp file.
+
+To use org-mode for organizing your Emacs configuration, a very minimum amount
+of configuration goes into the user's =~/.emacs.d/init.el= file.
+
+#+NAME: ~/.emacs.d/init.el
+#+BEGIN_SRC example
+  ; -*-mode: Emacs-Lisp; auto-recompile:f; outline-minor-mode:t-*-
+
+  ; **********************************************************************
+  ;   Define Various Emacs Policies re Debugging and Analysis of Issues
+  ; **********************************************************************
+
+  ; Useful for debugging problems with Emacs on occasion.
+  ; (setq debug-on-error t)
+  ; (setq stack-trace-on-error t)
+  ; (debug-on-entry 'integerp)
+
+  (setq inhibit-startup-message t)
+
+  ; **********************************************************************
+  ;  Minimum Setup Necessary Before Loading Configuration from .org File
+  ; **********************************************************************
+
+  (require 'cask "~/.cask/cask.el")
+  (cask-initialize)
+
+  (require 'org)
+  (org-babel-load-file
+      "~/.emacs.d/config.org" nil)  ;; Tangle into .el and load
+#+END_SRC
+
+
+* My Actual Configuration
+:PROPERTIES:
+:CUSTOM_ID: babel-init
+:VISIBILITY: children
+:END:
+<<babel-init>>
+
+** Hotkey for Quickly Reloading This Configuration After Changes
+The first thing I want is the ability to quickly reload my Emacs configuration
+each time I make a change in this file.
+
+#+BEGIN_SRC emacs-lisp
+  (defun reload() (interactive)
+    "Reload ~/.emacs"
+
+    (if (file-exists-p "~/.emacs.d/init.el")
+        (load-file "~/.emacs.d/init.el"))
+  )
+  (global-set-key [f6] 'reload)
+#+END_SRC
+
+** Additional Small Configuration File
+*** Place for Small Automatic Configuration Settings
+
+Emacs likes to write small tidbits of manual configuration into an .el file so
+I use a small file that I never look into, to keep it separate from my
+=config.org=.  It also contains my private information like passwords.
+
+#+BEGIN_SRC emacs-lisp
+  (setq custom-file "~/.emacs.d/custom-settings.el")
+  (load custom-file t)
+#+END_SRC
+
+** Package Management
+
+To manage my Emacs packages I rely upon the Cask library along with Pallet, a
+helper package that updates my Cask file (list of packages) as I add and
+remove them using the =M-x list-packages= Emacs UI.
+
+*** Cask
+
+Modern Emacs v25 (for me) uses the built-in package.el but then I apply the
+Cask add-on module to /Caskify/ my =~/.emacs.d/= dirctory and use stable
+package repositories.  Cask helps to manage dependencies for my local Emacs
+configuration.
+
+I have Cask installed from a Git checkout under =~/.cask/= with the binary
+command /cask/ in my shell path under =~/.cask/bin/=.
+
+You can read about Cask at:
+
+   http://cask.readthedocs.org/en/latest/
+
+with the source Git repo at:
+
+   https://github.com/cask/cask
+
+*** Pallet
+
+[[https://github.com/rdallasgray/pallet][Pallet]] is a package management helper for Emacs.  It's main job is to add and
+delete package references from your =~/.emacs.d/Cask= file as you install and
+delete them using the built-in Emacs package management system.
+
+Pallet has a very simple interface:
+
+- M-x pallet-init creates a Cask file using information about installed
+      packages from the existing package.el system
+- M-x pallet-install installs packages listed in your Cask file
+- M-x pallet-update updates installed packages
+
+#+BEGIN_SRC emacs-lisp
+  (require 'pallet)
+  (pallet-mode t)
+#+END_SRC
+
+This will bootstrap cask and pallet.  It will create a =~/.emacs.d/.cask/=
+directory containing all the packages you will install.
+
+Restart your emacs, and from now on pallet-mode will be active: any time you
+install a package with M-x package-list-packages and similar, pallet will
+write it's name down in your =~/.emacs.d/Cask= file and the files it downloads
+will go under the =~/.emacs.d/.cask/= directory.
+
+
+** Protecting My Work (backups, undo, encryption, versioning)
+*** Backups
+
+I keep my backups under =~/.emacs.d/backups/=.
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default make-backup-files
+    t)                                  ;; Whether to make backup files at all or not.
+
+  (add-to-list 'backup-directory-alist
+    (cons "." "~/.emacs.d/backups/"))   ;; Specify where to store backups of all files.
+#+END_SRC
+
+*** Undo
+*** Content Encryption
+
+There is encryption of entire files and there is encryption of sections of
+Org-mode outlines.
+
+**** Encrypting Entire Files within Emacs
+
+Emacs comes with the [[http://www.gnu.org/software/emacs/manual/html_mono/epa.html][EasyPG]] Assistant, the all-in-one GnuPG interface for
+Emacs.  EasyPG also contains the library interface called _EasyPG Library_.
+
+EasyPG Assistant provides the following features.
+
+- Key management
+- Cryptographic operations on regions
+- Cryptographic operations on files
+- Dired integration
+- Mail-mode integration
+- Automatic encryption/decryption of *.gpg files
+
+By default, every file whose extension is ‘.gpg’ will be treated as encrypted.
+That is, when you attempt to open such a file which already exists, the
+decrypted text is inserted in the buffer rather than encrypted one.  On the
+other hand, when you attempt to save the buffer to a file whose extension is
+‘.gpg’, encrypted data is written.
+
+#+BEGIN_SRC emacs-lisp
+  (require 'epa-file)
+
+  (defadvice epg--start (around advice-epg-disable-agent activate)
+    "Make epg--start not able to find a gpg-agent"
+    (let ((agent (getenv "GPG_AGENT_INFO")))
+      (setenv "GPG_AGENT_INFO" nil)
+      ad-do-it
+      (setenv "GPG_AGENT_INFO" agent)))
+
+  (defun epg-disable-agent ()
+    "Make EasyPG bypass any gpg-agent"
+    (interactive)
+    (ad-enable-advice 'epg--start 'around 'advice-epg-disable-agent)
+    (ad-activate 'epg--start)
+    (message "EasyPG gpg-agent bypassed"))
+
+  (defun epg-enable-agent ()
+    "Make EasyPG use a gpg-agent after having been disabled with
+    epg-disable-agent"
+    (interactive)
+    (ad-disable-advice 'epg--start 'around 'advice-epg-disable-agent)
+    (ad-activate 'epg--start)
+    (message "EasyPG gpg-agent re-enabled"))
+#+END_SRC
+
+To set up Emacs for transparent encryption and decryption our need the add the
+following to your .emacs.
+
+#+BEGIN_SRC emacs-lisp
+;;NOT NEEDED?  (epa-file-enable)
+
+  ;; If non-nil, always asks user to select recipients.
+  ;;  (setq epa-file-select-keys
+  ;;      nil)
+
+  ;; *Recipient(s) used for encrypting files.
+  ;;  (setq epa-file-encrypt-to
+  ;;      ("jeff@taupro.com"))
+
+  ;;  )
+#+END_SRC
+
+If you want to temporarily disable this behavior, use =M-x epa-file-disable=,
+and then to enable this behavior use =M-x epa-file-enable=.
+
+At file-save time you are prompted to select recipients but this prompt can be
+suppressed by putting the following line on the first line of the text being
+encrypted.
+
+#+BEGIN_SRC example
+  ;; -*- epa-file-encrypt-to: ("ueno@unixuser.org") -*-
+#+END_SRC
+
+Some useful functions are:
+
+- M-x epa-list-keys		:: browse your pub keyring, e.g. 'gpg --list-keys'
+- M-x epa-list-secret-keys	:: browse your pvt keyring, e.g. 'gpg --list-secret-keys'
+- M-x epa-sign-region		:: create a cleartext signature of the region
+- M-x epa-encrypt-file		:: encrypt a file
+
+In the '*Keys*' buffer, several commands are available:
+
+- m		:: select (mark) keys
+- o		:: output marked key(s) to prompted filename
+
+**** Encrypting Specific Entries in an org-mode Outline Hierarchy with org-crypt.
+
+Tagging Subtrees for Encryption
+
+If you just want to encrypt the text of an entry, but not the headline, or
+properties you can use org-crypt.  In order to use org-crypt you need to add
+something like the following to your .emacs:
+
+#+BEGIN_SRC emacs-lisp
+  (require 'org-crypt)
+
+  (org-crypt-use-before-save-magic)
+
+  ;; Prevent having encrypted text inside encrypted text, by turning off tag inheritance.
+  (setq org-tags-exclude-from-inheritance (quote ("crypt")))
+
+  ;; GPG key to use for encryption
+  ;; Either the Key ID or set to nil to use symmetric encryption.
+  (setq org-crypt-key "jrush@taupro.com")
+#+END_SRC
+
+Now any text below a headline that has a :crypt: tag will be automatically be
+encrypted when the file is saved.  If you want to use a different tag just
+customize the =org-crypt-tag-matcher= variable.
+
+To decrypt the text just call =M-x org-decrypt-entry= and the encrypted text
+where the point is will be replaced with the plain text.  If you use this
+feature a lot, you will probably want to bind =M-x org-decrypt-entry= to a
+key.
+
+Entries with a =:crypt:= tag will be automatically be encrypted when you save
+the file.
+
+If you have autosave turned on and decrypt the files encrypted entries, the
+autosave file will contain the entries in plain text.  For this reason your
+should disable autosave for encrypted files.
+
+Note that if you encrypt the whole file, its content won't appear in the
+agenda view.  But, encrypting a header section won't exclude itself from
+agenda view as long as you put time settings on the header not in its content
+because its content is encrypted.
+
+**** Disabling Backups of Files Containing Encrypted Content
+Article: [[http://anirudhsasikumar.net/blog/2005.01.21.html][Controlling Backups]] of Sensitive Files
+
+With org-crypt, if you have autosave turned on and decrypt the entries within
+Emacs, the autosave file will contain the entries in plain text.  For this
+reason let's define a minor-mode we can place onto files containing encrypted
+content.
+
+#+BEGIN_SRC emacs-lisp
+  (define-minor-mode sensitive-mode
+    "For sensitive files like password lists.
+     It disables backup creation and auto saving.
+
+     With no argument, this command toggles the mode.
+     Non-null prefix argument turns on the mode.
+     Null prefix argument turns off the mode."
+
+    ;; The initial value.
+    nil
+
+    ;; The indicator for the mode line.
+    " Sensitive"
+
+    ;; The minor mode bindings.
+    nil
+
+    (if (symbol-value sensitive-mode)
+        (progn
+
+            ;; disable backups
+            (set (make-local-variable 'backup-inhibited) t)
+
+            ;; disable auto-save
+            (if auto-save-default
+                (auto-save-mode -1)))
+
+            ;resort to default value of backup-inhibited
+            (kill-local-variable 'backup-inhibited)
+
+            ;resort to default auto save setting
+            (if auto-save-default
+                (auto-save-mode 1))))
+#+END_SRC
+
+Set sensitive mode to turn on by default for files having the =.gpg=
+extension.  The following code does exactly that:
+
+#+BEGIN_SRC emacs-lisp	:results silent
+  (setq auto-mode-alist
+      (append '(("\\.gpg$" . sensitive-mode))
+               auto-mode-alist))
+#+END_SRC
+
+*** Sync Errors Between In-Memory and On-Disk Buffers
+
+Sometimes a buffer I have in memory gets out of sync with its copy on disk,
+say when I update the file using Git or some other tool.  In this case, *IF*
+I've not made any changes to the in-memory copy, I do not want to overwrite
+the on-disk copy but rather treat the on-disk copy as newer and replace my
+in-memory copy from that.  This protects me from accidental overwrites.
+
+#+BEGIN_SRC emacs-lisp
+  (setq global-auto-revert-mode t)
+#+END_SRC
+
+*** Keeping Last N Versions of Emacs Files Edited
+
+#+BEGIN_SRC emacs-lisp
+  (setq version-control t                 ;; Use version numbers for backups
+         kept-new-versions 16             ;; Number of newest versions to keep
+         kept-old-versions 2              ;; Number of oldest versions to keep
+         delete-old-versions t            ;; Ask to delete excess backup versions?
+         backup-by-copying-when-linked t) ;; Copy linked files, don't rename.
+
+   (defun force-backup-of-buffer ()
+     (let ((buffer-backed-up nil))
+       (backup-buffer)))
+
+   (add-hook 'before-save-hook  'force-backup-of-buffer)
+#+END_SRC
+
+** Printing/Exporting My Work
+*** Printing from within Emacs
+
+ps-print-buffer  -or-  ps-print-buffer-with-faces
+ps-print-region  -or-  ps-print-region-with-faces
+
+ps-spool-buffer  -or-  ps-spool-buffer-with-faces
+ps-spool-region  -or-  ps-spool-region-with-faces
+
+To print into a file:
+  =C-u M-x ps-print-buffer=
+
+**** Define My Personal Printer Configuration
+
+I install the package =gtklp= which gives me a graphics interface to the
+printer service, allowing me to select different printers and change settings.
+
+#+BEGIN_SRC emacs-lisp
+  (setq
+    printer-name                        'brother4070
+    lpr-command                         "gtklp"
+    ps-lpr-command                      "gtklp"
+    ps-paper-type                       'letter
+    ps-print-only-one-header            t
+    ps-spool-duplex                     t
+    ps-spool-config                     'setpagedevice
+    ps-spool-tumble                     nil
+    )
+#+END_SRC
+
+    ;; ps-lpr-switches          ???
+    ;; ps-printer-name-option   '-P
+
+**** Decide Presentation of Text When Printed
+
+#+BEGIN_SRC emacs-lisp
+  (setq ;; (landspace fontsize . portrait fontsize)
+    ps-font-family                      'Courier
+    ps-font-size                        '(7.5 . 9.0)
+    ps-header-font-family               'Helvetica
+    ps-header-font-size                 '(8 . 10)
+    ps-header-title-font-size           '(10 . 12)
+    )
+
+  (setq ;; in points (1/72 inch)
+    ps-left-margin                      (* 72 0.750) ; 0.75 inch
+    ps-right-margin                     (* 72 0.250) ; 0.25 inch
+    ps-bottom-margin                    (* 72 0.250) ; 0.25 inch
+    ps-top-margin                       (* 72 0.250) ; 0.25 inch
+    ps-header-offset                    (* 72 0.125) ; 0.125 inch
+    )
+
+  (setq ps-right-header
+    (list "/pagenumberstring load"
+          'ps-time-stamp-yyyy-mm-dd
+          'ps-time-stamp-hh:mm:ss)
+    )
+
+  (setq ps-left-header
+    (list 'ps-get-buffer-name
+          'ps-header-dirpart)
+    )
+
+  (setq
+    ps-line-number              t
+    ps-line-number-step         1
+    ps-line-number-font-size    7
+    ps-line-number-font         '"Times-Italic"
+    ps-line-number-color        '"black"
+    )
+
+  ;;                     (FACE-NAME                     FOREGROUND   BACKGROUND   EXTENSION...)
+  (ps-extend-face       '(font-lock-builtin-face        "Black"      nil       nil)         'MERGE)
+  (ps-extend-face       '(py-builtins-face              "Black"      nil       nil)         'MERGE)
+  (ps-extend-face       '(font-lock-doc-face            "Black"      nil       italic)      'MERGE)
+  (ps-extend-face       '(font-lock-constant-face       "Black"      nil       nil)         'MERGE)
+  (ps-extend-face       '(font-lock-keyword-face        "Black"      nil       nil)         'MERGE)
+  (ps-extend-face       '(py-pseudo-keyword-face        "Black"      nil       nil)         'MERGE)
+  (ps-extend-face       '(font-lock-variable-name-face  "Black"      nil       nil)         'MERGE)
+  (ps-extend-face       '(font-lock-string-face         "blue"       nil       bold)        'MERGE)
+  (ps-extend-face       '(font-lock-comment-face        "OrangeRed"  nil       bold-italic) 'MERGE)
+  (ps-extend-face       '(py-decorators-face            "black"   "DarkGreen"  bold-italic) 'MERGE)
+  (ps-extend-face       '(font-lock-function-name-face  "White"   "DarkGreen"  bold)        'MERGE) ;; Python function names
+  (ps-extend-face       '(font-lock-type-face           "White"   "DarkGreen"  bold)        'MERGE) ;; Python class names
+  (ps-extend-face       '(font-lock-warning-face        "White"     "red"      nil)         'MERGE)
+
+  (setq ps-use-face-background
+    t)
+#+END_SRC
+
+*** Exporting an Org-mode File to Other Formats
+**** to LaTeX (.pdf)
+
+#+BEGIN_SRC DISABLEemacs-lisp :no-expand
+  ;;;NP (require 'org-latex)
+#+END_SRC
+
+Currently, in order for a user to use minted for colored latex export of
+src code, s/he would
+
+1. install pygments
+
+   #+BEGIN_EXAMPLE
+     $ emerge dev-python/pygments
+   #+END_EXAMPLE
+
+2. indicate which listings converter to use
+
+   (setq org-export-latex-listings 'minted)
+   (add-to-list 'org-export-latex-packages-alist '("" "minted"))
+
+   #+BEGIN_SRC DISABLEDemacs-lisp
+     ;; (setq org-export-latex-listings t)
+   #+END_SRC
+
+  (add-to-list 'org-export-latex-packages-alist '("" "listings"))
+  (add-to-list 'org-export-latex-packages-alist '("" "color"))
+
+3. Add the minted package to `org-export-latex-packages-alist':
+
+   (add-to-list 'org-export-latex-packages-alist '("" "minted"))
+
+4. Configure `org-latex-to-pdf-process' so that the -shell-escape option
+   is passed to pdflatex.
+
+5. Install some nice fonts (under Gentoo Linux).
+
+   #+BEGIN_SRC sh
+     emerge media-fonts/dejavu
+     emerge media-fonts/sil-gentium
+     emerge media-fonts/sil-charis
+     emerge media-fonts/libertine-ttf
+   #+END_SRC
+
+6. Install a latex->pdf converter better than _pdflatex_:
+
+   #+BEGIN_SRC sh
+     emerge  dev-texlive/texlive-xetex
+   #+END_SRC
+
+   and configure Emacs to use it:
+
+   #+BEGIN_SRC emacs-lisp :results silent
+     ;;;np (setq org-latex-to-pdf-process
+     ;;;np   '("xelatex -shell-escape -interaction nonstopmode %f"
+     ;;;np     "xelatex -shell-escape -interaction nonstopmode %f")) ;; for multiple passes
+   #+END_SRC
+
+7. Define a LaTex template to use
+
+   'org-article' for export org documents to the LaTex 'article', using
+    XeTeX and some fancy fonts; requires XeTeX (see org-latex-to-pdf-process)
+
+
+LaTeX_HEADER: usemintedstyle{emacs}
+
+LaTeX_HEADER: usepackage{framed}
+LaTeX_HEADER: newenvironment{results}{\begin{shaded}}{\end{shaded}}
+LaTeX_HEADER: newenvironment{verbatim}{\begin{shaded}}{\end{shaded}}
+LaTeX_HEADER: newenvironment{minted}{\begin{shaded}}{\end{shaded}}
+
+%usepackage{graphicx}
+%usepackage{float}
+%usepackage{wrapfig}
+%usepackage{paralist}
+%usepackage{color}
+
+#+latex_header: \usepackage{mathpazo}
+\\usepackage{paralist}
+\\setlength{\parskip}{0.5cm}
+\\setlength{\parindent}{0cm}
+%% \newcommand{\psection}{\newpage\section}
+
+
+
+#+LaTeX_HEADER: \usepackage{framed}
+#+LaTeX_HEADER: \usepackage{xcolor}
+#+LaTeX_HEADER: \definecolor{shadecolor}{gray}{.95}
+#+LaTeX_HEADER: \newenvironment{results}{\begin{shaded}}{\end{shaded}}
+
+
+#+BEGIN_SRC DISABLEDemacs-lisp :results silent
+  (add-to-list 'org-export-latex-classes
+    '("ze-technote"
+"\\documentclass[
+    11pt,             % global font size
+    letterpaper,      % size of paper
+    microtype,
+    listings-sv,
+    titlepage=false,
+    headings=small,   % use a small font and tight margins
+    open=any,         % start chapters on a new page, either left or right page
+    parskip=full,     % indicate a new paragraph with blank line, not indentation
+    parsep=4pt,       % space between paragraphs (???)
+    topsep=4pt,       % space between first list item and preceding paragraph (???)
+    itemsep=0pt,      % speace between successive list items (???)
+    captions=tableheading
+  ]{scrreprt}         % Subclass of this KOMA-Scripts LaTeX Class
+
+\\setcounter{chapter}{1}  % start numbering chapters (top-most headings) at '1'
+
+\\usepackage[AUTO]{inputenc}  % detect encoding used in Org-mode buffer and pass to LaTeX
+\\usepackage[T1]{fontenc}
+\\usepackage{fontspec}
+\\usepackage[hyperref,x11names]{xcolor}
+\\usepackage{fancyhdr}
+\\usepackage[frame=single,numbers=left]{fancyvrb}
+\\usepackage{paralist}
+\\usepackage{lipsum}
+\\usepackage[small,compact]{titlesec}
+
+\\usepackage{geometry}
+\\geometry{               % define the page geometry
+    showframe=false,
+    letterpaper,
+    textwidth=6.5in,       % width of text area
+    textheight=9.5in,      % height of text area, exclusive of the head/foot regions
+    includeheadfoot
+  }
+
+% \\usepackage[onehalfspacing]{setspace}
+
+% \\usepackage{titlesec}
+% \\titlespacing*{\\chapter} {0pt}{1pt}{1pt}
+% \\titlespacing*{\\section} {0pt}{1pt}{1pt}
+% \\titlespacing*{\\subsection} {0pt}{1pt}{1pt}
+% \\titlespacing*{\\subsubsection} {0pt}{1pt}{1pt}
+% \\titlespacing*{\\paragraph} {0pt}{1pt}{1pt}
+% \\titlespacing*{\\subparagraph} {0pt}{1pt}{1pt}
+
+% \\usepackage{enumitem}
+% \\setenumerate{nolistsep}  % kills all vertical spacing
+
+\\definecolor{dkgreen}{rgb}{0,0.5,0}
+\\definecolor{dkred}{rgb}{0.5,0,0}
+\\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\\definecolor{ltgray}{rgb}{0.9,0.9,1.0}
+
+\\defaultfontfeatures{Mapping=tex-text}
+
+\\setromanfont{Gentium}
+\\setromanfont[
+    BoldFont={Gentium Basic Bold},
+    ItalicFont={Gentium Basic Italic}
+  ]{Gentium Basic}
+
+\\setsansfont{Charis SIL}
+\\setmonofont[Scale=0.8]{DejaVu Sans Mono}
+
+\\usepackage{listings}
+\\lstset{basicstyle=\\ttfamily\\bfseries\\footnotesize,
+    morekeywords={virtualinvoke},
+    keywordstyle=\\color{blue},
+    ndkeywordstyle=\\color{red},
+    commentstyle=\\color{dkred},
+    stringstyle=\\color{dkgreen},
+    numbers=true,
+    numberstyle=\\ttfamily\\tiny\\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    backgroundcolor=\\color{ltgray},
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false,
+    frame=single,
+    frameround=tttt
+    xleftmargin=.23in
+  }
+
+\\usepackage[  % control the presentation of hyperlinks in the document
+    linktocpage=false,
+    frenchlinks=true,
+    colorlinks=true,
+    breaklinks=true,
+    citecolor=SteelBlue4,
+    filecolor=SteelBlue4,
+    linkcolor=Firebrick4,
+    urlcolor=SteelBlue4,
+    pdfborder={0 0 0.5 [3 3]},
+    pdftitle={{{{TITLE}}}},
+    pdfauthor={{{{AUTHOR}}}}
+  ]{hyperref}
+
+
+% \\renewcommand\\maketitle{\\begin{titlepage}%
+% FOOBAR
+% \\end{titlepage}%
+% }
+
+% customize front page (abstract, logo, no header, no footer, )
+% shift TOC onto front page
+% add a sidenote box
+
+\\pagestyle{fancyplain}    % put head/foot on ALL pages, not just the main content
+\\fancyhf{}
+\\lhead{}
+\\chead{ \\fancyplain{}{{{{TITLE}}}} }
+\\rhead{}
+\\lfoot{ZeOmega Inc.}
+\\cfoot{\\thepage}
+\\rfoot{Private and Confidential}
+\\title{Some Title}
+      [NO-DEFAULT-PACKAGES]    % omit \\usepackage for default packages
+      [NO-PACKAGES]            % omit \\usepackages for any packages
+      [EXTRA]                  % include stuff from #+LaTeX_HEADER
+"
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+#+END_SRC
+
+
+Arbitrary semantic markup in Org-mode files is implemented by defining a new
+link type in .emacs. The following code block defines a new link type, latex,
+whose path argument can hold the name of any LaTeX command. A link such as
+[latex:proglang][Org-mode] will export \proglang{Org-mode} to the LaTeX
+file. In this way, it is possible to make the Org-mode LaTeX exporter conform
+to the semantic markup defined in arbitrary style files. Org-mode will even
+complete your new link type!
+
+#+BEGIN_SRC DISABLEDemacs-lisp
+  (org-add-link-type
+    "latex" nil
+      (lambda (path desc format)
+        (cond
+          ((eq format 'html)
+              (format "<span style=\"color:grey;\">%s</span>" desc))
+          ((eq format 'latex)
+              (format "\\%s{%s}" path desc)))))
+#+END_SRC
+
+To make a hyperlink reference \[\[some place\]\] in text work in LaTeX, the following is necessary.
+
+#+BEGIN_SRC DISABLEDemacs-lisp :results silent
+  (setq org-export-latex-hyperref-format "\\ref{%s}")
+#+END_SRC
+
+It is often the case that paths are long and difficult to break at the end of
+a line. One way to get line breaks right is to wrap a path in the path command
+from the url package. This can be done with a link such as this one
+(abbreviated for obvious reasons) [latex:path][/path/ ...], which gets typeset
+so it will break at the end of the line,
+/path/to/a/file/nested/very/deeply/in/the/directory/structure.
+
+#+BEGIN_SRC DISABLEDemacs-lisp
+  (add-to-list 'org-export-latex-classes
+    '("tau-technote"
+"\\documentclass[11pt,letterpaper,microtype,listings-sv]{article}
+\\usepackage[T1]{fontenc}
+\\usepackage{fontspec}
+\\usepackage[hyperref,x11names]{xcolor}
+\\usepackage{fancyhdr}
+\\usepackage{fancyvrb}
+\\usepackage{listings}
+
+\\definecolor{dkgreen}{rgb}{0,0.5,0}
+\\definecolor{dkred}{rgb}{0.5,0,0}
+\\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\\definecolor{ltgray}{rgb}{0.9,0.9,1.0}
+\\lstset{basicstyle=\\ttfamily\\bfseries\\footnotesize,
+    morekeywords={virtualinvoke},
+    keywordstyle=\\color{blue},
+    ndkeywordstyle=\\color{red},
+    commentstyle=\\color{dkred},
+    stringstyle=\\color{dkgreen},
+    numbers=none,
+    numberstyle=\\ttfamily\\tiny\\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    backgroundcolor=\\color{ltgray},
+    tabsize=4,
+    showspaces=true,
+    showstringspaces=false,
+    frame=single,
+    frameround=tttt
+    xleftmargin=.23in
+  }
+
+\\usepackage[pdfborder={0 0 0.5 [3 3]},colorlinks=false,breaklinks=true,
+             citecolor=SteelBlue4,filecolor=SteelBlue4,linkcolor=SteelBlue4,urlcolor=SteelBlue4,
+             pdftitle={{{{TITLE}}}},pdfauthor={{{{AUTHOR}}}}]{hyperref}
+\\defaultfontfeatures{Mapping=tex-text}
+\\setromanfont{Gentium}
+\\setromanfont [BoldFont={Gentium Basic Bold},
+                ItalicFont={Gentium Basic Italic}]{Gentium Basic}
+\\setsansfont{Charis SIL}
+\\setmonofont[Scale=0.8]{DejaVu Sans Mono}
+\\usepackage{geometry}
+\\geometry{letterpaper,  textwidth=6.5in, textheight=10in,
+           includeheadfoot, marginparsep=7pt, marginparwidth=.6in}
+\\pagestyle{fancy}
+\\lhead{}
+\\chead{{{{{TITLE}}}}}
+\\rhead{}
+\\lfoot{Tau Productions Inc.}
+\\cfoot{\\thepage}
+\\rfoot{Creative Commons Attribution-ShareAlike 3.0}
+\\title{}
+      [NO-DEFAULT-PACKAGES]
+      [NO-PACKAGES]
+      [EXTRA]"
+      ("\\section{%s}" . "\\section*{%s}")
+      ("\\subsection{%s}" . "\\subsection*{%s}")
+      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+#+END_SRC
+
+\usepackage[breaklinks=true,linktocpage,pdftitle={\@title},pdfauthor={\@author},xetex]{hyperref}
+\usepackage{algorithm}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage{url}
+\usepackage{graphicx}
+\hypersetup{ colorlinks,
+citecolor=SteelBlue4,filecolor=SteelBlue4,linkcolor=SteelBlue4,urlcolor=SteelBlue4}
+
+\usepackage[includeheadfoot,margin=2.2in,hmargin=2.2in,vmargin=1.5in]{geometry}
+
+\pagestyle{fancy}
+\lhead{\href{mailto:cycleofsong@gmail.com}{Peter Salazar}}
+\chead{}
+\rhead{{\@title}: {\nouppercase{\rightmark}}}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\usepackage{paralist}
+
+begin_src ditaa :file blue.png :cmdline -r
++---------+
+| cBLU    |
+|         |
+|    +----+
+|    |cPNK|
+|    |    |
++----+----+
+end_src
+
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+
+**** to LibreOffice (.odt) and Microsoft Office (.docx)
+
+#+BEGIN_SRC emacs-lisp :results silent
+  ;;;  (require 'ox-odt)
+  (setq org-odt-data-dir "/usr/share/emacs/25.3/etc/org")
+  (setq org-odt-preferred-output-format "docx")
+#+END_SRC
+
+*** Embedding YouTube Videos with org-mode Links
+blogpost: [[http://endlessparentheses.com/embedding-youtube-videos-with-org-mode-links.html][Embedding YouTube Videos with org-mode Links]]
+
+1. remains simple, clickable links in .org files
+2. turns into an IFrame when exported to HTML
+3. turns into Latex href when exported to LaTex
+
+Example: [[yt:A3JAlWM8qRM]]
+
+#+BEGIN_SRC emacs-lisp
+  (defvar yt-iframe-format
+    ;; You may want to change your width and height.
+    (concat "<iframe width=\"440\""
+            " height=\"335\""
+            " src=\"https://www.youtube.com/embed/%s\""
+            " frameborder=\"0\""
+            " allowfullscreen>%s</iframe>"))
+
+  (org-add-link-type
+   "yt"
+   (lambda (handle)
+     (browse-url
+      (concat "https://www.youtube.com/embed/"
+              handle)))
+   (lambda (path desc backend)
+     (cl-case backend
+       (html (format yt-iframe-format
+                     path (or desc "")))
+       (latex (format "\href{%s}{%s}"
+                      path (or desc "video"))))))
+#+END_SRC
+
+
+** Keystroke Input
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+*** Of Non-Standard Characters
+
+The =C-q= key allows for quoting of the following key, like a tab or for the
+entry of a numeric value to represent a special character.  By default it is
+decimal but I prefer hexadecimal.
+
+#+BEGIN_SRC emacs-lisp
+  (setq read-quoted-char-radix 16)	;; numeric base for quoting characters
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (defun unicode-insert (char)
+   "Read a unicode code point and insert said character.
+    Input uses `read-quoted-char-radix'.  If you want to copy
+    the values from the Unicode charts, you should set it to 16."
+
+    (interactive (list (read-quoted-char "Char: ")))
+    (ucs-insert char))
+#+END_SRC
+
+*** Of Whitespace
+These are the defaults which may be overridden in specific modes.
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default tab-width
+    8)	; The default width of a TAB.
+
+  (setq-default indent-tabs-mode
+    nil)	; Whether to insert spaces when the TAB key is pressed.
+
+  (setq-default require-final-newline
+    t)	; Whether to silently force a NL at EOF.
+
+  (setq-default fill-column
+    78)	; Column beyond which automatic line-wrapping should occur.
+
+  (global-set-key		[f2]
+    'delete-trailing-whitespace)	; Remove all trailing whitespace
+#+END_SRC
+
+*** Of Recorded Keystrokes
+#+BEGIN_SRC emacs-lisp
+  (global-set-key		[f7]
+    'start-kbd-macro)		; Start recording of keystrokes.
+  (global-set-key		[M-f7]
+    'end-kbd-macro)		; Stop recording of keystrokes.
+
+  (global-set-key		[f8]
+    'call-last-kbd-macro)		; Map the F8 key to play back recording of keystrokes.
+#+END_SRC
+
+*** Of Automatic Texts (abbreviations and templates)
+"abbreviations, templates, and other ways to expand or transform text"
+http://sachachua.com/blog/2015/01/developing-emacs-micro-habits-text-automation/
+
+Emacs has a separate manual for [[http://www.gnu.org/software/emacs/manual/html_mono/autotype.html][autotyping]], which I had never read before. The
+short manual covers:
+
+- abbrev
+- skeleton
+- auto-insert
+- copyright messages
+- timestamps
+- temp
+
+*** Templates
+**** About the YASnippet Package
+
+[[http://capitaomorte.github.com/yasnippet/][YASnippet]] is a template system for Emacs, an Emacs package for easily
+inserting textual templates for any emacs-mode (programming language).  It
+allows you to type an abbreviation, followed by a trigger key and have it
+automatically expand into a block of text.  It comes bundled with templates
+for languages like C, C++, Python, SQL, LaTeX, HTML, CSS and more.  You do not
+need to know Emacs ELisp to create your own.
+
+YASnippet supports templates with parameters and the ability to place the
+cursor within the inserted text for quick filling in of the template.  If all
+you want is inserting static text, without parameters or moving cursor, then
+use Emacs package "abbrev".
+
+**** Activating YASnippet
+
+YASnippet can be activated globally or for specific Emacs modes.  I choose to
+activate it for individual modes.
+
+#+BEGIN_SRC emacs-lisp
+  (require 'yasnippet)
+;;; (require 'yasnippet-snippets)   ;; a rich collection of pre-written snippets
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+;;;  (yas-global-mode 1)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+;;; (yas-recompile-all)
+  (yas-reload-all)   ;; rescan snippet definitions into memory
+  (add-hook 'text-mode-hook #'yas-minor-mode)
+  (add-hook 'python-mode-hook #'yas-minor-mode)
+  (add-hook 'org-mode-hook #'yas-minor-mode)
+#+END_SRC
+
+**** My Catalog of Template Definitions
+
+Some of the useful snippets I have created are:
+
+***** for Org-Mode (in directory [[~/.emacs.d/snippets/org-mode/]])
+- block    :: block
+- el       :: elisp block
+- email    :: #+email
+- title    :: #+title
+- sourceblock :: source block
+- options  :: #+OPTIONS ${0}
+- figure   :: captioned figure
+
+***** for Python-Mode (in directory [[~/.emacs.d/snippets/python-mode/]])
+
+****** Group: statements
+******* def<TAB>		Function Definition, with prompted fields
+******* defm<TAB>		Method Definition, with prompted fields
+
+******* class<TAB>	Class Definition, with prompted fields
+
+******* for<TAB>		For-Loop, with prompted fields
+******* ifmain<TAB>	If-Main Conditional
+******* while<TAB>	While-Loop
+
+****** Code Fragments
+******* nspace<TAB>	__init__ for a Python Namespace
+******* pysetup<TAB>	setup.py Skeleton
+******* idir		Iterate over a Single Directory
+******* args		Args Parsing
+******* itree		Iterate over a Directory Tree
+******* prop		Property Descriptor
+******* iplace		Modifying Files In-Place
+
+****** Licenses
+******* GPL<TAB>		GPL-license comment
+******* ZPL<TAB>		Zope license comment
+******* ZEL<TAB>		ZeOmega license comment
+(add to the license files automatic insertion of the date)
+
+****** TO BE DEVELOPED
+******* pygame		PyGame Skeleton
+******* buildout		Buildout Skeleton
+
+****** ZCML
+******* ZCML<TAB>		expands into an empty ZCML configuration file
+
+**** Where I Store My Template Definitions
+
+There are snippets stored in a system directory that comes with the package,
+and there are snippets stored under my home directory in a naming hierarchy
+based on Emacs modenames.
+
+- ~/.emacs.d/snippets/
+- ~/.emacs.d/.cask/25.3/elpa/stan-snippets-9.2.0/snippets/
+
+#+BEGIN_SRC emacs-lisp
+;;;  (setq yas/root-directory "~/.emacs.d/snippets")
+;;;  (yas/load-directory yas/root-directory)
+#+END_SRC
+
+To have the menu show only the tables for the currently active mode, set
+=yas/use-menu= to =abbreviate=.
+
+#+BEGIN_SRC emacs-lisp
+;;;  '(yas/use-menu (quote abbreviate))
+#+END_SRC
+
+**** Developing New Template Definitions
+
+At the Emacs prompt, invoke "yas/new-snippet" to reload a snippet you are
+developing.  If you specify a name that is not yet defined, it will prompt
+you and guide you through creating it.
+
+Snippets hang off of various Emacs modes, like python-mode or html-mode.
+
+Snippets are inserted when the "trigger key" (TAB) is pressed after a textual
+key.
+
+Two commands are defined in this mode:
+
+    - =M-x yas/load-snippet-buffer=
+
+        When editing a snippet, this loads the snippet into the correct mode
+        and menu. Bound to *C-c C-c* by default while in snippet-mode.
+
+    - =M-x yas/tryout-snippet=
+
+        When editing a snippet, this opens a new empty buffer, sets it to the
+        appropriate major mode and inserts the snippet there, so you can see
+        what it looks like. This is bound to *C-c C-t* while in snippet-mode.
+
+[[http://capitaomorte.github.com/yasnippet/snippet-development.html][Snippet Development]]
+
+- =M-x yas/new-snipper=           (to create a new one)
+
+
+** Screen Widgets and UI Behavior
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+*** Visual Indicators
+**** Bell Ringing
+#+BEGIN_SRC emacs-lisp
+  (setq visible-bell
+    nil)	; Disable the bell completely.
+
+  ;;(setq visible-bell
+  ;;    t)	; Ring the bell.
+
+  ;;(setq visible-bell
+  ;;    'top-bottom)	; Only flash the top and bottom lines, not the whole screen.
+#+END_SRC
+**** Making the Active Region Visible
+#+BEGIN_SRC emacs-lisp
+;;;  (setq-default transient-mark-mode
+;;;    t)	; Enable highlighting of the region whenever the mark is active.
+#+END_SRC
+**** Making Trailing Whitespace Visible
+#+BEGIN_SRC emacs-lisp
+  (setq-default show-trailing-whitespace
+    t)	; Visually indicate presence of whitespace at end-of-lines.
+
+  (setq-default default-indicate-empty-lines
+    t)	; Visually indicate presence of blank lines at EOBs.
+#+END_SRC
+
+**** Highlighting the Entire Current Line
+For better visibility while navigating, highlight the current line using the
+built-in feature of Emacs.
+
+#+BEGIN_SRC emacs-lisp
+  (global-hl-line-mode 1)
+#+END_SRC
+
+**** Changing the ... Org-mode Ellipsis to a Triangle Symbol
+blogpost: [[http://endlessparentheses.com/changing-the-org-mode-ellipsis.html][Changing the org-mode Ellipsis]]
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-ellipsis " ▼")
+#+END_SRC
+
+*** Theming: Colors, Typefaces
+M-x customize-face mode-line RET
+
+??? (add-to-list 'custom-theme-load-path "<themefolder>")
+
+**** Defining the Basic Colors
+M-x list-colors-display RET
+
+To see the set of possible color names for X:
+    /usr/lib/X11/rgb.txt
+
+(distinguish btw colors for Emacs in X and colors for Emacs in an xterm)
+
+#+BEGIN_SRC emacs-lisp
+;;;NEEDED?  (set-background-color "White")
+;;;NEEDED?  (set-foreground-color "Black")  ;; don't these duplicate the below?
+;;;NEEDED?  (set-cursor-color     "Red")
+;;;NEEDED?  (set-mouse-color      "Black")
+;;;NEEDED?  (set-border-color     "Blue")
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq default-frame-alist
+    '(
+  ;--      (top              . 200) ; only for GUI
+  ;--      (left             . 400)
+  ;--      (width            . 80)
+  ;--      (height           . 40)
+;;NEEDED?        (cursor-color     . "white")
+;;NEEDED?        (cursor-type      . box)
+;;NEEDED?        (foreground-color . "black")
+;;NEEDED?        (background-color . "white")
+        )
+      )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  ;font-lock-builtin-face (dark blue on grey)
+  ;font-lock-comment-face (red on grey)
+  ;font-lock-constant-face (pink on grey)
+  ;font-lock-doc-face (black on green)
+  ;font-lock-function-name-face (bright blue on grey)
+  ;font-lock-keyword-face (bright cyan on grey)
+  ;font-lock-string-face (black on green)
+  ;font-lock-type-face (FAINT green on grey)
+  ;font-lock-variable-name-face (orange on grey HARD TO READ)
+  ;font-lock-warning-face red on grey)
+
+  ;(set-face-foreground 'font-lock-builtin-face "White")
+  ;(set-face-foreground 'font-lock-comment-face "White")
+  ;(set-face-foreground 'font-lock-function-name-face "White")
+  ;(set-face-foreground 'font-lock-string-face "White")
+  ;(set-face-foreground 'font-lock-variable-name-face "White")
+
+  ;bold (black on grey)
+  ;bold-italic (black on grey)
+  ;border (black on black UNREADABLE)
+  ;cursor (black on black UNREADABLE)
+  ;default (black on grey)
+  ;fixed-pitch (black on grey)
+  ;fringe (black on grey)
+  ;header-line (underlined black on grey)
+  ;highlight (black-on-green)
+  ;isearch (UNREADABLE cyan-on-purple)
+  ;isearch-lazy-highlight-face (black-on-cyan)
+  ;italic (black-on-grey)
+  ;menu  (grey-on-black)
+  ;mode-line  (grey-on-black)
+  ;mouse
+  ;region
+  ;scroll-bar
+  ;secondary-selection
+  ;show-paren-match-face
+  ;tool-bar
+  ;tooltip
+  ;trailing-whitespace
+  ;underline
+  ;variable-pitch
+#+END_SRC
+
+**** Setting the Faces
+To see the various faces:
+    M-x list-faces-display
+
+#+BEGIN_SRC example
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+
+   '(mode-line (
+      (
+        (
+          (class color)
+          (min-colors 88)
+        ) (:background "deep sky blue" :foreground "black" :box (:line-width -1 :style released-button) :height 1.3))
+        )
+      )
+
+   '(mode-line-inactive (
+      (default
+        (:inherit mode-line)
+      )
+      (
+        (
+          (class color)
+          (min-colors 88)
+          (background light)
+          )
+          (:background "navajo white" :foreground "grey20" :box (:line-width -1 :color "grey75") :weight light)))))
+#+END_SRC
+
+**** Enabling the Use of Colorized Text
+
+#+BEGIN_SRC emacs-lisp
+  (global-font-lock-mode
+    t)	; Enable colorized text everywhere.
+
+  (setq font-lock-maximum-decoration
+    t)	; Enable colorized text everywhere.
+#+END_SRC
+
+***** Org-Mode Themes
+
+A popular way of customizing Emacs colors is the use the #color-theme#
+package, of which a number of those these are aware of Org-mode.
+
+For my Gentoo Linux distribution I run, I had to emerge (install):
+
+   $ emerge app-emacs/color-theme
+
+There is also a newer approach called *custom themes* but custom themes do not
+replace color themes, as each approach has its advantages.
+
+#+BEGIN_SRC DISABLEDemacs-lisp
+;;;  (require 'color-theme)
+;;  (setq color-theme-is-global t)
+;;  (color-theme-initialize)
+
+;;  (load "org-beautify-theme")
+;;  (load "color-theme-github")
+;;  (load "color-theme-cobalt")  ;; looks normal
+;;  (load "color-theme-sanityinc-solarized")  ;; looks normal
+;;  (load "color-theme-sanityinc-tomorrow")  ;; looks normal
+
+;;  (load "grandshell-theme")  ;; on black but not bad
+
+;; cyberpunk          ;; on black but not bad
+;; grandshell-theme   ;; on black but not bad
+;; deeper-blue        ;; on black but not bad
+;; leuven             ;; on white but NICE!
+;; manoj-dark         ;; on black but VERY CLEAR
+
+#+END_SRC
+
+*** Frame (Window) Decorations
+**** Along the Top
+#+BEGIN_SRC emacs-lisp
+  (menu-bar-mode
+    -1)	; Whether to show the menu bar along the top.
+
+  (defun new-frame-setup (frame)
+    (if (display-graphic-p frame)
+        (progn
+           (message "This is a windowing system.")
+
+           ;; Don't want a toolbar in GUI mode (errs in invoke in text mode)
+           (tool-bar-mode -1)
+
+           ;; Set the default size of the new frame
+;;;           (set-frame-size (selected-frame) 150 50)
+        )
+        (message "This is a non-windowing system.")
+    )
+  )
+
+  ;; Run across all already-existing frames, to catch 1st frame
+  (mapc 'new-frame-setup (frame-list))
+
+  ;; But also run when a new frame is created
+  (add-hook 'after-make-frame-functions 'new-frame-setup)
+
+  ;--(tool-bar-mode
+  ;--    nil)
+
+  (setq frame-title-format
+    "Emacs: %b")	; Displays the name of the file being edited in the title bar along the top.
+#+END_SRC
+
+**** Along the Left/Right Sides
+#+BEGIN_SRC emacs-lisp
+  (setq-default scroll-bar-mode
+    t)	; Whether to show the scroll bar at all.
+
+  (setq-default set-scroll-bar-mode
+    'right)	; Where to show the scroll bar, left or right side.
+#+END_SRC
+
+**** Along the Bottom, in the Mode Line
+#+BEGIN_SRC emacs-lisp
+  (setq-default line-number-mode
+    t)	; Enable the display, in the mode line along the bottom, of the current line number.
+  (setq-default column-number-mode
+    t)	; Enable the display, in the mode line along the bottom , of the current column number.
+#+END_SRC
+
+**** Along the Bottom, in the Minibuffer (larger font for my presentations)
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup)
+
+  (defun my-minibuffer-setup ()
+     (set (make-local-variable 'face-remapping-alist)
+        '((default :height 1.8))))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-clock-clocked-in-display
+      "both")
+#+END_SRC
+
+
+** Navigation
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+*** Between Buffers
+#+BEGIN_SRC emacs-lisp
+  (autoload 'cycle-buffer				"cycle-buffer"  "Cycle forward." t)
+  (autoload 'cycle-buffer-backward		"cycle-buffer"  "Cycle backward." t)
+  (autoload 'cycle-buffer-permissive		"cycle-buffer"  "Cycle forward allowing *buffers*." t)
+  (autoload 'cycle-buffer-backward-permissive	"cycle-buffer"  "Cycle backward allowing *buffers*." t)
+  (autoload 'cycle-buffer-toggle-interesting	"cycle-buffer"  "Toggle if this buffer will be considered." t)
+
+  (global-set-key		"\M-n"
+    'cycle-buffer)			; Switch to next buffer in internal list
+  (global-set-key		"\M-p"
+    'cycle-buffer-backward)		; Switch to previous buffer in internal list
+  ;; how to REMOVE a buffer and cycle to the next one???
+#+END_SRC
+
+*** Within a Buffer
+**** Jumping to a Place
+#+BEGIN_SRC emacs-lisp
+  (define-key global-map	(kbd "M-g")
+    'goto-line)				; Jump to a prompted line number.
+
+  (global-set-key		[f11]
+    'org-clock-goto)			; Jump to currently clocked item
+
+  (global-set-key		"\M-[7~"
+    'beginning-of-line)			; [Home] to beginning of line
+
+  (global-set-key		"\M-[8~"
+    'end-of-line)			; [End] to end of line
+#+END_SRC
+
+**** Scrolling Behavior
+#+BEGIN_SRC emacs-lisp
+  (setq-default scroll-margin
+    0)	; #lines of margin at top and bottom of a window.
+
+  (setq-default scroll-conservatively
+    1)	; Scroll up to this many lines, to bring point back into window.
+
+  (setq-default scroll-up-aggressively
+    nil)	; Disable jumpy vertical scrolling.
+
+  (setq-default scroll-down-aggressively
+    nil)	; Disable jumpy vertical scrolling.
+
+  (setq-default scroll-step
+    1)	; #lines to scroll by when point leaves the window.
+
+  (setq-default next-screen-context-lines
+    1)	; #lines of continuity when scrolling by screenfuls.
+
+  (put 'scroll-left 'disabled nil)
+#+END_SRC
+
+*** Among Windows/Frames
+
+*** Across Content: [[https://www.emacswiki.org/emacs/BookMarks][bookmarks]] and links
+https://www.emacswiki.org/emacs/BookmarkPlus#BookmarkBasics
+
+Emacs bookmarking makes use of three things that are related but different:
+
+1. a bookmark *list*
+2. a bookmark *file*
+3. a bookmark-list *display* (buffer '*Bookmark List*')
+
+- C-x r m			:: set a bookmark at the current location
+- C-x r b			:: jump to a bookmark
+- C-x r l			:: list your bookmarks
+- M-x bookmark-delete	:: delete a bookmark by name
+
+*** Among Org-Mode Headers
+
+https://github.com/facetframer/orgnav
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path
+      "~/.emacs.d/orgnav-release-2.0.3"
+  )
+  (require 'orgnav)
+
+  (define-key org-mode-map "\C-c\C-j"  'orgnav-search-root)
+#+END_SRC
+
+
+** Buffer Modes for Various Languages
+- C-h m			:: help for the mode
+
+#+BEGIN_SRC emacs-lisp
+  (setq default-major-mode
+    'text-mode)	; Make text-mode the default for new buffers.
+#+END_SRC
+
+The major mode for a file is chosen from its *file extension*, whose
+correspondence is controlled by the variable =auto-mode-alist=.
+
+*** text-mode
+
+#+BEGIN_SRC emacs-lisp
+  ;; (require `setnu)
+
+  (add-hook 'text-mode-hook
+      (lambda ()
+          (
+              ;; other customizations go here
+          )
+
+          ;;(turn-on-setnu-mode)
+          (turn-on-auto-fill)
+          ;;(rst-text-mode-bindings)  (this function is MISSING!)
+          ;;(rst-set-paragraph-separation)
+      )
+  )
+#+END_SRC
+
+*** rst-mode (ReStructuredText)
+
+#+BEGIN_SRC emacs-lisp
+  (require `rst)
+
+  (add-to-list 'auto-mode-alist
+      '("\\.rst$\\'" . rst-mode)
+  )
+
+  (add-hook 'rst-adjust-hook
+      'rst-toc-insert-update
+  )
+#+END_SRC
+
+*** html-mode
+TBD: support HTML tidy
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'auto-mode-alist
+      '("\\.pt\\'"        . html-mode)
+  )
+
+  (add-to-list 'auto-mode-alist
+      '("\\.dtml\\'"      . html-mode)
+  )
+
+  (add-hook 'html-mode-hook
+      (lambda ()
+          (auto-fill-mode 0)
+      )
+  )
+#+END_SRC
+
+*** css-mode
+
+#+BEGIN_SRC emacs-lisp
+  (autoload 'css-mode           ;; name of function to create
+    "css-mode"                  ;; filename of .el source implementation
+    "CSS editing mode."         ;; docstring for new function
+    t)                          ;; indicate the autoload can be interactive
+
+  (add-to-list 'auto-mode-alist
+      '("\\.css\\'"       . css-mode)
+  )
+
+  (add-hook 'css-mode-hook
+      (lambda ()
+          (
+              ;; other customizations go here
+          )
+      )
+  )
+#+END_SRC
+
+*** sql-mode
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'sql-mode-hook
+      (lambda ()
+          (
+              ;; other customizations go here
+          )
+      )
+  )
+#+END_SRC
+
+*** outline-minor-mode
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'outline-minor-mode-hook
+      (lambda ()
+          (require 'outline-magic)
+      )
+  )
+#+END_SRC
+
+*** C/C++ Mode
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'c-mode-common-hook
+      (lambda ()
+          (
+              (c-set-style "stroustrup")
+              (setq c-basic-offset  4)
+              ;; other customizations go here
+          )
+      )
+  )
+#+END_SRC
+
+To run the current buffer through the 'indent' program to clean up ugly C code.
+
+#+BEGIN_SRC emacs-lisp
+  ;; (defun c-reformat-buffer()
+  ;;     (interactive)
+  ;;     (save-buffer)
+  ;;     (setq sh-indent-command (concat
+  ;;                              "indent -st -bad --blank-lines-after-procedures "
+  ;;                              "-bli0 -i4 -l79 -ncs -npcs -nut -npsl -fca "
+  ;;                              "-lc79 -fc1 -cli4 -bap -sob -ci4 -nlp "
+  ;;                              buffer-file-name
+  ;;                              )
+  ;;           )
+  ;;     (mark-whole-buffer)
+  ;;     (universal-argument)
+  ;;     (shell-command-on-region
+  ;;      (point-min)
+  ;;      (point-max)
+  ;;      sh-indent-command
+  ;;      (buffer-name)
+  ;;      )
+  ;;     (save-buffer)
+  ;;     )
+  ;;   (define-key c-mode-base-map [f7] 'c-reformat-buffer)
+#+END_SRC
+
+*** Org-Jira Mode
+https://karmic.zeomega.com/browse/SP-194?jql=issuetype%20%3D%20Epic%20AND%20status%20%3D%20Open
+
+#+BEGIN_SRC emacs-lisp
+  (setq jiralib-url "https://karmic.zeomega.com")
+  ;; you need make sure whether the "/jira" at the end is
+  ;; necessary or not, see discussion at the end of this page
+
+;;;  (require 'org-jira)
+  ;; jiralib is not explicitly required, since org-jira will load it.
+
+;;;  (setq request-log-level 'debug)
+;;;  (setq request-message-level 'debug)
+
+  ;;; (defalias 'outline-show-all 'show-all)
+#+END_SRC
+
+bug: "Symbol's chain of function indirections contains a loop: outline-show-all"
+
+*** evernote-mode
+#+BEGIN_SRC emacs-lisp
+  (require 'evernote-mode)
+
+  (global-set-key "\C-cec" 'evernote-create-note)
+  (global-set-key "\C-ceo" 'evernote-open-note)
+  (global-set-key "\C-ces" 'evernote-search-notes)
+  (global-set-key "\C-ceS" 'evernote-do-saved-search)
+  (global-set-key "\C-cew" 'evernote-write-note)
+  (global-set-key "\C-cep" 'evernote-post-region)
+  (global-set-key "\C-ceb" 'evernote-browser)
+#+END_SRC
+
+*** python-mode
+**** auto-complete
+**** compliance
+*** python-mode
+
+There are three Python modes supported by Emacs:
+
+1) python-mode.el  by Python community  /usr/share/emacs/site-lisp/python-mode/
+
+   - all buffers share one interactive Python shell
+   - lacks skeleton-mode support
+   - syntax coloring is broken for quoting inside a triple-quoted string
+
+   - Key Definitions
+     C-c ?       describe mode
+
+     C-c C-l     shift region left
+     C-c C-r     shift region right
+
+     C-c C-c     execute buffer
+     C-c C-m     execute import or reload
+     C-c C-s     execute string
+     C-c |       execute region
+     C-e C-x     execute def-or-class
+     C-c !       enter Python shell
+
+     C-c C-k     mark block
+     C-c <TAB>   indent region
+     C-c C-f     sort imports
+     C-c #       comment region
+
+     C-e C-a     beginning of def-or-class
+     C-e C-e     end of def-or-class
+
+2) python.el       by Emacs community   /usr/share/emacs/23.2/lisp/progmodes/
+   - each buffer gets its own inferior interactive Python shell
+   - has skeleton-mode support which seems gratuitous for Python
+   - has Python-specific TAB-completion, if enabled
+
+   - Navigation
+     C-c C-u   Up to beginning of surrounding block
+   - Folding
+   - Running
+
+3) ipython.el      by IPython community /usr/share/emacs/site-lisp/ipython/
+
+**** cpython setup
+
+#+BEGIN_SRC emacs-lisp
+  (require `python-mode)
+#+END_SRC
+
+Identify which file extensions represent actual Python source code.
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'auto-mode-alist
+      '("\\.py\\'"        . python-mode)
+  )
+  (add-to-list 'auto-mode-alist
+      '("\\.tac\\'"       . python-mode)
+  )
+#+END_SRC
+
+Declare that seeing -*- python at start of file means python-mode.
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'interpreter-mode-alist
+      '("python"          . python-mode)
+  )
+#+END_SRC
+
+Select which package to use, either "python-mode.el" or "python.el".
+
+#+BEGIN_SRC emacs-lisp
+  (autoload 'python-mode                ;; name of function to create
+      "python-mode"                     ;; filename of .el source implementation
+      "Python editing mode."            ;; docstring for new function
+      t                                 ;; indicate the autoload can be interactive
+  )
+#+END_SRC
+
+;;; (define-key inferior-python-mode-map "\C-c\t" 'python-complete-symbol)
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'python-mode-hook
+      (lambda ()
+          ;; other customizations go here
+
+          ;; (setq autopair-handle-action-fns
+          ;;   (list #'autopair-default-handle-action
+          ;;     #'autopair-python-triple-quote-action))))
+
+          (setq outline-regexp                      ; tell outline-mode to match as headers:
+              ;;OLD          "[^ \t]\\|[ \t]*\\(def\\|class\\) ")       ;   lines with no indent and indented "class" and "def" lines.
+              "[ \t]*# \\|[ \t]+\\(class\\|def\\|if\\|elif\\|else\\|while\\|for\\|try\\|except\\|with\\) "
+          )
+
+          (setq outline-level
+              'py-outline-level	; enable our level computation
+          )
+
+          ;;;(setq outline-minor-mode-prefix  ; Do not use their \C-c@ prefix, too hard to type.
+          ;;;    "\C-c")                      ;   NOTE THIS OVERRIDES SOME 'python-mode' BINDINGS!
+
+          (outline-minor-mode
+              t)                              ; turn on outline mode
+
+          ;--      (hide-body)                ; initially hide all but the headers
+
+          (show-paren-mode
+              1)                              ; make paren matches visible
+
+          ;;;(define-key python-mode-map [tab]             'outline-cycle)
+          (define-key outline-minor-mode-map [S-tab]    'indent-for-tab-command)
+          (define-key outline-minor-mode-map [M-down]   'outline-move-subtree-down)
+          (define-key outline-minor-mode-map [M-up]     'outline-move-subtree-up)
+
+          ;--   (turn-on-setnu-mode)
+
+          ;;      ; I use CUA mode on the PC so I rebind these to make the more accessible
+          ;--      (local-set-key   [?\C-\t]
+          ;--          'py-shift-region-right)
+          ;--      (local-set-key [?\C-\S-\t]
+          ;--          'py-shift-region-left)
+      )
+  )
+#+END_SRC
+
+This gets called by outline to determine the level. Just use the length of the whitespace.
+
+#+BEGIN_SRC emacs-lisp
+  (defun py-outline-level ()
+      "Insert matching character pair but without surrounding spaces."
+
+      (let (buffer-invisibility-spec)
+          (save-excursion
+              (skip-chars-forward "\t ")
+              (current-column)
+          )
+      )
+  )
+#+END_SRC
+
+***** IDE-Like Auto-Completion of Python Source
+
+https://pypi.python.org/pypi/skeleton/
+
+***** emacs-jedi (requires the Jedi.el Auto-Complete Engine)
+
+****** install: emacs-jedi
+
+#+BEGIN_SRC example
+$ cd ~/.emacs.d
+$ wget https://raw.github.com/tkf/emacs-jedi/master/jedi.el
+$ wget https://raw.github.com/tkf/emacs-jedi/master/jediepcserver.py
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+;;;  (autoload 'jedi:setup "jedi" nil t)
+#+END_SRC
+
+****** Activate it inside a Python buffer:
+
+ All you need to do is to call jedi:setup in python buffer. To do that, add
+ the following in your Emacs configuration:
+
+#+BEGIN_SRC emacs-lisp
+;;;  (setq jedi:setup-keys t)
+;;;  (add-hook 'python-mode-hook 'jedi:setup)
+
+;;;  (setq jedi:key-show-doc (kbd "C-c D")) ;; avoid collision with ropemac
+#+END_SRC
+
+If auto-completion is all you need, use jedi:ac-setup instead:
+
+  (add-hook 'python-mode-hook 'jedi:ac-setup)
+
+To setup recommended keybinds for Jedi.el, add this to your Emacs
+configuration. Note that you must set jedi:setup-keys before loading
+jedi.el. See its docstring (<f1> v jedi:setup-keys) for more information.:
+
+- <C-tab>		:: jedi:key-complete
+    Complete code at point. (`jedi:complete')
+
+- C-.		:: jedi:key-goto-definition
+    Goto the definition of the object at point. (`jedi:goto-definition')
+
+- C-c d		:: jedi:key-show-doc
+    Goto the definition of the object at point. (`jedi:show-doc')
+
+- C-c r		:: jedi:key-related-names
+    Find related names of the object at point.
+    (`helm-jedi-related-names' / `anything-jedi-related-names')
+
+**** ipython support
+Sometimes it is useful to find completion using Python interpreter.  To do
+that in a seamless manner, you can use IPython and its Emacs binding EIN
+(Emacs IPython Notebook).  See =ein:jedi-setup= in the EIN manual.  Using this
+setup, you can run auto-completion command in =Jedi.el= and EIN simultaneously.
+
+#+BEGIN_SRC emacs-lisp
+  ;;(require 'ipython)
+
+  ;;(setq ipython-command "/usr/bin/ipython")
+
+  ;; (setq py-python-command ipython)
+
+  ;;(setq py-python-command-args
+  ;;    '("--pylab" "--colors" "LightBG"))
+
+  ;;(setq-default py-python-command-args
+  ;;    '("--pylab" "--colors=LightBG"))
+#+END_SRC
+
+**** pylookup
+
+#+BEGIN_SRC emacs-lisp
+;;  (setq pylookup-dir "~/.emacs.d/pylookup")
+;;
+;;  (add-to-list 'load-path
+;;      pylookup-dir
+;;  )
+;;
+;;  ;; load pylookup when compile time
+;;  (eval-when-compile (require 'pylookup))
+;;
+;;  ;; set executable file and db file
+;;  (setq pylookup-program
+;;      (concat pylookup-dir "/pylookup.py")
+;;  )
+;;  (setq pylookup-db-file
+;;      (concat pylookup-dir "/pylookup.db")
+;;  )
+;;
+;;  ;; to speedup, just load it on demand
+;;  (autoload 'pylookup-lookup
+;;      "pylookup"
+;;      "Lookup SEARCH-TERM in the Python HTML indexes."
+;;      t
+;;  )
+;;
+;;  (autoload 'pylookup-update
+;;      "pylookup"
+;;      "Run pylookup-update and create the database at `pylookup-db-file'."
+;;      t
+;;  )
+;;
+;;  (global-set-key "\C-ch"
+;;      'pylookup-lookup
+;;  )
+#+END_SRC
+
+**** Gnu [[http://flymake.sourceforge.net/][Flymake]] -- an on-the-fly syntax checker for GNU Emacs
+
+Flymake performs on-the-fly syntax checks, of source files being edited, using
+an external syntax check tool of your choosing.  It highlights erroneous lines
+and displays associated error messages.  Flymake ships with Emacs.
+
+Flymake is implemented as an Emacs minor mode.  It runs your syntax check tool
+in the background, passing it a temporary copy of the current buffer and
+parses the output for known error/warning message patterns.  Flymake then
+highlights erroneous lines (that is, lines for which at least one error or
+warning has been reported), and displays an overall buffer status in the mode
+line.
+
+A syntax check is started whenever:
+
+  a) a buffer is loaded,
+  b) a newline character is added to the buffer, and
+  c) some changes were made to the buffer more than t seconds ago (t is configurable).
+
+The set of errors/warnings to complain about is specified in my
+=~/bin/flaker.py= script that invokes the pyflakes tool.
+
+First, I replace the built-in function to Flymake that creates temporary
+files.  I do this because Flymake gives me a file creation error if the
+directory containing the source file is read-only.
+
+Next, I provide a Python script, to invoke from Emacs, that runs the
+=pyflakes= with the options I wish, and that parses the output from
+=pyflakes= into what Flymake needs to highlight errors and warnings in my
+source file.
+
+#+NAME: ~/bin/flaker.py
+#+BEGIN_SRC python
+  #!/usr/bin/env python
+
+  import commands
+  import re
+  import sys
+
+  def make_re(*msgs):
+      return re.compile('(%s)' % '|'.join(msgs))
+
+  pyflakes_ignore = make_re(
+      'unable to detect undefined names',
+      )
+
+  pyflakes_warning = make_re(
+      'imported but unused',
+      'is assigned to but never used',
+      'redefinition of unused',
+      )
+
+  pep8_ignore = [
+      'E201',  # whitespace after '('
+      'E221',  # multiple spaces before operator
+      'E241',  # multiple spaces after ','
+      'E272',  # multiple spaces before keyword
+      'E501',  # line too long
+      ]
+
+  # --ignore W601,E501
+
+  pep8_warning = make_re('.')
+
+
+  def run(cmd, ignore_re, warning_re):
+
+      output = commands.getoutput(cmd)
+
+      for line in output.splitlines():
+
+          if ignore_re and ignore_re.search(line):
+              continue
+
+          elif ': ' in line and warning_re.search(line):
+              line = '%s: WARNING %s' % tuple(line.split(': ', 1))
+
+          print line
+
+  run('pyflakes %s' % sys.argv[1], pyflakes_ignore, pyflakes_warning)
+  print '## pyflakes above, pep8 below ##'
+
+  ignores = ','.join('%s' % i for i in pep8_ignore)
+  pep8_ignore = '--ignore=%s' % ignores
+  #pep8_ignore = ' '.join('--ignore=%s' % i for i in pep8_ignore)
+  run('pep8 %s --repeat %s' % (pep8_ignore, sys.argv[1]), None, pep8_warning)
+#+END_SRC
+
+#+CAPTION: Replacement CreateTempfile Function
+#+BEGIN_SRC emacs-lisp
+  (defun flymake-create-temp-intemp (file-name prefix)
+      "Return file name in temporary directory for checking FILE-NAME.
+
+       This is a replacement for `flymake-create-temp-inplace'. The
+       difference is that it gives a file name in
+       `temporary-file-directory' instead of the same directory as
+       FILE-NAME which may be read-only.
+
+       For the use of PREFIX see that function.
+
+       Note that not making the temporary file in another directory
+       \(like here) will work not if the file you are checking depends
+       on relative paths to other files \(for the type of checks flymake
+       makes)."
+
+       (unless (stringp file-name)
+           (error "Invalid file-name")
+       )
+
+       (or prefix
+           (setq prefix "flymake")
+       )
+
+       (
+           let* (
+               (name
+                   (concat (file-name-nondirectory (file-name-sans-extension file-name)) "_" prefix))
+               (ext
+                   (concat "." (file-name-extension file-name)))
+               (temp-name
+                   (make-temp-file name nil ext))
+           )
+
+          (flymake-log
+              3
+              "create-temp-intemp: file=%s temp=%s"
+              file-name
+              temp-name
+          )
+
+          temp-name
+      )
+  )
+#+END_SRC
+
+If changes are made to the buffer, a syntax check is automatically started
+after =flymake-no-changes-timeout= seconds.
+
+#+BEGIN_SRC emacs-lisp
+  (setq flymake-no-changes-timeout 0.5)
+#+END_SRC
+
+#+NAME: My version of flymake-pyflakes-init
+#+BEGIN_SRC emacs-lisp
+  (when (load "flymake" t)
+      (defun flymake-pyflakes-init ()
+          (let*
+              (
+                  (temp-file
+                      (flymake-init-create-temp-buffer-copy 'flymake-create-temp-intemp)
+                  )
+
+                  (local-file
+                      (file-relative-name
+                          temp-file
+                          (file-name-directory buffer-file-name)
+                      )
+                  )
+              )
+
+              (list "/home/jrush/bin/flaker.py"
+                  (list local-file)        ;; return value is (cmd, arg-list)
+              )
+          )
+      )
+
+;;;      (add-to-list 'flymake-allowed-file-name-masks
+;;;          '(
+;;;              "\\.py\\'"             ;; filename-regexp
+;;;              flymake-pyflakes-init  ;; init-function
+;;;                                     ;; cleanup-function
+;;;                                     ;; getfname-function
+;;;           )
+;;;      )
+
+;;;(delete '("\\.html?\\'" flymake-xml-init) flymake-allowed-file-name-masks)
+
+      (setq flymake-allowed-file-name-masks  ;; list of filetypes to apply Flymake to
+          '(
+              ("\\.py\\'"             ;; filename-regexp
+               flymake-pyflakes-init  ;; init-function
+                                      ;; cleanup-function
+                                      ;; getfname-function
+              )
+           )
+      )
+  )
+#+END_SRC
+
+Instead of manually activating =flymake-mode= for each buffer, I configure
+Flymake to automatically enable =flymake-mode= upon opening any file for which
+syntax check is possible.
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'find-file-hook
+      'flymake-find-file-hook
+  )
+#+END_SRC
+
+***** Presentation
+
+Flymake uses two Emacs faces to highlight error and warning lines.
+
+1) =flymake-errline=  (inherits from face =error=, color red)
+2) =flymake-warnline= (inherits from face =warning=, color yellow)
+
+#+BEGIN_SRC emacs-lisp
+  (custom-set-faces
+      '(flymake-errline   ((((class color)) (:underline "red"))))
+      '(flymake-warnline  ((((class color)) (:underline "yellow"))))
+  )
+#+END_SRC
+
+The default flymake behavior is to display the error/warning message(s) on
+mouse hover over the broken sourceline.  However for keyboard jockeys who
+avoid mousing, the [[http://www.emacswiki.org/emacs/FlyMake#toc11][FlymakeCursor]] package changes that to dispay the
+error/warning message(s) for the current line in the minibuffer.
+
+#+BEGIN_SRC emacs-lisp
+  (load-library "flymake-cursor")
+#+END_SRC
+
+***** Key Mappings                                                          :KEYMAPPINGS:
+
+Using flymake-goto-next-error it is possible to navigate to the errors/warnings.
+
+- flymake-goto-next-error
+- flymake-goto-prev-error
+- flymake-display-err-menu-for-current-line  (a popup menu of errors/warnings)
+
+#+BEGIN_SRC emacs-lisp
+  (defun flymake-display-current-warning/error ()
+      "Display warning/error under cursor."
+      (interactive)
+      (let (
+               (ovs (overlays-in (point) (1+ (point))))
+           )
+       (dolist (ov ovs)
+           (catch 'found
+               (when (flymake-overlay-p ov)
+                   (message (overlay-get ov 'help-echo))
+                   (throw 'found t))
+               )
+           )
+      )
+  )
+
+  (defun flymake-goto-next-error-disp ()
+      "Go to next location in error ring, and then display warning/error."
+      (interactive)
+      (flymake-goto-next-error)
+      (flymake-display-current-warning/error)
+  )
+
+  (defun flymake-goto-prev-error-disp ()
+      "Go to previous location in err ring, and then display warning/error."
+      (interactive)
+      (flymake-goto-prev-error)
+      (flymake-display-current-warning/error))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (defvar flymake-mode-map
+      (make-sparse-keymap)
+  )
+  (define-key flymake-mode-map '[M-S-up]   'flymake-goto-prev-error)
+  (define-key flymake-mode-map '[M-S-down] 'flymake-goto-next-error)
+
+  (define-minor-mode flymake-minor-mode-jeff
+      "Toggle Hungry mode.
+       ...rest of documentation as before..."
+
+      ;; The initial value.
+      :init-value nil
+
+      ;; The indicator for the mode line.
+      :lighter " FlymakeJeff"
+
+      ;; The minor mode bindings.
+      :keymap
+      '(
+          ([M-S-up] . flymake-goto-prev-error)
+          ([M-S-down] . flymake-goto-next-error)
+          ([C-M-backspace] . (lambda () (interactive) (hungry-electric-delete t)))
+       )
+
+      :group 'Flymake
+  )
+#+END_SRC
+
+
+
+#+BEGIN_SRC emacs-lisp
+  (defvar my-flymake-minor-mode-map
+      (let
+          (
+              (map (make-sparse-keymap))
+          )
+          (define-key map "C-c P" 'flymake-goto-prev-error-disp)
+          (define-key map "C-c N" 'flymake-goto-next-error-disp)
+          (define-key map "C-c M-w" 'flymake-display-current-warning/error)
+          map
+      )
+      "Keymap for my flymake minor mode."
+  )
+
+  (define-minor-mode my-flymake-minor-mode
+      "Simple minor mode which adds some key bindings for moving to the next and previous errors.
+
+       Key bindings:
+
+       \\{my-flymake-minor-mode-map}"
+       nil
+       nil
+       :keymap my-flymake-minor-mode-map
+  )
+#+END_SRC
+
+(add-hook 'haskell-mode-hook 'my-flymake-minor-mode)
+
+
+Work around bug in flymake that causes Emacs to hang when you open a docstring.
+
+##+BEGIN_SRC example
+#  (delete
+#      '(
+#          " *\\(\\[javac\\]\\)? *\\(\\([a-zA-Z]:\\)?[^:(\t\n]+\\)\:\\([0-9]+\\)\:[ \t\n]*\\(.+\\)"
+#          2
+#          4
+#          nil
+#          5
+#       )
+#       flymake-err-line-patterns
+#  )
+#
+#  (delete
+#      '(
+#          " *\\(\\[javac\\] *\\)?\\(\\([a-zA-Z]:\\)?[^:(        \n]+\\):\\([0-9]+\\):[  \n]*\\(.+\\)"
+#          2
+#          4
+#          nil
+#          5
+#       )
+#       flymake-err-line-patterns
+#  )
+#
+#  (delete
+#      '(
+#          " *\\(\\[javac\\] *\\)?\\(\\([a-zA-Z]:\\)?[^:(        \n]+\\):\\([0-9]+\\):[  \n]*\\(.+\\)"
+#          2
+#          4
+#          nil
+#          5
+#       )
+#       flymake-err-line-patterns
+#  )
+##+END_SRC
+
+The following works around Flymake trying, by default, to invoke =pdflatex=,
+which doesn't exist on my system.  The correct program to invoke is =xelatex=.
+
+##+BEGIN_SRC emacs-lisp
+#  (defun flymake-get-tex-args (file-name)
+#      (list "xelatex"
+#          (list "-file-line-error"
+#              "-draftmode"
+#              "-interaction=nonstopmode"
+#              file-name
+#          )
+#      )
+#  )
+##+END_SRC
+
+
+
+*** org-mode
+**** Capturing Content
+**** Filing Content
+
+**** TODO fix huge size of the 'clocked in' time on the modeline
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'org-mode-hook
+        '(lambda ()
+           (delete '("\\.doc\\'" . default) org-file-apps)
+           (add-to-list 'org-file-apps '("\\.doc\\'" . "libreoffice %s"))))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+;;;  (require 'org-bullets)
+;;;  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+#+END_SRC
+
+'(org-file-apps (quote (
+    ("\\.pdf\\'" . "evince %s")
+    ("\\.doc\\'" . "libreoffice %s")
+)))
+
+*** org-mode
+**** Locations/Directories
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-directory
+      "~/notes")
+
+  (setq org-default-notes-file
+      "~/notes/tosort.org")
+
+  (setq org-attach-directory
+      "~/notes/data/")
+
+;;;  (setq org-archive-location
+;;;;;      "archives/%s_archive::** Finished Tasks"
+;;;      "~/Dropbox/Documents/Org-Mode/archives/ZeOmega-Archive-%s::datetree/* Finished Tasks"
+;;;  )
+#+END_SRC
+
+**** Startup Defaults
+#+BEGIN_SRC emacs-lisp
+  (setq org-startup-indented t)
+#+END_SRC
+
+**** File Extensions for org-mode
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'auto-mode-alist
+      '("\\.org" . org-mode)
+  )
+  (add-to-list 'auto-mode-alist
+      '("\\.org\\'" . org-mode)
+  )
+  (add-to-list 'auto-mode-alist
+      '("\\.org\\." . org-mode)
+  )
+  (add-to-list 'auto-mode-alist
+      '("\\.org_archive\\'" . org-mode)
+  )
+#+END_SRC
+
+**** Key Mapping for org-mode
+Fix org-mode's conflict with yasnippet over the TAB key.
+
+#+BEGIN_SRC emacs-lisp
+  ;;(add-hook 'org-mode-hook
+  ;;    (lambda ()
+  ;;        (org-set-local 'yas/trigger-key [tab])
+  ;;        (define-key yas/keymap [tab] 'yas/next-field-group)))
+#+END_SRC
+
+**** Predefined Tags (and Column) for Outline Headers
+#+BEGIN_SRC emacs-lisp
+  (setq org-tags-column 80)
+
+  (setq org-tag-alist
+      '(
+           (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
+               ("@home"         . ?h)    ;; at home
+               ("@computer"     . ?c)    ;; at a computer someplace
+               ("@zeomega"      . ?z)    ;; in the ZeOmega office
+               ("@lunch"        . nil)   ;; over lunch
+               ("@phone"        . nil)   ;; quiet spot near a phone
+           (:endgroup . nil)
+
+           (:startgroup . nil)  ;; *** WHEN the task is to be performed ***
+               ("@daytime"      . ?d)    ;; during daytime business hours
+               ("@nitetime"     . ?n)    ;; during the night
+           (:endgroup . nil)
+
+                                ;; *** FOR WHOM the task is being performed ***
+           ("ZEOMEGA"           . nil)
+           ("DFWUUG"            . nil)
+           ("PYTHON"            . nil)
+           ("ZF"                . ?f)
+
+                                ;; *** NATURE of the task being performed ***
+           ("PROBLEM"           . ?p)    ;; unplanned task that popped up
+           ("TECHDEBT"          . ?t)    ;; reworking of existing software
+           ("INFODEBT"          . ?i)    ;; getting my information organized
+           ("QUOTE"             . ?q)
+           ("MINDCRAFT"         . ?q)    ;; mental skills like memorization techniques
+
+           (:startgrouptag)
+               ("LEARNING")
+               (:grouptags)
+                   ("STUDY"     . nil)
+           (:endgrouptag)
+
+           (:startgrouptag)
+               ("SYSADMIN")
+               (:grouptags)
+                   ("GADGETS"   . nil)
+                   ("SWCONFIG"  . nil)
+                   ("HOSTING"   . nil)
+           (:endgrouptag)
+
+           (:startgrouptag)
+               ("WRITING")
+               (:grouptags)
+                   ("TWEETS"    . nil)
+                   ("PAPERS"    . nil)
+                   ("BLOGPOST"  . nil)
+           (:endgrouptag)
+
+           (:startgrouptag)
+               ("HEALTH")
+               (:grouptags)
+                   ("FITNESS"   . nil)
+                   ("MEDICAL"   . nil)
+           (:endgrouptag)
+
+           (:startgrouptag)
+               ("FINANCE")
+               (:grouptags)
+                   ("TAXES"        . nil)   ;; things that consume money
+                   ("INVESTMENTS"  . nil)   ;; things that generate money
+           (:endgrouptag)
+       )
+  )
+#+END_SRC
+
+**** Link Management in Documents
+
+Document-specific link abbreviations can also be given using the following:
+
+    #+LINK: karmic http:xxxxxxxxxxxxx
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-link-abbrev-alist
+      '(
+           ("google"    . "http://www.google.com/search?q=")
+           ("gmap"      . "http://maps.google.com/maps?q=%s")
+           ("omap"      . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")
+           ("wikipedia" . "https://en.wikipedia.org/wiki/")
+
+           ("karmic"    . "https://karmic.zeomega.com/browse/%s")
+           ("zeconnect" . "https://zeconnect.zeomega.com/display/%s")
+           ("github"    . "https://github.com/zeomega/%s")
+           ("zegit"     . "https://git.zeomega.com/zeomega/%s")
+       )
+  )
+#+END_SRC
+
+**** Task TODO Keywords and Corresponding Display Faces
+***** Defined Set of TODO Keywords
+#+BEGIN_SRC emacs-lisp
+  (setq org-todo-keywords
+      '(
+           (sequence
+                "TODO(t)"
+                "PEND(p)"
+                "STOP(s)"
+                "|"
+                "DROP(c)"
+                "FAIL(f)"
+                "DONE(d)"
+           )
+       )
+  )
+#+END_SRC
+
+***** Mapping of TODO Keywords to Font Faces in Emacs
+#+BEGIN_SRC emacs-lisp
+  (setq org-todo-keyword-faces
+      '(
+           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
+           ("PEND" . (:foreground "yellow" :background "magenta2"  :weight bold))
+           ("DONE" . (:foreground "green"  :background "darkgreen" :weight bold))
+           ("DROP" . (:foreground "blue"                           :weight bold))
+           ("FAIL" . (:foreground "white"  :background "red"       :weight bold))
+       )
+  )
+#+END_SRC
+
+**** Predefined Information Capture Templates
+#+BEGIN_SRC emacs-lisp
+  ;; Definition of Capture templates
+  (setq org-capture-templates
+    '(
+       ;; %a  the URL
+       ;; %i  initial content (what is selected)
+       ;; %U  inactive date/time stamp
+       ;; %^G prompt for tags to assign
+       ;; %?  where to place the cursor after laying out the template
+
+       ("z" "ZeOmega Capture Templates")
+;;       ("zb" "Touchbase w/Boss Sam (Weekly on Tue)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Sam")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-sam.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+;;       ("zc" "C-Suite Management Meeting (Monthly on 3rd Wed)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/C-Suite Team")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-csuite.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+       ("zd" "DevOps Status Meeting (Weekly on Tue)" entry
+         (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org" "Meetings w/DevOps Team")
+         (file "~/Dropbox/Documents/Org-Mode/TEMPLATES/minutes-devops.org")
+         :prepend t
+         :unnarrowed t
+         :empty-lines 1         ;; count of blank lines before and after
+       )
+       ("zs" "Sentinel Status Meeting (Weekly on Tue)" entry
+         (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org" "Meetings w/Sentinel-Core Team")
+         (file "~/Dropbox/Documents/Org-Mode/TEMPLATES/minutes-sentinelcore.org")
+         :prepend t
+         :unnarrowed t
+         :empty-lines 1         ;; count of blank lines before and after
+       )
+
+       ("zi" "Interdepartmental Meeting re Murthy, Raju, Mohan, etc. (Weekly on Thu)" entry
+         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Department Heads")
+         (file "~/Clients/ZeOmega/notes/templates/minutes-interdepartmental.org")
+         :prepend t
+         :unnarrowed t
+         :clock-in t            ;; begin tracking the time to fill in this entry
+         :clock-resume t        ;; and end tracking upon returning to what I was doing
+         :clock-keep nil        ;; be sure the clock does not keep running after I return
+         :empty-lines 1         ;; count of blank lines before and after
+       )
+;;       ("zk" "PMG Key Stakeholders Meeting (Monthly on 2nd Wed)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/PMG Stakeholders")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-stakeholders.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+;;       ("zm" "All Management Meeting (Mandatory Monthly on 4th Thu)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/All Management")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-allmanagement.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+;;       ("zp" "Product Managers Meeting (Bi-weekly on Mon)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Product Managers")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-productmanagement.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+;;       ("zt" "Senior Management Meeting - Client Focused (Weekly on Tue)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Senior Management")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-seniormanagement.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+;;       ("zh" "Touchbase w/Interfaces Team (Bi-weekly on Tue)" entry
+;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Interfaces Mgmt")
+;;         (file "~/Clients/ZeOmega/notes/templates/minutes-interfacemgmt.org")
+;;         :prepend t
+;;         :unnarrowed t
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+       ("za" "Action Item to Address" entry
+         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
+         "* TODO [#C] %? %^G:REFILE:\n\n%i\n\n%a"
+         :prepend t
+         :empty-lines 0         ;; count of blank lines before and after
+       )
+       ("ze" "Email Item to Address" entry
+         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
+         "* TODO [#C] %? %^G:REFILE:\n%i\n\n%a"
+         :prepend t
+         :empty-lines 0         ;; count of blank lines before and after
+       )
+
+       ("j" "a dated [J]ournal entry" entry
+         (file+datetree "~/notes/journal.org")
+         "* %?\n\n%i"
+         :clock-in t            ;; begin tracking the time to fill in this entry
+         :clock-resume t        ;; and end tracking upon returning to what I was doing
+         :clock-keep nil        ;; be sure the clock does not keep running after I return
+         :empty-lines 1         ;; count of blank lines before and after
+       )
+
+
+
+;;       ("t" "ToDo" entry
+;;         (file+headline "~/notes/tosort.org" "Tasks")
+;;         " TODO %^{Brief Description} %^g\n%?\nAdded: %U"
+;;         :prepend t
+;;       )
+
+;;       ("j" "Journal" entry
+;;         (file+headline "~/dump/journal.org" "")
+;;         "\n %^{topic} %T \n%i%?\n"
+;;         :prepend t
+;;       )
+
+;;       ("e" "Email Todo" entry
+;;         (file+headline "~/notes/tosort.org" "Tasks")
+;;         "* TODO %^{Brief Description}\n%a\n%?Added: %U\n"
+;;         :prepend t
+;;       )
+
+;;       ("t" "a [T]ask to complete i.e. *Possible Tasks*" entry
+;;         (file+headline "~/notes/tosort.org" "Possible Tasks")
+;;         "* TODO [#C] %? %^G:REFILE:\n\n%i\n\n%a"
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+
+;;       ("r" "[R]esearch to undertake i.e. *Interesting Technologies*" entry
+;;         (file+headline "~/notes/tosort.org" "Interesting Technologies")
+;;         "* TODO [#C] YOUR-TITLE%? %^G:REFILE:\n\n%i\n%a"
+;;         :clock-in t           ;; begin tracking the time to fill in this entry
+;;         :clock-resume t       ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil       ;; be sure the clock does not keep running after I return
+;;         :prepend       t      ;; prepend new item to top of capture target section
+;;         :empty-lines 1        ;; count of blank lines before and after
+;;       )
+
+;;       ("l" "general [L]ink to remember" entry
+;;         (file+headline "~/notes/tosort.org" "Unclassified Bookmarks")
+;;         "* %a %^G:REFILE:BOOKMARK:\n\n%i\n\n%?"
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+
+;;       ("n" "general [N]otetaking i.e. *Spontaneous Meeting or Brainstorming*" entry
+;;         (file+headline "~/notes/tosort.org" "Spontaneous Discussion/Meeting Notes")
+;;         "* Notetaking Session :REFILE:\n\n%i%?\n\n%a"
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;         :empty-lines 1         ;; count of blank lines before and after
+;;       )
+
+;;       ("b" "a [B]loodpressure measurement" table-line
+;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
+;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t                ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil                ;; be sure the clock does not keep running after I return
+;;       )
+
+       ("q" "a [Q]uotation to remember" entry
+         (file+headline "~/notes/quotes.org" "Disorganized Quotations")
+         "* %U :quotation:REFILE:\n\n%i%?\n"
+         :prepend       t       ;; prepend new item to top of capture target section
+         :empty-lines 1         ;; count of blank lines before and after
+       )
+     )
+  )
+
+  ;;;(setq org-capture-templates
+  ;;;  '(
+  ;;;     ("c" "someone to [C]ontact" entry
+  ;;;       (file+headline "~/notes/tosort.org" "People to Contact")
+  ;;;       "* TODO %? %T  :contact:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("m" "a sudden [M]eeting at which to take notes" entry
+  ;;;       (file+headline "~/notes/tosort.org" "Discussion/Meeting Notes")
+  ;;;       "* Meeting: %? %T  :meeting:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("p" "a sudden [P]honecall at which to take notes" entry
+  ;;;       (file+headline "~/notes/tosort.org" "Discussion/Phonecall Notes")
+  ;;;       "* Phonecall: %? %T  :phonecall:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("t" "a [T]ask to complete" entry
+  ;;;       (file+headline "~/notes/tosort.org" "Possible Tasks")
+  ;;;       "* TODO %? %T %^G\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("r" "[R]esearch to undertake" entry
+  ;;;       (file+headline "~/notes/tosort.org" "Interesting Technologies")
+  ;;;       "* TODO [#C] %? %^G\n  Added: %T\n %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("b" "a [B]ook to read" entry
+  ;;;       (file+headline "~/notes/resources.org" "Books to Consider Reading")
+  ;;;       "* TODO [#C] %? %T\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("v" "a [V]ideo to watch" entry
+  ;;;       (file+headline "~/notes/resources.org" "Videos to Check Out")
+  ;;;       "* TODO [#C] %? %T :video:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("u" "m[U]sic to consider acquiring" entry
+  ;;;       (file+headline "~/notes/resources.org" "Videos to Check Out")
+  ;;;       "* TODO [#C] %? %T :music:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("w" "a [W]ebsite to visit" entry
+  ;;;       (file+headline "~/notes/resources.org" "Websites to Check Out")
+  ;;;       "* TODO [#C] %? %T  :website:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("e" "an [E]vent to attend" entry
+  ;;;       (file+headline "~/notes/resources.org" "Events to Consider Attending")
+  ;;;       "* TODO %? %T  :event:\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("j" "a personal [J]ournal entry about my day" entry
+  ;;;       (file+datetree "~/notes/journal.org")
+  ;;;       "* %?\nEntered on %U\n  %i\n  %a"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("q" "a [Q]uotation to remember" entry
+  ;;;       (file+headline "~/notes/quotes.org" "Disorganized Quotations")
+  ;;;       "* %U :quotation:\n %i%?\n"
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;     ("w" "org-protocol" entry
+  ;;;       (file+headlline "~/notes/resources.org" "Websites to Check Out")
+  ;;;       "* %^{Title}  :REFILE:\n\n  Link: %u, %c\n  Captured: %U\n  %i"
+  ;;;       :immediate-finish t ;; skip edit phase - just collect automatic info and return
+  ;;;       :clock-in t         ;; begin tracking the time to fill in this entry
+  ;;;       :clock-resume t             ;; and end tracking upon returning to what I was doing
+  ;;;     )
+  ;;;   )
+  ;;;)
+#+END_SRC
+**** BBDB
+
+- hook into org-mode
+
+bbdb:S.*Allen
+
+#+BEGIN_SRC emacs-lisp
+  ;;(require `bbdb)
+
+  ;;(bbdb-initialize)
+#+END_SRC
+
+**** WanderLust
+put settings in ~/.wl
+
+- how to store passwords?  ~/.elmo/passwd
+- how to set/reset a password?
+- how to hook into my address book?
+- how to search -across- folders?
+- how to move msgs?
+
+- how to send an emails?  send an attachment?
+    C-x m    (compose-email)
+
+- hook into org-mode
+
+  wl:folder     (link to a Wanderlust folder)
+  wl:folder#id  (link to a specific msg under Wanderlust)
+
+
+***** Folder Buffer
+- folder keystrokes:
+  [   expand all folders
+  ]   collapse all folders
+  SPC or ENTER    ope the current folder
+  N    next folder w/unread msgs
+  P    prev folder w/unread msgs
+
+***** Summary Buffer
+- summary keystrokes:
+  L    toggle list of folders
+  p    prev msg
+  n    next msg
+  ENTER  view msg
+  V    hide msg view
+  a    answer (reply) to a msg
+  A    answer (reply) w/original msg quoted
+
+- how to display threads?
+- how to sort message headers?
+- how to search within a folder?
+- how to delete msgs?
+
+***** Message Buffer
+- how to display HTML emails?
+- how to view/save attachments?
+
+***** Draft Buffer
+
+#+BEGIN_SRC emacs-lisp
+  ;; wanderlust
+  (autoload 'wl "wl" "Wanderlust" t)
+  (autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+  (autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+
+  ;; IMAP
+  (setq elmo-imap4-default-server "imap.googlemail.com")
+  (setq elmo-imap4-default-user "jrush@zeomega.com")
+  (setq elmo-imap4-default-authenticate-type 'clear)
+  (setq elmo-imap4-default-port '993)
+  (setq elmo-imap4-default-stream-type 'ssl)
+
+  (setq elmo-imap4-use-modified-utf7 t)
+
+  ;; SMTP
+  (setq wl-smtp-connection-type 'ssl)
+  (setq wl-smtp-posting-port 465)
+  (setq wl-smtp-authenticate-type "plain")
+  (setq wl-smtp-posting-user "jrush@zeomega.com")
+  (setq wl-smtp-posting-server "smtp.googlemail.com")
+  (setq wl-local-domain "zeomega.com")
+
+  (setq wl-default-folder "%inbox")
+  (setq wl-default-spec "%")
+  (setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
+  (setq wl-trash-folder "%[Gmail]/Trash")
+
+  (setq wl-folder-check-async t)
+
+  (setq elmo-imap4-use-modified-utf7 t)
+
+  (setq wl-stay-folder-window t)    ;; show the folder pain (left)
+  (setq wl-folder-window-width 50)  ;; toggle on/off with 'i'
+  (setq wl-from "Jeff Rush <jrush@zeomega.com>")
+
+
+  (setq wl-fcc "%[Gmail]/Sent Mail")       ;; sent msgs go to the "sent"-folder
+  (setq wl-fcc-force-as-read t)            ;; mark sent messages as read
+  (setq wl-default-folder "%INBOX")        ;; my main inbox
+  (setq wl-draft-folder "%[Gmail]/Drafts") ;; store drafts in 'postponed'
+  (setq wl-trash-folder "%[Gmail]/Trash")  ;; put trash in 'trash'
+  (setq wl-spam-folder "%[Gmail]/Spam")    ;; ...spam as well
+
+  (setq wl-summary-width 150)
+  (setq wl-summary-line-format
+      "%n%T%P %76(%s%) %[%45(%c %f%) %] %M/%D/%Y (%W) %h:%m %t")
+
+  ;; "%n%T%P %D/%M (%W) %h:%m %t%[%25(%c %f%) %] %s")
+
+  ;;(setq wl-user-mail-address-list
+  ;;   (quote ("j.shuttleworth@coventry.ac.uk"
+  ;;           "csx239@coventry.ac.uk")
+  ;;   )
+  ;;)
+
+  ;;(setq wl-forward-subject-prefix
+  ;;    "Fwd: " ) ;; use "Fwd: " not "Forward: ")
+
+  ; Swap a and A in summary mode, so citing original message is on a and no-cite
+  ; on A.  I want the most common action (for me) to be the one with fewer
+  ; keypresses.
+
+  ;;(define-key wl-summary-mode-map
+  ;;    (kbd "A") 'wl-summary-reply
+  ;;)
+
+  ;;(define-key wl-summary-mode-map
+  ;;    (kbd "a") 'wl-summary-reply-with-citation
+  ;;)
+
+
+
+
+
+   ;; hide many fields from message buffers
+
+  (setq wl-message-ignored-field-list '("^.*:"))
+
+  (setq wl-message-visible-field-list
+    '("^\\(To\\|Cc\\):"
+      "^Subject:"
+      "^\\(From\\|Reply-To\\):"
+      "^Organization:"
+      "^Message-Id:"
+      "^\\(Posted\\|Date\\):"
+      ))
+
+  (setq wl-message-sort-field-list
+    '("^From"
+      "^Organization:"
+      "^X-Attribution:"
+       "^Subject"
+       "^Date"
+       "^To"
+       "^Cc")
+  )
+
+  (defun djcb-wl-draft-subject-check ()
+    "check whether the message has a subject before sending"
+    (if (and (< (length (std11-field-body "Subject")) 1)
+    (null (y-or-n-p "No subject! Send current draft?")))
+    (error "Abort."))
+  )
+  (add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-subject-check)
+
+  ; Auto add signature on draft edit
+  (remove-hook 'wl-draft-send-hook 'wl-draft-config-exec)
+  (add-hook 'wl-mail-setup-hook 'wl-draft-config-exec)
+
+  (setq wl-draft-config-alist
+      '(
+         (
+           (string-match "1" "1")
+           (bottom . "\n--\n")
+           (bottom-file . "~/.signature")
+         )
+      )
+  )
+
+  ;; Wanderlust compose becomes bound to C-x m
+  (autoload 'wl-user-agent-compose "wl-draft" nil t)
+  (if (boundp 'mail-user-agent)
+      (setq mail-user-agent 'wl-user-agent))
+  (if (fboundp 'define-mail-user-agent)
+      (define-mail-user-agent
+        'wl-user-agent
+        'wl-user-agent-compose
+        'wl-draft-send
+        'wl-draft-kill
+        'mail-send-hook)
+  )
+
+  ; Integrate Wanderlust with BBDB, for an address book.
+
+  ;;(require 'bbdb-wl)
+  ;;(bbdb-wl-setup)
+
+  ;;(setq bbdb-use-pop-up t)  ;; enable pop-ups
+  ;;(setq bbdb/mail-auto-create-p t)  ;; auto collection
+
+  ;; exceptional folders against auto collection
+  ;;(setq bbdb-wl-ignore-folder-regexp "^@")
+  ;;(setq signature-use-bbdb t)
+  ;;(setq bbdb-north-american-phone-numbers-p nil)
+
+  ;; shows the name of bbdb in the summary :-)
+  ;;(setq wl-summary-from-function 'bbdb-wl-from-func)
+
+  ;; automatically add mailing list fields
+  ;;(add-hook 'bbdb-notice-hook 'bbdb-auto-notes-hook)
+  ;;(setq bbdb-auto-notes-alist '(("X-ML-Name" (".*$" ML 0))))
+
+#+END_SRC
+
+#+RESULTS:
+: mail-send-hook
+
+**** org-babel (Multiple Programming Languages) Setup
+
+Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
+the languages I expect to embed into an org-mode document.
+
+#+BEGIN_SRC emacs-lisp
+  (org-babel-do-load-languages
+      'org-babel-load-languages
+
+      '(
+          (emacs-lisp . t)
+          (shell      . t)
+          (python     . t)
+;;;          (R          . t)      ;; causes org-babel-header-args-safe-fn to become invalid function
+          (org        . t)
+          (ditaa      . t)
+          (dot        . t)
+          (gnuplot    . t)
+          (sql        . t)
+          (sqlite     . t)
+       )
+  )
+#+END_SRC
+
+Evaluation of any code embedded in documents has a security risk.  Sometimes
+we want to prompt the user before running such code, and sometimes, when the
+embedded code is part of our infrastructure, we don't.  Here we can decide
+based on the language being embedded.
+
+#+BEGIN_SRC emacs-lisp
+  (defun my-org-confirm-babel-evaluate (lang body)
+      (not (string= lang "ditaa"))          ; don't ask for ditaa
+      (not (string= lang "emacs-lisp"))     ; don't ask for emacs-lisp
+  )
+  (setq org-confirm-babel-evaluate
+      'my-org-confirm-babel-evaluate)
+#+END_SRC
+
+**** org-protocol
+
+Intercepts calls from emacsclient to trigger custom actions without external
+dependencies.  Only one protocol has to be configured with your external
+applications or the operating system, to trigger an arbitrary number of custom
+actions.  Just register your custom sub-protocol and handler with the variable
+`org-protocol-protocol-alist'.
+
+#+BEGIN_SRC emacs-lisp
+  (require 'org-protocol)
+#+END_SRC
+
+***** *pushing* URL/title links from Firefox into the Emacs kill-buffer
+
+The actual command that pushes a link into Emacs is:
+
+$ /usr/bin/emacsclient org-protocol:/store-link:/URL/TITLE
+
+and we want to provide a button in Firefox that causes it to issue this
+command.  We do this by defining a 'bookmarklet', which is a Firefox bookmark
+with the location field containing a bit of JavaScript instead of a URL.
+
+  Name: PushLink
+  Location: (as one long line)
+    javascript:location.href='org-protocol://store-link://'+
+          encodeURIComponent(location.href)+'/'+
+          encodeURIComponent(document.title)+'/'+
+          encodeURIComponent(window.getSelection())
+
+We also have to teach Firefox which program to run to handle the URL protocol
+of 'org-protocol', which in my case is =/usr/bin/emacsclient=.
+
+A protocol is a method that is used to send, receive, and handle information
+over a connection.  Common protocols viewed from the browser include http,
+https, ftp, and mailto.  In order for you to view information sent over a
+specific protocol, it must be registered.  If you enter a URL for an unknown
+protocol (foo) in the Location Bar, you will receive a message such as,
+Firefox doesn't know how to open this address, because the protocol (foo)
+isn't associated with any program or, in Mozilla Suite/SeaMonkey, foo not a
+registered protocol.
+
+Once registered, the protocol can then be handled by the program you specify,
+such as your browser or a third party viewer.  This means that a hyperlink (
+e.g. foo://fred) can use the handler for protocol foo to open the file named
+fred.
+
+    Type about:config into the Location Bar (address bar) and press Enter.
+    Right-click -> New -> Boolean -> Name: network.protocol-handler.expose.foo -> Value -> false (Replace foo with the protocol you're specifying)
+    Next time you click a link of protocol-type foo you will be asked which application to open it with.
+
+In the firefox address box type this simple but weird-looking URL about:config
+and open it.  Then right-click on any entry in the long list that comes up.
+Right-clicking brings up the menu we will use to create a new entry.  Select
+new and of type boolean.  Carefully type in the name of the new preference as
+
+    network.protocol-handler.expose.mms
+
+and then select for its value false.  We are finished with this window, so you
+can close it.
+
+
+network.protocol-handler.external.mms   boolean  true
+
+
+Apparently they changed the way this works. You need to add a
+org-protocol.desktop file to ~/.local/share/applications
+
+  [Desktop Entry]
+  Name=org-protocol
+  Exec=emacsclient %u
+  Type=Application
+  Terminal=false
+  Categories=System;
+  MimeType=x-scheme-handler/org-protocol;
+
+Then run:
+
+  $ update-desktop-database .local/share/applications/
+
+For some reason I cannot get the bookmarklets to work, however. But
+opening an org-protocol:/ URL directly works.
+
+
+network.protocol-handler.app.org-protocol string /usr/bin/emacsclient
+
+
+For some reason, it is needed create a mime type on ~/.local/share/applications/mimeapps.list 
+
+So I add:
+application/x-tivion=tivion.desktop;
+application/tivion=tivion.desktop;
+x-scheme-handler/tivion=tivion.desktop;
+
+
+
+I never had the window asking for which application to launch when clicking on
+a `org-protocol://' link...
+
+until I re-did the manipulation with:
+
+--8<---------------cut here---------------start------------->8---
+gconftool-2 -s /desktop/gnome/url-handlers/org-protocol/command '/usr/bin/emacsclient %s'
+--type String
+gconftool-2 -s /desktop/gnome/url-handlers/org-protocol/enabled --type Boolean true
+--8<---------------cut here---------------end--------------->8---
+
+(described on http://kb.mozillazine.org/Register_protocol#All_Firefox_versions_.28requires_certain_Gnome_libraries_to_be_installed.29)
+
+"Next time you click a link of protocol-type foo you will be asked which
+application to open it with." : for me, after the above step (`gconftool-2'),
+just entering `org-protocol://' in a new tab was sufficient to ask, this time,
+for which application to run. Finally...
+
+Not that intuitive...
+
+(Linux and Mac) If the path or name is incorrect when setting the
+network.protocol-handler.app.(protocol) preference , Firefox will display an
+error saying "protocol (foo) isn't associated with any program". (bug 312953)
+
+
+And here's what some snippets of a 'foobar' scheme registration looks like stored in Firefox's mimeTypes.rdf file:
+
+<RDF:li RDF:resource="urn:scheme:foobar"/>
+<RDF:Description RDF:about="urn:handler:web:http://www.lookout.net/foobar=%s"
+                 NC:prettyName="The foobar scheme"
+                 NC:uriTemplate="http://www.lookout.net/foobar=%s" />
+<RDF:Description RDF:about="urn:scheme:foobar"
+                 NC:value="foobar">
+<NC:handlerProp RDF:resource="urn:scheme:handler:foobar"/>
+<RDF:Description RDF:about="urn:scheme:handler:foobar"
+                 NC:alwaysAsk="true">
+<NC:possibleApplication RDF:resource="urn:handler:web:http://www.lookout.net/foobar=%s"/>
+
+***** org-protocol (intercept calls from emacsclient to trigger custom actions)
+
+gconftool-2 -s /desktop/gnome/url-handlers/org-protocol/command '/usr/local/bin/emacsclient %s' --type String
+gconftool-2 -s /desktop/gnome/url-handlers/org-protocol/enabled --type Boolean true
+
+Make a bookmarklet button for:
+
+    javascript:location.href='org-protocol://sub-protocol://'+
+          encodeURIComponent(location.href)+'/'+
+          encodeURIComponent(document.title)+'/'+
+          encodeURIComponent(window.getSelection())
+
+store-link uses only the URL and page title
+
+#+BEGIN_SRC sh
+  $ emacsclient org-protocol:/store-link:/URL/TITLE
+#+END_SRC
+
+Pushes the given URL/title onto the kill-ring for yanking (C-y).
+
+org-protocol-store-link (links and bookmarks)
+
+org-protocol-capture (note taking and citations)
+
+  emacsclient org-protocol:/capture:/URL/TITLE/BODY
+
+will pop up an *Capture* buffer and fill the template with the data submitted.
+
+javascript:location.href='org-protocol://capture://'+
+      encodeURIComponent(location.href)+'/'+
+      encodeURIComponent(document.title)+'/'+
+      encodeURIComponent(window.getSelection())
+
+Controlling _which_ capture template will be used:
+
+You don't need to set up a capture template to use org-protocol-capture, since
+Org-mode provides a default template for those cases.  Newer versions provide
+an interactive interface for choosing a template.  You may provide a template
+to be used by customizing the variable org-capture-default-template.  The
+problem with this solution would be, that only one template can be used with
+the function.
+
+Luckily, org-protocol-capture understands a slightly extended syntax to choose
+between several templates: If the first field of the data submitted is exactly
+one character in length, this character will be used to select the template.
+
+$ emacsclient org-protocol:/capture:/x/URL/TITLE/BODY
+
+javascript:location.href='org-protocol://capture://x/'+
+      encodeURIComponent(location.href)+'/'+
+      encodeURIComponent(document.title)+'/'+
+      encodeURIComponent(window.getSelection())
+
+Edit published content: org-protocol-open-source
+
+This one was designed to help with opening sources for editing when browsing
+in the first place. org-protocol-open-source uses the custom variable
+org-protocol-project-alist to map URLs to (local) filenames.
+
+These bookmarklets enable your Firefox to talk to emacsclient via a new
+protocol (org-protocol://); emacsclient then parses the request and tells
+Emacs to capture or store stuff at the relevant places in your Org files.
+
+**** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
+#+BEGIN_SRC emacs-lisp
+  (defun wicked/org-update-checkbox-count (&optional all)
+    "Update the checkbox statistics in the current section.
+     This will find all statistic cookies like [57%] and [6/12] and update
+     them with the current numbers.  With optional prefix argument ALL,
+     do this for the whole buffer."
+
+    (interactive "P")
+    (save-excursion
+      (let* ((buffer-invisibility-spec (org-inhibit-invisibility))
+        (beg (condition-case nil
+          (progn (outline-back-to-heading) (point))
+          (error (point-min))))
+        (end (move-marker
+          (make-marker)
+          (progn (or (outline-get-next-sibling) ;; (1)
+            (goto-char (point-max)))
+                        (point))))
+            (re "\\(\\[[0-9]*%\\]\\)\\|\\(\\[[0-9]*/[0-9]*\\]\\)")
+            (re-box
+              "^[ \t]*\\(*+\\|[-+*]\\|[0-9]+[.)]\\) +\\(\\[[- X]\\]\\)")
+             b1 e1 f1 c-on c-off lim (cstat 0))
+        (when all
+          (goto-char (point-min))
+          (or (outline-get-next-sibling) (goto-char (point-max))) ;; (2)
+          (setq beg (point) end (point-max)))
+        (goto-char beg)
+        (while (re-search-forward re end t)
+          (setq cstat (1+ cstat)
+                b1 (match-beginning 0)
+                e1 (match-end 0)
+                f1 (match-beginning 1)
+                lim (cond
+                     ((org-on-heading-p)
+                      (or (outline-get-next-sibling) ;; (3)
+                          (goto-char (point-max)))
+                      (point))
+                     ((org-at-item-p) (org-end-of-item) (point))
+                     (t nil))
+                c-on 0 c-off 0)
+          (goto-char e1)
+          (when lim
+            (while (re-search-forward re-box lim t)
+              (if (member (match-string 2) '("[ ]" "[-]"))
+                  (setq c-off (1+ c-off))
+                (setq c-on (1+ c-on))))
+            (goto-char b1)
+            (insert (if f1
+                        (format "[%d%%]" (/ (* 100 c-on)
+                                            (max 1 (+ c-on c-off))))
+                        (format "[%d/%d]" c-on (+ c-on c-off))))
+            (and (looking-at "\\[.*?\\]")
+                 (replace-match ""))))
+        (when (interactive-p)
+          (message "Checkbox statistics updated %s (%d places)"
+                   (if all "in entire file" "in current outline entry")
+                   cstat)))))
+
+  (defadvice org-update-checkbox-count (around wicked activate)
+    "Fix the built-in checkbox count to understand headlines."
+    (setq ad-return-value
+          (wicked/org-update-checkbox-count (ad-get-arg 1))))
+#+END_SRC
+
+**** Possible Destinations for Refiling Requests
+
+A list of cons cells, where
+
+- Position 1:
+   is a specification of the files to be considered, either a list of
+   files, or a symbol whose function or variable value will be used to
+   retrieve a file name or a list of file names.
+
+   For example, if you use `org-agenda-files' for that, all agenda files
+   will be scanned for targets.  Nil means consider headings in the
+   current buffer.
+
+- Position 2:
+   is a specification of how to find candidate refile targets, such as:
+
+   - a cons cell (:tag . "TAG")
+     to identify refile targets by a tag.  This tag has to be present
+     in all target headlines, inheritance will not be considered.
+
+   - a cons cell (:todo . "KEYWORD")
+     to identify refile targets by todo keyword.
+
+   - a cons cell (:regexp . "REGEXP")
+     with a regular expression matching headlines that are refiling targets.
+
+   - a cons cell (:level . N)
+     Any headline of level N is considered a target.  Note that, when
+     `org-odd-levels-only' is set, level corresponds to order in hierarchy,
+     not to the number of stars.
+
+   - a cons cell (:maxlevel . N)
+     Any headline with level <= N is a target.  Note that, when
+     `org-odd-levels-only' is set, level corresponds to order in hierarchy,
+     not to the number of stars.
+
+When this variable is nil, all top-level headlines in the current buffer are
+used, equivalent to the value `((nil . (:level . 1))'.
+
+#+BEGIN_SRC emacs-lisp	:results silent
+  (setq org-refile-targets
+     (quote
+        (
+           ("~/notes/archives/personal.org_archive"       (:maxlevel . 1)   (:tag . "REFILING"))
+           ("~/notes/archives/finance.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
+           ("~/notes/archives/zeomega.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
+        )
+     )
+  )
+  (setq org-refile-use-outline-path 'file)
+#+END_SRC
+
+        ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
+        ;; ("~/notes/finance.org"                       :maxlevel . 1   :tag      . "REFILING")
+        ;; ("~/notes/zeomega.org"                       :maxlevel . 1   :tag      . "REFILING")
+        ;;         (nil                              :maxlevel . 1) ;; headlines in the current file
+        ;;         (org-agenda-files                 :maxlevel . 2)
+        ;;         ("~/notes/tech-emacs.org"         :tag      . "REFILING")
+        ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
+        ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
+        ;;         ("~/notes/tech-sysadmin.org"      :tag      . "REFILING")
+        ;;         ("~/notes/tech-gadgets.org"       :tag      . "REFILING")
+        ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
+        ;;         ("~/Clients/ZeOmega/zeomega.org"  :tag      . "REFILING")
+
+  ;; (org-agenda-files     :maxlevel . 2)  ;; top two headline levels in any agenda file
+
+  ;;    (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
+  ;;    (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
+  ;;    (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
+        (
+        )
+
+**** Logging and Clocking In/Out
+
+Round timestamps to the nearest 15-minutes.
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-log-done 'time)
+
+  (setq org-time-stamp-rounding-minutes (quote (15 15)))
+#+END_SRC
+
+For short capture tasks, empty CLOCK drawers may occur.  This removes them.
+
+#+BEGIN_SRC emacs-lisp
+  (defun bh/remove-empty-drawer-on-clock-out ()
+      (interactive)
+      (save-excursion
+          (beginning-of-line 0)
+          (org-remove-empty-drawer-at "CLOCK" (point))
+      )
+  )
+  (add-hook 'org-clock-out-hook
+      'bh/remove-empty-drawer-on-clock-out 'append)
+
+  (org-clock-persistence-insinuate)
+#+END_SRC
+
+**** Agenda View
+
+***** My Agenda Settings
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-span
+    60)	; The default number of days displayed in the Agenda view.
+  (setq org-deadline-warning-days
+    60)	; By default, show 30-days in the Agenda view.
+  (setq org-agenda-ndays
+    30)
+  (setq org-agenda-show-all-dates
+    t)
+  (setq org-agenda-start-on-weekday
+    nil)
+  (setq org-agenda-show-log
+    t)
+  (setq org-agenda-prefix-format
+    "  %-17:c%?-12t% s")                ;; widen category field a little
+#+END_SRC
+
+***** Custom Agenda Views (defined on C-c a <KEY>)
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-custom-commands
+    '(
+
+       ("zq" "Questions for ZeOmega"
+         ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+           (tags-todo "QUESTION")
+         )
+         ( ;;; additional settings
+           (org-agenda-files
+             '(
+                 "~/Clients/ZeOmega/notes/zeomega.org"
+              )
+           )
+         )
+       )
+
+       ("zi" "Initiatives for ZeOmega"
+         ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+           (tags-todo "INITIATIVE")
+         )
+         ( ;;; additional settings
+           (org-agenda-files
+             '(
+                 "~/Clients/ZeOmega/notes/zeomega.org"
+              )
+           )
+         )
+       )
+
+       ("zt" "Tasks for ZeOmega"
+         ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+           (tags-todo "ZEOMEGA")
+         )
+         ( ;;; additional settings
+           (org-agenda-files
+             '(
+                 "~/Clients/ZeOmega/notes/zeomega.org"
+              )
+           )
+         )
+       )
+
+       ("zm" "Meetings for ZeOmega"
+         ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+           (tags-todo "MEETING")
+         )
+         ( ;;; additional settings
+           (org-agenda-files
+             '(
+                 "~/Clients/ZeOmega/notes/zeomega.org"
+              )
+           )
+         )
+       )
+
+       ("zs" "To-Study Items for ZeOmega"
+         ( ;;; what reports to include
+           (tags-todo "TOSTUDY")
+         )
+         ( ;;; additional settings
+           (org-agenda-files
+             '(
+                 "~/Clients/ZeOmega/notes/zeomega.org"
+              )
+           )
+         )
+       )
+
+     )
+  )
+#+END_SRC
+
+
+#+BEGIN_SRC emacs-lisp
+  (defun org-agenda-format-date-aligned-jrr (date)
+    "Format a date string for display in the daily/weekly agenda, or timeline.
+     This function makes sure that dates are aligned for easy reading."
+
+     (require 'cal-iso)
+
+     (let* ((dayname (calendar-day-name date))
+       (day (cadr date))
+       (day-of-week (calendar-day-of-week date))
+       (month (car date))
+       (monthname (calendar-month-name month))
+       (year (nth 2 date))
+       (iso-week (org-days-to-iso-week
+       (calendar-absolute-from-gregorian date)))
+       (weekyear (cond ((and (= month 1) (>= iso-week 52))
+       (1- year))
+       ((and (= month 12) (<= iso-week 1))
+       (1+ year))
+       (t year)))
+       (weekstring (if (= day-of-week 1)
+       (format " W%02d" iso-week)
+       "")))
+
+       (format "%-3.3s %02d %-3.3s %4d%s"
+         dayname day monthname year weekstring)
+       )
+    )
+
+  ;; (setq org-agenda-format-date 'org-agenda-format-date-aligned-jrr)
+
+  (setq org-agenda-format-date
+    'org-agenda-format-date-aligned-jrr)
+
+#+END_SRC
+
+**** Timing-Related
+
+At one minute before the hour, save all org-mode buffers to disk, so that a
+CRON job can auto-commit all changes at the top of the hour.
+
+#+BEGIN_SRC emacs-lisp
+  (run-at-time "00:59" 3600 'org-save-all-org-buffers)
+#+END_SRC
+
+**** RSS/Atom Feeds into Org-Mode Documents
+#+BEGIN_SRC emacs-lisp
+  ;;;(require `org-feed)
+
+  (setq org-feed-alist
+    '(
+      ("Singularity University: Biotechnology & Bioinformatics"
+       "http://singularityu.org/category/private-videos/biotechnology-bioinformatics/feed/"
+       "~/notes/tech-future.org" "Biotechnology & Bioinformatics "
+       :parse-entry org-feed-parse-atom-entry
+       :parse-feed  org-feed-parse-atom-feed
+       :template "* TODO %title\n  %a\n "
+      )
+
+      ("Singularity University: AI & Robotics"
+       "http://singularityu.org/category/private-videos/ai-robotics/feed/"
+       "~/notes/tech-future.org" "AI & Robotics"
+      )
+
+      ("Singularity University Videos"
+       "http://singularityu.org/feed/"
+       "~/notes/tech-future.org" "Singularity University Videos"
+      )
+
+      ("Planet Python"
+       "http://planet.python.org/rss20.xml"
+       "~/notes/group-python.org" "Planet Python"
+      )
+   )
+)
+#+END_SRC
+
+** Keystrokes / Key Mappings ???
+#+BEGIN_SRC emacs-lisp
+  (global-unset-key	[C-z]
+    )					; Disable suspend-frame or iconify-frame key
+
+  ;; Set a default file to receive captures and key to do so.
+  (define-key global-map "\C-cc" 'org-capture)
+
+  ;; Useful org-mode keys that should be available in all buffers, not just org-mode buffers.
+
+  (global-set-key "\C-cl" 'org-store-link)		;; capture a link -to- my current location within a file
+  (global-set-key "\C-cL" 'org-insert-link-global)	;; Prompt for link/desc and insert a hyperlink here
+  (global-set-key "\C-co" 'org-open-at-point-global);; follow a link -from- any Emacs buffer
+  (global-set-key "\C-ca" 'org-agenda)		;; jump into an Agenda view
+  (global-set-key "\C-cb" 'org-iswitchb)		;; ???
+  (global-set-key [f12] 'org-agenda)		;; jump into an Agenda view
+#+END_SRC
+
+blogpost: [[http://endlessparentheses.com/the-toggle-map-and-wizardry.html][The Toggle-Map and Wizardry]]
+
+The manual recommends C-c for user keys but C-x t is always free, whereas C-c
+t is used by some modes.  Hence, let's use the C-x t prefix for a dedicated
+set of Emacs behavior toggle keys.
+
+#+BEGIN_SRC emacs-lisp
+  (define-prefix-command 'xanalogica/toggle-map)
+  (define-key ctl-x-map "t" 'xanalogica/toggle-map)
+
+  (define-key xanalogica/toggle-map "c" #'column-number-mode)
+  (define-key xanalogica/toggle-map "f" #'auto-fill-mode)
+  (define-key xanalogica/toggle-map "l" #'toggle-truncate-lines)
+  (define-key xanalogica/toggle-map "w" #'whitespace-mode)
+
+  (define-key xanalogica/toggle-map "q" #'toggle-debug-on-quit)
+  (define-key xanalogica/toggle-map "d" #'toggle-debug-on-error)
+  (define-key xanalogica/toggle-map "e" #'toggle-debug-on-error)
+
+  (setq linum-format "%-d   ")
+  (define-key xanalogica/toggle-map "n" #'linum-mode)
+
+  ;;(define-key xanalogica/toggle-map "t" #'endless/toggle-theme)
+
+  ;;; Generalized version of `read-only-mode'.
+  (define-key xanalogica/toggle-map "r" #'dired-toggle-read-only)
+  (autoload 'dired-toggle-read-only "dired" nil t)
+
+#+END_SRC
+
+
+** Prompting
+The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
+
+*** Keys at the Prompt
+- C-f		:: to fall back to find file (without ido-mode)
+- C-b		:: to fall back to switch to buffer (without ido-mode)
+- C-s		:: move to next item in list
+- C-r		:: move to previous item in list
+
+- //		:: go to the root directory
+- ~/		:: go to your home directory
+
+- C-d		:: enter Dired for this directory
+- C-j		:: create a new file named with the text you entered
+- M-m		:: creates a new subdirectory to the directory you're in
+- C-SPC		:: restrict list of options to what I've typed so far
+
+*** Configuring Ido
+
+#+BEGIN_SRC emacs-lisp
+  (setq ido-enable-flex-matching t)
+  (setq ido-everywhere t)
+  (ido-mode 1)
+
+  (setq ido-use-filename-at-point 'guess)
+  (setq ido-file-extensions-order '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
+
+  (autoload 'idomenu "idomenu" nil t)
+#+END_SRC
+
+*** Speech Synthesis/Prompting
+
+#+BEGIN_SRC emacs-lisp
+  ;; ****************************************
+  ;;    say-minor-mode (Speech Synthesis)
+  ;; ****************************************
+
+  (autoload 'say-minor-mode	;; name of function to create
+      "festival"			;; filename of .el source implementation
+      "Menu for using Festival."	;; docstring for new function
+      t)				;; indicate the autoload can be interactive
+
+  (say-minor-mode t)
+
+  ;; (load-file "/usr/share/emacs/site-lisp/emacspeak/lisp/emacspeak-setup.el")
+#+END_SRC
+
+
+** Sending Email from within Emacs
+
+#+BEGIN_SRC emacs-lisp
+  (setq smtpmail-smtp-server "rampart2.timecastle.net")
+
+  ;; Send mail using SMTP on the mail submission port 587.
+  (setq smtpmail-smtp-service 587)
+  ;;(setq smtpmail-smtp-user "jrush")
+
+  ;;(setq auth-source-debug "trivia")
+  ;;(setq smtpmail-stream-type nil)
+  ;;(setq smtpmail-debug-info t)
+
+  (setq smtpmail-auth-supported '(plain))
+
+ (setq mail-host-address "taupro.com")
+#+END_SRC
+
+http://www.emacswiki.org/emacs/GnusFormatFlowed
+
+#+BEGIN_SRC emacs-lisp
+  (defun harden-newlines ()
+    (save-excursion
+      (goto-char (point-min))
+      (while (search-forward "\n" nil t)
+        (put-text-property (1- (point)) (point) 'hard t))))
+
+  (setq fill-flowed-display-column nil)
+
+  (add-hook 'message-setup-hook
+    (lambda ()
+      (when message-this-is-mail
+        (turn-off-auto-fill)
+        (setq
+  	truncate-lines nil
+  	word-wrap t
+  	use-hard-newlines t))))
+
+  (add-hook 'message-send-hook
+    (lambda ()
+      (when use-hard-newlines
+        (harden-newlines))))
+
+  (add-hook 'gnus-article-mode-hook
+    (lambda ()
+      (setq
+        truncate-lines nil
+        word-wrap t)))
+#+END_SRC
+
+# Auth method  Normal password
+# STARTTLS
+
+** Calendaring
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-combined-agenda-icalendar-file "~/notes/calendar.ics")
+
+  ;;; define categories that should be excluded
+  (setq org-export-exclude-category (list "google" "private"))
+
+  ;;; define filter. The filter is called on each entry in the agenda.  It
+  ;;; defines a regexp to search for two timestamps, gets the start and end
+  ;;; point of the entry and does a regexp search. It also checks if the
+  ;;; category of the entry is in an exclude list and returns either t or nil
+  ;;; to skip or include the entry.
+
+  (defun org-mycal-export-limit ()
+    "Limit the export to items that have a date, time and a range. Also exclude certain categories."
+
+    ;;; A single org-mode entry can give rise to multiple iCalendar entries (as a
+    ;;; timestamp, a deadline, a scheduled item, and as a TODO item),
+
+    ;;; The export will honor SUMMARY, DESCRIPTION and LOCATION3 properties if the
+    ;;; selected entries have them. If not, the summary will be derived from the
+    ;;; headline, and the description from the body (limited to
+    ;;; org-icalendar-include-body characters).
+
+;;    (setq org-tst-regexp
+;;      "<\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\} ... [0-9]\\{2\\}:[0-9]\\{2\\}[^\r\n>]*?\\)>")
+
+    (setq org-tstr-regexp (concat org-tst-regexp "--?-?" org-tst-regexp))
+
+;;    (save-excursion
+;;      (setq mycategory (org-get-category))  ;; get categories
+;;
+;;      (org-back-to-heading t)               ;; get start of tree
+;;      (setq mystart    (point))
+;;
+;;      (org-end-of-subtree)                  ;; get end of tree
+;;      (setq myend      (point))
+;;
+;;      (goto-char mystart)
+;;
+;;      (setq myresult (re-search-forward org-tstr-regexp myend t))   ;; search for timerange
+;;
+;;      (setq mycatp (member mycategory org-export-exclude-category)) ;; search for categories to exclude
+;;
+;;      (if (and myresult (not mycatp)) t nil)                        ;; return t if ok, nil when not ok
+;;     )
+
+     t
+  )
+
+   (defun org-mycal-export ()
+      "activate filter and call export function"
+      (let
+         ( ; local variable definitions
+           ;;;(org-agenda-marker-table
+           ;;;  (org-create-marker-find-array
+           ;;;    (org-agenda-collect-markers)
+           ;;;  )
+           ;;;)
+
+           ;;; (org-icalendar-verify-function 'org-check-agenda-marker-table)
+           (org-icalendar-verify-function 'org-mycal-export-limit)
+
+           (org-icalendar-include-todo nil)
+
+           (org-icalendar-use-deadline
+              '(
+                event-if-todo       ;; Deadlines in TODO entries become calendar events.
+                event-if-not-todo   ;; Deadlines in non-TODO entries become calendar events.
+                todo-due            ;; Use deadlines in TODO entries as due-dates
+               )
+           )
+
+           (org-icalendar-use-scheduled
+              '(
+                event-if-todo       ;; Scheduling time stamps in TODO entries become an event.
+                event-if-not-todo   ;; Scheduling time stamps in non-TODO entries become an event.
+                todo-start          ;; Scheduling time stamps in TODO entries become start date.
+               )
+           )
+
+           (org-icalendar-honor-noexport-tag t)
+
+           (org-icalendar-store-UID t)
+           (org-id-method 'uuidgen)
+         )
+
+         (org-export-icalendar-combine-agenda-files)
+      )
+  )
+
+;;  (defun my-icalendar-verify ()
+;;    (if (string= (org-entry-get nil "STYLE") "habit") nil t))
+;;
+;;  (setq org-icalendar-verify-function 'my-icalendar-verify)
+
+#+END_SRC
+
+** Generating Tables from Org-Properties
+org-mode/contrib/lisp/org-collector.el
+
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+## (require 'org-collector)   CANNOT FIND THIS!
+
+
+* My ELisp Development Projects
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+** org-toodle sync tool
+
+#+BEGIN_SRC example
+  (push "~/.emacs.d/org-toodledo" load-path)
+  ;;  (add-to-list 'load-path
+  ;;      "~/.emacs.d/org-toodledo")
+
+  (require 'org-toodledo)
+
+  (add-to-list 'load-path
+      "~/.emacs.d/lisp/org-toodledo/test/")
+
+  (setq
+    ;;org-toodledo-file     "/home/jrush/Dropbox/Documents/Org-Mode/NotesOnline.org"
+    org-toodledo-file     "/home/jrush/Dropbox/Documents/Org-Mode/TestA.org"
+
+    org-toodledo-sync-on-save               "no"  ;;; was "ask"
+    org-toodledo-archive-completed-tasks    nil   ;;; was nil
+    org-toodledo-archive-deleted-tasks      nil   ;;; was nil
+
+    org-toodledo-log-level 2
+  )
+
+  ;; Useful key bindings for org-mode
+
+  (add-hook 'org-mode-hook
+     (lambda ()
+      ;;; (local-unset-key "\C-o")
+        (local-set-key "\C-cd" 'org-toodledo-mark-task-deleted)
+        (local-set-key "\C-cs" 'org-toodledo-sync)
+     )
+  )
+
+  (add-hook 'org-agenda-mode-hook
+     (lambda ()
+        (local-unset-key "\C-o")
+        (local-set-key "\C-od" 'org-toodledo-agenda-mark-task-deleted)
+     )
+  )
+#+END_SRC
+
+* Just Notes, No Configuration
+;;;
+;;; (consider a "presentation" settings file)
+;;; (consider a "credentials" settings file)
+;;;
+
+** Notes: Capabilities Desired
+- run code in IPython
+- mark region and apply a template over it
+- toggle linenumbers on/off for presentations
+- document use of Git within Emacs
+-
+  `epa-file' already enabled
+  [yas] Cyclic parenthood: mode text-mode has already seen as a parent of mode python-mode
+  [yas] Discovered there was already diff.py in python-mode
+- document what is pylookup
+- study jedi and emacs-jedi
+- remap TAB key to handle yasnippet and jedi?
+- template for context manager
+- template for ZODB
+- template for RDBMS
+- template for MongoDB
+- template for iterator
+- template for __repr__ and/or __str__
+- template for zeromq
+
+** Editing SQL Queries
+SQL: <URL:http://www.geocities.com/TimesSquare/6120/emacs.html>
+** Editing HTML Source
+** Guide to Version Control
+;; Git Interface:
+** Invoking External Programs
+- ESC !		:: shell-command
+** Obtaining Statistics
+- C-x l		:: count-lines-page
+** Guide to Comparing Files
+- M-x diff
+
+- C-x `					:: to visit successive changed locations
+- C-c C-c					:: in *diff* buffer, to jump to corresponding source location
+
+- M-x compare-windows			:: compares text in current window with that in the next window
+						exits when it finds a different (or ends a difference)
+						ignores whitespace if given a numeric argument.
+
+- M-x diff-mode				:: a major mode for viewing/editing patches
+
+Ediff and Viper: <URL:ftp://ftp.cs.sunysb.edu/pub/TechReports/kifer/>
+
+** About Registers and Bookmarks
+	C-x r SPC				store location into a named register a-z
+	C-x r j					jump to a location specified by a named register a-z
+
+	C-x r m					bookmark location under a given name
+	C-x r b					jump back to a given bookmark
+	C-x r l					list the (persistent) bookmarks currently defined
+
+	C-u C-SPC				cycle thru the marks in the buffer's mark ring
+** Changing Content
+	C-t					transpose-chars
+
+	ESC t					transpose-words
+	ESC c					capitalize-word
+	ESC u					upcase-word
+	ESC l					downcase-word
+
+	C-x C-t					transpose-lines
+
+	C-x f					set-fill-column
+	M-q					fill-paragraph
+
+	C-x ;					comment-set-column
+
+** Deleting Content
+	C-d					delete-char
+	DEL					delete-backward-char
+
+	ESC d					kill-word
+	C-DEL					kill-word
+	ESC DEL					backward-kill-word
+	C-backspace				backward-kill-word
+
+	C-k					kill-line
+	C-x C-o					delete-blank-lines
+
+	ESC k					kill-sentence
+	C-x DEL					backward-kill-sentence
+
+	ESC \					delete-horizontal-space
+	ESC ^					delete-indentation
+	ESC z					zap-to-char
+
+** Inserting Content
+	C-q					quoted-insert [of next keystroke]
+
+	C-y					yank (paste)
+	S-INS					yank (paste)
+	C-x r y					yank-rectangle
+
+	C-o					open-line  [but without indenting afterward]
+	C-j					newline-and-indent
+	ESC C-o					split-line [and keep indentation on new line]
+
+	C-l					recenter
+	ESC (					insert-parentheses
+	ESC )					move-past-close-and-reindent
+
+	ESC SPC					just-one-space
+** Selecting Content and Operating Upon It
+	C-@					set-mark-command
+	C-SPC					set-mark-command
+	C-u C-SPC				jump to the mark
+	C-x C-x					exchange-point-and-mark
+
+	M-r					jump point btw top, center and bottom of visible window
+
+	C-x h					mark-whole-buffer and jump to beginning of buffer
+
+	ESC @					mark-word
+	ESC h					mark-paragraph
+
+	ESC C-\					indent-region
+
+(make the mark visible)
+
+*** Operating Upon the Marked Region
+	C-w					kill-region
+	M-w					copy-region
+
+	M-x delete-trailing-whitespace		delete all trailing whitespace within a region
+	M-x untabify				expand tabs to spaces in the selected region
+	M-x tabify				reduce spaces to tabs in the selected region
+
+	C-x C-u					upcase-region
+	C-x C-l					downcase-region
+
+	ESC |					shell-command-on-region
+
+	C-x r N					insert numbers before each segment of rectangle
+	C-x r t					string-rectangle [insert using a given fill string]
+	C-x r o					open-rectangle   [insert using blanks]
+
+	C-x r d					delete-rectangle
+	C-x r k					kill-rectangle
+	C-x r c					clear-rectangle
+
+
+** Moving Around   [[http://www.masteringemacs.org/articles/2011/01/14/effective-editing-movement/][Effective Editing I: Movement]]
+*** Jump-to-Beginning
+	C-a					beginning-of-line
+  M-m					move to the first text on the current linex
+	HOME					beginning-of-line
+	C-HOME					beginning-of-buffer
+	<M-begin>				beginning-of-buffer-other-window
+	ESC <					beginning-of-buffer
+	<M-home>				beginning-of-buffer-other-window
+
+	C-M-a					beginning of function/container/heading
+
+*** Jump-to-End
+	ESC >					end-of-buffer
+	C-END					end-of-buffer
+	C-e					end-of-line
+	END					end-of-line
+
+	C-M-e					end of function/container/heading
+
+*** Move-Forward
+	C-f					forward-char
+	RIGHT					forward-char
+
+	ESC f					forward-word
+	C-RIGHT					forward-word
+	M-f					forward-word
+
+	C-n					next-line
+	DOWN					next-line
+
+	ESC e					forward-sentence
+	M-e					forward-sentence
+
+	C-DOWN					forward-paragraph
+	ESC }					forward-paragraph
+
+	M-}					move forward by one org-element
+
+	C-x ]					forward-page
+
+	M-g M-n					jump to next error/match
+
+*** Move-Backward
+	C-b					backward-char
+	LEFT					backward-char
+
+	M-b					backward-word
+	ESC b					backward-word
+	C-LEFT					backward-word
+
+	C-p					previous-line
+	UP					previous-line
+
+	ESC a					backward-sentence
+	M-a					backward-sentence
+
+	ESC {					backward-paragraph
+	C-UP					backward-paragraph
+
+	M-{					move backward by one org-element
+
+	C-x [					backward-page
+
+	M-g M-p					jump to prev error/match
+
+*** To a Specific Place
+	M-g LINENUMBER				jump to a given line number
+	C-u M-g LINENUMBER			jump to a given line number, in the *previous* buffer
+
+	C-x `					next-error
+
+	ESC m					back-to-indentation
+
+*** Search (and Replace)
+	C-s C-h C-h				read the help info for search
+
+	C-s					search forward in regexp-aware
+	ESC C-s					isearch-forward-regexp
+
+	C-r					search reverse in regexp-aware
+	ESC C-r					isearch-backward-regexp
+
+	M-s w					search forward for a fuzzily-defined word
+
+	C-s C-s					repeat least search
+
+	C-M-s					incremental search
+
+	M-x replace-string			replace all occurrences of a string
+	ESC %					query-replace
+	M-x query-replace			replace but ask me about each one
+	ESC C-%					query-replace-regexp
+	M-x replace-regexp			replace-regexp
+
+** The Basic Elements of Emacs
+	C-x u					undo  [good]
+	C-_					undo  [better]
+	C-/					undo
+	INS					overwrite-mode
+
+*** About Sessions:
+	C-x C-c					save-buffers-kill-emacs (exit Emacs)
+
+*** About Files
+	C-x C-f					find-file
+	C-x C-r					find-file-read-only
+	C-x i					insert-file
+	C-x C-w					write-file
+
+*** About Directories
+	C-x d					dired
+	C-x C-d					list-directory
+
+	??????????				(make a directory?)
+	??????????				(change to a directory?)
+
+*** About Buffers
+	C-x b					prompt for a buffer to switch to
+	C-x C-b					list-buffers
+	C-x C-s					save-buffer
+	C-x b					switch-to-buffer
+	C-x LEFT				select previous buffer
+	C-x RIGHT				select next buffer
+
+	C-x k					kill-buffer
+	M-x kill-some-buffers			interactively prompt to kill each buffer
+
+	M-~					not-modified [mark this	buffer unmodified]
+
+*** About Windows
+	C-x =					what-cursor-position
+
+**** Scrolling the Viewport
+	C-v					scroll down
+	M-v					scroll up
+
+	<C-next>				scroll-left
+	C-x <					scroll-left
+	<C-prior>				scroll-right
+	C-x >					scroll-right
+	ESC v					scroll-down
+
+	ESC C-v					scroll-other-window
+	<M-prior>				scroll-other-window-down
+	C-M-v					scroll other window/frame down
+	<M-next>				scroll-other-window
+	C-u n C-M-v				scroll other window/frame up
+	C-M-S-v					scroll other window/frame up
+
+**** Resizing Windows
+	C-x {					shrink-window-horizontally
+	C-x }					enlarge-window-horizontally
+	??????????				shrink-window-vertically
+	??????????				enlarge-window-vertically
+
+	ESC C-l					reposition-window
+
+	C-x -					shrink window if buffer doesn't need so many lines
+	C-x +					make all windows the same height
+
+**** Creating/Destroying Windows
+
+*** Universal Argument
+Make use of the "Universal Argument" to repeat steps, and don't forget use of
+the negative argument to invert the operation such as operating upon text
+that you have just finished typing.
+
+	C-u  <signednumber>
+	C-0 to C-9
+	M-0 to M-9
+	C-M-0 to C-M-9
+
+	C--
+	M--
+	C-M--
+
+	C--					negative-argument
+	C-9					digit-argument
+	C-8					digit-argument
+	C-7					digit-argument
+	C-6					digit-argument
+	C-5					digit-argument
+	C-4					digit-argument
+	C-3					digit-argument
+	C-2					digit-argument
+	C-1					digit-argument
+	C-0					digit-argument
+
+** Keystroke Macros / keystroke recording and playback
+	C-x (					start-kbd-macro
+	C-x )					end-kbd-macro
+	C-x e					call-last-kbd-macro
+
+	C-x z					repeat
+	C-x C-k					edit-kbd-macro
+	C-x q					kbd-macro-query
+
+** Guide to Remote Editing (CLEAN UP THIS MESS)
+;;* Tramp: Remote file access via rsh/ssh
+;;  <URL:ftp://ls6.cs.uni-dortmund.de/pub/tramp.tar.gz>
+;; The Tramp package extends emacs to edit files remotely access via the network protocols
+
+
+; You can make comments auto-fill when they get too long:
+;   "comment-multi-line"
+
+
+ESC TAB  (try this for yasnippet?)
+
+
+
+;; ESC j                indent-new-comment-line
+;; ESC r                move-to-window-line
+
+
+
+;; Need macro to tidy HTML source.
+
+;; New Keys to learn:
+;;   C-x 4 0    (delete the selected window AND kills the associated buffer)
+;;   C-x r k     (kill rectangle)
+;;   C-x r d     (delete rectangle)
+;;   C-x r y     (yank rectangle)
+;;   C-x r o     (insert blank space to fill region, pushing things right)
+;;   C-x b <buffer)  (create or select a buffer)
+;;   C-x <LEFT>   (select previous buffer)
+;;   C-x <RIGHT>  (select next buffer)
+;;   C-x k <buffer>   (kill a buffer)
+;;   M-x kill-some-buffers   (interactively prompt to kill each buffer)
+;;   C-x h        (mark wHole buffer)
+
+;; PROBLEMS:
+;;   C-x <LEFT>  fails   (previous-buffer)
+;;   C-x <RIGHT>  fails  (next-buffer)
+;;   C-u M-g M-g  fails  (goto-line)
+;;   C-u M-g g    fails  (goto-line)
+
+;; 1. Learn and implement outlining within Emacs.
+;; 2. Enable sessioning and remembering of position within files.
+
+;;* CC mode: <URL:http://cc-mode.sourceforge.net/>
+
+
+The following causes inline images to respect an image size attribute, if
+present, else use the image's actual size.  The image size attribute looks
+like:
+
+#+BEGIN_EXAMPLE
+  #+CAPTION: Architecture Stack for Virtual Machines
+  #+NAME:   fig:Hierarchy-VMs
+  #+ATTR_HTML: :width 600px
+  [[some path]]
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+  #+CAPTION: Architecture Stack for Virtual Machines
+  #+NAME:   fig:Hierarchy-VMs
+  #+ATTR.*: :width 600px
+  [[some path]]
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+  (setq org-image-actual-width nil)
+#+END_SRC
+** IMenu
+
+Imenu
+
+Imenu is a useful and extensible tool in Emacs that lets you jump to key areas
+of your buffer, most usually functions definitions in source
+code. Unfortunately, the imenu is marred somewhat by no default key binding
+(M-x imenu to invoke) making it less known than it should be; another negative
+is that it uses the standard completion mechanism which is terrible for
+quickly navigating by "feel".
+
+I use a super-charged ido version of imenu and bind it to the M-i key:
+
+(global-set-key (kbd "M-i") 'ido-goto-symbol)
+
+(rectangular select)
+
+(folding Python structures)
+(running Python in emacs)
+
+
+(figure out how to open a file with a partially specified filename)
+
+(find way to group keydefs and show them)
+
+(M-e in isearch-edit-string lets you edit the search text)
+
+
+text navigation
+buffer management/navigation
+file navigation
+
+(need boilerplate insertion ability)
+container skeleton
+descriptor skeleton
+pygame basic game skeleton
+
+** UNINSTALLED FOR NOW     Auto-Complete Engine (=Jedi.el=)
+ Jedi -- an editor-agnostic auto-completion library
+
+http://www.masteringemacs.org/articles/2013/01/10/jedi-completion-library-python/
+(forget pymacs, rope and ropemacs)
+
+**** Key Mappings
+
+ Aside from syntax completion, =emacs-jedi= offers:
+
+ C-.	find symbol definition at point
+ C-c r	"related names" functionality
+		tracks down same-named identifiers in other modules; it uses
+		=Anything= (now =Helm=) to display the results.
+ C-c d	show documentation for the identifier at point
+		(be it a class or function)
+
+**** required: [[https://github.com/kiwanami/emacs-epc][emacs-epc]] - an RPC stack for Emacs Lisp
+
+***** required: [[https://github.com/kiwanami/emacs-deferred][emacs-deferred]]
+$ cd ~/.emacs.d
+$ wget https://github.com/kiwanami/emacs-deferred/raw/master/deferred.el
+$ wget https://raw.github.com/kiwanami/emacs-deferred/master/concurrent.el
+
+***** required: [[https://github.com/kiwanami/emacs-ctable][ctable.el]]
+$ cd ~/.emacs.d
+$ wget https://raw.github.com/kiwanami/emacs-ctable/master/ctable.el
+
+#+BEGIN_SRC emacs-lisp
+;;  (require 'ctable)
+#+END_SRC
+
+***** install: [[https://raw.github.com/kiwanami/emacs-epc][emacs-epc]]
+$ cd ~/.emacs.d
+$ wget https://raw.github.com/kiwanami/emacs-epc/master/epc.el
+$ wget https://raw.github.com/kiwanami/emacs-epc/master/epcs.el
+
+#+BEGIN_SRC emacs-lisp
+;;  (require 'epc)
+#+END_SRC
+
+**** required: [[https://github.com/auto-complete/popup-el][popup.el]]
+$ cd ~/.emacs.d
+wget https://raw.github.com/auto-complete/popup-el/master/popup.el
+
+**** required: auto-complete
+***** required: package.el (exists in Emacs 24 now; I have to upgrade)
+
+***** install: [[https://github.com/auto-complete/auto-complete][auto-complete.el]]
+$ cd ~
+$ git clone https://github.com/auto-complete/auto-complete.git
+$ cd auto-complete
+$ make byte-compile
+$ cp *.el *.elc ~/.emacs.d/
+$ cp -r dict ~/.emacs.d/
+
+#+BEGIN_SRC emacs-lisp
+;;  (require 'auto-complete-config)
+;;  (add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+;;  (ac-config-default)
+#+END_SRC
+
+**** required: Jedi (Python, NOT Emacs Package)
+ $ sudo easy_install Jedi
+**** required: python-epc (Python, NOT Emacs Package)
+$ sudo easy_install epc
+** using Emacs as an email client
+
+** TODO open emacsclient in a new frame, close frame when done, and kill any buffers I used
+
+To open the files designated by emacsclient in their _own frame_, you can use
+the following hook as a Server Switch Hook which can be setup in
+customize-group <RET> Server <RET>, or in your InitFile, as such:
+
+#+BEGIN_SRC emacs-lisp
+  ;;(add-hook 'server-switch-hook
+  ;;   (lambda nil
+  ;;      (let ((server-buf (current-buffer)))
+  ;;      (bury-buffer)
+  ;;      (switch-to-buffer-other-frame server-buf))))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  ;;(add-hook 'server-switch-hook
+  ;;          (lambda ()
+  ;;            (unless (find-if (lambda (f)
+  ;;                         (let ((p (frame-parameters f)))
+  ;;                           (assq 'window-system p)))
+  ;;                       (frame-list))
+  ;;        (make-frame-on-display (getenv "DISPLAY")))))
+
+  ;;(add-hook 'server-visit-hook 'make-frame)
+#+END_SRC
+
+You might also want to close the frame when you're done with it.
+
+#+BEGIN_SRC emacs-lisp
+;; (add-hook 'server-done-hook 'delete-frame)
+#+END_SRC
+
+I also like emacs to cleanup stuff when I finish the emacsclient, so I add
+another hook to kill the buffer when finished. This also takes care of weird
+buffer switching behaviors when closing client buffers.
+
+#+BEGIN_SRC emacs-lisp
+;; (add-hook 'server-done-hook (lambda nil (kill-buffer nil)))
+#+END_SRC
+
+You can also use 'server-kill-new-buffers' instead of calling 'kill-buffer' in
+your 'server-done-hook', e.g.
+
+#+BEGIN_SRC emacs-lisp
+;;  (custom-set-variables '(server-kill-new-buffers t))
+;;  (add-hook 'server-done-hook (lambda () (delete-frame)))
+#+END_SRC
+
+
+[[elisp:(progn (kill-new (format "Sneak peek: Sketched Book: %s - %s %s" (org-entry-get-with-inheritance "SHORT_TITLE") (org-entry-get-with-inheritance "AUTHOR") (org-entry-get-with-inheritance "BLOG_POST"))) (browse-url "http://twitter.com"))][Copy text and launch Twitter]]
