@@ -1199,9 +1199,11 @@ To see the set of possible color names for X:
       )
 #+END_SRC
 
-~testing~ =testing=
+Verbatim text: ~testing~
+Code text:  =testing=
 
-- blah :: test
+Description List:
+ - blah :: test
 
 #+BEGIN_SRC emacs-lisp
   ; Text surrounded by =TEXT=
