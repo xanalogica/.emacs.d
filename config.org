@@ -1211,7 +1211,7 @@ To see the set of possible color names for X:
   (set-face-attribute 'org-code nil :foreground "Purple")
 
   ; Text representing the definition term in a description list   - TERM  :: DEFINITION
-  (set-face-attribute 'org-list-dt nil :foreground "Orange" :box "Orange" :inverse-video t)
+  (set-face-attribute 'org-list-dt nil :foreground "Orange" :box "White" :inverse-video t)
 
 
 ;;;  (set-face-attribute 'org-list-dt :foreground "LightGrey" :box "Red" :inverse-video t)
