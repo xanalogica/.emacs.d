@@ -1259,7 +1259,7 @@ To see the various faces:
         (
           (class color)
           (min-colors 88)
-        ) (:background "deep sky blue" :foreground "black" :box (:line-width -1 :style released-button) :height 1.3))
+        ) (:background "deep sky blue" :foreground "black" :box (:line-width -1 :style released-button) :height 1.5))
         )
       )
 
