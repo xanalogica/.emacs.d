@@ -1200,7 +1200,7 @@ To see the set of possible color names for X:
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-  (set-face-attribute 'org-verbatim nil :color "Orange")
+  (set-face-attribute 'org-verbatim nil '(:color "LightGray"))
 ;;  (set-face-attribute 'org-code nil '(:foreground "Blue"))
 
   ;font-lock-builtin-face (dark blue on grey)
