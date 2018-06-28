@@ -1201,6 +1201,8 @@ To see the set of possible color names for X:
 
 ~testing~ =testing=
 
+- blah :: test
+
 #+BEGIN_SRC emacs-lisp
   (set-face-attribute 'org-verbatim nil :foreground "LightGrey" :box "Orange" :inverse-video t)
   (set-face-attribute 'org-list-dt :foreground "LightGrey" :box "Red" :inverse-video t)
