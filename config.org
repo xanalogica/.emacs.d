@@ -1200,6 +1200,8 @@ To see the set of possible color names for X:
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+
+
   ;font-lock-builtin-face (dark blue on grey)
   ;font-lock-comment-face (red on grey)
   ;font-lock-constant-face (pink on grey)
