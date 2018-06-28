@@ -1207,6 +1207,7 @@ To see the set of possible color names for X:
   ; Text surrounded by =TEXT=
   (set-face-attribute 'org-verbatim nil :foreground "LightGrey" :box "Orange" :inverse-video t)
 
+  ; Text surrounded by ~TEXT~
 
 
 
