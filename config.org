@@ -1204,7 +1204,7 @@ To see the set of possible color names for X:
 - blah :: test
 
 #+BEGIN_SRC emacs-lisp
-  ; Text surrounded by ~TEXT~
+  ; Text surrounded by =TEXT=
   (set-face-attribute 'org-verbatim nil :foreground "LightGrey" :box "Orange" :inverse-video t)
 
 
