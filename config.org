@@ -1202,7 +1202,7 @@ To see the set of possible color names for X:
 ~testing~ =testing=
 
 #+BEGIN_SRC emacs-lisp
-  (set-face-attribute 'org-verbatim nil :foreground "LightGrey" :box "Orange")
+  (set-face-attribute 'org-verbatim nil :foreground "LightGrey" :box "Orange" :inverse-video t)
 ;;  (set-face-attribute 'org-code nil '(:foreground "Blue"))
 
   ;font-lock-builtin-face (dark blue on grey)
