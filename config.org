@@ -1213,10 +1213,6 @@ To see the set of possible color names for X:
   ; Text representing the definition term in a description list   - TERM  :: DEFINITION
   (set-face-attribute 'org-list-dt nil :foreground "Orange" :box "White" :inverse-video t)
 
-
-;;;  (set-face-attribute 'org-list-dt :foreground "LightGrey" :box "Red" :inverse-video t)
-;;  (set-face-attribute 'org-code nil '(:foreground "Blue"))
-
   ;font-lock-builtin-face (dark blue on grey)
   ;font-lock-comment-face (red on grey)
   ;font-lock-constant-face (pink on grey)
