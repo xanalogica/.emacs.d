@@ -2511,6 +2511,8 @@ z (ZeOmega)
   r   research to undertake
   l   general link to remember
   n   unplanned meeting or brainstorming
+  b   blood pressure measurement
+
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
