@@ -2513,6 +2513,9 @@ z (ZeOmega)
   n   unplanned meeting or brainstorming
   b   blood pressure measurement
   q   quote to remember
+  c   someone to contact
+  m   an unplanned meeting
+  p   a sudden phone call
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
