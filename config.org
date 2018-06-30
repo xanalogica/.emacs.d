@@ -2518,6 +2518,8 @@ z (ZeOmega)
   p   a sudden phone call
   b   a book to read
   v   a video to watch
+  m   music idea
+
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
