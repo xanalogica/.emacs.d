@@ -2497,6 +2497,7 @@ z (ZeOmega)
   zb  (boss)
   zc  (C-Suite Mgmt Meeting)
   zd  DevOps
+  zs  Sentinel
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
