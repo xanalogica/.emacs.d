@@ -2501,6 +2501,7 @@ z (ZeOmega)
   zi  Murthy, Mohan, Raju (interdepartmental)
   ABI??
   zm  All Management Meeting
+  zp Product Managers Meeting
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
