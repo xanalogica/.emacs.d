@@ -2516,6 +2516,8 @@ z (ZeOmega)
   c   someone to contact
   m   an unplanned meeting
   p   a sudden phone call
+  b   a book to read
+  v   a video to watch
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
