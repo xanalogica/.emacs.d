@@ -2519,6 +2519,9 @@ z (ZeOmega)
   b   a book to read
   v   a video to watch
   m   music idea
+  w   website to visit
+  e   an event to attend
+  j   personal journal of my day
 
 
 #+BEGIN_SRC emacs-lisp
