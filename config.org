@@ -2494,7 +2494,8 @@ Document-specific link abbreviations can also be given using the following:
 **** Predefined Information Capture Templates
 
 z (ZeOmega)
-
+  zb  (boss)
+  zc  (C-Suite Mgmt Meeting)
 
 
 #+BEGIN_SRC emacs-lisp
