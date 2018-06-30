@@ -2509,6 +2509,7 @@ z (ZeOmega)
   j   a dated journale ntry
   t   a TODO item to be classified
   r   research to undertake
+  l   general link to remember
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
