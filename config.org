@@ -2507,6 +2507,7 @@ z (ZeOmega)
   za  Action Item to Address
   ze  Email Item to Address
   j   a dated journale ntry
+  t   a TODO item
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
