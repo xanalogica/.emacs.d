@@ -2508,6 +2508,7 @@ z (ZeOmega)
   ze  Email Item to Address
   j   a dated journale ntry
   t   a TODO item to be classified
+  r   research to undertake
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
