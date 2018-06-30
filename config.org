@@ -2502,6 +2502,7 @@ z (ZeOmega)
   ABI??
   zm  All Management Meeting
   zp Product Managers Meeting
+  zt  Sr. Mgmt client focused
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
