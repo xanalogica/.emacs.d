@@ -2510,6 +2510,7 @@ z (ZeOmega)
   t   a TODO item to be classified
   r   research to undertake
   l   general link to remember
+  n   unplanned meeting or brainstorming
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
