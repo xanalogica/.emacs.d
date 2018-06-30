@@ -2496,7 +2496,7 @@ Document-specific link abbreviations can also be given using the following:
 z (ZeOmega)
   zb  (boss)
   zc  (C-Suite Mgmt Meeting)
-
+  zd  DevOps
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
