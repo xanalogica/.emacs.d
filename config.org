@@ -2512,7 +2512,7 @@ z (ZeOmega)
   l   general link to remember
   n   unplanned meeting or brainstorming
   b   blood pressure measurement
-
+  q   quote to remember
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
