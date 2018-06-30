@@ -2506,6 +2506,7 @@ z (ZeOmega)
   zh  ETL/Java
   za  Action Item to Address
   ze  Email Item to Address
+  j   a dated journale ntry
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
