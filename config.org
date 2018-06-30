@@ -2498,6 +2498,7 @@ z (ZeOmega)
   zc  (C-Suite Mgmt Meeting)
   zd  DevOps
   zs  Sentinel
+  zi  Murthy, Mohan, Raju (interdepartmental)
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
