@@ -2500,6 +2500,7 @@ z (ZeOmega)
   zs  Sentinel
   zi  Murthy, Mohan, Raju (interdepartmental)
   ABI??
+  zm  All Management Meeting
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
