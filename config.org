@@ -2504,6 +2504,8 @@ z (ZeOmega)
   zp Product Managers Meeting
   zt  Sr. Mgmt client focused
   zh  ETL/Java
+  za  Action Item to Address
+  ze  Email Item to Address
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
