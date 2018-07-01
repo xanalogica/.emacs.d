@@ -2496,14 +2496,14 @@ Document-specific link abbreviations can also be given using the following:
 - z :: ZeOmega-related
 
   zi  Murthy, Mohan, Raju (interdepartmental)
+  zd  DevOps
+  zs  Sentinel
 
 
 
   zb  (boss)                  represent as a tag, not place
 
   zc  (C-Suite Mgmt Meeting)
-  zd  DevOps
-  zs  Sentinel
   ABI??
   zm  All Management Meeting
   zp Product Managers Meeting
