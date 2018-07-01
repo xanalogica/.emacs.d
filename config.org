@@ -2532,13 +2532,13 @@ Things that should be in one place are:
     - ABI??
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
+    - zp  Product Planning Meeting
 
 ideas for writing, presentations
 unordered actions (people to reach out to, a sudden phone call)
 
 
 Things to Drop:
-  - zp Product Managers Meeting
   - zc  (C-Suite Mgmt Meeting)
   - j   a dated journale entry
   - j   personal journal of my day
