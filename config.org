@@ -2588,7 +2588,6 @@ unordered actions (people to reach out to, a sudden phone call, a TODO to be cla
       (may be refiled into a relevant project like C18)
 
 
-
        ("z" "ZeOmega Capture Templates")
 
   - meeting notes 
