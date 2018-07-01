@@ -2554,6 +2554,14 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
+***** Information to Consume
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+***** Meeting Notes
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
 ***** Blood Pressure Measurement
 #+BEGIN_SRC emacs-lisp
 ;;;;  - Blood Pressure Measurement  (never refiled)
