@@ -2507,6 +2507,7 @@ Things that should be scattered about and associated by location with
 ~specific topics~ are:
 
   - l   general link to remember
+  - ze  Email Item to Address
 
 
 
@@ -2529,13 +2530,11 @@ Things to Drop:
   zs  Sentinel
 
 
-
   zb  (boss)                  represent as a tag, not place
 
   zm  All Management Meeting
   zt  Sr. Mgmt client focused
   za  Action Item to Address
-  ze  Email Item to Address
   j   a dated journale ntry
   t   a TODO item to be classified
   r   research to undertake
