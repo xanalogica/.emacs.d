@@ -2520,7 +2520,7 @@ Things that should be in one place are:
   - Things to Study Further (websites, books, videos)
     (may be refiled into a relevant project)
   - Collected Quote
-  - Blood Pressure Measurement
+  - Blood Pressure Measurement  (never refiled)
   - A New FICO Monthly Score
 
   - meeting notes 
