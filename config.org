@@ -2512,6 +2512,7 @@ topics are:
 Things that should be in one place are:
 
   - meeting notes
+    - ABI??
 
 
 Things to Drop:
@@ -2529,7 +2530,6 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
-  ABI??
   zm  All Management Meeting
   zt  Sr. Mgmt client focused
   zh  ETL/Java
