@@ -2520,7 +2520,7 @@ Things that should be in one place are:
     - ABI??
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
-    - arbitrary meeting
+    - non-regular arbitrary meeting
 
 
 Things to Drop:
