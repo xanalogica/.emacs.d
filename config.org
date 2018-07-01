@@ -2558,7 +2558,6 @@ Things to Drop:
   zt  Sr. Mgmt client focused
   r   research to undertake
   n   unplanned meeting or brainstorming
-  b   blood pressure measurement
   m   an unplanned meeting
   m   music idea
   e   an event to attend
