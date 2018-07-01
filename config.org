@@ -2519,6 +2519,7 @@ Things that should be in one place are:
   - zm ::	Meeting Notes (documented understandings, action items, questions)
     (may be refiled into a relevant project)
     =BE SURE TO TURN ON REFILING HISTORY COLLECTION SO WE CAN SEE WHICH MEETING IT CAME FROM=
+
   - Things to Study Further (websites, books, videos)
     (may be refiled into a relevant project)
     - r   research to undertake
