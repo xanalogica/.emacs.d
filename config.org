@@ -2542,6 +2542,9 @@ Things to Drop:
   - j   personal journal of my day
 
 
+
+
+
 - z :: ZeOmega-related
 
   I want to produce an agenda view for meeting with Sam, where I show my
