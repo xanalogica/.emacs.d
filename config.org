@@ -2535,7 +2535,7 @@ Things that should be in one place are:
     - zp  Product Planning Meeting
 
 ideas for writing, presentations
-unordered actions (people to reach out to, a sudden phone call)
+unordered actions (people to reach out to, a sudden phone call, a TODO to be classified)
 
 
 Things to Drop:
