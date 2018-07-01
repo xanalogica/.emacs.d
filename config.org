@@ -2506,7 +2506,7 @@ scattered throughout your information structure.
 Things that should be scattered about and associated by location with
 ~specific topics~ are:
 
-  - l   general link to remember  (located within projects and tagged)
+  - l   general link to remember  (located within relevant projects and tagged)
   - ze  Email Item to Address     (tagged, not located)
   - za  Action Item to Address    (tagged, not located)
   - b   a book to read            (tagged, not located)
