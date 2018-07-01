@@ -2590,6 +2590,10 @@ a;;       ("f" "a [F]ICO measurement" table-line
 
 
        ("z" "ZeOmega Capture Templates")
+
+  - meeting notes 
+
+
 ;;       ("zb" "Touchbase w/Boss Sam (Weekly on Tue)" entry
 ;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Sam")
 ;;         (file "~/Clients/ZeOmega/notes/templates/minutes-sam.org")
