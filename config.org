@@ -2592,7 +2592,7 @@ Things to Drop:
 ;;;; producing ideas for writing, presentations FOR ZEOMEGA
 
 ;;;; consuming ideas for consumption  m   music idea
-;; music to listen to, places to eat
+;; music to listen to, places to eat, books to read
 
        ("z" "ZeOmega Capture Templates")
 
