@@ -2535,7 +2535,6 @@ Things that should be in one place are:
 
 ideas for writing, presentations
 unordered actions (people to reach out to)
-  c   someone to contact
 
 
 Things to Drop:
