@@ -2553,7 +2553,6 @@ I want to produce an agenda view for meeting with Sam, where I show my
   r   research to undertake
   n   unplanned meeting or brainstorming
   b   blood pressure measurement
-  q   quote to remember
   c   someone to contact
   m   an unplanned meeting
   p   a sudden phone call
