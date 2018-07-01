@@ -2536,6 +2536,7 @@ Things that should be in one place are:
 
 ideas for writing, presentations
 unordered actions (people to reach out to, a sudden phone call, a TODO to be classified)
+  e   an event to attend
 
 
 Things to Drop:
@@ -2559,7 +2560,6 @@ Things to Drop:
   r   research to undertake
   m   an unplanned meeting
   m   music idea
-  e   an event to attend
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
