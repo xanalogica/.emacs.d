@@ -2527,9 +2527,11 @@ Things to Drop:
 
 - z :: ZeOmega-related
 
-
-
+I want to produce an agenda view for meeting with Sam, where I show my
+  questions, my action items and collect notes on our discussion.
   zb  (boss)                  represent as a tag, not place
+
+
 
   zm  All Management Meeting
   zt  Sr. Mgmt client focused
