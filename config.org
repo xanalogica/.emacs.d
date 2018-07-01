@@ -2596,8 +2596,6 @@ Things to Drop:
 
 ;;;;  - Collected Quote (for ZeOmega or personal)
 
-
-
        ("z" "ZeOmega Capture Templates")
 
   - meeting notes 
