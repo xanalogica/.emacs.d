@@ -2561,7 +2561,7 @@ I want to produce an agenda view for meeting with Sam, where I show my
   m   an unplanned meeting
   m   music idea
   e   an event to attend
-  j   a dated journale ntry
+  j   a dated journale entry
   j   personal journal of my day
 
 #+BEGIN_SRC emacs-lisp
