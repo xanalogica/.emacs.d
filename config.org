@@ -2535,7 +2535,6 @@ Things that should be in one place are:
     - zm  All Management Meeting
     - zt  Sr. Mgmt client focused
 
-consuming ideas for consumption  m   music idea
 
 Things to Drop:
   - zc  (C-Suite Mgmt Meeting)
@@ -2592,6 +2591,7 @@ Things to Drop:
 ;;;; producing ideas for writing, presentations FOR MYSELF
 ;;;; producing ideas for writing, presentations FOR ZEOMEGA
 
+;;;; consuming ideas for consumption  m   music idea
 
        ("z" "ZeOmega Capture Templates")
 
