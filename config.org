@@ -2508,7 +2508,7 @@ Things that should be scattered about and associated by location with
 
   - l   general link to remember  (located within relevant project and tagged)
   - ze  Email Item to Address     (tagged, not located)
-    =FIGURE OUT HOW TO COLLECT EMAILS NEEDING ATTENTION=
+    =FIGURE OUT HOW TO COLLECT EMAILS USING EMACS NEEDING ATTENTION=
   - za  Action Item to Address    (tagged, not located)
   - b   a book to read            (tagged, not located)
   - v   a video to watch          (tagged, not located)
