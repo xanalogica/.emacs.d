@@ -2534,7 +2534,8 @@ Things that should be in one place are:
     - zi  Murthy, Mohan, Raju (interdepartmental)
 
 ideas for writing, presentations
-unordered actions (people to reach out to)
+unordered actions (people to reach out to, a sudden phone call)
+  p   a sudden phone call
 
 
 Things to Drop:
@@ -2560,7 +2561,6 @@ I want to produce an agenda view for meeting with Sam, where I show my
   n   unplanned meeting or brainstorming
   b   blood pressure measurement
   m   an unplanned meeting
-  p   a sudden phone call
   m   music idea
   e   an event to attend
   j   personal journal of my day
