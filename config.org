@@ -2503,6 +2503,13 @@ better handled with tags where they can be distributed throughout .org files.
 Sometimes information should be in one place and other times it belongs
 scattered throughout your information structure.
 
+Things that should be scattered about and associated by location with specific
+topics are:
+
+
+
+
+
 - z :: ZeOmega-related
 
   zi  Murthy, Mohan, Raju (interdepartmental)
