@@ -2525,7 +2525,7 @@ Things that should be in one place are:
 
 Meeting Notes
 Things to Learn
-
+Quotes
 
 Things to Drop:
   - zp Product Managers Meeting
