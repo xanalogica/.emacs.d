@@ -2560,6 +2560,8 @@ I want to produce an agenda view for meeting with Sam, where I show my
   e   an event to attend
   j   personal journal of my day
 
+Blood Pressure Measurement
+A New FICO Monthly Score
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
