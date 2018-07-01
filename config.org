@@ -2566,7 +2566,7 @@ Things to Drop:
 
   - A New FICO Monthly Score    (never refiled)
 
-;;;  - Blood Pressure Measurement  (never refiled)
+;;;;  - Blood Pressure Measurement  (never refiled)
 ;;       ("b" "a [B]loodpressure measurement" table-line
 ;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
 ;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
