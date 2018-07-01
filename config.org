@@ -2524,7 +2524,7 @@ Things that should be in one place are:
     - zi  Murthy, Mohan, Raju (interdepartmental)
 
 Meetings
-Learning
+Things to Learn
 
 
 Things to Drop:
