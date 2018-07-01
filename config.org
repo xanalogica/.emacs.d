@@ -2493,6 +2493,8 @@ Document-specific link abbreviations can also be given using the following:
 
 **** Predefined Information Capture Templates
 
+
+
 - z :: ZeOmega-related
 
   zi  Murthy, Mohan, Raju (interdepartmental)
@@ -2815,6 +2817,80 @@ Document-specific link abbreviations can also be given using the following:
   ;;;   )
   ;;;)
 #+END_SRC
+
+**** Possible Destinations for Refiling Requests
+
+A list of cons cells, where
+
+- Position 1:
+   is a specification of the files to be considered, either a list of
+   files, or a symbol whose function or variable value will be used to
+   retrieve a file name or a list of file names.
+
+   For example, if you use `org-agenda-files' for that, all agenda files
+   will be scanned for targets.  Nil means consider headings in the
+   current buffer.
+
+- Position 2:
+   is a specification of how to find candidate refile targets, such as:
+
+   - a cons cell (:tag . "TAG")
+     to identify refile targets by a tag.  This tag has to be present
+     in all target headlines, inheritance will not be considered.
+
+   - a cons cell (:todo . "KEYWORD")
+     to identify refile targets by todo keyword.
+
+   - a cons cell (:regexp . "REGEXP")
+     with a regular expression matching headlines that are refiling targets.
+
+   - a cons cell (:level . N)
+     Any headline of level N is considered a target.  Note that, when
+     `org-odd-levels-only' is set, level corresponds to order in hierarchy,
+     not to the number of stars.
+
+   - a cons cell (:maxlevel . N)
+     Any headline with level <= N is a target.  Note that, when
+     `org-odd-levels-only' is set, level corresponds to order in hierarchy,
+     not to the number of stars.
+
+When this variable is nil, all top-level headlines in the current buffer are
+used, equivalent to the value `((nil . (:level . 1))'.
+
+#+BEGIN_SRC emacs-lisp	:results silent
+  (setq org-refile-targets
+     (quote
+        (
+           ("~/notes/archives/personal.org_archive"       (:maxlevel . 1)   (:tag . "REFILING"))
+           ("~/notes/archives/finance.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
+           ("~/notes/archives/zeomega.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
+        )
+     )
+  )
+  (setq org-refile-use-outline-path 'file)
+#+END_SRC
+
+        ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
+        ;; ("~/notes/finance.org"                       :maxlevel . 1   :tag      . "REFILING")
+        ;; ("~/notes/zeomega.org"                       :maxlevel . 1   :tag      . "REFILING")
+        ;;         (nil                              :maxlevel . 1) ;; headlines in the current file
+        ;;         (org-agenda-files                 :maxlevel . 2)
+        ;;         ("~/notes/tech-emacs.org"         :tag      . "REFILING")
+        ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
+        ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
+        ;;         ("~/notes/tech-sysadmin.org"      :tag      . "REFILING")
+        ;;         ("~/notes/tech-gadgets.org"       :tag      . "REFILING")
+        ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
+        ;;         ("~/Clients/ZeOmega/zeomega.org"  :tag      . "REFILING")
+
+  ;; (org-agenda-files     :maxlevel . 2)  ;; top two headline levels in any agenda file
+
+  ;;    (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
+  ;;    (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
+  ;;    (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
+        (
+        )
+
 **** BBDB
 
 - hook into org-mode
@@ -3330,79 +3406,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
     (setq ad-return-value
           (wicked/org-update-checkbox-count (ad-get-arg 1))))
 #+END_SRC
-
-**** Possible Destinations for Refiling Requests
-
-A list of cons cells, where
-
-- Position 1:
-   is a specification of the files to be considered, either a list of
-   files, or a symbol whose function or variable value will be used to
-   retrieve a file name or a list of file names.
-
-   For example, if you use `org-agenda-files' for that, all agenda files
-   will be scanned for targets.  Nil means consider headings in the
-   current buffer.
-
-- Position 2:
-   is a specification of how to find candidate refile targets, such as:
-
-   - a cons cell (:tag . "TAG")
-     to identify refile targets by a tag.  This tag has to be present
-     in all target headlines, inheritance will not be considered.
-
-   - a cons cell (:todo . "KEYWORD")
-     to identify refile targets by todo keyword.
-
-   - a cons cell (:regexp . "REGEXP")
-     with a regular expression matching headlines that are refiling targets.
-
-   - a cons cell (:level . N)
-     Any headline of level N is considered a target.  Note that, when
-     `org-odd-levels-only' is set, level corresponds to order in hierarchy,
-     not to the number of stars.
-
-   - a cons cell (:maxlevel . N)
-     Any headline with level <= N is a target.  Note that, when
-     `org-odd-levels-only' is set, level corresponds to order in hierarchy,
-     not to the number of stars.
-
-When this variable is nil, all top-level headlines in the current buffer are
-used, equivalent to the value `((nil . (:level . 1))'.
-
-#+BEGIN_SRC emacs-lisp	:results silent
-  (setq org-refile-targets
-     (quote
-        (
-           ("~/notes/archives/personal.org_archive"       (:maxlevel . 1)   (:tag . "REFILING"))
-           ("~/notes/archives/finance.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
-           ("~/notes/archives/zeomega.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
-        )
-     )
-  )
-  (setq org-refile-use-outline-path 'file)
-#+END_SRC
-
-        ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
-        ;; ("~/notes/finance.org"                       :maxlevel . 1   :tag      . "REFILING")
-        ;; ("~/notes/zeomega.org"                       :maxlevel . 1   :tag      . "REFILING")
-        ;;         (nil                              :maxlevel . 1) ;; headlines in the current file
-        ;;         (org-agenda-files                 :maxlevel . 2)
-        ;;         ("~/notes/tech-emacs.org"         :tag      . "REFILING")
-        ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
-        ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
-        ;;         ("~/notes/tech-sysadmin.org"      :tag      . "REFILING")
-        ;;         ("~/notes/tech-gadgets.org"       :tag      . "REFILING")
-        ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
-        ;;         ("~/Clients/ZeOmega/zeomega.org"  :tag      . "REFILING")
-
-  ;; (org-agenda-files     :maxlevel . 2)  ;; top two headline levels in any agenda file
-
-  ;;    (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
-  ;;    (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
-  ;;    (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
-        (
-        )
 
 **** Logging and Clocking In/Out
 
