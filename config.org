@@ -2516,6 +2516,7 @@ Things that should be in one place are:
 
 Things to Drop:
   - zp Product Managers Meeting
+  - zc  (C-Suite Mgmt Meeting)
 
 
 - z :: ZeOmega-related
@@ -2528,7 +2529,6 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
-  zc  (C-Suite Mgmt Meeting)
   ABI??
   zm  All Management Meeting
   zt  Sr. Mgmt client focused
