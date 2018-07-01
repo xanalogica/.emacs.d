@@ -2516,6 +2516,7 @@ Things that should be in one place are:
   - meeting notes
     - ABI??
     - zh  ETL/Java
+    - zi  Murthy, Mohan, Raju (interdepartmental)
 
 
 Things to Drop:
@@ -2525,7 +2526,6 @@ Things to Drop:
 
 - z :: ZeOmega-related
 
-  zi  Murthy, Mohan, Raju (interdepartmental)
   zd  DevOps
   zs  Sentinel
 
