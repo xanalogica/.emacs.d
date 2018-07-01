@@ -2533,6 +2533,7 @@ Things that should be in one place are:
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
     - zp  Product Planning Meeting
+    - zm  All Management Meeting
 
 ideas for writing, presentations
 unordered actions (people to reach out to, a sudden phone call, a TODO to be classified)
@@ -2555,7 +2556,6 @@ Things to Drop:
 
 
 
-  zm  All Management Meeting
   zt  Sr. Mgmt client focused
   r   research to undertake
   m   an unplanned meeting
