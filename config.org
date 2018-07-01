@@ -2552,6 +2552,10 @@ Things to Drop:
 
 ***** Blood Pressure Measurement
 #+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+***** Blood Pressure Measurement
+#+BEGIN_SRC emacs-lisp
 ;;;;  - Blood Pressure Measurement  (never refiled)
 ;;       ("b" "a [B]loodpressure measurement" table-line
 ;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
