@@ -2520,6 +2520,8 @@ Things that should be in one place are:
     - ABI??
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
+    - arbitrary meeting
+
 
 Things to Drop:
   - zp Product Managers Meeting
