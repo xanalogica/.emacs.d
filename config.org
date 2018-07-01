@@ -2500,6 +2500,8 @@ Capturing is about defining:
 
 In my approach, capture should be used for ??? and not for things that are
 better handled with tags where they can be distributed throughout .org files.
+Sometimes information should be in one place and other times it belongs
+scattered throughout your information structure.
 
 - z :: ZeOmega-related
 
