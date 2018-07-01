@@ -2550,6 +2550,10 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
+***** An Action to Take
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
 ***** Cool Quote to Remember (personal, zeomega)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
