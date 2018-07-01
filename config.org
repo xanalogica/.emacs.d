@@ -2507,7 +2507,7 @@ Things that should be scattered about and associated by location with
 ~specific topics~ are:
 
   - l   general link to remember  (tagged, not located)
-  - ze  Email Item to Address
+  - ze  Email Item to Address     (tagged, not located)
 
 
 
