@@ -2518,7 +2518,7 @@ Things that should be in one place are:
 
   - zm ::	Meeting Notes (documented understandings, action items, questions)
   - Things to Study Further (websites, books, videos)
-    (may be refiled into relevant project)
+    (may be refiled into a relevant project)
   - Collected Quote
   - Blood Pressure Measurement
   - A New FICO Monthly Score
