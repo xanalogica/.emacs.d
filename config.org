@@ -2526,7 +2526,7 @@ Things that should be in one place are:
 Meeting Notes
 Things to Study
 Collected Quote
-Unordered Links
+
 
 
 Things to Drop:
