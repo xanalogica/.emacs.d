@@ -2557,7 +2557,6 @@ Things to Drop:
   zm  All Management Meeting
   zt  Sr. Mgmt client focused
   r   research to undertake
-  n   unplanned meeting or brainstorming
   m   an unplanned meeting
   m   music idea
   e   an event to attend
