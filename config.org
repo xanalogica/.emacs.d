@@ -2558,7 +2558,7 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-***** Information to Produce (whitepaper, blog post)
+***** Information to Produce (whitepaper, blog post, diagram)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
