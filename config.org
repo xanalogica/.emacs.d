@@ -2515,6 +2515,10 @@ Things that should be scattered about and associated by location with
 
 Things that should be in one place are:
 
+  - Meeting Notes
+  - Things to Study Further (websites, books, videos)
+  - Collected Quote
+
   - meeting notes (they result in documented understandings, action items, questions)
     - non-regular arbitrary meeting
     - zd  DevOps
@@ -2523,9 +2527,6 @@ Things that should be in one place are:
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
 
-Meeting Notes
-Things to Study Further (websites, books, videos)
-Collected Quote
 
 
 
