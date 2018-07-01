@@ -2527,7 +2527,7 @@ Things that should be in one place are:
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
 
-
+ideas for writing, presentations
 
 
 Things to Drop:
