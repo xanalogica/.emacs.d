@@ -2510,7 +2510,7 @@ Things that should be scattered about and associated by location with
   - ze  Email Item to Address     (tagged, not located)
   - za  Action Item to Address    (tagged, not located)
   - b   a book to read            (tagged, not located)
-  - v   a video to watch
+  - v   a video to watch          (tagged, not located)
 
 Things that should be in one place are:
 
