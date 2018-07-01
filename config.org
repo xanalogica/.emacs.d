@@ -2519,6 +2519,8 @@ Things that should be in one place are:
   - Meeting Notes
   - Things to Study Further (websites, books, videos)
   - Collected Quote
+  - Blood Pressure Measurement
+  - A New FICO Monthly Score
 
   - meeting notes (they result in documented understandings, action items, questions)
     - non-regular arbitrary meeting
@@ -2559,9 +2561,6 @@ I want to produce an agenda view for meeting with Sam, where I show my
   m   music idea
   e   an event to attend
   j   personal journal of my day
-
-Blood Pressure Measurement
-A New FICO Monthly Score
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
