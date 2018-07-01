@@ -2523,7 +2523,6 @@ Things that should be in one place are:
   - Things to Study Further (websites, books, videos)
     (may be refiled into a relevant project)
     - r   research to undertake
-  - Collected Quote (for ZeOmega or personal)
 
   - meeting notes 
     - non-regular arbitrary meeting
@@ -2594,6 +2593,10 @@ Things to Drop:
 
 ;;;; consuming ideas for consumption  m   music idea
 ;; music to listen to, places to eat, books to read, movies to watch, places to visit
+
+;;;;  - Collected Quote (for ZeOmega or personal)
+
+
 
        ("z" "ZeOmega Capture Templates")
 
