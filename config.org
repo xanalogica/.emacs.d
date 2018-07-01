@@ -2509,6 +2509,8 @@ topics are:
 
 Things that should be in one place are:
 
+- meeting notes
+
 
 
 
