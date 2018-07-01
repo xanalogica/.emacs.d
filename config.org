@@ -2507,7 +2507,7 @@ Things that should be scattered about and associated by location with specific
 topics are:
 
 
-
+Things that should be in one place are:
 
 
 
