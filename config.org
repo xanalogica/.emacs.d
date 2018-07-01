@@ -2521,7 +2521,7 @@ Things that should be in one place are:
     (may be refiled into a relevant project)
   - Collected Quote
   - Blood Pressure Measurement  (never refiled)
-  - A New FICO Monthly Score
+  - A New FICO Monthly Score    (never refiled)
 
   - meeting notes 
     - non-regular arbitrary meeting
