@@ -2550,7 +2550,7 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
-***** An Action to Take
+***** An Action to Take (collected, not filed yet)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
