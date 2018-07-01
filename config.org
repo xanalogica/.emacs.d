@@ -2558,7 +2558,6 @@ Things to Drop:
 
   zt  Sr. Mgmt client focused
   r   research to undertake
-  m   an unplanned meeting
   m   music idea
 
 #+BEGIN_SRC emacs-lisp
