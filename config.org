@@ -2570,6 +2570,18 @@ Things to Drop:
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
+;;       ("b" "a [B]loodpressure measurement" table-line
+;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
+;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t                ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil                ;; be sure the clock does not keep running after I return
+;;       )
+
+
+
+
+
        ("z" "ZeOmega Capture Templates")
 ;;       ("zb" "Touchbase w/Boss Sam (Weekly on Tue)" entry
 ;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Sam")
@@ -2745,13 +2757,6 @@ Things to Drop:
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
 
-;;       ("b" "a [B]loodpressure measurement" table-line
-;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
-;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
-;;         :clock-in t            ;; begin tracking the time to fill in this entry
-;;         :clock-resume t                ;; and end tracking upon returning to what I was doing
-;;         :clock-keep nil                ;; be sure the clock does not keep running after I return
-;;       )
 
        ("q" "a [Q]uotation to remember" entry
          (file+headline "~/notes/quotes.org" "Disorganized Quotations")
