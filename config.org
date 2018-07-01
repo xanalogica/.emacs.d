@@ -2588,8 +2588,8 @@ Things to Drop:
 ;;  e   an event to attend, ordered by date (I HAVE A SECTION ALREADY FOR THIS)
 ;;      (may be refiled into a relevant project like C18)
 
-producing ideas for writing, presentations FOR ZEOMEGA
 producing ideas for writing, presentations FOR MYSELF
+producing ideas for writing, presentations FOR ZEOMEGA
 
 
 
