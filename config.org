@@ -2585,6 +2585,7 @@ Things to Drop:
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
+;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 
 
 ;;;; ZEOMEGA AND MYSELF
