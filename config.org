@@ -2550,7 +2550,7 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
-***** Cool Quote to Remember
+***** Cool Quote to Remember (personal, yammer)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
