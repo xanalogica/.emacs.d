@@ -2523,8 +2523,6 @@ Things that should be in one place are:
     (may be refiled into a relevant project)
     - r   research to undertake
   - Collected Quote (for ZeOmega or personal)
-  - Blood Pressure Measurement  (never refiled)
-  - A New FICO Monthly Score    (never refiled)
 
   - meeting notes 
     - non-regular arbitrary meeting
@@ -2566,6 +2564,9 @@ Things to Drop:
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
+  - A New FICO Monthly Score    (never refiled)
+
+;;;  - Blood Pressure Measurement  (never refiled)
 ;;       ("b" "a [B]loodpressure measurement" table-line
 ;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
 ;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
