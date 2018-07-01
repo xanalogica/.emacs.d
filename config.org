@@ -2520,7 +2520,6 @@ Things that should be in one place are:
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
 
-
 Things to Drop:
   - zp Product Managers Meeting
   - zc  (C-Suite Mgmt Meeting)
