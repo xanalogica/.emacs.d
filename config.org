@@ -2554,7 +2554,7 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-***** Information to Consume
+***** Information to Consume (book, movie, website)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
