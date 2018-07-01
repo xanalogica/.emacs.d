@@ -2540,6 +2540,8 @@ unordered actions (people to reach out to, a sudden phone call)
 Things to Drop:
   - zp Product Managers Meeting
   - zc  (C-Suite Mgmt Meeting)
+  - j   a dated journale entry
+  - j   personal journal of my day
 
 
 - z :: ZeOmega-related
@@ -2561,8 +2563,6 @@ I want to produce an agenda view for meeting with Sam, where I show my
   m   an unplanned meeting
   m   music idea
   e   an event to attend
-  j   a dated journale entry
-  j   personal journal of my day
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
