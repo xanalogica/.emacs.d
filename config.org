@@ -2516,7 +2516,7 @@ Things that should be scattered about and associated by location with
 
 Things that should be in one place are:
 
-  - zm :: Meeting Notes (documented understandings, action items, questions)
+  - zm ::	Meeting Notes (documented understandings, action items, questions)
   - Things to Study Further (websites, books, videos)
   - Collected Quote
   - Blood Pressure Measurement
