@@ -2527,6 +2527,8 @@ Meeting Notes
 Things to Learn
 Collected Quote
 
+
+
 Things to Drop:
   - zp Product Managers Meeting
   - zc  (C-Suite Mgmt Meeting)
