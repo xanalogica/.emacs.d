@@ -2588,7 +2588,6 @@ Things to Drop:
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
 
-
 ;;;; ZEOMEGA AND MYSELF
 ;;;; unordered actions (people to reach out to, a sudden phone call, a TODO to be classified)
 ;;  e   an event to attend, ordered by date (I HAVE A SECTION ALREADY FOR THIS)
