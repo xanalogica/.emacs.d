@@ -2509,6 +2509,8 @@ Things that should be scattered about and associated by location with
   - l   general link to remember  (tagged, not located)
   - ze  Email Item to Address     (tagged, not located)
   - za  Action Item to Address    (tagged, not located)
+  - b   a book to read            (tagged, not located)
+  - v   a video to watch
 
 Things that should be in one place are:
 
@@ -2545,8 +2547,6 @@ I want to produce an agenda view for meeting with Sam, where I show my
   c   someone to contact
   m   an unplanned meeting
   p   a sudden phone call
-  b   a book to read          tag, not place so that books on different topics can be under different headlines
-  v   a video to watch
   m   music idea
   w   website to visit
   e   an event to attend
