@@ -2514,11 +2514,11 @@ Things that should be scattered about and associated by location with
 Things that should be in one place are:
 
   - meeting notes (they result in documented understandings, action items, questions)
+    - zd  DevOps
+    - zs  Sentinel
     - ABI??
     - zh  ETL/Java
     - zi  Murthy, Mohan, Raju (interdepartmental)
-    - zd  DevOps
-    - zs  Sentinel
 
 
 Things to Drop:
