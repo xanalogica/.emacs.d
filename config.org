@@ -2514,6 +2514,7 @@ Things that should be in one place are:
   - meeting notes
 
 
+Things to Drop:
 
 
 - z :: ZeOmega-related
