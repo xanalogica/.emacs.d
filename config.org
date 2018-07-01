@@ -2513,6 +2513,7 @@ Things that should be in one place are:
 
   - meeting notes
     - ABI??
+    - zh  ETL/Java
 
 
 Things to Drop:
@@ -2532,7 +2533,6 @@ Things to Drop:
 
   zm  All Management Meeting
   zt  Sr. Mgmt client focused
-  zh  ETL/Java
   za  Action Item to Address
   ze  Email Item to Address
   j   a dated journale ntry
