@@ -2515,6 +2515,7 @@ Things that should be in one place are:
 
 
 Things to Drop:
+  - zp Product Managers Meeting
 
 
 - z :: ZeOmega-related
@@ -2530,7 +2531,6 @@ Things to Drop:
   zc  (C-Suite Mgmt Meeting)
   ABI??
   zm  All Management Meeting
-  zp Product Managers Meeting
   zt  Sr. Mgmt client focused
   zh  ETL/Java
   za  Action Item to Address
