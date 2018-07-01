@@ -2510,9 +2510,6 @@ Things that should be scattered about and associated by location with
   - ze  Email Item to Address     (tagged, not located)
   - za  Action Item to Address    (tagged, not located)
 
-
-
-
 Things that should be in one place are:
 
   - meeting notes (they result in documented understandings, action items, questions)
