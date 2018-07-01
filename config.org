@@ -2538,6 +2538,7 @@ Things that should be in one place are:
     - zt  Sr. Mgmt client focused
 
 ideas for writing, presentations
+ideas for consumption  m   music idea
 unordered actions (people to reach out to, a sudden phone call, a TODO to be classified)
   e   an event to attend, ordered by date (I HAVE A SECTION ALREADY FOR THIS)
       (may be refiled into a relevant project like C18)
@@ -2558,7 +2559,6 @@ Things to Drop:
 
 
 
-  m   music idea
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
