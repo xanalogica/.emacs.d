@@ -2625,6 +2625,7 @@ place.
      :prepend          ;; put newest measurements at the top of the table
      :unnarrowed       ;; don't narrow to just the new entry; I want to see my history
      :kill-buffer      ;; if file was opened just to collect data, close the buffer after
+  )
 #+END_SRC
 
 #+RESULTS: health-bloodpressure-measurements
