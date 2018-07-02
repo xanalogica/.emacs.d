@@ -2616,7 +2616,7 @@ place.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :results code :var keyseq="bp"
-(setq dummy
+(defun health-bloodpressure-m (keyseq) "blah"
   (list keyseq "a Bloodpressure measurement" 'table-line
      (list 'file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
