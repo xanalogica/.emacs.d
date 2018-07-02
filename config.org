@@ -2592,7 +2592,7 @@ Things to Drop:
 
      "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
 
-     :prepend t         ;; put newest measurements at the top of the table
+     :prepend t         ;; put newest quote at the top of the section
      :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
      :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
   )
