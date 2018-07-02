@@ -2602,6 +2602,7 @@ place.
     "blah"
     '(keyseq "a Bloodpressure measurement" table-line
        (file+headline "~/notes/fitness.org" "Blood Pressure")
+
        "| %t | %^{High} | %^{Low} | %^{Pulse} |"
        :clock-in t            ;; begin tracking the time to fill in this entry
        :clock-resume t           ;; and end tracking upon returning to what I was doing
