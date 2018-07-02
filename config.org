@@ -2605,7 +2605,7 @@ As part of self-measurement, I periodically take my blood pressure and keep it
 in a table to identify long-term trends.
 
 This capture template is a =table-line= or a new line in a table at a specific
-place.
+place.  It uses the following replaceable parameters.
 
   - %u  inactive date/time stamp
 
