@@ -2610,7 +2610,7 @@ place.  It uses the following replaceable parameters.
   (list
      keyseq "a new FICO Monthly Score" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-                     "Jeff's Blood Pressure History")
+                     "Jeff's FICO Credit Score History")
 
      "| %u | %^{Score} | | |"
 
