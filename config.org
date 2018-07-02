@@ -2595,12 +2595,15 @@ in a table to identify long-term trends.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp
-  ("b" "a [B]loodpressure measurement" table-line
-    (file+headline "~/notes/fitness.org" "Blood Pressure")
-    "| %t | %^{High} | %^{Low} | %^{Pulse} |"
-    :clock-in t            ;; begin tracking the time to fill in this entry
-    :clock-resume t           ;; and end tracking upon returning to what I was doing
-    :clock-keep nil           ;; be sure the clock does not keep running after I return
+  (defun health-bloodpressure-measurements()
+    "blah"
+    '("b" "a [B]loodpressure measurement" table-line
+       (file+headline "~/notes/fitness.org" "Blood Pressure")
+       "| %t | %^{High} | %^{Low} | %^{Pulse} |"
+       :clock-in t            ;; begin tracking the time to fill in this entry
+       :clock-resume t           ;; and end tracking upon returning to what I was doing
+       :clock-keep nil           ;; be sure the clock does not keep running after I return
+    )
   )
 #+END_SRC
 
