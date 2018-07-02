@@ -2629,7 +2629,7 @@ place.
   )
 #+END_SRC
 
-***** TODO Merge All Together
+***** TODO Merge Capture Templates All Together
 
 #+BEGIN_SRC emacs-lisp :noweb yes :results code :tangle yes
   (setq org-capture-templates
