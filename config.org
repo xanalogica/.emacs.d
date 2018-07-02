@@ -2566,23 +2566,35 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
-***** An Action to Take (collected, not filed yet; but may be relevant to a known team/project)
+***** TODO An Action to Take (collected, not filed yet; but may be relevant to a known team/project)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
 ***** TODO Cool Quote to Remember (personal, zeomega)
+#+NAME: cool-quote
+#+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
+  (list
+     keyseq "a Bloodpressure measurement" 'table-line
+     '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+                     "Jeff's Blood Pressure History")
+
+     "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
+
+     :prepend t         ;; put newest measurements at the top of the table
+     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+  )
+#+END_SRC
+
+***** TODO Meeting Notes
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-***** Meeting Notes
+***** TODO Information to Consume (book, movie, website)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-***** Information to Consume (book, movie, website)
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
-***** Information to Produce (whitepaper, blog post, diagram)
+***** TODO Information to Produce (whitepaper, blog post, diagram)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
