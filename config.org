@@ -2575,12 +2575,6 @@ Things to Drop:
  - %i :: region selected when capture is called
  - %? :: 
 
-%i          Initial content, the region when capture is called while the
-            region is active.
-            The entire text will be indented like %i itself.
-
-
-
 #+NAME: cool-quote
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
   (list
