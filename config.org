@@ -2660,13 +2660,6 @@ place.  It uses the following replaceable parameters.
        <<health-bloodpressure-measurements("b")>>
        <<finance-creditscore-measurements("c")>>
        ("z" "ZeOmega Capture Templates")
-
-       ("t" "ToDo" entry
-         (file+headline "~/notes/tosort.org" "Tasks")
-         " TODO %^{Brief Description} %^g\n%?\nAdded: %U"
-         :prepend t
-       )
-
      )
   )
 #+END_SRC
