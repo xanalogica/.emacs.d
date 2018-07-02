@@ -2617,6 +2617,7 @@ in a table to identify long-term trends.
 ;;       )
 #+END_SRC
 
+Assemble the various definitions of my capture templates.
 
 #+BEGIN_SRC emacs-lisp
   ;; Definition of Capture templates
