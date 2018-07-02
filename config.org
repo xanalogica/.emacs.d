@@ -2597,7 +2597,7 @@ in a table to identify long-term trends.
 #+BEGIN_SRC emacs-lisp
   (defun health-bloodpressure-measurements(keyseq)
     "blah"
-    '(keyseq "a [B]loodpressure measurement" table-line
+    '(keyseq "a Bloodpressure measurement" table-line
        (file+headline "~/notes/fitness.org" "Blood Pressure")
        "| %t | %^{High} | %^{Low} | %^{Pulse} |"
        :clock-in t            ;; begin tracking the time to fill in this entry
