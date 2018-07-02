@@ -2596,6 +2596,13 @@ place.
 
 ;;;;  - Blood Pressure Measurement  (never refiled)
 
+       ;; %a  the place in Emacs I was when I initiated the capture command
+
+       ;; %i  initial content (what is selected)
+       ;; %U  inactive date/time stamp
+       ;; %^G prompt for tags to assign
+       ;; %?  where to place the cursor after laying out the template
+
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp
   (defun health-bloodpressure-measurements(keyseq)
@@ -2631,13 +2638,6 @@ Assemble the various definitions of my capture templates.
 #+BEGIN_SRC emacs-lisp
   (setq org-capture-templates
     '(
-       ;; %a  the place in Emacs I was when I initiated the capture command
-
-       ;; %i  initial content (what is selected)
-       ;; %U  inactive date/time stamp
-       ;; %^G prompt for tags to assign
-       ;; %?  where to place the cursor after laying out the template
-
        (health-bloodpressure-measurements "bp")
 
        ("z" "ZeOmega Capture Templates")
