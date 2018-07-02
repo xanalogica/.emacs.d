@@ -2657,7 +2657,10 @@ place.
 (("bb" "a Bloodpressure measurement" table-line
   (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
   "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend t :unnarrowed t :kill-buffer t)
- ("z" "ZeOmega Capture Templates"))
+ ("z" "ZeOmega Capture Templates")
+ ("t" "ToDo" entry
+  (file+headline "~/notes/tosort.org" "Tasks")
+  " TODO %^{Brief Description} %^g\n%?\nAdded: %U" :prepend t))
 #+END_SRC
 
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
