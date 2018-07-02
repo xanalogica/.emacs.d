@@ -2810,6 +2810,15 @@ Assemble the various definitions of my capture templates.
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
 
+
+     )
+  )
+
+#+END_SRC
+
+#+RESULTS:
+| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
+
 ;;       ("r" "[R]esearch to undertake i.e. *Interesting Technologies*" entry
 ;;         (file+headline "~/notes/tosort.org" "Interesting Technologies")
 ;;         "* TODO [#C] YOUR-TITLE%? %^G:REFILE:\n\n%i\n%a"
@@ -2828,15 +2837,6 @@ Assemble the various definitions of my capture templates.
 ;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
-
-     )
-  )
-
-#+END_SRC
-
-#+RESULTS:
-| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
-
 
 ;;       ("n" "general [N]otetaking i.e. *Spontaneous Meeting or Brainstorming*" entry
 ;;         (file+headline "~/notes/tosort.org" "Spontaneous Discussion/Meeting Notes")
