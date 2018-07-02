@@ -2597,14 +2597,6 @@ place.  It uses the following replaceable parameters.
   - %u           :: inactive date/time stamp
   - %^{Score}    :: prompt "Score" and insert a value for FICO score
 
-*** Jeff's FICO Credit Score History
-
-| Date       | Score | Meaning   | Events                                                |
-|            |       |           |                                                       |
-| 2018/05/25 |   734 | Very Good | have a bad comment, and short history                 |
-
-
-
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
   (list
