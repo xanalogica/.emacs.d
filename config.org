@@ -2612,9 +2612,6 @@ place.  It uses the following replaceable parameters.
   )
 #+END_SRC
 
-
-
-
 #+BEGIN_SRC emacs-lisp
 ;;;;  - A New FICO Monthly Score    (never refiled)
 ;;       ("f" "a [F]ICO measurement" table-line
@@ -2661,6 +2658,7 @@ place.  It uses the following replaceable parameters.
   (setq org-capture-templates
     '(
        <<health-bloodpressure-measurements("b")>>
+       <<finance-creditscore-measurements("c")>>
        ("z" "ZeOmega Capture Templates")
 
        ("t" "ToDo" entry
