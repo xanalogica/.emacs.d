@@ -2586,7 +2586,7 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-***** Blood Pressure Measurement
+***** TODO Blood Pressure Measurement
 
 As part of self-measurement, I periodically take my blood pressure and keep it
 in a table to identify long-term trends.
