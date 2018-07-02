@@ -2525,6 +2525,8 @@ Things that should be in one place are:
     - r   research to undertake
 
   - personal major projects
+    mathematics
+    office decor
 
   - meeting notes 
     - non-regular arbitrary meeting
