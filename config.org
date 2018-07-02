@@ -2638,7 +2638,7 @@ place.
 Assemble the various definitions of my capture templates.
 
 #+HEADERS: :var bp=(health-bloodpressure-measurements "bp")
-#+BEGIN_SRC emacs-lisp :results code :NOWEB yes
+#+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     (list
        '<<health-bloodpressure-measurements>>'
