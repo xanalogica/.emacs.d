@@ -2615,7 +2615,7 @@ place.
        ;; %?  where to place the cursor after laying out the template
 
 #+NAME: health-bloodpressure-measurements
-#+BEGIN_SRC emacs-lisp :results raw
+#+BEGIN_SRC emacs-lisp
   "a Bloodpressure measurement" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
@@ -2628,6 +2628,7 @@ place.
 #+END_SRC
 
 #+RESULTS: health-bloodpressure-measurements
+:kill-buffer
 (a Bloodpressure measurement table-line (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) | %u | %^{High} | %^{Low} | %^{Pulse} | :prepend :unnarrowed :kill-buffer)
 
 Assemble the various definitions of my capture templates.
