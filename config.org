@@ -2774,16 +2774,14 @@ Assemble the various definitions of my capture templates.
 ;;;;;         :empty-lines 0         ;; count of blank lines before and after
 ;;;;;       )
 
-       ("j" "a dated [J]ournal entry" entry
-         (file+datetree "~/notes/journal.org")
-         "* %?\n\n%i"
-         :clock-in t            ;; begin tracking the time to fill in this entry
-         :clock-resume t        ;; and end tracking upon returning to what I was doing
-         :clock-keep nil        ;; be sure the clock does not keep running after I return
-         :empty-lines 1         ;; count of blank lines before and after
-       )
-
-
+;;;;;       ("j" "a dated [J]ournal entry" entry
+;;;;;         (file+datetree "~/notes/journal.org")
+;;;;;         "* %?\n\n%i"
+;;;;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;;;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;;;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;;;;         :empty-lines 1         ;; count of blank lines before and after
+;;;;;       )
 
 ;;       ("t" "ToDo" entry
 ;;         (file+headline "~/notes/tosort.org" "Tasks")
