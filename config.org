@@ -2585,9 +2585,8 @@ Things to Drop:
 ;;      :clock-in t         ;; begin tracking the time to fill in this entry
 ;;      :clock-resume t             ;; and end tracking upon returning to what I was doing
 ;;    )
-
   (list
-     keyseq "a Bloodpressure measurement" 'table-line
+     keyseq "a Catchy Quote" 'entry
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                      "Jeff's Blood Pressure History")
 
