@@ -2582,8 +2582,6 @@ Things to Drop:
 ;;    ("q" "a [Q]uotation to remember" entry
 ;;      (file+headline "~/notes/quotes.org" "Disorganized Quotations")
 ;;      "* %U :quotation:\n %i%?\n"
-;;      :clock-in t         ;; begin tracking the time to fill in this entry
-;;      :clock-resume t             ;; and end tracking upon returning to what I was doing
 ;;    )
   (list
      keyseq "a Catchy Quote" 'entry
