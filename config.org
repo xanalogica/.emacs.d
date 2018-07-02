@@ -2640,7 +2640,7 @@ place.
   (setq org-capture-templates
     '(
        <<health-bloodpressure-measurements("bb")>>
-       '("z" "ZeOmega Capture Templates")
+       ("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
