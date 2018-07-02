@@ -2618,12 +2618,20 @@ place.
 #+END_SRC
 
 #+RESULTS: health-bloodpressure-measurements
-| bp | a Bloodpressure measurement | table-line | (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) |   | %u | %^{High} | %^{Low} | %^{Pulse} |   | :prepend | :unnarrowed | :kill-buffer |
+#+BEGIN_SRC emacs-lisp
+("bp" "a Bloodpressure measurement" table-line
+ (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+ "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
+#+END_SRC
 
 #+CALL: health-bloodpressure-measurements(keyseq="bb")
 
 #+RESULTS:
-| bb | a Bloodpressure measurement | table-line | (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) |   | %u | %^{High} | %^{Low} | %^{Pulse} |   | :prepend | :unnarrowed | :kill-buffer |
+#+BEGIN_SRC emacs-lisp
+("bb" "a Bloodpressure measurement" table-line
+ (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+ "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
+#+END_SRC
 
 
 ***** TODO FICO Credit Score Monthly Measurement
@@ -2642,7 +2650,7 @@ place.
 Assemble the various definitions of my capture templates.
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-capture-templates
+  (setq org-capture-templates :results code
     '(
        (health-bloodpressure-measurements "bp")
 
@@ -2653,7 +2661,8 @@ Assemble the various definitions of my capture templates.
 #+END_SRC
 
 #+RESULTS:
-| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
+| health-bloodpressure-measurements | bp                        |
+| z                                 | ZeOmega Capture Templates |
 
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
