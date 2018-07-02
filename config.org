@@ -2630,7 +2630,7 @@ Assemble the various definitions of my capture templates.
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
-       (quote health-bloodpressure-measurements)
+       (quote health-bloodpressure-measurements "bp")
 
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
