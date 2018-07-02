@@ -2530,6 +2530,7 @@ Things that should be in one place are:
         differential calculus
         integral calculus
       laws
+      people
     principles of debate
     office decor
     riverhood
