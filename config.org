@@ -2760,6 +2760,22 @@ Assemble the various definitions of my capture templates.
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
 
+
+
+     )
+  )
+
+#+END_SRC
+
+#+RESULTS:
+| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
+
+;;       ("t" "ToDo" entry
+;;         (file+headline "~/notes/tosort.org" "Tasks")
+;;         " TODO %^{Brief Description} %^g\n%?\nAdded: %U"
+;;         :prepend t
+;;       )
+
 ;;;;;       ("za" "Action Item to Address" entry
 ;;;;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
 ;;;;;         "* TODO [#C] %? %^G:REFILE:\n\n%i\n\n%a"
@@ -2782,21 +2798,6 @@ Assemble the various definitions of my capture templates.
 ;;;;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
 ;;;;;         :empty-lines 1         ;; count of blank lines before and after
 ;;;;;       )
-
-;;       ("t" "ToDo" entry
-;;         (file+headline "~/notes/tosort.org" "Tasks")
-;;         " TODO %^{Brief Description} %^g\n%?\nAdded: %U"
-;;         :prepend t
-;;       )
-
-
-     )
-  )
-
-#+END_SRC
-
-#+RESULTS:
-| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
 
 ;;       ("j" "Journal" entry
 ;;         (file+headline "~/dump/journal.org" "")
