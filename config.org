@@ -2593,7 +2593,7 @@ in a table to identify long-term trends.
 
 ;;;;  - Blood Pressure Measurement  (never refiled)
 
-#+NAME: health-bloodpressure
+#+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp
   ("b" "a [B]loodpressure measurement" table-line
     (file+headline "~/notes/fitness.org" "Blood Pressure")
