@@ -2639,6 +2639,7 @@ place.
 
 Assemble the various definitions of my capture templates.
 
+#+HEADER: :var health-bloodpressure-m=(health-bloodpressure-m "bp")
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     (list
