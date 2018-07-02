@@ -2829,6 +2829,15 @@ Assemble the various definitions of my capture templates.
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
 
+     )
+  )
+
+#+END_SRC
+
+#+RESULTS:
+| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
+
+
 ;;       ("n" "general [N]otetaking i.e. *Spontaneous Meeting or Brainstorming*" entry
 ;;         (file+headline "~/notes/tosort.org" "Spontaneous Discussion/Meeting Notes")
 ;;         "* Notetaking Session :REFILE:\n\n%i%?\n\n%a"
@@ -2845,9 +2854,6 @@ Assemble the various definitions of my capture templates.
 ;;;;;         :prepend       t       ;; prepend new item to top of capture target section
 ;;;;;         :empty-lines 1         ;; count of blank lines before and after
 ;;;;;       )
-
-     )
-  )
 
   ;;;(setq org-capture-templates
   ;;;  '(
@@ -2932,12 +2938,6 @@ Assemble the various definitions of my capture templates.
   ;;;     )
   ;;;   )
   ;;;)
-#+END_SRC
-
-#+RESULTS:
-| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
-
-
 
 
 
