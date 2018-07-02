@@ -2682,31 +2682,33 @@ Assemble the various definitions of my capture templates.
 ;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
-       ("zd" "DevOps Status Meeting (Weekly on Tue)" entry
-         (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org" "Meetings w/DevOps Team")
-         (file "~/Dropbox/Documents/Org-Mode/TEMPLATES/minutes-devops.org")
-         :prepend t
-         :unnarrowed t
-         :empty-lines 1         ;; count of blank lines before and after
-       )
-       ("zs" "Sentinel Status Meeting (Weekly on Tue)" entry
-         (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org" "Meetings w/Sentinel-Core Team")
-         (file "~/Dropbox/Documents/Org-Mode/TEMPLATES/minutes-sentinelcore.org")
-         :prepend t
-         :unnarrowed t
-         :empty-lines 1         ;; count of blank lines before and after
-       )
+;;;;;       ("zd" "DevOps Status Meeting (Weekly on Tue)" entry
+;;;;;         (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org" "Meetings w/DevOps Team")
+;;;;;         (file "~/Dropbox/Documents/Org-Mode/TEMPLATES/minutes-devops.org")
+;;;;;         :prepend t
+;;;;;         :unnarrowed t
+;;;;;         :empty-lines 1         ;; count of blank lines before and after
+;;;;;       )
 
-       ("zi" "Interdepartmental Meeting re Murthy, Raju, Mohan, etc. (Weekly on Thu)" entry
-         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Department Heads")
-         (file "~/Clients/ZeOmega/notes/templates/minutes-interdepartmental.org")
-         :prepend t
-         :unnarrowed t
-         :clock-in t            ;; begin tracking the time to fill in this entry
-         :clock-resume t        ;; and end tracking upon returning to what I was doing
-         :clock-keep nil        ;; be sure the clock does not keep running after I return
-         :empty-lines 1         ;; count of blank lines before and after
-       )
+;;;;;       ("zs" "Sentinel Status Meeting (Weekly on Tue)" entry
+;;;;;         (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org" "Meetings w/Sentinel-Core Team")
+;;;;;         (file "~/Dropbox/Documents/Org-Mode/TEMPLATES/minutes-sentinelcore.org")
+;;;;;         :prepend t
+;;;;;         :unnarrowed t
+;;;;;         :empty-lines 1         ;; count of blank lines before and after
+;;;;;       )
+
+;;;;;       ("zi" "Interdepartmental Meeting re Murthy, Raju, Mohan, etc. (Weekly on Thu)" entry
+;;;;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Department Heads")
+;;;;;         (file "~/Clients/ZeOmega/notes/templates/minutes-interdepartmental.org")
+;;;;;         :prepend t
+;;;;;         :unnarrowed t
+;;;;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;;;;         :clock-resume t        ;; and end tracking upon returning to what I was doing
+;;;;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
+;;;;;         :empty-lines 1         ;; count of blank lines before and after
+;;;;;       )
+
 ;;       ("zk" "PMG Key Stakeholders Meeting (Monthly on 2nd Wed)" entry
 ;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/PMG Stakeholders")
 ;;         (file "~/Clients/ZeOmega/notes/templates/minutes-stakeholders.org")
