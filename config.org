@@ -2672,8 +2672,6 @@ place.  It uses the following replaceable parameters.
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
-;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
-
   - meeting notes 
 
 ;;;; ZEOMEGA AND MYSELF
