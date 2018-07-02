@@ -2654,7 +2654,7 @@ Assemble the various definitions of my capture templates.
     (list
        (health-bloodpressure-measurements "bp")
 
-       ("z" "ZeOmega Capture Templates")
+       '("z" "ZeOmega Capture Templates")
      )
   )
 
