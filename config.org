@@ -2556,6 +2556,7 @@ Things to Drop:
 
 ***** Cool Quote to Remember (personal, zeomega)
 #+BEGIN_SRC emacs-lisp
+
 #+END_SRC
 
 ***** Meeting Notes
