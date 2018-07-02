@@ -2643,6 +2643,14 @@ place.
      )
   )
 #+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC emacs-lisp
+(("bb" "a Bloodpressure measurement" table-line
+  (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+  "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer))
+#+END_SRC
+
        ("z" "ZeOmega Capture Templates")
 
 #+RESULTS:
