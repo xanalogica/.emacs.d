@@ -2618,7 +2618,6 @@ place.
 #+END_SRC
 
 #+RESULTS: health-bloodpressure-measurements
-| keyseq | a Bloodpressure measurement | table-line | (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) |   | %u | %^{High} | %^{Low} | %^{Pulse} |   | :prepend | :unnarrowed | :kill-buffer |
 
 #+CALL: health-bloodpressure-measurements(keyseq="bb")
 
