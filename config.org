@@ -2631,14 +2631,18 @@ place.
 #+END_SRC
 
 #+RESULTS: health-bloodpressure-measurements
-| bp | a Bloodpressure measurement | table-line | (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) |   | %u | %^{High} | %^{Low} | %^{Pulse} |   | :prepend | :unnarrowed | :kill-buffer |
+#+BEGIN_SRC emacs-lisp
+("bp" "a Bloodpressure measurement" table-line
+ (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+ "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
+#+END_SRC
 
 Assemble the various definitions of my capture templates.
 
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     (list
-       (health-bloodpressure-measurements "bp")
+       (health-bloodpressure-m "bp")
        '("z" "ZeOmega Capture Templates")
      )
   )
