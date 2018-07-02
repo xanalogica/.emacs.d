@@ -2573,8 +2573,8 @@ Things to Drop:
 ***** TODO Cool Quote to Remember (personal, zeomega)
  - %u  :: inactive datestamp when quote was captured
  - %i  :: region selected when capture is called
- - %?  :: 
- - %^g :: prompt for tags, with completion on tags in target file.
+ - %^g :: prompt for tags, with completion on tags in target file
+ - %?  :: after completing the template, leave the cursor here
 
 #+NAME: cool-quote
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
