@@ -2576,8 +2576,6 @@ Things to Drop:
 ;;    ("q" "a [Q]uotation to remember" entry
 ;;      (file+headline "~/notes/quotes.org" "Disorganized Quotations")
 ;;      "* %U :quotation:REFILE:\n\n%i%?\n"
-;;      :prepend       t       ;; prepend new item to top of capture target section
-
 ;;    )
 ;;    ("q" "a [Q]uotation to remember" entry
 ;;      (file+headline "~/notes/quotes.org" "Disorganized Quotations")
