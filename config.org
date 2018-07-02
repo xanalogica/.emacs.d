@@ -2650,7 +2650,6 @@ place.
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
-
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
 
