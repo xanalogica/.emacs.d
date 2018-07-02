@@ -2615,8 +2615,8 @@ place.
        ;; %?  where to place the cursor after laying out the template
 
 #+NAME: health-bloodpressure-measurements
-#+BEGIN_SRC emacs-lisp :var keyseq="bp"
-  '(keyseq "a Bloodpressure measurement" 'table-line
+#+BEGIN_SRC emacs-lisp :var keyseq="bp" :results code
+  (list keyseq "a Bloodpressure measurement" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
 
@@ -2626,6 +2626,13 @@ place.
      :unnarrowed       ;; don't narrow to just the new entry; I want to see my history
      :kill-buffer      ;; if file was opened just to collect data, close the buffer after
   )
+#+END_SRC
+
+#+RESULTS: health-bloodpressure-measurements
+#+BEGIN_SRC emacs-lisp
+("bp" "a Bloodpressure measurement" table-line
+ (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+ "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp :results code
