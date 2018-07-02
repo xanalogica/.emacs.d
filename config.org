@@ -2628,12 +2628,6 @@ place.
   )
 #+END_SRC
 
-#+RESULTS: health-bloodpressure-measurements
-:kill-buffer
-(a Bloodpressure measurement table-line (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) | %u | %^{High} | %^{Low} | %^{Pulse} | :prepend :unnarrowed :kill-buffer)
-
-Assemble the various definitions of my capture templates.
-
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     (list
