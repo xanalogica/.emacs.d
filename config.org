@@ -2608,10 +2608,6 @@ place.
        :prepend          ;; put newest measurements at the top of the table
        :unnarrowed       ;; don't narrow to just the new entry; I want to see my history
        :kill-buffer      ;; if file was opened just to collect data, close the buffer after
-
-       :clock-in t            ;; begin tracking the time to fill in this entry
-       :clock-resume t           ;; and end tracking upon returning to what I was doing
-       :clock-keep nil           ;; be sure the clock does not keep running after I return
     )
   )
 #+END_SRC
