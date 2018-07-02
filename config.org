@@ -2586,6 +2586,19 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
+***** TODO FICO Credit Score Monthly Measurement
+
+#+BEGIN_SRC emacs-lisp
+;;;;  - A New FICO Monthly Score    (never refiled)
+;;       ("f" "a [F]ICO measurement" table-line
+;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
+;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
+;;         :clock-in t            ;; begin tracking the time to fill in this entry
+;;         :clock-resume t                ;; and end tracking upon returning to what I was doing
+;;         :clock-keep nil                ;; be sure the clock does not keep running after I return
+;;       )
+#+END_SRC
+
 ***** TODO Blood Pressure Measurement
 
 As part of self-measurement, I periodically take my blood pressure and keep it
@@ -2634,25 +2647,13 @@ place.
 #+END_SRC
 
 
-***** TODO FICO Credit Score Monthly Measurement
-
-#+BEGIN_SRC emacs-lisp
-;;;;  - A New FICO Monthly Score    (never refiled)
-;;       ("f" "a [F]ICO measurement" table-line
-;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
-;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
-;;         :clock-in t            ;; begin tracking the time to fill in this entry
-;;         :clock-resume t                ;; and end tracking upon returning to what I was doing
-;;         :clock-keep nil                ;; be sure the clock does not keep running after I return
-;;       )
-#+END_SRC
 
 Assemble the various definitions of my capture templates.
 
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     (list
-       <<health-bloodpressure-measurements("bp">>
+       <<health-bloodpressure-measurements("bp")>>
        '("z" "ZeOmega Capture Templates")
      )
   )
