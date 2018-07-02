@@ -2608,7 +2608,7 @@ place.  It uses the following replaceable parameters.
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
   (list
-     keyseq "a Bloodpressure measurement" 'table-line
+     keyseq "a new FICO Monthly Score" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                      "Jeff's Blood Pressure History")
 
