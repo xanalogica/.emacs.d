@@ -2653,7 +2653,6 @@ Assemble the various definitions of my capture templates.
   (setq org-capture-templates
     (list
        (health-bloodpressure-measurements "bp")
-
        '("z" "ZeOmega Capture Templates")
      )
   )
