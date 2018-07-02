@@ -2640,10 +2640,10 @@ place.
   (setq org-capture-templates
     '(
        <<health-bloodpressure-measurements("bb")>>
-       ("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
+       ("z" "ZeOmega Capture Templates")
 
 #+RESULTS:
 #+BEGIN_SRC emacs-lisp
