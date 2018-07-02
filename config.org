@@ -2570,7 +2570,7 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-***** Cool Quote to Remember (personal, zeomega)
+***** TODO Cool Quote to Remember (personal, zeomega)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
