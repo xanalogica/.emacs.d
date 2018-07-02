@@ -2628,6 +2628,10 @@ in a table to identify long-term trends.
        ;; %^G prompt for tags to assign
        ;; %?  where to place the cursor after laying out the template
 
+
+       (health-bloodpressure-measurements)
+
+
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
 
