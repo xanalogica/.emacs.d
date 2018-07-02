@@ -2616,7 +2616,7 @@ place.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :results raw
-  '("a Bloodpressure measurement" table-line
+  "a Bloodpressure measurement" table-line
      (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
 
@@ -2625,15 +2625,10 @@ place.
      :prepend          ;; put newest measurements at the top of the table
      :unnarrowed       ;; don't narrow to just the new entry; I want to see my history
      :kill-buffer      ;; if file was opened just to collect data, close the buffer after
-  )
 #+END_SRC
 
 #+RESULTS: health-bloodpressure-measurements
-#+BEGIN_SRC emacs-lisp
-("a Bloodpressure measurement" table-line
- (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
- "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
-#+END_SRC
+(a Bloodpressure measurement table-line (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) | %u | %^{High} | %^{Low} | %^{Pulse} | :prepend :unnarrowed :kill-buffer)
 
 Assemble the various definitions of my capture templates.
 
