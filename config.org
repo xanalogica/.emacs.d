@@ -2601,7 +2601,8 @@ place.
   (defun health-bloodpressure-measurements(keyseq)
     "blah"
     '(keyseq "a Bloodpressure measurement" table-line
-       (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+       (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+                      "Jeff's Blood Pressure History")
 
        "| %t | %^{High} | %^{Low} | %^{Pulse} |"
 
