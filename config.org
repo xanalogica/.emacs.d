@@ -2640,6 +2640,7 @@ place.
   (setq org-capture-templates
     '(
        <<health-bloodpressure-measurements("bb")>>
+       ("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
@@ -2651,7 +2652,6 @@ place.
   "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer))
 #+END_SRC
 
-       ("z" "ZeOmega Capture Templates")
 
 #+RESULTS:
 #+BEGIN_SRC emacs-lisp
