@@ -2612,7 +2612,7 @@ place.  It uses the following replaceable parameters.
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                      "Jeff's Blood Pressure History")
 
-     "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
+     "| %u | %^{Score} | } | %^{Pulse} | %^{Comment} |"
 
      :prepend t         ;; put newest measurements at the top of the table
      :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
