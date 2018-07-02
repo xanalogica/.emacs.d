@@ -2571,9 +2571,9 @@ Things to Drop:
 #+END_SRC
 
 ***** TODO Cool Quote to Remember (personal, zeomega)
-%U
-%i
-%?
+ - %U :: 
+ - %i :: 
+ - %? :: 
 #+NAME: cool-quote
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
   (list
