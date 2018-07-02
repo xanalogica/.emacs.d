@@ -2607,7 +2607,7 @@ in a table to identify long-term trends.
 This capture template is a =table-line= or a new line in a table at a specific
 place.
 
-  ;; %u  inactive date/time stamp
+  - %u  inactive date/time stamp
 
 
        ;; %a  the place in Emacs I was when I initiated the capture command
