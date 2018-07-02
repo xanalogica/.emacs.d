@@ -2635,7 +2635,6 @@ place.
  "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
 #+END_SRC
 
-
 Assemble the various definitions of my capture templates.
 
 #+BEGIN_SRC emacs-lisp :results code
