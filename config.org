@@ -2623,7 +2623,8 @@ Assemble the various definitions of my capture templates.
   ;; Definition of Capture templates
   (setq org-capture-templates
     '(
-       ;; %a  the URL
+       ;; %a  the URL where you were when you initiated the capture
+
        ;; %i  initial content (what is selected)
        ;; %U  inactive date/time stamp
        ;; %^G prompt for tags to assign
