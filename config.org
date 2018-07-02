@@ -2605,20 +2605,20 @@ place.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp
-  (defun health-bloodpressure-measurements(keyseq)
-    "blah"
-    '(keyseq "a Bloodpressure measurement" table-line
-       (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
-                      "Jeff's Blood Pressure History")
+  '(keyseq "a Bloodpressure measurement" table-line
+     (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+                    "Jeff's Blood Pressure History")
 
-       "| %u | %^{High} | %^{Low} | %^{Pulse} |"
+     "| %u | %^{High} | %^{Low} | %^{Pulse} |"
 
-       :prepend          ;; put newest measurements at the top of the table
-       :unnarrowed       ;; don't narrow to just the new entry; I want to see my history
-       :kill-buffer      ;; if file was opened just to collect data, close the buffer after
-    )
+     :prepend          ;; put newest measurements at the top of the table
+     :unnarrowed       ;; don't narrow to just the new entry; I want to see my history
+     :kill-buffer      ;; if file was opened just to collect data, close the buffer after
   )
 #+END_SRC
+
+#+RESULTS: health-bloodpressure-measurements
+: health-bloodpressure-measurements
 
 ***** TODO FICO Credit Score Monthly Measurement
 
