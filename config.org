@@ -2575,7 +2575,6 @@ Things to Drop:
 As part of self-measurement, I periodically take my blood pressure and keep it
 in a table to identify long-term trends.
 
-
 #+BEGIN_SRC emacs-lisp
 ;;;;  - Blood Pressure Measurement  (never refiled)
 ;;       ("b" "a [B]loodpressure measurement" table-line
