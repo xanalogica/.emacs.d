@@ -2594,7 +2594,7 @@ table to identify long-term trends.
 This capture template is a =table-line= or a new line in a table at a specific
 place.  It uses the following replaceable parameters.
 
-  - %^{As Of Date}  :: prompt "Score" and insert a value for FICO score
+  - %^{As Of Date}  :: prompt "As Of Date" and insert a value for FICO score
   - %^{Score}       :: prompt "Score" and insert a value for FICO score
 
 #+NAME: finance-creditscore-measurements
