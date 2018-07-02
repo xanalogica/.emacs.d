@@ -2637,11 +2637,11 @@ place.
 
 Assemble the various definitions of my capture templates.
 
-#+HEADERS: :var health-bloodpressure-m=(health-bloodpressure-measurements "bp")
+#+HEADERS: :var bp=(health-bloodpressure-measurements "bp")
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     (list
-       (health-bloodpressure-m "bp")
+       (bp "bp")
        '("z" "ZeOmega Capture Templates")
      )
   )
