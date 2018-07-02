@@ -2604,8 +2604,8 @@ place.
        ;; %?  where to place the cursor after laying out the template
 
 #+NAME: health-bloodpressure-measurements
-#+BEGIN_SRC emacs-lisp :var keyseq="bp"
-  (keyseq "a Bloodpressure measurement" table-line
+#+BEGIN_SRC emacs-lisp :results value :var keyseq="bp"
+  (list keyseq "a Bloodpressure measurement" table-line
      (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
 
@@ -2619,6 +2619,9 @@ place.
 
 #+RESULTS: health-bloodpressure-measurements
 | keyseq | a Bloodpressure measurement | table-line | (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) |   | %u | %^{High} | %^{Low} | %^{Pulse} |   | :prepend | :unnarrowed | :kill-buffer |
+
+#+CALL: health-bloodpressure-measurements(keyseq="bb")
+
 
 ***** TODO FICO Credit Score Monthly Measurement
 
