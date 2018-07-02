@@ -2640,7 +2640,7 @@ Assemble the various definitions of my capture templates.
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     (list
-       (health-bloodpressure-measurements "bp")
+       ("bp" (health-bloodpressure-measurements "bp"))
        '("z" "ZeOmega Capture Templates")
      )
   )
@@ -2649,8 +2649,9 @@ Assemble the various definitions of my capture templates.
 
 #+RESULTS:
 #+BEGIN_SRC emacs-lisp
-(<<health-bloodpressure-measurements>>
- (bp "bp")
+((keyseq "a Bloodpressure measurement" table-line
+         (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+         "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
  ("z" "ZeOmega Capture Templates"))
 #+END_SRC
 
