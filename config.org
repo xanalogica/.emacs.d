@@ -2604,7 +2604,7 @@ place.  It uses the following replaceable parameters.
      '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
                      "Jeff's FICO Credit Score History")
 
-     "| %^{Effective Date} | %^{Score} | | |"
+     "| %^{As Of Date} | %^{Score} | | |"
 
      :prepend t         ;; put newest measurements at the top of the table
      :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
