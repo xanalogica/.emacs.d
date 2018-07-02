@@ -2635,7 +2635,6 @@ place.
        '("z" "ZeOmega Capture Templates")
      )
   )
-
 #+END_SRC
 
 #+RESULTS:
