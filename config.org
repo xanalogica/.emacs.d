@@ -2609,7 +2609,7 @@ place.  It uses the following replaceable parameters.
 #+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
   (list
      keyseq "a new FICO Monthly Score" 'table-line
-     '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
                      "Jeff's Blood Pressure History")
 
      "| %u | %^{Score} | | |"
