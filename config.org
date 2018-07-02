@@ -2532,6 +2532,9 @@ Things that should be in one place are:
       laws
       people
       philosophies
+        rationalism
+        logic philosophy
+        analytic philosophy
     principles of debate
     office decor
     riverhood
