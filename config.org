@@ -2641,8 +2641,26 @@ Assemble the various definitions of my capture templates.
 
        (health-bloodpressure-measurements "bp")
 
+
+       ("z" "ZeOmega Capture Templates")
+
+
+
+
+
+
+     )
+  )
+
+#+END_SRC
+
+#+RESULTS:
+| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
+
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
+
+  - meeting notes 
 
 ;;;; ZEOMEGA AND MYSELF
 ;;;; unordered actions (people to reach out to, a sudden phone call, a TODO to be classified)
@@ -2656,11 +2674,6 @@ Assemble the various definitions of my capture templates.
 ;; music to listen to, places to eat, books to read, movies to watch, places to visit
 
 ;;;;  - Collected Quote (for ZeOmega or personal)
-
-       ("z" "ZeOmega Capture Templates")
-
-  - meeting notes 
-
 
 ;;       ("zb" "Touchbase w/Boss Sam (Weekly on Tue)" entry
 ;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/Sam")
@@ -2708,17 +2721,6 @@ Assemble the various definitions of my capture templates.
 ;;;;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
 ;;;;;         :empty-lines 1         ;; count of blank lines before and after
 ;;;;;       )
-
-
-
-
-     )
-  )
-
-#+END_SRC
-
-#+RESULTS:
-| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
 
 ;;       ("zk" "PMG Key Stakeholders Meeting (Monthly on 2nd Wed)" entry
 ;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Minutes - Meetings w/PMG Stakeholders")
