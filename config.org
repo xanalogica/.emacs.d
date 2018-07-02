@@ -2581,7 +2581,7 @@ Things to Drop:
      '(file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
                      "Disorganized Quotations")
 
-     "* %U :quotation:REFILE:\n\n%i%?\n"
+     "* %U :quotation:\n\n%i%?\n"
 
      :prepend t         ;; put newest quote at the top of the section
      :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
