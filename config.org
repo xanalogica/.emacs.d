@@ -2612,17 +2612,6 @@ place.  It uses the following replaceable parameters.
   )
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp
-;;;;  - A New FICO Monthly Score    (never refiled)
-;;       ("f" "a [F]ICO measurement" table-line
-;;         (file+headline "~/notes/fitness.org" "Blood Pressure")
-;;         "| %t | %^{High} | %^{Low} | %^{Pulse} |"
-;;         :clock-in t            ;; begin tracking the time to fill in this entry
-;;         :clock-resume t                ;; and end tracking upon returning to what I was doing
-;;         :clock-keep nil                ;; be sure the clock does not keep running after I return
-;;       )
-#+END_SRC
-
 ***** TODO Blood Pressure Measurement
 
 As part of self-measurement, I periodically take my blood pressure and keep it
