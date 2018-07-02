@@ -2591,7 +2591,8 @@ Things to Drop:
 As part of self-measurement, I periodically take my blood pressure and keep it
 in a table to identify long-term trends.
 
-This capture template is a =table-line= or a new line in a table at a specific place.
+This capture template is a =table-line= or a new line in a table at a specific
+place.
 
 ;;;;  - Blood Pressure Measurement  (never refiled)
 
