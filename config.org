@@ -2638,15 +2638,6 @@ place.
   )
 #+END_SRC
 
-#+CALL: health-bloodpressure-measurements(keyseq="bb")
-
-#+RESULTS:
-#+BEGIN_SRC emacs-lisp
-("bb" "a Bloodpressure measurement" table-line
- (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
- "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
-#+END_SRC
-
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
 
