@@ -2573,18 +2573,12 @@ Things to Drop:
 ***** TODO Cool Quote to Remember (personal, zeomega)
 #+NAME: cool-quote
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
-;;    ("q" "a [Q]uotation to remember" entry
-;;      (file+headline "~/notes/quotes.org" "Disorganized Quotations")
 ;;      "* %U :quotation:REFILE:\n\n%i%?\n"
-;;    )
-;;    ("q" "a [Q]uotation to remember" entry
-;;      (file+headline "~/notes/quotes.org" "Disorganized Quotations")
 ;;      "* %U :quotation:\n %i%?\n"
-;;    )
   (list
      keyseq "a Catchy Quote" 'entry
-     '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
-                     "Jeff's Blood Pressure History")
+     '(file+headline "~/notes/quotes.org"
+                     "Disorganized Quotations")
 
      "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
 
