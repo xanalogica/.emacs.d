@@ -2934,6 +2934,17 @@ Assemble the various definitions of my capture templates.
   ;;;)
 #+END_SRC
 
+#+RESULTS:
+| (health-bloodpressure-measurements bp) | (z ZeOmega Capture Templates) | - | meeting | notes |
+
+
+
+
+
+
+
+
+
 **** Possible Destinations for Refiling Requests
 
 A list of cons cells, where
