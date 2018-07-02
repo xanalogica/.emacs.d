@@ -2661,8 +2661,12 @@ Assemble the various definitions of my capture templates.
 #+END_SRC
 
 #+RESULTS:
-| keyseq | a Bloodpressure measurement | table-line | (file+headline ~/Dropbox/Documents/Org-Mode/Health.org Jeff's Blood Pressure History) |   | %u | %^{High} | %^{Low} | %^{Pulse} |   | :prepend | :unnarrowed | :kill-buffer |
-| z      | ZeOmega Capture Templates   |            |                                                                                       |   |    |          |         |           |   |          |             |              |
+#+BEGIN_SRC emacs-lisp
+((keyseq "a Bloodpressure measurement" table-line
+         (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
+         "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
+ ("z" "ZeOmega Capture Templates"))
+#+END_SRC
 
 
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
