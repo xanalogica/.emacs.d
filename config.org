@@ -2639,11 +2639,12 @@ place.
   (setq org-capture-templates
     (list
        <<health-bloodpressure-measurements("bb")>>
-       (list "bp" (health-bloodpressure-measurements))
        '("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
+       (list "bp" (health-bloodpressure-measurements))
+
 
 #+RESULTS:
 #+BEGIN_SRC emacs-lisp
