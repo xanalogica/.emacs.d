@@ -2529,7 +2529,7 @@ Things that should be in one place are:
       conceptual tools
         differential calculus
         integral calculus
-      
+      laws
     office decor
     riverhood
 
