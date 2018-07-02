@@ -2607,8 +2607,6 @@ in a table to identify long-term trends.
 This capture template is a =table-line= or a new line in a table at a specific
 place.
 
-;;;;  - Blood Pressure Measurement  (never refiled)
-
        ;; %a  the place in Emacs I was when I initiated the capture command
 
        ;; %i  initial content (what is selected)
