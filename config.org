@@ -2596,10 +2596,6 @@ place.
 
 ;;;;  - Blood Pressure Measurement  (never refiled)
 
-**** 
-
-
-
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp
   (defun health-bloodpressure-measurements(keyseq)
