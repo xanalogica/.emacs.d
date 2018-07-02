@@ -2635,7 +2635,7 @@ place.
  "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp :results code
+#+BEGIN_SRC emacs-lisp :noweb yess :tangle yes :results code
   (setq org-capture-templates
     (list
        <<<health-bloodpressure-measurements("bb")>>>
