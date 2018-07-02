@@ -2575,6 +2575,8 @@ Things to Drop:
  - %i :: region selected when capture is called
  - %? :: 
 
+%^g         Prompt for tags, with completion on tags in target file.
+
 #+NAME: cool-quote
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
   (list
