@@ -2641,14 +2641,7 @@ Assemble the various definitions of my capture templates.
 
        (health-bloodpressure-measurements "bp")
 
-
        ("z" "ZeOmega Capture Templates")
-
-
-
-
-
-
      )
   )
 
