@@ -2571,7 +2571,7 @@ Things to Drop:
 #+END_SRC
 
 ***** TODO Cool Quote to Remember (personal, zeomega)
- - %U :: 
+ - %u :: inactive datestamp when quote was captured
  - %i :: region selected when capture is called
  - %? :: 
 
