@@ -2573,14 +2573,13 @@ Things to Drop:
 ***** TODO Cool Quote to Remember (personal, zeomega)
 #+NAME: cool-quote
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
-;;      "* %U :quotation:REFILE:\n\n%i%?\n"
-;;      "* %U :quotation:\n %i%?\n"
   (list
      keyseq "a Catchy Quote" 'entry
      '(file+headline "~/notes/quotes.org"
                      "Disorganized Quotations")
 
-     "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
+;;   "* %U :quotation:REFILE:\n\n%i%?\n"
+;;   "* %U :quotation:\n %i%?\n"
 
      :prepend t         ;; put newest quote at the top of the section
      :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
