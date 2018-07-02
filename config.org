@@ -2759,18 +2759,20 @@ Assemble the various definitions of my capture templates.
 ;;         :clock-keep nil        ;; be sure the clock does not keep running after I return
 ;;         :empty-lines 1         ;; count of blank lines before and after
 ;;       )
-       ("za" "Action Item to Address" entry
-         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
-         "* TODO [#C] %? %^G:REFILE:\n\n%i\n\n%a"
-         :prepend t
-         :empty-lines 0         ;; count of blank lines before and after
-       )
-       ("ze" "Email Item to Address" entry
-         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
-         "* TODO [#C] %? %^G:REFILE:\n%i\n\n%a"
-         :prepend t
-         :empty-lines 0         ;; count of blank lines before and after
-       )
+
+;;;;;       ("za" "Action Item to Address" entry
+;;;;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
+;;;;;         "* TODO [#C] %? %^G:REFILE:\n\n%i\n\n%a"
+;;;;;         :prepend t
+;;;;;         :empty-lines 0         ;; count of blank lines before and after
+;;;;;       )
+
+;;;;;       ("ze" "Email Item to Address" entry
+;;;;;         (file+headline "~/Clients/ZeOmega/notes/zeomega.org" "Unclassified Tasks")
+;;;;;         "* TODO [#C] %? %^G:REFILE:\n%i\n\n%a"
+;;;;;         :prepend t
+;;;;;         :empty-lines 0         ;; count of blank lines before and after
+;;;;;       )
 
        ("j" "a dated [J]ournal entry" entry
          (file+datetree "~/notes/journal.org")
