@@ -2605,6 +2605,7 @@ place.
 
        "| %t | %^{High} | %^{Low} | %^{Pulse} |"
 
+       :prepend          ;; put newest measurements at the top of the table
        :clock-in t            ;; begin tracking the time to fill in this entry
        :clock-resume t           ;; and end tracking upon returning to what I was doing
        :clock-keep nil           ;; be sure the clock does not keep running after I return
