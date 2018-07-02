@@ -2653,7 +2653,6 @@ place.
     "| %u | %^{High} | %^{Low} | %^{Pulse} |"
     :prepend :unnarrowed :kill-buffer
   )
-
  '("z" "ZeOmega Capture Templates")
 )
 #+END_SRC
