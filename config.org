@@ -2640,17 +2640,6 @@ place.
 
 #+RESULTS:
 #+BEGIN_SRC emacs-lisp
-(("bb" "a Bloodpressure measurement" table-line
-  (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
-  "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
- '("z" "ZeOmega Capture Templates"))
-#+END_SRC
-
-       (list "bp" (health-bloodpressure-measurements))
-
-
-#+RESULTS:
-#+BEGIN_SRC emacs-lisp
 ((keyseq "a Bloodpressure measurement" table-line
          (file+headline "~/Dropbox/Documents/Org-Mode/Health.org" "Jeff's Blood Pressure History")
          "| %u | %^{High} | %^{Low} | %^{Pulse} |" :prepend :unnarrowed :kill-buffer)
