@@ -2600,6 +2600,14 @@ place.  It uses the following replaceable parameters.
   - %^{Pulse}    :: prompt "Pulse" and insert a value for pulse rate
   - %^{Comment}  :: prompt "Comment" and insert a value for comment, if any
 
+*** Jeff's FICO Credit Score History
+
+| Date       | Score | Meaning   | Events                                                |
+|            |       |           |                                                       |
+| 2018/05/25 |   734 | Very Good | have a bad comment, and short history                 |
+
+
+
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="bp" :results code :tangle no
   (list
