@@ -2595,7 +2595,7 @@ in a table to identify long-term trends.
 
 #+BEGIN_SRC emacs-lisp
   ("b" "a [B]loodpressure measurement" table-line
-  (file+headline "~/notes/fitness.org" "Blood Pressure")
+    (file+headline "~/notes/fitness.org" "Blood Pressure")
   "| %t | %^{High} | %^{Low} | %^{Pulse} |"
   :clock-in t            ;; begin tracking the time to fill in this entry
   :clock-resume t                ;; and end tracking upon returning to what I was doing
