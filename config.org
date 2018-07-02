@@ -2651,7 +2651,7 @@ Assemble the various definitions of my capture templates.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-capture-templates :results code
-    '(
+    (
        (health-bloodpressure-measurements "bp")
 
        ("z" "ZeOmega Capture Templates")
@@ -2659,6 +2659,10 @@ Assemble the various definitions of my capture templates.
   )
 
 #+END_SRC
+
+#+RESULTS:
+| health-bloodpressure-measurements | bp                        |
+| z                                 | ZeOmega Capture Templates |
 
 
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
