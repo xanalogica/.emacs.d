@@ -2637,7 +2637,7 @@ place.
 
 #+BEGIN_SRC emacs-lisp :noweb yes :tangle yes :results code
   (setq org-capture-templates
-    (list
+    '(
        <<health-bloodpressure-measurements("bb")>>
        '("z" "ZeOmega Capture Templates")
      )
