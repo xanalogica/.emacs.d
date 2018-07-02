@@ -2612,8 +2612,8 @@ table to identify long-term trends.
 This capture template is a =table-line= or a new line in a table at a specific
 place.  It uses the following replaceable parameters.
 
-  - %^{YYYY/MM/DD}  :: prompt "YYYY/MM/DD" and insert a value for Report Date
-  - %^{Score}       :: prompt "Score" and insert a value for FICO score
+  - %^{Date}u  :: prompt "YYYY/MM/DD" and insert a value for Report Date
+  - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
@@ -2622,7 +2622,7 @@ place.  It uses the following replaceable parameters.
      '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
                      "Jeff's FICO Credit Score History")
 
-     "| %^{YYYY/MM/DD} | %^{Score} | | |"
+     "| %^u | %^{Score} | | |"
 
      :prepend t         ;; put newest measurements at the top of the table
      :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
