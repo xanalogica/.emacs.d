@@ -2578,7 +2578,7 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
   (list
      keyseq "a Catchy Quote" 'entry
-     '(file+headline "~/notes/quotes.org"
+     '(file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
                      "Disorganized Quotations")
 
 ;;   "* %U :quotation:REFILE:\n\n%i%?\n"
