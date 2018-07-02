@@ -2524,6 +2524,8 @@ Things that should be in one place are:
     (may be refiled into a relevant project)
     - r   research to undertake
 
+  - personal major projects
+
   - meeting notes 
     - non-regular arbitrary meeting
     - zd  DevOps
