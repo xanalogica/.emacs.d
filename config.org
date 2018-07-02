@@ -2608,10 +2608,10 @@ This capture template is a =table-line= or a new line in a table at a specific
 place.  It uses the following replaceable parameters.
 
   - %u               :: inactive date/time stamp
-  - %^{High}
-  - %^{Low}
-  - %^{Pulse}
-  - %^{Comment}
+  - %^{High}         :: 
+  - %^{Low}          :: 
+  - %^{Pulse}        :: 
+  - %^{Comment}      :: 
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="bp" :results code :tangle no
