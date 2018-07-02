@@ -2603,6 +2603,7 @@ in a table to identify long-term trends.
 #+END_SRC
 
 ***** TODO FICO Credit Score Monthly Measurement
+
 #+BEGIN_SRC emacs-lisp
 ;;;;  - A New FICO Monthly Score    (never refiled)
 ;;       ("f" "a [F]ICO measurement" table-line
