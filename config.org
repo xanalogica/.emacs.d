@@ -2609,14 +2609,6 @@ place.
 
   - %u  inactive date/time stamp
 
-
-       ;; %a  the place in Emacs I was when I initiated the capture command
-
-       ;; %i  initial content (what is selected)
-       ;; %U  inactive date/time stamp
-       ;; %^G prompt for tags to assign
-       ;; %?  where to place the cursor after laying out the template
-
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="bp" :results code :tangle no
   (list
@@ -2649,6 +2641,15 @@ place.
      )
   )
 #+END_SRC
+
+
+       ;; %a  the place in Emacs I was when I initiated the capture command
+
+       ;; %i  initial content (what is selected)
+       ;; %U  inactive date/time stamp
+       ;; %^G prompt for tags to assign
+       ;; %?  where to place the cursor after laying out the template
+
 
 ;;;;;;;; HOW TO INCLUDE: Blood Pressure Measurement
 ;;;;;;;; HOW TO INCLUDE: FICO Credit Score Monthly Measurement
