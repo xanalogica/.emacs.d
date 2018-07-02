@@ -2616,8 +2616,8 @@ place.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :results code
-  (list "a Bloodpressure measurement" 'table-line
-     (list 'file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+  '("a Bloodpressure measurement" table-line
+     (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
 
      "| %u | %^{High} | %^{Low} | %^{Pulse} |"
