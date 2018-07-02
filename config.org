@@ -2616,7 +2616,7 @@ place.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :results raw
-  "a Bloodpressure measurement" table-line
+  "a Bloodpressure measurement" 'table-line
      (file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
                     "Jeff's Blood Pressure History")
 
