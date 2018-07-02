@@ -2531,6 +2531,7 @@ Things that should be in one place are:
         integral calculus
       laws
       people
+      philosophies
     principles of debate
     office decor
     riverhood
