@@ -2647,7 +2647,7 @@ place.  It uses the following replaceable parameters.
   (setq org-capture-templates
     '(
        <<health-bloodpressure-measurements("b")>>
-       <<finance-creditscore-measurements("c")>>
+       <<finance-creditscore-measurements("f")>>
        ("z" "ZeOmega Capture Templates")
      )
   )
