@@ -3475,7 +3475,7 @@ protocol (org-protocol://); emacsclient then parses the request and tells
 Emacs to capture or store stuff at the relevant places in your Org files.
 
 **** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC DISABLEDemacs-lisp
   (defun wicked/org-update-checkbox-count (&optional all)
     "Update the checkbox statistics in the current section.
      This will find all statistic cookies like [57%] and [6/12] and update
