@@ -2526,8 +2526,10 @@ Things that should be in one place are:
 
   - personal major projects
     mathematics
-      differential calculus
-      integral calculus
+      conceptual tools
+        differential calculus
+        integral calculus
+      
     office decor
     riverhood
 
