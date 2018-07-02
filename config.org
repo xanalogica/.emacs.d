@@ -2595,7 +2595,7 @@ in a table to identify long-term trends.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp
-  (defun health-bloodpressure-measurements()
+  (defun health-bloodpressure-measurements(keyseq)
     "blah"
     '("b" "a [B]loodpressure measurement" table-line
        (file+headline "~/notes/fitness.org" "Blood Pressure")
