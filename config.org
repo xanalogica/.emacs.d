@@ -2668,9 +2668,9 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 #+BEGIN_SRC emacs-lisp :noweb yes :results code :tangle yes
   (setq org-capture-templates
     '(
-       <<health-bloodpressure-measurements("b")>>
-       <<finance-creditscore-measurements("f")>>
-       <<cool-quote("q")>>
+;;;       <<health-bloodpressure-measurements("b")>>
+;;;       <<finance-creditscore-measurements("f")>>
+;;;       <<cool-quote("q")>>
        ("z" "ZeOmega Capture Templates")
      )
   )
