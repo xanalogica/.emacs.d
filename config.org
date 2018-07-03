@@ -2644,7 +2644,7 @@ place.  It uses the following replaceable parameters.
   - %^{Comment}  :: prompt "Comment" and insert a value for comment, if any
 
 org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header option
-  uses: org-babel-tangle
+  uses: org-babel-tangle to extract elisp and then load using =load-file=.
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="b" :results code :tangle no
