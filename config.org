@@ -2643,7 +2643,7 @@ place.  It uses the following replaceable parameters.
   - %^{Pulse}    :: prompt "Pulse" and insert a value for pulse rate
   - %^{Comment}  :: prompt "Comment" and insert a value for comment, if any
 
-org-babel-load-file() doesn't seem to respect the =:tangle no= header option
+org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header option
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="b" :results code :tangle no
