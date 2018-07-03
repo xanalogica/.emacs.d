@@ -2670,7 +2670,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
     '(
        <<health-bloodpressure-measurements("b")>>
        <<finance-creditscore-measurements("f")>>
-       <<cool-quote("q")>>>
+       <<cool-quote("q")>>
        ("z" "ZeOmega Capture Templates")
      )
   )
