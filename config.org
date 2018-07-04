@@ -2666,7 +2666,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 
-#+BEGIN_SRC emacs-lisp :noweb yes :results code
+#+BEGIN_SRC emacs-lisp :noweb yes :tangle yes :results code
   (setq org-capture-templates
     '(
        ("z" "ZeOmega Capture Templates")
