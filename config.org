@@ -2570,6 +2570,19 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
+***** TODO Meeting Notes
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+***** TODO Information to Consume (book, movie, website)
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+***** TODO Information to Produce (whitepaper, blog post, diagram)
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+
 ***** TODO Cool Quote to Remember (personal, zeomega)
  - %u  :: inactive datestamp when quote was captured
  - %i  :: region selected when capture is called
@@ -2591,18 +2604,6 @@ Things to Drop:
   )
 #+END_SRC
 
-***** TODO Meeting Notes
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
-***** TODO Information to Consume (book, movie, website)
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
-***** TODO Information to Produce (whitepaper, blog post, diagram)
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
 ***** TODO FICO Credit Score Monthly Measurement
 
 Each month my bank sends me my current FICO credit score, which I collect in a
@@ -2616,17 +2617,17 @@ place.  It uses the following replaceable parameters.
 
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
-  (list
-     keyseq "a new FICO Monthly Score" 'table-line
-     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-                     "Jeff's FICO Credit Score History")
-
-     "| %^{Date}u | %^{Score} | | |"
-
-     :prepend t         ;; put newest measurements at the top of the table
-     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-  )
+;;  (list
+;;     keyseq "a new FICO Monthly Score" 'table-line
+;;     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
+;;                     "Jeff's FICO Credit Score History")
+;;
+;;     "| %^{Date}u | %^{Score} | | |"
+;;
+;;     :prepend t         ;; put newest measurements at the top of the table
+;;     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+;;     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+;;  )
 #+END_SRC
 
 ***** TODO Blood Pressure Measurement
