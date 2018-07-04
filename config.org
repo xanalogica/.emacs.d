@@ -2649,19 +2649,19 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="b" :results code
-(defun health-bloodpressure-measurements (keyseq) "blah"
-  (list
-     keyseq "a Bloodpressure measurement" 'table-line
-     '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
-                     "Jeff's Blood Pressure History")
+  (defun health-bloodpressure-measurements (keyseq) "blah"
+    (list
+       keyseq "a Bloodpressure measurement" 'table-line
+       '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+                       "Jeff's Blood Pressure History")
 
-     "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
+       "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
 
-     :prepend t         ;; put newest measurements at the top of the table
-     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+       :prepend t         ;; put newest measurements at the top of the table
+       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+    )
   )
-)
 #+END_SRC
 
 
