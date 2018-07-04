@@ -2649,7 +2649,8 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="p" :results value
-  (defun health-bloodpressure-measurements (keyseq) "blah"
+  (defun health-bloodpressure-measurements (keyseq)
+   "blah"
     (list
        keyseq "a Bloodpressure measurement" 'table-line
        '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
