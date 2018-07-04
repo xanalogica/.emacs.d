@@ -2670,9 +2670,9 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
-    '(
+     (
        (health-bloodpressure-measurements "b")
-       ("z" "ZeOmega Capture Templates")
+       '("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
