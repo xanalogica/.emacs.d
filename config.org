@@ -2647,8 +2647,8 @@ place.  It uses the following replaceable parameters.
 org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header option
   uses: =org-babel-tangle()= to extract elisp and then load using =load-file=.
 
-#+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="b" :results value
+#+NAME: health-bloodpressure-measurements
 (defun health-bloodpressure-measurements (keyseq) "blah"
   (list
      keyseq "a Bloodpressure measurement" 'table-line
