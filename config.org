@@ -2649,7 +2649,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 #+NAME: health-bloodpressure-measurements
 #+BEGIN_SRC emacs-lisp :var keyseq="b" :results code
-(defun health-bloodpressure-measurements () "blah"
+(defun health-bloodpressure-measurements (keyseq) "blah"
   (list
      keyseq "a Bloodpressure measurement" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
@@ -2671,7 +2671,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 #+BEGIN_SRC emacs-lisp :results code
   (setq org-capture-templates
     '(
-       <<health-bloodpressure-measurements("b")>>
+       health-bloodpressure-measurements("b")
        ("z" "ZeOmega Capture Templates")
      )
   )
