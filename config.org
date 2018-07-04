@@ -2652,6 +2652,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 (cl-flet
   ((health-bloodpressure-measurements (keyseq)
 
+(defun health-bloodpressure-measurements (keyseq) "blah"
   (list
      keyseq "a Bloodpressure measurement" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
@@ -2664,11 +2665,8 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
      :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
   )
 )
-)
-)
 #+END_SRC
 
-(defun health-bloodpressure-measurements (keyseq) "blah"
 
 ***** TODO Merge Capture Templates All Together
 
