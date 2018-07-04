@@ -2615,8 +2615,8 @@ place.  It uses the following replaceable parameters.
   - %^{Date}u  :: prompt "Date" and insert a value for Report Date
   - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
-#+NAME: finance-creditscore-measurements
-#+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
+;;#+NAME: finance-creditscore-measurements
+;;#+BEGIN_SRC emacs-lisp :var keyseq="c" :results code :tangle no
 ;;  (list
 ;;     keyseq "a new FICO Monthly Score" 'table-line
 ;;     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
@@ -2628,7 +2628,7 @@ place.  It uses the following replaceable parameters.
 ;;     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
 ;;     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
 ;;  )
-#+END_SRC
+;;#+END_SRC
 
 ***** TODO Blood Pressure Measurement
 
