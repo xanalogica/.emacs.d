@@ -2616,7 +2616,10 @@ place.  It uses the following replaceable parameters.
   - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
 #+NAME: finance-creditscore-measurements
-#+BEGIN_SRC emacs-lisp :var keyseq="c" :results value
+#+BEGIN_SRC emacs-lisp :results value
+  (defun health-bloodpressure-measurements (keyseq)
+   "blah"
+
   (list
      keyseq "a new FICO Monthly Score" 'table-line
      '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
