@@ -2616,8 +2616,8 @@ place.  It uses the following replaceable parameters.
   - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
 #+NAME: finance-creditscore-measurements
-#+BEGIN_SRC emacs-lisp :results value
-  (defun finance-creditscore-measurements (keyseq)
+#+BEGIN_SRC emacs-lisp :results value :var name="finance-creditscore-measurements"
+  (defun name (keyseq)
    "blah"
 
     (list
