@@ -2648,7 +2648,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   uses: =org-babel-tangle()= to extract elisp and then load using =load-file=.
 
 #+NAME: health-bloodpressure-measurements
-#+BEGIN_SRC emacs-lisp :var keyseq="p" :results value
+#+BEGIN_SRC emacs-lisp :results value
   (defun health-bloodpressure-measurements (keyseq)
    "blah"
 
@@ -2665,8 +2665,6 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
     )
   )
 #+END_SRC
-;;;  (defun health-bloodpressure-measurements (keyseq) "blah"
-
 
 ***** TODO Merge Capture Templates All Together
 
