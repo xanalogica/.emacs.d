@@ -2617,7 +2617,7 @@ place.  It uses the following replaceable parameters.
 
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC emacs-lisp :results value
-  (defun health-bloodpressure-measurements (keyseq)
+  (defun finance-creditscore-measurements (keyseq)
    "blah"
 
     (list
