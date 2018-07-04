@@ -2668,10 +2668,10 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 
-#+BEGIN_SRC emacs-lisp :results code :var bp=health-bloodpressure-measurements("b")
+#+BEGIN_SRC emacs-lisp :results code :noweb yes :var bp=health-bloodpressure-measurements("b")
   (setq org-capture-templates
      (list
-       (health-bloodpressure-measurements "b")
+       <<health-bloodpressure-measurements("b")>>
        (finance-creditscore-measurements "f")
        '("z" "ZeOmega Capture Templates")
      )
