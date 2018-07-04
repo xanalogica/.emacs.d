@@ -2674,12 +2674,12 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   (setq org-capture-templates
      (list
        (health-bloodpressure-measurements "b")
+       (finance-creditscore-measurements "f")
        '("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
 
-;;;       (finance-creditscore-measurements "f")
 ;;;       cool-quote("q")
 
        ;; %a  the place in Emacs I was when I initiated the capture command
