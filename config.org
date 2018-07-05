@@ -2615,40 +2615,6 @@ place.  It uses the following replaceable parameters.
   - %^{Date}u  :: prompt "Date" and insert a value for Report Date
   - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
-#+NAME: finance-creditscore-measurementsZZZ
-#+BEGIN_SRC emacs-lisp :results value :var name="finance-creditscore-measurementsZZZ"
-;;  (defun name (keyseq)
-;;   "blah"
-;;
-;;    (list
-;;       keyseq "a new FICO Monthly Score" 'table-line
-;;       '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-;;                       "Jeff's FICO Credit Score History")
-;;
-;;       "| %^{Date}u | %^{Score} | | |"
-;;
-;;       :prepend t         ;; put newest measurements at the top of the table
-;;       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-;;       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-;;    )
-;;  )
-#+END_SRC
-
-#+NAME: finance-creditscore-measurementsZZZ
-#+BEGIN_SRC text :results value :var keyseq="f"
-;;  (list
-;;     keyseq "a new FICO Monthly Score" 'table-line
-;;     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-;;                     "Jeff's FICO Credit Score History")
-;;
-;;     "| %^{Date}u | %^{Score} | | |"
-;;
-;;     :prepend t         ;; put newest measurements at the top of the table
-;;     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-;;     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-;;  )
-#+END_SRC
-
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC text :results value
   "a new FICO Monthly Score" table-line
