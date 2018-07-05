@@ -2726,10 +2726,10 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 #+END_SRC
 
        ("b"
-          <<health-bloodpressure-measurements>>
+          health-bloodpressure-measurements>>
        )
        ("F"
-          <<finance-creditscore-measurements>>
+          finance-creditscore-measurements>>
        )
 
 ;;;       (finance-creditscore-measurements "f")
