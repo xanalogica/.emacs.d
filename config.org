@@ -2596,11 +2596,10 @@ Things to Drop:
                  "Disorganized Quotations")
 
   "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n"
-;;
-;;     :prepend t         ;; put newest quote at the top of the section
-;;     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-;;     :empty-lines 1     ;; enforce count of blank lines before and after
-;;  )
+
+  :prepend t         ;; put newest quote at the top of the section
+  :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+  :empty-lines 1     ;; enforce count of blank lines before and after
 ;;#+END_SRC
 
 ***** TODO FICO Credit Score Monthly Measurement
