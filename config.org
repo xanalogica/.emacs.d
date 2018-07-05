@@ -2709,7 +2709,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
           <<health-bloodpressure-measurements>>)
        ("F"
           <<finance-creditscore-measurements>>)
-       '("z" "ZeOmega Capture Templates")
+       ("z" "ZeOmega Capture Templates")
      )
   )
 #+END_SRC
