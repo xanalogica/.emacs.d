@@ -2705,8 +2705,8 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
      (list
-       (health-bloodpressure-measurements "b")
-
+       ("b"
+          <<health-bloodpressure-measurements>>)
        ("F"
           <<finance-creditscore-measurements>>)
        '("z" "ZeOmega Capture Templates")
