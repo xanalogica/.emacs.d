@@ -2590,7 +2590,7 @@ Things to Drop:
  - %?  :: after completing the template, leave the cursor here
 
 #+NAME: capture--cool-quote
-;;#+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
+#+BEGIN_SRC text
 ;;  (list
 ;;     keyseq "a Catchy Quote" 'entry
 ;;     '(file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
