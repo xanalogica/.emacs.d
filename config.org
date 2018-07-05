@@ -2589,7 +2589,7 @@ Things to Drop:
  - %^g :: prompt for tags, with completion on tags in target file
  - %?  :: after completing the template, leave the cursor here
 
-;;#+NAME: cool-quote
+#+NAME: capture--cool-quote
 ;;#+BEGIN_SRC emacs-lisp :var keyseq="q" :results code :tangle no
 ;;  (list
 ;;     keyseq "a Catchy Quote" 'entry
