@@ -2709,7 +2709,6 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
      (list
        (health-bloodpressure-measurements "b")
 
-
        (list
           "F" <<finance-creditscore-measurements>>
 
