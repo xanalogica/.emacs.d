@@ -2592,7 +2592,7 @@ Things to Drop:
 #+NAME: capture--cool-quote
 #+BEGIN_SRC text
   "a Catchy Quote" entry
-;;     '(file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
+  (file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
 ;;                     "Disorganized Quotations")
 ;;
 ;;     "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n"
