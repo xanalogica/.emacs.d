@@ -2615,7 +2615,7 @@ place.  It uses the following replaceable parameters.
   - %^{Date}u  :: prompt "Date" and insert a value for Report Date
   - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
-#+NAME: finance-creditscore-measurementsZZZZZZZZZZZZZZZZZZZZZZZZ
+#+NAME: finance-creditscore-measurementsZZZ
 #+BEGIN_SRC emacs-lisp :results value :var name="finance-creditscore-measurements"
   (defun name (keyseq)
    "blah"
