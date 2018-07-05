@@ -2613,7 +2613,7 @@ place.  It uses the following replaceable parameters.
   - %^{Date}u  :: prompt "Date" and insert a value for Report Date
   - %^{Score}  :: prompt "Score" and insert a value for FICO score
 
-#+NAME: finance-creditscore-measurements
+#+NAME: capture--finance-creditscore-measurements
 #+BEGIN_SRC text
   "a new FICO Monthly Score" table-line
   (file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
