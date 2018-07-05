@@ -2718,19 +2718,18 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     '(
+       ("b"
+          <<health-bloodpressure-measurements>>
+       )
+       ("F"
+          <<finance-creditscore-measurements>>
+       )
        ("z"
           "ZeOmega Capture Templates"
        )
      )
   )
 #+END_SRC
-
-       ("b"
-          health-bloodpressure-measurements>>
-       )
-       ("F"
-          finance-creditscore-measurements>>
-       )
 
 ;;;       (finance-creditscore-measurements "f")
 ;;;       cool-quote("q")
