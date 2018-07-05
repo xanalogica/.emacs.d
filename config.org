@@ -2617,36 +2617,36 @@ place.  It uses the following replaceable parameters.
 
 #+NAME: finance-creditscore-measurementsZZZ
 #+BEGIN_SRC emacs-lisp :results value :var name="finance-creditscore-measurementsZZZ"
-  (defun name (keyseq)
-   "blah"
-
-    (list
-       keyseq "a new FICO Monthly Score" 'table-line
-       '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-                       "Jeff's FICO Credit Score History")
-
-       "| %^{Date}u | %^{Score} | | |"
-
-       :prepend t         ;; put newest measurements at the top of the table
-       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-    )
-  )
+;;  (defun name (keyseq)
+;;   "blah"
+;;
+;;    (list
+;;       keyseq "a new FICO Monthly Score" 'table-line
+;;       '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
+;;                       "Jeff's FICO Credit Score History")
+;;
+;;       "| %^{Date}u | %^{Score} | | |"
+;;
+;;       :prepend t         ;; put newest measurements at the top of the table
+;;       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+;;       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+;;    )
+;;  )
 #+END_SRC
 
 #+NAME: finance-creditscore-measurementsZZZ
 #+BEGIN_SRC text :results value :var keyseq="f"
-  (list
-     keyseq "a new FICO Monthly Score" 'table-line
-     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-                     "Jeff's FICO Credit Score History")
-
-     "| %^{Date}u | %^{Score} | | |"
-
-     :prepend t         ;; put newest measurements at the top of the table
-     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-  )
+;;  (list
+;;     keyseq "a new FICO Monthly Score" 'table-line
+;;     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
+;;                     "Jeff's FICO Credit Score History")
+;;
+;;     "| %^{Date}u | %^{Score} | | |"
+;;
+;;     :prepend t         ;; put newest measurements at the top of the table
+;;     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+;;     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+;;  )
 #+END_SRC
 
 #+NAME: finance-creditscore-measurements
@@ -2681,21 +2681,21 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 #+NAME: health-bloodpressure-measurementsZZZ
 #+BEGIN_SRC emacs-lisp :results value
-  (defun health-bloodpressure-measurementsZZZ (keyseq)
-   "blah"
-
-    (list
-       keyseq "a Bloodpressure measurement" 'table-line
-       '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
-                       "Jeff's Blood Pressure History")
-
-       "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
-
-       :prepend t         ;; put newest measurements at the top of the table
-       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-    )
-  )
+;;  (defun health-bloodpressure-measurementsZZZ (keyseq)
+;;   "blah"
+;;
+;;    (list
+;;       keyseq "a Bloodpressure measurement" 'table-line
+;;       '(file+headline "~/Dropbox/Documents/Org-Mode/Health.org"
+;;                       "Jeff's Blood Pressure History")
+;;
+;;       "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |"
+;;
+;;       :prepend t         ;; put newest measurements at the top of the table
+;;       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+;;       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+;;    )
+;;  )
 #+END_SRC
 
 #+NAME: health-bloodpressure-measurements
