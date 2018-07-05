@@ -2651,7 +2651,7 @@ place.  It uses the following replaceable parameters.
 
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC text :results value
-  "a new FICO Monthly Score" 'table-line
+  "a new FICO Monthly Score" table-line
   (file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
                      "Jeff's FICO Credit Score History")
 
