@@ -2591,8 +2591,7 @@ Things to Drop:
 
 #+NAME: capture--cool-quote
 #+BEGIN_SRC text
-;;  (list
-;;     keyseq "a Catchy Quote" 'entry
+  "a Catchy Quote" 'entry
 ;;     '(file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
 ;;                     "Disorganized Quotations")
 ;;
