@@ -2708,7 +2708,23 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   (setq org-capture-templates
      (list
        (health-bloodpressure-measurements "b")
-       <<finance-creditscore-measurements(keyseq="F")>>
+
+
+       (list
+          keyseq <<finance-creditscore-measurements>>
+
+
+
+ "a new FICO Monthly Score" 'table-line
+          '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
+                          "Jeff's FICO Credit Score History")
+
+          "| %^{Date}u | %^{Score} | | |"
+
+          :prepend t         ;; put newest measurements at the top of the table
+          :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+          :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+       )
        '("z" "ZeOmega Capture Templates")
      )
   )
