@@ -2724,7 +2724,8 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
        ("F"
           <<finance-creditscore-measurements>>
        )
-       ("z" "ZeOmega Capture Templates"
+       ("z"
+          "ZeOmega Capture Templates"
        )
      )
   )
