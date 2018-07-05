@@ -2669,11 +2669,9 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
        ("F"
           <<capture--finance-creditscore-measurements>>
        )
-
-#+NAME: capture--cool-quote
-
-
-
+       ("q"
+          <<capture--cool-quote>>
+       )
        ("z"
           "ZeOmega Capture Templates"
        )
