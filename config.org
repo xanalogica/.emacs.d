@@ -2635,7 +2635,7 @@ place.  It uses the following replaceable parameters.
 #+END_SRC
 
 #+NAME: finance-creditscore-measurements
-#+BEGIN_SRC emacs-lisp :results value :var name="finance-creditscore-measurements"
+#+BEGIN_SRC text :results value :var name="finance-creditscore-measurements"
   (defun name (keyseq)
    "blah"
 
