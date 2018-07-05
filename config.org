@@ -2636,20 +2636,16 @@ place.  It uses the following replaceable parameters.
 
 #+NAME: finance-creditscore-measurements
 #+BEGIN_SRC text :results value :var keyseq="f"
-  (defun name (keyseq)
-   "blah"
+  (list
+     keyseq "a new FICO Monthly Score" 'table-line
+     '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
+                     "Jeff's FICO Credit Score History")
 
-    (list
-       keyseq "a new FICO Monthly Score" 'table-line
-       '(file+headline "~/Dropbox/Documents/Org-Mode/Finance.org"
-                       "Jeff's FICO Credit Score History")
+     "| %^{Date}u | %^{Score} | | |"
 
-       "| %^{Date}u | %^{Score} | | |"
-
-       :prepend t         ;; put newest measurements at the top of the table
-       :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
-       :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-    )
+     :prepend t         ;; put newest measurements at the top of the table
+     :unnarrowed t      ;; don't narrow to just the new entry; I want to see my history
+     :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
   )
 #+END_SRC
 
