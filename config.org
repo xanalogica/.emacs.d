@@ -2693,7 +2693,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   (setq org-capture-templates
      (list
        (health-bloodpressure-measurements "b")
-       <<finance-creditscore-measurements>>
+       <<finance-creditscore-measurements(keyseq="F")>>
        '("z" "ZeOmega Capture Templates")
      )
   )
