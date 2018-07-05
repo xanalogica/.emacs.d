@@ -2664,11 +2664,16 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   (setq org-capture-templates
     '(
        ("b"
-          <<health-bloodpressure-measurements>>
+          <<capture--health-bloodpressure-measurements>>
        )
        ("F"
-          <<finance-creditscore-measurements>>
+          <<capture--finance-creditscore-measurements>>
        )
+
+#+NAME: capture--cool-quote
+
+
+
        ("z"
           "ZeOmega Capture Templates"
        )
