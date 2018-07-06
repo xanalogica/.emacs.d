@@ -1395,7 +1395,9 @@ replace color themes, as each approach has its advantages.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-clock-mode-line-total 'today) ;; show on modeline all time clocked into this task today
+  (setq org-clock-mode-line-total
+      'today) ;; show on modeline all time clocked into this task today
+
   (setq org-clock-clocked-in-display
       "both")
 #+END_SRC
