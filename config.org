@@ -3595,7 +3595,7 @@ Define all possible drawer names
  '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-clock-idle-time 15)
+  (setq org-clock-idle-time 15) ;; if I'm idle >15min, resolve any open clock
 
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
