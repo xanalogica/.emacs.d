@@ -3590,7 +3590,6 @@ calculations.
  '(org-clock-mode-line-total (quote today))
  '(org-clock-persist t)
 
- '(org-time-stamp-rounding-minutes (quote (15 15)))
 
  '(org-deadline-warning-days 30)
  '(org-default-priority 67)
