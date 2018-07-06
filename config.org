@@ -3594,7 +3594,7 @@ Define all possible drawer names
  '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
- '(org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
+  (setq org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
 
   (setq org-clock-idle-time 15) ;; if I'm idle >15min, resolve any open clock
 #+END_SRC
