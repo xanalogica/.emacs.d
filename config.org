@@ -3597,7 +3597,8 @@ Define all possible drawer names
   (setq org-clock-idle-time 15)  ;; if I'm idle >15min, resolve any open clock
 #+END_SRC
 
- '(org-clock-mode-line-total (quote today))
+ '(org-clock-mode-line-total 'today) ;; show on modeline all time
+ clocked into this task today
 
 For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
