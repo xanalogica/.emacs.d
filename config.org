@@ -3572,11 +3572,6 @@ When I mark a task DONE I want to capture a timestamp of when I completed it.
 I keep all my timestamps in increments of 15-minutes, for easier mental
 calculations.
 
-Round timestamps to the nearest 15-minutes.
-
-
-
-
 #+BEGIN_SRC emacs-lisp
   (setq org-log-done 'time)
 
