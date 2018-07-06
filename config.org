@@ -2474,6 +2474,17 @@ Document-specific link abbreviations can also be given using the following:
   )
 #+END_SRC
 
+
+
+ '(org-default-priority 67)
+ '(org-lowest-priority 69)
+ '(org-highest-priority 65)
+
+
+
+
+
+
 **** Task TODO Keywords and Corresponding Display Faces
 ***** Defined Set of TODO Keywords
 #+BEGIN_SRC emacs-lisp
@@ -3053,7 +3064,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         (
         )
 
-**** BBDB
+*** BBDB
 
 - hook into org-mode
 
@@ -3065,7 +3076,7 @@ bbdb:S.*Allen
   ;;(bbdb-initialize)
 #+END_SRC
 
-**** WanderLust
+*** WanderLust
 put settings in ~/.wl
 
 - how to store passwords?  ~/.elmo/passwd
@@ -3083,7 +3094,7 @@ put settings in ~/.wl
   wl:folder#id  (link to a specific msg under Wanderlust)
 
 
-***** Folder Buffer
+**** Folder Buffer
 - folder keystrokes:
   [   expand all folders
   ]   collapse all folders
@@ -3091,7 +3102,7 @@ put settings in ~/.wl
   N    next folder w/unread msgs
   P    prev folder w/unread msgs
 
-***** Summary Buffer
+**** Summary Buffer
 - summary keystrokes:
   L    toggle list of folders
   p    prev msg
@@ -3106,11 +3117,11 @@ put settings in ~/.wl
 - how to search within a folder?
 - how to delete msgs?
 
-***** Message Buffer
+**** Message Buffer
 - how to display HTML emails?
 - how to view/save attachments?
 
-***** Draft Buffer
+**** Draft Buffer
 
 #+BEGIN_SRC emacs-lisp
   ;; wanderlust
@@ -3270,7 +3281,7 @@ put settings in ~/.wl
 #+RESULTS:
 : mail-send-hook
 
-**** org-babel (Multiple Programming Languages) Setup
+*** org-babel (Multiple Programming Languages) Setup
 
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
 the languages I expect to embed into an org-mode document.
@@ -3585,10 +3596,6 @@ Define all possible drawer names
 
  '(org-deadline-warning-days 30)
 
- '(org-default-priority 67)
- '(org-lowest-priority 69)
- '(org-highest-priority 65)
-
  '(org-tags-match-list-sublevels nil)
  '(org-insert-mode-line-in-empty-file t)
 
@@ -3797,7 +3804,7 @@ CRON job can auto-commit all changes at the top of the hour.
 )
 #+END_SRC
 
-** Keystrokes / Key Mappings ???
+** Global Key Mappings
 #+BEGIN_SRC emacs-lisp
   (global-unset-key	[C-z]
     )					; Disable suspend-frame or iconify-frame key
@@ -3846,7 +3853,7 @@ set of Emacs behavior toggle keys.
 #+END_SRC
 
 
-** Prompting
+** Prompting Enhanced
 The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
 
 *** Keys at the Prompt
