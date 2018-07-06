@@ -3388,7 +3388,6 @@ Define all possible drawer names
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
 
  '(org-tags-match-list-sublevels nil)
- '(org-insert-mode-line-in-empty-file t)
 
  '(org-yank-folded-subtrees nil)
 
