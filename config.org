@@ -3387,8 +3387,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 Define all possible drawer names
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
 
- '(org-tags-match-list-sublevels nil)
-
  '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
@@ -3434,6 +3432,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     t)
   (setq org-agenda-prefix-format
     "  %-17:c%?-12t% s")                ;; widen category field a little
+  (setq (org-tags-match-list-sublevels
+    nil) ;; do NOT match inherited tags in headline sublevels
 #+END_SRC
 
 **** Custom Agenda Views (defined on C-c a <KEY>)
