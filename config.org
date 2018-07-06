@@ -3597,8 +3597,6 @@ Define all possible drawer names
  '(org-clock-mode-line-total (quote today))
  '(org-clock-persist t)
 
-
-
 For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 #+BEGIN_SRC emacs-lisp
