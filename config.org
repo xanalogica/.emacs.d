@@ -2484,9 +2484,8 @@ Document-specific link abbreviations can also be given using the following:
 
 #+BEGIN_SRC emacs-lisp
   (setq org-highest-priority ?A)
-
- '(org-default-priority 67) ;; default priority if none specified
-  (setq org-lowest-priority ?E)
+  (setq org-default-priority ?C) ;; default priority if none specified
+  (setq org-lowest-priority  ?E)
 #+END_SRC
 
 (setq org-priority-faces '((?A . (:foreground "red" :weight 'bold))
