@@ -2486,7 +2486,7 @@ Document-specific link abbreviations can also be given using the following:
   (setq org-highest-priority ?A)
 
  '(org-default-priority 67) ;; default priority if none specified
- '(org-lowest-priority 69)
+  (setq org-lowest-priority ?E)
 #+END_SRC
 
 (setq org-priority-faces '((?A . (:foreground "red" :weight 'bold))
