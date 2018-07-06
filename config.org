@@ -3570,6 +3570,9 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 Round timestamps to the nearest 15-minutes.
 
+
+
+
 #+BEGIN_SRC emacs-lisp
   (setq org-log-done 'time)
 
