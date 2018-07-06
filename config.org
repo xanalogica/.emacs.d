@@ -1492,7 +1492,7 @@ https://github.com/facetframer/orgnav
 
 Don’t let me accidentally delete text without realizing it in .org ie: point
 is buried in a subtree, but you only see the heading and you accidentally kill
-a line without knowing it. This might not be supported for evil-mode
+a line without knowing it.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-catch-invisible-edits 'show-and-error)
