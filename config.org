@@ -3569,7 +3569,7 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 **** Logging and Clocking In/Out
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-log-done 'time)
+  (setq org-log-done 'time)  ;; record the date when I finish a task
   (setq org-log-into-drawer t)
   (setq org-log-refile (quote time))
 
