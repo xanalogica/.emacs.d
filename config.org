@@ -3593,7 +3593,6 @@ Define all possible drawer names
   (setq org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
   (setq org-clock-idle-time 15)  ;; if I'm idle >15min, resolve any open clock
   (setq org-clock-persist t)  ;; persist running clocks across Emacs invocations
-
 #+END_SRC
 
  '(org-clock-mode-line-total (quote today))
