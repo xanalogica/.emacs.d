@@ -3604,10 +3604,6 @@ calculations.
  '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-log-done 'time)
-  (setq org-log-into-drawer t)
-  (setq org-log-refile (quote time))
-
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
