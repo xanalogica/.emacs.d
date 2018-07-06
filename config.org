@@ -3078,7 +3078,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 **** Yanking Text under Org-Mode
 
 #+BEGIN_SRC emacs-lisp	:results silent
-  (setq org-yank-folded-subtrees nil)  ;; when yanking subtrees, do NOT fold them afterward
+  (setq org-yank-folded-subtrees nil)  ;; do NOT fold them afterward
 org-yank-adjusted-subtrees
 
 
