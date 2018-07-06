@@ -3013,7 +3013,11 @@ used, equivalent to the value `((nil . (:level . 1))'.
         )
      )
   )
-  (setq org-refile-use-outline-path 'file)
+
+
+  (setq org-refile-use-outline-path 'file)  ; Show full filepaths for refiling
+;; (setq org-outline-path-complete-in-steps nil)  ; Refile in a single go
+
 #+END_SRC
 
         ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
