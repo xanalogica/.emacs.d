@@ -3321,7 +3321,7 @@ based on the language being embedded.
       'my-org-confirm-babel-evaluate)
 #+END_SRC
 
-**** org-protocol
+*** org-protocol
 
 Intercepts calls from emacsclient to trigger custom actions without external
 dependencies.  Only one protocol has to be configured with your external
@@ -3333,7 +3333,7 @@ actions.  Just register your custom sub-protocol and handler with the variable
   (require 'org-protocol)
 #+END_SRC
 
-***** *pushing* URL/title links from Firefox into the Emacs kill-buffer
+**** *pushing* URL/title links from Firefox into the Emacs kill-buffer
 
 The actual command that pushes a link into Emacs is:
 
@@ -3454,7 +3454,7 @@ And here's what some snippets of a 'foobar' scheme registration looks like store
                  NC:alwaysAsk="true">
 <NC:possibleApplication RDF:resource="urn:handler:web:http://www.lookout.net/foobar=%s"/>
 
-***** org-protocol (intercept calls from emacsclient to trigger custom actions)
+**** org-protocol (intercept calls from emacsclient to trigger custom actions)
 
 gconftool-2 -s /desktop/gnome/url-handlers/org-protocol/command '/usr/local/bin/emacsclient %s' --type String
 gconftool-2 -s /desktop/gnome/url-handlers/org-protocol/enabled --type Boolean true
@@ -3517,7 +3517,7 @@ These bookmarklets enable your Firefox to talk to emacsclient via a new
 protocol (org-protocol://); emacsclient then parses the request and tells
 Emacs to capture or store stuff at the relevant places in your Org files.
 
-**** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
+*** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
 #+BEGIN_SRC DISABLEDemacs-lisp
   (defun wicked/org-update-checkbox-count (&optional all)
     "Update the checkbox statistics in the current section.
@@ -3582,7 +3582,7 @@ Emacs to capture or store stuff at the relevant places in your Org files.
           (wicked/org-update-checkbox-count (ad-get-arg 1))))
 #+END_SRC
 
-**** Logging and Clocking In/Out
+*** Logging and Clocking In/Out
 
 #+BEGIN_SRC emacs-lisp
   (setq org-log-done 'time)           ;; record the date when I finish a task
@@ -3626,11 +3626,11 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 #+END_SRC
 
-**** Agenda View
+*** Agenda View
 :PROPERTIES:
 :VISIBILITY: children
 :END:
-***** My Agenda Settings
+**** My Agenda Settings
 #+BEGIN_SRC emacs-lisp
   (setq org-agenda-span
     60)	; The default number of days displayed in the Agenda view.
@@ -3648,7 +3648,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     "  %-17:c%?-12t% s")                ;; widen category field a little
 #+END_SRC
 
-***** Custom Agenda Views (defined on C-c a <KEY>)
+**** Custom Agenda Views (defined on C-c a <KEY>)
 #+BEGIN_SRC emacs-lisp
   (setq org-agenda-custom-commands
     '(
@@ -3766,7 +3766,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 #+END_SRC
 
-**** Timing-Related
+*** Timing-Related
 
 At one minute before the hour, save all org-mode buffers to disk, so that a
 CRON job can auto-commit all changes at the top of the hour.
@@ -3775,7 +3775,7 @@ CRON job can auto-commit all changes at the top of the hour.
   (run-at-time "00:59" 3600 'org-save-all-org-buffers)
 #+END_SRC
 
-**** RSS/Atom Feeds into Org-Mode Documents
+*** RSS/Atom Feeds into Org-Mode Documents
 #+BEGIN_SRC emacs-lisp
   ;;;(require `org-feed)
 
