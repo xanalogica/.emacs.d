@@ -1490,7 +1490,7 @@ https://github.com/facetframer/orgnav
 #+END_SRC
 
 
-Don’t let me accidentally delete text without realizing it in org. ie: point
+Don’t let me accidentally delete text without realizing it in .org ie: point
 is buried in a subtree, but you only see the heading and you accidentally kill
 a line without knowing it. This might not be supported for evil-mode
 
