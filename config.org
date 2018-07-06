@@ -2481,13 +2481,8 @@ Document-specific link abbreviations can also be given using the following:
  '(org-lowest-priority 69)
  '(org-highest-priority 65)
 
-
-
-
-
-
-**** Task TODO Keywords and Corresponding Display Faces
-***** Defined Set of TODO Keywords
+***** Task TODO Keywords and Corresponding Display Faces
+****** Defined Set of TODO Keywords
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keywords
       '(
@@ -2504,7 +2499,7 @@ Document-specific link abbreviations can also be given using the following:
   )
 #+END_SRC
 
-***** Mapping of TODO Keywords to Font Faces in Emacs
+****** Mapping of TODO Keywords to Font Faces in Emacs
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keyword-faces
       '(
