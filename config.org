@@ -3577,12 +3577,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
-
-
-When I mark a task DONE I want to capture a timestamp of when I completed it.
-I keep all my timestamps in increments of 15-minutes, for easier mental
-calculations.
-
  '(org-outline-path-complete-in-steps nil)
  '(org-refile-use-outline-path (quote file))
 
