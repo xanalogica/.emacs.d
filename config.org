@@ -3387,8 +3387,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 Define all possible drawer names
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
 
- '(org-deadline-warning-days 30)
-
  '(org-tags-match-list-sublevels nil)
  '(org-insert-mode-line-in-empty-file t)
 
@@ -3426,7 +3424,12 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (setq org-agenda-span
     60)	; The default number of days displayed in the Agenda view.
   (setq org-deadline-warning-days
-    60)	; By default, show 30-days in the Agenda view.
+    60)	; show deadlines when due within next 60-days in Agenda and sparse views
+
+ '(org-deadline-warning-days 30)
+
+
+
   (setq org-agenda-ndays
     30)
   (setq org-agenda-show-all-dates
