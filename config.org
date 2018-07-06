@@ -3574,11 +3574,15 @@ calculations.
 
 (org-log-into-drawer t)
 (org-log-refile (quote time))
+ '(org-outline-path-complete-in-steps nil)
+ '(org-refile-use-outline-path (quote file))
 
  '(org-clock-idle-time 15)
  '(org-clock-into-drawer t)
  '(org-clock-mode-line-total (quote today))
  '(org-clock-persist t)
+
+ '(org-time-stamp-rounding-minutes (quote (15 15)))
 
 #+BEGIN_SRC emacs-lisp
   (setq org-log-done 'time)
