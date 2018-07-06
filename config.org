@@ -2702,7 +2702,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
        ("b"
           <<capture--health-bloodpressure-measurements>>
        )
-       ("F"
+       ("f"
           <<capture--finance-creditscore-measurements>>
        )
        ("q"
