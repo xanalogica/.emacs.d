@@ -3075,11 +3075,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         (
         )
 
-
-
-
-
-
 *** org-babel (Multiple Programming Languages) Setup
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
 the languages I expect to embed into an org-mode document.
