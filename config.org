@@ -2481,9 +2481,9 @@ Document-specific link abbreviations can also be given using the following:
  Tasks in Org-Mode has priorities.
 
 #+BEGIN_SRC emacs-lisp
- '(org-lowest-priority 69)
+ '(org-highest-priority "A"65)
  '(org-default-priority 67) ;; default priority if none specified
- '(org-highest-priority 65)
+ '(org-lowest-priority 69)
 #+END_SRC
 
 ***** Task TODO Keywords and Corresponding Display Faces  :PRESENTATION:
