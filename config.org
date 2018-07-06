@@ -1385,7 +1385,7 @@ replace color themes, as each approach has its advantages.
     t)	; Enable the display, in the mode line along the bottom , of the current column number.
 #+END_SRC
 
-**** Along the Bottom, in the Minibuffer (larger font for my presentations)
+**** Along the Bottom, in the Minibuffer
 #+BEGIN_SRC emacs-lisp
   (add-hook 'minibuffer-setup-hook 'my-minibuffer-setup)
 
