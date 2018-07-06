@@ -3590,6 +3590,9 @@ Define all possible drawer names
  '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
+  (setq org-clock-persist t)     ;; persist running clocks across Emacs invocations
+  (org-clock-persistence-insinuate)  ;; and set up hooks to do so
+
   (setq org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
   (setq org-clock-idle-time 15)  ;; if I'm idle >15min, resolve any open clock
 #+END_SRC
@@ -3609,8 +3612,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (add-hook 'org-clock-out-hook
       'bh/remove-empty-drawer-on-clock-out 'append)
 
-  (setq org-clock-persist t)     ;; persist running clocks across Emacs invocations
-  (org-clock-persistence-insinuate)  ;; and set up hooks to do so
 #+END_SRC
 
 **** Agenda View
