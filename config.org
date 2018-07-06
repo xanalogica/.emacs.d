@@ -3807,6 +3807,14 @@ CRON job can auto-commit all changes at the top of the hour.
 )
 #+END_SRC
 
+** Generating Tables from Org-Properties
+org-mode/contrib/lisp/org-collector.el
+
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+## (require 'org-collector)   CANNOT FIND THIS!
+
 ** Global Key Mappings
 #+BEGIN_SRC emacs-lisp
   (global-unset-key	[C-z]
@@ -3956,15 +3964,6 @@ http://www.emacswiki.org/emacs/GnusFormatFlowed
 
 # Auth method  Normal password
 # STARTTLS
-
-** Generating Tables from Org-Properties
-org-mode/contrib/lisp/org-collector.el
-
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
-## (require 'org-collector)   CANNOT FIND THIS!
-
 
 ** BBDB
 
