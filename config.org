@@ -3593,11 +3593,13 @@ calculations.
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
 
  '(org-deadline-warning-days 30)
+
  '(org-default-priority 67)
  '(org-lowest-priority 69)
+ '(org-highest-priority 65)
+
  '(org-tags-match-list-sublevels nil)
  '(org-insert-mode-line-in-empty-file t)
- '(org-highest-priority 65)
 
  '(org-yank-folded-subtrees nil)
 
