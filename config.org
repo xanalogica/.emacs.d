@@ -3863,7 +3863,6 @@ set of Emacs behavior toggle keys.
 
 #+END_SRC
 
-
 ** Prompting Enhanced
 The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
 
@@ -3910,7 +3909,6 @@ The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoT
 
   ;; (load-file "/usr/share/emacs/site-lisp/emacspeak/lisp/emacspeak-setup.el")
 #+END_SRC
-
 
 ** Sending Email from within Emacs
 
