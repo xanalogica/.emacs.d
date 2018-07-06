@@ -3596,8 +3596,6 @@ Define all possible drawer names
 
 #+BEGIN_SRC emacs-lisp
   (setq org-clock-idle-time 15) ;; if I'm idle >15min, resolve any open clock
-
-  (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
 For short capture tasks, empty CLOCK drawers may occur.  This removes them.
