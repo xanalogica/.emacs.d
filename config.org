@@ -3568,6 +3568,8 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 **** Logging and Clocking In/Out
 
+When I mark a task DONE I want to capture a timestamp of when I completed it.
+
 Round timestamps to the nearest 15-minutes.
 
 
