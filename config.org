@@ -2499,7 +2499,7 @@ Document-specific link abbreviations can also be given using the following:
   )
 #+END_SRC
 
-****** Mapping of TODO Keywords to Font Faces in Emacs
+****** Mapping of TODO Keywords to Font Faces in Emacs  :PRESENTATION:
 #+BEGIN_SRC emacs-lisp
   (setq org-todo-keyword-faces
       '(
