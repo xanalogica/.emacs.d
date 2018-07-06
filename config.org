@@ -3591,7 +3591,7 @@ Define all possible drawer names
 
 #+BEGIN_SRC emacs-lisp
   (setq org-clock-persist t)     ;; persist running clocks across Emacs invocations
-  (org-clock-persistence-insinuate)  ;; and set up hooks to do so
+  (org-clock-persistence-insinuate) ;; and set up hooks to do so
 
   (setq org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
   (setq org-clock-idle-time 15)  ;; if I'm idle >15min, resolve any open clock
