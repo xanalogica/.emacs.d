@@ -2476,7 +2476,7 @@ Document-specific link abbreviations can also be given using the following:
 
 
 **** Tasks (TODOs)
-***** Task Priorities
+***** Task Priorities A|B|C|D|E
 
  Tasks in Org-Mode has priorities and use a range of 5 values, so I have a
  middle (default) and two higher and two lower to cover a useful range.
