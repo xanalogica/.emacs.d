@@ -3575,9 +3575,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
- '(org-clock-mode-line-total (quote today))
- '(org-clock-persist t)
-
 Define all possible drawer names
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
 
@@ -3596,6 +3593,14 @@ Define all possible drawer names
   (setq org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
   (setq org-clock-idle-time 15)  ;; if I'm idle >15min, resolve any open clock
 #+END_SRC
+
+ '(org-clock-mode-line-total (quote today))
+ '(org-clock-persist t)
+
+
+
+
+
 
 For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
