@@ -3575,7 +3575,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
-
  '(org-clock-mode-line-total (quote today))
  '(org-clock-persist t)
 
