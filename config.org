@@ -3079,18 +3079,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 
 
-*** BBDB
-
-- hook into org-mode
-
-bbdb:S.*Allen
-
-#+BEGIN_SRC emacs-lisp
-  ;;(require `bbdb)
-
-  ;;(bbdb-initialize)
-#+END_SRC
-
 *** WanderLust
 put settings in ~/.wl
 
@@ -3296,8 +3284,8 @@ put settings in ~/.wl
 #+RESULTS:
 : mail-send-hook
 
-*** org-babel (Multiple Programming Languages) Setup
 
+*** org-babel (Multiple Programming Languages) Setup
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
 the languages I expect to embed into an org-mode document.
 
@@ -3968,6 +3956,18 @@ http://www.emacswiki.org/emacs/GnusFormatFlowed
 
 # Auth method  Normal password
 # STARTTLS
+
+** BBDB
+
+- hook into org-mode
+
+bbdb:S.*Allen
+
+#+BEGIN_SRC emacs-lisp
+  ;;(require `bbdb)
+
+  ;;(bbdb-initialize)
+#+END_SRC
 
 ** Calendaring
 
