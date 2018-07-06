@@ -3077,6 +3077,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 **** Yanking Text under Org-Mode
 
+
+
  '(org-yank-folded-subtrees nil)  when yanking subtrees, fold them afterward
 org-yank-adjusted-subtrees
 
