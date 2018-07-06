@@ -3590,10 +3590,10 @@ calculations.
  '(org-clock-mode-line-total (quote today))
  '(org-clock-persist t)
 
+ '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
 
  '(org-deadline-warning-days 30)
  '(org-default-priority 67)
- '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
  '(org-lowest-priority 69)
  '(org-tags-match-list-sublevels nil)
  '(org-insert-mode-line-in-empty-file t)
