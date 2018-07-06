@@ -3573,6 +3573,7 @@ Emacs to capture or store stuff at the relevant places in your Org files.
   (setq org-log-refile (quote time))  ;;   and when I refile a headline elsewhere
   (setq org-log-into-drawer t)        ;; but keep it tidy by putting it in a drawer
 
+  ;; Capture my timestamps in increments of 15-minutes
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
