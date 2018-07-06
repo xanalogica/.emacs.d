@@ -1395,6 +1395,8 @@ replace color themes, as each approach has its advantages.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+  (setq org-clock-mode-line-total 'today) ;; show on modeline all time clocked into this task today
+
   (setq org-clock-clocked-in-display
       "both")
 #+END_SRC
@@ -3596,8 +3598,6 @@ Define all possible drawer names
   (setq org-clock-into-drawer t) ;; store my clocking info into my LOGBOOK drawer
   (setq org-clock-idle-time 15)  ;; if I'm idle >15min, resolve any open clock
 #+END_SRC
-
-(setq org-clock-mode-line-total 'today) ;; show on modeline all time clocked into this task today
 
 For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
