@@ -3281,9 +3281,6 @@ put settings in ~/.wl
 
 #+END_SRC
 
-#+RESULTS:
-: mail-send-hook
-
 *** org-babel (Multiple Programming Languages) Setup
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
 the languages I expect to embed into an org-mode document.
