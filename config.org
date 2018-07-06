@@ -3425,11 +3425,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     60)	; The default number of days displayed in the Agenda view.
   (setq org-deadline-warning-days
     60)	; show deadlines when due within next 60-days in Agenda and sparse views
-
- '(org-deadline-warning-days 30)
-
-
-
   (setq org-agenda-ndays
     30)
   (setq org-agenda-show-all-dates
