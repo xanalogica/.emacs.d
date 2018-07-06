@@ -3957,6 +3957,16 @@ http://www.emacswiki.org/emacs/GnusFormatFlowed
 # Auth method  Normal password
 # STARTTLS
 
+** Generating Tables from Org-Properties
+org-mode/contrib/lisp/org-collector.el
+
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+## (require 'org-collector)   CANNOT FIND THIS!
+
+
+
 ** BBDB
 
 - hook into org-mode
@@ -3968,17 +3978,6 @@ bbdb:S.*Allen
 
   ;;(bbdb-initialize)
 #+END_SRC
-
-** Generating Tables from Org-Properties
-org-mode/contrib/lisp/org-collector.el
-
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
-
-## (require 'org-collector)   CANNOT FIND THIS!
-
-
-
 
 ** Calendaring
 
