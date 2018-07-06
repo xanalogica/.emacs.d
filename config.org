@@ -1494,10 +1494,9 @@ Don’t let me accidentally delete text without realizing it in org. ie: point
 is buried in a subtree, but you only see the heading and you accidentally kill
 a line without knowing it. This might not be supported for evil-mode
 
-(setq org-catch-invisible-edits 'show-and-error)
-
-
-
+#+BEGIN_SRC emacs-lisp
+  (setq org-catch-invisible-edits 'show-and-error)
+#+END_SRC
 
 ** Buffer Modes for Various Languages
 - C-h m			:: help for the mode
