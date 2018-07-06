@@ -3079,7 +3079,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 #+BEGIN_SRC emacs-lisp	:results silent
   (setq org-yank-folded-subtrees nil)  ;; do NOT fold them afterward
-org-yank-adjusted-subtrees
+  (setq org-yank-adjusted-subtrees t)  ;; adjust trees into hierarchy during yank
 #+END_SRC
 
 *** org-babel (Multiple Programming Languages) Setup
