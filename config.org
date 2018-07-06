@@ -3628,6 +3628,9 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 #+END_SRC
 
 **** Agenda View
+:PROPERTIES:
+:VISIBILITY: children
+:END:
 ***** My Agenda Settings
 #+BEGIN_SRC emacs-lisp
   (setq org-agenda-span
