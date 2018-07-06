@@ -3587,6 +3587,12 @@ calculations.
  '(org-deadline-warning-days 30)
  '(org-default-priority 67)
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
+ '(org-lowest-priority 69)
+ '(org-tags-match-list-sublevels nil)
+ '(org-insert-mode-line-in-empty-file t)
+ '(org-highest-priority 65)
+
+ '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
   (setq org-log-done 'time)
