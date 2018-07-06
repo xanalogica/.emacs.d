@@ -3576,7 +3576,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 #+END_SRC
 
 
- '(org-clock-idle-time 15)
  '(org-clock-into-drawer t)
  '(org-clock-mode-line-total (quote today))
  '(org-clock-persist t)
@@ -3596,6 +3595,8 @@ Define all possible drawer names
  '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
+  (setq org-clock-idle-time 15)
+
   (setq org-time-stamp-rounding-minutes (quote (15 15)))
 #+END_SRC
 
