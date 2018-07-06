@@ -3075,6 +3075,15 @@ used, equivalent to the value `((nil . (:level . 1))'.
         (
         )
 
+**** Yanking Text under Org-Mode
+
+ '(org-yank-folded-subtrees nil)  when yanking subtrees, fold them afterward
+org-yank-adjusted-subtrees
+
+
+
+
+
 *** org-babel (Multiple Programming Languages) Setup
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
 the languages I expect to embed into an org-mode document.
@@ -3386,8 +3395,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 Define all possible drawer names
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "FEEDSTATUS" "LOGBOOK")))
-
- '(org-yank-folded-subtrees nil)
 
 #+BEGIN_SRC emacs-lisp
   (setq org-clock-persist t)     ;; persist running clocks across Emacs invocations
