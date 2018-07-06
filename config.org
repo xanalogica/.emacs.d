@@ -3079,207 +3079,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 
 
-*** WanderLust
-put settings in ~/.wl
-
-- how to store passwords?  ~/.elmo/passwd
-- how to set/reset a password?
-- how to hook into my address book?
-- how to search -across- folders?
-- how to move msgs?
-
-- how to send an emails?  send an attachment?
-    C-x m    (compose-email)
-
-- hook into org-mode
-
-  wl:folder     (link to a Wanderlust folder)
-  wl:folder#id  (link to a specific msg under Wanderlust)
-
-
-**** Folder Buffer
-- folder keystrokes:
-  [   expand all folders
-  ]   collapse all folders
-  SPC or ENTER    ope the current folder
-  N    next folder w/unread msgs
-  P    prev folder w/unread msgs
-
-**** Summary Buffer
-- summary keystrokes:
-  L    toggle list of folders
-  p    prev msg
-  n    next msg
-  ENTER  view msg
-  V    hide msg view
-  a    answer (reply) to a msg
-  A    answer (reply) w/original msg quoted
-
-- how to display threads?
-- how to sort message headers?
-- how to search within a folder?
-- how to delete msgs?
-
-**** Message Buffer
-- how to display HTML emails?
-- how to view/save attachments?
-
-**** Draft Buffer
-
-#+BEGIN_SRC emacs-lisp
-  ;; wanderlust
-  (autoload 'wl "wl" "Wanderlust" t)
-  (autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
-  (autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
-
-  ;; IMAP
-  (setq elmo-imap4-default-server "imap.googlemail.com")
-  (setq elmo-imap4-default-user "jrush@zeomega.com")
-  (setq elmo-imap4-default-authenticate-type 'clear)
-  (setq elmo-imap4-default-port '993)
-  (setq elmo-imap4-default-stream-type 'ssl)
-
-  (setq elmo-imap4-use-modified-utf7 t)
-
-  ;; SMTP
-  (setq wl-smtp-connection-type 'ssl)
-  (setq wl-smtp-posting-port 465)
-  (setq wl-smtp-authenticate-type "plain")
-  (setq wl-smtp-posting-user "jrush@zeomega.com")
-  (setq wl-smtp-posting-server "smtp.googlemail.com")
-  (setq wl-local-domain "zeomega.com")
-
-  (setq wl-default-folder "%inbox")
-  (setq wl-default-spec "%")
-  (setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
-  (setq wl-trash-folder "%[Gmail]/Trash")
-
-  (setq wl-folder-check-async t)
-
-  (setq elmo-imap4-use-modified-utf7 t)
-
-  (setq wl-stay-folder-window t)    ;; show the folder pain (left)
-  (setq wl-folder-window-width 50)  ;; toggle on/off with 'i'
-  (setq wl-from "Jeff Rush <jrush@zeomega.com>")
-
-
-  (setq wl-fcc "%[Gmail]/Sent Mail")       ;; sent msgs go to the "sent"-folder
-  (setq wl-fcc-force-as-read t)            ;; mark sent messages as read
-  (setq wl-default-folder "%INBOX")        ;; my main inbox
-  (setq wl-draft-folder "%[Gmail]/Drafts") ;; store drafts in 'postponed'
-  (setq wl-trash-folder "%[Gmail]/Trash")  ;; put trash in 'trash'
-  (setq wl-spam-folder "%[Gmail]/Spam")    ;; ...spam as well
-
-  (setq wl-summary-width 150)
-  (setq wl-summary-line-format
-      "%n%T%P %76(%s%) %[%45(%c %f%) %] %M/%D/%Y (%W) %h:%m %t")
-
-  ;; "%n%T%P %D/%M (%W) %h:%m %t%[%25(%c %f%) %] %s")
-
-  ;;(setq wl-user-mail-address-list
-  ;;   (quote ("j.shuttleworth@coventry.ac.uk"
-  ;;           "csx239@coventry.ac.uk")
-  ;;   )
-  ;;)
-
-  ;;(setq wl-forward-subject-prefix
-  ;;    "Fwd: " ) ;; use "Fwd: " not "Forward: ")
-
-  ; Swap a and A in summary mode, so citing original message is on a and no-cite
-  ; on A.  I want the most common action (for me) to be the one with fewer
-  ; keypresses.
-
-  ;;(define-key wl-summary-mode-map
-  ;;    (kbd "A") 'wl-summary-reply
-  ;;)
-
-  ;;(define-key wl-summary-mode-map
-  ;;    (kbd "a") 'wl-summary-reply-with-citation
-  ;;)
-
-
-
-
-
-   ;; hide many fields from message buffers
-
-  (setq wl-message-ignored-field-list '("^.*:"))
-
-  (setq wl-message-visible-field-list
-    '("^\\(To\\|Cc\\):"
-      "^Subject:"
-      "^\\(From\\|Reply-To\\):"
-      "^Organization:"
-      "^Message-Id:"
-      "^\\(Posted\\|Date\\):"
-      ))
-
-  (setq wl-message-sort-field-list
-    '("^From"
-      "^Organization:"
-      "^X-Attribution:"
-       "^Subject"
-       "^Date"
-       "^To"
-       "^Cc")
-  )
-
-  (defun djcb-wl-draft-subject-check ()
-    "check whether the message has a subject before sending"
-    (if (and (< (length (std11-field-body "Subject")) 1)
-    (null (y-or-n-p "No subject! Send current draft?")))
-    (error "Abort."))
-  )
-  (add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-subject-check)
-
-  ; Auto add signature on draft edit
-  (remove-hook 'wl-draft-send-hook 'wl-draft-config-exec)
-  (add-hook 'wl-mail-setup-hook 'wl-draft-config-exec)
-
-  (setq wl-draft-config-alist
-      '(
-         (
-           (string-match "1" "1")
-           (bottom . "\n--\n")
-           (bottom-file . "~/.signature")
-         )
-      )
-  )
-
-  ;; Wanderlust compose becomes bound to C-x m
-  (autoload 'wl-user-agent-compose "wl-draft" nil t)
-  (if (boundp 'mail-user-agent)
-      (setq mail-user-agent 'wl-user-agent))
-  (if (fboundp 'define-mail-user-agent)
-      (define-mail-user-agent
-        'wl-user-agent
-        'wl-user-agent-compose
-        'wl-draft-send
-        'wl-draft-kill
-        'mail-send-hook)
-  )
-
-  ; Integrate Wanderlust with BBDB, for an address book.
-
-  ;;(require 'bbdb-wl)
-  ;;(bbdb-wl-setup)
-
-  ;;(setq bbdb-use-pop-up t)  ;; enable pop-ups
-  ;;(setq bbdb/mail-auto-create-p t)  ;; auto collection
-
-  ;; exceptional folders against auto collection
-  ;;(setq bbdb-wl-ignore-folder-regexp "^@")
-  ;;(setq signature-use-bbdb t)
-  ;;(setq bbdb-north-american-phone-numbers-p nil)
-
-  ;; shows the name of bbdb in the summary :-)
-  ;;(setq wl-summary-from-function 'bbdb-wl-from-func)
-
-  ;; automatically add mailing list fields
-  ;;(add-hook 'bbdb-notice-hook 'bbdb-auto-notes-hook)
-  ;;(setq bbdb-auto-notes-alist '(("X-ML-Name" (".*$" ML 0))))
-
-#+END_SRC
 
 *** org-babel (Multiple Programming Languages) Setup
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
@@ -3908,7 +3707,6 @@ The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoT
 #+END_SRC
 
 ** Sending Email from within Emacs
-
 #+BEGIN_SRC emacs-lisp
   (setq smtpmail-smtp-server "rampart2.timecastle.net")
 
@@ -3959,6 +3757,206 @@ http://www.emacswiki.org/emacs/GnusFormatFlowed
 
 # Auth method  Normal password
 # STARTTLS
+
+*** WanderLust
+put settings in ~/.wl
+
+- how to store passwords?  ~/.elmo/passwd
+- how to set/reset a password?
+- how to hook into my address book?
+- how to search -across- folders?
+- how to move msgs?
+
+- how to send an emails?  send an attachment?
+    C-x m    (compose-email)
+
+- hook into org-mode
+
+  wl:folder     (link to a Wanderlust folder)
+  wl:folder#id  (link to a specific msg under Wanderlust)
+
+**** Folder Buffer
+- folder keystrokes:
+  [   expand all folders
+  ]   collapse all folders
+  SPC or ENTER    ope the current folder
+  N    next folder w/unread msgs
+  P    prev folder w/unread msgs
+
+**** Summary Buffer
+- summary keystrokes:
+  L    toggle list of folders
+  p    prev msg
+  n    next msg
+  ENTER  view msg
+  V    hide msg view
+  a    answer (reply) to a msg
+  A    answer (reply) w/original msg quoted
+
+- how to display threads?
+- how to sort message headers?
+- how to search within a folder?
+- how to delete msgs?
+
+**** Message Buffer
+- how to display HTML emails?
+- how to view/save attachments?
+
+**** Draft Buffer
+#+BEGIN_SRC emacs-lisp
+  ;; wanderlust
+  (autoload 'wl "wl" "Wanderlust" t)
+  (autoload 'wl-other-frame "wl" "Wanderlust on new frame." t)
+  (autoload 'wl-draft "wl-draft" "Write draft with Wanderlust." t)
+
+  ;; IMAP
+  (setq elmo-imap4-default-server "imap.googlemail.com")
+  (setq elmo-imap4-default-user "jrush@zeomega.com")
+  (setq elmo-imap4-default-authenticate-type 'clear)
+  (setq elmo-imap4-default-port '993)
+  (setq elmo-imap4-default-stream-type 'ssl)
+
+  (setq elmo-imap4-use-modified-utf7 t)
+
+  ;; SMTP
+  (setq wl-smtp-connection-type 'ssl)
+  (setq wl-smtp-posting-port 465)
+  (setq wl-smtp-authenticate-type "plain")
+  (setq wl-smtp-posting-user "jrush@zeomega.com")
+  (setq wl-smtp-posting-server "smtp.googlemail.com")
+  (setq wl-local-domain "zeomega.com")
+
+  (setq wl-default-folder "%inbox")
+  (setq wl-default-spec "%")
+  (setq wl-draft-folder "%[Gmail]/Drafts") ; Gmail IMAP
+  (setq wl-trash-folder "%[Gmail]/Trash")
+
+  (setq wl-folder-check-async t)
+
+  (setq elmo-imap4-use-modified-utf7 t)
+
+  (setq wl-stay-folder-window t)    ;; show the folder pain (left)
+  (setq wl-folder-window-width 50)  ;; toggle on/off with 'i'
+  (setq wl-from "Jeff Rush <jrush@zeomega.com>")
+
+
+  (setq wl-fcc "%[Gmail]/Sent Mail")       ;; sent msgs go to the "sent"-folder
+  (setq wl-fcc-force-as-read t)            ;; mark sent messages as read
+  (setq wl-default-folder "%INBOX")        ;; my main inbox
+  (setq wl-draft-folder "%[Gmail]/Drafts") ;; store drafts in 'postponed'
+  (setq wl-trash-folder "%[Gmail]/Trash")  ;; put trash in 'trash'
+  (setq wl-spam-folder "%[Gmail]/Spam")    ;; ...spam as well
+
+  (setq wl-summary-width 150)
+  (setq wl-summary-line-format
+      "%n%T%P %76(%s%) %[%45(%c %f%) %] %M/%D/%Y (%W) %h:%m %t")
+
+  ;; "%n%T%P %D/%M (%W) %h:%m %t%[%25(%c %f%) %] %s")
+
+  ;;(setq wl-user-mail-address-list
+  ;;   (quote ("j.shuttleworth@coventry.ac.uk"
+  ;;           "csx239@coventry.ac.uk")
+  ;;   )
+  ;;)
+
+  ;;(setq wl-forward-subject-prefix
+  ;;    "Fwd: " ) ;; use "Fwd: " not "Forward: ")
+
+  ; Swap a and A in summary mode, so citing original message is on a and no-cite
+  ; on A.  I want the most common action (for me) to be the one with fewer
+  ; keypresses.
+
+  ;;(define-key wl-summary-mode-map
+  ;;    (kbd "A") 'wl-summary-reply
+  ;;)
+
+  ;;(define-key wl-summary-mode-map
+  ;;    (kbd "a") 'wl-summary-reply-with-citation
+  ;;)
+
+
+
+
+
+   ;; hide many fields from message buffers
+
+  (setq wl-message-ignored-field-list '("^.*:"))
+
+  (setq wl-message-visible-field-list
+    '("^\\(To\\|Cc\\):"
+      "^Subject:"
+      "^\\(From\\|Reply-To\\):"
+      "^Organization:"
+      "^Message-Id:"
+      "^\\(Posted\\|Date\\):"
+      ))
+
+  (setq wl-message-sort-field-list
+    '("^From"
+      "^Organization:"
+      "^X-Attribution:"
+       "^Subject"
+       "^Date"
+       "^To"
+       "^Cc")
+  )
+
+  (defun djcb-wl-draft-subject-check ()
+    "check whether the message has a subject before sending"
+    (if (and (< (length (std11-field-body "Subject")) 1)
+    (null (y-or-n-p "No subject! Send current draft?")))
+    (error "Abort."))
+  )
+  (add-hook 'wl-mail-send-pre-hook 'djcb-wl-draft-subject-check)
+
+  ; Auto add signature on draft edit
+  (remove-hook 'wl-draft-send-hook 'wl-draft-config-exec)
+  (add-hook 'wl-mail-setup-hook 'wl-draft-config-exec)
+
+  (setq wl-draft-config-alist
+      '(
+         (
+           (string-match "1" "1")
+           (bottom . "\n--\n")
+           (bottom-file . "~/.signature")
+         )
+      )
+  )
+
+  ;; Wanderlust compose becomes bound to C-x m
+  (autoload 'wl-user-agent-compose "wl-draft" nil t)
+  (if (boundp 'mail-user-agent)
+      (setq mail-user-agent 'wl-user-agent))
+  (if (fboundp 'define-mail-user-agent)
+      (define-mail-user-agent
+        'wl-user-agent
+        'wl-user-agent-compose
+        'wl-draft-send
+        'wl-draft-kill
+        'mail-send-hook)
+  )
+
+  ; Integrate Wanderlust with BBDB, for an address book.
+
+  ;;(require 'bbdb-wl)
+  ;;(bbdb-wl-setup)
+
+  ;;(setq bbdb-use-pop-up t)  ;; enable pop-ups
+  ;;(setq bbdb/mail-auto-create-p t)  ;; auto collection
+
+  ;; exceptional folders against auto collection
+  ;;(setq bbdb-wl-ignore-folder-regexp "^@")
+  ;;(setq signature-use-bbdb t)
+  ;;(setq bbdb-north-american-phone-numbers-p nil)
+
+  ;; shows the name of bbdb in the summary :-)
+  ;;(setq wl-summary-from-function 'bbdb-wl-from-func)
+
+  ;; automatically add mailing list fields
+  ;;(add-hook 'bbdb-notice-hook 'bbdb-auto-notes-hook)
+  ;;(setq bbdb-auto-notes-alist '(("X-ML-Name" (".*$" ML 0))))
+
+#+END_SRC
 
 ** BBDB
 
