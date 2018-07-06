@@ -3807,7 +3807,7 @@ CRON job can auto-commit all changes at the top of the hour.
 )
 #+END_SRC
 
-** Generating Tables from Org-Properties
+*** Generating Tables from Org-Properties
 org-mode/contrib/lisp/org-collector.el
 
 #+BEGIN_SRC emacs-lisp
