@@ -1399,7 +1399,7 @@ replace color themes, as each approach has its advantages.
       'today) ;; show on modeline all time clocked into this task today
 
   (setq org-clock-clocked-in-display
-      "both")
+      "both") ;; show task name and clocked time on modeline and frame title
 #+END_SRC
 
 
