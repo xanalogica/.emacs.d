@@ -2477,7 +2477,7 @@ Document-specific link abbreviations can also be given using the following:
 
 **** Tasks (TODOs)
 
-Tasks in Org-Mode has a priority
+Tasks in Org-Mode has priorities.
 
 #+BEGIN_SRC emacs-lisp
 
