@@ -3437,7 +3437,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     t)
   (setq org-agenda-prefix-format
     "  %-17:c%?-12t% s")                ;; widen category field a little
-  (setq (org-tags-match-list-sublevels
+  (setq org-tags-match-list-sublevels
     nil) ;; do NOT match inherited tags in headline sublevels
 #+END_SRC
 
