@@ -3048,8 +3048,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
                  "Disorganized Quotations")
 
-        )
-     )
+      )
+    )
   )
 
   (setq org-refile-use-outline-path 'file)  ; Show full filepaths for refiling
