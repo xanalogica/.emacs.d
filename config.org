@@ -1600,7 +1600,7 @@ TBD: support HTML tidy
 
 *** outline-minor-mode
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC DISABLEDemacs-lisp
   (add-hook 'outline-minor-mode-hook
       (lambda ()
           (require 'outline-magic)
