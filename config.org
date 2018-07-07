@@ -3043,7 +3043,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-refile-targets
     '(
       (
-        ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
+        ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
 
   (file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
                  "Disorganized Quotations")
