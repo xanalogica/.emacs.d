@@ -3052,10 +3052,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-outline-path-complete-in-steps nil)  ; Refile in a single go
 #+END_SRC
 
-;;           ("~/notes/archives/personal.org_archive"       (:maxlevel . 1)   (:tag . "REFILING"))
-;;           ("~/notes/archives/finance.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
-;;           ("~/notes/archives/zeomega.org_archive"        (:maxlevel . 1)   (:tag . "REFILING"))
-
         ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
         ;; ("~/notes/finance.org"                       :maxlevel . 1   :tag      . "REFILING")
         ;; ("~/notes/zeomega.org"                       :maxlevel . 1   :tag      . "REFILING")
