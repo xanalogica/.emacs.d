@@ -2546,7 +2546,7 @@ Things that should be scattered about and associated by location with
   - ze  Email Item to Address     (tagged, not located)
         =FIGURE OUT HOW TO COLLECT EMAILS USING EMACS NEEDING ATTENTION=
   - za  Action Item to Address    (tagged, not located)
-  - b   a book to read            (tagged, not located)
+  - b   a book to read            (tagged, not located because any project may have suggested books)
   - v   a video to watch          (tagged, not located)
   - w   website to visit          (tagged, not located)
 
