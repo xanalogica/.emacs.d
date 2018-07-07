@@ -3044,12 +3044,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '(
       (
         ("~/Dropbox/Documents/Org-Mode/quotes.org"
-         :maxlevel . 1
-         :tag      . "REFILING"
+         :regexp . "Disorganized Quotations"
         )
-
-                 "Disorganized Quotations")
-
       )
     )
   )
