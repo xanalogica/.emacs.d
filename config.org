@@ -2715,9 +2715,6 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   )
 #+END_SRC
 
-;;;       (finance-creditscore-measurements "f")
-;;;       cool-quote("q")
-
        ;; %a  the place in Emacs I was when I initiated the capture command
 
        ;; %i  initial content (what is selected)
