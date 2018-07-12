@@ -2760,9 +2760,6 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   :empty-lines-after  1 ;; enforce count of blank lines after
 #+END_SRC
 
-      "* TODO %(org-cliplink-capture) \n  SCHEDULED: %t\n"
-
-
 DONE add in prompt for title %^{prompt}
 DONE add in prompt for tags  %^G
 auto-insert what is in the clipboard  %i
