@@ -2718,7 +2718,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
                 "Meetings"
   )
 
-  "* %^{Title} %^g\n\n%i%?\n"
+  "** Meeting: %U Hadoop/Sentinel :MEETING:HADOOP:\n  %i%?\n"
 
   :prepend t         ;; put newest entry at the top of the section
   :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
