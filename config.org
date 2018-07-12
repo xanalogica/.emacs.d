@@ -2703,7 +2703,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   )
 
   "* %^{Title} %?\n"
-  "* Meeting: %U  :meeting:\n  %i%?\n %a"
+  "* Meeting: %U  :meeting:\n  %i%?\n"
 
   :prepend t         ;; put newest quote at the top of the section
   :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
