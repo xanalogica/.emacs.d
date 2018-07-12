@@ -1466,6 +1466,9 @@ replace color themes, as each approach has its advantages.
 *** Among Windows/Frames
 
 *** Across Content: [[https://www.emacswiki.org/emacs/BookMarks][bookmarks]] and links
+
+**** Emacs Bookmarks
+
 https://www.emacswiki.org/emacs/BookmarkPlus#BookmarkBasics
 
 Emacs bookmarking makes use of three things that are related but different:
