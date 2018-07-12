@@ -2615,6 +2615,11 @@ Things to Drop:
 
   zb  (boss)                  represent as a tag, not place
 
+
+#+BEGIN_SRC emacs-lisp
+  (require 'org-cliplink)
+#+END_SRC
+
 ***** TODO An Action to Take (collected, not filed yet; but may be relevant to a known team/project)
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
