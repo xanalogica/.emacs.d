@@ -2782,7 +2782,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   (setq org-capture-templates
     '(
        ("b"
-          <<capture--bookmarks-zeomega>>
+          <<capture--bookmarks-personal>>
        )
        ("B"
           <<capture--health-bloodpressure-measurements>>
