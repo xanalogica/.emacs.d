@@ -2725,7 +2725,6 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   :clock-keep nil    ;; be sure the clock does not keep running after I return
 #+END_SRC
 
-
 ***** TODO ZeOmega Hadoop/Sentinel Engine
 #+NAME: capture--hadoop-sentinelengine
 #+BEGIN_SRC text
@@ -2745,8 +2744,24 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   :clock-keep nil    ;; be sure the clock does not keep running after I return
 #+END_SRC
 
+***** TODO Bookmarks
+#+NAME: capture--hadoop-financial
+#+BEGIN_SRC text
+  "Hadoop/Financial" entry
+  (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org"
+                   "Hadoop: Financial Dashboard"
+                     "Meetings"
+  )
 
+  "** Meeting: %U Hadoop/Financial\n:LOGBOOK:\n:END:\n%i%?\n"
 
+  :prepend t         ;; put newest quote at the top of the section
+  :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+  :empty-lines 1     ;; enforce count of blank lines before and after
+  :clock-in t        ;; begin tracking the time to fill in this entry
+  :clock-resume t    ;; and end tracking upon returning to what I was doing
+  :clock-keep nil    ;; be sure the clock does not keep running after I return
+#+END_SRC
 
 
 (setq org-capture-templates
