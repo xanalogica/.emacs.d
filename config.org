@@ -2772,7 +2772,7 @@ support refiling bookmarks (from selected text)
                  "Unclassified Bookmarks"
   )
 
-  "** Bookmark: %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i"
+  "** Bookmark: %^{Bookmark Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?"
 
   :prepend t         ;; put newest quote at the top of the section
   :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
