@@ -2698,7 +2698,9 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 #+BEGIN_SRC text
   "Hadoop/Financial" entry
   (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org"
-                 "Disorganized Quotations")
+                   "Hadoop: Financial Dashboard"
+                     "Disorganized Quotations"
+  )
 
   "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n"
 
