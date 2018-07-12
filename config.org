@@ -2747,6 +2747,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
        )
        ("zh"
           <<capture--hadoop-financial>>
+       )
 #+NAME: capture--hadoop-sentinelengine
 
      )
