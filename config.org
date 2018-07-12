@@ -2799,6 +2799,10 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
        ("zs"
           <<capture--hadoop-sentinelengine>>
        )
+
+       ("zb"
+          <<capture--bookmarks-zeomega>>
+       )
      )
   )
 #+END_SRC
