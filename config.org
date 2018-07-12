@@ -2763,7 +2763,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 #+END_SRC
 
 DONE add in prompt for title %^{prompt}
-add in prompt for tags  %^G
+DONE add in prompt for tags  %^G
 auto-insert what is in the clipboard  %i
 position in body for additional notes
 support refiling bookmarks (from selected text)
