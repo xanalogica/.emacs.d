@@ -2776,7 +2776,8 @@ support refiling bookmarks (from selected text)
 
   :prepend t         ;; put newest quote at the top of the section
   :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-  :empty-lines 1     ;; enforce count of blank lines before and after
+  :empty-lines-before 1     ;; enforce count of blank lines before and after
+  :empty-lines-after 1     ;; enforce count of blank lines before and after
 #+END_SRC
 
 ***** TODO Merge Capture Templates All Together
