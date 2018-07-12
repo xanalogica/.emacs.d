@@ -2774,10 +2774,10 @@ support refiling bookmarks (from selected text)
 
   "** Bookmark: %^{Bookmark Title}%^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?"
 
-  :prepend t         ;; put newest quote at the top of the section
-  :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
-  :empty-lines-before 1     ;; enforce count of blank lines before and after
-  :empty-lines-after 1     ;; enforce count of blank lines before and after
+  :prepend t            ;; put newest quote at the top of the section
+  :kill-buffer t        ;; if file was opened just to collect data, close the buffer after
+  :empty-lines-before 0 ;; enforce count of blank lines before
+  :empty-lines-after  1 ;; enforce count of blank lines after
 #+END_SRC
 
 ***** TODO Merge Capture Templates All Together
