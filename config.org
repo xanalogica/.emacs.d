@@ -1466,6 +1466,8 @@ replace color themes, as each approach has its advantages.
 *** Among Windows/Frames
 
 *** Across Content: [[https://www.emacswiki.org/emacs/BookMarks][bookmarks]] and links
+**** Org-Mode Bookmarks
+
 
 **** Emacs Bookmarks
 
