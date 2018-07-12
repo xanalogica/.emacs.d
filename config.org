@@ -1469,7 +1469,8 @@ replace color themes, as each approach has its advantages.
 
 **** Org-Mode Bookmarks
 - create a header for accumulating unclassified bookmarks
-
+P
+Z
 
 ***** Want to Bookmark Stuff within Emacs
 ***** Want to Bookmark Stuff from My Web Browser
