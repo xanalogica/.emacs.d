@@ -2763,8 +2763,9 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 #+END_SRC
 
 
-           "Bookmark" entry (file+headline "~/share/all/org-mode/notes.org"
-              "Bookmarks")
+"Bookmark" entry (file+headline "~/share/all/org-mode/notes.org"
+"Bookmarks")
+
            "* %?\n:PROPERTIES:\n:CREATED: %U\n:END:\n\n"
 
 ***** TODO Merge Capture Templates All Together
