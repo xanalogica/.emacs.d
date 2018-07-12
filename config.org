@@ -2762,7 +2762,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 add in prompt for title
 add in prompt for tags
 position in body for additional notes
-support refiling bookmarks
+support refiling bookmarks (from selected text)
 
 #+NAME: capture--bookmarks-personal
 #+BEGIN_SRC text
