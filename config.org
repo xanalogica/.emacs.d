@@ -2747,7 +2747,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 ***** TODO Bookmarks
 #+NAME: capture--bookmarks
 #+BEGIN_SRC text
-  "Hadoop/Financial" entry
+  "ZeOmega Bookmark" entry
   (file+headline "~/Dropbox/Documents/Org-Mode/ZeOmega.org"
                    "Hadoop: Financial Dashboard"
                      "Meetings"
