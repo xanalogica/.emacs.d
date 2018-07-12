@@ -2710,7 +2710,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 ***** TODO ZeOmega Hadoop/Sentinel Engine
 #+NAME: capture--hadoop-sentinelengine
 #+BEGIN_SRC text
-  "Hadoop/Financial" entry
+  "Hadoop/Sentinel Engine" entry
   (file+headline "~/Dropbox/Documents/Org-Mode/quotes.org"
                  "Disorganized Quotations")
 
