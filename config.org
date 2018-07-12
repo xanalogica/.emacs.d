@@ -2745,11 +2745,12 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
        ("z"
           "ZeOmega Capture Templates"
        )
-       ("zh"
+       ("zf"
           <<capture--hadoop-financial>>
        )
-#+NAME: capture--hadoop-sentinelengine
-
+       ("zs"
+          <<capture--hadoop-sentinelengine>>
+       )
      )
   )
 #+END_SRC
