@@ -1468,7 +1468,7 @@ replace color themes, as each approach has its advantages.
 *** Across Content: [[https://www.emacswiki.org/emacs/BookMarks][bookmarks]] and links
 
 **** Org-Mode Bookmarks
-- create a header for storing bookmarks
+- create a header for accumulating unclassified bookmarks
 
 
 ***** Want to Bookmark Stuff within Emacs
