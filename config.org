@@ -1502,6 +1502,7 @@ a line without knowing it.
   (setq org-catch-invisible-edits 'show-and-error)
 #+END_SRC
 
+
 ** Buffer Modes for Various Languages
 - C-h m			:: help for the mode
 
