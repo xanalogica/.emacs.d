@@ -2785,6 +2785,10 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-x p i") 'org-cliplink)
+#+END_SRC
+
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     '(
@@ -3091,12 +3095,6 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
   ;;;     )
   ;;;   )
   ;;;)
-
-
-
-
-
-
 
 **** Possible Destinations for Refiling Requests
 
