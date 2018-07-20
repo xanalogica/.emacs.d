@@ -2323,7 +2323,7 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 *** org-mode
 **** Capturing Content
 #+BEGIN_SRC emacs-lisp
-  (global-set-key (kbd "C-c L") 'org-cliplink)
+  (global-set-key (kbd "C-c P") 'org-cliplink)
 #+END_SRC
 **** Filing Content
 
