@@ -2322,6 +2322,9 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 
 *** org-mode
 **** Capturing Content
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-x p i") 'org-cliplink)
+#+END_SRC
 **** Filing Content
 
 **** TODO fix huge size of the 'clocked in' time on the modeline
@@ -2784,10 +2787,6 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 ***** TODO Merge Capture Templates All Together
 
 http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
-
-#+BEGIN_SRC emacs-lisp
-  (global-set-key (kbd "C-x p i") 'org-cliplink)
-#+END_SRC
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
