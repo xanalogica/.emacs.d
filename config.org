@@ -3846,7 +3846,9 @@ m message RET).
 
 #+BEGIN_SRC emacs-lisp
   (setq mail-user-agent 'message-user-agent)
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp
 
 #+END_SRC
 
