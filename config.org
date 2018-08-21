@@ -3845,7 +3845,9 @@ This manual can be browsed online at [1] or directly from inside emacs (C-h i
 m message RET).
 
 #+BEGIN_SRC emacs-lisp
-  mail-user-agent
+  (setq mail-user-agent 'message-user-agent)
+
+
 #+END_SRC
 
 
