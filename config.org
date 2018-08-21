@@ -3814,7 +3814,7 @@ How to tell Emacs to use the msmtp client.
 
   ;; with Emacs 23.1, you have to set this explicitly (in MS Windows)
   ;; otherwise it tries to send through OS associated mail client
-  (setq message-send-mail-function 'message-send-mail-with-sendmail)
+  ;;;; (setq message-send-mail-function 'message-send-mail-with-sendmail)
 
 ;; we substitute sendmail with msmtp
 (setq sendmail-program "c:/gnu/bin/msmtp.exe")
