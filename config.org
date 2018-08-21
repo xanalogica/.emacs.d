@@ -3849,6 +3849,15 @@ m message RET).
 
 #+END_SRC
 
+- C-c C-c :: send the message and exit the message buffer
+- C-c C-a :: add an attachment
+- C-c C-k :: cancel the message
+- C-c C-d :: postpone the message
+- C-c C-s :: send the message but don't exit the message buffer
+- C-c C-b :: go to the start of the message
+- C-c C-z :: kill text from point until end of buffer
+
+
 Warning (mail): The default mail mode is now Message mode.
 You have the following Mail mode variables customized:
 
