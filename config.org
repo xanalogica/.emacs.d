@@ -3798,6 +3798,10 @@ The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoT
 #+END_SRC
 
 ** Sending Email from within Emacs
+
+
+*** Using smtpmail
+
 #+BEGIN_SRC emacs-lisp
   (setq smtpmail-smtp-server "rampart2.timecastle.net")
 
