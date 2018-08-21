@@ -3841,6 +3841,8 @@ inside emacs. This is part of the standard emacs distribution, and is the
 preferred mode used by gnus for composing and sending messages. It can be used
 independently from gnus however, and has its own manual.
 
+This manual can be browsed online at [1] or directly from inside emacs (C-h i
+m message RET).
 
 #+BEGIN_SRC emacs-lisp
   mail-user-agent
