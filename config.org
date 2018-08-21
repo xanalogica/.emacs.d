@@ -3885,6 +3885,12 @@ Using =org-mime= to send HTML email using Org-mode HTML export.
 (how to we put the new message buffer in org-mode?)
 [[http://kitchingroup.cheme.cmu.edu/blog/2016/10/29/Sending-html-emails-from-org-mode-with-org-mime/][Sending html emails from org-mode with org-mime]]
 
+*** Using the =notmuch= Email Reader
+
+#+BEGIN_SRC emacs-lisp
+  (autoload 'notmuch "notmuch" "notmuch mail" t)
+#+END_SRC
+
 *** Using the smtpmail package to Send Email
 
 #+BEGIN_SRC emacs-lisp
