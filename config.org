@@ -3843,6 +3843,16 @@ m message RET).
   (setq mail-user-agent 'message-user-agent)
 #+END_SRC
 
+Warning (mail): The default mail mode is now Message mode.
+You have the following Mail mode variables customized:
+
+- mail-setup-hook
+- mail-send-hook
+
+To use Mail mode, set ‘mail-user-agent’ to sendmail-user-agent.
+To disable this warning, set ‘compose-mail-user-agent-warnings’ to nil.
+
+
 Configure the basic mail settings.
 
 #+BEGIN_SRC emacs-lisp
