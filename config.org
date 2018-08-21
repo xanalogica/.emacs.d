@@ -3824,8 +3824,7 @@ How to tell Emacs to use the msmtp client.
 
   ;; you might want to set the following too
   (setq mail-host-address "zeomega.com")
-  (setq user-full-name "Jeff Rush")
-  (setq user-mail-address "jrush@zeomega.com")
+
 #+END_SRC
 
 Selecting my choice of mail composition package.
@@ -3851,6 +3850,8 @@ m message RET).
 Configure the basic mail settings.
 
 #+BEGIN_SRC emacs-lisp
+  (setq user-mail-address "jrush@zeomega.com")
+  (setq user-full-name "Jeff Rush")
 
 #+END_SRC
 
