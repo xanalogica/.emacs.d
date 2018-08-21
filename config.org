@@ -3843,6 +3843,10 @@ m message RET).
   (setq mail-user-agent 'message-user-agent)
 
   (setq message-default-mail-headers "Cc: \nBcc: \n")
+
+  ;; postponed message is put in the following draft file
+  ;;;; (setq message-auto-save-directory "~/Mail/drafts")
+
 #+END_SRC
 
 Warning (mail): The default mail mode is now Message mode.
