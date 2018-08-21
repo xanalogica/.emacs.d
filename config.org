@@ -3857,7 +3857,6 @@ m message RET).
 - C-c C-b :: go to the start of the message
 - C-c C-z :: kill text from point until end of buffer
 
-
 Warning (mail): The default mail mode is now Message mode.
 You have the following Mail mode variables customized:
 
