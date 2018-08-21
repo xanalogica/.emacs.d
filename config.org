@@ -3804,6 +3804,10 @@ The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoT
 [[https://www.emacswiki.org/emacs/GnusMSMTP][EmacsWiki: Gnus MSMTP]]
 [[ftp://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_chapter/emacs_30.html][Sending Mail in Emacs using a *mail* buffer]]
 
+How to tell Emacs to use the msmtp client.
+
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
 
 *** Using smtpmail
 
