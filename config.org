@@ -3848,6 +3848,8 @@ m message RET).
   (setq mail-user-agent 'message-user-agent)
 #+END_SRC
 
+Configure the basic mail settings.
+
 #+BEGIN_SRC emacs-lisp
 
 #+END_SRC
