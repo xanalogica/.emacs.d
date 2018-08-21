@@ -3822,12 +3822,10 @@ How to tell Emacs to use the msmtp client.
   ;;need to tell msmtp which account we're using
   (setq message-sendmail-extra-arguments '("-a" "ZeOmega"))
 
-;; you might want to set the following too
-(setq mail-host-address "gmail.com")
-(setq user-full-name "Anderson Guy")
-(setq user-mail-address "sivaram.notthere@gmail.com")
-
-
+  ;; you might want to set the following too
+  (setq mail-host-address "zeomega.com")
+  (setq user-full-name "Jeff Rush")
+  (setq user-mail-address "jrush@zeomega.com")
 
 
 #+END_SRC
