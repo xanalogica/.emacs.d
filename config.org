@@ -3872,7 +3872,7 @@ Configure the basic mail settings.
 
 [[ftp://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_chapter/emacs_30.html][Sending Mail in Emacs using a *mail* buffer]]
 
-*** Using the smtpmail package to Send Mail
+*** Using the smtpmail package to Send Email
 
 #+BEGIN_SRC emacs-lisp
   (setq smtpmail-smtp-server "rampart2.timecastle.net")
