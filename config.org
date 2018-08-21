@@ -3826,7 +3826,6 @@ How to tell Emacs to use the msmtp client.
   (setq mail-host-address "zeomega.com")
   (setq user-full-name "Jeff Rush")
   (setq user-mail-address "jrush@zeomega.com")
-
 #+END_SRC
 
 [[ftp://ftp.gnu.org/old-gnu/Manuals/emacs-20.7/html_chapter/emacs_30.html][Sending Mail in Emacs using a *mail* buffer]]
