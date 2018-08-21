@@ -3812,10 +3812,6 @@ How to tell Emacs to use the msmtp client.
   ;;need to tell msmtp which account we're using
   (setq message-sendmail-extra-arguments '("--read-envelope-from"))
 
-  ;; with Emacs 23.1, you have to set this explicitly (in MS Windows)
-  ;; otherwise it tries to send through OS associated mail client
-  ;;;; (setq message-send-mail-function 'message-send-mail-with-sendmail)
-
   ;; we substitute sendmail with msmtp
   ;;;; (setq sendmail-program "c:/gnu/bin/msmtp.exe")
 
@@ -3847,6 +3843,9 @@ m message RET).
   ;; postponed message is put in the following draft file
   ;;;; (setq message-auto-save-directory "~/Mail/drafts")
 
+  ;; with Emacs 23.1, you have to set this explicitly (in MS Windows)
+  ;; otherwise it tries to send through OS associated mail client
+  (setq message-send-mail-function 'message-send-mail-with-sendmail)
 #+END_SRC
 
 - C-c C-c :: send the message and exit the message buffer
