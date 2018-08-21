@@ -3845,7 +3845,7 @@ How to tell Emacs to use the msmtp client.
 
   (setq smtpmail-auth-supported '(plain))
 
- (setq mail-host-address "taupro.com")
+  ;;;; COMMENTED WHEN I STARTED USING msmtp (setq mail-host-address "taupro.com")
 #+END_SRC
 
 http://www.emacswiki.org/emacs/GnusFormatFlowed
