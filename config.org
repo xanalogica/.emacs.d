@@ -3809,7 +3809,7 @@ How to tell Emacs to use the msmtp client.
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-*** Using smtpmail
+*** Using the smtpmail package
 
 #+BEGIN_SRC emacs-lisp
   (setq smtpmail-smtp-server "rampart2.timecastle.net")
