@@ -3859,8 +3859,8 @@ m message RET).
 Warning (mail): The default mail mode is now Message mode.
 You have the following Mail mode variables customized:
 
-- mail-setup-hook
-- mail-send-hook
+- mail-setup-hook  value is (turn-on-mime-edit)
+- mail-send-hook   value is (mime-edit-maybe-translate)
 
 Configure the basic mail settings.
 
