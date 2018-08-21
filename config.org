@@ -3834,6 +3834,14 @@ Choices are =mail-mode=, PostMode and MessageMode.
 
 =mail-mode= is defined in =sendmail.el= which is part of Emacs.
 
+[[https://www.emacswiki.org/emacs/MessageMode][EmacsWiki: Message Mode]]
+
+Message mode is an alternative to mail mode for composing and sending messages
+inside emacs. This is part of the standard emacs distribution, and is the
+preferred mode used by gnus for composing and sending messages. It can be used
+independently from gnus however, and has its own manual.
+
+
 #+BEGIN_SRC emacs-lisp
   mail-user-agent
 #+END_SRC
