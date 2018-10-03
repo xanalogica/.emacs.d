@@ -3808,7 +3808,6 @@ How to tell Emacs to use the msmtp client.
 
 (setq sendmail-program "/usr/local/bin/msmtpQ"
       mail-specify-envelope-from t
-      message-sendmail-f-is-evil nil                
       mail-envelope-from 'header
       message-sendmail-envelope-from 'header)
 
