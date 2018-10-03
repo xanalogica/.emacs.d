@@ -3920,7 +3920,7 @@ tree and (2) what tags to add/remove at the same time.
       ("xanalogica@gmail.com" . "Xanalogica/sent +sent -inbox"))
   )
   (setq notmuch-draft-tags "+draft -inbox")
-  ;;; (setq notmuch-draft-folder "???")
+  (setq notmuch-draft-folder "Xanalogica/drafts")
 #+END_SRC
 
 *** Using the smtpmail package to Send Email
