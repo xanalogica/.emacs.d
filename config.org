@@ -3890,7 +3890,6 @@ Using =org-mime= to send HTML email using Org-mode HTML export.
     (lambda ()
       (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
 
-
 #+END_SRC
 
 call "org-mime-htmlize" from within a message-mode buffer
