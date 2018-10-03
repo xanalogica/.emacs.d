@@ -3883,7 +3883,8 @@ Using =org-mime= to send HTML email using Org-mode HTML export.
   ;;; (setq org-mime-library 'mml)
 #+END_SRC
 
-
+call "org-mime-htmlize"
+call "org-mime-org-buffer-htmlize"
 
 
 (how do we put the new message buffer in org-mode?)
