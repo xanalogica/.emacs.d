@@ -3919,7 +3919,7 @@ tree and (2) what tags to add/remove at the same time.
     '(("jrush@zeomega.com" . "ZeOmega/sent +sent -inbox")
       ("xanalogica@gmail.com" . "Xanalogica/sent +sent -inbox"))
   )
-  (setq notmuch-draft-tags "???")
+  (setq notmuch-draft-tags "+draft -inbox")
   ;;; (setq notmuch-draft-folder "???")
 #+END_SRC
 
