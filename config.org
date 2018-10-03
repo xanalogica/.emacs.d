@@ -3805,10 +3805,6 @@ The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoT
 
 How to tell Emacs to use the msmtp client.
 
-
-(setq sendmail-program "/usr/local/bin/msmtpQ"
-
-
 #+BEGIN_SRC emacs-lisp
   ;; This is needed to allow msmtp to do its magic:
   (setq message-sendmail-f-is-evil t)
