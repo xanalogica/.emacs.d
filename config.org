@@ -3911,6 +3911,9 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
 
+The following indicates (1) where to store outgoing emails under the ~/Email/
+tree and (2) what tags to add/remove at the same time.
+
 #+BEGIN_SRC emacs-lisp
   (setq notmuch-fcc-dirs
     (("jrush@zeomega.com" . "ZeOmega/sent +sent")
