@@ -3911,6 +3911,10 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
 
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC
+
 
 *** Using the smtpmail package to Send Email
 
