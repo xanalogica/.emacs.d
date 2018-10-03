@@ -3887,8 +3887,8 @@ Using =org-mime= to send HTML email using Org-mode HTML export.
   (add-hook 'message-mode-hook 'turn-on-orgtbl)
 
   (add-hook 'message-mode-hook
-          (lambda ()
-            (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
+    (lambda ()
+      (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
 
 
 #+END_SRC
