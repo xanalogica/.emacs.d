@@ -3912,6 +3912,8 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
 
 #+BEGIN_SRC emacs-lisp
+  (setq notmuch-fcc-dirs
+)
 
 #+END_SRC
 
