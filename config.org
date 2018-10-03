@@ -3844,9 +3844,6 @@ m message RET).
 
   (setq message-default-mail-headers "Cc: \nBcc: \n")
 
-  ;; postponed message is put in the following draft file
-  ;;;; (setq message-auto-save-directory "~/Mail/drafts")
-
   ;; with Emacs 23.1, you have to set this explicitly (in MS Windows)
   ;; otherwise it tries to send through OS associated mail client
   (setq message-send-mail-function 'message-send-mail-with-sendmail)
