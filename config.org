@@ -3913,7 +3913,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 #+BEGIN_SRC emacs-lisp
   (setq notmuch-fcc-dirs
-)
+  )
 
 #+END_SRC
 
