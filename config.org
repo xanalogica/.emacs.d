@@ -3813,7 +3813,7 @@ How to tell Emacs to use the msmtp client.
   ;; This is needed to allow msmtp to do its magic:
   (setq message-sendmail-f-is-evil 't)
 
-      mail-specify-envelope-from t
+  (setq mail-specify-envelope-from 't)
       mail-envelope-from 'header
       message-sendmail-envelope-from 'header)
 
