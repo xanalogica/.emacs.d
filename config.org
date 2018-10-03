@@ -3880,7 +3880,10 @@ Using =org-mime= to send HTML email using Org-mode HTML export.
   (require 'org-mime)
 
   ; Next you need to tell org-mime which Emacs mail agent you use.
-  ;;; (setq org-mime-library 'mml)
+  (setq org-mime-library 'mml)
+
+(add-hook 'message-mode-hook 'turn-on-orgstruct++)
+
 #+END_SRC
 
 call "org-mime-htmlize" from within a message-mode buffer
