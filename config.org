@@ -3811,9 +3811,9 @@ How to tell Emacs to use the msmtp client.
 
 #+BEGIN_SRC emacs-lisp
   ;; This is needed to allow msmtp to do its magic:
-  (setq message-sendmail-f-is-evil 't)
+  (setq message-sendmail-f-is-evil t)
 
-  (setq mail-specify-envelope-from 't)
+  (setq mail-specify-envelope-from t)
   (setq mail-envelope-from 'header)
   (setq message-sendmail-envelope-from 'header)
 
