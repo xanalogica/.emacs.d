@@ -3913,6 +3913,8 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 #+BEGIN_SRC emacs-lisp
   (setq notmuch-fcc-dirs
+    (("jrush@zeomega.com" . "ZeOmega/sent +sent")
+     ("xanalogica@gmail.com" . "Xanalogica/sent +sent"))
   )
 
 #+END_SRC
