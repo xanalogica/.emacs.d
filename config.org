@@ -3885,6 +3885,12 @@ Using =org-mime= to send HTML email using Org-mode HTML export.
   ; enable a subset of Org-mode behavior inside Message buffers
   (add-hook 'message-mode-hook 'turn-on-orgstruct++)
   (add-hook 'message-mode-hook 'turn-on-orgtbl)
+
+  (add-hook 'message-mode-hook
+          (lambda ()
+            (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
+
+
 #+END_SRC
 
 call "org-mime-htmlize" from within a message-mode buffer
