@@ -426,6 +426,7 @@ in-memory copy from that.  This protects me from accidental overwrites.
        (backup-buffer)))
 
    (add-hook 'before-save-hook  'force-backup-of-buffer)
+   (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
 #+END_SRC
 
 ** Printing/Exporting My Work
