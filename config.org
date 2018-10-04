@@ -3918,7 +3918,7 @@ tree and (2) what tags to add/remove at the same time.
 #+BEGIN_SRC emacs-lisp
   (setq notmuch-fcc-dirs
     '(("jrush@zeomega.com" . "ZeOmega/sent +sent -inbox -unread")
-      ("xanalogica@gmail.com" . "Xanalogica/sent +sent -inbox" -unread))
+      ("xanalogica@gmail.com" . "Xanalogica/sent +sent -inbox -unread"))
   )
   (setq notmuch-draft-tags "+draft -inbox -unread")
   (setq notmuch-draft-folder "Xanalogica/drafts")
