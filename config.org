@@ -3908,6 +3908,8 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     "notmuch"                  ;; filename of .el source implementation
     "notmuch mail"             ;; docstring for new function
     t)                         ;; indicate the autoload can be interactive
+
+  (require 'notmuch-labeler)   ;; improve presentation of Notmuch labels
 #+END_SRC
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
