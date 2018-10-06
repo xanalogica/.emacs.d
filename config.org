@@ -3910,6 +3910,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     t)                         ;; indicate the autoload can be interactive
 
 ;;;  (require 'notmuch-labeler)   ;; improve presentation of Notmuch labels
+  (require 'org-notmuch)       ;; interface Notmuch with Org-Mode capture
 #+END_SRC
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
