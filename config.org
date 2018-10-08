@@ -3924,7 +3924,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :sort-order oldest-first
        :search-type 'tree)
     )
-
     )
   )
 
