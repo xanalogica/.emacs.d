@@ -3985,7 +3985,7 @@ happens.
        :sort-order newest-first    ; most likely I need a recent email I sent
        :search-type nil)
     (:name "Admin"
-       :query "tag:admin"
+       :query "tag:admin and tag:inbox"
        :key   "A"
        :count-query "tag:admin and tag:unread"
        :sort-order newest-first
