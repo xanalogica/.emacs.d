@@ -3962,7 +3962,6 @@ happens.
        :sort-order newest-first
        :search-type 'tree)
     )
-
     (:name "XaInBox"
        :query "tag:inbox and tag:xanalogica"
        :key   "XI"
