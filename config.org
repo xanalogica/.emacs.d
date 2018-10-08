@@ -3922,6 +3922,9 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     :search-type 'tree)       # 'tree or "search" view
 #+END_EXAMPLE
 
+Generally, the :inbox: tag is the indicator of whether the email has been
+handled.  That tag is removed when the email is
+
 #+BEGIN_SRC emacs-lisp
 
   ;;; Assigned Keys:
