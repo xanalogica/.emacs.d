@@ -3937,7 +3937,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :sort-order oldest-first
        :search-type 'tree)
 
-    (:name "??? tagTraining"
+    (:name "tagTraining"
        :query "tag:inbox and tag:training"
        :key   "tT"
        :count-query "tag:inbox and tag:training and tag:unread"
