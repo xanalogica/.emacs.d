@@ -3925,8 +3925,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :search-type 'tree)
     )
 
-;; (:name "flagged" :query "tag:flagged" :key "f")
-
     (:name "Flagged"
        :query "tag:inbox and tag:flagged"
        :key   "F"
