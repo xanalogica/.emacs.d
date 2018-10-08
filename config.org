@@ -3911,6 +3911,18 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 ;;;  (require 'notmuch-labeler)   ;; improve presentation of Notmuch labels
   (require 'org-notmuch)       ;; interface Notmuch with Org-Mode capture
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+ (:name SAVED_SEARCH_NAME
+    :query "blah"             # ALL MATCHES REGARDLESS OF HANDLED OR NOT
+    :key   "D"                # HOTKEY OFF OF 'J' KEY
+    :count-query "?"          # COUNT NEEDING ATTENTION
+    :sort-order newest-first  # MOST URGENT AT TOP
+    :search-type 'tree)       # 'tree or "search" view
+#+END_EXAMPLE
+
+#+BEGIN_SRC emacs-lisp
 
   ;;; Assigned Keys:
   ;;;   <D>irects
@@ -4047,19 +4059,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 ;; (:name "sent" :query "tag:sent" :key "t")
 ;; (:name "drafts" :query "tag:draft" :key "d")
 ;; (:name "all mail" :query "*" :key "a"))
-
-#+END_SRC
-
-#+BEGIN_EXAMPLE
- (:name SAVED_SEARCH_NAME
-    :query "blah"             # ALL MATCHES REGARDLESS OF HANDLED OR NOT
-    :key   "D"                # HOTKEY OFF OF 'J' KEY
-    :count-query "?"          # COUNT NEEDING ATTENTION
-    :sort-order newest-first  # MOST URGENT AT TOP
-    :search-type 'tree)       # 'tree or "search" view
-#+END_EXAMPLE
-
-#+BEGIN_SRC emacs-lisp
 #+END_SRC
 
 
