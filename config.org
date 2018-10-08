@@ -3933,7 +3933,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     (:name "Drafts"
        :query "tag:draft"
        :key   "d"
-       :count-query "tag:draft and tag:unread"
+       :count-query "tag:draft"
        :sort-order oldest-first
        :search-type 'tree)
   ))
