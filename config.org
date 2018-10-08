@@ -3987,10 +3987,9 @@ happens.
     (:name "Admin"
        :query "tag:admin"
        :key   "A"
-;;;       :count-query "tag:inbox and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
-;;;    )
+       :count-query "tag:admin and tag:unread"
+       :sort-order oldest-first
+       :search-type 'tree)
 
 ;;;    (:name "??? tagNewsletters"
 ;;;       :query "tag:inbox"
