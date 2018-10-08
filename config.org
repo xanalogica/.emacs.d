@@ -3966,12 +3966,6 @@ happens.
        :count-query "tag:inbox tag:xanalogica and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-    (:name "sent"      ; FOR RESEARCH ONLY
-       :query "tag:sent"
-       :key   "s"
-       :count-query "tag:sent"
-       :sort-order newest-first    ; most likely I need a recent email I sent
-       :search-type nil)
 
 ;;;    (:name "??? ZeOutsiders"
 ;;;       :query "tag:inbox"
@@ -3987,6 +3981,14 @@ happens.
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
 ;;;    )
+
+    (:name "sent"      ; FOR RESEARCH ONLY
+       :query "tag:sent"
+       :key   "s"
+       :count-query "tag:sent"
+       :sort-order newest-first    ; most likely I need a recent email I sent
+       :search-type nil)
+
 
 
     (:name "tagTraining"
