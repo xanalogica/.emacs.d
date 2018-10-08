@@ -3993,7 +3993,7 @@ happens.
     (:name "tagReceipts"
        :query "tag:receipt"
        :key   "tR"
-       :count-query "tag:inbox and tag:unread"
+       :count-query "tag:receipt and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
 
