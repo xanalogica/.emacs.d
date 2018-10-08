@@ -4012,27 +4012,24 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     )
   )
 
-Value: ((:name "inbox" :query "tag:inbox" :key "i")
- (:name "unread" :query "tag:unread" :key "u")
- (:name "flagged" :query "tag:flagged" :key "f")
- (:name "sent" :query "tag:sent" :key "t")
- (:name "drafts" :query "tag:draft" :key "d")
- (:name "all mail" :query "*" :key "a")
- (:name "SamMails" :query "from:sam")
- (:name "ZeAllMail" :query "tag:zeomega" :key "ZA")
- (:name "XanaMail" :query "tag:xanalogica" :key "X")
- (:name "ZeInbox" :query "tag:zeomega and tag:inbox" :key "ZI"))
+;;Value: ((:name "inbox" :query "tag:inbox" :key "i")
+;; (:name "unread" :query "tag:unread" :key "u")
+;; (:name "flagged" :query "tag:flagged" :key "f")
+;; (:name "sent" :query "tag:sent" :key "t")
+;; (:name "drafts" :query "tag:draft" :key "d")
+;; (:name "all mail" :query "*" :key "a")
+;; (:name "SamMails" :query "from:sam")
+;; (:name "ZeAllMail" :query "tag:zeomega" :key "ZA")
+;; (:name "XanaMail" :query "tag:xanalogica" :key "X")
+;; (:name "ZeInbox" :query "tag:zeomega and tag:inbox" :key "ZI"))
 
-Original value was 
-((:name "inbox" :query "tag:inbox" :key "i")
- (:name "unread" :query "tag:unread" :key "u")
- (:name "flagged" :query "tag:flagged" :key "f")
- (:name "sent" :query "tag:sent" :key "t")
- (:name "drafts" :query "tag:draft" :key "d")
- (:name "all mail" :query "*" :key "a"))
-
-
-
+;;Original value was 
+;;((:name "inbox" :query "tag:inbox" :key "i")
+;; (:name "unread" :query "tag:unread" :key "u")
+;; (:name "flagged" :query "tag:flagged" :key "f")
+;; (:name "sent" :query "tag:sent" :key "t")
+;; (:name "drafts" :query "tag:draft" :key "d")
+;; (:name "all mail" :query "*" :key "a"))
 
 #+END_SRC
 
