@@ -3906,8 +3906,8 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 #BEGIN_VERBATIM
  (:name SAVED_SEARCH_NAME
-    :query "blah"  # ALL MATCHES
-    :key   "D"
+    :query "blah"     # ALL MATCHES REGARDLESS OF HANDLED OR NOT
+    :key   "D"        # HOTKEY OFF OF 'J' KEY
     :count-query "tag:inbox and tag:directSam and tag:unread"
     :sort-order newest-first
     :search-type 'tree)
