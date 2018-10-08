@@ -3957,11 +3957,11 @@ happens.
 
     (:name "ZeInbox"
        :query "tag:inbox and tag:zeomega"
-;;;       :key   "ZI"
-;;;       :count-query "tag:inbox and tag:zeomega and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
-;;;    )
+       :key   "ZI"
+       :count-query "tag:inbox and tag:zeomega and tag:unread"
+       :sort-order oldest-first
+       :search-type 'tree)
+    )
 
     (:name "tagTraining"
        :query "tag:inbox and tag:training"
