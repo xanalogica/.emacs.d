@@ -3942,7 +3942,7 @@ happens.
        :count-query "tag:inbox and tag:directSam"
        :sort-order newest-first
        :search-type 'tree)
-    (:name "Flagged"   ; HIGH-PRIORITY EMAILS THAT I HAVE INDICATED
+    (:name "Flagged"   ; HIGH-PRIORITY EMAILS THAT I HAVE INDICATED ON MOBILE APPS
        :query "tag:inbox and tag:flagged"
        :key   "F"
        :count-query "tag:inbox and tag:flagged"
