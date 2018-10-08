@@ -3967,13 +3967,13 @@ happens.
        :sort-order newest-first
        :search-type 'tree)
     (:name "ZeOutsiders"   ; EMAILS FROM UNKNOWN OUTSIDERS
-       :query "not tag:known"
+       :query "not tag:known and tag:zeomega"
        :key   "ZO"
        :count-query "not tag:known and tag:unread"
        :sort-order newest-first
        :search-type nil)
     (:name "XaOutsiders"   ; EMAILS FROM UNKNOWN OUTSIDERS
-;;;       :query "tag:inbox"
+       :query "not tag:known and tag:xanalogica"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
