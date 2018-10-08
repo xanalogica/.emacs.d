@@ -3960,7 +3960,7 @@ happens.
        :count-query "tag:inbox and tag:zeomega and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-    (:name "XaInBox"
+    (:name "XaInBox"   ; things I need to take care of
        :query "tag:inbox and tag:xanalogica"
        :key   "XI"
        :count-query "tag:inbox tag:xanalogica and tag:unread"
