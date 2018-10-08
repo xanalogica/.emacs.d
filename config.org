@@ -3919,7 +3919,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     (:name "Directs"
        :query "tag:inbox and to:jrush@zeomega.com and (from:linuxkiddo@gmail.com or from:sam@zeomega.com)"
        :key   "D"
-       :count-query "tag:inbox and tag:unread"
+       :count-query "tag:inbox to:jrush@zeomega.com and (from:linuxkiddo@gmail.com or from:sam@zeomega.com) and tag:unread"
        :sort-order oldest-first
        :search-type 'tree)
     )
