@@ -3986,7 +3986,7 @@ happens.
        :search-type nil)
     (:name "tagFlyers"
        :query "tag:flyer"
-;;;       :key   nil
+       :key   "tF"
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
