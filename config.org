@@ -3991,7 +3991,7 @@ happens.
        :sort-order oldest-first
        :search-type nil)
     (:name "tagSysAdmin"
-       :query "tag:inbox"
+       :query "tag:sysadmin"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
