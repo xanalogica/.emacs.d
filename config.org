@@ -3975,7 +3975,7 @@ happens.
     (:name "XaOutsiders"   ; EMAILS FROM UNKNOWN OUTSIDERS
        :query "not tag:known and tag:xanalogica"
        :key   "XO"
-       :count-query "tag:inbox and tag:unread"
+       :count-query "not tag:known and tag:xanalogica and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
 ;;;    )
