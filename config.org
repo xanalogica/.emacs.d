@@ -4059,13 +4059,8 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     :search-type 'tree)       # 'tree or "search" view
 #+END_EXAMPLE
 
-
-
-
-
-
-
-
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
 
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
