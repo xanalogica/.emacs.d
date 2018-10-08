@@ -3914,6 +3914,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
   ;;; Assigned Keys:
   ;;;   <D>irects
+  ;;;   <F>lagged
 
   (setq notmuch-saved-searches '(
     (:name "Directs"
