@@ -3953,7 +3953,7 @@ happens.
        :key   "d"
        :count-query "tag:draft"
        :sort-order oldest-first
-       :search-type 'tree)
+       :search-type nil)
 
     (:name "ZeInbox"
        :query "tag:inbox and tag:zeomega"
