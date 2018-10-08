@@ -3966,7 +3966,6 @@ happens.
        :count-query "tag:inbox tag:xanalogica and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-
     (:name "ZeOutsiders"
        :query "not tag:known"
        :key   nil
