@@ -4048,7 +4048,8 @@ refresh the screen
   (interactive)
   (let* ((bug (or bug (notmuch-read-query "Bug number: ")))
     (query (concat "tag:foo and tag:bar and subject:" bug)))
-      (notmuch-search query))
+      (notmuch-search query)
+  )
 )
 
 
