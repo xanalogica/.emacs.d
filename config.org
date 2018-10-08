@@ -3989,8 +3989,6 @@ happens.
        :sort-order newest-first    ; most likely I need a recent email I sent
        :search-type nil)
 
-
-
     (:name "tagTraining"
        :query "tag:inbox and tag:training"
        :key   "tT"
