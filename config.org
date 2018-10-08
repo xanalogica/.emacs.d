@@ -3909,7 +3909,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
     :query "blah"     # ALL MATCHES REGARDLESS OF HANDLED OR NOT
     :key   "D"        # HOTKEY OFF OF 'J' KEY
     :count-query "tag:inbox and tag:directSam and tag:unread"
-    :sort-order newest-first
+    :sort-order newest-first  # MOST URGENT AT TOP
     :search-type 'tree)
 #+END_VERBATIM
 
