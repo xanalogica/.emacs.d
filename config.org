@@ -3908,7 +3908,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
  (:name SAVED_SEARCH_NAME
     :query "blah"             # ALL MATCHES REGARDLESS OF HANDLED OR NOT
     :key   "D"                # HOTKEY OFF OF 'J' KEY
-    :count-query "?"          # 
+    :count-query "?"          # COUNT NEEDING ATTENTION
     :sort-order newest-first  # MOST URGENT AT TOP
     :search-type 'tree)       # 'tree or "search" view
 #+END_VERBATIM
