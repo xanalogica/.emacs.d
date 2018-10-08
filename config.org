@@ -3938,6 +3938,16 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :count-query "tag:inbox and tag:unread"
        :sort-order oldest-first)
     )
+    (:name "Sent"
+       :query "tag:inbox"
+       :count-query "tag:inbox and tag:unread"
+       :sort-order oldest-first)
+    )
+    (:name "ZeOutsiders"
+       :query "tag:inbox"
+       :count-query "tag:inbox and tag:unread"
+       :sort-order oldest-first)
+    )
   )
 #+END_SRC
 
