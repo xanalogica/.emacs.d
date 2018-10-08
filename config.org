@@ -3939,7 +3939,7 @@ happens.
     (:name "Directs"
        :query "tag:inbox and tag:directSam"
        :key   "D"
-       :count-query "tag:inbox and tag:directSam and tag:unread"
+       :count-query "tag:inbox and tag:directSam"
        :sort-order newest-first
        :search-type 'tree)
     (:name "Flagged"
