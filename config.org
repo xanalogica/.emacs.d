@@ -3975,7 +3975,7 @@ happens.
        :key   nil
        :count-query "tag:sent"
        :sort-order oldest-first
-       :search-type 'tree)
+       :search-type nil)
     )
 
     (:name "tagTraining"
