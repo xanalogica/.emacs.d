@@ -3908,9 +3908,9 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
  (:name SAVED_SEARCH_NAME
     :query "blah"             # ALL MATCHES REGARDLESS OF HANDLED OR NOT
     :key   "D"                # HOTKEY OFF OF 'J' KEY
-    :count-query "tag:inbox and tag:directSam and tag:unread"
+    :count-query "?"          # 
     :sort-order newest-first  # MOST URGENT AT TOP
-    :search-type 'tree)
+    :search-type 'tree)       # 'tree or "search" view
 #+END_VERBATIM
 
 #+BEGIN_SRC emacs-lisp
