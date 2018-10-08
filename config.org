@@ -4041,8 +4041,6 @@ happens.
 ;;;    )
 
   ))
-
-
 ;; (:name "all mail" :query "*" :key "a")
 #+END_SRC
 
