@@ -4042,7 +4042,7 @@ happens.
 grab the current email
 extract the sender email
 mark all emails with that sender email as :spam:
-
+refresh the screen
 
 
 > (defun my-search (&optional bug)
