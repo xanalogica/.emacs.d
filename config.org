@@ -3990,8 +3990,7 @@ happens.
        :count-query "tag:social and tag:unread"
        :sort-order oldest-first
        :search-type nil)
-
-;;;    (:name "??? tagSysAdmin"
+    (:name "tagSysAdmin"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
