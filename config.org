@@ -3954,7 +3954,7 @@ happens.
        :count-query "tag:draft"
        :sort-order oldest-first    ; most likely I want to clear out oldest first
        :search-type nil)
-    (:name "ZeInbox"   ; things I need to take care of
+    (:name "ZeInbox"   ; WORK THINGS I NEED TO TAKE CARE OF
        :query "tag:inbox and tag:zeomega"
        :key   "ZI"
        :count-query "tag:inbox and tag:zeomega and tag:unread"
