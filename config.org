@@ -3988,7 +3988,7 @@ happens.
        :query "tag:flyer"
        :key   "tF"
        :count-query "tag:flyer and tag:unread"
-       :sort-order newest-first
+       :sort-order newest-first    ; flyers expire so newest is more important
        :search-type nil)           ; most likely not threaded
 
 ;;;    (:name "??? tagReceipts"
