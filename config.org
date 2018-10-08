@@ -4051,9 +4051,6 @@ refresh the screen
       (notmuch-search query)))
 
 
-
-
-
 > (defun my-search (&optional bug)
 >   (interactive)
 >   (let* ((bug (or bug (notmuch-read-query "Bug number: ")))
