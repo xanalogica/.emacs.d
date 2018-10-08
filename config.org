@@ -3912,6 +3912,9 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 ;;;  (require 'notmuch-labeler)   ;; improve presentation of Notmuch labels
   (require 'org-notmuch)       ;; interface Notmuch with Org-Mode capture
 
+  ;;; Assigned Keys:
+  ;;; 
+
   (setq notmuch-saved-searches '(
     (:name "Directs"
        :query "tag:inbox"
