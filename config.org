@@ -3970,6 +3970,16 @@ happens.
        :search-type 'tree)
     )
 
+    (:name "Sent"
+       :query "tag:sent"
+;;;       :key   nil
+;;;       :count-query "tag:inbox and tag:unread"
+;;;       :sort-order oldest-first
+;;;       :search-type 'tree)
+;;;    )
+
+
+
     (:name "tagTraining"
        :query "tag:inbox and tag:training"
        :key   "tT"
@@ -3978,13 +3988,6 @@ happens.
        :search-type 'tree)
   ))
 
-;;;    (:name "??? Sent"
-;;;       :query "tag:inbox"
-;;;       :key   nil
-;;;       :count-query "tag:inbox and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
-;;;    )
 ;;;    (:name "??? ZeOutsiders"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
