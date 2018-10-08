@@ -3924,7 +3924,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 Generally, the :inbox: tag is the indicator of whether the email has been
 handled.  That tag is removed when the email is archived or otherwise handled.
-The :unread: tag is less reliable as my mobile apps for re
+The :unread: tag is less reliable as my mobile apps for reading
 
 #+BEGIN_SRC emacs-lisp
 
