@@ -3905,7 +3905,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 
 #BEGIN_VERBATIM
- (:name "Directs"
+ (:name SAVED_SEARCH_NAME
     :query "tag:inbox and tag:directSam"
     :key   "D"
     :count-query "tag:inbox and tag:directSam and tag:unread"
