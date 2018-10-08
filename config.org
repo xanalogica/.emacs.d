@@ -3930,7 +3930,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :sort-order newest-first
        :search-type 'tree)
     (:name "Drafts"
-       :query "tag:inbox"
+       :query "tag:inbox and tag:draft"
        :key   nil
        :count-query "tag:inbox and tag:unread"
        :sort-order oldest-first
