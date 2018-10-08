@@ -3995,7 +3995,7 @@ happens.
        :key   "tN"
        :count-query "tag:newsletter and tag:unread"
        :sort-order oldest-first
-       :search-type 'tree)
+       :search-type nil)           ; most likely not threaded
     (:name "tagFlyers"
        :query "tag:flyer"
        :key   "tF"
