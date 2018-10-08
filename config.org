@@ -3969,8 +3969,8 @@ happens.
 
     (:name "ZeOutsiders"
        :query "not tag:known"
-;;;       :key   nil
-;;;       :count-query "tag:inbox and tag:unread"
+       :key   nil
+       :count-query "not tag:known and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
 ;;;    )
