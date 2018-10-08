@@ -3923,7 +3923,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :count-query "tag:directSam and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-    )
     (:name "Flagged"
        :query "tag:inbox and tag:flagged"
        :key   "F"
