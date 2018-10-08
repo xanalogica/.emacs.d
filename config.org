@@ -3973,7 +3973,7 @@ happens.
     (:name "Sent"
        :query "tag:sent"
        :key   nil
-       :count-query "tag:inbox and tag:unread"
+       :count-query "tag:sent and tag:unread"
        :sort-order oldest-first
        :search-type 'tree)
     )
