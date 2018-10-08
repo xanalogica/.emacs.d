@@ -3972,13 +3972,6 @@ happens.
        :count-query "tag:sent"
        :sort-order newest-first    ; most likely I need a recent email I sent
        :search-type nil)
-    (:name "tagTraining"
-       :query "tag:inbox and tag:training"
-       :key   "tT"
-       :count-query "tag:inbox and tag:training"
-       :sort-order newest-first
-       :search-type 'tree)
-  ))
 
 ;;;    (:name "??? ZeOutsiders"
 ;;;       :query "tag:inbox"
@@ -3994,6 +3987,16 @@ happens.
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
 ;;;    )
+
+
+    (:name "tagTraining"
+       :query "tag:inbox and tag:training"
+       :key   "tT"
+       :count-query "tag:inbox and tag:training"
+       :sort-order newest-first
+       :search-type 'tree)
+  ))
+
 ;;;    (:name "??? Church"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
