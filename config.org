@@ -3968,7 +3968,7 @@ happens.
        :search-type 'tree)
 
     (:name "ZeOutsiders"
-       :query "tag:inbox and not tag:known"
+       :query "not tag:known"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
