@@ -3988,8 +3988,8 @@ happens.
        :query "tag:flyer"
        :key   "tF"
        :count-query "tag:flyer and tag:unread"
-       :sort-order oldest-first
-       :search-type 'tree)
+       :sort-order newest-first
+       :search-type nil)           ; most likely not threaded
 
 ;;;    (:name "??? tagReceipts"
 ;;;       :query "tag:inbox"
