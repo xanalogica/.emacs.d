@@ -3929,8 +3929,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :count-query "tag:inbox and tag:flagged and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-    )
-  )
+  ))
 
 ;;;    (:name "??? Drafts"
 ;;;       :query "tag:inbox"
