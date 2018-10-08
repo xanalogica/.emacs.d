@@ -3966,9 +3966,9 @@ happens.
        :count-query "tag:inbox tag:xanalogica and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-    (:name "Sent"
+    (:name "sent"
        :query "tag:sent"
-       :key   "S"
+       :key   "s"
        :count-query "tag:sent"
        :sort-order oldest-first
        :search-type nil)
