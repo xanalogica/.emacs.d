@@ -3996,8 +3996,6 @@ happens.
        :count-query "tag:receipt and tag:unread"
        :sort-order newest-first    ; newer receipts are more relevant than older
        :search-type nil)           ; most likely not threaded
-
-
     (:name "tagSocials"
        :query "tag:social"
        :key   "tS"
