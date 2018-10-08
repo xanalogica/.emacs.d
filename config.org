@@ -3903,6 +3903,16 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 *** Using the =notmuch= Email Reader
 
+
+#BEGIN_VERBATIM
+ (:name "Directs"
+    :query "tag:inbox and tag:directSam"
+    :key   "D"
+    :count-query "tag:inbox and tag:directSam and tag:unread"
+    :sort-order newest-first
+    :search-type 'tree)
+#+END_VERBATIM
+
 #+BEGIN_SRC emacs-lisp
   (autoload 'notmuch           ;; name of function to create
     "notmuch"                  ;; filename of .el source implementation
