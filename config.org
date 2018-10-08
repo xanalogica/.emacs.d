@@ -3992,12 +3992,10 @@ happens.
        :search-type nil)           ; most likely not threaded
     (:name "tagNewsletters"
        :query "tag:newsletter"
-;;;       :key   nil
-;;;       :count-query "tag:inbox and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
-;;;    )
-
+       :key   nil
+       :count-query "tag:inbox and tag:unread"
+       :sort-order oldest-first
+       :search-type 'tree)
     (:name "tagFlyers"
        :query "tag:flyer"
        :key   "tF"
