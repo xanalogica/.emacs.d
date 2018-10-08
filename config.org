@@ -3936,7 +3936,7 @@ happens.
   ;;;   <d>rafts
 
   (setq notmuch-saved-searches '(
-    (:name "Directs"
+    (:name "Directs"   ; HIGH-PRIORITY EMAILS
        :query "tag:inbox and tag:directSam"
        :key   "D"
        :count-query "tag:inbox and tag:directSam"
