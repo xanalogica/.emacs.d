@@ -3903,15 +3903,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 *** Using the =notmuch= Email Reader
 
-#+BEGIN_EXAMPLE
- (:name SAVED_SEARCH_NAME
-    :query "blah"             # ALL MATCHES REGARDLESS OF HANDLED OR NOT
-    :key   "D"                # HOTKEY OFF OF 'J' KEY
-    :count-query "?"          # COUNT NEEDING ATTENTION
-    :sort-order newest-first  # MOST URGENT AT TOP
-    :search-type 'tree)       # 'tree or "search" view
-#+END_EXAMPLE
-
 #+BEGIN_SRC emacs-lisp
   (autoload 'notmuch           ;; name of function to create
     "notmuch"                  ;; filename of .el source implementation
@@ -4058,6 +4049,24 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 ;; (:name "all mail" :query "*" :key "a"))
 
 #+END_SRC
+
+#+BEGIN_EXAMPLE
+ (:name SAVED_SEARCH_NAME
+    :query "blah"             # ALL MATCHES REGARDLESS OF HANDLED OR NOT
+    :key   "D"                # HOTKEY OFF OF 'J' KEY
+    :count-query "?"          # COUNT NEEDING ATTENTION
+    :sort-order newest-first  # MOST URGENT AT TOP
+    :search-type 'tree)       # 'tree or "search" view
+#+END_EXAMPLE
+
+
+
+
+
+
+
+
+
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
 
