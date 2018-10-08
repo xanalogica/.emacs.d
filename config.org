@@ -3976,7 +3976,7 @@ happens.
        :query "not tag:known and tag:xanalogica"
        :key   "XO"
        :count-query "not tag:known and tag:xanalogica and tag:unread"
-;;;       :sort-order oldest-first
+       :sort-order newest-first
 ;;;       :search-type 'tree)
 ;;;    )
 
