@@ -3929,7 +3929,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
     (:name "Flagged"
        :query "tag:inbox and tag:flagged"
-       :key   nil
+       :key   "F"
        :count-query "tag:inbox and tag:unread"
        :sort-order oldest-first
        :search-type 'tree)
