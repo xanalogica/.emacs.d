@@ -4039,6 +4039,10 @@ happens.
 ;; (:name "all mail" :query "*" :key "a")
 #+END_SRC
 
+grab the current email
+extract the sender email
+mark all emails with that sender email as :spam:
+
 
 
 > (defun my-search (&optional bug)
