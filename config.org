@@ -3948,7 +3948,7 @@ happens.
        :count-query "tag:inbox and tag:flagged"
        :sort-order newest-first
        :search-type nil)
-    (:name "Drafts"
+    (:name "drafts"
        :query "tag:draft"
        :key   "d"
        :count-query "tag:draft"
