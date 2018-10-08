@@ -3967,7 +3967,7 @@ happens.
        :query "tag:inbox and tag:xanalogica"
        :key   "XI"
        :count-query "tag:inbox tag:xanalogica and tag:unread"
-       :sort-order oldest-first
+       :sort-order newest-first
        :search-type 'tree)
     )
 
