@@ -3986,10 +3986,10 @@ happens.
        :search-type nil)
     (:name "tagSocials"
        :query "tag:social"
-;;;       :key   nil
-;;;       :count-query "tag:inbox and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
+       :key   nil
+       :count-query "tag:inbox and tag:unread"
+       :sort-order oldest-first
+       :search-type 'tree)
 
 ;;;    (:name "??? tagSysAdmin"
 ;;;       :query "tag:inbox"
