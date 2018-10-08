@@ -3989,7 +3989,7 @@ happens.
        :key   "A"
        :count-query "tag:admin and tag:unread"
        :sort-order newest-first
-       :search-type 'tree)
+       :search-type nil)           ; most likely not threaded
 
 ;;;    (:name "??? tagNewsletters"
 ;;;       :query "tag:inbox"
