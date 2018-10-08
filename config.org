@@ -3984,9 +3984,8 @@ happens.
        :count-query "tag:sent"
        :sort-order newest-first    ; most likely I need a recent email I sent
        :search-type nil)
-
-;;;    (:name "??? tagSocials"
-;;;       :query "tag:inbox"
+    (:name "tagSocials"
+       :query "tag:social"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
