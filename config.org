@@ -3985,6 +3985,14 @@ happens.
        :sort-order newest-first    ; most likely I need a recent email I sent
        :search-type nil)
 
+;;;    (:name "??? Admins"
+;;;       :query "tag:inbox"
+;;;       :key   nil
+;;;       :count-query "tag:inbox and tag:unread"
+;;;       :sort-order oldest-first
+;;;       :search-type 'tree)
+;;;    )
+
 ;;;    (:name "??? tagNewsletters"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
@@ -4026,13 +4034,6 @@ happens.
   ))
 
 ;;;    (:name "??? Church"
-;;;       :query "tag:inbox"
-;;;       :key   nil
-;;;       :count-query "tag:inbox and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
-;;;    )
-;;;    (:name "??? Admins"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
