@@ -3937,9 +3937,9 @@ happens.
 
   (setq notmuch-saved-searches '(
     (:name "Directs"   ; HIGH-PRIORITY EMAILS BECAUSE WHO IS SENDING
-       :query "tag:inbox and (tag:directSam tag:directSada)"
+       :query "tag:inbox and (tag:directSam or tag:directSada)"
        :key   "D"
-       :count-query "tag:inbox and tag:directSam"
+       :count-query "tag:inbox and (tag:directSam or tag:directSada)"
        :sort-order newest-first
        :search-type 'tree)
     (:name "Flagged"   ; HIGH-PRIORITY EMAILS THAT I HAVE INDICATED ON MOBILE APPS
