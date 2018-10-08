@@ -4040,6 +4040,24 @@ happens.
 #+END_SRC
 
 
+
+> (defun my-search (&optional bug)
+>   (interactive)
+>   (let* ((bug (or bug (notmuch-read-query "Bug number: ")))
+> 	 (query (concat "tag:foo and tag:bar and subject:" bug)))
+>     (notmuch-search query)))
+>
+> to your .emacs file and binding it to B in the notmuch-common-keymap would
+> probably
+> do what you want.
+>
+
+
+
+
+
+
+
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
 
 The following indicates (1) where to store outgoing emails under the ~/Email/
