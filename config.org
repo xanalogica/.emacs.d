@@ -4046,10 +4046,10 @@ refresh the screen
 
 (defun my-search (&optional bug)
   (interactive)
->   (let* ((bug (or bug (notmuch-read-query "Bug number: ")))
-> 	 (query (concat "tag:foo and tag:bar and subject:" bug)))
->     (notmuch-search query)))
->
+  (let* ((bug (or bug (notmuch-read-query "Bug number: ")))
+    (query (concat "tag:foo and tag:bar and subject:" bug)))
+      (notmuch-search query)))
+
 
 
 
