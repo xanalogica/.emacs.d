@@ -3959,7 +3959,7 @@ happens.
        :query "tag:inbox and tag:zeomega"
        :key   "ZI"
        :count-query "tag:inbox and tag:zeomega and tag:unread"
-       :sort-order oldest-first
+       :sort-order newest-first
        :search-type 'tree)
     )
 
