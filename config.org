@@ -3956,7 +3956,7 @@ happens.
        :search-type 'tree)
 
     (:name "ZeInbox"
-;;;       :query "tag:inbox"
+       :query "tag:inbox and tag:zeomega"
 ;;;       :key   "ZI"
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
