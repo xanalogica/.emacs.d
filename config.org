@@ -3945,7 +3945,7 @@ happens.
     (:name "Flagged"
        :query "tag:inbox and tag:flagged"
        :key   "F"
-       :count-query "tag:inbox and tag:flagged and tag:unread"
+       :count-query "tag:inbox and tag:flagged"
        :sort-order newest-first
        :search-type 'tree)
     (:name "Drafts"
