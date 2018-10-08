@@ -3915,20 +3915,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
   ;;; Assigned Keys:
   ;;; 
 
-  :name            Name of the search (required).
-  :query           Search to run (required).
-  :key             Optional shortcut key for ‘notmuch-jump-search’.
-  :count-query     Optional extra query to generate the count
-                   shown. If not present then the :query property
-                   is used.
-  :sort-order      Specify the sort order to be used for the search.
-                   Possible values are ’oldest-first ’newest-first or
-                   nil. Nil means use the default sort order.
-  :search-type     Specify whether to run the search in search-mode
-                   or tree mode. Set to ’tree to specify tree
-                   mode, set to nil (or anything except tree) to
-                   specify search mode.
-
   (setq notmuch-saved-searches '(
     (:name "Directs"
        :query "tag:inbox"
