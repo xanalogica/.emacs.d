@@ -3970,7 +3970,7 @@ happens.
        :query "tag:sent"
        :key   "s"
        :count-query "tag:sent"
-       :sort-order oldest-first
+       :sort-order newest-first
        :search-type nil)
     (:name "tagTraining"
        :query "tag:inbox and tag:training"
