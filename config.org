@@ -3911,6 +3911,14 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
 ;;;  (require 'notmuch-labeler)   ;; improve presentation of Notmuch labels
   (require 'org-notmuch)       ;; interface Notmuch with Org-Mode capture
+
+  (setq notmuch-saved-searches '(
+    (:name "inbox"
+       :query "tag:inbox"
+       :count-query "tag:inbox and tag:unread"
+       :sort-order oldest-first)
+    )
+  )
 #+END_SRC
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
