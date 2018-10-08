@@ -3913,6 +3913,11 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
   (require 'org-notmuch)       ;; interface Notmuch with Org-Mode capture
 
   (setq notmuch-saved-searches '(
+    (:name "Directsinbox"
+       :query "tag:inbox"
+       :count-query "tag:inbox and tag:unread"
+       :sort-order oldest-first)
+    )
     (:name "inbox"
        :query "tag:inbox"
        :count-query "tag:inbox and tag:unread"
