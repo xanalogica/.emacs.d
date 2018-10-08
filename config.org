@@ -3989,7 +3989,7 @@ happens.
        :key   "tS"
        :count-query "tag:social and tag:unread"
        :sort-order oldest-first
-       :search-type 'tree)
+       :search-type nil)
 
 ;;;    (:name "??? tagSysAdmin"
 ;;;       :query "tag:inbox"
