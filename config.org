@@ -4053,7 +4053,6 @@ happens.
 ;; (:name "sent" :query "tag:sent" :key "t")
 ;; (:name "drafts" :query "tag:draft" :key "d")
 ;; (:name "all mail" :query "*" :key "a")
-;; (:name "SamMails" :query "from:sam")
 ;; (:name "ZeAllMail" :query "tag:zeomega" :key "ZA")
 ;; (:name "XanaMail" :query "tag:xanalogica" :key "X")
 ;; (:name "ZeInbox" :query "tag:zeomega and tag:inbox" :key "ZI"))
