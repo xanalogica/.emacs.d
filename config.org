@@ -3932,6 +3932,9 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :sort-order oldest-first
        :search-type 'tree)
     )
+    )
+  )
+
 ;;;    (:name "??? Drafts"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
@@ -4029,8 +4032,6 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
-    )
-  )
 
 ;;Value: ((:name "inbox" :query "tag:inbox" :key "i")
 ;; (:name "unread" :query "tag:unread" :key "u")
