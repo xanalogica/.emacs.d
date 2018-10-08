@@ -3992,7 +3992,7 @@ happens.
        :search-type nil)
     (:name "tagSysAdmin"
        :query "tag:sysadmin"
-;;;       :key   nil
+       :key   "ts"
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
