@@ -3918,7 +3918,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 
   (setq notmuch-saved-searches '(
     (:name "Directs"
-       :query "tag:inbox and to:jrush@zeomega.com and tag:directSam"
+       :query "tag:inbox and tag:directSam"
        :key   "D"
        :count-query "tag:inbox to:jrush@zeomega.com and tag:directSam and tag:unread"
        :sort-order oldest-first
