@@ -4026,15 +4026,12 @@ happens.
        :count-query "tag:inbox and tag:training"
        :sort-order newest-first
        :search-type 'tree)
-
-;;;    (:name "??? Church"
-;;;       :query "tag:inbox"
-;;;       :key   nil
-;;;       :count-query "tag:inbox and tag:unread"
-;;;       :sort-order oldest-first
-;;;       :search-type 'tree)
-;;;    )
-
+    (:name "Church"
+       :query "tag:church"
+       :key   nil
+       :count-query "tag:church and tag:unread"
+       :sort-order oldest-first
+       :search-type 'tree)
   ))
 ;; (:name "all mail" :query "*" :key "a")
 #+END_SRC
