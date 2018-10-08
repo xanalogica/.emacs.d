@@ -3990,7 +3990,6 @@ happens.
        :count-query "tag:admin and tag:unread"
        :sort-order newest-first
        :search-type nil)           ; most likely not threaded
-
     (:name "tagNewsletters"
 ;;;       :query "tag:inbox"
 ;;;       :key   nil
