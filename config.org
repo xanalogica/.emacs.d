@@ -3915,6 +3915,20 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
   ;;; Assigned Keys:
   ;;; 
 
+  :name            Name of the search (required).
+  :query           Search to run (required).
+  :key             Optional shortcut key for ‘notmuch-jump-search’.
+  :count-query     Optional extra query to generate the count
+                   shown. If not present then the :query property
+                   is used.
+  :sort-order      Specify the sort order to be used for the search.
+                   Possible values are ’oldest-first ’newest-first or
+                   nil. Nil means use the default sort order.
+  :search-type     Specify whether to run the search in search-mode
+                   or tree mode. Set to ’tree to specify tree
+                   mode, set to nil (or anything except tree) to
+                   specify search mode.
+
   (setq notmuch-saved-searches '(
     (:name "Directs"
        :query "tag:inbox"
@@ -3997,6 +4011,31 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :sort-order oldest-first)
     )
   )
+
+
+
+Value: ((:name "inbox" :query "tag:inbox" :key "i")
+ (:name "unread" :query "tag:unread" :key "u")
+ (:name "flagged" :query "tag:flagged" :key "f")
+ (:name "sent" :query "tag:sent" :key "t")
+ (:name "drafts" :query "tag:draft" :key "d")
+ (:name "all mail" :query "*" :key "a")
+ (:name "SamMails" :query "from:sam")
+ (:name "ZeAllMail" :query "tag:zeomega" :key "ZA")
+ (:name "XanaMail" :query "tag:xanalogica" :key "X")
+ (:name "ZeInbox" :query "tag:zeomega and tag:inbox" :key "ZI"))
+
+Original value was 
+((:name "inbox" :query "tag:inbox" :key "i")
+ (:name "unread" :query "tag:unread" :key "u")
+ (:name "flagged" :query "tag:flagged" :key "f")
+ (:name "sent" :query "tag:sent" :key "t")
+ (:name "drafts" :query "tag:draft" :key "d")
+ (:name "all mail" :query "*" :key "a"))
+
+
+
+
 #+END_SRC
 
 /usr/share/emacs/site-lisp/notmuch/notmuch.el
