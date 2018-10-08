@@ -3928,7 +3928,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 ;; (:name "flagged" :query "tag:flagged" :key "f")
 
     (:name "Flagged"
-       :query "tag:inbox"
+       :query "tag:inbox and tag:flagged"
        :key   nil
        :count-query "tag:inbox and tag:unread"
        :sort-order oldest-first
