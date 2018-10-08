@@ -3954,14 +3954,12 @@ happens.
        :count-query "tag:draft"
        :sort-order oldest-first
        :search-type nil)
-
     (:name "ZeInbox"
        :query "tag:inbox and tag:zeomega"
        :key   "ZI"
        :count-query "tag:inbox and tag:zeomega and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-    )
     (:name "XaInBox"
        :query "tag:inbox and tag:xanalogica"
        :key   "XI"
