@@ -3931,91 +3931,106 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Drafts"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "ZeInbox"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "XaInBox"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Sent"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "ZeOutsiders"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "XaOutsiders"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Church"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Admins"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Newsletters"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Flyers"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Receipts"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Socials"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "SysAdmin"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
     (:name "Training"
        :query "tag:inbox"
        :key   nil
        :count-query "tag:inbox and tag:unread"
-       :sort-order oldest-first)
+       :sort-order oldest-first
+       :search-type 'tree)
     )
   )
 
