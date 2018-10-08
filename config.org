@@ -4029,7 +4029,7 @@ call "org-mime-org-buffer-htmlize" from within an org-mode buffer
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
-;;;    )
+    )
   )
 
 ;;Value: ((:name "inbox" :query "tag:inbox" :key "i")
