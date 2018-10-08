@@ -4031,7 +4031,6 @@ happens.
        :count-query "tag:inbox and tag:training"
        :sort-order newest-first
        :search-type 'tree)
-  ))
 
 ;;;    (:name "??? Church"
 ;;;       :query "tag:inbox"
@@ -4040,6 +4039,9 @@ happens.
 ;;;       :sort-order oldest-first
 ;;;       :search-type 'tree)
 ;;;    )
+
+  ))
+
 
 ;; (:name "all mail" :query "*" :key "a")
 #+END_SRC
