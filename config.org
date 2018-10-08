@@ -3995,7 +3995,7 @@ happens.
        :key   "ts"
        :count-query "tag:sysadmin and tag:unread"
        :sort-order oldest-first
-       :search-type 'tree)
+       :search-type nil)
     (:name "tagTraining"
        :query "tag:inbox and tag:training"
        :key   "tT"
