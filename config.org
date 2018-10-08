@@ -3991,7 +3991,7 @@ happens.
        :sort-order newest-first
        :search-type nil)           ; most likely not threaded
     (:name "tagNewsletters"
-;;;       :query "tag:inbox"
+       :query "tag:newsletter"
 ;;;       :key   nil
 ;;;       :count-query "tag:inbox and tag:unread"
 ;;;       :sort-order oldest-first
