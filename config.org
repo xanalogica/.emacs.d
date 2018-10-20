@@ -3150,6 +3150,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; Blog-logfile.org
       ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
       ;; Finance.org
+      ;;   - credit scores
       ;; Health.org of the Mind, of the Body, of the Spirit
       ;; quotes
       ;; sexy songs
