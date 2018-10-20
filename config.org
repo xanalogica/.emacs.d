@@ -3143,9 +3143,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
 
-TODO create a HomeDecor.org and move all office planning notes into it
-[[file:HomeDecor.org][file:HomeDecor.org]]
-
 
 [[file:Church.org::*Church:%20River%20of%20Glory][Church.org: River of Glory]]
 [[file:Church.org::*Project:%20Riverhood][Church.org: Riverhood]]
@@ -3156,7 +3153,13 @@ TODO create a HomeDecor.org and move all office planning notes into it
       ;; Travel.org		AustinTrip.org-> Travel.org
       ;; Church
       ;; Church-Riverhood.org
-      ;; [[file:HomeDecor.org][file:HomeDecor.org]]
+      ;; file:HomeDecor.org
+
+TODO create a HomeDecor.org and move all office planning notes into it
+[[file:HomeDecor.org][file:HomeDecor.org]]
+
+
+
       ;; Blog-logfile.org
       ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
       ;; Finance.org
