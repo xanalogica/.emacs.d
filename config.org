@@ -3152,7 +3152,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; Finance.org
       ;; Health.org of the Mind, of the Body, of the Spirit
       ;; quotes
-  - [ ] sexy songs
+      ;; sexy songs
   - [ ] stashed links
 
   - [ ] unclassified personal tasks
