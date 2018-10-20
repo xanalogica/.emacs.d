@@ -3142,6 +3142,26 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Org-Mode/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
+
+      ;; Travel.org		AustinTrip.org-> Travel.org
+- Church-Riverhood.org
+- [[file:HomeDecor.org][file:HomeDecor.org]]
+- Blog-logfile.org
+- Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
+- Finance.org
+- Health.org of the Mind, of the Body, of the Spirit
+  - [ ] quotes
+  - [ ] sexy songs
+  - [ ] stashed links
+
+  - [ ] unclassified personal tasks
+    - define a recurring weekly task to sort them
+  - [ ] unclassified ZeOmega tasks
+    - define a recurring weekly task to sort them
+
+
+
+
     )
   )
 
