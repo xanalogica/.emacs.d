@@ -3153,7 +3153,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; Health.org of the Mind, of the Body, of the Spirit
       ;; quotes
       ;; sexy songs
-  - [ ] stashed links
+      ;; stashed links
 
   - [ ] unclassified personal tasks
     - define a recurring weekly task to sort them
