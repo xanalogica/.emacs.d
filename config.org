@@ -3137,7 +3137,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 #+BEGIN_SRC emacs-lisp	:results silent
   (setq org-refile-targets
-    '(
+    '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/Org-Mode/quotes.org"   :regexp . "Disorganized Quotations")
       ("~/Dropbox/Documents/Org-Mode/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
