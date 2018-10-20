@@ -3171,7 +3171,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (run-with-idle-timer 300 t
     (lambda ()
       (org-refile-cache-clear)
-      (org-refile-get-targets))
+      (org-refile-get-targets)
+    )
   )
 
 
