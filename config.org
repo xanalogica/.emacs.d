@@ -3148,9 +3148,9 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; Church-Riverhood.org
       ;; [[file:HomeDecor.org][file:HomeDecor.org]]
       ;; Blog-logfile.org
-- Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
-- Finance.org
-- Health.org of the Mind, of the Body, of the Spirit
+      ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
+      ;; Finance.org
+      ;; Health.org of the Mind, of the Body, of the Spirit
   - [ ] quotes
   - [ ] sexy songs
   - [ ] stashed links
