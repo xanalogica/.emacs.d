@@ -3155,8 +3155,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; sexy songs
       ;; stashed links
 
-  - [ ] unclassified personal tasks
-    - define a recurring weekly task to sort them
+      ;; unclassified personal tasks
+      ;;   - define a recurring weekly task to sort them
   - [ ] unclassified ZeOmega tasks
     - define a recurring weekly task to sort them
 
