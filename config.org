@@ -3149,8 +3149,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 
       ;; Travel.org		AustinTrip.org-> Travel.org
-      ;; Church
-[[file:Church.org::*Church:%20River%20of%20Glory][Church.org: River of Glory]]
+      ;; file:Church.org *Church:%20River%20of%20Glory
       ;; Church-Riverhood.org
 [[file:Church.org::*Project:%20Riverhood][Church.org: Riverhood]]
       ;; file:HomeDecor.org
