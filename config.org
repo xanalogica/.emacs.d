@@ -3143,9 +3143,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
 
-[[file:~/Dropbox/Documents/Org-Mode/Travel.org]]
-
-
+      ("~/Dropbox/Documents/Org-Mode/Travel.org"   :regexp . "")
 
       ;; Travel.org		AustinTrip.org-> Travel.org
       ;; file:Church.org *Church:%20River%20of%20Glory
