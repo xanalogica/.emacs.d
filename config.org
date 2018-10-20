@@ -3144,7 +3144,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Org-Mode/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
 
       ;; Travel.org		AustinTrip.org-> Travel.org
-- Church-Riverhood.org
+      ;; Church
+      ;; Church-Riverhood.org
 - [[file:HomeDecor.org][file:HomeDecor.org]]
 - Blog-logfile.org
 - Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
