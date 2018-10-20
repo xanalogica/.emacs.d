@@ -3174,7 +3174,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
       (org-refile-get-targets)
     )
   )
-
 #+END_SRC
 
         ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
