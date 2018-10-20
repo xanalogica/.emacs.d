@@ -3166,8 +3166,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
     )
   )
 
-;;  (setq org-completion-use-ido nil)
-  (setq org-refile-use-outline-path 'file)  ; Show full filepaths for refiling
+  (setq org-completion-use-ido nil)
+  (setq org-refile-use-outline-path t)  ; Show full filepaths for refiling
   (setq org-outline-path-complete-in-steps nil)  ; Refile in a single go
   (setq org-refile-allow-creating-parent-nodes 'confirm)
 
