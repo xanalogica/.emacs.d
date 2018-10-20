@@ -3154,12 +3154,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; Church
       ;; Church-Riverhood.org
       ;; file:HomeDecor.org
-
-TODO create a HomeDecor.org and move all office planning notes into it
-[[file:HomeDecor.org][file:HomeDecor.org]]
-
-
-
       ;; Blog-logfile.org
       ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
       ;; Finance.org
