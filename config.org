@@ -3158,11 +3158,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; unclassified personal tasks
       ;;   - define a recurring weekly task to sort them
       ;; unclassified ZeOmega tasks
-    - define a recurring weekly task to sort them
-
-
-
-
+      ;;   - define a recurring weekly task to sort them
     )
   )
 
