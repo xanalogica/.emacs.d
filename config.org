@@ -2492,6 +2492,8 @@ The below elisp structure defines the linkword and the URL it represents.
            ("omap"      . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")
            ("wikipedia" . "https://en.wikipedia.org/wiki/")
 
+           ;;; ZeOmega Links to Types of Karmic Tickets
+
            ("karmic"    . "https://karmic.zeomega.com/browse/%s")
            ("zeconnect" . "https://zeconnect.zeomega.com/display/%s")
            ("github"    . "https://github.com/zeomega/%s")
