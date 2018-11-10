@@ -2471,6 +2471,10 @@ Fix org-mode's conflict with yasnippet over the TAB key.
 
 **** Link Abbreviations
 
+Link abbreviations can be used like this:
+
+  [[linkword:tag][description]\]
+
 Document-specific link abbreviations can also be given using the following:
 
     #+LINK: karmic http:xxxxxxxxxxxxx
