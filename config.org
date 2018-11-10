@@ -2495,9 +2495,6 @@ The below elisp structure defines the linkword and the URL it represents.
 
            ("karmic"    . "https://karmic.zeomega.com/browse/%s")
            ("zeconnect" . "https://zeconnect.zeomega.com/display/%u")
-#+LINK:		zeconnect https://zeconnect.zeomega.com/display/%u
-
-
 
            ("github"    . "https://github.com/zeomega/%s")
            ("zegit"     . "https://git.zeomega.com/zeomega/%s")
