@@ -2398,7 +2398,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   ;;        (define-key yas/keymap [tab] 'yas/next-field-group)))
 #+END_SRC
 
-**** Useful Keystrokes for Org-Mode
+**** Useful Keystrokes for Org-Mode to Adopt
 :PROPERTIES:
 :VISIBILITY: children
 :END:
