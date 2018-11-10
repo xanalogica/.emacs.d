@@ -2596,8 +2596,8 @@ e     Export views to associated files.
 - EVENTS	:: planning for all events, parent of below tags
 - GUIDES	:: writeups about organizational topics
 - HOLIDAYS	:: planning for various recurring holidays
-- HOT	:: urgent things I need to attend to
-- KPIS	:: everything related to the ZeOmega KPI system
+- HOT	        :: urgent things I need to attend to
+- KPIS	        :: everything related to the ZeOmega KPI system
 - LINKS	:: org-mode links to useful information
 - ME		:: notes about myself
 - MEETING     :: notes taken during a meeting
@@ -2611,7 +2611,7 @@ e     Export views to associated files.
 - my own training
 
 
-#+TAGS:		HOT GUIDES TERMS STUDY YAMMER KPIS LINKS PEOPLE EVENTS HOLIDAYS TRAVEL CLIENTS PAPERS MULTI ME
+HOT GUIDES TERMS STUDY YAMMER KPIS LINKS PEOPLE EVENTS HOLIDAYS TRAVEL CLIENTS PAPERS MULTI ME
 
 
 
