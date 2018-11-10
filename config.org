@@ -2507,10 +2507,6 @@ e     Export views to associated files.
 
     C-c / m		create sparse tree   [[http://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties][Matching Tags and Properties]]
 
-
-
-
-
 **** My System of Org-Mode Tags
 - C-c C-q ::  to interactively set tags in the current headline
 
