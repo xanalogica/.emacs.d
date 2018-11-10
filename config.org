@@ -2423,10 +2423,10 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            ("@phone"        . nil)   ;; quiet spot near a phone
         (:endgroup . nil)
 
-           (:startgroup . nil)  ;; *** WHEN the task is to be performed ***
-               ("@daytime"      . ?d)    ;; during daytime business hours
-               ("@nitetime"     . ?n)    ;; during the night
-           (:endgroup . nil)
+        (:startgroup . nil)  ;; *** WHEN the task is to be performed ***
+           ("@daytime"      . ?d)    ;; during daytime business hours
+           ("@nitetime"     . ?n)    ;; during the night
+        (:endgroup . nil)
 
                                 ;; *** FOR WHOM the task is being performed ***
            ("ZEOMEGA"           . nil)
