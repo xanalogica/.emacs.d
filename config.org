@@ -2610,12 +2610,6 @@ e     Export views to associated files.
 - YAMMER	:: ideas for thing to post about on Yammer!
 - my own training
 
-
-HOT GUIDES TERMS STUDY YAMMER KPIS LINKS PEOPLE EVENTS HOLIDAYS TRAVEL CLIENTS PAPERS MULTI ME
-
-
-
-
 - ADMIN
 - CAPITAL
 - INITIATIVE
