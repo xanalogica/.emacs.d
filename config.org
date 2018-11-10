@@ -2497,7 +2497,6 @@ The below elisp structure defines the linkword and the URL it represents.
 
            ("github"    . "https://github.com/zeomega/%u")
            ("zegit"     . "https://git.zeomega.com/zeomega/%u")
-#+LINK:		git https://git.zeomega.com/%s
        )
   )
 #+END_SRC
