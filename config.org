@@ -2434,12 +2434,12 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            ("@nitetime"	. ?n)    ;; during the night
         (:endgroup . nil)
 
-                                ;; *** NATURE of the task being performed ***
-           ("PROBLEM"           . ?p)    ;; unplanned task that popped up
-           ("TECHDEBT"          . ?t)    ;; reworking of existing software
-           ("INFODEBT"          . ?i)    ;; getting my information organized
-           ("QUOTE"             . ?q)
-           ("MINDCRAFT"         . ?q)    ;; mental skills like memorization techniques
+                            ;; *** NATURE of the task being performed ***
+        ("PROBLEM"	. ?p)    ;; unplanned task that popped up
+        ("TECHDEBT"	. ?t)    ;; reworking of existing software
+        ("INFODEBT"	. ?i)    ;; getting my information organized
+        ("QUOTE"	. ?q)
+        ("MINDCRAFT"	. ?q)    ;; mental skills like memorization techniques
 
            (:startgrouptag)
                ("LEARNING")
