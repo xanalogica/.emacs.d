@@ -2421,7 +2421,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            ("SUNAYANA" . nil)
         (:endgroup . nil)
 
-        (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
+        (:startgroup . ?l)  ;; *** WHERE (location) the task is to be performed ***
            ("@home"	. ?h)    ;; at home
            ("@computer"	. ?c)    ;; at a computer someplace
            ("@zeomega"	. ?z)    ;; in the ZeOmega office
