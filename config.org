@@ -2398,7 +2398,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   ;;        (define-key yas/keymap [tab] 'yas/next-field-group)))
 #+END_SRC
 
-**** Predefined Tags (and Column) for Outline Headers
+**** My Global Tag Definitions (and Column) for Outline Headers
 #+BEGIN_SRC emacs-lisp
   (setq org-tags-column 80)
 
