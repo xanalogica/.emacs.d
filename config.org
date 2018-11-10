@@ -2405,7 +2405,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   (setq org-tag-persistent-alist
       '(
            (:startgroup . nil)  ;; *** TO WHOM the task is related ***
-- SAM
+               ("SAM"  . nil)   ;; ???
 - MOHAN
 - MURTHY
 - RAJU
