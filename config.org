@@ -2480,7 +2480,7 @@ The below elisp structure defines the linkword and the URL it represents.
 #+BEGIN_SRC emacs-lisp
   (setq org-link-abbrev-alist
       '(
-#+LINK:		karmic https://karmic.zeomega.com/browse/%s
+           ("karmic"    . "https://karmic.zeomega.com/browse/%s")
 #+LINK:		story https://karmic.zeomega.com/browse/%s
 #+LINK:		task https://karmic.zeomega.com/browse/%s
 #+LINK:		subtask https://karmic.zeomega.com/browse/%s
