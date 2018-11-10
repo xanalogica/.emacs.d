@@ -2405,14 +2405,14 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   (setq org-tag-persistent-alist
      '(
         (:startgroup . nil)  ;; *** TO WHOM the task is related ***
-           ("SAM"  . nil)   ;; ???
-           ("MOHAN" . nil)  ;; ???
-           ("MURTHY" . nil) ;; ???
-           ("RAJU" . nil) ;; ???
-           ("DEEPAK" . nil) ;; ???
-           ("ROOPESH" . nil) ;; ???
+           ("SAM"      . nil)   ;; ???
+           ("MOHAN"    . nil)  ;; ???
+           ("MURTHY"   . nil) ;; ???
+           ("RAJU"     . nil) ;; ???
+           ("DEEPAK"   . nil) ;; ???
+           ("ROOPESH"  . nil) ;; ???
            ("SUNAYANA" . nil) ;; ???
-           ("SADA" . nil) ;; ???
+           ("SADA"     . nil) ;; ???
         (:endgroup . nil)
 
            (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
