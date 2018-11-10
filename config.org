@@ -2401,6 +2401,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
 **** My Global Tag Definitions (and Column Placement)
 **** My System of Org-Mode Tags
 - C-c C-q ::  to interactively set tags in the current headline
+
 #+BEGIN_SRC emacs-lisp
   (setq org-tags-column 80)
 
