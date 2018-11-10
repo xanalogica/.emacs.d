@@ -2405,6 +2405,14 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   (setq org-tag-persistent-alist
       '(
            (:startgroup . nil)  ;; *** TO WHOM the task is related ***
+- SAM
+- MOHAN
+- MURTHY
+- RAJU
+- DEEPAK
+- ROOPESH
+- SUNAYANA
+- SADA
                ("@home"         . ?h)    ;; at home
                ("@computer"     . ?c)    ;; at a computer someplace
                ("@zeomega"      . ?z)    ;; in the ZeOmega office
@@ -2503,15 +2511,6 @@ Fix org-mode's conflict with yasnippet over the TAB key.
 - QUESTION
 - STAFFING
 - TODECIDE
-
-- SAM
-- MOHAN
-- MURTHY
-- RAJU
-- DEEPAK
-- ROOPESH
-- SUNAYANA
-- SADA
 
 **** My Link Abbreviations
 
