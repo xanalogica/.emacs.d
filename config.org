@@ -2471,6 +2471,42 @@ org-tag-persistent-alist
   )
 #+END_SRC
 
+
+**** My System of Org-Mode Tags    C-c C-q to interactively set tags in the current headline
+- HOT	:: urgent things I need to attend to
+- GUIDES	:: writeups about organizational topics
+- TERMS	:: glossary terms
+- STUDY	:: things I want to research or read or watch
+- YAMMER	:: ideas for thing to post about on Yammer!
+- KPIS	:: everything related to the ZeOmega KPI system
+- LINKS	:: org-mode links to useful information
+- PEOPLE	:: notes about various people I want to remember
+- EVENTS	:: planning for all events, parent of below tags
+- HOLIDAYS	:: planning for various recurring holidays
+- TRAVEL	:: planning for trips to India or to clients
+- CLIENTS	:: notes about our clients
+- PAPERS	:: ideas for papers to write
+- MULTI	:: efficiency multipliers
+- ME		:: notes about myself
+- MEETING     :: notes taken during a meeting
+- my own training
+
+- ADMIN
+- CAPITAL
+- INITIATIVE
+- QUESTION
+- STAFFING
+- TODECIDE
+
+- SAM
+- MOHAN
+- MURTHY
+- RAJU
+- DEEPAK
+- ROOPESH
+- SUNAYANA
+- SADA
+
 **** My Link Abbreviations
 
 Link abbreviations can be used like this:
