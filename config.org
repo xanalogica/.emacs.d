@@ -2402,6 +2402,8 @@ Fix org-mode's conflict with yasnippet over the TAB key.
 #+BEGIN_SRC emacs-lisp
   (setq org-tags-column 80)
 
+org-tag-persistent-alist
+
   (setq org-tag-alist
       '(
            (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
