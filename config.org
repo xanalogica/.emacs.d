@@ -2404,7 +2404,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
 
 org-tag-persistent-alist
 
-  (setq org-tag-alist
+  (setq org-tag-persistent-alist
       '(
            (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
                ("@home"         . ?h)    ;; at home
