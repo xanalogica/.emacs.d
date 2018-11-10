@@ -2448,11 +2448,11 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            (:endgrouptag)
 
            (:startgrouptag)
-               ("SYSADMIN")
-               (:grouptags)
-                   ("GADGETS"   . nil)
-                   ("SWCONFIG"  . nil)
-                   ("HOSTING"   . nil)
+              ("SYSADMIN")
+              (:grouptags)
+                 ("GADGETS"   . nil)
+                 ("SWCONFIG"  . nil)
+                 ("HOSTING"   . nil)
            (:endgrouptag)
 
            (:startgrouptag)
