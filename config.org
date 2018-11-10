@@ -2480,11 +2480,6 @@ The below elisp structure defines the linkword and the URL it represents.
 #+BEGIN_SRC emacs-lisp
   (setq org-link-abbrev-alist
       '(
-#+LINK:		story https://karmic.zeomega.com/browse/%s
-#+LINK:		task https://karmic.zeomega.com/browse/%s
-#+LINK:		subtask https://karmic.zeomega.com/browse/%s
-#+LINK:		epic https://karmic.zeomega.com/browse/%s
-#+LINK:		github https://github.com/%s
 #+LINK:		git https://git.zeomega.com/%s
            ("google"    . "http://www.google.com/search?q=")
            ("gmap"      . "http://maps.google.com/maps?q=%s")
@@ -2494,10 +2489,14 @@ The below elisp structure defines the linkword and the URL it represents.
            ;;; Links to Types of Karmic Tickets at ZeOmega
 
            ("karmic"    . "https://karmic.zeomega.com/browse/%s")
+#+LINK:		story https://karmic.zeomega.com/browse/%s
+#+LINK:		task https://karmic.zeomega.com/browse/%s
+#+LINK:		subtask https://karmic.zeomega.com/browse/%s
+#+LINK:		epic https://karmic.zeomega.com/browse/%s
 
            ("zeconnect" . "https://zeconnect.zeomega.com/display/%u")
 
-           ("github"    . "https://github.com/zeomega/%s")
+           ("github"    . "https://github.com/zeomega/%u")
            ("zegit"     . "https://git.zeomega.com/zeomega/%s")
        )
   )
