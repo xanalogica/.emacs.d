@@ -2406,18 +2406,13 @@ Fix org-mode's conflict with yasnippet over the TAB key.
       '(
            (:startgroup . nil)  ;; *** TO WHOM the task is related ***
                ("SAM"  . nil)   ;; ???
-- MOHAN
-- MURTHY
-- RAJU
-- DEEPAK
-- ROOPESH
-- SUNAYANA
-- SADA
-               ("@home"         . ?h)    ;; at home
-               ("@computer"     . ?c)    ;; at a computer someplace
-               ("@zeomega"      . ?z)    ;; in the ZeOmega office
-               ("@lunch"        . nil)   ;; over lunch
-               ("@phone"        . nil)   ;; quiet spot near a phone
+               ("MOHAN" . nil)  ;; ???
+               ("MURTHY" . nil) ;; ???
+               ("RAJU" . nil) ;; ???
+               ("DEEPAK" . nil) ;; ???
+               ("ROOPESH" . nil) ;; ???
+               ("SUNAYANA" . nil) ;; ???
+               ("SADA" . nil) ;; ???
            (:endgroup . nil)
 
            (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
