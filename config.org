@@ -2490,7 +2490,7 @@ The below elisp structure defines the linkword and the URL it represents.
            ("karmic"    . "https://karmic.zeomega.com/browse/%s")
            ("story https://karmic.zeomega.com/browse/%s
            ("task https://karmic.zeomega.com/browse/%s
-           ("subtask https://karmic.zeomega.com/browse/%s
+           ("subtask"   . "https://karmic.zeomega.com/browse/%s")
            ("epic"      . "https://karmic.zeomega.com/browse/%s")
 
            ("zeconnect" . "https://zeconnect.zeomega.com/display/%u")
