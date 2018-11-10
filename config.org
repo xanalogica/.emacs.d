@@ -2591,7 +2591,6 @@ e     Export views to associated files.
   )
 #+END_SRC
 
-
 - CLIENTS	:: notes about our clients
 - EVENTS	:: planning for all events, parent of below tags
 - GUIDES	:: writeups about organizational topics
