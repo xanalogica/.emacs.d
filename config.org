@@ -2495,6 +2495,9 @@ The below elisp structure defines the linkword and the URL it represents.
            ;;; Links to Types of Karmic Tickets at ZeOmega
 
            ("karmic"    . "https://karmic.zeomega.com/browse/%s")
+
+
+
            ("zeconnect" . "https://zeconnect.zeomega.com/display/%s")
            ("github"    . "https://github.com/zeomega/%s")
            ("zegit"     . "https://git.zeomega.com/zeomega/%s")
