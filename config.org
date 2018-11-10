@@ -2465,7 +2465,6 @@ C-c /			fold current buffer into a *sparse tree* of
 C-u C-c C-x C-s   -- move subtree to a separate archive file (complete projects)
 ****** C-c C-q           -- tagmgmt: on header, prompts for tags to add/remove
 
-
 ***** There are seven views.
 ****** C-c a a    Timeline Agenda -- Calendar List w/Scheduled TODOs
 ****** C-c a t    Global Unfinished TODO List
