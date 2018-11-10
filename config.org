@@ -2480,7 +2480,6 @@ The below elisp structure defines the linkword and the URL it represents.
 #+BEGIN_SRC emacs-lisp
   (setq org-link-abbrev-alist
       '(
-#+LINK:		git https://git.zeomega.com/%s
            ("google"    . "http://www.google.com/search?q=")
            ("gmap"      . "http://maps.google.com/maps?q=%s")
            ("omap"      . "http://nominatim.openstreetmap.org/search?q=%s&polygon=1")
@@ -2497,7 +2496,8 @@ The below elisp structure defines the linkword and the URL it represents.
            ("zeconnect" . "https://zeconnect.zeomega.com/display/%u")
 
            ("github"    . "https://github.com/zeomega/%u")
-           ("zegit"     . "https://git.zeomega.com/zeomega/%s")
+           ("zegit"     . "https://git.zeomega.com/zeomega/%u")
+#+LINK:		git https://git.zeomega.com/%s
        )
   )
 #+END_SRC
