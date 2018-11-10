@@ -2424,14 +2424,14 @@ Fix org-mode's conflict with yasnippet over the TAB key.
         (:startgroup . nil)  ;; *** WHERE the task is to be performed ***
            ("@home"	. ?h)    ;; at home
            ("@computer"	. ?c)    ;; at a computer someplace
-           ("@zeomega"      . ?z)    ;; in the ZeOmega office
-           ("@lunch"        . nil)   ;; over lunch
-           ("@phone"        . nil)   ;; quiet spot near a phone
+           ("@zeomega"	. ?z)    ;; in the ZeOmega office
+           ("@lunch"	. nil)   ;; over lunch
+           ("@phone"	. nil)   ;; quiet spot near a phone
         (:endgroup . nil)
 
         (:startgroup . nil)  ;; *** WHEN the task is to be performed ***
-           ("@daytime"      . ?d)    ;; during daytime business hours
-           ("@nitetime"     . ?n)    ;; during the night
+           ("@daytime"	. ?d)    ;; during daytime business hours
+           ("@nitetime"	. ?n)    ;; during the night
         (:endgroup . nil)
 
                                 ;; *** NATURE of the task being performed ***
