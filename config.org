@@ -2441,10 +2441,10 @@ Fix org-mode's conflict with yasnippet over the TAB key.
         ("QUOTE"	. ?q)
         ("MINDCRAFT"	. ?q)    ;; mental skills like memorization techniques
 
-           (:startgrouptag)
-               ("LEARNING")
-               (:grouptags)
-                   ("STUDY"     . nil)
+        (:startgrouptag)
+           ("LEARNING")
+           (:grouptags)
+           ("STUDY"     . nil)
            (:endgrouptag)
 
            (:startgrouptag)
