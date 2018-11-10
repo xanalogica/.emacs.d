@@ -2464,10 +2464,10 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            (:endgrouptag)
 
            (:startgrouptag)
-               ("HEALTH")
-               (:grouptags)
-                   ("FITNESS"   . nil)
-                   ("MEDICAL"   . nil)
+              ("HEALTH")
+              (:grouptags)
+                 ("FITNESS"   . nil)
+                 ("MEDICAL"   . nil)
            (:endgrouptag)
 
            (:startgrouptag)
