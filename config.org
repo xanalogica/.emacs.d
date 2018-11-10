@@ -2600,7 +2600,7 @@ e     Export views to associated files.
 - KPIS	        :: everything related to the ZeOmega KPI system
 - LINKS	:: org-mode links to useful information
 - ME		:: notes about myself
-- MEETING     :: notes taken during a meeting
+- MEETING       :: notes taken during a meeting
 - MULTI	:: efficiency multipliers
 - PAPERS	:: ideas for papers to write
 - PEOPLE	:: notes about various people I want to remember
