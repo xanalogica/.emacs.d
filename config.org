@@ -2471,10 +2471,10 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            (:endgrouptag)
 
            (:startgrouptag)
-               ("FINANCE")
-               (:grouptags)
-                   ("TAXES"        . nil)   ;; things that consume money
-                   ("INVESTMENTS"  . nil)   ;; things that generate money
+              ("FINANCE")
+              (:grouptags)
+                 ("TAXES"        . nil)   ;; things that consume money
+                 ("INVESTMENTS"  . nil)   ;; things that generate money
            (:endgrouptag)
        )
   )
