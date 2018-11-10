@@ -2453,7 +2453,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
                  ("GADGETS"   . nil)
                  ("SWCONFIG"  . nil)
                  ("HOSTING"   . nil)
-           (:endgrouptag)
+              (:endgrouptag)
 
            (:startgrouptag)
                ("WRITING")
