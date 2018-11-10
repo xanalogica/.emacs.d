@@ -2404,6 +2404,12 @@ Fix org-mode's conflict with yasnippet over the TAB key.
 
   (setq org-tag-alist
      '(
+                             ;; *** FOR WHOM the task is being performed ***
+           ("ZEOMEGA"  . nil)
+           ("DFWUUG"   . nil)
+           ("PYTHON"   . nil)
+           ("ZF"       . ?f)
+
         (:startgroup . nil)  ;; *** TO WHOM the task is related ***
            ("DEEPAK"   . nil)
            ("MOHAN"    . nil)
@@ -2427,12 +2433,6 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            ("@daytime"      . ?d)    ;; during daytime business hours
            ("@nitetime"     . ?n)    ;; during the night
         (:endgroup . nil)
-
-                                ;; *** FOR WHOM the task is being performed ***
-           ("ZEOMEGA"           . nil)
-           ("DFWUUG"            . nil)
-           ("PYTHON"            . nil)
-           ("ZF"                . ?f)
 
                                 ;; *** NATURE of the task being performed ***
            ("PROBLEM"           . ?p)    ;; unplanned task that popped up
