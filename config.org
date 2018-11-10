@@ -2398,7 +2398,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   ;;        (define-key yas/keymap [tab] 'yas/next-field-group)))
 #+END_SRC
 
-**** My Global Tag Definitions (and Column)
+**** My Global Tag Definitions (and Column Placement)
 #+BEGIN_SRC emacs-lisp
   (setq org-tags-column 80)
 
