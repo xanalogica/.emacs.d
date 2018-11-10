@@ -2469,7 +2469,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   )
 #+END_SRC
 
-**** Link Abbreviations
+**** My Link Abbreviations
 
 Link abbreviations can be used like this:
 
