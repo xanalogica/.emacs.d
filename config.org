@@ -2398,6 +2398,120 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   ;;        (define-key yas/keymap [tab] 'yas/next-field-group)))
 #+END_SRC
 
+**** Useful Keystrokes for Org-Mode
+:PROPERTIES:
+:VISIBILITY: children
+:END:
+***** Quick Tips                                                            :QUICKTIP:
+:PROPERTIES:
+:VISIBILITY: content
+:END:
+****** C-u C-u TAB       -- visibility: return to =startup visibility=
+C-x n s           -- narrow buffer to current subtree
+C-x n b           -- narrow buffer to current block
+C-x n w           -- widen buffer to remove narrowing
+C-x 4 c           -- create and view a clone of this buffer
+
+C-c /             -- fold current buffer into a *sparse tree* of
+      t              - unfinished TODOs
+      T              - entries with a specific TODO keyword
+      m              - entries selected by a tags/property match
+      r              - entries whose ??header/body?? match a regular expression
+      b              - show deadlines and scheduled items before a date
+      a              - show deadlines and scheduled items after a date
+      d              - show deadlines due within `org-deadline-warning-days'
+      D              - show deadlines and scheduled items between a date range
+      p              - entries matching a specific property name & value
+(how to apply this to a subtree?)
+
+****** C-c c             -- capture: =meeting notes= or a quick TODO
+    C-u C-c c     -- visit later the target location of a capture template
+C-u C-u C-c c     -- visit *the last stored* captured item
+        C-c C-c   -- finalize and close the note
+    C-u C-c C-c   -- finalize and close the note, then jump to it
+        C-c C-k   -- abort the capture process and revert to previous state
+
+****** C-c / m HOT       -- taskmgmt: show my =HOT tasks=
+C-c / T PEND      -- check tasks on which I'm waiting for others
+C-c / T DONE      -- find finished tasks so I can archive them
+
+****** C-c @             -- subtrees: mark subtree
+C-c C-x C-w       -- cut subtree
+C-c C-x M-w       -- copy subtree
+C-c C-x C-y       -- yank subtree and adjust it to fit the hierarchy
+
+NOTE: change option: org-yank-folded-subtrees so when I paste they are NOT folded
+NOTE: option: org-yank-adjusted-subtrees
+****** C-c C-j           -- navigation: jump to the specified headline
+(how to apply this to a subtree?)
+- C-c C-x C-n     :: jump to the next link found
+- C-c C-x C-p     :: jump to the prev link found
+- C-c &           :: return back to previous position after jumping to a link
+C-c /			fold current buffer into a *sparse tree* of
+      t			  unfinished TODOs
+      T			  entries with a specific TODO keyword
+      m			  entries selected by a tags/property match
+      p      Enter a property name and its value (both with completion on existing
+             names/values) and show entries with that property.
+      r			  entries matching a regular expression
+      b      Show deadlines and scheduled items before a date.
+      a      Show deadlines and scheduled items after a date.
+      d      Show deadlines due within `org-deadline-warning-days'.
+      D      Show deadlines and scheduled items between a date range.
+
+****** C-c C-w           -- refiling: headline to a different location
+    C-c C-x a     -- mark subtree as archived but leave in-place
+    C-c C-x A     -- move subtree elsewhere in its file (incomplete projects)
+C-u C-c C-x C-s   -- move subtree to a separate archive file (complete projects)
+****** C-c C-q           -- tagmgmt: on header, prompts for tags to add/remove
+
+
+***** There are seven views.
+****** C-c a a    Timeline Agenda -- Calendar List w/Scheduled TODOs
+****** C-c a t    Global Unfinished TODO List
+****** C-c a m    Headlines That Match Tags/Properties/TODO-State
+****** C-a a L    Timeline Limited to Current Buffer
+****** C-C a M    Same but Headlines Must Be Unfinished TODOs
+****** C-c a s    General Search of Text Anywhere in a Headline+Body
+****** C-c a #    List Projects that are Stuck (???)
+
+****** C-c .      Insert an Active   Date (add C-u for Date+Time)
+****** C-c !      Insert an Inactive Date (add C-u for Date+Time)
+
+4. a timeline view that shows all events in a single Org file, in time-sorted view,
+7. custom views that are special searches and combinations of different views.
+***** Visualizing Your Agenda
+
+C-c a			display agenda view of
+      a			  daily/weekly 'day planner' *agenda* of TODOs
+      t			  global *TODO* list (org-todo-list)
+    ???			  file-local TODO list
+      m			  headlines that *match* given tags
+      M			  headlines w/undone TODOs that *match*
+      L			  file-local *timeline* for a single file
+      L w/C-u		  also include unfinished TODO items
+      s			  global *search* of entries
+      S			  global *search* of entries, only TODO entries
+      #			  list "stuck" projects
+				  http://orgmode.org/manual/Stuck-projects.html#Stuck-projects
+
+      <			  restrict agenda commands to buffer, subtree, or region
+				  (press several times to get the desired effect)
+      >			  remove a previous restriction
+
+      !			  configure what "stuck" means
+      C			  configure custom agenda commands
+
+e     Export views to associated files.
+/     Multi occur across all agenda files and also files listed
+      in `org-agenda-text-search-extra-files'.
+
+    C-c / m		create sparse tree   [[http://orgmode.org/manual/Matching-tags-and-properties.html#Matching-tags-and-properties][Matching Tags and Properties]]
+
+
+
+
+
 **** My System of Org-Mode Tags
 - C-c C-q ::  to interactively set tags in the current headline
 
