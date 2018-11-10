@@ -2475,6 +2475,8 @@ Link abbreviations can be used like this:
 
   [[linkword:tag][description]\]
 
+The below elisp structure defines the linkword and the URL it represents.
+
 #+BEGIN_SRC emacs-lisp
   (setq org-link-abbrev-alist
       '(
