@@ -2456,11 +2456,11 @@ Fix org-mode's conflict with yasnippet over the TAB key.
            (:endgrouptag)
 
            (:startgrouptag)
-               ("WRITING")
-               (:grouptags)
-                   ("TWEETS"    . nil)
-                   ("PAPERS"    . nil)
-                   ("BLOGPOST"  . nil)
+              ("WRITING")
+              (:grouptags)
+                 ("TWEETS"    . nil)
+                 ("PAPERS"    . nil)
+                 ("BLOGPOST"  . nil)
            (:endgrouptag)
 
            (:startgrouptag)
