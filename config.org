@@ -2592,23 +2592,29 @@ e     Export views to associated files.
 #+END_SRC
 
 
-- HOT	:: urgent things I need to attend to
+- CLIENTS	:: notes about our clients
+- EVENTS	:: planning for all events, parent of below tags
 - GUIDES	:: writeups about organizational topics
-- TERMS	:: glossary terms
-- STUDY	:: things I want to research or read or watch
-- YAMMER	:: ideas for thing to post about on Yammer!
+- HOLIDAYS	:: planning for various recurring holidays
+- HOT	:: urgent things I need to attend to
 - KPIS	:: everything related to the ZeOmega KPI system
 - LINKS	:: org-mode links to useful information
-- PEOPLE	:: notes about various people I want to remember
-- EVENTS	:: planning for all events, parent of below tags
-- HOLIDAYS	:: planning for various recurring holidays
-- TRAVEL	:: planning for trips to India or to clients
-- CLIENTS	:: notes about our clients
-- PAPERS	:: ideas for papers to write
-- MULTI	:: efficiency multipliers
 - ME		:: notes about myself
 - MEETING     :: notes taken during a meeting
+- MULTI	:: efficiency multipliers
+- PAPERS	:: ideas for papers to write
+- PEOPLE	:: notes about various people I want to remember
+- STUDY	:: things I want to research or read or watch
+- TERMS	:: glossary terms
+- TRAVEL	:: planning for trips to India or to clients
+- YAMMER	:: ideas for thing to post about on Yammer!
 - my own training
+
+
+#+TAGS:		HOT GUIDES TERMS STUDY YAMMER KPIS LINKS PEOPLE EVENTS HOLIDAYS TRAVEL CLIENTS PAPERS MULTI ME
+
+
+
 
 - ADMIN
 - CAPITAL
