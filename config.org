@@ -2444,7 +2444,7 @@ Fix org-mode's conflict with yasnippet over the TAB key.
         (:startgrouptag)
            ("LEARNING")
            (:grouptags)
-           ("STUDY"     . nil)
+              ("STUDY"     . nil)
            (:endgrouptag)
 
            (:startgrouptag)
