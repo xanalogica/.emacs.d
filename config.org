@@ -2979,6 +2979,8 @@ Emacs Completion Engines
  - Helm
  - Ivy
 
+Place to Use Completion Engines
+
 
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
