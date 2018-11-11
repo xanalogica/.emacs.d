@@ -2951,7 +2951,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 
 - [ ]  C-c c b  :: capture--bookmarks-personal
 - [ ]  C-c c B  :: capture--health-bloodpressure-measurements
-- [ ]  "F" :: <<capture--finance-creditscore-measurements>>
+- [ ]  C-c c F  :: capture--finance-creditscore-measurements
 - [ ]  "q" :: <<capture--cool-quote>>
 - [ ]  "z" :: "ZeOmega Capture Templates"
 - [ ]  "zf" :: <<capture--hadoop-financial>>
