@@ -2979,7 +2979,7 @@ Emacs Completion Engines
  - Helm
  - Ivy
 
-Place to Use Completion Engines
+Places to Use Completion Engines
  - find-file
  - switch-buffer
 
