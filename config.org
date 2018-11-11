@@ -2974,12 +2974,12 @@ org-refile-targets
 - C-c C-w  :: org-refile
 - C-u C-c C-w  :: jump to a heading
 
-Emacs Completion Engines
+Emacs Completion Engines:
  - IDO    ido + ido-vertical-mode
  - Helm
  - Ivy
 
-Places to Use Completion Engines
+Places to Use Completion Engines:
  - find-file
  - switch-buffer
 
