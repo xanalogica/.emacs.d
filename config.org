@@ -2985,6 +2985,9 @@ Emacs Completion Engines:
 Places to Use Completion Engines:
  - find-file
  - switch-buffer
+ - C-h f
+ - C-h v
+ - M-x NAME
 
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
