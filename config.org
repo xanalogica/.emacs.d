@@ -2978,7 +2978,8 @@ Emacs Completion Engines:
  - IDO    ido + ido-vertical-mode
  - Helm
    helm-descbinds
-   help-show-kill-ring
+   helm-show-kill-ring
+   helm-completing-read-handlers-alist
  - Ivy    ivy + counsel
 
 Places to Use Completion Engines:
