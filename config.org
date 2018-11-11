@@ -2968,6 +2968,19 @@ Possible Keys from within the Capture Buffer:
 -     C-c C-w :: finalize and refile the note to a different place
 -     C-c C-k :: abort the capture process
 
+
+org-refile-targets
+
+- C-c C-w  :: org-refile
+- C-u C-c C-w  :: jump to a heading
+
+Emacs Completion Engines
+ - IDO
+ - Helm
+ - Ivy
+
+
+
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     '(
