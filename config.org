@@ -2954,9 +2954,9 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 - [ ]  C-c c F  :: capture--finance-creditscore-measurements
 - [ ]  C-c c q  :: capture--cool-quote
 - [ ]  C-c c z  :: "ZeOmega Capture Templates"
-- [ ]  "zf" :: <<capture--hadoop-financial>>
-- [ ]  "zs" :: <<capture--hadoop-sentinelengine>>
-- [ ]  "zb" :: <<capture--bookmarks-zeomega>>
+- [ ]  C-c c zf :: capture--hadoop-financial
+- [ ]  C-c c zs :: capture--hadoop-sentinelengine
+- [ ]  C-c c zb :: capture--bookmarks-zeomega
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
