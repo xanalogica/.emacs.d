@@ -2985,7 +2985,7 @@ Emacs Completion Engines:
  - projectile
 
 Places to Use Completion Engines:
- - find-file
+ - find-file -> ido-find-file
    - can use bookmarks instead
    - can open many files at once using wildcards
    - open a directory using dired and then open files in it with C-o
