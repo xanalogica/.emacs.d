@@ -2706,7 +2706,7 @@ Document-specific link abbreviations can also be given using the following:
 
 **** Predefined Information Capture Templates
 
-Capturing is about defining:
+Capturing is primarily about defining:
 
   1) places to quickly write things
   2) templates to help structure what you write
