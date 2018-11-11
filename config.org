@@ -2980,7 +2980,8 @@ Emacs Completion Engines
  - Ivy
 
 Place to Use Completion Engines
- - 
+ - find-file
+ - switch-buffer
 
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
