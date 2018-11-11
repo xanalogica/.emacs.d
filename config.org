@@ -2982,6 +2982,7 @@ Emacs Completion Engines:
    helm-show-kill-ring
    helm-completing-read-handlers-alist
  - Ivy    ivy + counsel
+ - projectile
 
 Places to Use Completion Engines:
  - find-file
