@@ -2975,12 +2975,12 @@ org-refile-targets
 - C-u C-c C-w  :: jump to a heading
 
 Emacs Completion Engines
- - IDO
+ - IDO    ido + ido-vertical-mode
  - Helm
  - Ivy
 
 Place to Use Completion Engines
-
+ - 
 
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
