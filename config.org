@@ -2977,6 +2977,8 @@ org-refile-targets
 Emacs Completion Engines:
  - IDO    ido + ido-vertical-mode
  - Helm
+   helm-descbinds
+   help-show-kill-ring
  - Ivy    ivy + counsel
 
 Places to Use Completion Engines:
