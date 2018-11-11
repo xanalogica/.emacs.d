@@ -2961,6 +2961,7 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 Possible Keys from within the Capture Buffer:
 
 - C-c C-c  ::  finalize the capture
+- C-u C-c C-c :: finalize the capture and jump to the new item
 - C-c C-w  ::  finalize and refile the note to a different place
 
 
