@@ -2975,6 +2975,7 @@ org-refile-targets
 - C-u C-c C-w  :: jump to a heading
 
 Emacs Completion Engines:
+ - iswitchb
  - IDO    ido + ido-ubiquitous + ido-vertical-mode
  - Helm
    helm-descbinds
