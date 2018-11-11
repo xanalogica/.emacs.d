@@ -2993,6 +2993,8 @@ Places to Use Completion Engines:
  - C-h f
  - C-h v
  - M-x NAME
+ - org-capture
+ - org-file    browse all attachments
 
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
