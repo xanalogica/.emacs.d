@@ -2958,6 +2958,12 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 - [ ]  C-c c zs :: capture--hadoop-sentinelengine
 - [ ]  C-c c zb :: capture--bookmarks-zeomega
 
+Possible Keys from within the Capture Buffer:
+
+- C-c C-c  ::  finalize the capture
+- C-c C-w  ::  finalize and refile the note to a different place
+
+
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     '(
