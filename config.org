@@ -2977,7 +2977,7 @@ org-refile-targets
 Emacs Completion Engines:
  - IDO    ido + ido-vertical-mode
  - Helm
- - Ivy
+ - Ivy    ivy + counsel
 
 Places to Use Completion Engines:
  - find-file
