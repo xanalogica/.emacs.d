@@ -2211,8 +2211,8 @@ Using flymake-goto-next-error it is possible to navigate to the errors/warnings.
   (defvar flymake-mode-map
       (make-sparse-keymap)
   )
-  (define-key flymake-mode-map '[M-S-up]   'flymake-goto-prev-error)
-  (define-key flymake-mode-map '[M-S-down] 'flymake-goto-next-error)
+;;;DISABLED  (define-key flymake-mode-map '[M-S-up]   'flymake-goto-prev-error)
+;;;DISABLED  (define-key flymake-mode-map '[M-S-down] 'flymake-goto-next-error)
 
   (define-minor-mode flymake-minor-mode-jeff
       "Toggle Hungry mode.
