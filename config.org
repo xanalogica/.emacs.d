@@ -2165,7 +2165,7 @@ avoid mousing, the [[http://www.emacswiki.org/emacs/FlyMake#toc11][FlymakeCursor
 error/warning message(s) for the current line in the minibuffer.
 
 #+BEGIN_SRC emacs-lisp
-;;;  (load-library "flymake-cursor")
+;;;DISABLED  (load-library "flymake-cursor")
 #+END_SRC
 
 ***** Key Mappings                                                          :KEYMAPPINGS:
