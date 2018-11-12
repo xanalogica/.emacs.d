@@ -2140,9 +2140,9 @@ Flymake to automatically enable =flymake-mode= upon opening any file for which
 syntax check is possible.
 
 #+BEGIN_SRC emacs-lisp
-;;;  (add-hook 'find-file-hook
-;;;      'flymake-find-file-hook
-;;;  )
+;;;DISABLED  (add-hook 'find-file-hook
+;;;DISABLED      'flymake-find-file-hook
+;;;DISABLED  )
 #+END_SRC
 
 ***** Presentation
