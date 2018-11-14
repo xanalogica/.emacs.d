@@ -3439,7 +3439,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; Automotive
 ;; HomeDecor
       ("~/Dropbox/Documents/Health.org"   :tag . "REFILING")
-;; Exercise
+        ;; Exercise Habits
 ;; Diet
 ;; Mental
       ("~/Dropbox/Documents/Finance.org"  :tag . "REFILING")
