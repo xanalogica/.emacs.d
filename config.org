@@ -3443,7 +3443,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Sleep Habits
         ;; Martial Arts
 ;; Diet
-;; Mental
+        ;; Mental Habits and Stress Reducers
       ("~/Dropbox/Documents/Finance.org"  :tag . "REFILING")
       ("~/Dropbox/Documents/Travel.org"   :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"  :tag . "REFILING")
