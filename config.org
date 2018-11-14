@@ -1141,14 +1141,6 @@ Two commands are defined in this mode:
  - org-capture
  - org-file    browse all attachments
 
-
-
-
-
-
-
-
-
 ** Screen Widgets and UI Behavior
 :PROPERTIES:
 :VISIBILITY: children
