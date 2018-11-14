@@ -3483,7 +3483,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
   ;; (nil                              :maxlevel . 1) ;; headlines in the current file
         ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
         ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
-        ;;         ("~/notes/tech-sysadmin.org"      :tag      . "REFILING")
         ;;         ("~/notes/tech-gadgets.org"       :tag      . "REFILING")
         ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
 
