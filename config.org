@@ -1158,7 +1158,7 @@ Two commands are defined in this mode:
 
   (setq ido-use-filename-at-point 'guess)
   (setq ido-file-extensions-order  ;; customize the display order of files
-    '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
+    '(".org" ".txt" ".py" ".xml" ".el" ".ini" ".cfg"))
 
   (autoload 'idomenu "idomenu" nil t)
 #+END_SRC
