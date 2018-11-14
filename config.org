@@ -1156,6 +1156,23 @@ install package: Counsel
 
 Undo-Tree?
 
+(ivy-mode 1)
+
+#+BEGIN_SRC emacs-lisp :results silent :exports code
+  (setq org-completion-use-ido nil)
+
+  ;; Enable IDO Everywhere
+  (setq ido-enable-flex-matching t)
+  (setq ido-everywhere t)
+  (ido-mode 1)
+
+  (setq ido-use-filename-at-point 'guess)
+  (setq ido-file-extensions-order  ;; customize the display order of files
+    '(".org" ".txt" ".py" ".xml" ".el" ".ini" ".cfg"))
+
+  (autoload 'idomenu "idomenu" nil t)
+#+END_SRC
+
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (setq org-completion-use-ido nil)
 
