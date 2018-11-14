@@ -1150,6 +1150,9 @@ Two commands are defined in this mode:
 
 **** Configuring Auto-Completion
 
+install package: ivy
+
+
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (setq org-completion-use-ido nil)
 
