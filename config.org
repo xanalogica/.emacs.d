@@ -3422,7 +3422,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 #+BEGIN_SRC emacs-lisp	:results silent
   (setq org-refile-targets
     '( ; file(s) to look inside of                           ; destination headings
-      ("~/Dropbox/Documents/quotes.org"   :regexp . "Quotations")
+      ("~/Dropbox/Documents/Quotes.org"   :regexp . "Quotations")
       ("~/Dropbox/Documents/Personal.org" :maxlevel . 1   :tag      . "REFILING")
 
 ;; Health.org
