@@ -1163,7 +1163,7 @@ Two commands are defined in this mode:
   (autoload 'idomenu "idomenu" nil t)
 #+END_SRC
 
-**** Auto-Completion Keys at a Prompt
+**** IDO Auto-Completion Keys at a Prompt
 - C-f		:: revert to the old find-file completion engine
 - C-b		:: revert to the old switch-buffer completion engine
 - C-d		:: Opens a dired buffer in the current directory
