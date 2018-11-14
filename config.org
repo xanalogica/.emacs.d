@@ -1150,13 +1150,13 @@ Two commands are defined in this mode:
 
 #+BEGIN_SRC emacs-lisp
   ;; Enable IDO Eerywhere
+  (setq ido-enable-flex-matching t)
+  (setq ido-everywhere t)
+  (ido-mode 1)
 
 
 
   (setq org-completion-use-ido nil)
-  (setq ido-enable-flex-matching t)
-  (setq ido-everywhere t)
-  (ido-mode 1)
 
   (setq ido-use-filename-at-point 'guess)
   (setq ido-file-extensions-order '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
