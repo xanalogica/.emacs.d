@@ -1118,6 +1118,37 @@ Two commands are defined in this mode:
 
 - =M-x yas/new-snipper=           (to create a new one)
 
+*** Auto-Completion
+
+Emacs Completion Engines:
+ - iswitchb
+ - IDO    ido + ido-ubiquitous + ido-vertical-mode
+ - Helm
+   helm-descbinds
+   helm-show-kill-ring
+   helm-completing-read-handlers-alist
+ - Ivy    ivy + counsel
+ - projectile
+
+Places to Use Completion Engines:
+ - C-x C-f :: find-file -> ido-find-file
+   - can use bookmarks instead
+   - can open many files at once using wildcards
+   - open a directory using dired and then open files in it with C-o
+ - C-x b :: switch-to-buffer -> ido-switch-buffer
+ - C-h f
+ - C-h v
+ - M-x NAME
+ - org-capture
+ - org-file    browse all attachments
+
+
+
+
+
+
+
+
 
 ** Screen Widgets and UI Behavior
 :PROPERTIES:
@@ -2973,29 +3004,6 @@ org-refile-targets
 
 - C-c C-w  :: org-refile
 - C-u C-c C-w  :: jump to a heading
-
-Emacs Completion Engines:
- - iswitchb
- - IDO    ido + ido-ubiquitous + ido-vertical-mode
- - Helm
-   helm-descbinds
-   helm-show-kill-ring
-   helm-completing-read-handlers-alist
- - Ivy    ivy + counsel
- - projectile
-
-Places to Use Completion Engines:
- - C-x C-f :: find-file -> ido-find-file
-   - can use bookmarks instead
-   - can open many files at once using wildcards
-   - open a directory using dired and then open files in it with C-o
- - C-x b :: switch-to-buffer -> ido-switch-buffer
- - C-h f
- - C-h v
- - M-x NAME
- - org-capture
- - org-file    browse all attachments
-
 
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
