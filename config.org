@@ -3422,12 +3422,12 @@ used, equivalent to the value `((nil . (:level . 1))'.
 #+BEGIN_SRC emacs-lisp	:results silent
   (setq org-refile-targets
     '( ; file(s) to look inside of                           ; destination headings
-      ("~/Dropbox/Documents/quotes.org"   :regexp . "Disorganized Quotations")
-      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
-      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
-      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
+;;;      ("~/Dropbox/Documents/quotes.org"   :regexp . "Disorganized Quotations")
+;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
+;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
+;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
 
-      ("~/Dropbox/Documents/Travel.org"   :regexp . nil) ;; all headings in Travel.org
+;;;      ("~/Dropbox/Documents/Travel.org"   :regexp . nil) ;; all headings in Travel.org
       ;; Travel.org		AustinTrip.org-> Travel.org
 
       ;; file:Church.org *Church:%20River%20of%20Glory
