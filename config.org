@@ -3491,8 +3491,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
         ;;         ("~/Clients/ZeOmega/zeomega.org"  :tag      . "REFILING")
 
-  ;; (org-agenda-files     :maxlevel . 2)  ;; top two headline levels in any agenda file
-
   ;;    (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
   ;;    (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
   ;;    (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
