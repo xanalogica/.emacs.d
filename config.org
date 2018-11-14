@@ -3433,11 +3433,12 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Books
         ;; Events
         ;; FunPlaces
-;; Christmas
-;; Halloween
-;; Birthday
-;; Automotive
-;; HomeDecor
+        ;; Christmas
+        ;; Halloween
+        ;; Valentine
+        ;; Birthdays
+        ;; Automotive
+        ;; HomeDecor
       ("~/Dropbox/Documents/Health.org"   :tag . "REFILING")
         ;; Exercise Habits
         ;; Sleep Habits
