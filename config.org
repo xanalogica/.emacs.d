@@ -1142,7 +1142,6 @@ Two commands are defined in this mode:
  - org-capture
  - org-file    browse all attachments
 
-
   (setq org-completion-use-ido nil)
 
 **** Auto-Completion Keys at a Prompt
