@@ -1151,7 +1151,7 @@ Two commands are defined in this mode:
 **** Configuring Auto-Completion
 
 install package: Ivy
-install package: Swiper
+install package: Swiper (alternative to isearch interface)
 
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
