@@ -1178,7 +1178,7 @@ Two commands are defined in this mode:
 - C-s		:: move to next item in list
 - C-r		:: move to previous item in list
 
-- C-SPC		:: restrict list of options to what I've typed so far
+- C-SPC	:: restrict list of options to what I've typed so far
 
 
 
