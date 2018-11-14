@@ -1136,12 +1136,12 @@ Two commands are defined in this mode:
    - can open many files at once using wildcards
    - open a directory using dired and then open files in it with C-o
 
-- switch buffers
+- switch buffers  C-x b :: switch-to-buffer -> ido-switch-buffer
+
 - navigate directories
 
 
 
- - C-x b :: switch-to-buffer -> ido-switch-buffer
  - C-h f
  - C-h v
  - M-x NAME
