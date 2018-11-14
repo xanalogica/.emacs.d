@@ -3450,7 +3450,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
         ;; Android
         ;; Docker
-;; Emacs
+        ;; Emacs
 ;; Gadgets
 ;; Python
 ;; SysAdmin
