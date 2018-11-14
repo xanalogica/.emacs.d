@@ -1142,11 +1142,10 @@ Two commands are defined in this mode:
  - org-capture
  - org-file    browse all attachments
 
-  (setq org-completion-use-ido nil)
-
 **** Configuring Auto-Completion
 
 #+BEGIN_SRC emacs-lisp
+  (setq org-completion-use-ido nil)
   (setq ido-enable-flex-matching t)
   (setq ido-everywhere t)
   (ido-mode 1)
@@ -1156,8 +1155,6 @@ Two commands are defined in this mode:
 
   (autoload 'idomenu "idomenu" nil t)
 #+END_SRC
-
-
 
 **** Auto-Completion Keys at a Prompt
 - C-f		:: to fall back to find file (without ido-mode)
