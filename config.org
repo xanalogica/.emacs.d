@@ -3480,8 +3480,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
   )
 #+END_SRC
 
-        ;; ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
-        ;; ("~/notes/finance.org"                       :maxlevel . 1   :tag      . "REFILING")
         ;; ("~/notes/zeomega.org"                       :maxlevel . 1   :tag      . "REFILING")
         ;;         (nil                              :maxlevel . 1) ;; headlines in the current file
         ;;         (org-agenda-files                 :maxlevel . 2)
