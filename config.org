@@ -3425,13 +3425,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/quotes.org"   :regexp . "Quotations")
       ("~/Dropbox/Documents/Personal.org" :maxlevel . 1   :tag      . "REFILING")
 
-
-
-
-
 Health.org
 Finance.org
-Personal.org
 Glossary
 People
 Songs
