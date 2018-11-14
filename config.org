@@ -3443,7 +3443,7 @@ Automotive
 HomeDecor
 BlogIdea
 BlogFeature
-
+Sentinel
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
