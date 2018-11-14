@@ -3433,6 +3433,8 @@ Travel.org
 Books
 Events
 FunPlace
+Christmas
+Halloween
 Mental
 Automotive
 HomeDecor
