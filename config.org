@@ -1149,18 +1149,21 @@ Two commands are defined in this mode:
 **** Configuring Auto-Completion
 
 #+BEGIN_SRC emacs-lisp
+  (setq org-completion-use-ido nil)
   ;; Enable IDO Eerywhere
   (setq ido-enable-flex-matching t)
   (setq ido-everywhere t)
   (ido-mode 1)
 
-  (setq org-completion-use-ido nil)
 
   (setq ido-use-filename-at-point 'guess)
   (setq ido-file-extensions-order '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
 
   (autoload 'idomenu "idomenu" nil t)
 #+END_SRC
+
+#+RESULTS:
+: idomenu
 
 **** Auto-Completion Keys at a Prompt
 - C-f		:: to fall back to find file (without ido-mode)
