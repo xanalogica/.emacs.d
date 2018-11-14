@@ -3423,6 +3423,12 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-refile-targets
     '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/quotes.org"   :regexp . "Quotations")
+      ("~/notes/personal.org"                      :maxlevel . 1   :tag      . "REFILING")
+
+
+
+
+
 Health.org
 Finance.org
 Personal.org
