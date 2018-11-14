@@ -1119,8 +1119,7 @@ Two commands are defined in this mode:
 - =M-x yas/new-snipper=           (to create a new one)
 
 *** Auto-Completion
-
-Emacs Completion Engines:
+**** Emacs Completion Engines:
  - iswitchb
  - IDO    ido + ido-ubiquitous + ido-vertical-mode
  - Helm
