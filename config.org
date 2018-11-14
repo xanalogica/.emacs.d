@@ -1183,6 +1183,8 @@ Two commands are defined in this mode:
 - //		:: go to the root directory
 - ~/		:: go to your home directory
 
+- M-d           :: searches for the input in all subdirectories
+
 - C-j		:: create a new file named with the text you entered
 - M-m		:: creates a new subdirectory to the directory you're in
 
