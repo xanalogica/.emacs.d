@@ -3433,6 +3433,10 @@ Travel.org
 Books
 Events
 Mental
+Automotive
+HomeDecor
+BlogIdea
+BlogFeature
 
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
