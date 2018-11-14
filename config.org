@@ -3464,7 +3464,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ;; file:HomeDecor.org
       ;; Blog-logfile.org
       ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
-      ;; stashed links
 
       ;; unclassified personal tasks
       ;;   - define a recurring weekly task to sort them
