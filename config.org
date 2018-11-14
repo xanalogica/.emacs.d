@@ -3445,8 +3445,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Finance.org"  :tag . "REFILING")
       ("~/Dropbox/Documents/Travel.org"   :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"  :tag . "REFILING")
-;; Sentinel
-;; ClicBank
+        ;; Sentinel Entries
+        ;; ClicBank Entries
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 
