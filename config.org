@@ -3425,6 +3425,14 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/quotes.org"   :regexp . "Quotations")
 Health.org
 Finance.org
+Personal.org
+Glossary
+People
+Songs
+Travel.org
+Books
+Events
+Mental
 
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
