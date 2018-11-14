@@ -1178,6 +1178,9 @@ Two commands are defined in this mode:
 - C-s		:: move to next item in list
 - C-r		:: move to previous item in list
 
+
+
+
 - //		:: go to the root directory
 - ~/		:: go to your home directory
 
