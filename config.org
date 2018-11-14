@@ -1175,6 +1175,7 @@ Two commands are defined in this mode:
 - C-c           :: toggles the ignoring of case in buffer and file names
 - C-p           :: toggles anchoring prefix matching at the beginning of a name
 
+
 - C-s		:: move to next item in list
 - C-r		:: move to previous item in list
 
