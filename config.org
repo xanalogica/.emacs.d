@@ -1180,8 +1180,6 @@ Two commands are defined in this mode:
 
 - C-SPC	:: restrict list of options to what I've typed so far
 
-
-
 - //		:: go to the root directory
 - ~/		:: go to your home directory
 
