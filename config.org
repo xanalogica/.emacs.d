@@ -1152,7 +1152,7 @@ Two commands are defined in this mode:
 
 install package: Ivy
 install package: Swiper (alternative to isearch interface)
-
+install package: Counsel
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (setq org-completion-use-ido nil)
