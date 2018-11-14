@@ -3462,7 +3462,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
       ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
 
-;; Glossary
 ;; BlogIdea
 ;; BlogFeature
 
