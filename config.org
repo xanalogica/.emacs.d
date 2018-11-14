@@ -1150,6 +1150,7 @@ Two commands are defined in this mode:
 
 #+BEGIN_SRC emacs-lisp
   (setq org-completion-use-ido nil)
+
   ;; Enable IDO Eerywhere
   (setq ido-enable-flex-matching t)
   (setq ido-everywhere t)
