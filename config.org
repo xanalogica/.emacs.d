@@ -3481,7 +3481,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 #+END_SRC
 
   ;; (nil                              :maxlevel . 1) ;; headlines in the current file
-        ;;         ("~/notes/tech-emacs.org"         :tag      . "REFILING")
         ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
         ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
         ;;         ("~/notes/tech-sysadmin.org"      :tag      . "REFILING")
