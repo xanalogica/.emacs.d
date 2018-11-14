@@ -1154,8 +1154,6 @@ Two commands are defined in this mode:
   (setq ido-everywhere t)
   (ido-mode 1)
 
-
-
   (setq org-completion-use-ido nil)
 
   (setq ido-use-filename-at-point 'guess)
