@@ -1121,7 +1121,7 @@ Two commands are defined in this mode:
 *** Auto-Completion
 **** Emacs Completion Engines:
  - iswitchb
- - IDO    ido + ido-ubiquitous + ido-vertical-mode
+ - IDO (built into Emacs)   ido + ido-ubiquitous + ido-vertical-mode
  - Helm
    helm-descbinds
    helm-show-kill-ring
