@@ -3428,6 +3428,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/Quotes.org"   :tag . "REFILING")
       ("~/Dropbox/Documents/Personal.org" :tag . "REFILING")
+;; People
+;; Songs
+;; Books
+;; Events
       ("~/Dropbox/Documents/Health.org"   :tag . "REFILING")
       ("~/Dropbox/Documents/Finance.org"  :tag . "REFILING")
       ("~/Dropbox/Documents/Travel.org"   :tag . "REFILING")
@@ -3436,10 +3440,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 
 ;; Glossary
-;; People
-;; Songs
-;; Books
-;; Events
 ;; Exercise
 ;; Diet
 ;; FunPlace
