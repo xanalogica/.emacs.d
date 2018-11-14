@@ -1172,7 +1172,7 @@ Two commands are defined in this mode:
 - C-d		:: Opens a dired buffer in the current directory
 
 - C-a           :: toggles the showing of ignored files
-- C-c           :: toggles the ignoring of case
+- C-c           :: toggles the ignoring of case in buffer and file names
 
 
 - C-s		:: move to next item in list
