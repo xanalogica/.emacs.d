@@ -1190,7 +1190,6 @@ Two commands are defined in this mode:
 - C-j		:: create a new file named with the text you entered
 - M-m		:: creates a new subdirectory to the directory you're in
 
-
 ** Screen Widgets and UI Behavior
 :PROPERTIES:
 :VISIBILITY: children
