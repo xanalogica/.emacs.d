@@ -1173,7 +1173,7 @@ Undo-Tree?
   (autoload 'idomenu "idomenu" nil t)
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp :results silent :exports code
+#+BEGIN_SRC emacs-lisp :results silent :exports none
   (setq org-completion-use-ido nil)
 
   ;; Enable IDO Everywhere
