@@ -1171,6 +1171,8 @@ Two commands are defined in this mode:
 - C-b		:: revert to the old switch-buffer completion engine
 - C-d		:: Opens a dired buffer in the current directory
 
+- C-a           :: toggles the showing of ignored files
+
 - C-s		:: move to next item in list
 - C-r		:: move to previous item in list
 
