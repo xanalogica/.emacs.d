@@ -1131,6 +1131,11 @@ Two commands are defined in this mode:
  - projectile
 
 **** Places to Use Completion Engines:
+- open files
+- switch buffers
+
+
+
  - C-x C-f :: find-file -> ido-find-file
    - can use bookmarks instead
    - can open many files at once using wildcards
