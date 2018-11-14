@@ -3444,6 +3444,7 @@ HomeDecor
 BlogIdea
 BlogFeature
 Sentinel
+ClicBank
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
