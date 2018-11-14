@@ -3448,7 +3448,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
-;; Android
+        ;; Android
 ;; Docker
 ;; Emacs
 ;; Gadgets
