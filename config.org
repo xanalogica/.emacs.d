@@ -1139,9 +1139,6 @@ Two commands are defined in this mode:
 - switch buffers  C-x b :: switch-to-buffer -> ido-switch-buffer
 
 - navigate directories
-
-
-
  - C-h f
  - C-h v
  - M-x NAME
