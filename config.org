@@ -1123,6 +1123,7 @@ Two commands are defined in this mode:
  - iswitchb
  - The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
    - ido + ido-ubiquitous + ido-vertical-mode
+   - matches anywhere, narrows down set, has fuzzy matching
  - Helm
    helm-descbinds
    helm-show-kill-ring
