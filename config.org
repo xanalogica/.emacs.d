@@ -3461,8 +3461,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
 
-;;;      ("~/Dropbox/Documents/Travel.org"   :regexp . nil) ;; all headings in Travel.org
-
       ;; file:Church.org *Church:%20River%20of%20Glory
       ;; Church-Riverhood.org file:Church.org *Project:%20Riverhood][Church.org: Riverhood
       ;; file:HomeDecor.org
