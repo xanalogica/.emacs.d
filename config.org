@@ -3989,6 +3989,8 @@ set of Emacs behavior toggle keys.
 #+END_SRC
 
 ** Prompting Enhanced
+  (setq org-completion-use-ido nil)
+
 The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
 
 *** Keys at the Prompt
