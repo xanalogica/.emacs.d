@@ -1145,7 +1145,7 @@ Two commands are defined in this mode:
 **** Prompting Enhanced
   (setq org-completion-use-ido nil)
 
-**** Auto-Completion Keys at the Prompt
+**** Auto-Completion Keys at a Prompt
 - C-f		:: to fall back to find file (without ido-mode)
 - C-b		:: to fall back to switch to buffer (without ido-mode)
 - C-s		:: move to next item in list
