@@ -3419,7 +3419,8 @@ A list of cons cells, where
 When this variable is nil, all top-level headlines in the current buffer are
 used, equivalent to the value `((nil . (:level . 1))'.
 
-need a 'capture a link' to anything interesting that I can refile later
+
+*need a 'capture a link' to anything interesting that I can then refile*
 
 
 #+BEGIN_SRC emacs-lisp	:results silent
