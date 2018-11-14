@@ -3425,27 +3425,27 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/quotes.org"   :regexp . "Quotations")
       ("~/Dropbox/Documents/Personal.org" :maxlevel . 1   :tag      . "REFILING")
 
-Health.org
-Finance.org
-Glossary
-People
-Songs
-Travel.org
-Books
-Events
-Exercise
-Diet
-FunPlace
-Christmas
-Halloween
-Birthday
-Mental
-Automotive
-HomeDecor
-BlogIdea
-BlogFeature
-Sentinel
-ClicBank
+;; Health.org
+;; Finance.org
+;; Glossary
+;; People
+;; Songs
+;; Travel.org
+;; Books
+;; Events
+;; Exercise
+;; Diet
+;; FunPlace
+;; Christmas
+;; Halloween
+;; Birthday
+;; Mental
+;; Automotive
+;; HomeDecor
+;; BlogIdea
+;; BlogFeature
+;; Sentinel
+;; ClicBank
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
