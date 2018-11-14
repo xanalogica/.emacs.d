@@ -1158,7 +1158,6 @@ Undo-Tree?
 git-grep
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
-;;  (setq org-completion-use-ido nil)
   (ivy-mode 1)
 
 ;;; (setq ivy-use-virtual-buffers t)
