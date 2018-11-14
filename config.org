@@ -1121,7 +1121,8 @@ Two commands are defined in this mode:
 *** Auto-Completion
 **** Emacs Completion Engines:
  - iswitchb
- - IDO (built into Emacs)   ido + ido-ubiquitous + ido-vertical-mode
+ - The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
+   - ido + ido-ubiquitous + ido-vertical-mode
  - Helm
    helm-descbinds
    helm-show-kill-ring
@@ -1144,7 +1145,6 @@ Two commands are defined in this mode:
 **** Prompting Enhanced
   (setq org-completion-use-ido nil)
 
-The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
 
 ***** Keys at the Prompt
 - C-f		:: to fall back to find file (without ido-mode)
