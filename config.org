@@ -1120,6 +1120,8 @@ Two commands are defined in this mode:
 
 *** Auto-Completion
 **** Emacs Completion Engines:
+https://www.gnu.org/software/emacs/manual/html_mono/ido.html
+
  - iswitchb
  - The package [[http://emacswiki.org/emacs/InteractivelyDoThings][InteractivelyDoThings]] (IDO) is part of Emacs, starting with release 22.
    - ido + ido-ubiquitous + ido-vertical-mode
