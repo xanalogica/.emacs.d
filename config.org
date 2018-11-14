@@ -3432,6 +3432,7 @@ Songs
 Travel.org
 Books
 Events
+Exercise
 FunPlace
 Christmas
 Halloween
