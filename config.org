@@ -1144,6 +1144,21 @@ Two commands are defined in this mode:
 
   (setq org-completion-use-ido nil)
 
+**** Configuring Auto-Completion
+
+#+BEGIN_SRC emacs-lisp
+  (setq ido-enable-flex-matching t)
+  (setq ido-everywhere t)
+  (ido-mode 1)
+
+  (setq ido-use-filename-at-point 'guess)
+  (setq ido-file-extensions-order '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
+
+  (autoload 'idomenu "idomenu" nil t)
+#+END_SRC
+
+
+
 **** Auto-Completion Keys at a Prompt
 - C-f		:: to fall back to find file (without ido-mode)
 - C-b		:: to fall back to switch to buffer (without ido-mode)
@@ -1158,18 +1173,6 @@ Two commands are defined in this mode:
 - M-m		:: creates a new subdirectory to the directory you're in
 - C-SPC		:: restrict list of options to what I've typed so far
 
-***** Configuring Ido
-
-#+BEGIN_SRC emacs-lisp
-  (setq ido-enable-flex-matching t)
-  (setq ido-everywhere t)
-  (ido-mode 1)
-
-  (setq ido-use-filename-at-point 'guess)
-  (setq ido-file-extensions-order '(".org" ".txt" ".py" ".emacs" ".xml" ".el" ".ini" ".cfg" ".cnf"))
-
-  (autoload 'idomenu "idomenu" nil t)
-#+END_SRC
 
 ** Screen Widgets and UI Behavior
 :PROPERTIES:
