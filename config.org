@@ -1168,7 +1168,7 @@ Two commands are defined in this mode:
 
 **** Auto-Completion Keys at a Prompt
 - C-f		:: revert to the old find-file completion engine
-- C-b		:: to fall back to switch to buffer (without ido-mode)
+- C-b		:: revert to the old switch-buffer completion engine
 - C-s		:: move to next item in list
 - C-r		:: move to previous item in list
 
