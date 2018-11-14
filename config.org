@@ -1173,6 +1173,8 @@ Two commands are defined in this mode:
 
 - C-a           :: toggles the showing of ignored files
 
+
+
 - C-s		:: move to next item in list
 - C-r		:: move to previous item in list
 
