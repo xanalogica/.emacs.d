@@ -3452,7 +3452,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Docker
         ;; Emacs
         ;; Gadgets
-;; Python
+        ;; Python
 ;; SysAdmin
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
