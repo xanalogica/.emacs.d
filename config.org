@@ -1133,6 +1133,7 @@ Two commands are defined in this mode:
 **** Places to Use Completion Engines:
 - open files
 - switch buffers
+- navigate directories
 
 
 
