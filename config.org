@@ -3428,11 +3428,11 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/Quotes.org"   :tag . "REFILING")
       ("~/Dropbox/Documents/Personal.org" :tag . "REFILING")
-;; People
-;; Songs
-;; Books
-;; Events
-;; FunPlace
+        ;; People
+        ;; Songs
+        ;; Books
+        ;; Events
+        ;; FunPlace
 ;; Christmas
 ;; Halloween
 ;; Birthday
