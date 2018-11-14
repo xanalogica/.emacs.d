@@ -3423,6 +3423,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-refile-targets
     '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/quotes.org"   :regexp . "Quotations")
+
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
