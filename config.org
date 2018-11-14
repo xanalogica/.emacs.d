@@ -1150,7 +1150,8 @@ Two commands are defined in this mode:
 
 **** Configuring Auto-Completion
 
-install package: ivy
+install package: Ivy
+install package: Swiper
 
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
