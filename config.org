@@ -3453,7 +3453,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Emacs
         ;; Gadgets
         ;; Python
-;; SysAdmin
+        ;; SysAdmin
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
