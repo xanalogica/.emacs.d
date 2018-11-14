@@ -1148,7 +1148,7 @@ Two commands are defined in this mode:
 
 **** Configuring Auto-Completion
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :results silent
   (setq org-completion-use-ido nil)
 
   ;; Enable IDO Eerywhere
