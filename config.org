@@ -3439,15 +3439,17 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Birthdays
         ;; Automotive
         ;; HomeDecor
-      ("~/Dropbox/Documents/Health.org"   :tag . "REFILING")
+      ("~/Dropbox/Documents/Health.org"      :tag . "REFILING")
         ;; Exercise Habits
         ;; Sleep Habits
         ;; Martial Arts
         ;; Dietary Habits
         ;; Mental Habits and Stress Reducers
-      ("~/Dropbox/Documents/Finance.org"  :tag . "REFILING")
-      ("~/Dropbox/Documents/Travel.org"   :tag . "REFILING")
-      ("~/Dropbox/Documents/ZeOmega.org"  :tag . "REFILING")
+      ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
+      ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
+      ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
+
+      ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
 
