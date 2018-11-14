@@ -3480,7 +3480,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
   )
 #+END_SRC
 
-        ;;         (nil                              :maxlevel . 1) ;; headlines in the current file
+  ;; (nil                              :maxlevel . 1) ;; headlines in the current file
         ;;         ("~/notes/tech-emacs.org"         :tag      . "REFILING")
         ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
         ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
@@ -3488,9 +3488,9 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;;         ("~/notes/tech-gadgets.org"       :tag      . "REFILING")
         ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
 
-  ;;    (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
-  ;;    (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
-  ;;    (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
+  ;; (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
+  ;; (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
+  ;; (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
 
 **** Yanking Text under Org-Mode
 
