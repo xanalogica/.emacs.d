@@ -3429,7 +3429,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 
-
       ("~/Dropbox/Documents/Quotes.org"   :tag . "REFILING")
       ("~/Dropbox/Documents/Personal.org" :tag . "REFILING")
 
