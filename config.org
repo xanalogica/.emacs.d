@@ -3456,9 +3456,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; SysAdmin
         ;; Annex
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
-
-
-
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
