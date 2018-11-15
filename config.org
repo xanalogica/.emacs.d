@@ -3428,6 +3428,12 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
       ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
+      ("~/Dropbox/Documents/Health.org"      :tag . "REFILING")
+        ;; Exercise Habits
+        ;; Sleep Habits
+        ;; Martial Arts
+        ;; Dietary Habits
+        ;; Mental Habits and Stress Reducers
 
 
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
@@ -3443,12 +3449,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Birthdays
         ;; Automotive
         ;; HomeDecor
-      ("~/Dropbox/Documents/Health.org"      :tag . "REFILING")
-        ;; Exercise Habits
-        ;; Sleep Habits
-        ;; Martial Arts
-        ;; Dietary Habits
-        ;; Mental Habits and Stress Reducers
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
         ;; Android
