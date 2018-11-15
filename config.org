@@ -3427,10 +3427,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '( ; file(s) to look inside of                  ; destination headings
 
       ("~/Dropbox/Documents/AboutMyBlog.log" :tag . "REFILING")
+        ;; Blog Idea
+        ;; Blog Feature
       ("~/Dropbox/Documents/AboutMyEmail.log" :tag . "REFILING")
       ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
-        ;; BlogIdea
-        ;; BlogFeature
 ;; Blog-content.org
 ;; Blog-test.org
 ;; Blog-test2.org
