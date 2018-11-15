@@ -3430,11 +3430,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; BlogIdea
 ;; BlogFeature
 
-;; Blog-logfile.org
 ;; Blog-content.org
-;; Blog-test2.org
+;; Blog-logfile.org
 ;; Blog-test.org
-
+;; Blog-test2.org
 
       ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
       ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
@@ -3490,8 +3489,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
   ;; (nil                              :maxlevel . 1) ;; headlines in the current file
         ;;         ("~/notes/corporate.org"          :tag      . "REFILING")
-        ;;         ("~/notes/tech-security.org"      :tag      . "REFILING")
-        ;;         ("~/notes/group-python.org"       :tag      . "REFILING")
 
   ;; (org-agenda-files :tag . "TAG") ;; tag in headline (NO inheritance!)
   ;; (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
