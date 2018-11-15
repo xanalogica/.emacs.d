@@ -3426,13 +3426,14 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-refile-targets
     '( ; file(s) to look inside of                  ; destination headings
 
-;; BlogIdea
-;; BlogFeature
 
+      ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
 
 
 ;; Blog-content.org
       ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
+        ;; BlogIdea
+        ;; BlogFeature
 ;; Blog-test.org
 ;; Blog-test2.org
 
