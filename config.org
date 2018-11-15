@@ -3461,6 +3461,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
+;; Hadoop
 
 ;; BlogIdea
 ;; BlogFeature
