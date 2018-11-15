@@ -3427,6 +3427,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-refile-targets
     '( ; file(s) to look inside of                           ; destination headings
       ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
+      ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
 
 
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
@@ -3460,7 +3461,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
-      ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
 
 ;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 
