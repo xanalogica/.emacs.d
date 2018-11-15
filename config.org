@@ -3466,9 +3466,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; BlogIdea
 ;; BlogFeature
 
-;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
-;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
-
       ;; Blog-logfile.org
       ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
     )
