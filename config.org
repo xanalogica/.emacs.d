@@ -3430,7 +3430,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; BlogFeature
 
 ;; Blog-content.org
-;; Blog-logfile.org
+;; ("~/Dropbox/Documents/Blog-logfile.org
 ;; Blog-test.org
 ;; Blog-test2.org
 
