@@ -3428,7 +3428,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
       ("~/Dropbox/Documents/AboutMyBlog.log" :tag . "REFILING")
       ("~/Dropbox/Documents/AboutMyEmail.log" :tag . "REFILING")
-
       ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
         ;; BlogIdea
         ;; BlogFeature
