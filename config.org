@@ -3462,8 +3462,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Sentinel Entries
         ;; ClicBank Entries
 
-;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
-
 
 ;; BlogIdea
 ;; BlogFeature
