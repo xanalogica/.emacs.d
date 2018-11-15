@@ -3462,7 +3462,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Sentinel Entries
         ;; ClicBank Entries
 
-
 ;; BlogIdea
 ;; BlogFeature
 
