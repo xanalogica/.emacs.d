@@ -3446,9 +3446,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Birthdays
         ;; Automotive
         ;; HomeDecor
-
-
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
+
+
+
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
         ;; Android
