@@ -3430,10 +3430,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
 
 
-;; Blog-content.org
       ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
         ;; BlogIdea
         ;; BlogFeature
+;; Blog-content.org
 ;; Blog-test.org
 ;; Blog-test2.org
 
