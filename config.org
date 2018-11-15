@@ -3427,8 +3427,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '( ; file(s) to look inside of                  ; destination headings
 
 
-      ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
-
+      ("~/Dropbox/Documents/AboutMyBlog" :tag . "REFILING")
 
       ("~/Dropbox/Documents/Blog-logfile.org" :tag . "REFILING")
         ;; BlogIdea
