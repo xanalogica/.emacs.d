@@ -3466,7 +3466,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; BlogIdea
 ;; BlogFeature
 
-;;;      ("~/Dropbox/Documents/index.org"    :regexp . "Project: Riverhood")  ;; NEEDS A CAPTURE TEMPLATE
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Financial Dashboard")
 ;;;      ("~/Dropbox/Documents/ZeOmega.org"  :regexp . "Hadoop: Sentinel Engine")
 
