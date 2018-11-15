@@ -3426,6 +3426,16 @@ used, equivalent to the value `((nil . (:level . 1))'.
 #+BEGIN_SRC emacs-lisp	:results silent
   (setq org-refile-targets
     '( ; file(s) to look inside of                           ; destination headings
+
+;; BlogIdea
+;; BlogFeature
+
+;; Blog-logfile.org
+;; Blog-content.org
+;; Blog-test2.org
+;; Blog-test.org
+
+
       ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
       ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
       ("~/Dropbox/Documents/Health.org"      :tag . "REFILING")
@@ -3462,12 +3472,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Sentinel Entries
         ;; ClicBank Entries
 ;; Hadoop
-
-;; BlogIdea
-;; BlogFeature
-
-      ;; Blog-logfile.org
-      ;; Blog-content.org | Blog-test2.org | Blog-test.org (receives my philosophy, my memories)
     )
   )
 
