@@ -3447,10 +3447,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Automotive
         ;; HomeDecor
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
-
-
-
-      ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
         ;; Android
         ;; Docker
@@ -3459,6 +3455,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Python
         ;; SysAdmin
         ;; Annex
+
+
+
+      ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
