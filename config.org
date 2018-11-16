@@ -3896,8 +3896,9 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
       ))
 
-         ;; Groups supply their own section names when none are given
-         (:todo "WAITING" :order 8)  ; Set order of this section
+      ;; Groups supply their own section names when none are given
+      (:todo "WAITING" :order 8)  ; Set order of this section
+
          (:todo ("SOMEDAY" "TO-READ" "CHECK" "TO-WATCH" "WATCHING")
                 ;; Show this group at the end of the agenda (since it has the
                 ;; highest number). If you specified this group last, items
