@@ -3913,9 +3913,11 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
         ;; are displayed lowest-number-first.
         :order 1)
 
-         ;; After the last group, the agenda will display items that didn't
-         ;; match any of these groups, with the default order position of 99
-         )))
+      ;; After the last group, the agenda will display items that didn't
+      ;; match any of these groups, with the default order position of 99
+      )
+    )
+  )
   (org-agenda nil "a"))
 
 
