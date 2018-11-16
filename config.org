@@ -3879,6 +3879,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
         (:name "Shopping in town"
           ;; Boolean AND group matches items that match all subgroups
           :and (:tag "shopping" :tag "@town"))
+
             (:name "Food-related"
               ;; Multiple args given in list with implicit OR
               :tag ("food" "dinner"))
