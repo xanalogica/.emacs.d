@@ -3863,7 +3863,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
   (let ((org-super-agenda-groups
     '( ;; Each group has an implicit boolean OR operator between its selectors.
-         (:name "Today"  ; Optionally specify section name
+      (:name "Today"  ; Optionally specify section name
                 :time-grid t  ; Items that appear on the time grid
                 :todo "TODAY")  ; Items that have this TODO keyword
          (:name "Important"
