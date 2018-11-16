@@ -3865,13 +3865,13 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (let ((org-super-agenda-groups
     '( ;; Each group has an implicit boolean OR operator between its selectors.
 
-      (:name "Time grid items in all-uppercase with RosyBrown1 foreground"
-         :time-grid t
-         :transformer (--> it
-                           (upcase it)
-                           (propertize it 'face '(:foreground "RosyBrown1"))
-                      )
-      )
+;;;      (:name "Time grid items in all-uppercase with RosyBrown1 foreground"
+;;;         :time-grid t
+;;;         :transformer (--> it
+;;;                           (upcase it)
+;;;                           (propertize it 'face '(:foreground "RosyBrown1"))
+;;;                      )
+;;;      )
 
       (:name "Today"  ; Optionally specify section name
          :time-grid t  ; Items that appear on the time grid
