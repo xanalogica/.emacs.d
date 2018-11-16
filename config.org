@@ -3893,6 +3893,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
           :and (:regexp ("space" "NASA")
           ;; Boolean NOT also has implicit OR between selectors
           :not (:regexp "moon" :tag "planet")))
+
       ))
 
          ;; Groups supply their own section names when none are given
