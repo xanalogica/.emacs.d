@@ -3861,9 +3861,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (org-super-agenda-mode 1)
 #+END_SRC
 
-#+RESULTS:
-: t
-
 **** Custom Agenda Views (defined on C-c a <KEY>)
 #+BEGIN_SRC emacs-lisp
   (setq org-agenda-custom-commands
