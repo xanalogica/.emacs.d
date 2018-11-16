@@ -3869,7 +3869,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
          :time-grid t
          :transformer (--> it
                            (upcase it)
-                           (propertize it 'face '(:foreground "RosyBrown1")))
+                           (propertize it 'face '(:foreground "RosyBrown1"))
+                      )
       )
 
       (:name "Today"  ; Optionally specify section name
