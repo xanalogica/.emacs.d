@@ -3873,7 +3873,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 ;;;                      )
 ;;;      )
 
-      (:name "Today"  ; Optionally specify section name
+      (:name "Health"  ; Optionally specify section name
          :time-grid t  ; Items that appear on the time grid
          :tag "HEALTH")  ; Items that have this TAG keyword
 
