@@ -3875,7 +3875,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
       (:name "Today"  ; Optionally specify section name
          :time-grid t  ; Items that appear on the time grid
-         :todo "TODO")  ; Items that have this TODO keyword
+         :tag "HEALTH")  ; Items that have this TAG keyword
 
 ;;;      ;; After the last group, the agenda will display items that didn't
 ;;;      ;; match any of these groups, with the default order position of 99
