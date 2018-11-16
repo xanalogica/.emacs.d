@@ -3883,9 +3883,11 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
         (:name "Food-related"
           ;; Multiple args given in list with implicit OR
           :tag ("food" "dinner"))
-                          (:name "Personal"
-                                 :habit t
-                                 :tag "personal")
+
+        (:name "Personal"
+          :habit t
+          :tag "personal")
+
                           (:name "Space-related (non-moon-or-planet-related)"
                                  ;; Regexps match case-insensitively on the entire entry
                                  :and (:regexp ("space" "NASA")
