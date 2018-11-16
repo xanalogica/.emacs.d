@@ -3875,6 +3875,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
       ;; Set order of multiple groups at once
       (:order-multi (2
+
         (:name "Shopping in town"
           ;; Boolean AND group matches items that match all subgroups
           :and (:tag "shopping" :tag "@town"))
