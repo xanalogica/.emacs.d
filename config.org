@@ -3841,7 +3841,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :VISIBILITY: children
 :END:
 **** My Agenda Settings
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :results no
   (setq org-agenda-span
     60)	; The default number of days displayed in the Agenda view.
   (setq org-deadline-warning-days
