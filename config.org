@@ -3919,8 +3919,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     )
   )
   (org-agenda nil "a"))
-
-
 #+END_SRC
 
 **** Custom Agenda Views (defined on C-c a <KEY>)
