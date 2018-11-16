@@ -3888,10 +3888,10 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
           :habit t
           :tag "personal")
 
-                          (:name "Space-related (non-moon-or-planet-related)"
-                                 ;; Regexps match case-insensitively on the entire entry
-                                 :and (:regexp ("space" "NASA")
-                                               ;; Boolean NOT also has implicit OR between selectors
+        (:name "Space-related (non-moon-or-planet-related)"
+          ;; Regexps match case-insensitively on the entire entry
+          :and (:regexp ("space" "NASA")
+                                         ;; Boolean NOT also has implicit OR between selectors
                                                :not (:regexp "moon" :tag "planet")))))
 
          ;; Groups supply their own section names when none are given
