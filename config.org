@@ -3874,7 +3874,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 ;;;      )
 ;;;    
   
-  (org-agenda nil "a"))
+  (org-agenda nil "a")
+)
 #+END_SRC
 
 ;;;      (:name "Important"
