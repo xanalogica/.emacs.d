@@ -3868,6 +3868,15 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
          :time-grid t  ; Items that appear on the time grid
          :todo "TODAY")  ; Items that have this TODO keyword
 
+;;;
+;;;      ;; After the last group, the agenda will display items that didn't
+;;;      ;; match any of these groups, with the default order position of 99
+;;;      )
+    )
+  )
+  (org-agenda nil "a"))
+#+END_SRC
+
 ;;;      (:name "Important"
 ;;;        ;; Single arguments given alone
 ;;;         :tag "bills"
@@ -3912,14 +3921,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 ;;;        ;; their order is unspecified, defaulting to 0. Sections
 ;;;        ;; are displayed lowest-number-first.
 ;;;        :order 1)
-;;;
-;;;      ;; After the last group, the agenda will display items that didn't
-;;;      ;; match any of these groups, with the default order position of 99
-;;;      )
-    )
-  )
-  (org-agenda nil "a"))
-#+END_SRC
 
 **** Custom Agenda Views (defined on C-c a <KEY>)
 #+BEGIN_SRC emacs-lisp
