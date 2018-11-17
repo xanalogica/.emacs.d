@@ -3875,7 +3875,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
        ("J" "Jeff's Super Agenda"
          (let (
            (org-super-agenda-groups
-             '(;; Each group has an implicit boolean OR operator between its selectors.
+             '(
 		(:name "IMPORTANT"  ; Optionally specify section name
 			   :tag "important"
 			   :todo ("TODO" "STARTED"))
