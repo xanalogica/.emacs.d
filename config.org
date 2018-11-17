@@ -3884,6 +3884,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 		(:name "IMPORTANT"  ; Optionally specify section name
 			   :tag "important"
 			   :todo ("TODO" "STARTED"))
+
 		(:name "WORK"
 			   :tag "work"
 			   :todo ("TODO" "STARTED"))
