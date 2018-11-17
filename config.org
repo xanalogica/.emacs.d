@@ -3896,15 +3896,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
            (org-super-agenda-groups
              '(
-
-**** share my experiences with others, so if I fall others can continue, to help others grow
-- to develop a platform for blogging/teaching online
-
-
-
-
-
-
                 (:name "Maintain Physical and Mental Health" :tag "HEALTH" :face (:underline t)  :time-grid t)
                 (:name "Strengthen Finances to Support Me as Needed" :tag "FINANCE" :transformer (--> it (upcase it)))
                 (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
