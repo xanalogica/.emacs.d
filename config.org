@@ -3896,7 +3896,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
            (org-super-agenda-groups
              '(
-                (:name "Maintain Physical and Mental Health" :tag "HEALTH" :face (:underline t)  :time-grid t)
+                (:name "Maintain Physical and Mental Health" :tag "HEALTH")
                 (:name "Strengthen Finances to Support Me as Needed" :tag "FINANCE" :transformer (--> it (upcase it)))
                 (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
                 (:name "To Take Care of Life's Little Chores" :tag "CHORE")
