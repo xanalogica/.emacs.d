@@ -3900,7 +3900,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 **** share my experiences with others, so if I fall others can continue, to help others grow
 - to develop a platform for blogging/teaching online
 - build a supernormal social network of friends
-**** efficiently learn new things, incorporating them into me
+
 
 
 
@@ -3911,7 +3911,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Section: Chore"          :tag "CHORE")
                 (:name "Section: Event"          :tag "EVENT")
                 (:name "To Explore the World" :tag "TRAVEL")
-                (:name "Section: People"         :tag "PEOPLE")
+                (:name "To Stay in Touch with Friends"         :tag "PEOPLE")
                 (:name "Share My Experiences with Others" :tag "WRITING")
                 (:name "To Continually Learn New Things" :tag "STUDY")
 
