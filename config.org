@@ -3905,8 +3905,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
 
 
-                (:name "Section: Maintain Physical and Mental Health" :tag "HEALTH" :face (:underline t)  :time-grid t)
-                (:name "Section: Strengthen Finances to Support Me as Needed" :tag "FINANCE" :transformer (--> it (upcase it)))
+                (:name "Maintain Physical and Mental Health" :tag "HEALTH" :face (:underline t)  :time-grid t)
+                (:name "Strengthen Finances to Support Me as Needed" :tag "FINANCE" :transformer (--> it (upcase it)))
                 (:name "Section: ZeOmega"        :tag "ZEOMEGA")
                 (:name "Section: Chore"          :tag "CHORE")
                 (:name "Section: Event"          :tag "EVENT")
