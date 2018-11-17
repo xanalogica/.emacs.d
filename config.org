@@ -3903,10 +3903,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Section: Event"                 :tag "EVENT")
                 (:name "Section: Travel"                :tag "TRAVEL")
                 (:name "Section: People"                :tag "PEOPLE")
-
-                (:name "Writing" ; Optionally specify section name
-                 :tag "WRITING"  ; Items that have this TAG keyword
-                )
+                (:name "Section: Writing"               :tag "WRITING")
 
                 (:name "Study"   ; Optionally specify section name
                  :tag "STUDY"    ; Items that have this TAG keyword
