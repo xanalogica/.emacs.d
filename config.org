@@ -3912,7 +3912,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Section: Event"          :tag "EVENT")
                 (:name "To Explore the World" :tag "TRAVEL")
                 (:name "Section: People"         :tag "PEOPLE")
-                (:name "Share My Experiences with Others"        :tag "WRITING")
+                (:name "Share My Experiences with Others" :tag "WRITING")
                 (:name "To Continually Learn New Things" :tag "STUDY")
 
                 ;; After the last group, the agenda will display items that didn't
