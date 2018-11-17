@@ -3918,6 +3918,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
 #+END_SRC
 
 ? how to style the headers?
+  - put a horizontal line above header
+  - increase font size of header
 ? what is a :time-grid?
 ? appointments?
 ? :scheduled today
