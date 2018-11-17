@@ -3903,8 +3903,9 @@ The primary use of this package is for the daily/weekly agenda, made by the
                  :tag "PEOPLE"   ; Items that have this TAG keyword
                 )
 
-      (:name "Writing"  ; Optionally specify section name
-         :tag "WRITING")  ; Items that have this TAG keyword
+                (:name "Writing" ; Optionally specify section name
+                 :tag "WRITING"  ; Items that have this TAG keyword
+                )
 
       (:name "Study"  ; Optionally specify section name
          :tag "STUDY")  ; Items that have this TAG keyword
