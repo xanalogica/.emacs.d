@@ -3871,17 +3871,17 @@ The primary use of this package is for the daily/weekly agenda, made by the
        ("J" "Jeff's Super Agenda" agenda
          (org-super-agenda-mode)
 
-           ( ; list of local assignments, only one in this case
-             (org-super-agenda-groups
-               '(
-                  (:name "Health"  ; Optionally specify section name
-                   :time-grid t    ; Items that appear on the time grid
-                   :tag "HEALTH"   ; Items that have this TAG keyword
-                  )
+         ( ; list of local assignments, only one in this case
+           (org-super-agenda-groups
+             '(
+                (:name "Health"  ; Optionally specify section name
+                 :time-grid t    ; Items that appear on the time grid
+                 :tag "HEALTH"   ; Items that have this TAG keyword
                 )
-             )
+              )
            )
-           (org-agenda nil "a")
+         )
+         (org-agenda nil "a")
 
        )
      )
