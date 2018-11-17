@@ -3888,6 +3888,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 #+END_SRC
 
 ? what is a :time-grid?
+? appointments?
 
 
 (setq org-agenda-custom-commands
@@ -3898,8 +3899,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
              (:name "Next Items"
                     :time-grid t
                     :tag ("NEXT" "outbox"))
-             (:name "Important"
-                    :priority "A")
              (:name "Today"
                     :time-grid t
                     :scheduled today)
