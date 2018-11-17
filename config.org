@@ -3899,10 +3899,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Section: Health"  :time-grid t  :tag "HEALTH")
                 (:name "Section: Finance"               :tag "FINANCE")
                 (:name "Section: ZeOmega"               :tag "ZEOMEGA")
-
-                (:name "Chore"   ; Optionally specify section name
-                 :tag "CHORE"    ; Items that have this TAG keyword
-                )
+                (:name "Section: Chore"                 :tag "CHORE")
 
                 (:name "Event"   ; Optionally specify section name
                  :tag "EVENT"    ; Items that have this TAG keyword
