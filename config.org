@@ -3869,6 +3869,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
   (setq org-agenda-custom-commands
     '(  ; (key desc type match settings files)
        ("J" "Jeff's Super Agenda" agenda
+         (org-super-agenda-mode)
          (let
            ( ; list of local assignments, only one in this case
              (org-super-agenda-groups
