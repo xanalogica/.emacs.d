@@ -3896,15 +3896,15 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
            (org-super-agenda-groups
              '(
-                (:name "Section: Health"         :face (:underline t)  :time-grid t  :tag "HEALTH")
-                (:name "Section: Finance"               :tag "FINANCE")
-                (:name "Section: ZeOmega"               :tag "ZEOMEGA")
-                (:name "Section: Chore"                 :tag "CHORE")
-                (:name "Section: Event"                 :tag "EVENT")
-                (:name "Section: Travel"                :tag "TRAVEL")
-                (:name "Section: People"                :tag "PEOPLE")
-                (:name "Section: Writing"               :tag "WRITING")
-                (:name "Section: Study"                 :tag "STUDY")
+                (:name "Section: Health"         :tag "HEALTH" :face (:underline t)  :time-grid t  )
+                (:name "Section: Finance"        :tag "FINANCE")
+                (:name "Section: ZeOmega"        :tag "ZEOMEGA")
+                (:name "Section: Chore"          :tag "CHORE")
+                (:name "Section: Event"          :tag "EVENT")
+                (:name "Section: Travel"         :tag "TRAVEL")
+                (:name "Section: People"         :tag "PEOPLE")
+                (:name "Section: Writing"        :tag "WRITING")
+                (:name "Section: Study"          :tag "STUDY")
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
