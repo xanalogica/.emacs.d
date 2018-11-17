@@ -3896,8 +3896,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
            (org-super-agenda-groups
              '(
-                (:name "Section: Health"         :tag "HEALTH" :face (:underline t)  :time-grid t  )
-                (:name "Section: Finance"        :tag "FINANCE")
+                (:name "Section: Health"         :tag "HEALTH" :face (:underline t)  :time-grid t)
+                (:name "Section: Finance"        :tag "FINANCE" :transformer (--> it (upcase it)))
                 (:name "Section: ZeOmega"        :tag "ZEOMEGA")
                 (:name "Section: Chore"          :tag "CHORE")
                 (:name "Section: Event"          :tag "EVENT")
