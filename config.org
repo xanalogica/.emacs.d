@@ -3912,7 +3912,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
            )
          )
          (org-agenda nil "a")
-         ("/tmp/AgendaPeriod.html")
        )
      )
   )
