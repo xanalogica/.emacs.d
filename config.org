@@ -3896,8 +3896,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
            (org-super-agenda-groups
              '(
-                (:name "=== Maintain Physical and Mental Health ===========" :tag "HEALTH")
-                (:name "=== To Not Worry about Money ===" :tag "FINANCE")
+                (:name "=== Maintain Physical and Mental Health ===" :tag "HEALTH")
+                (:name "=== To Not Worry about Money ==============" :tag "FINANCE")
                 (:name "=== To Have a Fantastic Career" :tag "ZEOMEGA")
                 (:name "=== To Take Care of Life's Little Chores" :tag "CHORE")
                 (:name "=== To Experience Life's Magic" :tag "EVENT")
