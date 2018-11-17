@@ -3907,8 +3907,9 @@ The primary use of this package is for the daily/weekly agenda, made by the
                  :tag "WRITING"  ; Items that have this TAG keyword
                 )
 
-      (:name "Study"  ; Optionally specify section name
-         :tag "STUDY")  ; Items that have this TAG keyword
+                (:name "Study"   ; Optionally specify section name
+                 :tag "STUDY"    ; Items that have this TAG keyword
+                )
 
 ;;;      ;; After the last group, the agenda will display items that didn't
 ;;;      ;; match any of these groups, with the default order position of 99
