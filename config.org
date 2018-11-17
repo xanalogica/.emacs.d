@@ -3900,10 +3900,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Section: Finance"               :tag "FINANCE")
                 (:name "Section: ZeOmega"               :tag "ZEOMEGA")
                 (:name "Section: Chore"                 :tag "CHORE")
-
-                (:name "Event"   ; Optionally specify section name
-                 :tag "EVENT"    ; Items that have this TAG keyword
-                )
+                (:name "Section: Event"                 :tag "EVENT")
 
                 (:name "Travel"  ; Optionally specify section name
                  :tag "TRAVEL"   ; Items that have this TAG keyword
