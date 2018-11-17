@@ -3881,10 +3881,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
                  :tag "HEALTH")  ; Items that have this TAG keyword
 
 
-		(:name "IMPORTANT"  ; Optionally specify section name
-			   :tag "important"
-			   :todo ("TODO" "STARTED"))
-
 		(:name "WORK"
 			   :tag "work"
 			   :todo ("TODO" "STARTED"))
