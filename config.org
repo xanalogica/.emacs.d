@@ -3864,6 +3864,26 @@ The primary use of this package is for the daily/weekly agenda, made by the
 ~org-agenda-list~ command, but it also works for other agenda views, like
 ~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
 
+
+("n" "no TODO events +180d"
+                 ((agenda "no TODO events +180d"
+                          ((org-agenda-span 180)
+                           (org-agenda-time-grid nil)
+                           (org-agenda-entry-types '(:timestamp :sexp))
+                           (org-agenda-skip-function
+                            '(or
+                              (org-agenda-skip-entry-if 'todo 'any);; skip if any TODO state is found
+                              (org-agenda-skip-entry-if 'category "infonova");; skip if any TODO state is found
+                              (my-skip-tag "lp")
+                              )
+                            )
+                           ;;(org-agenda-skip-function '(my-skip-tag "lp"))
+                          )))
+                 nil ("~/org/agenda_180d_filtered.html"))
+
+
+
+
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
