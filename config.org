@@ -3873,13 +3873,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
          agenda
        )
        ("J" "Jeff's Super Agenda"
-
-       )
-     )
-  )
-#+END_SRC
-
-(let ((org-super-agenda-groups 
+         (let (
+           (org-super-agenda-groups
 	   '(;; Each group has an implicit boolean OR operator between its selectors.
 		(:name "IMPORTANT"  ; Optionally specify section name
 			   :tag "important"
@@ -3892,6 +3887,15 @@ The primary use of this package is for the daily/weekly agenda, made by the
 			   :todo ("TODO" "STARTED"))			   
 		)))
 		(org-agenda nil "a"))
+
+
+
+
+       )
+     )
+  )
+#+END_SRC
+
 
 
 
