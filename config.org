@@ -3921,32 +3921,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
 ? :scheduled today
 ? use :habit?
 
-
-(setq org-agenda-custom-commands
-      '(("c" "Super Agenda" agenda
-         (org-super-agenda-mode)
-         ((org-super-agenda-groups
-           '(
-             (:name "Next Items"
-                    :time-grid t
-                    :tag ("NEXT" "outbox"))
-             (:name "Today"
-                    :time-grid t
-                    :scheduled today)
-             )))
-         (org-agenda nil "a"))))
-
-
-(
-  ("n" "Agenda and all TODOs"
-    (
-      (agenda "")
-      (alltodo "")
-    )
-  )
-)
-
-
 (setq org-agenda-custom-commands
       '(("x" agenda)
         ("y" agenda*)
