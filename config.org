@@ -3900,7 +3900,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Strengthen Finances to Support Me as Needed" :tag "FINANCE" :transformer (--> it (upcase it)))
                 (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
                 (:name "To Take Care of Life's Little Chores" :tag "CHORE")
-                (:name "Section: Event"          :tag "EVENT")
+                (:name "To Experience Life's Magic" :tag "EVENT")
                 (:name "To Explore the World" :tag "TRAVEL")
                 (:name "To Stay in Touch with Others" :tag "PEOPLE")
                 (:name "Share My Experiences with Others" :tag "WRITING")
