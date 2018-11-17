@@ -3877,13 +3877,10 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:name "Health"  ; Optionally specify section name
-                 :time-grid t  ; Items that appear on the time grid
-                 :tag "HEALTH")  ; Items that have this TAG keyword
+                 :time-grid t    ; Items that appear on the time grid
+                 :tag "HEALTH"   ; Items that have this TAG keyword
+                )
 
-
-		(:name "PERSONAL"
-			   :tag "personal"
-			   :todo ("TODO" "STARTED"))
 		)))
 		(org-agenda nil "a"))
        )
