@@ -3870,7 +3870,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
   (setq org-agenda-custom-commands
     '(  ; (key desc type match settings files)
        ("j" . "Jeff's Agenda"
-        agenda
+         agenda
        )
      )
   )
