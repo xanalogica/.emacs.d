@@ -3871,7 +3871,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
-
 (setq org-agenda-custom-commands
       '(("x" agenda)
         ("y" agenda*)
