@@ -3889,6 +3889,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
          (org-super-agenda-mode)
 
          ( ; list of local settings, only one in this case
+           (org-agenda-span 7)
            (org-super-agenda-groups
              '(
                 (:name "Health"  ; Optionally specify section name
