@@ -3883,8 +3883,9 @@ The primary use of this package is for the daily/weekly agenda, made by the
                  :tag "FINANCE"  ; Items that have this TAG keyword
                 )
 
-      (:name "ZeOmega"  ; Optionally specify section name
-         :tag "ZEOMEGA")  ; Items that have this TAG keyword
+                (:name "ZeOmega" ; Optionally specify section name
+                 :tag "ZEOMEGA"  ; Items that have this TAG keyword
+                )
 
       (:name "Chore"  ; Optionally specify section name
          :tag "CHORE")  ; Items that have this TAG keyword
