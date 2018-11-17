@@ -3890,7 +3890,10 @@ Another possibility is the construction of agenda views that comprise the result
 - C-c a S  ::  search entries for keywords, only with TODO keywords
 - C-c a /  ::  multi-occur across all agenda files
 - C-c a <  ::  restrict agenda commands to buffer, subtree or region
-
+- C-c a >  ::  remove a previous restriction
+- C-c a #  ::  list "stuck" projects
+- C-c a !  ::  configure what "stuck" means
+- C-c a C  ::  configure custom agenda commands
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (let (
