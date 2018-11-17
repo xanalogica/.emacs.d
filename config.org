@@ -3878,6 +3878,39 @@ The primary use of this package is for the daily/weekly agenda, made by the
                  :time-grid t    ; Items that appear on the time grid
                  :tag "HEALTH"   ; Items that have this TAG keyword
                 )
+
+                (:name "Finance" ; Optionally specify section name
+                 :tag "FINANCE"  ; Items that have this TAG keyword
+                )
+ 
+      (:name "ZeOmega"  ; Optionally specify section name
+         :tag "ZEOMEGA")  ; Items that have this TAG keyword
+
+      (:name "Chore"  ; Optionally specify section name
+         :tag "CHORE")  ; Items that have this TAG keyword
+
+      (:name "Event"  ; Optionally specify section name
+         :tag "EVENT")  ; Items that have this TAG keyword
+
+      (:name "Travel"  ; Optionally specify section name
+         :tag "TRAVEL")  ; Items that have this TAG keyword
+
+      (:name "People"  ; Optionally specify section name
+         :tag "PEOPLE")  ; Items that have this TAG keyword
+
+      (:name "Writing"  ; Optionally specify section name
+         :tag "WRITING")  ; Items that have this TAG keyword
+
+      (:name "Study"  ; Optionally specify section name
+         :tag "STUDY")  ; Items that have this TAG keyword
+
+;;;      ;; After the last group, the agenda will display items that didn't
+;;;      ;; match any of these groups, with the default order position of 99
+
+
+
+
+
               )
            )
          )
@@ -3999,36 +4032,6 @@ Another possibility is the construction of agenda views that comprise the result
 ;;;                      )
 ;;;      )
 
-      (:name "Health"  ; Optionally specify section name
-         :time-grid t  ; Items that appear on the time grid
-         :tag "HEALTH")  ; Items that have this TAG keyword
-
-      (:name "Finance"  ; Optionally specify section name
-         :tag "FINANCE")  ; Items that have this TAG keyword
-
-      (:name "ZeOmega"  ; Optionally specify section name
-         :tag "ZEOMEGA")  ; Items that have this TAG keyword
-
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
-
-      (:name "Event"  ; Optionally specify section name
-         :tag "EVENT")  ; Items that have this TAG keyword
-
-      (:name "Travel"  ; Optionally specify section name
-         :tag "TRAVEL")  ; Items that have this TAG keyword
-
-      (:name "People"  ; Optionally specify section name
-         :tag "PEOPLE")  ; Items that have this TAG keyword
-
-      (:name "Writing"  ; Optionally specify section name
-         :tag "WRITING")  ; Items that have this TAG keyword
-
-      (:name "Study"  ; Optionally specify section name
-         :tag "STUDY")  ; Items that have this TAG keyword
-
-;;;      ;; After the last group, the agenda will display items that didn't
-;;;      ;; match any of these groups, with the default order position of 99
      )
   )
 #+END_SRC
