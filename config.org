@@ -3864,8 +3864,23 @@ The primary use of this package is for the daily/weekly agenda, made by the
 ~org-agenda-list~ command, but it also works for other agenda views, like
 ~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
 
+(setq org-agenda-custom-commands
+      '(("x" agenda)
+        ("y" agenda*)
+        ("w" todo "WAITING")
+        ("W" todo-tree "WAITING")
+        ("u" tags "+boss-urgent")
+        ("v" tags-todo "+boss-urgent")
+        ("U" tags-tree "+boss-urgent")
+        ("f" occur-tree "\\<FIXME\\>")
+        ("h" . "HOME+Name tags searches") ; description for "h" prefix
+        ("hl" tags "+home+Lisa")
+        ("hp" tags "+home+Peter")
+        ("hk" tags "+home+Kim")))
+
 #+BEGIN_SRC emacs-lisp :results silent :exports code
-  (let ((org-super-agenda-groups
+  (let (
+    (org-super-agenda-groups
          '(;; Each group has an implicit boolean OR operator between its selectors.
            (:name "Today"  ; Optionally specify section name
                   :time-grid t  ; Items that appear on the time grid
