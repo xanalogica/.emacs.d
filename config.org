@@ -3890,6 +3890,10 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
          ( ; list of local settings, only one in this case
            (org-agenda-span 7)
+
+;;; (org-agenda-time-grid nil)
+;;; (org-agenda-entry-types '(:timestamp :sexp))
+
            (org-super-agenda-groups
              '(
                 (:name "Health"  ; Optionally specify section name
