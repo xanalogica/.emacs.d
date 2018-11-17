@@ -3899,7 +3899,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
 **** share my experiences with others, so if I fall others can continue, to help others grow
 - to develop a platform for blogging/teaching online
-- build a supernormal social network of friends
+
 
 
 
@@ -3907,7 +3907,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
                 (:name "Maintain Physical and Mental Health" :tag "HEALTH" :face (:underline t)  :time-grid t)
                 (:name "Strengthen Finances to Support Me as Needed" :tag "FINANCE" :transformer (--> it (upcase it)))
-                (:name "Section: ZeOmega"        :tag "ZEOMEGA")
+                (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
                 (:name "Section: Chore"          :tag "CHORE")
                 (:name "Section: Event"          :tag "EVENT")
                 (:name "To Explore the World" :tag "TRAVEL")
