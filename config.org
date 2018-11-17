@@ -3952,9 +3952,6 @@ Another possibility is the construction of agenda views that comprise the result
   (let (
     (org-super-agenda-groups
          '(;; Each group has an implicit boolean OR operator between its selectors.
-           (:name "Today"  ; Optionally specify section name
-                  :time-grid t  ; Items that appear on the time grid
-                  :todo "TODAY")  ; Items that have this TODO keyword
            (:name "Important"
                   ;; Single arguments given alone
                   :tag "bills"
