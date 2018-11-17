@@ -3878,8 +3878,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
          :tag "HEALTH")  ; Items that have this TAG keyword
 
       (:name "Finance"  ; Optionally specify section name
-         :time-grid t  ; Items that appear on the time grid
-         :tag "FINANCEHEALTH")  ; Items that have this TAG keyword
+         :tag "FINANCE")  ; Items that have this TAG keyword
 
       (:name "Health"  ; Optionally specify section name
          :time-grid t  ; Items that appear on the time grid
