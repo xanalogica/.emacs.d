@@ -3889,7 +3889,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
          (org-super-agenda-mode)
 
          ( ; list of local settings
-           (org-agenda-span 7)
+           (org-agenda-span 30)
 
 ;;; (org-agenda-time-grid nil)
 ;;; (org-agenda-entry-types '(:timestamp :sexp))
