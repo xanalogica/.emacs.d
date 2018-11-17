@@ -3881,9 +3881,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
                           )))
                  nil ("~/org/agenda_180d_filtered.html"))
 
-
-
-
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
