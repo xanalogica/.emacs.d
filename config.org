@@ -3902,8 +3902,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
              (:name "Today"
                     :time-grid t
                     :scheduled today)
-             (:priority<= "B"
-                          :order 1)
              )))
          (org-agenda nil "a"))))
 
