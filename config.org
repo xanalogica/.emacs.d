@@ -3862,7 +3862,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 The primary use of this package is for the daily/weekly agenda, made by the
 ~org-agenda-list~ command, but it also works for other agenda views, like
-org-tags-view, org-todo-list, org-search-view, etc.
+~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
 
 
 
