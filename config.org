@@ -3868,7 +3868,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
     '(  ; (key desc type match settings files)
-       ("J" "Jeff's Super Agenda"
+       ("J" "Jeff's Super Agenda" agenda
          (let
            ( ; list of local assignments, only one in this case
              (org-super-agenda-groups
