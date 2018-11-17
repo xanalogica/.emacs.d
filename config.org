@@ -3881,7 +3881,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
 Another possibility is the construction of agenda views that comprise the results of several commands, each of which creates a block in the agenda buffer. The available commands include agenda for the daily or weekly agenda (as created with C-c a a), alltodo for the global TODO list (as constructed with C-c a t), and the matching commands discussed above: todo, tags, and tags-todo. Here are two examples:
 
 - C-c a a  ::  ~org-agenda-list~  agenda for current day or week
-
+- C-c a t  ::  ~org-todo-list~    global todo list
+- C-c a T  ::  ~org-todo-list~    global todo list, prompt for keyword
 
 
 
