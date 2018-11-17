@@ -4058,86 +4058,86 @@ tags-todo.
 ;;;        :order 1)
 
 **** Custom Agenda Views (defined on C-c a <KEY>)
-#+BEGIN_SRC emacs-lisp
-  (setq org-agenda-custom-commands
-    '(
-
-       ("zq" "Questions for ZeOmega"
-         ( ;;; what reports to include
+;;; #+BEGIN_SRC emacs-lisp
+;;;   (setq org-agenda-custom-commands
+;;;     '(
+;;;
+;;;        ("zq" "Questions for ZeOmega"
+;;;          ( ;;; what reports to include
 ;;;           (agenda "")
 ;;;           (tags "ZEOMEGA")
-           (tags-todo "QUESTION")
-         )
-         ( ;;; additional settings
-           (org-agenda-files
-             '(
-                 "~/Clients/ZeOmega/notes/zeomega.org"
-              )
-           )
-         )
-       )
-
-       ("zi" "Initiatives for ZeOmega"
-         ( ;;; what reports to include
+;;;            (tags-todo "QUESTION")
+;;;          )
+;;;          ( ;;; additional settings
+;;;            (org-agenda-files
+;;;              '(
+;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
+;;;               )
+;;;            )
+;;;          )
+;;;        )
+;;;
+;;;        ("zi" "Initiatives for ZeOmega"
+;;;          ( ;;; what reports to include
 ;;;           (agenda "")
 ;;;           (tags "ZEOMEGA")
-           (tags-todo "INITIATIVE")
-         )
-         ( ;;; additional settings
-           (org-agenda-files
-             '(
-                 "~/Clients/ZeOmega/notes/zeomega.org"
-              )
-           )
-         )
-       )
-
-       ("zt" "Tasks for ZeOmega"
-         ( ;;; what reports to include
+;;;            (tags-todo "INITIATIVE")
+;;;          )
+;;;          ( ;;; additional settings
+;;;            (org-agenda-files
+;;;              '(
+;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
+;;;               )
+;;;            )
+;;;          )
+;;;        )
+;;;
+;;;        ("zt" "Tasks for ZeOmega"
+;;;          ( ;;; what reports to include
 ;;;           (agenda "")
 ;;;           (tags "ZEOMEGA")
-           (tags-todo "ZEOMEGA")
-         )
-         ( ;;; additional settings
-           (org-agenda-files
-             '(
-                 "~/Clients/ZeOmega/notes/zeomega.org"
-              )
-           )
-         )
-       )
-
-       ("zm" "Meetings for ZeOmega"
-         ( ;;; what reports to include
+;;;            (tags-todo "ZEOMEGA")
+;;;         )
+;;;          ( ;;; additional settings
+;;;            (org-agenda-files
+;;;              '(
+;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
+;;;               )
+;;;            )
+;;;          )
+;;;        )
+;;;
+;;;        ("zm" "Meetings for ZeOmega"
+;;;          ( ;;; what reports to include
 ;;;           (agenda "")
 ;;;           (tags "ZEOMEGA")
-           (tags-todo "MEETING")
-         )
-         ( ;;; additional settings
-           (org-agenda-files
-             '(
-                 "~/Clients/ZeOmega/notes/zeomega.org"
-              )
-           )
-         )
-       )
-
-       ("zs" "To-Study Items for ZeOmega"
-         ( ;;; what reports to include
-           (tags-todo "TOSTUDY")
-         )
-         ( ;;; additional settings
-           (org-agenda-files
-             '(
-                 "~/Clients/ZeOmega/notes/zeomega.org"
-              )
-           )
-         )
-       )
-
-     )
-  )
-#+END_SRC
+;;;           (tags-todo "MEETING")
+;;;         )
+;;;         ( ;;; additional settings
+;;;           (org-agenda-files
+;;;             '(
+;;;                 "~/Clients/ZeOmega/notes/zeomega.org"
+;;;              )
+;;;           )
+;;;         )
+;;;       )
+;;;
+;;;       ("zs" "To-Study Items for ZeOmega"
+;;;         ( ;;; what reports to include
+;;;           (tags-todo "TOSTUDY")
+;;;         )
+;;;         ( ;;; additional settings
+;;;           (org-agenda-files
+;;;             '(
+;;;                 "~/Clients/ZeOmega/notes/zeomega.org"
+;;;              )
+;;;           )
+;;;         )
+;;;       )
+;;;
+;;;     )
+;;;  )
+;;;#+END_SRC
 
 #+BEGIN_SRC emacs-lisp
   (defun org-agenda-format-date-aligned-jrr (date)
