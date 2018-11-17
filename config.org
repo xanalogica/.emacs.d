@@ -3865,8 +3865,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
 ~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
 
 
-
-
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (org-super-agenda-mode 1)
   (setq org-super-agenda-groups
