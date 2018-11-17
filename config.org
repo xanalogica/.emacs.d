@@ -3887,6 +3887,28 @@ The primary use of this package is for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
+(setq org-agenda-custom-commands
+      '(("c" "Super Agenda" agenda
+         (org-super-agenda-mode)
+         ((org-super-agenda-groups
+           '(
+             (:name "Next Items"
+                    :time-grid t
+                    :tag ("NEXT" "outbox"))
+             (:name "Important"
+                    :priority "A")
+             (:name "Today"
+                    :time-grid t
+                    :scheduled today)
+             (:name "Quick Picks"
+                    :effort < 00:30 ; ← that one doesn't seem to work, no?
+                    )
+             (:priority<= "B"
+                          :order 1)
+             )))
+         (org-agenda nil "a"))))
+
+
 (
   ("n" "Agenda and all TODOs"
     (
