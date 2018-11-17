@@ -3921,6 +3921,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 ? what is a :time-grid?
 ? appointments?
 ? :scheduled today
+? use :habit ?
 
 
 (setq org-agenda-custom-commands
