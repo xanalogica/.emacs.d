@@ -3872,6 +3872,9 @@ The primary use of this package is for the daily/weekly agenda, made by the
        ("j" "Jeff's Agenda"
          agenda
        )
+       ("J" "Jeff's Super Agenda"
+         agenda
+       )
      )
   )
 #+END_SRC
