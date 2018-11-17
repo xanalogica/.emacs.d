@@ -3866,6 +3866,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   ; (key desc type match settings files)
+  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
   )
 #+END_SRC
