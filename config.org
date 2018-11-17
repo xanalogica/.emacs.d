@@ -3887,6 +3887,9 @@ The primary use of this package is for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
+? what is a :time-grid?
+
+
 (setq org-agenda-custom-commands
       '(("c" "Super Agenda" agenda
          (org-super-agenda-mode)
