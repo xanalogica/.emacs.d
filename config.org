@@ -3880,7 +3880,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                  :time-grid t    ; Items that appear on the time grid
                  :tag "HEALTH"   ; Items that have this TAG keyword
                 )
-                )
+              )
                 )
                 )
 		(org-agenda nil "a"))
