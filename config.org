@@ -3896,7 +3896,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
            (org-super-agenda-groups
              '(
-                (:name "Section: Health"  :time-grid t  :tag "+HEALTH")
+                (:name "Section: Health"  :time-grid t  :tag "HEALTH")
 
                 (:name "Finance" ; Optionally specify section name
                  :tag "FINANCE"  ; Items that have this TAG keyword
