@@ -3873,17 +3873,18 @@ The primary use of this package is for the daily/weekly agenda, made by the
          agenda
        )
        ("J" "Jeff's Super Agenda"
-         (let (
-           (org-super-agenda-groups
-             '(
-                (:name "Health"  ; Optionally specify section name
-                 :time-grid t    ; Items that appear on the time grid
-                 :tag "HEALTH"   ; Items that have this TAG keyword
+         (let
+           (
+             (org-super-agenda-groups
+               '(
+                  (:name "Health"  ; Optionally specify section name
+                   :time-grid t    ; Items that appear on the time grid
+                   :tag "HEALTH"   ; Items that have this TAG keyword
+                  )
                 )
-              )
+             )
            )
-          )
-          (org-agenda nil "a")
+           (org-agenda nil "a")
          )
        )
      )
