@@ -3479,7 +3479,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-outline-path-complete-in-steps nil)  ; Refile in a single go
   (setq org-refile-allow-creating-parent-nodes 'confirm)
 
-  (setq org-refile-use-cache t)
+  (setq org-refile-use-cache nil)
   (run-with-idle-timer 300 t
     (lambda ()
       (org-refile-cache-clear)
