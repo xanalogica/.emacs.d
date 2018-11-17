@@ -3883,7 +3883,7 @@ Another possibility is the construction of agenda views that comprise the result
 - C-c a a  ::  ~org-agenda-list~  agenda for current day or week
 - C-c a t  ::  ~org-todo-list~    global todo list
 - C-c a T  ::  ~org-todo-list~    global todo list, prompt for keyword
-
+- C-c a m  ::  ~org-tags-view~    prompt for tag and display headlines
 
 
 
