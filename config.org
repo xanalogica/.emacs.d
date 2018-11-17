@@ -3873,7 +3873,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
        )
        ("J" "Jeff's Super Agenda"
          (let
-           ( ; list of assignments
+           ( ; list of local assignments
              (org-super-agenda-groups
                '(
                   (:name "Health"  ; Optionally specify section name
