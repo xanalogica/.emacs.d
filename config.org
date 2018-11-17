@@ -3903,7 +3903,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== To Experience Life's Magic" :tag "EVENT")
                 (:name "=== To Explore the World" :tag "TRAVEL")
                 (:name "=== To Stay in Touch with Others" :tag "PEOPLE")
-                (:name "=== Share My Experiences with Others" :tag "WRITING")
+                (:name "=== To Share My Experiences with Others" :tag "WRITING")
                 (:name "=== To Continually Learn New Things" :tag "STUDY")
 
                 ;; After the last group, the agenda will display items that didn't
