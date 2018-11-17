@@ -3876,6 +3876,22 @@ The primary use of this package is for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
+(let ((org-super-agenda-groups 
+	   '(;; Each group has an implicit boolean OR operator between its selectors.
+		(:name "IMPORTANT"  ; Optionally specify section name
+			   :tag "important"
+			   :todo ("TODO" "STARTED"))
+		(:name "WORK"
+			   :tag "work"
+			   :todo ("TODO" "STARTED"))
+		(:name "PERSONAL"
+			   :tag "personal"
+			   :todo ("TODO" "STARTED"))			   
+		)))
+		(org-agenda nil "a"))
+
+
+
       (:name "Health"  ; Optionally specify section name
          :time-grid t  ; Items that appear on the time grid
          :tag "HEALTH")  ; Items that have this TAG keyword
