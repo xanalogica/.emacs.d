@@ -3886,24 +3886,20 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
       (:name "Chore"  ; Optionally specify section name
          :tag "CHORE")  ; Items that have this TAG keyword
 
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
+      (:name "Event"  ; Optionally specify section name
+         :tag "EVENT")  ; Items that have this TAG keyword
 
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
+      (:name "Travel"  ; Optionally specify section name
+         :tag "TRAVEL")  ; Items that have this TAG keyword
 
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
+      (:name "People"  ; Optionally specify section name
+         :tag "PEOPLE")  ; Items that have this TAG keyword
 
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
+      (:name "Writing"  ; Optionally specify section name
+         :tag "WRITING")  ; Items that have this TAG keyword
 
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
-
-      (:name "Chore"  ; Optionally specify section name
-         :tag "CHORE")  ; Items that have this TAG keyword
-
+      (:name "Study"  ; Optionally specify section name
+         :tag "STUDY")  ; Items that have this TAG keyword
 
 ;;;      ;; After the last group, the agenda will display items that didn't
 ;;;      ;; match any of these groups, with the default order position of 99
