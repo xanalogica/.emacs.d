@@ -3876,6 +3876,11 @@ The primary use of this package is for the daily/weekly agenda, made by the
          (let (
            (org-super-agenda-groups
              '(
+                (:name "Health"  ; Optionally specify section name
+                 :time-grid t  ; Items that appear on the time grid
+                 :tag "HEALTH")  ; Items that have this TAG keyword
+
+
 		(:name "IMPORTANT"  ; Optionally specify section name
 			   :tag "important"
 			   :todo ("TODO" "STARTED"))
@@ -3887,10 +3892,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
 			   :todo ("TODO" "STARTED"))			   
 		)))
 		(org-agenda nil "a"))
-
-
-
-
        )
      )
   )
