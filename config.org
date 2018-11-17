@@ -3910,7 +3910,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "Section: ZeOmega"        :tag "ZEOMEGA")
                 (:name "Section: Chore"          :tag "CHORE")
                 (:name "Section: Event"          :tag "EVENT")
-                (:name "Section: Travel"         :tag "TRAVEL")
+                (:name "To Explore the World" :tag "TRAVEL")
                 (:name "Section: People"         :tag "PEOPLE")
                 (:name "Section: Writing"        :tag "WRITING")
                 (:name "To Continually Learn New Things" :tag "STUDY")
