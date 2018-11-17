@@ -3897,15 +3897,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
 
-**** maintain physical health, to stay in the game
-- to achieve a black belt
-- to achieve certain martial arts gymnastics
-**** increase mental effectiveness, continually
-- to have a personal assistant
-  - make phone calls
-  - do laundry
-  - do housecleaning
-  - do car repairs/maintenance
 **** share my experiences with others, so if I fall others can continue, to help others grow
 - to develop a platform for blogging/teaching online
 - build a supernormal social network of friends
