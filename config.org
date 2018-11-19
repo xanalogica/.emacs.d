@@ -3948,6 +3948,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
          ( ; list of local settings
            (org-super-agenda-groups
              '(
+                (:discard (:not (:scheduled t :deadline t)))
                 (:name "=== Habits ===" :habit t)
 
                 ;; After the last group, the agenda will display items that didn't
