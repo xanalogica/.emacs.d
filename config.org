@@ -3949,7 +3949,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:discard (:not (:scheduled t :deadline t)))
-                (:name "=== Habits ===" :habit t)
+                (:name "=== Habits ===" :habit t (:not (:tag "RECUR")))
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
