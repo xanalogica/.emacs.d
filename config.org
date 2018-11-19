@@ -3953,7 +3953,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== Short-Term Habitual Tasks ==="
                   :and (
                     :habit t
-                    (:not (:tag "RECUR")))
+                    (:not (:tag "RECUR"))
+                  )
                 )
 
                 (:name "=== Long-Term Recurring Tasks ==="
