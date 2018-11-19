@@ -3943,7 +3943,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
          ( ; list of local settings
            (org-super-agenda-groups
              '(
-                (:name "=== Health ===" :tag "HEALTH")
+                (:name "=== Habits ===" :habit t)
                 (:name "=== Finance ===" :tag "FINANCE")
                 (:name "=== ZeOmega ===" :tag "ZEOMEGA")
                 (:name "=== Chores ===" :tag "CHORE")
