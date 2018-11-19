@@ -3918,8 +3918,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
              '(
                 (:discard (:scheduled t :deadline t))
                 (:name "=== Unscheduled Shopping ===" :tag "SHOP")
-                (:name "=== Chores ===" :tag "CHORE")
-                (:name "=== SysAdmin ===" :tag "SYSADMIN")
+                (:name "=== Unscheduled Chores ===" :tag "CHORE")
+                (:name "=== Unschedule SysAdmin ===" :tag "SYSADMIN")
 
                 (:name "=== ZeOmega ===" :tag "ZEOMEGA")
 
