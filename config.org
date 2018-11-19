@@ -3920,8 +3920,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== Finance ===" :tag "FINANCE")
                 (:name "=== ZeOmega ===" :tag "ZEOMEGA")
                 (:name "=== Chores ===" :tag "CHORE")
-SysAdmin
-Shop
+                (:name "=== SysAdmin ===" :tag "SYSADMIN")
+                (:name "=== Shop ===" :tag "SHOP")
                 (:name "=== Events ===" :tag "EVENT")
                 (:name "=== Travel ===" :tag "TRAVEL")
                 (:name "=== People ===" :tag "PEOPLE")
