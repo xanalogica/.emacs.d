@@ -3966,7 +3966,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                   )
                 )
 
-                (:name "=== Long-Term Recurring Tasks ==="
+                (:name "=== Long-Term Recurring Tasks: Finance ==="
                   :and (:not (:habit t) :tag "RECUR" :tag "FINANCE")
                 )
 
