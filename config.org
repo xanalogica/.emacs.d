@@ -3963,7 +3963,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
-                (:discard (:not (:scheduled t :deadline t)))
+                (:discard (:anything t))
 
               )
            )
