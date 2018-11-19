@@ -3927,8 +3927,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== People ===" :tag "PEOPLE")
                 (:name "=== Writings ===" :tag "WRITING")
                 (:name "=== Study ===" :tag "STUDY")
-Refilings
-Church
+                (:name "=== Refilings ===" :tag "REFILING")
+                (:name "=== Church ===" :tag "CHURCH")
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
