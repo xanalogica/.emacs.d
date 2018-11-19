@@ -3926,10 +3926,11 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== Unscheduled Financials ===" :tag "FINANCE")
                 (:name "=== Unscheduled Health ===" :tag "HEALTH")
 
-                (:name "=== People ===" :tag "PEOPLE")
                 (:name "=== Church ===" :tag "CHURCH")
                 (:name "=== Writings ===" :tag "WRITING")
                 (:name "=== Study ===" :tag "STUDY")
+
+                (:name "=== People ===" :tag "PEOPLE")
                 (:name "=== Unscheduled Travel ===" :tag "TRAVEL")
                 (:name "=== Unscheduled Events ===" :tag "EVENT")
                 (:name "=== Refilings ===" :tag "REFILING")
