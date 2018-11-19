@@ -3919,6 +3919,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:discard (:scheduled t :deadline t))
                 (:name "=== Shop ===" :tag "SHOP")
                 (:name "=== Chores ===" :tag "CHORE")
+
                 (:name "=== ZeOmega ===" :tag "ZEOMEGA")
 
                 (:name "=== Health ===" :tag "HEALTH")
