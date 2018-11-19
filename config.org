@@ -3944,18 +3944,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:name "=== Habits ===" :habit t)
-                (:name "=== Finance ===" :tag "FINANCE")
-                (:name "=== ZeOmega ===" :tag "ZEOMEGA")
-                (:name "=== Chores ===" :tag "CHORE")
-                (:name "=== SysAdmin ===" :tag "SYSADMIN")
-                (:name "=== Shop ===" :tag "SHOP")
-                (:name "=== Events ===" :tag "EVENT")
-                (:name "=== Travel ===" :tag "TRAVEL")
-                (:name "=== People ===" :tag "PEOPLE")
-                (:name "=== Writings ===" :tag "WRITING")
-                (:name "=== Study ===" :tag "STUDY")
-                (:name "=== Refilings ===" :tag "REFILING")
-                (:name "=== Church ===" :tag "CHURCH")
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
