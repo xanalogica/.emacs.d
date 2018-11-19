@@ -3950,12 +3950,12 @@ The primary use of this package is for the daily/weekly agenda, made by the
              '(
                 (:discard (:not (:scheduled t :deadline t)))
 
-                (:name "=== Short-Term Habits ==="
+                (:name "=== Short-Term Habitual Tasks ==="
                   :habit t
 ;;;                  (:not (:tag "RECUR"))
                 )
 
-                (:name "=== Recurring ==="
+                (:name "=== Long-Term Recurring Tasks ==="
                   :and (
                   :not (:habit t)
                   :tag "RECUR")
