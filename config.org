@@ -3985,7 +3985,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                   :and (:not (:habit t) :tag "RECUR" :tag "TECH")
                 )
 
-                (:name "=== Long-Term Recurring Tasks ===: Other items"
+                (:name "=== Long-Term Recurring Tasks: Other items ==="
                   :and (:not (:habit t) :tag "RECUR")
                 )
 
