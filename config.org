@@ -3956,6 +3956,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                     :not (:tag "RECUR")
                     :tag "FINANCE"
                   )
+
                 )
 
                 (:name "=== Long-Term Recurring Tasks ==="
@@ -3964,7 +3965,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
-                (:discard (:anything t))
+;;                (:discard (:anything t))
 
               )
            )
