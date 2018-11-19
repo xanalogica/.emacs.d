@@ -3917,7 +3917,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:discard (:scheduled t :deadline t))
-                (:name "=== Shop ===" :tag "SHOP")
+                (:name "=== Unscheduled Shopping ===" :tag "SHOP")
                 (:name "=== Chores ===" :tag "CHORE")
                 (:name "=== SysAdmin ===" :tag "SYSADMIN")
 
