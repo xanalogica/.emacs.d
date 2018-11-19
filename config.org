@@ -3949,6 +3949,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:discard (:not (:scheduled t :deadline t)))
+
                 (:name "=== Habits ==="
                   (:habit t)
                   (:not (:tag "RECUR"))
