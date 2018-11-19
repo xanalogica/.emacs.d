@@ -3923,7 +3923,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
                 (:name "=== Unscheduled ZeOmega Work ===" :tag "ZEOMEGA")
 
-                (:name "=== Finance ===" :tag "FINANCE")
+                (:name "=== Unscheduled Financials ===" :tag "FINANCE")
                 (:name "=== Health ===" :tag "HEALTH")
 
                 (:name "=== Events ===" :tag "EVENT")
