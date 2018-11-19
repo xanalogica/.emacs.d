@@ -3923,8 +3923,8 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== ZeOmega ===" :tag "ZEOMEGA")
 
                 (:name "=== Finance ===" :tag "FINANCE")
-
                 (:name "=== Health ===" :tag "HEALTH")
+
                 (:name "=== SysAdmin ===" :tag "SYSADMIN")
                 (:name "=== Events ===" :tag "EVENT")
                 (:name "=== Travel ===" :tag "TRAVEL")
