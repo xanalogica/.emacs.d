@@ -3957,7 +3957,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
                 (:name "=== Recurring ==="
 ;;;                  (:not (:habit t))
-;;;                  (:tag "RECUR")
+                  (:tag "RECUR")
                 )
 
                 ;; After the last group, the agenda will display items that didn't
