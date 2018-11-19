@@ -3917,6 +3917,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:discard (:scheduled t :deadline t))
+
                 (:name "=== Health ===" :tag "HEALTH")
                 (:name "=== Finance ===" :tag "FINANCE")
                 (:name "=== ZeOmega ===" :tag "ZEOMEGA")
