@@ -3909,6 +3909,33 @@ The primary use of this package is for the daily/weekly agenda, made by the
          )
          (org-agenda nil "a")
        )
+
+       ("P" "Agenda for Current Period" agenda
+         (org-super-agenda-mode)
+
+         ( ; list of local settings
+           (org-agenda-span 14)
+           (org-super-agenda-groups
+             '(
+                (:name "=== Maintain Physical and Mental Health ====" :tag "HEALTH")
+                (:name "=== To Not Worry about Money ===============" :tag "FINANCE")
+                (:name "=== To Have a Fantastic Career =============" :tag "ZEOMEGA")
+                (:name "=== To Take Care of Life's Little Chores ===" :tag "CHORE")
+                (:name "=== To Experience Life's Magic =============" :tag "EVENT")
+                (:name "=== To Explore the World ===================" :tag "TRAVEL")
+                (:name "=== To Stay in Touch with Others ===========" :tag "PEOPLE")
+                (:name "=== To Share My Knowledge with Others ======" :tag "WRITING")
+                (:name "=== To Continually Learn New Things ========" :tag "STUDY")
+
+                ;; After the last group, the agenda will display items that didn't
+                ;; match any of these groups, with the default order position of 99
+              )
+           )
+         )
+         (org-agenda nil "a")
+       )
+
+
      )
   )
 #+END_SRC
