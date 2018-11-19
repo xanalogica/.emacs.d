@@ -3918,11 +3918,11 @@ The primary use of this package is for the daily/weekly agenda, made by the
              '(
                 (:discard (:scheduled t :deadline t))
                 (:name "=== Shop ===" :tag "SHOP")
+                (:name "=== Chores ===" :tag "CHORE")
+                (:name "=== ZeOmega ===" :tag "ZEOMEGA")
 
                 (:name "=== Health ===" :tag "HEALTH")
                 (:name "=== Finance ===" :tag "FINANCE")
-                (:name "=== ZeOmega ===" :tag "ZEOMEGA")
-                (:name "=== Chores ===" :tag "CHORE")
                 (:name "=== SysAdmin ===" :tag "SYSADMIN")
                 (:name "=== Events ===" :tag "EVENT")
                 (:name "=== Travel ===" :tag "TRAVEL")
