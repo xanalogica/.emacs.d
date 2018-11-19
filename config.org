@@ -3961,6 +3961,9 @@ The primary use of this package is for the daily/weekly agenda, made by the
 
                 (:name "=== Long-Term Recurring Tasks ==="
                   :and (:not (:habit t) :tag "RECUR")
+
+                  (:name "Blah2"
+                  )
                 )
 
                 ;; After the last group, the agenda will display items that didn't
