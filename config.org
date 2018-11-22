@@ -225,6 +225,8 @@ The ~undo-tree~ emacs package is great for visualizing the undo tree.
   (defalias 'redo 'undo-tree-redo)
   (global-set-key (kbd "C-S-z") 'redo)
 
+  ;;; C-x u to run undo-tree-visualize
+
 #+END_SRC
 
 *** Content Encryption
