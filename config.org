@@ -3032,7 +3032,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 - [[https://orgmode.org/manual/Template-expansion.html#Template-expansion][The Org Manual: Template expansion]]
 
-- %(org-cliplink-capture)  :: 
+- %(org-cliplink-capture)  :: insert a capture link w/description
 - %^G                      :: prompt for tags to add, from tags in all agenda files
 - %U                       :: inactive timestamp w/time
 - %i                       :: selected content when capturing
