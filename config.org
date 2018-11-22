@@ -3037,7 +3037,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 - %U                       :: inactive timestamp w/time
 - %i                       :: selected content when capturing
 - %?                       :: finally position cursor here
-- %a :: annotation, normally the link created with ~org-store-link~
+- %a                       :: annotation, normally the link created with ~org-store-link~
 
 #+NAME: capture--links-generic
 #+BEGIN_SRC text
