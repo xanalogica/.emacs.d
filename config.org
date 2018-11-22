@@ -3136,6 +3136,12 @@ org-refile-targets
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     '(
+
+#+NAME: capture--links-generic
+#+NAME: capture--notes-generic
+#+NAME: capture--tasks-generic
+
+
        ("b"
           <<capture--bookmarks-personal>>
        )
