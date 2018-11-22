@@ -3146,7 +3146,6 @@ org-refile-targets
           <<capture--tasks-generic>>
        )
 
-
        ("b"
           <<capture--bookmarks-personal>>
        )
