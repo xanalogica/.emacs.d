@@ -3040,6 +3040,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 - %a                       :: annotation, normally the link created with ~org-store-link~
 - %x                       :: content of the X clipboard
 - %^{Note Title}           :: prompt for value and insert where the tag is
+- %^{Task Title}           :: prompt for value and insert where the tag is
 
 #+NAME: capture--links-generic
 #+BEGIN_SRC text
