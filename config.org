@@ -3063,7 +3063,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
                  "Captured Notes"
   )
 
-  "*** %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\nx:%x\na:%a\n%?"
+  "*** %^{Note Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\nx:%x\na:%a\n%?"
 
   :prepend nil          ;; put newest quote at the bottom of the section
   :kill-buffer t        ;; if file was opened just to collect data, close the buffer after
