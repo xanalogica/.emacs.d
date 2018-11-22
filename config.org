@@ -218,9 +218,10 @@ I keep my backups under =~/.emacs.d/backups/=.
 The ~undo-tree~ emacs package is great for visualizing the undo tree.
 
 #+BEGIN_SRC emacs-lisp
-  (global-undo-tree-mode 1)
+  (global-undo-tree-mode 1)  ;;turn on everywhere
 
-;;turn on everywhere
+
+
 ;; make ctrl-z undo
 (global-set-key (kbd "C-z") 'undo)
 ;; make ctrl-Z redo
