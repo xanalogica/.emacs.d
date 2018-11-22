@@ -3136,8 +3136,7 @@ org-refile-targets
 #+BEGIN_SRC emacs-lisp :results code :noweb yes
   (setq org-capture-templates
     '(
-
-       ("X"
+       ("l"
           <<capture--links-generic>>
        )
 
