@@ -3048,7 +3048,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 #+BEGIN_SRC text
   "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org"
-                 "Unclassified Bookmarks"
+                 "Captured Notes"
   )
 
   "** Bookmark: %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?"
