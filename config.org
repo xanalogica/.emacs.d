@@ -3156,15 +3156,15 @@ org-refile-targets
        ("z"
           "ZeOmega Capture Templates"
        )
-       ("zf"
-          <<capture--hadoop-financial>>
-       )
-       ("zs"
-          <<capture--hadoop-sentinelengine>>
-       )
-       ("zb"
-          <<capture--bookmarks-zeomega>>
-       )
+          ("zf"
+             <<capture--hadoop-financial>>
+          )
+          ("zs"
+             <<capture--hadoop-sentinelengine>>
+          )
+          ("zb"
+             <<capture--bookmarks-zeomega>>
+          )
      )
   )
 #+END_SRC
