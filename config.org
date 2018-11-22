@@ -3051,8 +3051,8 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
   :prepend nil          ;; put newest quote at the bottom of the section
   :kill-buffer t        ;; if file was opened just to collect data, close the buffer after
-  :empty-lines-before 0 ;; enforce count of blank lines before
-  :empty-lines-after  1 ;; enforce count of blank lines after
+  :empty-lines-before 1 ;; enforce count of blank lines before
+  :empty-lines-after  0 ;; enforce count of blank lines after
 #+END_SRC
 
 #+NAME: capture--notes-generic
@@ -3189,7 +3189,7 @@ org-refile-targets
 #+BEGIN_SRC emacs-lisp
 (("l" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Links")
-  "*** %(org-cliplink-capture) :LINK:%^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\na:%a\nx:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
+  "*** %(org-cliplink-capture) :LINK:%^G\n:PROPERTIES:\n:CREATED: %U\n:END:\nURL:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
  ("n" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Notes")
   "*** %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
