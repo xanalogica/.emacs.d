@@ -3139,8 +3139,7 @@ org-refile-targets
        ("l"
           <<capture--links-generic>>
        )
-
-       ("X"
+       ("n"
           <<capture--notes-generic>>
        )
 
