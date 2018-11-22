@@ -3189,7 +3189,7 @@ org-refile-targets
 #+BEGIN_SRC emacs-lisp
 (("l" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Links")
-  "*** %(org-cliplink-capture) :LINK:%^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
+  "*** %(org-cliplink-capture) :LINK:%^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\na:%a\nx:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
  ("n" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Notes")
   "*** %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
