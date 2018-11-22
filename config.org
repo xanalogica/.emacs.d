@@ -222,12 +222,8 @@ The ~undo-tree~ emacs package is great for visualizing the undo tree.
 
   (global-set-key (kbd "C-z") 'undo)
 
-
-;; make ctrl-z undo
-;; make ctrl-Z redo
-(defalias 'redo 'undo-tree-redo)
-(global-set-key (kbd "C-S-z") 'redo)
-
+  (defalias 'redo 'undo-tree-redo)
+  (global-set-key (kbd "C-S-z") 'redo)
 
 #+END_SRC
 
