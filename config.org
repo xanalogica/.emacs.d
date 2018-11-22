@@ -214,6 +214,10 @@ I keep my backups under =~/.emacs.d/backups/=.
 #+END_SRC
 
 *** Undo
+
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
 *** Content Encryption
 
 There is encryption of entire files and there is encryption of sections of
