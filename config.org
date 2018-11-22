@@ -3059,7 +3059,7 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
 
 #+NAME: capture--notes-generic
 #+BEGIN_SRC text
-  "Captured Links" entry
+  "Captured Notes" entry
   (file+headline "~/Dropbox/Documents/index.org"
                  "Captured Notes"
   )
@@ -3179,7 +3179,7 @@ org-refile-targets
   "*** %^{Note Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
  ("t" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Tasks")
-  "*** %^{Task Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\nx:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
+  "*** %^{Task Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
  ("B" "a Bloodpressure measurement" table-line
   (file+headline "~/Dropbox/Documents/Health.org" "Jeff's Blood Pressure History")
   "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |" :prepend t :unnarrowed t :kill-buffer t)
