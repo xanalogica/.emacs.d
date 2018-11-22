@@ -3109,14 +3109,14 @@ http://kdr2.com/tech/emacs/1805-approach-org-ref-code-to-text.html
 NOTE: Prefix with C-u to jump to the target of a capture template.
 Prefix with C-0 to insert new item at point.
 
-- [ ]  C-c c b  :: capture--bookmarks-personal
+;;- [ ]  C-c c b  :: capture--bookmarks-personal
 - [ ]  C-c c B  :: capture--health-bloodpressure-measurements
 - [ ]  C-c c F  :: capture--finance-creditscore-measurements
 - [ ]  C-c c q  :: capture--cool-quote
-- [ ]  C-c c z  :: "ZeOmega Capture Templates"
-- [ ]  C-c c zf :: capture--hadoop-financial
-- [ ]  C-c c zs :: capture--hadoop-sentinelengine
-- [ ]  C-c c zb :: capture--bookmarks-zeomega
+;;- [ ]  C-c c z  :: "ZeOmega Capture Templates"
+;;- [ ]  C-c c zf :: capture--hadoop-financial
+;;- [ ]  C-c c zs :: capture--hadoop-sentinelengine
+;;- [ ]  C-c c zb :: capture--bookmarks-zeomega
 
 Possible Keys from within the Capture Buffer:
 
