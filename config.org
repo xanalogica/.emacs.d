@@ -3137,7 +3137,9 @@ org-refile-targets
   (setq org-capture-templates
     '(
 
-#+NAME: capture--links-generic
+       ("X"
+          <<capture--links-generic>>
+       )
 #+NAME: capture--notes-generic
 #+NAME: capture--tasks-generic
 
