@@ -3142,8 +3142,7 @@ org-refile-targets
        ("n"
           <<capture--notes-generic>>
        )
-
-       ("X"
+       ("t"
           <<capture--tasks-generic>>
        )
 
