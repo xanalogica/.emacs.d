@@ -215,6 +215,8 @@ I keep my backups under =~/.emacs.d/backups/=.
 
 *** Undo
 
+The ~undo-tree~ emacs package is great for visualizing the undo tree.
+
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
