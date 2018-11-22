@@ -3176,13 +3176,10 @@ org-refile-targets
   "*** %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\nURL:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 1 :empty-lines-after 0)
  ("n" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Notes")
-  "*** %^{Note Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\nx:%x\na:%a\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
+  "*** %^{Note Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
  ("t" "Captured Links" entry
   (file+headline "~/Dropbox/Documents/index.org" "Captured Tasks")
-  "*** %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\nx:%x\na:%a\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
- ("b" "Personal Bookmark" entry
-  (file+headline "~/Dropbox/Documents/index.org" "Unclassified Bookmarks")
-  "** Bookmark: %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend t :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
+  "*** %^{Task Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\ni:%i\nx:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
  ("B" "a Bloodpressure measurement" table-line
   (file+headline "~/Dropbox/Documents/Health.org" "Jeff's Blood Pressure History")
   "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |" :prepend t :unnarrowed t :kill-buffer t)
@@ -3191,17 +3188,7 @@ org-refile-targets
   "| %^{Date}u | %^{Score} | | |" :prepend t :unnarrowed t :kill-buffer t)
  ("q" "a Catchy Quote" entry
   (file+headline "~/Dropbox/Documents/quotes.org" "Disorganized Quotations")
-  "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n" :prepend t :kill-buffer t :empty-lines 1)
- ("z" "ZeOmega Capture Templates")
- ("zf" "Hadoop/Financial" entry
-  (file+olp "~/Dropbox/Documents/ZeOmega.org" "Hadoop: Financial Dashboard" "Meetings")
-  "** Meeting: %U Hadoop/Financial\n:LOGBOOK:\n:END:\n%i%?\n" :prepend t :kill-buffer t :empty-lines 1 :clock-in t :clock-resume t :clock-keep nil)
- ("zs" "Hadoop/Sentinel Engine" entry
-  (file+olp "~/Dropbox/Documents/ZeOmega.org" "Hadoop: Sentinel Engine" "Meetings")
-  "** Meeting: %U Hadoop/Sentinel\n:LOGBOOK:\n:END:\n%i%?\n" :prepend t :kill-buffer t :empty-lines 1 :clock-in t :clock-resume t :clock-keep nil)
- ("zb" "ZeOmega Bookmark" entry
-  (file+headline "~/Dropbox/Documents/ZeOmega.org" "Unclassified Bookmarks")
-  "** Bookmark: %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend t :kill-buffer t :empty-lines-before 0 :empty-lines-after 1))
+  "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n" :prepend t :kill-buffer t :empty-lines 1))
 #+END_SRC
 
        ;; %a  the place in Emacs I was when I initiated the capture command
