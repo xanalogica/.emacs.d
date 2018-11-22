@@ -3140,8 +3140,14 @@ org-refile-targets
        ("X"
           <<capture--links-generic>>
        )
-#+NAME: capture--notes-generic
-#+NAME: capture--tasks-generic
+
+       ("X"
+          <<capture--notes-generic>>
+       )
+
+       ("X"
+          <<capture--tasks-generic>>
+       )
 
 
        ("b"
