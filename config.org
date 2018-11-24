@@ -131,8 +131,9 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
     (package-refresh-contents)
     (package-install 'use-package))
 
-(eval-when-compile
-  (require 'use-package))
+  (eval-when-compile
+    (require 'use-package))
+
 (require 'diminish)
 (require 'bind-key)
 
