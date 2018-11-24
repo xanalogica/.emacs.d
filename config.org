@@ -134,10 +134,8 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
   (eval-when-compile
     (require 'use-package))
 
-(require 'diminish)
-(require 'bind-key)
-
-
+  (require 'diminish)
+  (require 'bind-key)
 #+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
