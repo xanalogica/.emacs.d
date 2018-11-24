@@ -907,7 +907,7 @@ end_src
 
 **** to LibreOffice (.odt) and Microsoft Office (.docx)
 
-#+BEGIN_SRC emacs-lisp :results silent
+#+BEGIN_SRC emacs-lisp
   ;;;  (require 'ox-odt)
   (setq org-odt-data-dir "/usr/share/emacs/25.3/etc/org")
   (setq org-odt-preferred-output-format "docx")
