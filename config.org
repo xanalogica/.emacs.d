@@ -3929,10 +3929,13 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lisp :results silent
   (push "~/.emacs.d/lisp/origami.el" load-path)
   (require 'origami)
 #+END_SRC
+
+#+RESULTS:
+: origami
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (setq org-agenda-span
