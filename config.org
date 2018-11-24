@@ -206,6 +206,7 @@ Pallet has a very simple interface:
 ;;  (pallet-mode t)
 
   (use-package pallet
+    :ensure t
     :config
       (pallet-mode t)
   )
