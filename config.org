@@ -3931,7 +3931,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 #+BEGIN_SRC emacs-lisp
   (push "~/.emacs.d/lisp/origami.el" load-path)
-  (require 'org-cliplink)
+  (require 'origami)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp :results silent :exports code
