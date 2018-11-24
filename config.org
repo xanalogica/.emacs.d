@@ -601,7 +601,7 @@ src code, s/he would
 
    and configure Emacs to use it:
 
-   #+BEGIN_SRC emacs-lisp :results silent
+   #+BEGIN_SRC emacs-lisp
      ;;;np (setq org-latex-to-pdf-process
      ;;;np   '("xelatex -shell-escape -interaction nonstopmode %f"
      ;;;np     "xelatex -shell-escape -interaction nonstopmode %f")) ;; for multiple passes
