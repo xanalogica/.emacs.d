@@ -202,8 +202,13 @@ Pallet has a very simple interface:
 - M-x pallet-update updates installed packages
 
 #+BEGIN_SRC emacs-lisp
-  (require 'pallet)
-  (pallet-mode t)
+;;  (require 'pallet)
+;;  (pallet-mode t)
+
+  (use-package pallet
+    :config
+      (pallet-mode t)
+  )
 #+END_SRC
 
 This will bootstrap cask and pallet.  It will create a =~/.emacs.d/.cask/=
