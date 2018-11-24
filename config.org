@@ -130,6 +130,13 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
   (unless (package-installed-p 'use-package)
     (package-refresh-contents)
     (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
+
+
 #+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
