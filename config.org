@@ -3524,7 +3524,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 [[http://pages.sachachua.com/.emacs.d/Sacha.html#org2a3d302][Sacha Chua's Emacs configuration]] (really neat display of her .emacs/org file)
 *need a 'capture a link' to anything interesting that I can then refile*
 
-#+BEGIN_SRC emacs-lisp	:results silent
+#+BEGIN_SRC emacs-lisp
   (setq org-refile-targets
     '( ; file(s) to look inside of                  ; destination headings
 
