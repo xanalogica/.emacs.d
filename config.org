@@ -424,7 +424,7 @@ content.
 Set sensitive mode to turn on by default for files having the =.gpg=
 extension.  The following code does exactly that:
 
-#+BEGIN_SRC emacs-lisp	:results silent
+#+BEGIN_SRC emacs-lisp
   (setq auto-mode-alist
       (append '(("\\.gpg$" . sensitive-mode))
                auto-mode-alist))
