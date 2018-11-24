@@ -640,7 +640,7 @@ LaTeX_HEADER: newenvironment{minted}{\begin{shaded}}{\end{shaded}}
 #+LaTeX_HEADER: \newenvironment{results}{\begin{shaded}}{\end{shaded}}
 
 
-#+BEGIN_SRC DISABLEDemacs-lisp :results silent
+#+BEGIN_SRC DISABLEDemacs-lisp
   (add-to-list 'org-export-latex-classes
     '("ze-technote"
 "\\documentclass[
