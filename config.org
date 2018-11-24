@@ -123,6 +123,9 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
+#+BEGIN_SRC emacs-lisp
+#+END_SRC
+
 ** Hotkey for Quickly Reloading This Configuration After Changes
 The first thing I want is the ability to quickly reload my Emacs configuration
 each time I make a change in this file.
