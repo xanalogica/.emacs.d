@@ -3934,9 +3934,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (require 'origami)
 #+END_SRC
 
-#+RESULTS:
-: origami
-
 #+BEGIN_SRC emacs-lisp :results silent :exports code
   (setq org-agenda-span
     60)	; The default number of days displayed in the Agenda view.
