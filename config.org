@@ -794,7 +794,7 @@ complete your new link type!
 
 To make a hyperlink reference \[\[some place\]\] in text work in LaTeX, the following is necessary.
 
-#+BEGIN_SRC DISABLEDemacs-lisp :results silent
+#+BEGIN_SRC DISABLEDemacs-lisp
   (setq org-export-latex-hyperref-format "\\ref{%s}")
 #+END_SRC
 
