@@ -3929,6 +3929,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
+[[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
+
 #+BEGIN_SRC emacs-lisp :results silent
   (push "~/.emacs.d/lisp/origami.el" load-path)
   (require 'origami)
