@@ -1187,7 +1187,7 @@ install package: Counsel
 Undo-Tree?
 git-grep
 
-#+BEGIN_SRC emacs-lisp :results silent :exports code
+#+BEGIN_SRC emacs-lisp :exports code
   (ivy-mode 1)
 
 ;;; (setq ivy-use-virtual-buffers t)
