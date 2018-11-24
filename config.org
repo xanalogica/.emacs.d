@@ -3949,7 +3949,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 I use This folding minor mode in myorg-agenda views to help make sense of
 complex sets of information.
 
-#+BEGIN_SRC emacs-lisp :results silent
+#+BEGIN_SRC emacs-lisp
   (push "~/.emacs.d/lisp/origami.el" load-path)
   (require 'origami)
 #+END_SRC
