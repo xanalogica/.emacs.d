@@ -123,6 +123,7 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
+** Install the 'use-package' module to more efficiently organize packages
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
