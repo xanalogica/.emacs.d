@@ -159,7 +159,7 @@ Emacs likes to write small tidbits of manual configuration into an .el file so
 I use a small file that I never look into, to keep it separate from my
 =config.org=.  It also contains my private information like passwords.
 
-#+BEGIN_SRC emacs-lisp :results silent
+#+BEGIN_SRC emacs-lisp
   (setq custom-file "~/.emacs.d/custom-settings.el")
   (load custom-file t)
 #+END_SRC
