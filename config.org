@@ -1209,7 +1209,7 @@ git-grep
 ;;; (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp :results silent :exports none
+#+BEGIN_SRC emacs-lisp :exports none
   (setq org-completion-use-ido nil)
 
   ;; Enable IDO Everywhere
