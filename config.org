@@ -135,10 +135,6 @@ The [[https://github.com/jwiegley/use-package][use-package]]^github ELisp macro 
 in your Emacs configuration files in a way that is both performance-oriented
 and tidy.
 
-[[#package-installation][GitHub - jwiegley/use-package: A use-package declaration for simplifying your...]
-
-
-
 #+BEGIN_SRC emacs-lisp
   ;; Make sure I have 'use-package' installed in my Emacs
   (unless (package-installed-p 'use-package)
