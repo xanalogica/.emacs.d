@@ -137,8 +137,8 @@ and tidy.
 #+BEGIN_SRC emacs-lisp
   ;; Make sure I have 'use-package' installed in my Emacs
   (unless (package-installed-p 'use-package)
-    (package-refresh-contents)
-    (package-install 'use-package))
+    (package-refresh-contents)       ;; refresh catalog of remote registry
+    (package-install 'use-package))  ;;   and install 'use-package' module
 
   (eval-when-compile
     (require 'use-package))
