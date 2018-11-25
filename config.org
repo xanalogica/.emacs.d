@@ -181,7 +181,16 @@ The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
 primarily for making key definition more clear and concise.
 
 #+BEGIN_SRC emacs-lisp
-  (use-package general)
+  (use-package general
+  )
+
+
+    :ensure nil
+    :load-path "~/.emacs.d/lisp/origami.el/" ;; use my Git checkout
+
+
+
+
 #+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
