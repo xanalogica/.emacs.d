@@ -3965,13 +3965,15 @@ I use This folding minor mode in myorg-agenda views to help make sense of
 complex sets of information.
 
 #+BEGIN_SRC emacs-lisp
-  (use-package origami
-    :ensure nil
-
-#+BEGIN_SRC emacs-lisp
 ;;;  (push "~/.emacs.d/lisp/origami.el" load-path)
 ;;;  (require 'origami)
 #+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (use-package origami
+    :ensure nil
+    :load-path "~/.emacs.d/lisp/origami.el"
+
 
 
 
