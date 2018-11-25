@@ -3935,8 +3935,8 @@ complex sets of information.
 
 #+BEGIN_SRC emacs-lisp
   (use-package origami
-    :general (:keymaps 'org-super-agenda-header-map
-                       "TAB" #'origami-toggle-node)
+;;    :general (:keymaps 'org-super-agenda-header-map
+;;                       "TAB" #'origami-toggle-node)
     :config
 
     (defvar ap/org-super-agenda-auto-show-groups
