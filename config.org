@@ -124,6 +124,19 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
+** Optionally, use ~general~ Elisp package for easier key definitions
+
+The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
+primarily for making key definition more clear and concise.
+
+#+BEGIN_SRC emacs-lisp
+  (require 'general)
+;;;  (use-package general
+;;;    :ensure nil  ;; this package is essential for this configuration to work
+;;;    :load-path "~/.emacs.d/lisp/general.el/" ;; use my Git checkout
+;;;  )
+#+END_SRC
+
 ** Install the 'use-package' module to more efficiently organize package settings
 
 There are many ways to provide package settings, from raw Elisp to tidy macros.
@@ -173,20 +186,6 @@ symbols is in
 
 #+BEGIN_SRC emacs-lisp
   (use-package bind-key)
-#+END_SRC
-
-** Optionally, use ~general~ Elisp package for easier key definitions
-
-The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
-primarily for making key definition more clear and concise.
-
-#+BEGIN_SRC emacs-lisp
-  (require 'general)
-  (require 'use-package)
-;;;  (use-package general
-;;;    :ensure nil  ;; this package is essential for this configuration to work
-;;;    :load-path "~/.emacs.d/lisp/general.el/" ;; use my Git checkout
-;;;  )
 #+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
