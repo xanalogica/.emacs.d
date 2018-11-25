@@ -158,6 +158,16 @@ because we don't want to be reminded of it.
 
 ** Use the ~bind-key~ Elisp package to ???
 
+Loading the ~bind-key~ Elisp package causes ~use-package~ to enable additional
+configuration symbols:
+
+
+
+Provides support for the :bind, :bind*, :bind-keymap and :bind-keymap*
+;; keywords.
+
+
+
 #+BEGIN_SRC emacs-lisp
 ;;  (use-package bind-key)
 #+END_SRC
