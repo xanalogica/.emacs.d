@@ -142,10 +142,6 @@ and tidy.
 
   (eval-when-compile
     (require 'use-package))
-
-  (require 'use-package)
-
-  (use-package general)
 #+END_SRC
 
 ** Optionally, use ~diminish~ package to hide selected minor-modes from my modeline
