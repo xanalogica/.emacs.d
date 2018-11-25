@@ -168,7 +168,8 @@ configuration symbols:
 
 The ~bind-key~ Elisp package is *part of* of the ~use-package~ code
 distribution.  In particular, the logic of the new ~use-package~ configuration
-symbols is in [[https://github.com/jwiegley/use-package/blob/master/use-package-bind-key.el]]
+symbols is in
+[[https://github.com/jwiegley/use-package/blob/master/use-package-bind-key.el]]
 
 #+BEGIN_SRC emacs-lisp
 ;;  (use-package bind-key)
