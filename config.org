@@ -172,7 +172,7 @@ symbols is in
 [[https://github.com/jwiegley/use-package/blob/master/use-package-bind-key.el]]
 
 #+BEGIN_SRC emacs-lisp
-;;  (use-package bind-key)
+  (use-package bind-key)
 #+END_SRC
 
 ** Optionally, use ~general~ Elisp package for easier key definitions
