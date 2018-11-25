@@ -147,7 +147,8 @@ and tidy.
 
 The github:[[https://github.com/myrjola/diminish.el][diminish]] Elisp package can be used to remove or change minor mode
 strings in your mode-line, by using the =:diminish <SYMBOL>= in your
-~use-package~ invocation.
+~use-package~ invocation.  Diminished modes are minor modes with no modeline
+display.
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (require 'diminish)
