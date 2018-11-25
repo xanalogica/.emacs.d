@@ -152,10 +152,14 @@ display, because we don't want to be reminded of it.
 
 #+BEGIN_SRC emacs-lisp
   (use-package diminish)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (use-package bind-key)
+#+END_SRC
 
 ;;;  (require 'bind-key)
 ;;; general
-#+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
 The first thing I want is the ability to quickly reload my Emacs configuration
