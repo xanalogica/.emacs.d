@@ -3190,28 +3190,6 @@ org-refile-targets
   )
 #+END_SRC
 
-#+RESULTS:
-#+BEGIN_SRC emacs-lisp
-(("l" "Captured Links" entry
-  (file+headline "~/Dropbox/Documents/index.org" "Captured Links")
-  "*** %(org-cliplink-capture) %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\nURL:%x\n%?" :prepend nil :kill-buffer t :empty-lines-before 1 :empty-lines-after 0)
- ("n" "Captured Notes" entry
-  (file+headline "~/Dropbox/Documents/index.org" "Captured Notes")
-  "*** %^{Note Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
- ("t" "Captured Tasks" entry
-  (file+headline "~/Dropbox/Documents/index.org" "Captured Tasks")
-  "*** %^{Task Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%i\n%?" :prepend nil :kill-buffer t :empty-lines-before 0 :empty-lines-after 1)
- ("B" "a Bloodpressure measurement" table-line
-  (file+headline "~/Dropbox/Documents/Health.org" "Jeff's Blood Pressure History")
-  "| %u | %^{High} | %^{Low} | %^{Pulse} | %^{Comment} |" :prepend t :unnarrowed t :kill-buffer t)
- ("F" "a new FICO Monthly Score" table-line
-  (file+headline "~/Dropbox/Documents/Finance.org" "Jeff's FICO Credit Score History")
-  "| %^{Date}u | %^{Score} | | |" :prepend t :unnarrowed t :kill-buffer t)
- ("q" "a Catchy Quote" entry
-  (file+headline "~/Dropbox/Documents/quotes.org" "Disorganized Quotations")
-  "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n" :prepend t :kill-buffer t :empty-lines 1))
-#+END_SRC
-
        ;; %a  the place in Emacs I was when I initiated the capture command
 
        ;; %i  initial content (what is selected)
