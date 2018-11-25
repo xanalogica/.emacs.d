@@ -180,6 +180,7 @@ symbols is in
 The ~general~ package is primarily for making key definition more clear and
 concise.
 
+https://github.com/noctuid/general.el
 
 GitHub - noctuid/general.el: More convenient key definitions in emacs]]
 [[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
