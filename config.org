@@ -3967,7 +3967,7 @@ complex sets of information.
 #+BEGIN_SRC emacs-lisp
   (use-package origami
     :ensure nil
-    :load-path "~/.emacs.d/lisp/origami.el/"
+    :load-path "~/.emacs.d/lisp/origami.el/" ;; use my Git checkout
 
     :general (:keymaps 'org-super-agenda-header-map
                        "TAB" #'origami-toggle-node)
