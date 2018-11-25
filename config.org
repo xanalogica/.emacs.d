@@ -151,8 +151,7 @@ strings in your mode-line, by using the =:diminish <SYMBOL>= in your
 display, because we don't want to be reminded of it.
 
 #+BEGIN_SRC emacs-lisp
-  (use-package
-    diminish)
+  (use-package diminish)
 
 ;;;  (require 'bind-key)
 ;;; general
