@@ -181,8 +181,8 @@ The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
 primarily for making key definition more clear and concise.
 
 #+BEGIN_SRC emacs-lisp
-  (require 'use-package)
   (require 'general)
+  (require 'use-package)
 ;;;  (use-package general
 ;;;    :ensure nil  ;; this package is essential for this configuration to work
 ;;;    :load-path "~/.emacs.d/lisp/general.el/" ;; use my Git checkout
