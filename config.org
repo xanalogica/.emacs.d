@@ -3969,8 +3969,8 @@ complex sets of information.
     :ensure nil
     :load-path "~/.emacs.d/lisp/origami.el/"
 
-;;    :general (:keymaps 'org-super-agenda-header-map
-;;                       "TAB" #'origami-toggle-node)
+    :general (:keymaps 'org-super-agenda-header-map
+                       "TAB" #'origami-toggle-node)
     :config ;; code to run after package has been loaded
 
       (defvar ap/org-super-agenda-auto-show-groups
