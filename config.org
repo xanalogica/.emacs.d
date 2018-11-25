@@ -145,9 +145,9 @@ and tidy.
     (require 'use-package))
 #+END_SRC
 
-The github:[[https://github.com/myrjola/diminish.el][dimish]] Elisp package can be used to remove or change minor mode strings
-in your mode-line, by using the =:diminish <SYMBOL>= in your ~use-package~
-invocation.
+The github:[[https://github.com/myrjola/diminish.el][dimish]] Elisp package can be used to remove or change minor mode
+strings in your mode-line, by using the =:diminish <SYMBOL>= in your
+~use-package~ invocation.
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (require 'diminish)
