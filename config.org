@@ -159,7 +159,7 @@ display, because we don't want to be reminded of it.
 ** Use the ~bind-key~ Elisp package to ???
 
 #+BEGIN_SRC emacs-lisp
-  (use-package bind-key)
+;;  (use-package bind-key)
 #+END_SRC
 
 ;;; general
