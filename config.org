@@ -144,7 +144,7 @@ and tidy.
     (require 'use-package))
 #+END_SRC
 
-** Optionally, use the ~diminish~ package to hide selected minor-modes from my modeline
+** Optionally, use ~diminish~ package to hide selected minor-modes from my modeline
 
 The github:[[https://github.com/myrjola/diminish.el][diminish]] Elisp package can be used to remove or change minor mode
 strings in your mode-line, by using the =:diminish <SYMBOL>= in your
