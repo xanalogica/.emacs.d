@@ -156,8 +156,7 @@ display, because we don't want to be reminded of it.
   (use-package diminish)
 #+END_SRC
 
-
-
+** Use the ~bind-key~ Elisp package to ???
 
 #+BEGIN_SRC emacs-lisp
   (use-package bind-key)
