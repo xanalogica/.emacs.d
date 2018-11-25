@@ -180,12 +180,9 @@ symbols is in
 The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
 primarily for making key definition more clear and concise.
 
-
-
-GitHub - noctuid/general.el: More convenient key definitions in emacs]]
-[[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
-
-;;; general
+#+BEGIN_SRC emacs-lisp
+  (use-package general)
+#+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
 The first thing I want is the ability to quickly reload my Emacs configuration
