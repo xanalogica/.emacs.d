@@ -126,6 +126,8 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 
 ** Insure the 'use-package' module is installed to more efficiently organize packages
 
+[[https://github.com/noctuid/general.el][GitHub - noctuid/general.el: More convenient key definitions in emacs]]
+
 #+BEGIN_SRC emacs-lisp
   (unless (package-installed-p 'use-package)
     (package-refresh-contents)
@@ -3927,8 +3929,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :VISIBILITY: children
 :END:
 **** My Agenda Settings
-
-[[https://github.com/noctuid/general.el][GitHub - noctuid/general.el: More convenient key definitions in emacs]]
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
 
