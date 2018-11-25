@@ -134,7 +134,7 @@ primarily for making key definition more clear and concise.  It adds the
   (add-to-list 'load-path
       "~/.emacs.d/lisp/general.el/general.el"
   )
-  (require 'general)
+;;  (require 'general)
 #+END_SRC
 
 ;;;  (use-package general
