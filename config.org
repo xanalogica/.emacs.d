@@ -182,7 +182,7 @@ primarily for making key definition more clear and concise.
 
 #+BEGIN_SRC emacs-lisp
   (use-package general
-    :ensure nil
+    :ensure t     ;; this package is essential for this configuration to work
     :load-path "~/.emacs.d/lisp/origami.el/" ;; use my Git checkout
   )
 #+END_SRC
