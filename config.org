@@ -128,6 +128,7 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 
 [[https://github.com/noctuid/general.el][GitHub - noctuid/general.el: More convenient key definitions in emacs]]
 [[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
+[[https://github.com/jwiegley/use-package#package-installation][GitHub - jwiegley/use-package: A use-package declaration for simplifying your...]]
 
 #+BEGIN_SRC emacs-lisp
   (unless (package-installed-p 'use-package)
