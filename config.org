@@ -164,6 +164,8 @@ because we don't want to be reminded of it.
 
 ** Optionally, use ~general~ Elisp package for easier key definitions
 
+The ~general~ package is primarily for making key definition more clear and
+concise.
 
 
 GitHub - noctuid/general.el: More convenient key definitions in emacs]]
