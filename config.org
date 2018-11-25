@@ -166,6 +166,9 @@ configuration symbols:
 - :bind-keymap
 - :bind-keymap*
 
+The ~bind-key~ Elisp package is *part of* of the ~use-package~ code
+distribution.
+
 #+BEGIN_SRC emacs-lisp
 ;;  (use-package bind-key)
 #+END_SRC
