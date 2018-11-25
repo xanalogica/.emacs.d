@@ -124,7 +124,7 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
-** Install the 'use-package' module to more efficiently organize packages
+** Install the 'use-package' module to more efficiently organize package settings
 
 [[https://github.com/noctuid/general.el][GitHub - noctuid/general.el: More convenient key definitions in emacs]]
 [[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
