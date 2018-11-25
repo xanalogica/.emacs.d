@@ -3967,6 +3967,16 @@ complex sets of information.
 #+BEGIN_SRC emacs-lisp
   (use-package origami
     :ensure nil
+
+#+BEGIN_SRC emacs-lisp
+;;;  (push "~/.emacs.d/lisp/origami.el" load-path)
+;;;  (require 'origami)
+#+END_SRC
+
+
+
+
+
 ;;    :general (:keymaps 'org-super-agenda-header-map
 ;;                       "TAB" #'origami-toggle-node)
     :config ;; code to run after package has been loaded
@@ -3987,11 +3997,6 @@ complex sets of information.
 ;;    :hook ((org-agenda-mode . origami-mode)
 ;;           (org-agenda-finalize . ap/org-super-agenda-origami-fold-default))
   )
-#+END_SRC
-
-#+BEGIN_SRC emacs-lisp
-;;;  (push "~/.emacs.d/lisp/origami.el" load-path)
-;;;  (require 'origami)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp :exports code
