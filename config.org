@@ -3937,7 +3937,7 @@ complex sets of information.
   (use-package origami
 ;;    :general (:keymaps 'org-super-agenda-header-map
 ;;                       "TAB" #'origami-toggle-node)
-    :config
+    :config ;; code to run after package has been loaded
 
     (defvar ap/org-super-agenda-auto-show-groups
       '("Finance" "Health" "ZeOmega" "Personal"))
