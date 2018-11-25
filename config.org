@@ -3961,7 +3961,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
 
-I use this folding minor mode in myorg-agenda views to help make sense of
+I use this folding minor mode in my org-agenda views to help make sense of
 complex sets of information.
 
 #+BEGIN_SRC emacs-lisp
