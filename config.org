@@ -167,7 +167,6 @@ display, because we don't want to be reminded of it.
 GitHub - noctuid/general.el: More convenient key definitions in emacs]]
 [[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
 
-
 ;;; general
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
