@@ -131,6 +131,7 @@ primarily for making key definition more clear and concise.
 
 #+BEGIN_SRC emacs-lisp
   (setq use-package-verbose t)
+
   (add-to-list 'load-path
       "~/.emacs.d/lisp/general.el/general.el"
   )
