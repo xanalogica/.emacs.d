@@ -146,7 +146,8 @@ and tidy.
 #+END_SRC
 
 The github: Elisp package can be used to remove or change minor mode strings
-in your mode-line.
+in your mode-line, by using the =:diminish <SYMBOL>= in your ~use-package~
+invocation.
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (require 'diminish)
