@@ -147,7 +147,7 @@ and tidy.
 ** Optionally, use ~diminish~ package to hide selected minor-modes from my modeline
 
 Loading github:[[https://github.com/myrjola/diminish.el][diminish]] Elisp package causes ~use-package~ to enable a
-configuration symbol =:diminish <SYMBOL>= in your ~use-package~ invocation.
+configuration keyword =:diminish <SYMBOL>= in your ~use-package~ invocation.
 This symbol empowers you to remove or change minor mode strings in your
 mode-line.  Such diminished modes are minor modes with no modeline display,
 because we don't want to be reminded of it.
