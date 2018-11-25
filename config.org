@@ -143,6 +143,8 @@ and tidy.
   (eval-when-compile
     (require 'use-package))
 
+  (require 'use-package)
+
   (use-package general)
 #+END_SRC
 
