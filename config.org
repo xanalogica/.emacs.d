@@ -158,7 +158,6 @@ display, because we don't want to be reminded of it.
   (use-package bind-key)
 #+END_SRC
 
-;;;  (require 'bind-key)
 ;;; general
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
