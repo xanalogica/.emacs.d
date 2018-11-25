@@ -130,6 +130,9 @@ The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
 primarily for making key definition more clear and concise.
 
 #+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path
+      "~/.emacs.d/lisp/general.el/"
+  )
   (require 'general)
 ;;;  (use-package general
 ;;;    :ensure nil  ;; this package is essential for this configuration to work
