@@ -130,8 +130,6 @@ The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
 primarily for making key definition more clear and concise.
 
 #+BEGIN_SRC emacs-lisp
-  (setq use-package-verbose t)
-
   (add-to-list 'load-path
       "~/.emacs.d/lisp/general.el/general.el"
   )
@@ -160,6 +158,7 @@ and tidy.
 
   (eval-when-compile
     (require 'use-package))
+  (setq use-package-verbose t)
 #+END_SRC
 
 ** Optionally, use ~diminish~ package to hide selected minor-modes from my modeline
