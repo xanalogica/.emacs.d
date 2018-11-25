@@ -131,6 +131,7 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 [[https://github.com/jwiegley/use-package#package-installation][GitHub - jwiegley/use-package: A use-package declaration for simplifying your...]]
 
 #+BEGIN_SRC emacs-lisp
+  ;; Make sure I have 'use-package' installed in my Emacs
   (unless (package-installed-p 'use-package)
     (package-refresh-contents)
     (package-install 'use-package))
