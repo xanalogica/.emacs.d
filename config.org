@@ -159,7 +159,7 @@ because we don't want to be reminded of it.
 ** Use the ~bind-key~ Elisp package to ???
 
 Loading the ~bind-key~ Elisp package causes ~use-package~ to enable additional
-configuration symbols:
+configuration keywords:
 
 - :bind
 - :bind*
