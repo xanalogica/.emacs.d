@@ -131,6 +131,11 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 [[https://github.com/jwiegley/use-package#package-installation][GitHub - jwiegley/use-package: A use-package declaration for simplifying your...]]
 [[http://cachestocaches.com/2015/8/getting-started-use-package/][Getting Started with Use-Package]]
 
+The =use-package= ELisp macro allows one to isolate package configuration in
+your Emacs configuration files in a way that is both performance-oriented and
+tidy.
+
+
 #+BEGIN_SRC emacs-lisp
   ;; Make sure I have 'use-package' installed in my Emacs
   (unless (package-installed-p 'use-package)
