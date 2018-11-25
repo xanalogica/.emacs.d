@@ -145,7 +145,8 @@ and tidy.
     (require 'use-package))
 #+END_SRC
 
-The github: Emacs
+The github: Elisp package can be used to remove or change minor mode strings
+in your mode-line.
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (require 'diminish)
