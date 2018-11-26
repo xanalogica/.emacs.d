@@ -4021,7 +4021,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
 #+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
-    :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
+    :load-path "~/.emacs.d/lisp/org-super-agenda/" ;; use my Git checkout
 
     :config
       (org-super-agenda-mode) ;; enable it globally
