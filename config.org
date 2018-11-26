@@ -4158,7 +4158,7 @@ types:
        ("R" "Recurring/Habits" todo  ;; (key[1] desc[2] type[3]
          (org-super-agenda-mode)  ;; match[4]
 
-         ( ; list of local settings
+         ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups
              '(
                 (:discard (:not (:scheduled t :deadline t)))
