@@ -4193,7 +4193,12 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
 ;;;                (:discard (:scheduled t :deadline t))
-                (:name "=== Links Needing Refiling ===" (:and (:tag "LINK") (:tag "REFILING)))
+                (:name "=== Links Needing Refiling ==="
+                  (:and
+                    (:tag "LINK")
+                    (:tag "REFILING)
+                  )
+                )
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
