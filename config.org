@@ -4083,13 +4083,15 @@ complex sets of information.
 
 
 types:
- - agenda    - scheduled tasks
- - todo      - backlog of tasks
- - search    - entries containing search words
- - tags      - tag/property/TODO match across all agenda files
- - tags-todo - above but limit to TODO items
- - todo-tree - (current file only)
- - tags-tree - (current file only)
+ - agenda     - scheduled tasks
+ - todo       - backlog of tasks
+ - search     - entries containing search words
+ - tags       - tag/property/TODO match across all agenda files
+ - tags-todo  - above but limit to TODO items
+ - todo-tree  - (current file only)
+ - tags-tree  - (current file only)
+ - occur-tree - (current file only)
+ - ...        - a user-defined function
 
 
 
