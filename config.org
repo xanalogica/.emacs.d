@@ -157,7 +157,7 @@ mode-line.  Such diminished modes are minor modes with no modeline display,
 because we don't want to be reminded of it.
 
 #+BEGIN_SRC emacs-lisp
-  (use-package diminish)
+  (use-package :ensure t diminish)
 #+END_SRC
 
 ** Use the ~bind-key~ Elisp package to ???
