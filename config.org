@@ -177,7 +177,6 @@ symbols is in
   (use-package bind-key)
 #+END_SRC
 
-
 ** Optionally, use ~general~ Elisp package for easier key definitions
 
 The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
