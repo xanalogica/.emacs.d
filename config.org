@@ -3999,6 +3999,29 @@ complex sets of information.
 ;;    :ensure nil
 ;;    ;;; :disabled
 
+***** Settings Common to All My Agenda Views
+
+#+BEGIN_SRC emacs-lisp :exports code
+  (setq org-agenda-span
+    60)	; The default number of days displayed in the Agenda view.
+  (setq org-deadline-warning-days
+    60)	; show deadlines when due within next 60-days in Agenda and sparse views
+  (setq org-agenda-ndays
+    30)
+  (setq org-agenda-show-all-dates
+    t)
+  (setq org-agenda-start-on-weekday
+    nil)
+  (setq org-agenda-show-log
+    t)
+  (setq org-agenda-prefix-format
+    "  %-17:c%?-12t% s")                ;; widen category field a little
+  (setq org-tags-match-list-sublevels
+    nil) ;; do NOT match inherited tags in headline sublevels
+#+END_SRC
+
+
+
 #+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
     :config
