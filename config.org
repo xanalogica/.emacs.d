@@ -179,9 +179,9 @@ symbols is in
 [[https://github.com/jwiegley/use-package/blob/master/use-package-bind-key.el]]
 
 #+BEGIN_SRC emacs-lisp
-  (use-package bind-key
-    :ensure t  ;; this package is essential for my configuration to work
-  )
+;;;  (use-package bind-key
+;;;    :ensure t  ;; this package is essential for my configuration to work
+;;;  )
 #+END_SRC
 
 ** Optionally, use ~general~ Elisp package for easier key definitions
