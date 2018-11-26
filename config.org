@@ -1704,7 +1704,7 @@ https://github.com/facetframer/orgnav
           )
   )
 
-  (define-key org-mode-map "\C-c\C-j"  'orgnav-search-root)
+;;;  (define-key org-mode-map "\C-c\C-j"  'orgnav-search-root)
 #+END_SRC
 
 Don’t let me accidentally delete text without realizing it in .org ie: point
