@@ -160,7 +160,7 @@ because we don't want to be reminded of it.
   (use-package :ensure t diminish)
 #+END_SRC
 
-** Use the ~bind-key~ Elisp package to ???
+** Use the ~bind-key~ Elisp package to enhance ~use-package~
 
 Loading the ~bind-key~ Elisp package causes ~use-package~ to enable additional
 configuration keywords:
