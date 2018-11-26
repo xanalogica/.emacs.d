@@ -4094,7 +4094,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
               )
            )
          )
-         (org-agenda nil "a")
+         (org-agenda nil "a") ;; [6]
        )
 
        ("B" "Backlog of Unscheduled Tasks" todo
