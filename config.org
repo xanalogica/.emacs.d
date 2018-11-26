@@ -1700,6 +1700,7 @@ https://github.com/facetframer/orgnav
   (use-package orgnav
     :load-path "~/.emacs.d/lisp/orgnav/" ;; use my Git checkout
     :bind (
+      (       define-key org-mode-map "\C-c\C-j"  'orgnav-search-root)
       )
   )
 ;;;  (add-to-list 'load-path
