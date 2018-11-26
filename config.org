@@ -4087,9 +4087,9 @@ types:
  - todo      - backlog of tasks
  - search    - entries containing search words
  - tags      - tag/property/TODO match across all agenda files
- - tags-todo
- - todo-tree
- - tags-tree (current file only)
+ - tags-todo - above but limit to TODO items
+ - todo-tree - (current file only)
+ - tags-tree - (current file only)
 
 
 
