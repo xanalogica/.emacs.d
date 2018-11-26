@@ -4004,10 +4004,10 @@ complex sets of information.
   (use-package origami
     :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
 
-    :general (
-      :keymaps 'org-super-agenda-header-map
+    :general
+      (:keymaps 'org-super-agenda-header-map
         "TAB" #'origami-toggle-node
-    )
+      )
 
     :config ;; code to run after package has been loaded
 
