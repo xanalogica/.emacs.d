@@ -4120,7 +4120,7 @@ types:
            )
          )
 
-         (org-agenda nil "a") ;; [6]
+         (org-agenda nil "a") ;; files[6]
        )
 
        ("B" "Backlog of Unscheduled Tasks" todo
