@@ -3996,9 +3996,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 I use this folding minor mode in my org-agenda views to help make sense of
 complex sets of information.
 
-;;    :ensure nil
-;;    ;;; :disabled
-
 ***** Settings Common to All My Agenda Views
 
 #+BEGIN_SRC emacs-lisp :exports code
