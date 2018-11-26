@@ -4215,7 +4215,7 @@ types:
        ("L" "Captured Links Needing Refiling" agenda  ;; (key[1] desc[2] type[3]
          (org-super-agenda-mode)  ;; match[4]
 
-         ( ; list of local settings
+         ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups
              '(
                 (:name "=== Links Needing Refiling ===" :and (:tag "REFILING" :tag "LINK"))
