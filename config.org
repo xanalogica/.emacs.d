@@ -3997,11 +3997,12 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 I use this folding minor mode in my org-agenda views to help make sense of
 complex sets of information.
 
+;;    :ensure nil
+;;    ;;; :disabled
+
 #+BEGIN_SRC emacs-lisp
   (use-package origami
-    :ensure nil
-    ;;; :disabled
-    :load-path "~/.emacs.d/lisp/origami.el/" ;; use my Git checkout
+    :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
 
     :general (:keymaps 'org-super-agenda-header-map
                        "TAB" #'origami-toggle-node)
