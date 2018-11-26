@@ -124,24 +124,6 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
-** Optionally, use ~general~ Elisp package for easier key definitions
-
-The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
-primarily for making key definition more clear and concise.  It adds the
-=:general= keyword to the ~use-package~ macro.
-
-#+BEGIN_SRC emacs-lisp
-  (add-to-list 'load-path
-      "~/.emacs.d/lisp/general.el/"
-  )
-  (require 'general)
-#+END_SRC
-
-;;;  (use-package general
-;;;    :ensure nil  ;; this package is essential for this configuration to work
-;;;    :load-path "~/.emacs.d/lisp/general.el/" ;; use my Git checkout
-;;;  )
-
 ** Install the 'use-package' module to more efficiently organize package settings
 
 There are many ways to provide package settings, from raw Elisp to tidy macros.
@@ -194,6 +176,25 @@ symbols is in
 #+BEGIN_SRC emacs-lisp
   (use-package bind-key)
 #+END_SRC
+
+
+** Optionally, use ~general~ Elisp package for easier key definitions
+
+The github:[[https://github.com/noctuid/general.el~general]] Elisp package is
+primarily for making key definition more clear and concise.  It adds the
+=:general= keyword to the ~use-package~ macro.
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path
+      "~/.emacs.d/lisp/general.el/"
+  )
+  (require 'general)
+#+END_SRC
+
+;;;  (use-package general
+;;;    :ensure nil  ;; this package is essential for this configuration to work
+;;;    :load-path "~/.emacs.d/lisp/general.el/" ;; use my Git checkout
+;;;  )
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
 The first thing I want is the ability to quickly reload my Emacs configuration
