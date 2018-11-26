@@ -4079,7 +4079,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:name "=== Urgent and Scheduled Tasks for Today ===" :tag "HOT")
-
                 (:name "=== Maintain Physical and Mental Health ====" :tag "HEALTH")
                 (:name "=== To Not Worry about Money ===============" :tag "FINANCE")
                 (:name "=== To Have a Fantastic Career =============" :tag "ZEOMEGA")
