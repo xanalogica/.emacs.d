@@ -4041,7 +4041,7 @@ complex sets of information.
 
     :general
       (:keymaps 'org-super-agenda-header-map
-        "TAB" #'origami-toggle-node)
+        "TAB" #'origami-toggle-node)  ;; Control-I, not TAB
 
     :config ;; code to run after package has been loaded
 
