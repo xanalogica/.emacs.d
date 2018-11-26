@@ -4212,7 +4212,7 @@ types:
          (org-agenda nil "t")
        )
 
-       ("L" "Captured Links Needing Refiling" agenda
+       ("L" "Captured Links Needing Refiling" agenda  ;; (key[1] desc[2] type[3]
          (org-super-agenda-mode)
 
          ( ; list of local settings
