@@ -4123,7 +4123,7 @@ types:
          (org-agenda nil "a") ;; files-to-write[6]
        )
 
-       ("B" "Backlog of Unscheduled Tasks" todo
+       ("B" "Backlog of Unscheduled Tasks" todo  ;; (key[1] desc[2] type[3]
          (org-super-agenda-mode)
 
          ( ; list of local settings
