@@ -4186,7 +4186,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
          (org-agenda nil "t")
        )
 
-       ("L" "Captured Links Needing Refiling" todo
+       ("L" "Captured Links Needing Refiling" tags-todo
          (org-super-agenda-mode)
 
          ( ; list of local settings
