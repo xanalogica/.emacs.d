@@ -197,7 +197,7 @@ primarily for making key definition more clear and concise.  It adds the
 
   (use-package general
     :ensure t  ;; this package is essential for my configuration to work
-    :load-path "~/.emacs.d/lisp/general.el/" ;; use my Git checkout
+    :load-path "~/.emacs.d/lisp/general/" ;; use my Git checkout
   )
 #+END_SRC
 
