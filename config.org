@@ -199,7 +199,6 @@ primarily for making key definition more clear and concise.  It adds the
   )
 #+END_SRC
 
-
 ** Hotkey for Quickly Reloading This Configuration After Changes
 The first thing I want is the ability to quickly reload my Emacs configuration
 each time I make a change in this file.
