@@ -4119,6 +4119,7 @@ types:
               )
            )
          )
+
          (org-agenda nil "a") ;; [6]
        )
 
