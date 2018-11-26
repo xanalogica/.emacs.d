@@ -4078,6 +4078,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-agenda-span 14)
            (org-super-agenda-groups
              '(
+                (:name "=== Urgent and Scheduled Tasks for Today ====" :tag "HEALTH")
 
 
 
