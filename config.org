@@ -4015,7 +4015,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
-
 #+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
     :config
