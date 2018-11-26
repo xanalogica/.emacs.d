@@ -4194,22 +4194,6 @@ The primary use of this package is for the daily/weekly agenda, made by the
              '(
                 (:discard (:scheduled t :deadline t))
                 (:name "=== Unscheduled Shopping ===" :tag "LINK")
-                (:name "=== Unschedule SysAdmin ===" :tag "SYSADMIN")
-                (:name "=== Unscheduled Chores ===" :tag "CHORE")
-
-                (:name "=== Unscheduled ZeOmega Work ===" :tag "ZEOMEGA")
-
-                (:name "=== Unscheduled Financials ===" :tag "FINANCE")
-                (:name "=== Unscheduled Health ===" :tag "HEALTH")
-
-                (:name "=== Church ===" :tag "CHURCH")
-                (:name "=== Writings ===" :tag "WRITING")
-                (:name "=== Study ===" :tag "STUDY")
-
-                (:name "=== People ===" :tag "PEOPLE")
-                (:name "=== Unscheduled Travel ===" :tag "TRAVEL")
-                (:name "=== Unscheduled Events ===" :tag "EVENT")
-                (:name "=== Refilings to Organize ===" :tag "REFILING")
 
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
