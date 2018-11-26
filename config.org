@@ -140,8 +140,10 @@ and tidy.
     (package-refresh-contents)       ;; refresh catalog of remote registry
     (package-install 'use-package))  ;;   and install 'use-package' module
 
-  (eval-when-compile
-    (require 'use-package))
+  (require 'use-package)
+
+;;;  (eval-when-compile
+;;;    (require 'use-package))
 
   (setq use-package-verbose t)  ;; to assist debugging configuration
 #+END_SRC
