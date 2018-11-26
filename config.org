@@ -4085,7 +4085,7 @@ complex sets of information.
   (setq org-agenda-custom-commands
     '(  ; (key[1] desc[2] type[3] match[4] settings[5] files[6])
        ("P" "Agenda for Current Period" agenda
-         (org-super-agenda-mode)
+         (org-super-agenda-mode)  ;; match[4]
 
          ( ; [5] list of settings local to this custom agenda view
            (org-agenda-span 14)
