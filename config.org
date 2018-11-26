@@ -158,7 +158,7 @@ because we don't want to be reminded of it.
 
 #+BEGIN_SRC emacs-lisp
   (use-package diminish
-    :ensure t  ;; this package is essential for my configuration to work
+    :ensure nil  ;; this package is NOT essential for my configuration to work
   )
 #+END_SRC
 
