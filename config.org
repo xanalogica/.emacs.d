@@ -4027,7 +4027,6 @@ command, but it also works for other agenda views, like ~org-tags-view~,
   )
 #+END_SRC
 
-
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
