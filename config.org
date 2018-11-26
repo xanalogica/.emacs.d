@@ -4085,8 +4085,8 @@ complex sets of information.
 types:
  - agenda    - scheduled tasks
  - todo      - backlog of tasks
- - search
- - tags
+ - search    - entries containing search words
+ - tags      - tag/property/TODO match across all agenda files
  - tags-todo
  - todo-tree
  - tags-tree (current file only)
