@@ -4015,6 +4015,10 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
+The primary use of this package is for the daily/weekly agenda, made by the
+~org-agenda-list~ command, but it also works for other agenda views, like
+~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
+
 #+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
     :config
@@ -4056,10 +4060,6 @@ complex sets of information.
            (org-agenda-finalize . ap/org-super-agenda-origami-fold-default))
   )
 #+END_SRC
-
-The primary use of this package is for the daily/weekly agenda, made by the
-~org-agenda-list~ command, but it also works for other agenda views, like
-~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
 
 
 ("n" "no TODO events +180d"
