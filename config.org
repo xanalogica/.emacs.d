@@ -4083,8 +4083,8 @@ complex sets of information.
 
 
 types:
- - agenda
- - todo
+ - agenda    - scheduled tasks
+ - todo      - backlog of tasks
  - search
  - tags
  - tags-todo
