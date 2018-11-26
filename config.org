@@ -4006,8 +4006,6 @@ complex sets of information.
   )
 #+END_SRC
 
-
-
 #+BEGIN_SRC emacs-lisp
   (use-package origami
     :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
