@@ -4080,6 +4080,20 @@ complex sets of information.
                           )))
                  nil ("~/org/agenda_180d_filtered.html"))
 
+
+
+types:
+ - agenda
+ - todo
+ - search
+ - tags
+ - tags-todo
+ - todo-tree
+ - tags-tree (current file only)
+
+
+
+
 #+BEGIN_SRC emacs-lisp :exports code
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
