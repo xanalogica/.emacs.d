@@ -4001,8 +4001,8 @@ complex sets of information.
 
 #+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
-      :config
-      (org-super-agenda-mode)
+    :config
+    (org-super-agenda-mode)
       (setq org-super-agenda-groups
             '((:order-multi (8 (:name "Done today"
                                       :and (:regexp "State \"DONE\""
