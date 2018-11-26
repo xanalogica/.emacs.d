@@ -1697,10 +1697,13 @@ Emacs bookmarking makes use of three things that are related but different:
 https://github.com/facetframer/orgnav
 
 #+BEGIN_SRC emacs-lisp
-  (add-to-list 'load-path
-      "~/.emacs.d/orgnav-release-2.0.3"
+  (use-package orgnav
   )
-  (require 'orgnav)
+
+;;;  (add-to-list 'load-path
+;;;      "~/.emacs.d/orgnav-release-2.0.3"
+;;;  )
+;;;  (require 'orgnav)
 
   (define-key org-mode-map "\C-c\C-j"  'orgnav-search-root)
 
