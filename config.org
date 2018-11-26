@@ -4034,7 +4034,6 @@ command, but it also works for other agenda views, like ~org-tags-view~,
 I use this folding minor mode in my org-agenda views to help make sense of
 complex sets of information.
 
-
 #+BEGIN_SRC emacs-lisp
   (use-package origami
     :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
