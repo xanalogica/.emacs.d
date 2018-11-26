@@ -4194,10 +4194,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
              '(
 ;;;                (:discard (:scheduled t :deadline t))
                 (:name "=== Links Needing Refiling ==="
-                  (:and
-                    (:tag "LINK")
-                    (:tag "REFILING")
-                  )
+                  (:tag "LINK")
                 )
 
                 ;; After the last group, the agenda will display items that didn't
