@@ -1700,7 +1700,6 @@ https://github.com/facetframer/orgnav
   (use-package orgnav
     :load-path "~/.emacs.d/lisp/orgnav/" ;; use my Git checkout
   )
-
 ;;;  (add-to-list 'load-path
 ;;;      "~/.emacs.d/orgnav-release-2.0.3"
 ;;;  )
