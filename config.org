@@ -3991,8 +3991,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
-
-***** Settings Common to All My Agenda Views
+***** Default Settings Common to All My Agenda Views
 
 #+BEGIN_SRC emacs-lisp :exports code
   (setq org-agenda-span
@@ -4015,13 +4014,15 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
-The primary use of the ~org-super-agenda~ is to post-process the list of
+The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the list of
 items, usually for the daily/weekly agenda, made by the ~org-agenda-list~
 command, but it also works for other agenda views, like ~org-tags-view~,
 ~org-todo-list~, ~org-search-view~, etc.
 
 #+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
+    :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
+
     :config
       (org-super-agenda-mode) ;; enable it globally
   )
