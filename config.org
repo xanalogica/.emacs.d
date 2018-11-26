@@ -4012,7 +4012,7 @@ complex sets of information.
     :config ;; code to run after package has been loaded
 
       (defvar ap/org-super-agenda-auto-show-groups
-        '("Finance" "Health" "ZeOmega" "Personal"))
+        '("Health" "ZeOmega" "Personal"))
 
       (defun ap/org-super-agenda-origami-fold-default ()
         "Fold certain groups by default in Org Super Agenda buffer."
