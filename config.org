@@ -188,10 +188,10 @@ primarily for making key definition more clear and concise.  It adds the
 =:general= keyword to the ~use-package~ macro.
 
 #+BEGIN_SRC emacs-lisp
-  (add-to-list 'load-path
-      "~/.emacs.d/lisp/general.el/"
-  )
-  (require 'general)
+;;;  (add-to-list 'load-path
+;;;      "~/.emacs.d/lisp/general.el/"
+;;;  )
+;;;  (require 'general)
 #+END_SRC
 
 ;;;  (use-package general
