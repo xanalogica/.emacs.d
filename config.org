@@ -178,7 +178,8 @@ symbols is in
 
 #+BEGIN_SRC emacs-lisp
   (use-package bind-key
-    :ensure t)
+    :ensure t  ;; this package is essential for my configuration to work
+  )
 #+END_SRC
 
 ** Optionally, use ~general~ Elisp package for easier key definitions
