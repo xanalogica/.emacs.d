@@ -143,6 +143,8 @@ and tidy.
 ;;;  (eval-when-compile
 ;;;    (require 'use-package))
 
+  (add-to-list 'load-path
+      "~/.emacs.d/lisp/use-package")
   (require 'use-package)
   (setq use-package-verbose t)  ;; to assist debugging configuration
 #+END_SRC
