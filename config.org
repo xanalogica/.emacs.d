@@ -4193,7 +4193,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
            (org-super-agenda-groups
              '(
                 (:discard (:scheduled t :deadline t))
-                (:name "=== Unscheduled Shopping ===" :tag "SHOP")
+                (:name "=== Unscheduled Shopping ===" :tag "LINK")
                 (:name "=== Unschedule SysAdmin ===" :tag "SYSADMIN")
                 (:name "=== Unscheduled Chores ===" :tag "CHORE")
 
