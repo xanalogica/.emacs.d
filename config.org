@@ -4087,7 +4087,7 @@ complex sets of information.
        ("P" "Agenda for Current Period" agenda
          (org-super-agenda-mode)
 
-         ( ; [5] list of local settings local to this custom agenda view
+         ( ; [5] list of settings local to this custom agenda view
            (org-agenda-span 14)
            (org-super-agenda-groups
              '(
