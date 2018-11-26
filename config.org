@@ -4196,7 +4196,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
                 (:name "=== Links Needing Refiling ==="
                   (:and
                     (:tag "LINK")
-                    (:tag "REFILING)
+                    (:tag "REFILING")
                   )
                 )
 
