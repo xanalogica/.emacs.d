@@ -4070,7 +4070,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp :exports code
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
-    '(  ; (key desc type match settings files)
+    '(  ; (key[1] desc[2] type[3] match[4] settings[5] files[6])
        ("P" "Agenda for Current Period" agenda
          (org-super-agenda-mode)
 
