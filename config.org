@@ -4192,7 +4192,7 @@ The primary use of this package is for the daily/weekly agenda, made by the
          ( ; list of local settings
            (org-super-agenda-groups
              '(
-                (:name "=== Links Needing Refiling ===" :and (:tag "REFILING"))
+                (:name "=== Links Needing Refiling ===" :and (:tag "REFILING" :tag "LINK"))
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
               )
