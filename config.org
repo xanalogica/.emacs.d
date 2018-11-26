@@ -191,7 +191,7 @@ primarily for making key definition more clear and concise.  It adds the
 
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'load-path
-      "~/.emacs.d/lisp/general.el/"
+      "~/.emacs.d/lisp/general"
   )
   (require 'general)
 
