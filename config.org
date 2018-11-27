@@ -4239,6 +4239,8 @@ In Agenda-View List:
 Top Line in Agenda-View Itself:
   Headlines with TAGS match: +LINK+REFILING
 
+Exported view as .pdf is HORRIBLE, WITH BLACK BOXES
+
 
 ;;;             '(
 ;;;                (:name "=== Links Needing Refiling ==="
