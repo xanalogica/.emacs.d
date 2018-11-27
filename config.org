@@ -4022,7 +4022,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
  '(org-agenda-prefix-format "  %-17:c%?-20t% s")
  '(org-agenda-span 60)
 
-
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
 The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
