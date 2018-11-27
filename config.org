@@ -4299,7 +4299,7 @@ types:
            (org-agenda-add-entry-text-maxlines 5)  ;; experimental
 
            (set-face-attribute 'org-agenda-structure nil
-             :weight 'bold
+             :weight 'bold  :foreground "red"
            )
 
 ;;;(set-face-foreground 'org-agenda-structure 
