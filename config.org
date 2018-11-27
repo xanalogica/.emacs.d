@@ -4087,13 +4087,7 @@ list of items, usually for the daily/weekly agenda, made by the
                 (:discard (:anything t))
 
               )
-
-
-
-
-
-
-
+#+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
