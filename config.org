@@ -4295,11 +4295,8 @@ types:
            (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
 
            (org-agenda-compact-blocks t)
-try: (org-agenda-add-entry-text-descriptive-links nil)
-     (org-agenda-add-entry-text-maxlines 5)
-
-
-
+           (org-agenda-add-entry-text-descriptive-links nil)
+           (org-agenda-add-entry-text-maxlines 5)
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
