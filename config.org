@@ -4008,12 +4008,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     t)
   (setq org-agenda-timegrid-use-ampm
     t)
-
-(org-agenda-time-of-day-to-ampm t)
-
-
-
-
+  (setq org-agenda-time-of-day-to-ampm
+    t)
   (setq org-agenda-show-log
     t)
 ;;  (setq org-agenda-prefix-format
