@@ -4004,6 +4004,15 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     t)
   (setq org-agenda-start-on-weekday
     nil)
+  (setq org-agenda-time-leading-zero
+    t)
+
+(org-agenda-timegrid-use-ampm t)
+(org-agenda-time-of-day-to-ampm t)
+
+
+
+
   (setq org-agenda-show-log
     t)
   (setq org-agenda-prefix-format
@@ -4320,9 +4329,6 @@ try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
   )
 
-(org-agenda-time-leading-zero t)
-(org-agenda-timegrid-use-ampm t)
-(org-agenda-time-of-day-to-ampm t)
 
 try: C-u l    to show ALL log entries in agenda log mode
 
