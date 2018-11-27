@@ -617,7 +617,7 @@ printer service, allowing me to select different printers and change settings.
   (ps-extend-face       '(font-lock-warning-face        "White"     "red"      nil)         'MERGE)
 
   (setq ps-use-face-background
-    t)
+    nil)
 #+END_SRC
 
 *** Exporting an Org-mode File to Other Formats
