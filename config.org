@@ -4090,7 +4090,7 @@ list of items, usually for the daily/weekly agenda, made by the
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/recurring-tasks  ;; presentation definition using org-super-agenda
+  (setq groups/backlog-tasks  ;; presentation definition using org-super-agenda
     '(
                 (:discard (:scheduled t :deadline t))  ;; skip task that ARE scheduled
                 (:name "=== Unscheduled Shopping ===" :tag "SHOP")
@@ -4111,8 +4111,8 @@ list of items, usually for the daily/weekly agenda, made by the
                 (:name "=== Unscheduled Events ===" :tag "EVENT")
                 (:name "=== Refilings to Organize ===" :tag "REFILING")
 
-                ;; After the last group, the agenda will display items that didn't
-                ;; match any of these groups, with the default order position of 99
+       ;; After the last group, the agenda will display items that didn't
+       ;; match any of these groups, with the default order position of 99
      )
   )
 #+END_SRC
