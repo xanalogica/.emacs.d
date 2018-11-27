@@ -4248,6 +4248,7 @@ types:
          ( ;; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/shopping-lists)
            (org-agenda-remove-tags t)
+           ;; add checkboxes
            (org-agenda-with-colors nil)
          )
          ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
