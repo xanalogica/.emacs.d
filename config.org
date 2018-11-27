@@ -4032,13 +4032,13 @@ list of items, usually for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp
   (setq my/links-needing-refiling ;; presention definition using org-super-agenda
     '(
-           (:name "=== Links Needing Refiling ==="
+       (:name "=== Links Needing Refiling ==="
 ;;;           :and (:tag "REFILING" :tag "LINK")
-           )
-           ;; After the last group, the agenda will display items that didn't
-           ;; match any of these groups, with the default order position of 99
-         )
-      )
+       )
+       ;; After the last group, the agenda will display items that didn't
+       ;; match any of these groups, with the default order position of 99
+     )
+  )
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
