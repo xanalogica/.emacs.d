@@ -4295,8 +4295,8 @@ C-x C-w does NOT use my supplied filename
 C-c a e
 Exported view as .pdf is HORRIBLE, WITH BLACK BOXES
  uses  ~ps-print-buffer-with-faces~
-   ps-number-of-columns 2
-   ps-landscape-mode t
+   (ps-number-of-columns 2)
+   (ps-landscape-mode t)
    (org-agenda-prefix-format " [ ] ")
 
 
