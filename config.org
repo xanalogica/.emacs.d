@@ -4293,6 +4293,13 @@ types:
            (org-super-agenda-groups groups/backlog-tasks)
            (org-agenda-with-colors t)
            (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
+
+           (org-agenda-compact-blocks t)
+try: (org-agenda-add-entry-text-descriptive-links nil)
+     (org-agenda-add-entry-text-maxlines 5)
+
+
+
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
@@ -4351,9 +4358,6 @@ Original value was
  (tags . " %i %-12:c")
  (search . " %i %-12:c"))
 
-try: (org-agenda-compact-blocks t)
-try: (org-agenda-add-entry-text-descriptive-links nil)
-     (org-agenda-add-entry-text-maxlines 5)
 
 try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
