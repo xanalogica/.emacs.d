@@ -4036,8 +4036,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
   (set-face-attribute 'org-list-dt nil :foreground "Orange" :box "White" :inverse-video t)
 
-
-
   )
   (setq org-agenda-dim-blocked-tasks
     nil)
