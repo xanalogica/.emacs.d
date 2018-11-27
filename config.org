@@ -4034,6 +4034,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   ;;; :slant 'italic
   ;;; :overline t
   ;;; :overline "blue"
+  ;;; :box t -or- "red"
 
 #+END_SRC
 
