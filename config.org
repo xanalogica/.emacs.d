@@ -4326,6 +4326,11 @@ try:
 
 try: C-u l    to show ALL log entries in agenda log mode
 
+ '(org-agenda-format-date (quote org-agenda-format-date-aligned-jrr))
+ '(org-agenda-prefix-format "  %-17:c%?-20t% s")
+ '(org-agenda-span 60)
+ '(org-agenda-start-on-weekday nil)
+
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
