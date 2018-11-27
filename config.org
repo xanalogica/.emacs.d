@@ -4243,7 +4243,7 @@ types:
          ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
        )
 
-       ("S" "Captured Links Needing Refiling" tags  ;; key[1] desc[2] type[3]
+       ("S" "Shopping List(s)" tags  ;; key[1] desc[2] type[3]
          "+LINK+REFILING"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/links-needing-refiling)
