@@ -4029,7 +4029,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     nil) ;; do NOT match inherited tags in headline sublevels
 
   (set-face-attribute 'org-agenda-structure nil
-    :foreground "Red"
+    :foreground "White"
     :box "DarkRed"
     :inverse-video t
     :weight 'bold
