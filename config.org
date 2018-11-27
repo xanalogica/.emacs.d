@@ -4031,6 +4031,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (set-face-attribute 'org-agenda-structure nil
     :weight 'bold  :foreground "black" :background "red" :underline "yellow"
   )
+  (setq org-agenda-dim-blocked-tasks
+    nil)
 
 ;;;  (set-face-attribute 'org-super-agenda-header nil
 ;;;    :weight 'bold  :foreground "red" :background "blue" :overline "green"
