@@ -4222,7 +4222,7 @@ types:
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/recurring-tasks)
          )
-         ("MyHabits.pdf")
+         ("/tmp/MyHabits.pdf")
        )
 
        ("L" "Captured Links Needing Refiling" tags  ;; key[1] desc[2] type[3]
@@ -4232,7 +4232,7 @@ types:
            (org-agenda-remove-tags t)
            (org-agenda-with-colors nil)
          )
-         ("CapturedNewLinks.pdf")
+         ("/tmp/CapturedNewLinks.pdf")
        )
     )
   )
