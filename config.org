@@ -4214,7 +4214,6 @@ types:
               )
            )
          )
-;;;         (org-agenda nil "a")
        )
        ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
