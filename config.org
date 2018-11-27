@@ -4359,7 +4359,6 @@ try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
   )
 
-
 try: C-u l    to show ALL log entries in agenda log mode
 
 
