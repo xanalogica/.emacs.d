@@ -4219,6 +4219,8 @@ types:
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/recurring-tasks)
+           (org-agenda-remove-tags t)
+           (org-agenda-with-colors nil)
          )
          ("/tmp/MyHabits.pdf")
        )
