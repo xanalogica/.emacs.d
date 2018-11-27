@@ -4312,6 +4312,7 @@ Original value was
 
 try: (org-agenda-compact-blocks t)
 try: (org-agenda-add-entry-text-descriptive-links nil)
+     (org-agenda-add-entry-text-maxlines 5)
 
 try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
