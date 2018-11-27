@@ -4035,7 +4035,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     :line-width -1
     :style 'released-button
     :inverse-video t
-    :weight 'bold
+    :weight 'extra-bold
     :height 1.5
 
 ;;; :background "deep sky blue"
