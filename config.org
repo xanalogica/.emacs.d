@@ -4301,13 +4301,11 @@ types:
            (set-face-attribute 'org-agenda-structure nil
              :weight 'bold
            )
-(set-face-foreground 'org-agenda-structure 
-           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
 
-org-super-agenda-header
-
-
-
+;;;(set-face-foreground 'org-agenda-structure 
+;;;           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
+;;;
+;;;org-super-agenda-header
 
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
