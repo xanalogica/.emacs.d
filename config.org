@@ -4047,14 +4047,10 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
        )
     )
 
-  ;; (setq org-agenda-format-date 'org-agenda-format-date-aligned-jrr)
-
   (setq org-agenda-format-date
     'org-agenda-format-date-aligned-jrr)
 
 #+END_SRC
-
- '(org-agenda-format-date (quote org-agenda-format-date-aligned-jrr))
 
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
