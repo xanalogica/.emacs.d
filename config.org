@@ -4290,7 +4290,7 @@ types:
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/backlog-tasks)
-           (org-agenda-with-colors nil)
+           (org-agenda-with-colors t)
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
