@@ -4280,7 +4280,7 @@ types:
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/scheduled-tasks)
-           (org-agenda-span 14)
+           (org-agenda-span 14)         ;; show me 14-days at a time
            (org-agenda-with-colors t)
          )
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
