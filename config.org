@@ -4085,8 +4085,8 @@ list of items, usually for the daily/weekly agenda, made by the
        ;; After the last group, the agenda will display items that didn't
        ;; match any of these groups, with the default order position of 99
        (:discard (:anything t))
-
-       )
+    )
+  )
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
