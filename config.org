@@ -4229,6 +4229,13 @@ types:
 
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups my/links-needing-refiling)
+
+       )
+     )
+  )
+#+END_SRC
+
+
 ;;;             '(
 ;;;                (:name "=== Links Needing Refiling ==="
 ;;;;;;                   :and (:tag "REFILING" :tag "LINK")
@@ -4239,10 +4246,7 @@ types:
 ;;;           )
 ;;;         )
 ;;;         (org-agenda nil "L")
-       )
-     )
-  )
-#+END_SRC
+
 ;;;                (:discard (:scheduled t :deadline t))
 
 ? how to style the headers?
