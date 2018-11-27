@@ -4312,6 +4312,10 @@ Original value was
 
 try: (org-agenda-compact-blocks t)
 
+try:
+  (org-agenda-exporter-settings
+  )
+
 
 ;;;             '(
 ;;;                (:name "=== Links Needing Refiling ==="
