@@ -4220,55 +4220,7 @@ types:
          (org-super-agenda-mode)  ;; match[4]
 
          ( ; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/recurring-tasks
-             '(
-                (:discard (:not (:scheduled t :deadline t)))
-
-                (:name "=== Short-Term Habitual Tasks: Finance ==="
-                  :and (
-                    :habit t
-                    :not (:tag "RECUR")
-                    :tag "FINANCE"
-                  )
-                )
-
-                (:name "=== Short-Term Habitual Tasks: Health ==="
-                  :and (
-                    :habit t
-                    :not (:tag "RECUR")
-                    :tag "HEALTH"
-                  )
-                )
-
-                (:name "=== Short-Term Habitual Tasks: Other items ==="
-                  :and (
-                    :habit t
-                    :not (:tag "RECUR")
-                  )
-                )
-
-                (:name "=== Long-Term Recurring Tasks: Finance ==="
-                  :and (:not (:habit t) :tag "RECUR" :tag "FINANCE")
-                )
-
-                (:name "=== Long-Term Recurring Tasks: Health ==="
-                  :and (:not (:habit t) :tag "RECUR" :tag "HEALTH")
-                )
-
-                (:name "=== Long-Term Recurring Tasks: Tech ==="
-                  :and (:not (:habit t) :tag "RECUR" :tag "TECH")
-                )
-
-                (:name "=== Long-Term Recurring Tasks: Other items ==="
-                  :and (:not (:habit t) :tag "RECUR")
-                )
-
-                ;; After the last group, the agenda will display items that didn't
-                ;; match any of these groups, with the default order position of 99
-                (:discard (:anything t))
-
-              )
-           )
+           (org-super-agenda-groups groups/recurring-tasks)
          )
 ;;;         (org-agenda nil "t")
        )
