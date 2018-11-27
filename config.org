@@ -4234,6 +4234,7 @@ types:
 #+END_SRC
 
 In Agenda-View List:
+  Captured Links Needing Refiling: +LINK+REFILING
 
 Top Line in Agenda-View Itself:
   Headlines with TAGS match: +LINK+REFILING
