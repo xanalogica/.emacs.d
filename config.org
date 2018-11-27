@@ -4140,6 +4140,12 @@ list of items, usually for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp
   (setq groups/shopping-lists  ;; presentation definition using org-super-agenda
     '(
+       (:name "=== My Shopping List ==="
+         :anything t  ;; place all (prefiltered) entries under this heading
+       )
+
+
+
       (:name "=== To Share My Knowledge with Others ======" :tag "WRITING")
       (:name "=== To Continually Learn New Things ========" :tag "STUDY")
 
