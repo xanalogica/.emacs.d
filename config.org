@@ -4290,6 +4290,7 @@ types:
 In Popup List of Agenda-Views:
   Captured Links Needing Refiling: +LINK+REFILING
   try: (org-agenda-menu-show-matched nil)
+  try: (org-agenda-menu-two-columns t)
 
 Top Line in Agenda-View Itself:
   Headlines with TAGS match: +LINK+REFILING
