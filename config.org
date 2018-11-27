@@ -4038,6 +4038,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 #+END_SRC
 
+[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html#Face-Attributes][Face Attributes - GNU Emacs Lisp Reference Manual]]
+
 #+BEGIN_SRC emacs-lisp
   (defun org-agenda-format-date-aligned-jrr (date)
     "Format a date string for display in the daily/weekly agenda, or timeline.
