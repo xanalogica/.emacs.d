@@ -4308,7 +4308,7 @@ types:
          ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
        )
 
-       ("L" "Captured Links Needing Refiling" tags  ;; key[1] desc[2] type[3]
+       ("F" "Captured Links Needing Refiling" tags  ;; key[1] desc[2] type[3]
          "REFILING"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/links-needing-refiling)
