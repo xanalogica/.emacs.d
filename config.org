@@ -4021,7 +4021,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (setq org-tags-match-list-sublevels
     nil) ;; do NOT match inherited tags in headline sublevels
 
-  (setq set-face-attribute 'org-agenda-structure nil
+  (set-face-attribute 'org-agenda-structure nil
     :weight 'bold  :foreground "red"
   )
 
