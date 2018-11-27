@@ -4297,6 +4297,18 @@ types:
            (org-agenda-compact-blocks t)  ;; experimental
            (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
            (org-agenda-add-entry-text-maxlines 5)  ;; experimental
+
+           (set-face-attribute 'org-agenda-structure nil
+             :weight 'bold
+           )
+(set-face-foreground 'org-agenda-structure 
+           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
+
+org-super-agenda-header
+
+
+
+
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
@@ -4337,12 +4349,6 @@ types:
     )
   )
 #+END_SRC
-
-(set-face-attribute 'org-agenda-structure nil :weight 'bold)
-
-org-super-agenda-header
-
-
 
 C-x C-w does NOT use my supplied filename
 C-c a e
