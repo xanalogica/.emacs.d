@@ -4313,7 +4313,7 @@ Original value was
 try: (org-agenda-compact-blocks t)
 
 try:
-  (org-agenda-exporter-settings
+  (org-agenda-exporter-settings ;; set options for ps-print and htmlize
   )
 
 
