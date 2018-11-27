@@ -4029,11 +4029,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     :weight 'bold  :foreground "red" :background "blue"
   )
 
-;;;(set-face-foreground 'org-agenda-structure 
-;;;           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
-;;;
-;;;
-
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
