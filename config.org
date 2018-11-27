@@ -4324,6 +4324,8 @@ try:
 (org-agenda-timegrid-use-ampm t)
 (org-agenda-time-of-day-to-ampm t)
 
+try: C-u l    to show ALL log entries in agenda log mode
+
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
