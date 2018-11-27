@@ -4032,6 +4032,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     :foreground "Red"
     :box "DarkRed"
     :inverse-video t
+    :weight 'bold
 
 ;;    :weight 'bold
 ;;    :foreground "black"  ;; "Orange"
