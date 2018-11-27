@@ -4320,6 +4320,9 @@ try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
   )
 
+(org-agenda-time-leading-zero t)
+(org-agenda-timegrid-use-ampm t)
+
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
