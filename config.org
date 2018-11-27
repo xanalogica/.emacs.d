@@ -4310,7 +4310,7 @@ Original value was
  (tags . " %i %-12:c")
  (search . " %i %-12:c"))
 
-
+try: (org-agenda-compact-blocks t)
 
 
 ;;;             '(
