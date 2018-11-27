@@ -4311,6 +4311,7 @@ Original value was
  (search . " %i %-12:c"))
 
 try: (org-agenda-compact-blocks t)
+try: (org-agenda-add-entry-text-descriptive-links nil)
 
 try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
