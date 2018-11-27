@@ -4025,7 +4025,6 @@ list of items, usually for the daily/weekly agenda, made by the
 
     :config
       (org-super-agenda-mode) ;; enable it globally
-
   )
 #+END_SRC
 
