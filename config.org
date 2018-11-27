@@ -4289,6 +4289,8 @@ types:
 
 In Popup List of Agenda-Views:
   Captured Links Needing Refiling: +LINK+REFILING
+  try: (org-agenda-menu-show-matched nil)
+
 
 Top Line in Agenda-View Itself:
   Headlines with TAGS match: +LINK+REFILING
@@ -4313,8 +4315,6 @@ Original value was
 try: (org-agenda-compact-blocks t)
 try: (org-agenda-add-entry-text-descriptive-links nil)
      (org-agenda-add-entry-text-maxlines 5)
-try: (org-agenda-menu-show-matched nil)
-
 
 try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
