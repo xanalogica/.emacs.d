@@ -4227,7 +4227,7 @@ types:
          ( ;; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/links-needing-refiling)
          )
-         "CapturedNewLinks.pdf"
+         "CapturedNewLinks.ps"
        )
     )
   )
