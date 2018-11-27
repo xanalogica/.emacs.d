@@ -4087,6 +4087,17 @@ list of items, usually for the daily/weekly agenda, made by the
 
     :config
       (org-super-agenda-mode)  ;; enable it globally
+
+      (set-face-attribute 'org-super-agenda-header nil
+        :weight 'bold  :foreground "red" :background "blue" :overline "green"
+      )
+
+  ;;; :underline t
+  ;;; :underline "red"
+  ;;; :slant 'italic
+  ;;; :overline t
+  ;;; :overline "blue"
+  ;;; :box t -or- "red"
   )
 #+END_SRC
 
