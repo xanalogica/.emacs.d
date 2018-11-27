@@ -4326,6 +4326,7 @@ types:
            (org-agenda-remove-tags t)
            ;; add checkboxes
            (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Shopping List(s)")
          )
          ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
        )
