@@ -616,6 +616,7 @@ printer service, allowing me to select different printers and change settings.
   (ps-extend-face       '(font-lock-type-face           "White"   "DarkGreen"  bold)        'MERGE) ;; Python class names
   (ps-extend-face       '(font-lock-warning-face        "White"     "red"      nil)         'MERGE)
   (ps-extend-face       '(org-agenda-dimmed-todo-face   "black"   "DarkGreen"  bold-italic) 'MERGE)
+  (ps-extend-face       '(org-agenda-structure          "red"   "DarkGreen"  bold-italic) 'MERGE)
 
   (setq org-agenda-dim-blocked-tasks nil)
 
