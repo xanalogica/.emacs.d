@@ -4030,6 +4030,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
   (set-face-attribute 'org-agenda-structure nil
     :foreground "White"
+    :background "Red"
     :box "DarkRed"
     :inverse-video t
     :weight 'bold
