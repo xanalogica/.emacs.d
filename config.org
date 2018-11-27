@@ -4025,10 +4025,14 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     :weight 'bold  :foreground "red"
   )
 
+  (set-face-attribute 'org-super-agenda-header nil
+    :weight 'bold  :foreground "red"
+  )
+
 ;;;(set-face-foreground 'org-agenda-structure 
 ;;;           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
 ;;;
-;;;org-super-agenda-header
+;;;
 
 #+END_SRC
 
