@@ -4292,6 +4292,7 @@ types:
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/backlog-tasks)
            (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
