@@ -4282,6 +4282,7 @@ types:
            (org-super-agenda-groups groups/scheduled-tasks)
            (org-agenda-span 14)         ;; show me 14-days at a time
            (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Agenda for Current Period")
          )
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
@@ -4328,8 +4329,6 @@ types:
     )
   )
 #+END_SRC
-
-??? org-agenda-overriding-header ???
 
 Top Line in Agenda-View Itself:
   Headlines with TAGS match: +LINK+REFILING
