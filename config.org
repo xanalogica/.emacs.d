@@ -4006,8 +4006,9 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     nil)
   (setq org-agenda-time-leading-zero
     t)
+  (setq org-agenda-timegrid-use-ampm
+    t)
 
-(org-agenda-timegrid-use-ampm t)
 (org-agenda-time-of-day-to-ampm t)
 
 
