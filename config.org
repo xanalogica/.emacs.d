@@ -623,6 +623,11 @@ printer service, allowing me to select different printers and change settings.
     nil)
 #+END_SRC
 
+https://emacs.stackexchange.com/questions/35305/how-to-get-rid-of-the-unsaved-title-from-the-exported-agenda-document
+
+study: ps-print.el
+
+
 *** Exporting an Org-mode File to Other Formats
 **** to LaTeX (.pdf)
 
