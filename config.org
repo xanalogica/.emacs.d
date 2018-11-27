@@ -4321,6 +4321,8 @@ try:
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
+consider: a timeline view of non-TODO entries with datestamps only
+
 ;;;             '(
 ;;;                (:name "=== Links Needing Refiling ==="
 ;;;;;;                   :and (:tag "REFILING" :tag "LINK")
