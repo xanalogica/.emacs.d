@@ -4108,7 +4108,7 @@ types:
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
     '(
-       ("P" "Agenda for Current Period" agenda  ;; (key[1] desc[2] type[3]
+       ("P" "Agenda for Current Period" agenda  ;; key[1] desc[2] type[3]
          (org-super-agenda-mode)  ;; match[4]
 
          ( ; [5] list of settings local to this custom agenda view
@@ -4135,7 +4135,7 @@ types:
          (org-agenda nil "a") ;; files-to-write[6]
        )
 
-       ("B" "Backlog of Unscheduled Tasks" todo  ;; (key[1] desc[2] type[3]
+       ("B" "Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
          (org-super-agenda-mode)  ;; match[4]
 
          ( ; [5] list of settings local to this custom agenda view
@@ -4167,7 +4167,7 @@ types:
          )
          (org-agenda nil "a")
        )
-       ("R" "Recurring/Habits" todo  ;; (key[1] desc[2] type[3]
+       ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
          (org-super-agenda-mode)  ;; match[4]
 
          ( ; [5] list of settings local to this custom agenda view
