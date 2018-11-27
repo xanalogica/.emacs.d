@@ -4233,6 +4233,11 @@ types:
   )
 #+END_SRC
 
+In Agenda-View List:
+
+Top Line in Agenda-View Itself:
+  Headlines with TAGS match: +LINK+REFILING
+
 
 ;;;             '(
 ;;;                (:name "=== Links Needing Refiling ==="
