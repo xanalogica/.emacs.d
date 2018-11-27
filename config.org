@@ -4287,7 +4287,7 @@ types:
 
 ??? org-agenda-overriding-header ???
 
-In Agenda-View List:
+In List of Agenda-Views:
   Captured Links Needing Refiling: +LINK+REFILING
 
 Top Line in Agenda-View Itself:
