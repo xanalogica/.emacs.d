@@ -4338,6 +4338,8 @@ to occupy a fixed space in the agenda display."
   :group 'org-agenda-line-format
   :type 'string)
 
+(org-agenda-show-inherited-tags nil)
+
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
