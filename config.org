@@ -617,6 +617,8 @@ printer service, allowing me to select different printers and change settings.
   (ps-extend-face       '(font-lock-warning-face        "White"     "red"      nil)         'MERGE)
   (ps-extend-face       '(org-agenda-dimmed-todo-face   "black"   "DarkGreen"  bold-italic) 'MERGE)
 
+  (setq org-agenda-dim-blocked-tasks nil)
+
   (setq ps-use-face-background
     nil)
 #+END_SRC
