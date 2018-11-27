@@ -4303,6 +4303,7 @@ types:
            (org-super-agenda-groups groups/recurring-tasks)
            (org-agenda-remove-tags t)
            (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Recurring/Habitual Tasks")
          )
          ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
        )
