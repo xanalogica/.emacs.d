@@ -4331,6 +4331,13 @@ try: C-u l    to show ALL log entries in agenda log mode
  '(org-agenda-span 60)
  '(org-agenda-start-on-weekday nil)
 
+(defcustom org-agenda-todo-keyword-format "%-1s"
+  "Format for the TODO keyword in agenda lines.
+Set this to something like \"%-12s\" if you want all TODO keywords
+to occupy a fixed space in the agenda display."
+  :group 'org-agenda-line-format
+  :type 'string)
+
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
