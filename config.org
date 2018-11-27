@@ -4322,6 +4322,7 @@ try:
 
 (org-agenda-time-leading-zero t)
 (org-agenda-timegrid-use-ampm t)
+(org-agenda-time-of-day-to-ampm t)
 
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
