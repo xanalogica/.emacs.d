@@ -4029,7 +4029,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     :weight 'bold  :foreground "red" :background "blue" :height 2.0
   )
 
-  ;;; :underline
+  ;;; :underline t
+  ;;; :underline "red"
   ;;; :slant 'italic
 
 #+END_SRC
