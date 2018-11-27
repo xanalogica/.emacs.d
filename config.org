@@ -4012,7 +4012,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     t)
   (setq org-agenda-show-log
     t)
-  (setq org-agenda-menu-show-matched
+  (setq org-agenda-menu-show-matcher
     nil)
   (setq org-agenda-menu-two-columns
     t)
