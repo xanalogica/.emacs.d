@@ -4119,7 +4119,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
 #+BEGIN_SRC emacs-lisp
   (setq groups/scheduled-tasks  ;; presentation definition using org-super-agenda
-             '(
+    '(
                 (:name "=== Urgent and Scheduled Tasks for Today ===" :tag "HOT")
                 (:name "=== Maintain Physical and Mental Health ====" :tag "HEALTH")
                 (:name "=== To Not Worry about Money ===============" :tag "FINANCE")
@@ -4134,8 +4134,7 @@ list of items, usually for the daily/weekly agenda, made by the
                 ;; After the last group, the agenda will display items that didn't
                 ;; match any of these groups, with the default order position of 99
               )
-           )
-
+    )
   )
 #+END_SRC
 
