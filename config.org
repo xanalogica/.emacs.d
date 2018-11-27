@@ -4314,7 +4314,7 @@ types:
            (org-super-agenda-groups groups/links-needing-refiling)
            (org-agenda-remove-tags nil)
            (org-agenda-with-colors t)
-           (org-agenda-overriding-header "Captured Info Needing Refiling")
+           (org-agenda-overriding-header "Captured Info Needing Filing")
          )
          ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
        )
