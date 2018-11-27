@@ -4026,7 +4026,7 @@ list of items, usually for the daily/weekly agenda, made by the
     :config
       (org-super-agenda-mode) ;; enable it globally
 
-      (my/links-needing-refiling
+      (my/links-needing-refiling ;; presention definition using org-super-agenda
         '(
            (:name "=== Links Needing Refiling ==="
 ;;;           :and (:tag "REFILING" :tag "LINK")
