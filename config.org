@@ -4020,6 +4020,16 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 ;;    "  %-17:c%?-12t% s")                ;; widen category field a little
   (setq org-tags-match-list-sublevels
     nil) ;; do NOT match inherited tags in headline sublevels
+
+  (setq set-face-attribute 'org-agenda-structure nil
+             :weight 'bold  :foreground "red"
+           )
+
+;;;(set-face-foreground 'org-agenda-structure 
+;;;           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
+;;;
+;;;org-super-agenda-header
+
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
@@ -4297,16 +4307,6 @@ types:
            (org-agenda-compact-blocks t)  ;; experimental
            (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
            (org-agenda-add-entry-text-maxlines 5)  ;; experimental
-
-           (set-face-attribute 'org-agenda-structure nil
-             :weight 'bold  :foreground "red"
-           )
-
-;;;(set-face-foreground 'org-agenda-structure 
-;;;           ("TODO" . (:foreground "red"    :background "black"     :weight bold))
-;;;
-;;;org-super-agenda-header
-
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
