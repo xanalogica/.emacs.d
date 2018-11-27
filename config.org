@@ -4018,6 +4018,11 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     nil) ;; do NOT match inherited tags in headline sublevels
 #+END_SRC
 
+ '(org-agenda-format-date (quote org-agenda-format-date-aligned-jrr))
+ '(org-agenda-prefix-format "  %-17:c%?-20t% s")
+ '(org-agenda-span 60)
+ '(org-agenda-start-on-weekday nil)
+
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
 The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
@@ -4329,10 +4334,6 @@ try:
 
 try: C-u l    to show ALL log entries in agenda log mode
 
- '(org-agenda-format-date (quote org-agenda-format-date-aligned-jrr))
- '(org-agenda-prefix-format "  %-17:c%?-20t% s")
- '(org-agenda-span 60)
- '(org-agenda-start-on-weekday nil)
 
 (defcustom org-agenda-todo-keyword-format "%-1s"
   "Format for the TODO keyword in agenda lines.
