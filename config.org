@@ -4041,7 +4041,7 @@ list of items, usually for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp
   (setq groups/recurring-tasks  ;; presentation definition using org-super-agenda
     '(
-       (:discard (:not (:scheduled t :deadline t)))  ;; skip anything not scheduled
+       (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
                 (:name "=== Short-Term Habitual Tasks: Finance ==="
                   :and (
