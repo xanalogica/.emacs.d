@@ -4226,10 +4226,10 @@ types:
 
        ("L" "Captured Links Needing Refiling" tags  ;; (key[1] desc[2] type[3]
          "+LINK+REFILING"  ;; match[4]
-         ( ; [5] list of settings local to this custom agenda view
+         ( ;; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups my/links-needing-refiling)
          )
-     )
+     ))
   )
 #+END_SRC
 
