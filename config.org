@@ -4239,6 +4239,7 @@ In Agenda-View List:
 Top Line in Agenda-View Itself:
   Headlines with TAGS match: +LINK+REFILING
 
+C-x C-w does NOT use my supplied filename
 Exported view as .pdf is HORRIBLE, WITH BLACK BOXES
 
 
