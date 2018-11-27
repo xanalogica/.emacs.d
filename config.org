@@ -4381,20 +4381,6 @@ consider: a timeline view of non-TODO entries with datestamps only (like plannin
   - put a horizontal line above header
   - increase font size of header
 
-(setq org-agenda-custom-commands
-      '(("x" agenda)
-        ("y" agenda*)
-        ("w" todo "WAITING")
-        ("W" todo-tree "WAITING")
-        ("u" tags "+boss-urgent")
-        ("v" tags-todo "+boss-urgent")
-        ("U" tags-tree "+boss-urgent")
-        ("f" occur-tree "\\<FIXME\\>")
-        ("h" . "HOME+Name tags searches") ; description for "h" prefix
-        ("hl" tags "+home+Lisa")
-        ("hp" tags "+home+Peter")
-        ("hk" tags "+home+Kim")))
-
 Another possibility is the construction of agenda views that comprise the
 results of several commands, each of which creates a block in the agenda
 buffer.  The available commands include agenda for the daily or weekly agenda
