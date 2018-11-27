@@ -4220,7 +4220,7 @@ types:
          (org-super-agenda-mode)  ;; match[4]
 
          ( ; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups
+           (org-super-agenda-groups groups/recurring-tasks
              '(
                 (:discard (:not (:scheduled t :deadline t)))
 
