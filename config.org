@@ -4066,27 +4066,27 @@ list of items, usually for the daily/weekly agenda, made by the
          )
        )
 
-                (:name "=== Long-Term Recurring Tasks: Finance ==="
-                  :and (:not (:habit t) :tag "RECUR" :tag "FINANCE")
-                )
+       (:name "=== Long-Term Recurring Tasks: Finance ==="
+         :and (:not (:habit t) :tag "RECUR" :tag "FINANCE")
+       )
 
-                (:name "=== Long-Term Recurring Tasks: Health ==="
-                  :and (:not (:habit t) :tag "RECUR" :tag "HEALTH")
-                )
+       (:name "=== Long-Term Recurring Tasks: Health ==="
+         :and (:not (:habit t) :tag "RECUR" :tag "HEALTH")
+       )
 
-                (:name "=== Long-Term Recurring Tasks: Tech ==="
-                  :and (:not (:habit t) :tag "RECUR" :tag "TECH")
-                )
+       (:name "=== Long-Term Recurring Tasks: Tech ==="
+         :and (:not (:habit t) :tag "RECUR" :tag "TECH")
+       )
 
-                (:name "=== Long-Term Recurring Tasks: Other items ==="
-                  :and (:not (:habit t) :tag "RECUR")
-                )
+       (:name "=== Long-Term Recurring Tasks: Other items ==="
+         :and (:not (:habit t) :tag "RECUR")
+       )
 
-                ;; After the last group, the agenda will display items that didn't
-                ;; match any of these groups, with the default order position of 99
-                (:discard (:anything t))
+       ;; After the last group, the agenda will display items that didn't
+       ;; match any of these groups, with the default order position of 99
+       (:discard (:anything t))
 
-              )
+       )
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
