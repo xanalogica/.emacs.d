@@ -4281,7 +4281,7 @@ types:
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/scheduled-tasks)
            (org-agenda-span 14)
-           (org-agenda-with-colors nil)
+           (org-agenda-with-colors t)
          )
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
