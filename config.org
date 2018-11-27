@@ -4033,9 +4033,9 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
     :foreground "black"  ;; "Orange"
     :background "red"
     :underline "yellow"
-    :box       
+    :box       "White"
 
-:foreground "Orange" :box "White" :inverse-video t
+;; :foreground "Orange" :box "White" :inverse-video t
 
   )
   (setq org-agenda-dim-blocked-tasks
