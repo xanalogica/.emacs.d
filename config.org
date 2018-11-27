@@ -4380,7 +4380,6 @@ consider: a timeline view of non-TODO entries with datestamps only (like plannin
 ? how to style the headers?
   - put a horizontal line above header
   - increase font size of header
-? :scheduled today
 ? use :habit?
 
 (setq org-agenda-custom-commands
