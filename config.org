@@ -4318,6 +4318,8 @@ try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
   )
 
+try:
+  (org-agenda-archives-mode t)  ;; include archive files in search for agenda
 
 ;;;             '(
 ;;;                (:name "=== Links Needing Refiling ==="
