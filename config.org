@@ -4015,7 +4015,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
   (setq org-agenda-menu-show-matched
     nil)
 
-  try: ( nil)
   try: (org-agenda-menu-two-columns t)
 
 
