@@ -4366,7 +4366,7 @@ types:
 
            (org-agenda-prefix-format
              '((agenda . " %i %-12:c%?-12t% s")
-               (todo . " %i %-12:c")
+               (todo . " %i %-12:c XXX")
                (tags . " %i %-12:c")
                (search . " %i %-12:c")
               )
