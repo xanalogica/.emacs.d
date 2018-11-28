@@ -4191,10 +4191,6 @@ types:
            ;; add checkboxes
 
            (org-agenda-prefix-format " [ ] %-12:c"  ;; add checkbox for printed shopping list
-;;;             '((agenda . " %i %-12:c%?-12t% s")
-;;;               (todo . " %i %-12:c")
-;;;               (tags . " %i %-12:c")
-;;;               (search . " %i %-12:c"))
            )
 
            (org-agenda-with-colors t)
