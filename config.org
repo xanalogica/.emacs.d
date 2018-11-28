@@ -4253,7 +4253,7 @@ list of items, usually for the daily/weekly agenda, made by the
     '(
 
        (:name "Links Needing Refiling"
-         :anything t  ;; place all (prefiltered) entries under this heading
+         :tag "LINK"
        )
 
 
