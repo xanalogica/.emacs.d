@@ -4191,8 +4191,8 @@ types:
 
            (org-agenda-remove-tags t)
 
-org-use-tag-inheritance
-org-tags-match-list-sublevels
+;;; org-use-tag-inheritance  t
+           (org-tags-match-list-sublevels t)
 
            (org-agenda-files '("~/Dropbox/Documents/index.org"))
          )
