@@ -4014,6 +4014,8 @@ S Shopping List(s)  ->  $
  - HAS an agenda title on first line
  - org-agenda-type is 'tags'
 F Captured Info Needing Filing
+ - HAS an agenda title on first time
+ - org-agenda-type is 'tags'
 
 
 HOW is 'org-agenda-type' getting set to nil?
