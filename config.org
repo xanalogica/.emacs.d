@@ -4134,6 +4134,8 @@ types:
            (org-agenda-with-colors t)
            (org-agenda-remove-tags t)
            (org-agenda-overriding-header "Agenda for Each Day")
+
+           (org-agenda-type 'agenda)
          )
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
