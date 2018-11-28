@@ -4025,7 +4025,7 @@ F Captured Info Needing Filing
  - org-agenda-type is 'tags'
  - NEEDS TO SHOW NON-LINK FILING WORK !
  - HEADER IS "Links Needing Refiling"
- - MENU IS "
+ - MENU IS "Captured Links Needing Filing"
  - collecting :REFILING: but confuses "filing destinations" (lacks TODO) with "things needing refiling" (has TODO)
  - lacks any TODO column, just headings
 
