@@ -4004,6 +4004,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 1. write Christmas party invitation
 2. text Aimee re $200 owed
 3. fix Category of 'Ann' that bleeds over
+4. fix [qQ]uotes.org
+5. fix Finance.org
 
 P Agenda for Current Period -> Planned Tasks
  - missing agenda title from first line; has a date instead
