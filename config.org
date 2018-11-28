@@ -4007,6 +4007,21 @@ HOW is 'org-agenda-type' getting set to nil?
 
 (try out '!' command in Agenda view to toggle display of deadlines)
 
+- C-c a a  ::  ~org-agenda-list~  agenda for current day or week
+- C-c a t  ::  ~org-todo-list~    global todo list
+- C-c a T  ::  ~org-todo-list~    global todo list, prompt for keyword
+- C-c a m  ::  ~org-tags-view~    prompt for tag and display headlines
+- C-c a M  ::  ~org-tags-view~    prompt for tag and display todos
+- C-c a e  ::  export views to associated files
+- C-c a s  ::  search entries for keywords
+- C-c a S  ::  search entries for keywords, only with TODO keywords
+- C-c a /  ::  multi-occur across all agenda files
+- C-c a <  ::  restrict agenda commands to buffer, subtree or region
+- C-c a >  ::  remove a previous restriction
+- C-c a #  ::  list "stuck" projects
+- C-c a !  ::  configure what "stuck" means
+- C-c a C  ::  configure custom agenda commands
+
 ***** Default Settings Common to All My Agenda Views
 
 #+BEGIN_SRC emacs-lisp :exports code
@@ -4221,20 +4236,6 @@ try:
 
 consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
 
-- C-c a a  ::  ~org-agenda-list~  agenda for current day or week
-- C-c a t  ::  ~org-todo-list~    global todo list
-- C-c a T  ::  ~org-todo-list~    global todo list, prompt for keyword
-- C-c a m  ::  ~org-tags-view~    prompt for tag and display headlines
-- C-c a M  ::  ~org-tags-view~    prompt for tag and display todos
-- C-c a e  ::  export views to associated files
-- C-c a s  ::  search entries for keywords
-- C-c a S  ::  search entries for keywords, only with TODO keywords
-- C-c a /  ::  multi-occur across all agenda files
-- C-c a <  ::  restrict agenda commands to buffer, subtree or region
-- C-c a >  ::  remove a previous restriction
-- C-c a #  ::  list "stuck" projects
-- C-c a !  ::  configure what "stuck" means
-- C-c a C  ::  configure custom agenda commands
 
 **** Custom Agenda Views (defined on C-c a <KEY>)
 ;;; #+BEGIN_SRC emacs-lisp
