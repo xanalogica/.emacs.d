@@ -4013,7 +4013,7 @@ R Recurring/Habitual Tasks
 S Shopping List(s)  ->  $
  - HAS an agenda title on first line
  - org-agenda-type is 'tags'
-
+F Captured Info Needing Filing
 
 
 HOW is 'org-agenda-type' getting set to nil?
