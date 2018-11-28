@@ -4033,8 +4033,6 @@ HOW is 'org-agenda-type' getting set to nil?
     t)
   (setq org-agenda-with-colors
     t)
-;;  (setq org-agenda-scheduled-leaders
-;;    '("Scheduled: " ""))
 ;;  (setq org-agenda-show-inherited-tags
 ;;    nil)
 ;;  (setq org-agenda-prefix-format
