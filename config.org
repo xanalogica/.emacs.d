@@ -4228,7 +4228,7 @@ list of items, usually for the daily/weekly agenda, made by the
        (:name "Unscheduled Writings" :tag "WRITING")
        (:name "Unscheduled Items to Study" :tag "STUDY")
 
-       (:name "Unplanned People Socialization" :tag "PEOPLE")
+       (:name "Unplanned Social Activities" :tag "PEOPLE")
        (:name "Unscheduled Travel" :tag "TRAVEL")
        (:name "Unscheduled Events" :tag "EVENT")
        (:name "Refilings to Organize" :tag "REFILING")
