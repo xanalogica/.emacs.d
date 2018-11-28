@@ -4116,23 +4116,6 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
-  (set-face-attribute 'org-agenda-structure nil
-    :foreground "White"
-;;    :background "deep sky blue"
-;;    :box '(:line-width 2 :color "White" :style 'released-button)
-;;    :inverse-video t
-    :weight 'extra-bold
-    :height 1.25
-
-;;    :weight 'bold
-;;    :foreground "black"  ;; "Orange"
-;;    :background "red"
-;;    :underline "yellow"
-;;    :box       "White"
-
-;; :foreground "Orange" :box "White" :inverse-video t
-
-
 ****** Segmented View for "Links Needing Refiling"
 
 #+BEGIN_SRC emacs-lisp
