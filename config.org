@@ -4470,10 +4470,6 @@ try:
 
 consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
 
-? how to style the headers?
-  - put a horizontal line above header
-  - increase font size of header
-
 Another possibility is the construction of agenda views that comprise the
 results of several commands, each of which creates a block in the agenda
 buffer.  The available commands include agenda for the daily or weekly agenda
