@@ -4000,9 +4000,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 (setq org-agenda-scheduled-leaders '("" ""))
 ??? org-agenda-prefix-format controls whether to apply the org-agenda-scheduled-leaders ???
-
-
-
+??? org-compile-prefix-format ???
+??? org-agenda-format-item ???
 
 ***** Default Settings Common to All My Agenda Views
 
