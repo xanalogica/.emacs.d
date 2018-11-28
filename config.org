@@ -4189,6 +4189,11 @@ types:
            (org-super-agenda-groups groups/shopping-lists)
            (org-agenda-remove-tags t)
            ;; add checkboxes
+
+
+   (org-agenda-prefix-format " [ ] ")  ;; omits category and scheduling information
+
+
            (org-agenda-with-colors t)
            (org-agenda-overriding-header "Shopping List(s)")
          )
