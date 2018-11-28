@@ -4187,7 +4187,7 @@ types:
 
            (org-agenda-remove-tags t)
          )
-         ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/CapturedNewInfo.pdf")  ;; file(s)-to-export[6]
        )
 
        ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
