@@ -4223,21 +4223,6 @@ consider: a timeline view of non-TODO entries with datestamps only (like plannin
 ;;;   (setq org-agenda-custom-commands
 ;;;     '(
 ;;;
-;;;        ("zq" "Questions for ZeOmega"
-;;;          ( ;;; what reports to include
-;;;           (agenda "")
-;;;           (tags "ZEOMEGA")
-;;;            (tags-todo "QUESTION")
-;;;          )
-;;;          ( ;;; additional settings
-;;;            (org-agenda-files
-;;;              '(
-;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
-;;;               )
-;;;            )
-;;;          )
-;;;        )
-;;;
 ;;;        ("zi" "Initiatives for ZeOmega"
 ;;;          ( ;;; what reports to include
 ;;;           (agenda "")
