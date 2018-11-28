@@ -4005,8 +4005,7 @@ HOW is 'org-agenda-type' getting set to nil?
 ??? (org-compile-prefix-format) ???
 ??? (org-agenda-format-item) ???
 
-(
-
+(try out '!' command in Agenda view to toggle display of deadlines)
 
 ***** Default Settings Common to All My Agenda Views
 
