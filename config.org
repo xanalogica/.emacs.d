@@ -4164,9 +4164,10 @@ types:
        ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/recurring-tasks)
-           (org-agenda-remove-tags t)
            (org-agenda-overriding-header "Recurring/Habitual Tasks")
+           (org-super-agenda-groups groups/recurring-tasks)
+
+           (org-agenda-remove-tags t)
          )
          ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
        )
