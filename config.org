@@ -3999,7 +3999,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 **** My Agenda Settings
 
 (setq org-agenda-scheduled-leaders '("" ""))
-org-agenda-prefix-format controls whether to apply the org-agenda-scheduled-leaders ???
+??? org-agenda-prefix-format controls whether to apply the org-agenda-scheduled-leaders ???
 
 
 
