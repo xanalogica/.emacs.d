@@ -4022,6 +4022,8 @@ HOW is 'org-agenda-type' getting set to nil?
 ;;    '("Scheduled: " ""))
 ;;  (setq org-agenda-show-inherited-tags
 ;;    nil)
+;;  (setq org-agenda-prefix-format
+;;    "  %-17:c%?-12t% s")                ;; widen category field a little
   (setq org-agenda-start-on-weekday
     nil)
   (setq org-agenda-time-leading-zero
@@ -4038,8 +4040,6 @@ HOW is 'org-agenda-type' getting set to nil?
     nil)
   (setq org-agenda-menu-two-columns
     t)
-;;  (setq org-agenda-prefix-format
-;;    "  %-17:c%?-12t% s")                ;; widen category field a little
   (setq org-tags-match-list-sublevels
     nil) ;; do NOT match inherited tags in headline sublevels
 
