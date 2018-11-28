@@ -4258,8 +4258,6 @@ list of items, usually for the daily/weekly agenda, made by the
 
        ;;; notes
 
-
-
        (:name "Captured Items Needing Filing"
          :anything t  ;; place all (prefiltered) entries under this heading
        )
