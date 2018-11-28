@@ -4033,8 +4033,6 @@ HOW is 'org-agenda-type' getting set to nil?
     t)
   (setq org-agenda-with-colors
     t)
-;;  (setq org-agenda-show-inherited-tags
-;;    nil)
 ;;  (setq org-agenda-prefix-format
 ;;    "  %-17:c%?-12t% s")                ;; widen category field a little
   (setq org-agenda-start-on-weekday
