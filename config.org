@@ -4045,15 +4045,12 @@ HOW is 'org-agenda-type' getting set to nil?
 
   (set-face-attribute 'org-agenda-structure nil
     :foreground "White"
-;;    :background "deep sky blue"
 ;;    :box '(:line-width 2 :color "White" :style 'released-button)
 ;;    :inverse-video t
     :weight 'extra-bold
     :height 1.25
 
 ;;    :weight 'bold
-;;    :foreground "black"  ;; "Orange"
-;;    :background "red"
 ;;    :underline "yellow"
 ;;    :box       "White"
 
