@@ -4160,7 +4160,7 @@ list of items, usually for the daily/weekly agenda, made by the
     '(
       (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
-      (:name "=== Short-Term Habitual Tasks: Finance ==="
+      (:name "Short-Term Habitual Tasks: Finance"
         :and (
           :habit t
           :not (:tag "RECUR")
@@ -4168,7 +4168,7 @@ list of items, usually for the daily/weekly agenda, made by the
         )
       )
 
-      (:name "=== Short-Term Habitual Tasks: Health ==="
+      (:name "Short-Term Habitual Tasks: Health"
         :and (
           :habit t
           :not (:tag "RECUR")
@@ -4176,26 +4176,26 @@ list of items, usually for the daily/weekly agenda, made by the
         )
       )
 
-      (:name "=== Short-Term Habitual Tasks: Other items ==="
+      (:name "Short-Term Habitual Tasks: Other items"
         :and (
           :habit t
           :not (:tag "RECUR")
         )
       )
 
-      (:name "=== Long-Term Recurring Tasks: Finance ==="
+      (:name "Long-Term Recurring Tasks: Finance"
         :and (:not (:habit t) :tag "RECUR" :tag "FINANCE")
       )
 
-      (:name "=== Long-Term Recurring Tasks: Health ==="
+      (:name "Long-Term Recurring Tasks: Health"
         :and (:not (:habit t) :tag "RECUR" :tag "HEALTH")
       )
 
-      (:name "=== Long-Term Recurring Tasks: Tech ==="
+      (:name "Long-Term Recurring Tasks: Tech"
         :and (:not (:habit t) :tag "RECUR" :tag "TECH")
       )
 
-      (:name "=== Long-Term Recurring Tasks: Other items ==="
+      (:name "Long-Term Recurring Tasks: Other items"
         :and (:not (:habit t) :tag "RECUR")
       )
 
