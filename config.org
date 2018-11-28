@@ -4619,7 +4619,8 @@ Configure the basic mail settings.
 Using =org-mime= to send HTML email using Org-mode HTML export.
 
 #+BEGIN_SRC emacs-lisp
-  (require 'org-mime)
+;;  (require 'org-mime)
+  (use-package org-mime)
 
   ; Next you need to tell org-mime which Emacs mail agent you use.
   (setq org-mime-library 'mml)
