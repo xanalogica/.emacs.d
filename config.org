@@ -4030,7 +4030,6 @@ HOW is 'org-agenda-type' getting set to nil?
   (setq org-agenda-show-log
     t)
   (setq org-agenda-skip-scheduled-if-deadline-is-shown
-;;;    t)
     'not-today)
   (setq org-agenda-menu-show-matcher
     nil)
