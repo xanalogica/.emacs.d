@@ -4020,6 +4020,8 @@ HOW is 'org-agenda-type' getting set to nil?
     t)
 ;;  (setq org-agenda-scheduled-leaders
 ;;    '("Scheduled: " ""))
+;;  (setq org-agenda-show-inherited-tags
+;;    nil)
   (setq org-agenda-start-on-weekday
     nil)
   (setq org-agenda-time-leading-zero
@@ -4462,8 +4464,6 @@ Set this to something like \"%-12s\" if you want all TODO keywords
 to occupy a fixed space in the agenda display."
   :group 'org-agenda-line-format
   :type 'string)
-
-(org-agenda-show-inherited-tags nil)
 
 try:
   (org-agenda-archives-mode t)  ;; include archive files in search for agenda
