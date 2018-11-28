@@ -4111,7 +4111,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
       (set-face-attribute 'org-super-agenda-header nil
         :weight 'bold
-        :foreground "red"
+        :foreground "green"
 ;;        :background "blue"
         :overline "green"
       )
