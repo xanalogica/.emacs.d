@@ -4022,7 +4022,7 @@ F Captured Info Needing Filing
  - lacks any TODO column, just headings
 
 - headings with :REFILING: are destination targets
-- items at bottom of index.org
+- items at bottom of index.org are unclassified items to refile
 
 
 HOW is 'org-agenda-type' getting set to nil?
