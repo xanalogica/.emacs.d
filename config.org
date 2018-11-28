@@ -4220,8 +4220,8 @@ list of items, usually for the daily/weekly agenda, made by the
 
        (:name "Unscheduled ZeOmega Work" :tag "ZEOMEGA")
 
-       (:name "=== Unscheduled Financials ===" :tag "FINANCE")
-       (:name "=== Unscheduled Health ===" :tag "HEALTH")
+       (:name "Unscheduled Financials" :tag "FINANCE")
+       (:name "Unscheduled Health Matters" :tag "HEALTH")
 
        (:name "=== Christmas ===" :tag "CHRISTMAS")
        (:name "=== Church ===" :tag "CHURCH")
