@@ -4006,6 +4006,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 3. fix Category of 'Ann' that bleeds over
 4. fix [qQ]uotes.org
 5. fix Finance.org
+6. sync and merge in Inbox.org
 
 P Agenda for Current Period -> Planned Tasks
  - missing agenda title from first line; has a date instead
