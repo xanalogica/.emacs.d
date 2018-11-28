@@ -4254,9 +4254,9 @@ list of items, usually for the daily/weekly agenda, made by the
 
        ;;; links -- has a tag :LINK:
 
-       ;;; tasks
+       ;;; tasks -- has a TODO
 
-       ;;; notes
+       ;;; notes -- lacks a tag :LINK: and lacks a TODO
 
        (:name "Captured Items Needing Filing"
          :anything t  ;; place all (prefiltered) entries under this heading
