@@ -406,7 +406,8 @@ properties you can use org-crypt.  In order to use org-crypt you need to add
 something like the following to your .emacs:
 
 #+BEGIN_SRC emacs-lisp
-  (require 'org-crypt)
+;;  (require 'org-crypt)
+  (use-package org-crypt)
 
   (org-crypt-use-before-save-magic)
 
