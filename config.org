@@ -4259,7 +4259,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
        ;;; notes -- lacks a tag :LINK: and lacks a TODO
 
-       (:name "Captured Items Needing Filing"
+       (:name "Notes Needing Filing"
          :anything t  ;; place all (prefiltered) entries under this heading
        )
      )
