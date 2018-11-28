@@ -4362,6 +4362,7 @@ types:
            (org-super-agenda-groups groups/backlog-tasks)
            (org-agenda-with-colors t)
            (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
+           (org-agenda-remove-tags t)
 
            (org-agenda-compact-blocks t)  ;; experimental
            (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
