@@ -4001,8 +4001,9 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
-P 
+P Agenda for Current Period
  - missing agenda title from first line
+ - 
 
 HOW is 'org-agenda-type' getting set to nil?
 
