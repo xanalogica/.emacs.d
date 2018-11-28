@@ -4246,7 +4246,7 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
-****** Segmented View for "Links Needing Refiling"
+****** Segmented View for "Captured Info Needing Filing"
 
 #+BEGIN_SRC emacs-lisp
   (setq groups/links-needing-refiling  ;; presentation definition using org-super-agenda
