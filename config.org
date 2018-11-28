@@ -4001,7 +4001,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
-1. text Aimee re $200 owed
+1. DONE text Aimee re $200 owed
 2. fix Category of 'Ann' that bleeds over
 
 2. write Christmas party invitation
