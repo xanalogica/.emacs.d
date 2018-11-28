@@ -4010,7 +4010,9 @@ B Backlog of Unscheduled Tasks
 R Recurring/Habitual Tasks
  - HAS an agenda title on first line
  - org-agenda-type is 'todo'
-
+S Shopping List(s)
+ - HAS an agenda title on first line
+ - org-agenda-type is 'tags'
 
 
 
