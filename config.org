@@ -4047,6 +4047,8 @@ HOW is 'org-agenda-type' getting set to nil?
     t)
   (setq org-agenda-show-log
     t)
+  (setq org-agenda-compact-blocks
+    t)  ;; shorten agenda view
   (setq org-agenda-skip-scheduled-if-deadline-is-shown
     'not-today)
   (setq org-agenda-menu-show-matcher
@@ -4153,7 +4155,6 @@ types:
                (search . " %i %-12:c")
               )
            )
-;;;           (org-agenda-compact-blocks t)  ;; shorten agenda view
 ;;;           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
 ;;;           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
          )
