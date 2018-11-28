@@ -4174,9 +4174,10 @@ types:
        ("F" "Captured Links Needing Filing" tags  ;; key[1] desc[2] type[3]
          "REFILING"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/links-needing-refiling)
-           (org-agenda-remove-tags nil)
            (org-agenda-overriding-header "Captured Info Needing Filing")
+           (org-super-agenda-groups groups/links-needing-refiling)
+
+           (org-agenda-remove-tags nil)
          )
          ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
        )
