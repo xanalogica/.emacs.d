@@ -4021,6 +4021,9 @@ F Captured Info Needing Filing
  - collecting :REFILING: but confuses "filing destinations" (lacks TODO) with "things needing refiling" (has TODO)
  - lacks any TODO column, just headings
 
+- headings with :REFILING: are destination targets
+
+
 HOW is 'org-agenda-type' getting set to nil?
 
 ??? (org-compile-prefix-format) ???
