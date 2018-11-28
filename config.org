@@ -4288,24 +4288,6 @@ complex sets of information.
   )
 #+END_SRC
 
-
-("n" "no TODO events +180d"
-                 ((agenda "no TODO events +180d"
-                          ((org-agenda-span 180)
-                           (org-agenda-time-grid nil)
-                           (org-agenda-entry-types '(:timestamp :sexp))
-                           (org-agenda-skip-function
-                            '(or
-                              (org-agenda-skip-entry-if 'todo 'any);; skip if any TODO state is found
-                              (org-agenda-skip-entry-if 'category "infonova");; skip if any TODO state is found
-                              (my-skip-tag "lp")
-                              )
-                            )
-                           ;;(org-agenda-skip-function '(my-skip-tag "lp"))
-                          )))
-                 nil ("~/org/agenda_180d_filtered.html"))
-
-
 types:
  - agenda     - scheduled tasks
  - todo       - backlog of tasks
