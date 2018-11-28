@@ -4183,7 +4183,7 @@ types:
          "+REFILING"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Captured Items Needing Filing")
-           (org-super-agenda-groups groups/items-needing-refiling)
+           (org-super-agenda-groups groups/items-needing-filing)
 
            (org-agenda-remove-tags t)
          )
