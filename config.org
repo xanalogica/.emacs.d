@@ -1750,7 +1750,8 @@ correspondence is controlled by the variable =auto-mode-alist=.
 *** rst-mode (ReStructuredText)
 
 #+BEGIN_SRC emacs-lisp
-  (require `rst)
+;;  (require `rst)
+  (use-package rst)
 
   (add-to-list 'auto-mode-alist
       '("\\.rst$\\'" . rst-mode)
