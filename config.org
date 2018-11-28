@@ -4242,7 +4242,7 @@ list of items, usually for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp
   (setq groups/scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
-      (:name "=== Urgent and Scheduled Tasks for Today ===" :tag "HOT")
+      (:name "Urgent and Scheduled Tasks for Today" :tag "HOT")
       (:name "=== Maintain Physical and Mental Health ====" :tag "HEALTH")
       (:name "=== To Not Worry about Money ===============" :tag "FINANCE")
       (:name "=== To Have a Fantastic Career =============" :tag "ZEOMEGA")
