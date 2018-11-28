@@ -4353,7 +4353,7 @@ types:
            (org-agenda-span 14)         ;; show me 14-days at a time
            (org-agenda-with-colors t)
            (org-agenda-remove-tags t)
-           (org-agenda-overriding-header "Agenda for a Time Period")
+           (org-agenda-overriding-header "Agenda for Each Day")
          )
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
