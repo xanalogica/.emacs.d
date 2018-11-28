@@ -1669,6 +1669,8 @@ replace color themes, as each approach has its advantages.
     1)	; #lines of continuity when scrolling by screenfuls.
 
   (put 'scroll-left 'disabled nil)
+
+  (setq auto-hscroll-mode 'current-line)  ;; only scroll the current line, not the whole frame
 #+END_SRC
 
 *** Among Windows/Frames
