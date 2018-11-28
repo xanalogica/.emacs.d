@@ -4223,7 +4223,7 @@ list of items, usually for the daily/weekly agenda, made by the
        (:name "Unplanned Financials" :tag "FINANCE")
        (:name "Unplanned Health Matters" :tag "HEALTH")
 
-       (:name "Unscheduled Christmas Plans" :tag "CHRISTMAS")
+       (:name "Unscheduled Christmas Tasks" :tag "CHRISTMAS")
        (:name "Unscheduled Church Activities" :tag "CHURCH")
        (:name "Unscheduled Writings" :tag "WRITING")
        (:name "Unscheduled Items to Study" :tag "STUDY")
