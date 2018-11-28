@@ -4255,9 +4255,6 @@ list of items, usually for the daily/weekly agenda, made by the
          :tag "LINK"
        )
 
-
-       ;;; links -- has a tag :LINK:
-
        ;;; tasks -- has a TODO
 
        ;;; notes -- lacks a tag :LINK: and lacks a TODO
