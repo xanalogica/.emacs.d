@@ -4005,6 +4005,9 @@ HOW is 'org-agenda-type' getting set to nil?
 ??? (org-compile-prefix-format) ???
 ??? (org-agenda-format-item) ???
 
+(
+
+
 ***** Default Settings Common to All My Agenda Views
 
 #+BEGIN_SRC emacs-lisp :exports code
