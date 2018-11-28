@@ -4109,6 +4109,8 @@ HOW is 'org-agenda-type' getting set to nil?
 
 #+END_SRC
 
+***** My Custom Org-Agenda Views
+
 types:
  - agenda     - scheduled tasks
  - todo       - backlog of tasks
