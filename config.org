@@ -4146,7 +4146,7 @@ list of items, usually for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp
   (setq groups/links-needing-refiling  ;; presentation definition using org-super-agenda
     '(
-       (:name "=== Links Needing Refiling ==="
+       (:name "Links Needing Refiling"
          :anything t  ;; place all (prefiltered) entries under this heading
        )
      )
