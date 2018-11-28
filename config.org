@@ -4190,6 +4190,10 @@ types:
            (org-super-agenda-groups groups/items-needing-filing)
 
            (org-agenda-remove-tags t)
+
+org-use-tag-inheritance
+org-tags-match-list-sublevels
+
            (org-agenda-files '("~/Dropbox/Documents/index.org"))
          )
          ("/tmp/CapturedNewInfo.pdf")  ;; file(s)-to-export[6]
