@@ -4125,7 +4125,6 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
-
   (set-face-attribute 'org-agenda-structure nil
     :foreground "White"
 ;;    :background "deep sky blue"
