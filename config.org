@@ -4019,7 +4019,7 @@ HOW is 'org-agenda-type' getting set to nil?
   (setq org-agenda-show-all-dates
     t)
   (setq org-agenda-scheduled-leaders
-    '("" ""))
+    '("Scheduled: " ""))
   (setq org-agenda-start-on-weekday
     nil)
   (setq org-agenda-time-leading-zero
