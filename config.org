@@ -4102,7 +4102,8 @@ HOW is 'org-agenda-type' getting set to nil?
     "Format a date string for display in the daily/weekly agenda, or timeline.
      This function makes sure that dates are aligned for easy reading."
 
-     (require 'cal-iso)
+;;;     (require 'cal-iso)
+     (use-package cal-iso)
 
      (let* ((dayname (calendar-day-name date))
        (day (cadr date))
