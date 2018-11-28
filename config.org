@@ -1106,7 +1106,8 @@ YASnippet can be activated globally or for specific Emacs modes.  I choose to
 activate it for individual modes.
 
 #+BEGIN_SRC emacs-lisp
-  (require 'yasnippet)
+;;;  (require 'yasnippet)
+  (use-package yasnippet)
 ;;; (require 'yasnippet-snippets)   ;; a rich collection of pre-written snippets
 #+END_SRC
 
