@@ -3702,7 +3702,8 @@ actions.  Just register your custom sub-protocol and handler with the variable
 `org-protocol-protocol-alist'.
 
 #+BEGIN_SRC emacs-lisp
-  (require 'org-protocol)
+;;  (require 'org-protocol)
+  (use-package org-protocol)
 #+END_SRC
 
 **** *pushing* URL/title links from Firefox into the Emacs kill-buffer
