@@ -4031,6 +4031,8 @@ HOW is 'org-agenda-type' getting set to nil?
     30)
   (setq org-agenda-show-all-dates
     t)
+  (setq org-agenda-with-colors
+    t)
 ;;  (setq org-agenda-scheduled-leaders
 ;;    '("Scheduled: " ""))
 ;;  (setq org-agenda-show-inherited-tags
@@ -4133,7 +4135,6 @@ types:
          ( ; [5] list of settings local to this custom agenda view
            (org-super-agenda-groups groups/scheduled-tasks)
            (org-agenda-span 14)         ;; show me 14-days at a time
-           (org-agenda-with-colors t)
            (org-agenda-remove-tags t)
            (org-agenda-overriding-header "Agenda for Each Day")
          )
