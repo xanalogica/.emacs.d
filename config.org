@@ -4207,15 +4207,6 @@ Exported view as .pdf is HORRIBLE, WITH BLACK BOXES
    (org-agenda-prefix-format " [ ] ")  ;; omits category and scheduling information
  uses ~org-agenda-exporter-settings~ as well
 
-org-agenda-prefix-format is a variable defined in ‘org-agenda.el’.
-Its value is "  %-17:c%?-12t% s"
-Original value was 
-((agenda . " %i %-12:c%?-12t% s")
- (todo . " %i %-12:c")
- (tags . " %i %-12:c")
- (search . " %i %-12:c"))
-
-
 try:
   (org-agenda-exporter-settings ;; set options for ps-print and htmlize
   )
