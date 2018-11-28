@@ -4026,7 +4026,7 @@ F Captured Info Needing Filing
  - NEEDS TO SHOW NON-LINK FILING WORK !
  - HEADER IS "Links Needing Refiling"
  - MENU IS "
- - collecting :REFILING: but confuses "filing destinations" with "things needing refiling"
+ - collecting :REFILING: but confuses "filing destinations" (lacks TODO) with "things needing refiling" (has TODO)
  - lacks any TODO column, just headings
 
 HOW is 'org-agenda-type' getting set to nil?
