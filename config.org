@@ -4184,7 +4184,7 @@ types:
        )
 
        ("F" "Captured Items Needing Filing" tags  ;; key[1] desc[2] type[3]
-         "ALLTAGS=+UNFILED"  ;; entry match-expression[4]
+         "+ALLTAGS={UNFILED}"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Captured Items Needing Filing")
            (org-super-agenda-groups groups/items-needing-filing)
