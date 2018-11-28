@@ -4197,8 +4197,12 @@ types:
 
 
 (add-to-list 'org-agenda-custom-commands
-             '("r" "Reference material" tags ""
-               ((org-agenda-files (file-expand-wildcards "~/ref/*.org")))))
+  '("r" "Reference material" tags ""
+    (
+      (org-agenda-files (file-expand-wildcards "~/ref/*.org"))
+      )
+   )
+)
 
 
 
