@@ -4226,7 +4226,7 @@ list of items, usually for the daily/weekly agenda, made by the
        (:name "Unscheduled Christmas Planning" :tag "CHRISTMAS")
        (:name "Unscheduled Church Activities" :tag "CHURCH")
        (:name "Unscheduled Writings" :tag "WRITING")
-       (:name "=== Study ===" :tag "STUDY")
+       (:name "Unscheduled Items to Study" :tag "STUDY")
 
        (:name "=== People ===" :tag "PEOPLE")
        (:name "=== Unscheduled Travel ===" :tag "TRAVEL")
