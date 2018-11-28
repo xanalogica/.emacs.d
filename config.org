@@ -4002,7 +4002,7 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 **** My Agenda Settings
 
 P Agenda for Current Period -> Planned Tasks
- - missing agenda title from first line
+ - missing agenda title from first line; has a date instead
  - org-agenda-type is nil
 B Backlog of Unscheduled Tasks
  - HAS an agenda title on first line
