@@ -3998,13 +3998,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
-1. DONE text Aimee re $200 owed
-2. DONE fix Category of 'Ann' that bleeds over
-3. DONE fix [qQ]uotes.org
-4. DONE fix Finance.org
-5. DONE sync and merge in Inbox.org
-6. change "Shopping List" agenda view from 'S' to '$'
-
 6. write Christmas party invitation
 
 P Agenda for Current Period -> Planned Tasks
