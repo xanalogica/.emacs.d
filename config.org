@@ -4094,6 +4094,238 @@ HOW is 'org-agenda-type' getting set to nil?
 
 #+END_SRC
 
+
+
+
+types:
+ - agenda     - scheduled tasks
+ - todo       - backlog of tasks
+ - search     - entries containing search words
+ - tags       - tag/property/TODO match across all agenda files
+ - tags-todo  - above but limit to TODO items
+ - todo-tree  - (current file only)
+ - tags-tree  - (current file only)
+ - occur-tree - (current file only)
+ - ...        - a user-defined function
+
+#+BEGIN_SRC emacs-lisp :exports code
+  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
+  (setq org-agenda-custom-commands
+    '(
+       ("P" "Agenda for Current Period" agenda  ;; key[1] desc[2] type[3]
+         nil  ;; entry match-expression[4]
+         ( ; [5] list of settings local to this custom agenda view
+           (org-super-agenda-groups groups/scheduled-tasks)
+           (org-agenda-span 14)         ;; show me 14-days at a time
+           (org-agenda-with-colors t)
+           (org-agenda-remove-tags t)
+           (org-agenda-overriding-header "Agenda for Each Day")
+         )
+         ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
+       )
+
+       ("B" "Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
+         nil  ;; entry match-expression[4]
+         ( ; [5] list of settings local to this custom agenda view
+           (org-super-agenda-groups groups/backlog-tasks)
+           (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
+           (org-agenda-remove-tags t)
+
+           (org-agenda-prefix-format
+             '((agenda . " %i %-12:c%?-12t% s")
+               (todo . " %i %-12:c")
+               (tags . " %i %-12:c")
+               (search . " %i %-12:c")
+              )
+           )
+
+           (org-agenda-compact-blocks t)  ;; experimental
+           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
+           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
+         )
+         ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
+       )
+
+       ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
+         nil  ;; entry match-expression[4]
+         ( ; [5] list of settings local to this custom agenda view
+           (org-super-agenda-groups groups/recurring-tasks)
+           (org-agenda-remove-tags t)
+           (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Recurring/Habitual Tasks")
+         )
+         ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
+       )
+
+       ("F" "Captured Links Needing Filing" tags  ;; key[1] desc[2] type[3]
+         "REFILING"  ;; entry match-expression[4]
+         ( ;; [5] list of settings local to this custom agenda view
+           (org-super-agenda-groups groups/links-needing-refiling)
+           (org-agenda-remove-tags nil)
+           (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Captured Info Needing Filing")
+         )
+         ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
+       )
+
+       ("S" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
+         "+SHOP"  ;; entry match-expression[4]
+         ( ;; [5] list of settings local to this custom agenda view
+           (org-super-agenda-groups groups/shopping-lists)
+           (org-agenda-remove-tags t)
+           ;; add checkboxes
+           (org-agenda-with-colors t)
+           (org-agenda-overriding-header "Shopping List(s)")
+         )
+         ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
+       )
+    )
+  )
+#+END_SRC
+
+C-x C-w does NOT use my supplied filename
+C-c a e
+Exported view as .pdf is HORRIBLE, WITH BLACK BOXES
+ uses  ~ps-print-buffer-with-faces~
+   (ps-number-of-columns 2)
+   (ps-landscape-mode t)
+   (org-agenda-prefix-format " [ ] ")  ;; omits category and scheduling information
+ uses ~org-agenda-exporter-settings~ as well
+
+org-agenda-prefix-format is a variable defined in ‘org-agenda.el’.
+Its value is "  %-17:c%?-12t% s"
+Original value was 
+((agenda . " %i %-12:c%?-12t% s")
+ (todo . " %i %-12:c")
+ (tags . " %i %-12:c")
+ (search . " %i %-12:c"))
+
+
+try:
+  (org-agenda-exporter-settings ;; set options for ps-print and htmlize
+  )
+
+try: C-u l    to show ALL log entries in agenda log mode
+
+
+(defcustom org-agenda-todo-keyword-format "%-1s"
+  "Format for the TODO keyword in agenda lines.
+Set this to something like \"%-12s\" if you want all TODO keywords
+to occupy a fixed space in the agenda display."
+  :group 'org-agenda-line-format
+  :type 'string)
+
+try:
+  (org-agenda-archives-mode t)  ;; include archive files in search for agenda
+
+consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
+
+- C-c a a  ::  ~org-agenda-list~  agenda for current day or week
+- C-c a t  ::  ~org-todo-list~    global todo list
+- C-c a T  ::  ~org-todo-list~    global todo list, prompt for keyword
+- C-c a m  ::  ~org-tags-view~    prompt for tag and display headlines
+- C-c a M  ::  ~org-tags-view~    prompt for tag and display todos
+- C-c a e  ::  export views to associated files
+- C-c a s  ::  search entries for keywords
+- C-c a S  ::  search entries for keywords, only with TODO keywords
+- C-c a /  ::  multi-occur across all agenda files
+- C-c a <  ::  restrict agenda commands to buffer, subtree or region
+- C-c a >  ::  remove a previous restriction
+- C-c a #  ::  list "stuck" projects
+- C-c a !  ::  configure what "stuck" means
+- C-c a C  ::  configure custom agenda commands
+
+**** Custom Agenda Views (defined on C-c a <KEY>)
+;;; #+BEGIN_SRC emacs-lisp
+;;;   (setq org-agenda-custom-commands
+;;;     '(
+;;;
+;;;        ("zq" "Questions for ZeOmega"
+;;;          ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+;;;            (tags-todo "QUESTION")
+;;;          )
+;;;          ( ;;; additional settings
+;;;            (org-agenda-files
+;;;              '(
+;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
+;;;               )
+;;;            )
+;;;          )
+;;;        )
+;;;
+;;;        ("zi" "Initiatives for ZeOmega"
+;;;          ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+;;;            (tags-todo "INITIATIVE")
+;;;          )
+;;;          ( ;;; additional settings
+;;;            (org-agenda-files
+;;;              '(
+;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
+;;;               )
+;;;            )
+;;;          )
+;;;        )
+;;;
+;;;        ("zt" "Tasks for ZeOmega"
+;;;          ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+;;;            (tags-todo "ZEOMEGA")
+;;;         )
+;;;          ( ;;; additional settings
+;;;            (org-agenda-files
+;;;              '(
+;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
+;;;               )
+;;;            )
+;;;          )
+;;;        )
+;;;
+;;;        ("zm" "Meetings for ZeOmega"
+;;;          ( ;;; what reports to include
+;;;           (agenda "")
+;;;           (tags "ZEOMEGA")
+;;;           (tags-todo "MEETING")
+;;;         )
+;;;         ( ;;; additional settings
+;;;           (org-agenda-files
+;;;             '(
+;;;                 "~/Clients/ZeOmega/notes/zeomega.org"
+;;;              )
+;;;           )
+;;;         )
+;;;       )
+;;;
+;;;       ("zs" "To-Study Items for ZeOmega"
+;;;         ( ;;; what reports to include
+;;;           (tags-todo "TOSTUDY")
+;;;         )
+;;;         ( ;;; additional settings
+;;;           (org-agenda-files
+;;;             '(
+;;;                 "~/Clients/ZeOmega/notes/zeomega.org"
+;;;              )
+;;;           )
+;;;         )
+;;;       )
+;;;
+;;;     )
+;;;  )
+;;;#+END_SRC
+
+
+
+
+
+
+
+
+
 ***** Use Super-Agenda to Segment My Agenda Views into Topics
 
 The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
@@ -4287,234 +4519,6 @@ complex sets of information.
 ;;;           (org-agenda-finalize . ap/org-super-agenda-origami-fold-default))
   )
 #+END_SRC
-
-types:
- - agenda     - scheduled tasks
- - todo       - backlog of tasks
- - search     - entries containing search words
- - tags       - tag/property/TODO match across all agenda files
- - tags-todo  - above but limit to TODO items
- - todo-tree  - (current file only)
- - tags-tree  - (current file only)
- - occur-tree - (current file only)
- - ...        - a user-defined function
-
-#+BEGIN_SRC emacs-lisp :exports code
-  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
-  (setq org-agenda-custom-commands
-    '(
-       ("P" "Agenda for Current Period" agenda  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
-         ( ; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/scheduled-tasks)
-           (org-agenda-span 14)         ;; show me 14-days at a time
-           (org-agenda-with-colors t)
-           (org-agenda-remove-tags t)
-           (org-agenda-overriding-header "Agenda for Each Day")
-         )
-         ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
-       )
-
-       ("B" "Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
-         ( ; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/backlog-tasks)
-           (org-agenda-with-colors t)
-           (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
-           (org-agenda-remove-tags t)
-
-           (org-agenda-prefix-format
-             '((agenda . " %i %-12:c%?-12t% s")
-               (todo . " %i %-12:c")
-               (tags . " %i %-12:c")
-               (search . " %i %-12:c")
-              )
-           )
-
-           (org-agenda-compact-blocks t)  ;; experimental
-           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
-           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
-         )
-         ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
-       )
-
-       ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
-         ( ; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/recurring-tasks)
-           (org-agenda-remove-tags t)
-           (org-agenda-with-colors t)
-           (org-agenda-overriding-header "Recurring/Habitual Tasks")
-         )
-         ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
-       )
-
-       ("F" "Captured Links Needing Filing" tags  ;; key[1] desc[2] type[3]
-         "REFILING"  ;; entry match-expression[4]
-         ( ;; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/links-needing-refiling)
-           (org-agenda-remove-tags nil)
-           (org-agenda-with-colors t)
-           (org-agenda-overriding-header "Captured Info Needing Filing")
-         )
-         ("/tmp/CapturedNewLinks.pdf")  ;; file(s)-to-export[6]
-       )
-
-       ("S" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
-         "+SHOP"  ;; entry match-expression[4]
-         ( ;; [5] list of settings local to this custom agenda view
-           (org-super-agenda-groups groups/shopping-lists)
-           (org-agenda-remove-tags t)
-           ;; add checkboxes
-           (org-agenda-with-colors t)
-           (org-agenda-overriding-header "Shopping List(s)")
-         )
-         ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
-       )
-    )
-  )
-#+END_SRC
-
-C-x C-w does NOT use my supplied filename
-C-c a e
-Exported view as .pdf is HORRIBLE, WITH BLACK BOXES
- uses  ~ps-print-buffer-with-faces~
-   (ps-number-of-columns 2)
-   (ps-landscape-mode t)
-   (org-agenda-prefix-format " [ ] ")  ;; omits category and scheduling information
- uses ~org-agenda-exporter-settings~ as well
-
-org-agenda-prefix-format is a variable defined in ‘org-agenda.el’.
-Its value is "  %-17:c%?-12t% s"
-Original value was 
-((agenda . " %i %-12:c%?-12t% s")
- (todo . " %i %-12:c")
- (tags . " %i %-12:c")
- (search . " %i %-12:c"))
-
-
-try:
-  (org-agenda-exporter-settings ;; set options for ps-print and htmlize
-  )
-
-try: C-u l    to show ALL log entries in agenda log mode
-
-
-(defcustom org-agenda-todo-keyword-format "%-1s"
-  "Format for the TODO keyword in agenda lines.
-Set this to something like \"%-12s\" if you want all TODO keywords
-to occupy a fixed space in the agenda display."
-  :group 'org-agenda-line-format
-  :type 'string)
-
-try:
-  (org-agenda-archives-mode t)  ;; include archive files in search for agenda
-
-consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
-
-Another possibility is the construction of agenda views that comprise the
-results of several commands, each of which creates a block in the agenda
-buffer.  The available commands include agenda for the daily or weekly agenda
-(as created with C-c a a), alltodo for the global TODO list (as constructed
-with C-c a t), and the matching commands discussed above: todo, tags, and
-tags-todo.
-
-- C-c a a  ::  ~org-agenda-list~  agenda for current day or week
-- C-c a t  ::  ~org-todo-list~    global todo list
-- C-c a T  ::  ~org-todo-list~    global todo list, prompt for keyword
-- C-c a m  ::  ~org-tags-view~    prompt for tag and display headlines
-- C-c a M  ::  ~org-tags-view~    prompt for tag and display todos
-- C-c a e  ::  export views to associated files
-- C-c a s  ::  search entries for keywords
-- C-c a S  ::  search entries for keywords, only with TODO keywords
-- C-c a /  ::  multi-occur across all agenda files
-- C-c a <  ::  restrict agenda commands to buffer, subtree or region
-- C-c a >  ::  remove a previous restriction
-- C-c a #  ::  list "stuck" projects
-- C-c a !  ::  configure what "stuck" means
-- C-c a C  ::  configure custom agenda commands
-
-**** Custom Agenda Views (defined on C-c a <KEY>)
-;;; #+BEGIN_SRC emacs-lisp
-;;;   (setq org-agenda-custom-commands
-;;;     '(
-;;;
-;;;        ("zq" "Questions for ZeOmega"
-;;;          ( ;;; what reports to include
-;;;           (agenda "")
-;;;           (tags "ZEOMEGA")
-;;;            (tags-todo "QUESTION")
-;;;          )
-;;;          ( ;;; additional settings
-;;;            (org-agenda-files
-;;;              '(
-;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
-;;;               )
-;;;            )
-;;;          )
-;;;        )
-;;;
-;;;        ("zi" "Initiatives for ZeOmega"
-;;;          ( ;;; what reports to include
-;;;           (agenda "")
-;;;           (tags "ZEOMEGA")
-;;;            (tags-todo "INITIATIVE")
-;;;          )
-;;;          ( ;;; additional settings
-;;;            (org-agenda-files
-;;;              '(
-;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
-;;;               )
-;;;            )
-;;;          )
-;;;        )
-;;;
-;;;        ("zt" "Tasks for ZeOmega"
-;;;          ( ;;; what reports to include
-;;;           (agenda "")
-;;;           (tags "ZEOMEGA")
-;;;            (tags-todo "ZEOMEGA")
-;;;         )
-;;;          ( ;;; additional settings
-;;;            (org-agenda-files
-;;;              '(
-;;;                  "~/Clients/ZeOmega/notes/zeomega.org"
-;;;               )
-;;;            )
-;;;          )
-;;;        )
-;;;
-;;;        ("zm" "Meetings for ZeOmega"
-;;;          ( ;;; what reports to include
-;;;           (agenda "")
-;;;           (tags "ZEOMEGA")
-;;;           (tags-todo "MEETING")
-;;;         )
-;;;         ( ;;; additional settings
-;;;           (org-agenda-files
-;;;             '(
-;;;                 "~/Clients/ZeOmega/notes/zeomega.org"
-;;;              )
-;;;           )
-;;;         )
-;;;       )
-;;;
-;;;       ("zs" "To-Study Items for ZeOmega"
-;;;         ( ;;; what reports to include
-;;;           (tags-todo "TOSTUDY")
-;;;         )
-;;;         ( ;;; additional settings
-;;;           (org-agenda-files
-;;;             '(
-;;;                 "~/Clients/ZeOmega/notes/zeomega.org"
-;;;              )
-;;;           )
-;;;         )
-;;;       )
-;;;
-;;;     )
-;;;  )
-;;;#+END_SRC
 
 *** Timing-Related
 
