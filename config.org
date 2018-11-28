@@ -4003,7 +4003,8 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 P Agenda for Current Period -> Planned Tasks
  - missing agenda title from first line
- - 
+ - org-agenda-type is nil
+
 
 HOW is 'org-agenda-type' getting set to nil?
 
