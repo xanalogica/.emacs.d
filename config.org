@@ -4002,9 +4002,9 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 **** My Agenda Settings
 
 1. text Aimee re $200 owed
+2. fix Category of 'Ann' that bleeds over
 
 2. write Christmas party invitation
-3. fix Category of 'Ann' that bleeds over
 4. fix [qQ]uotes.org
 5. fix Finance.org
 6. sync and merge in Inbox.org
