@@ -4190,7 +4190,7 @@ types:
            (org-super-agenda-groups groups/items-needing-filing)
 
            (org-agenda-remove-tags t)
-           (org-agenda-files (file-expand-wildcards "~/ref/*.org"))
+           (org-agenda-files "~/Dropbox/Documents/index.org")
          )
          ("/tmp/CapturedNewInfo.pdf")  ;; file(s)-to-export[6]
        )
