@@ -3959,7 +3959,7 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 #+BEGIN_SRC emacs-lisp
   (setq org-log-done 'time)           ;; record the date when I finish a task
-  (setq org-log-refile (quote time))  ;;   and when I refile a headline elsewhere
+  (setq org-log-refile 'time)         ;;   and when I refile a headline elsewhere
   (setq org-log-into-drawer t)        ;; but keep it tidy by putting it in a drawer
 
   ;; Capture my timestamps in increments of 15-minutes
