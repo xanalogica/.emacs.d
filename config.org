@@ -4198,9 +4198,6 @@ types:
               )
            )
 
-   (org-agenda-prefix-format " [ ] ")  ;; omits category and scheduling information
-
-
            (org-agenda-with-colors t)
            (org-agenda-overriding-header "Shopping List(s)")
          )
