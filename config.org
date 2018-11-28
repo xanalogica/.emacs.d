@@ -4023,7 +4023,7 @@ F Captured Info Needing Filing
 
 - headings with :REFILING: are destination targets
 - items at bottom of index.org are unclassified items to refile
-
+- notes/links/task at bottom of index.org are captured items to refile
 
 HOW is 'org-agenda-type' getting set to nil?
 
