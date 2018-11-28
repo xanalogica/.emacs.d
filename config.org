@@ -4267,7 +4267,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
        ;; TBD: a Technology section, for going to Fry's Electronics
 
-       (:name "=== My Shopping List ==="
+       (:name "My Shopping List"
          :anything t  ;; place all (prefiltered) entries under this heading
        )
 
