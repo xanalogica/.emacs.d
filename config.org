@@ -4534,34 +4534,6 @@ tags-todo.
 ;;;    (org-agenda nil "a"))
 ;;; #+END_SRC
 
-;;;      (:name "Important"
-;;;        ;; Single arguments given alone
-;;;         :tag "bills"
-;;;         :priority "A")
-;;;
-;;;      ;; Set order of multiple groups at once
-;;;      (:order-multi (2
-;;;
-;;;        (:name "Shopping in town"
-;;;          ;; Boolean AND group matches items that match all subgroups
-;;;          :and (:tag "shopping" :tag "@town"))
-;;;
-;;;        (:name "Food-related"
-;;;          ;; Multiple args given in list with implicit OR
-;;;          :tag ("food" "dinner"))
-;;;
-;;;        (:name "Personal"
-;;;          :habit t
-;;;          :tag "personal")
-;;;
-;;;        (:name "Space-related (non-moon-or-planet-related)"
-;;;          ;; Regexps match case-insensitively on the entire entry
-;;;          :and (:regexp ("space" "NASA")
-;;;          ;; Boolean NOT also has implicit OR between selectors
-;;;          :not (:regexp "moon" :tag "planet")))
-;;;
-;;;      ))
-;;;
 ;;;      ;; Groups supply their own section names when none are given
 ;;;      (:todo "WAITING" :order 8)  ; Set order of this section
 ;;;
