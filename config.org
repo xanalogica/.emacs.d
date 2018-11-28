@@ -4534,23 +4534,6 @@ tags-todo.
 ;;;    (org-agenda nil "a"))
 ;;; #+END_SRC
 
-;;; #+BEGIN_SRC emacs-lisp :exports code
-;;;   (org-super-agenda-mode 1)
-;;;   (setq org-super-agenda-groups
-;;;     '( ;; Each group has an implicit boolean OR operator between its selectors.
-;;;
-;;;      (:name "Time grid items in all-uppercase with RosyBrown1 foreground"
-;;;         :time-grid t
-;;;         :transformer (--> it
-;;;                           (upcase it)
-;;;                           (propertize it 'face '(:foreground "RosyBrown1"))
-;;;                      )
-;;;      )
-;;;
-;;;      )
-;;;   )
-;;; #+END_SRC
-
 ;;;      (:name "Important"
 ;;;        ;; Single arguments given alone
 ;;;         :tag "bills"
