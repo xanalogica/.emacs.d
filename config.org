@@ -4216,9 +4216,9 @@ list of items, usually for the daily/weekly agenda, made by the
        (:discard (:scheduled t :deadline t))  ;; skip task that ARE scheduled
        (:name "Unplanned Shopping" :tag "SHOP")
        (:name "Unplanned SysAdmin Tasks" :tag "SYSADMIN")
-       (:name "Unscheduled Chores" :tag "CHORE")
+       (:name "Unplanned Chores" :tag "CHORE")
 
-       (:name "Unscheduled ZeOmega Work" :tag "ZEOMEGA")
+       (:name "Unplanned ZeOmega Work" :tag "ZEOMEGA")
 
        (:name "Unscheduled Financials" :tag "FINANCE")
        (:name "Unscheduled Health Matters" :tag "HEALTH")
