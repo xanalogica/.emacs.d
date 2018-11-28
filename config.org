@@ -4153,7 +4153,7 @@ types:
                (search . " %i %-12:c")
               )
            )
-;;;           (org-agenda-compact-blocks t)  ;; experimental
+;;;           (org-agenda-compact-blocks t)  ;; shorten agenda view
 ;;;           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
 ;;;           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
          )
