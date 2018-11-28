@@ -4003,10 +4003,10 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 1. DONE text Aimee re $200 owed
 2. fix Category of 'Ann' that bleeds over
+3. fix [qQ]uotes.org
+4. fix Finance.org
 
 2. write Christmas party invitation
-4. fix [qQ]uotes.org
-5. fix Finance.org
 6. sync and merge in Inbox.org
 
 P Agenda for Current Period -> Planned Tasks
