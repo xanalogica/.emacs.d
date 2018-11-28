@@ -4256,15 +4256,15 @@ list of items, usually for the daily/weekly agenda, made by the
 #+BEGIN_SRC emacs-lisp
   (setq groups/items-needing-filing  ;; presentation definition using org-super-agenda
     '(
-       (:name "Links Needing Refiling"
+       (:name "Collected Links"
          :tag "LINK"
        )
 
-       (:name "Tasks Needing Refiling"
+       (:name "Collected Tasks"
          :todo t
        )
 
-       (:name "Notes Needing Refiling"
+       (:name "Collected Notes"
          :anything t  ;; place all (prefiltered) entries under this heading
        )
      )
