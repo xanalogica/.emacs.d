@@ -4190,8 +4190,7 @@ types:
            (org-agenda-remove-tags t)
            ;; add checkboxes
 
-           (org-agenda-prefix-format " [ ] %-12:c"  ;; add checkbox for printed shopping list
-           )
+           (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
 
            (org-agenda-with-colors t)
            (org-agenda-overriding-header "Shopping List(s)")
