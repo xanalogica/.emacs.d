@@ -4200,7 +4200,7 @@ types:
   '("r" "Reference material" tags ""
     (
       (org-agenda-files (file-expand-wildcards "~/ref/*.org"))
-      )
+    )
    )
 )
 
