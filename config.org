@@ -4023,7 +4023,8 @@ S Shopping List(s)  ->  $
 F Captured Info Needing Filing
  - HAS an agenda title on first time
  - org-agenda-type is 'tags'
-
+ - NEEDS TO SHOW NON-LINK FILING WORK !
+ - HEADER IS "Links Needing Refiling"
 
 HOW is 'org-agenda-type' getting set to nil?
 
