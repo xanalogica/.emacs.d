@@ -4110,7 +4110,10 @@ list of items, usually for the daily/weekly agenda, made by the
       (org-super-agenda-mode)  ;; enable it globally
 
       (set-face-attribute 'org-super-agenda-header nil
-        :weight 'bold  :foreground "red" :background "blue" :overline "green"
+        :weight 'bold
+        :foreground "red"
+        :background "blue"
+        :overline "green"
       )
 
   ;;; :underline t
