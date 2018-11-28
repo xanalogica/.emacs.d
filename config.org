@@ -4054,8 +4054,8 @@ HOW is 'org-agenda-type' getting set to nil?
 ;;    :underline "yellow"
 ;;    :box       "White"
   )
-  (setq org-agenda-dim-blocked-tasks
-    nil)
+;;  (setq org-agenda-dim-blocked-tasks
+;;    nil)
 #+END_SRC
 
 [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html#Face-Attributes][Face Attributes - GNU Emacs Lisp Reference Manual]]
