@@ -3998,6 +3998,11 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
+(setq org-agenda-scheduled-leaders '("" ""))
+
+
+
+
 ***** Default Settings Common to All My Agenda Views
 
 #+BEGIN_SRC emacs-lisp :exports code
