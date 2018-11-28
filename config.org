@@ -4351,6 +4351,7 @@ types:
            (org-super-agenda-groups groups/scheduled-tasks)
            (org-agenda-span 14)         ;; show me 14-days at a time
            (org-agenda-with-colors t)
+           (org-agenda-remove-tags t)
            (org-agenda-overriding-header "Agenda for a Time Period")
          )
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
