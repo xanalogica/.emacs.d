@@ -4113,13 +4113,6 @@ list of items, usually for the daily/weekly agenda, made by the
         :weight 'bold
         :overline "green"
       )
-
-  ;;; :underline t
-  ;;; :underline "red"
-  ;;; :slant 'italic
-  ;;; :overline t
-  ;;; :overline "blue"
-  ;;; :box t -or- "red"
   )
 #+END_SRC
 
