@@ -4255,9 +4255,9 @@ list of items, usually for the daily/weekly agenda, made by the
          :tag "LINK"
        )
 
-       ;;; tasks -- has a TODO
-
-       ;;; notes -- lacks a tag :LINK: and lacks a TODO
+       (:name "Tasks Needing Refiling"
+         :todo t
+       )
 
        (:name "Notes Needing Refiling"
          :anything t  ;; place all (prefiltered) entries under this heading
