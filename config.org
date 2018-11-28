@@ -4057,8 +4057,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 
 #+END_SRC
 
-- test :: 
-
 [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html#Face-Attributes][Face Attributes - GNU Emacs Lisp Reference Manual]]
 
 #+BEGIN_SRC emacs-lisp
