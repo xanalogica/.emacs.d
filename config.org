@@ -260,9 +260,6 @@ Pallet has a very simple interface:
 - M-x pallet-update updates installed packages
 
 #+BEGIN_SRC emacs-lisp
-;;  (require 'pallet)
-;;  (pallet-mode t)
-
   (use-package pallet
     :ensure t
     :config
