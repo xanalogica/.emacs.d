@@ -4009,6 +4009,8 @@ B Backlog of Unscheduled Tasks
  - org-agenda-type is 'todo'
 R Recurring/Habitual Tasks
  - HAS an agenda title on first line
+ - org-agenda-type is 'todo'
+
 
 
 
