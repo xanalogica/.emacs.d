@@ -4149,13 +4149,6 @@ types:
 
            (org-agenda-remove-tags t)
 
-           (org-agenda-prefix-format
-             '((agenda . " %i %-12:c%?-12t% s")
-               (todo . " %i %-12:c")
-               (tags . " %i %-12:c")
-               (search . " %i %-12:c")
-              )
-           )
 ;;;           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
 ;;;           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
          )
