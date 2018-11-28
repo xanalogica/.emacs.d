@@ -1670,7 +1670,9 @@ replace color themes, as each approach has its advantages.
 
   (put 'scroll-left 'disabled nil)
 
-  (setq auto-hscroll-mode 'current-line)  ;; only scroll the current line, not the whole frame
+  (setq auto-hscroll-mode  ;; only scroll the current line,
+    'current-line)  ;; not the whole frame so I can see Ivy choices
+
 #+END_SRC
 
 *** Among Windows/Frames
