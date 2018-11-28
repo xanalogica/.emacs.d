@@ -4184,10 +4184,11 @@ types:
        ("S" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
          "+SHOP"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
+           (org-agenda-overriding-header "Shopping List(s)")
            (org-super-agenda-groups groups/shopping-lists)
+
            (org-agenda-remove-tags t)
            (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
-           (org-agenda-overriding-header "Shopping List(s)")
          )
          ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
        )
