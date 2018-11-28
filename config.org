@@ -331,7 +331,8 @@ other hand, when you attempt to save the buffer to a file whose extension is
 ‘.gpg’, encrypted data is written.
 
 #+BEGIN_SRC emacs-lisp
-  (require 'epa-file)
+;;;  (require 'epa-file)
+  (use-package epa-file)
 
   (defadvice epg--start (around advice-epg-disable-agent activate)
     "Make epg--start not able to find a gpg-agent"
