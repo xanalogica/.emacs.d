@@ -4053,9 +4053,6 @@ HOW is 'org-agenda-type' getting set to nil?
 ;;    :weight 'bold
 ;;    :underline "yellow"
 ;;    :box       "White"
-
-;; :foreground "Orange" :box "White" :inverse-video t
-
   )
   (setq org-agenda-dim-blocked-tasks
     nil)
