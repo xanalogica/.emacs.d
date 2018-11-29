@@ -3016,7 +3016,7 @@ Things to Drop:
 #+BEGIN_SRC text
   "a Catchy Quote" entry
   (file+headline "~/Dropbox/Documents/quotes.org"
-                 "Disorganized Quotations")
+                 "Quotes and Sayings")
 
   "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n"
 
