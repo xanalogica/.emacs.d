@@ -5809,7 +5809,6 @@ your 'server-done-hook', e.g.
 [[elisp:(progn (kill-new (format "Sneak peek: Sketched Book: %s - %s %s" (org-entry-get-with-inheritance "SHORT_TITLE") (org-entry-get-with-inheritance "AUTHOR") (org-entry-get-with-inheritance "BLOG_POST"))) (browse-url "http://twitter.com"))][Copy text and launch Twitter]]
 
 
-
 * Providing a Function to Calculate Easter for Org-Mode Events
 
 
