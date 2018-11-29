@@ -5835,7 +5835,6 @@ calculate it.  The code come from:
                             adjusted-epact)))
       (calendar-dayname-on-or-before 0 (+ paschal-moon 7))))
 
-
   (defun da-easter-gregorian (year)
     (calendar-gregorian-from-absolute (da-easter year)))
 
