@@ -5815,17 +5815,7 @@ calculate it.  The code come from:
 
    http://github.com/soren/elisp/blob/master/da-kalender.el
 
-
 #+BEGIN_SRC emacs-lisp
-;; (add-hook 'server-done-hook (lambda nil (kill-buffer nil)))
-#+END_SRC
-
-
-
-
-
-
-
 (defun da-easter (year)
   "Calculate the date for Easter Sunday in YEAR. Returns the date in the
 Gregorian calendar, ie (MM DD YY) format."
@@ -5854,6 +5844,7 @@ Gregorian calendar, ie (MM DD YY) format."
 are between the current date (DATE) and Easter Sunday."
   (- (calendar-absolute-from-gregorian date)
      (da-easter (calendar-extract-year date))))
+#+END_SRC
 
 Now we can schedule the public holidays associated with Easter as 
 recurring events. Good Friday is 2 days before "Easter", Easter Monday is one
