@@ -5825,9 +5825,6 @@ calculate it.  The code come from:
 
 
 
-Note: the function da-easter is from:
-
-Put the following in your .emacs:
 
 (defun da-easter (year)
   "Calculate the date for Easter Sunday in YEAR. Returns the date in the
