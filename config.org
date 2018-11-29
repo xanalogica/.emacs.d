@@ -5810,6 +5810,10 @@ your 'server-done-hook', e.g.
 
 * Providing a Function to Calculate Easter for Org-Mode Events
 
+The calculation for Easter is complex, but the following Elisp code will
+calculate it.  The code come from:
+
+   http://github.com/soren/elisp/blob/master/da-kalender.el
 
 
 #+BEGIN_SRC emacs-lisp
@@ -5822,7 +5826,6 @@ your 'server-done-hook', e.g.
 
 
 Note: the function da-easter is from:
-http://github.com/soren/elisp/blob/master/da-kalender.el
 
 Put the following in your .emacs:
 
