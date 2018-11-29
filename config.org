@@ -5849,7 +5849,6 @@ Now we can schedule the public holidays associated with Easter as recurring
 events.  Good Friday is 2 days before "Easter", Easter Monday is one day
 after.
 
-
 *** Good Friday
 <%%(= -2 (calendar-days-from-easter))>
 
