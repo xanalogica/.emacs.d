@@ -3999,8 +3999,6 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
-6. write Christmas party invitation
-
 P Agenda for Current Period -> Planned Tasks
  - missing agenda title from first line; has a date instead
  - org-agenda-type is nil
