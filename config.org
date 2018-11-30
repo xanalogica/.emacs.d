@@ -3673,6 +3673,7 @@ the languages I expect to embed into an org-mode document.
           (ditaa      . t)
           (dot        . t)
           (gnuplot    . t)
+          (ledger     . t)
           (sql        . t)
           (sqlite     . t)
        )
