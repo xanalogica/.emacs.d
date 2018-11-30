@@ -4024,8 +4024,6 @@ F Captured Info Needing Filing
 - items at bottom of index.org are unclassified items to refile
 - notes/links/task at bottom of index.org are captured items to refile
 
-HOW is 'org-agenda-type' getting set to nil?
-
 ??? (org-compile-prefix-format) ???
 ??? (org-agenda-format-item) ???
 
