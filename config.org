@@ -4210,7 +4210,7 @@ types:
            (org-agenda-overriding-header "Technology Directions")
 ;;           (org-super-agenda-groups groups/items-needing-filing)
 
-;;           (org-agenda-remove-tags t)
+           (org-agenda-remove-tags t)
            (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
          )
          ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
