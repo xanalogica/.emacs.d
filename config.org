@@ -4213,12 +4213,8 @@ types:
 ;;           (org-agenda-remove-tags t)
            (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
          )
-         ("/tmp/CapturedItems.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
        )
-
-
-
-
     )
   )
 #+END_SRC
