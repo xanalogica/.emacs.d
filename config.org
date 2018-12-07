@@ -1729,6 +1729,7 @@ a line without knowing it.
               (format "\\%s{%s}" path desc)))))
 #+END_SRC
 
+**** Define a New Type of Link that Searches Tag Expressions
 
 #+BEGIN_SRC DISABLEDemacs-lisp
   (org-add-link-type
