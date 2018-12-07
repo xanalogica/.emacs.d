@@ -1716,6 +1716,32 @@ a line without knowing it.
   (setq org-catch-invisible-edits 'show-and-error)
 #+END_SRC
 
+**** Define a New Type of Link that Greps Files
+
+#+BEGIN_SRC DISABLEDemacs-lisp
+  (org-add-link-type
+    "latex" nil
+      (lambda (path desc format)
+        (cond
+          ((eq format 'html)
+              (format "<span style=\"color:grey;\">%s</span>" desc))
+          ((eq format 'latex)
+              (format "\\%s{%s}" path desc)))))
+#+END_SRC
+
+
+#+BEGIN_SRC DISABLEDemacs-lisp
+  (org-add-link-type
+    "latex" nil
+      (lambda (path desc format)
+        (cond
+          ((eq format 'html)
+              (format "<span style=\"color:grey;\">%s</span>" desc))
+          ((eq format 'latex)
+              (format "\\%s{%s}" path desc)))))
+#+END_SRC
+
+
 
 ** Buffer Modes for Various Languages
 - C-h m			:: help for the mode
