@@ -1760,7 +1760,11 @@ NEED: Show matching headlines in THIS file.
       (lambda (tag)
        "Display a list of TODO headlines with tag TAG.
         With prefix argument, also display headlines without a TODO keyword."
-        (org-tags-view (null current-prefix-arg) tag)
+        (let
+          (
+          )
+          (org-tags-view (null current-prefix-arg) tag)
+        )
       )
   )
 #+END_SRC
