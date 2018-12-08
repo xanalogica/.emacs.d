@@ -1763,7 +1763,7 @@ NEED: Show matching headlines in THIS file.
         (let
           (
             (org-agenda-files
-              (
+              '(
                 (buffer-file-name)
               )
             )
