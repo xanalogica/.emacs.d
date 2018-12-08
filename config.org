@@ -1733,6 +1733,8 @@ a line without knowing it.
 
 **** Define a New Type of Link that Searches Tag Match Expressions
 
+[[tag:work+phonenumber-boss][description]\]
+
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
     "tag"
