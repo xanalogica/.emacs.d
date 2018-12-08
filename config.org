@@ -1763,6 +1763,7 @@ NEED: Show matching headlines in THIS file.
         (let
           (
             (org-agenda-files (list (buffer-file-name) ))
+            (org-agenda-remove-tags t)
           )
           (org-tags-view (null current-prefix-arg) tag)
         )
