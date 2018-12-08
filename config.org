@@ -1722,7 +1722,7 @@ a line without knowing it.
 
 Show matches across all files in the current directory.
 
-NEED: Show all matching headlines in THIS file.
+NEED: Show matches only in THIS file.
 
 
 #+BEGIN_SRC emacs-lisp
