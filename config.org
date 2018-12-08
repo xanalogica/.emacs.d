@@ -1718,6 +1718,8 @@ a line without knowing it.
 
 **** Define a New Type of Link that Greps Files
 
+[[grep:some-regexp][description]\]
+
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
     "grep"
