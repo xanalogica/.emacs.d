@@ -1720,6 +1720,11 @@ a line without knowing it.
 
 [[grep:some-regexp][description]\]
 
+Show all matches across all files in the current directory.
+
+NEED: Show all matching headlines in THIS file.
+
+
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
     "grep"
