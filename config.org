@@ -1737,9 +1737,7 @@ a line without knowing it.
       (lambda (regexp)
        "Display a list of TODO headlines with tag TAG.
         With prefix argument, also display headlines without a TODO keyword."
-  (org-tags-view (null current-prefix-arg) tag)
-
-
+        (org-tags-view (null current-prefix-arg) tag)
       )
   )
 #+END_SRC
