@@ -1739,9 +1739,9 @@ NEED: Show matches only in THIS file.
 
 [[tag:work+phonenumber-boss][description]\]
 
-Show all headlines for all agenda files.
+Show headlines for all agenda files.
 
-NEED: Sow all matching headlines in THIS file.
+NEED: Show matching headlines in THIS file.
 
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
