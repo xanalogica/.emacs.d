@@ -1735,6 +1735,8 @@ a line without knowing it.
   (org-add-link-type
     "tag"
       (lambda (regexp)
+
+
       )
   )
 #+END_SRC
