@@ -1735,9 +1735,6 @@ a line without knowing it.
   (org-add-link-type
     "tag"
       (lambda (regexp)
-       "Run `rgrep' with REGEXP as argument."
-       (grep-compute-defaults)
-       (rgrep regexp "*" (expand-file-name "./"))
       )
   )
 #+END_SRC
