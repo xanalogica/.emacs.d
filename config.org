@@ -1733,7 +1733,7 @@ a line without knowing it.
 
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
-    "latex" nil
+    "tag"
       (lambda (path desc format)
         (cond
           ((eq format 'html)
