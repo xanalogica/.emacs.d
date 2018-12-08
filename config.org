@@ -1737,13 +1737,7 @@ a line without knowing it.
       (lambda (regexp)
 
       )
-
-
-        (cond
-          ((eq format 'html)
-              (format "<span style=\"color:grey;\">%s</span>" desc))
-          ((eq format 'latex)
-              (format "\\%s{%s}" path desc)))))
+  )
 #+END_SRC
 
 
