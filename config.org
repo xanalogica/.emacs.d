@@ -1754,7 +1754,21 @@ NEED: Show matching headlines in THIS file.
   )
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp
+  (org-add-link-type
+    "tags-in-file"
+      (lambda (tag)
+       "Display a list of TODO headlines with tag TAG.
+        With prefix argument, also display headlines without a TODO keyword."
+        (org-tags-view (null current-prefix-arg) tag)
+      )
+  )
+#+END_SRC
 
+
+(setq org-agenda-custom-commands
+      '(("b" "Buffer summary"
+     ((todo "TODO" ((org-agenda-files (list (buffer-file-name)))))))))
 
 ** Buffer Modes for Various Languages
 - C-h m			:: help for the mode
