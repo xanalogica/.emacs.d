@@ -1735,6 +1735,9 @@ a line without knowing it.
 
 [[tag:work+phonenumber-boss][description]\]
 
+Show all headlines for all agenda files.
+
+
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
     "tag"
