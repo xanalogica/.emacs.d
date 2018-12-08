@@ -1722,7 +1722,6 @@ a line without knowing it.
   (org-add-link-type
     "grep"
       (lambda (path desc format)
-
        "Run `rgrep' with REGEXP as argument."
        (grep-compute-defaults)
        (rgrep regexp "*" (expand-file-name "./"))
