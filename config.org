@@ -1762,7 +1762,7 @@ NEED: Show matching headlines in THIS file.
         With prefix argument, also display headlines without a TODO keyword."
         (let
           (
-            (org-agenda-files '( (buffer-file-name) ))
+            (org-agenda-files (list (buffer-file-name) ))
           )
           (org-tags-view (null current-prefix-arg) tag)
         )
