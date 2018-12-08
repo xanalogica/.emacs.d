@@ -1731,7 +1731,7 @@ a line without knowing it.
 
 **** Define a New Type of Link that Searches Tag Match Expressions
 
-#+BEGIN_SRC DISABLEDemacs-lisp
+#+BEGIN_SRC emacs-lisp
   (org-add-link-type
     "latex" nil
       (lambda (path desc format)
