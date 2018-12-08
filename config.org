@@ -1724,7 +1724,6 @@ Show matches across all files in the current directory.
 
 NEED: Show matches only in THIS file.
 
-
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
     "grep"
