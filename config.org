@@ -1722,11 +1722,12 @@ a line without knowing it.
   (org-add-link-type
     "grep"
       (lambda (path desc format)
-        (cond
-          ((eq format 'html)
-              (format "<span style=\"color:grey;\">%s</span>" desc))
-          ((eq format 'latex)
-              (format "\\%s{%s}" path desc)))))
+
+       "Run `rgrep' with REGEXP as argument."
+       (grep-compute-defaults)
+       (rgrep regexp "*" (expand-file-name "./"))
+      )
+  )
 #+END_SRC
 
 **** Define a New Type of Link that Searches Tag Match Expressions
