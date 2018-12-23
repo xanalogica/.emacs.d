@@ -1390,7 +1390,7 @@ To see the set of possible color names for X:
     '(
        5                  ;; #lines to normally scroll by
        ((shift) . 1)      ;; #lines when shift key pressed
-       ((control) . nil)  ;; don't scroll when control key pressed
+       ((control) . nil)  ;; full-screen when control key pressed
      )
   )
   (setq mouse-wheel-progressive-speed
