@@ -1388,7 +1388,7 @@ To see the set of possible color names for X:
 #+BEGIN_SRC emacs-lisp
   (setq mouse-wheel-scroll-amount
     '(
-       1                  ;; normally scroll by 1-line
+       1                  ;; #lines to normally scroll by
        ((shift) . 1)      ;; when shifted, scroll by 1-line
        ((control) . nil)  ;; don't scroll when control key pressed
      )
