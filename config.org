@@ -1386,6 +1386,7 @@ To see the set of possible color names for X:
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
