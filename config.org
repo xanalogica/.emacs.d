@@ -1390,7 +1390,7 @@ To see the set of possible color names for X:
     '(1 ((shift) . 1) ((control) . nil))
   )
   (setq mouse-wheel-progressive-speed
-    nil)
+    nil) ;; t adjusts faster, nil keeps it the same
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
