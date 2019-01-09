@@ -126,6 +126,7 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 
 This is a VERY good example of a custom org-mode .emacs.d file.
 https://github.com/mwfogleman/.emacs.d/
+[[~/.emacs.d/michael.org]]
 
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
