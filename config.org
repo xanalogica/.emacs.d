@@ -124,6 +124,9 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
+This is a VERY good example of a custom org-mode .emacs.d file.
+https://github.com/mwfogleman/.emacs.d/
+
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
 #+END_SRC
