@@ -124,6 +124,10 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
 :END:
 <<babel-init>>
 
+#+BEGIN_SRC emacs-lisp
+  (setq inhibit-startup-message t)
+#+END_SRC
+
 ** Install the 'use-package' module to more efficiently organize package settings
 
 There are many ways to provide package settings, from raw Elisp to tidy macros.
