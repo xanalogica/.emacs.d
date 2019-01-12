@@ -1594,7 +1594,6 @@ replace color themes, as each approach has its advantages.
 #+BEGIN_SRC emacs-lisp
 ;;  (setq-default scroll-bar-mode
 ;;    nil)	; Whether to show the scroll bar at all.
-
   (set-scroll-bar-mode nil)
 
   (setq-default set-scroll-bar-mode
