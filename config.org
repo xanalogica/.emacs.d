@@ -1592,8 +1592,10 @@ replace color themes, as each approach has its advantages.
 
 **** Along the Left/Right Sides
 #+BEGIN_SRC emacs-lisp
-  (setq-default scroll-bar-mode
-    nil)	; Whether to show the scroll bar at all.
+;;  (setq-default scroll-bar-mode
+;;    nil)	; Whether to show the scroll bar at all.
+
+  (set-scroll-bar-mode nil)
 
   (setq-default set-scroll-bar-mode
     'right)	; Where to show the scroll bar, left or right side.
