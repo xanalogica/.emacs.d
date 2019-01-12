@@ -1596,8 +1596,8 @@ replace color themes, as each approach has its advantages.
 ;;    nil)	; Whether to show the scroll bar at all.
   (set-scroll-bar-mode nil)
 
-  (setq-default set-scroll-bar-mode
-    'right)	; Where to show the scroll bar, left or right side.
+;;  (setq-default set-scroll-bar-mode
+;;    'right)	; Where to show the scroll bar, left or right side.
 #+END_SRC
 
 **** Along the Bottom, in the Mode Line
