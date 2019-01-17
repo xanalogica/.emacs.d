@@ -1514,7 +1514,7 @@ To see the various faces:
 #+END_SRC
 
 #+BEGIN_SRC example
-  (set-fringe-style no-fringes)
+;;  (set-fringe-style no-fringes)
 #+END_SRC
 
 **** Enabling the Use of Colorized Text
