@@ -1513,6 +1513,9 @@ To see the various faces:
           (:background "navajo white" :foreground "grey20" :box (:line-width -1 :color "grey75") :weight light)))))
 #+END_SRC
 
+#+BEGIN_SRC example
+#+END_SRC
+
 **** Enabling the Use of Colorized Text
 
 #+BEGIN_SRC emacs-lisp
