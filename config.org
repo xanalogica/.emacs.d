@@ -143,8 +143,7 @@ and tidy.
 - [[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
 - [[http://cachestocaches.com/2015/8/getting-started-use-package/][Getting Started with Use-Package]]
 
-#+BEGIN_SRC emacs-lisp
-  ;; Make sure I have 'use-package' installed in my Emacs
+;; Make sure I have 'use-package' installed in my Emacs
 ;;;  (unless (package-installed-p 'use-package)
 ;;;    (package-refresh-contents)       ;; refresh catalog of remote registry
 ;;;    (package-install 'use-package))  ;;   and install 'use-package' module
@@ -152,6 +151,7 @@ and tidy.
 ;;;  (eval-when-compile
 ;;;    (require 'use-package))
 
+#+BEGIN_SRC emacs-lisp
   (add-to-list 'load-path
       "~/.emacs.d/lisp/use-package")
   (require 'use-package)
