@@ -4881,7 +4881,6 @@ Key Bindings for 'notmuch-show' Mode (view of a single thread)
   ;; 'z'  tree
   ;; '|'  pipe message
 
-
 ;;  (define-key notmuch-show-mode-map "S"
 ;;    (lambda ()
 ;;      "mark message as spam"
