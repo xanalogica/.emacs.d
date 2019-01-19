@@ -4968,12 +4968,12 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
        :count-query "not tag:known and not tag:spam and not tag:sent and tag:xanalogica"
        :sort-order oldest-first
        :search-type nil)
-    (:name "sent"      ; FOR RESEARCH ONLY
-       :query "tag:sent"
-       :key   "s"
-       :count-query "tag:sent"
-       :sort-order newest-first    ; most likely I need a recent email I sent
-       :search-type nil)
+;;    (:name "sent"      ; FOR RESEARCH ONLY
+;;       :query "tag:sent"
+;;       :key   "s"
+;;       :count-query "tag:sent"
+;;       :sort-order newest-first    ; most likely I need a recent email I sent
+;;       :search-type nil)
     (:name "Admin"
        :query "tag:admin and tag:inbox"
        :key   "A"
