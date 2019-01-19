@@ -4890,7 +4890,7 @@ Key Bindings for 'notmuch-show' Mode (view of a single thread)
   ;; M-n  next thread
   ;; M-p  prev thread
 
-https://notmuchmail.org/emacstips/#index5h2
+https://notmuchmail.org/emacstips/
 
 ;;  (define-key notmuch-show-mode-map "S"
 ;;    (lambda ()
