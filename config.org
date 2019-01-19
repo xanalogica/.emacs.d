@@ -4895,10 +4895,6 @@ Key Bindings for 'notmuch-show' Mode (view of a single thread)
 ;;  )
 #+END_SRC
 
-
-
-
-
 #+BEGIN_SRC emacs-lisp
 
   ;;; Assigned Keys:
