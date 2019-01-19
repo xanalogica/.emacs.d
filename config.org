@@ -5046,6 +5046,8 @@ tree and (2) what tags to add/remove at the same time.
   )
   (setq notmuch-draft-tags "+draft -inbox -unread")
   (setq notmuch-draft-folder nil)
+
+  (setq notmuch-archive-tags "+archive -inbox -unread")
 #+END_SRC
 
 *** Using the smtpmail package to Send Email
