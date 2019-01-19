@@ -4845,6 +4845,13 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
 ;;  )
 #+END_SRC
 
+https://notmuchmail.org/emacstips/
+
+[[notmuch-search:tag:sent][Notmuch search: tag:sent]]
+
+[[notmuch:id:MN2PR19MB29740F85C045496E141961B0BD860@MN2PR19MB2974.namprd19.prod.outlook.com][Email from Jeff Rush: Re: update on funding process]]
+
+
 Key Bindings for 'notmuch-show' Mode (view of a single thread)
 #+BEGIN_SRC emacs-lisp
   ;; SPC  advance and archive
@@ -4889,8 +4896,6 @@ Key Bindings for 'notmuch-show' Mode (view of a single thread)
   ;; M-RET open or close all
   ;; M-n  next thread
   ;; M-p  prev thread
-
-https://notmuchmail.org/emacstips/
 
 ;;  (define-key notmuch-show-mode-map "S"
 ;;    (lambda ()
