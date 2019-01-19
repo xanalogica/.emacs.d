@@ -4818,6 +4818,7 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
   ;; 'n'  next thread
   ;; 'z'  tree
   ;; 'o'  toggle order
+  ;; 'c'  copy various items
 
   ;; RET  display that thread
   ;; +    add tags to a thread
