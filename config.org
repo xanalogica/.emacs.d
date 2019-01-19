@@ -4931,9 +4931,6 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
        :sort-order newest-first
        :search-type 'tree)
 
-
-
-
     (:name "Directs"   ; HIGH-PRIORITY EMAILS BECAUSE WHO IS SENDING
        :query "tag:inbox and (tag:directSam or tag:directSada)"
        :key   "D"
