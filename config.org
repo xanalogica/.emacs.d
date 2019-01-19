@@ -4782,8 +4782,13 @@ notmuch-[search|show|tree]-tag functions
 
 Key Bindings for 'notmuch-hello' Mode
 #+BEGIN_SRC emacs-lisp
+  ;; '=' refresh the screen
+  ;; 'q' quit the screen
   ;; 's' search for messages
   ;; 'z' search for threads
+  ;; 'G'
+
+
 
   (define-key notmuch-show-mode-map "S"
     (lambda ()
