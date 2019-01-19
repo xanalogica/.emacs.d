@@ -4956,14 +4956,6 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
        :count-query "tag:inbox tag:xanalogica and tag:unread"
        :sort-order newest-first
        :search-type 'tree)
-
-    (:name "Unknowns"   ; EMAIL FROM PEOPLE I DON'T KNOW
-       :query "not tag:known and not tag:spam and not tag:sent"
-       :key   "U"
-       :count-query "not tag:known and not tag:spam and not tag:sent"
-       :sort-order oldest-first
-       :search-type 'nil)
-
     (:name "ZeOutsiders"   ; EMAILS FROM UNKNOWN OUTSIDERS
        :query "not tag:known and not tag:spam and not tag:sent and tag:zeomega"
        :key   "ZO"
