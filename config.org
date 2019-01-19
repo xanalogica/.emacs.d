@@ -4807,7 +4807,8 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
   ;; '='  refresh the screen
   ;; 'q'  quit the screen
   ;; 's'  execute a new, global search
-  ;; 'G' poll and refresh this buffer
+  ;; 'G'  poll and refresh this buffer
+  ;; SPC  scroll up
 
   ;; RET  display that thread
   ;; +    add tags to a thread
