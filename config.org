@@ -4810,6 +4810,7 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
   ;; 'G'  poll and refresh this buffer
   ;; SPC  scroll up
   ;; 'R'  reply to thread
+  ;; 'Z'  view current query as a tree
 
   ;; RET  display that thread
   ;; +    add tags to a thread
