@@ -4923,6 +4923,17 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
   ;;;   <d>rafts
 
   (setq notmuch-saved-searches '(
+
+    (:name "Strangers"   ; EMAIL FROM PEOPLE I'VE NEVER MET
+       :query "tag:inbox and (tag:directSam or tag:directSada)"
+       :key   "D"
+       :count-query "tag:inbox and (tag:directSam or tag:directSada)"
+       :sort-order newest-first
+       :search-type 'tree)
+
+
+
+
     (:name "Directs"   ; HIGH-PRIORITY EMAILS BECAUSE WHO IS SENDING
        :query "tag:inbox and (tag:directSam or tag:directSada)"
        :key   "D"
