@@ -4808,6 +4808,9 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
   ;; -    del tags fm a thread
   ;; a    archive thread, applying tags from notmuch-archive-tags var
   ;; *    add/remove tags from ALL messages
+  ;; l    filter current search further
+  ;; t    filter to include only messages with a given tag
+  ;; s    execute a new, global search
 
 ;;  (define-key notmuch-search-mode-map "S"
 ;;    (lambda ()
