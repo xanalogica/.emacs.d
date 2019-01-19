@@ -4924,7 +4924,7 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
 
   (setq notmuch-saved-searches '(
 
-    (:name "Strangers"   ; EMAIL FROM PEOPLE I DON'T KNOW
+    (:name "Unknowns"   ; EMAIL FROM PEOPLE I DON'T KNOW
        :query "not tag:known and not tag:spam and not tag:sent"
        :key   "D"
        :count-query "tag:inbox and (tag:directSam or tag:directSada)"
