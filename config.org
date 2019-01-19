@@ -4812,6 +4812,7 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
   ;; 'R'  reply to thread
   ;; 'Z'  view current query as a tree
 
+  ;; 'j' jump by key to a saved-search
   ;; RET  display that thread
   ;; +    add tags to a thread
   ;; -    del tags fm a thread
