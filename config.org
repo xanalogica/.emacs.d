@@ -4963,7 +4963,7 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
        :sort-order oldest-first
        :search-type nil)
     (:name "XaOutsiders"   ; EMAILS FROM UNKNOWN OUTSIDERS
-       :query "not tag:known and tag:xanalogica"
+       :query "not tag:known and not tag:spam and not tag:sent and tag:xanalogica"
        :key   "XO"
        :count-query "not tag:known and tag:xanalogica and tag:unread"
        :sort-order newest-first
