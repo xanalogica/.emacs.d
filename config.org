@@ -4848,7 +4848,6 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
 1. fix presentation of an email
 2. declare a key to mark an email 'known'
 
-
 https://notmuchmail.org/emacstips/
 
 [[notmuch-search:tag:sent][Notmuch search: tag:sent]]
