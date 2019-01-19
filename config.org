@@ -4801,9 +4801,9 @@ Key Bindings for 'notmuch-hello' Mode
 ;;  )
 #+END_SRC
 
-Key Bindings for 'notmuch-show' Mode
+Key Bindings for 'notmuch-search' Mode (list of threads)
 #+BEGIN_SRC emacs-lisp
-  (define-key notmuch-show-mode-map "S"
+  (define-key notmuch-search-mode-map "S"
     (lambda ()
       "mark message as spam"
       (interactive)
