@@ -4846,7 +4846,7 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
 #+END_SRC
 
 1. fix presentation of an email
-2. declare a key to mark an email 'known'
+2. declare a key to mark an email sender 'known'
 
 https://notmuchmail.org/emacstips/
 
