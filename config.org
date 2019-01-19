@@ -4790,7 +4790,7 @@ Key Bindings for 'notmuch-hello' Mode
   ;; 'j' jump by key to a saved-search
   ;; 'm' notmuch-mua-new-mail
 
-  (define-key notmuch-show-mode-map "S"
+  (define-key notmuch-hello-mode-map "S"
     (lambda ()
       "mark message as spam"
       (interactive)
