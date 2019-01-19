@@ -4774,6 +4774,10 @@ The :unread: tag is less reliable as my mobile apps for reading email easily
 clear the :unread:tag and it is not simple to add it back each time this
 happens.
 
+
+notmuch-[search|show|tree]-tag functions
+
+
 #+BEGIN_SRC emacs-lisp
 
   ;;; Assigned Keys:
