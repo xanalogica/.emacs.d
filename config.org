@@ -4779,6 +4779,9 @@ notmuch-[search|show|tree]-tag functions
  - search is about threads
  - tree is about individual messages
 
+
+Key Bindings for 'notmuch-show' Mode
+
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
