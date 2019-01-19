@@ -4802,6 +4802,12 @@ Key Bindings for 'notmuch-hello' Mode
 ;;  )
 #+END_SRC
 
+
+disposition keys:
+  ??  declare spam
+  ??  declare archive
+  ??  declare deleted
+
 Key Bindings for 'notmuch-search' Mode (list of threads)
 #+BEGIN_SRC emacs-lisp
   ;; '='  refresh the screen
