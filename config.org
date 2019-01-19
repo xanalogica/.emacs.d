@@ -4901,7 +4901,7 @@ Key Bindings for 'notmuch-show' Mode (view of a single thread)
 ;;  )
 #+END_SRC
 
-Key Bindings for 'notmuch-tree' Mode (manipulate messages)
+Key Bindings for 'notmuch-tree' Mode (manipulate a message)
 #+BEGIN_SRC emacs-lisp
   ;; SPC  advance and archive
   ;; '!'  toggle elide non-matching
