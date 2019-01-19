@@ -4786,9 +4786,9 @@ Key Bindings for 'notmuch-hello' Mode
   ;; 'q' quit the screen
   ;; 's' search for messages
   ;; 'z' search for threads
-  ;; 'G'
-
-
+  ;; 'G' poll and refresh this buffer
+  ;; 'j' jump by key to a saved-search
+  ;; 'm' notmuch-mua-new-mail
 
   (define-key notmuch-show-mode-map "S"
     (lambda ()
