@@ -4803,7 +4803,7 @@ Key Bindings for 'notmuch-hello' Mode
 #+END_SRC
 
 
-disposition keys:
+message disposition keys:
   ??  declare spam
   ??  declare archive
   ??  declare deleted
