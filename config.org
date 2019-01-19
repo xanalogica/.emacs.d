@@ -4839,17 +4839,19 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
 ;;  )
 #+END_SRC
 
-Key Bindings for 'notmuch-show' Mode
+Key Bindings for 'notmuch-show' Mode (view of a single thread)
 #+BEGIN_SRC emacs-lisp
-  (define-key notmuch-show-mode-map "S"
-    (lambda ()
-      "mark message as spam"
-      (interactive)
-      (notmuch-show-tag
-        (list "+spam" "-inbox")
-      )
-    )
-  )
+
+
+;;  (define-key notmuch-show-mode-map "S"
+;;    (lambda ()
+;;      "mark message as spam"
+;;      (interactive)
+;;      (notmuch-show-tag
+;;        (list "+spam" "-inbox")
+;;      )
+;;    )
+;;  )
 #+END_SRC
 
 
