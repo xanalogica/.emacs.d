@@ -4841,6 +4841,45 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
 
 Key Bindings for 'notmuch-show' Mode (view of a single thread)
 #+BEGIN_SRC emacs-lisp
+  ;; SPC  advance and archive
+  ;; '!'  toggle elide non-matching
+  ;; '#'  print message
+  ;; '$'  toggle process-crypto
+  ;; '*'  tag all
+  ;; '+'  add tag
+  ;; '-'  del tag
+  ;; '.'  part map
+  ;; '<'  toggle thread indentation
+  ;; '='  refresh view
+  ;; 'A'  archive thread then next
+  ;; 'F'  forward open messages
+  ;; 'G'  poll and refresh
+  ;; 'N'  next message
+  ;; 'P'  prev message
+  ;; 'R'  reply
+  ;; 'V'  view raw message
+  ;; 'X'  archive thread then exit
+  ;; 'Z'  tree from current query
+  ;; 'a'  archive message then next
+  ;; 'b'  resend message
+  ;; 'c'  stash stuff
+  ;; 'e'  resume message
+  ;; 'f'  forwawrd message
+  ;; 'h'  toggle visibility headers
+  ;; 'j'  jump search
+  ;; 'k'  tag jump
+  ;; 'l'  filter thread
+  ;; 'm'  new mail
+  ;; 'n'  next open message
+  ;; 'p'  prev open message
+  ;; 'q'  quit
+  ;; 'r'  reply to sender
+  ;; 's'  search
+  ;; 't'  truncate lines
+  ;; 'w'  save attachments
+  ;; 'x'  archive message then next
+  ;; 'z'  tree
+  ;; '|'  pipe message
 
 
 ;;  (define-key notmuch-show-mode-map "S"
