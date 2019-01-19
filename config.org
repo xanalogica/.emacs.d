@@ -4880,6 +4880,7 @@ Key Bindings for 'notmuch-show' Mode (view of a single thread)
   ;; 'x'  archive message then next
   ;; 'z'  tree
   ;; '|'  pipe message
+  ;; M-RET open or close all
   ;; M-n  next thread
   ;; M-p  prev thread
 
