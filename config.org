@@ -4814,6 +4814,7 @@ Key Bindings for 'notmuch-search' Mode (list of threads)
 
   ;; 'j'  jump by key to a saved-search
   ;; 'k'  jump by tag
+  ;; 'p'  prev thread
   ;; 'n'  next thread
   ;; 'z'  tree
   ;; 'o'  toggle order
