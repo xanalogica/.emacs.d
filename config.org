@@ -4929,8 +4929,7 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
        :key   "U"
        :count-query "not tag:known and not tag:spam and not tag:sent"
        :sort-order newest-first
-       :search-type 'tree)
-
+       :search-type 'nil)
     (:name "Directs"   ; HIGH-PRIORITY EMAILS BECAUSE WHO IS SENDING
        :query "tag:inbox and (tag:directSam or tag:directSada)"
        :key   "D"
