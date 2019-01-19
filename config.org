@@ -4965,7 +4965,7 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
        :search-type 'nil)
 
     (:name "ZeOutsiders"   ; EMAILS FROM UNKNOWN OUTSIDERS
-       :query "not tag:known and tag:zeomega"
+       :query "not tag:known and not tag:spam and not tag:sent and tag:zeomega"
        :key   "ZO"
        :count-query "not tag:known and tag:zeomega and tag:unread"
        :sort-order newest-first
