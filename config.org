@@ -4786,7 +4786,9 @@ Key Bindings for 'notmuch-show' Mode
     (lambda ()
       "mark message as spam"
       (interactive)
-      (notmuch-show-tag (list "+spam" "-inbox"))
+      (notmuch-show-tag
+        (list "+spam" "-inbox")
+      )
     )
   )
 #+END_SRC
