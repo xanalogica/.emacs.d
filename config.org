@@ -4922,7 +4922,7 @@ Key Bindings for 'notmuch-tree' Mode (manipulate a message)
   ;;;   <F>lagged
   ;;;   <d>rafts
 
-  (setq notmuch-saved-searches '(
+  (setq notmuch-saved-searches '(  ;;; order below is how they appear
 
     (:name "Unknowns"   ; EMAIL FROM PEOPLE I DON'T KNOW
        :query "not tag:known and not tag:spam and not tag:sent"
