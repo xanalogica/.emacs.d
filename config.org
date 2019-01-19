@@ -4782,6 +4782,14 @@ notmuch-[search|show|tree]-tag functions
 
 Key Bindings for 'notmuch-show' Mode
 #+BEGIN_SRC emacs-lisp
+
+ (define-key notmuch-show-mode-map "S"
+      (lambda ()
+        "mark message as spam"
+        (interactive)
+        (notmuch-show-tag (list "+spam" "-inbox"))))
+
+
 #+END_SRC
 
 
