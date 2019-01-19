@@ -4788,8 +4788,6 @@ Key Bindings for 'notmuch-show' Mode
       (interactive)
       (notmuch-show-tag (list "+spam" "-inbox")))
   )
-
-
 #+END_SRC
 
 
