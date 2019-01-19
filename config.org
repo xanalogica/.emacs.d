@@ -4776,7 +4776,8 @@ happens.
 
 
 notmuch-[search|show|tree]-tag functions
-
+ - search is about threads
+ - tree is about individual messages
 
 #+BEGIN_SRC emacs-lisp
 
