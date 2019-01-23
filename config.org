@@ -3991,7 +3991,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
            ("C-c C-j" . orgnav-search-root)
           )
 
-
 *** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
 #+BEGIN_SRC DISABLEDemacs-lisp
   (defun wicked/org-update-checkbox-count (&optional all)
