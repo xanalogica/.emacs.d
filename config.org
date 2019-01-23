@@ -3983,12 +3983,13 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 #+BEGIN_SRC emacs-lisp
   (use-package org-collector
+  )
+#+END_SRC
+
     :load-path "~/.emacs.d/lisp/orgnav/" ;; use my Git checkout
     :bind (:map org-mode-map
            ("C-c C-j" . orgnav-search-root)
           )
-  )
-#+END_SRC
 
 
 *** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
