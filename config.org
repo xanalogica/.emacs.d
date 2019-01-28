@@ -3669,6 +3669,9 @@ used, equivalent to the value `((nil . (:level . 1))'.
 -     C-0  C-c C-w  :: clear the refiling target cache
 
 #+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
   (setq org-refile-targets
     '( ; file(s) to look inside of                  ; destination headings
 
