@@ -3672,7 +3672,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-refile-targets
     '( ; file(s) to look inside of                  ; destination headings
 
-      ("~/.emacs.d/config.org" :tag . "REFILING")
+      ("~/.emacs.d/config.org" :tag . "REFILETARGETS")
 
       ("~/Dropbox/Documents/AboutMyBlog.org" :tag . "REFILING")
         ;; Blog Idea
