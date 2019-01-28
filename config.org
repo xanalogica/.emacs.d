@@ -2691,7 +2691,6 @@ Fix org-mode's conflict with yasnippet over the TAB key.
   (add-hook 'org-mode-hook
      (lambda ()
         (org-defkey org-mode-map "\C-c&" 'org-mark-ring-goto)
-        (define-key yas/keymap [tab] 'yas/next-field-group)
      )
   )
 #+END_SRC
