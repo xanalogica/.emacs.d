@@ -1121,7 +1121,7 @@ activate it for individual modes.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-;;;  (yas-global-mode 1)
+  (yas-global-mode nil)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
