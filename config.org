@@ -3071,7 +3071,6 @@ Things to Drop:
 
 #+BEGIN_SRC emacs-lisp
   (push "~/.emacs.d/lisp/org-cliplink" load-path)
-;;;  (require 'org-cliplink)
   (use-package org-cliplink)
 #+END_SRC
 
