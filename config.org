@@ -3673,6 +3673,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
     '( ; file(s) to look inside of                  ; destination headings
 
       ("~/.emacs.d/config.org" :tag . "REFILETARGETS")
+        ;; not really for refiling -to- but for jumping to easily
 
       ("~/Dropbox/Documents/AboutMyBlog.org" :tag . "REFILING")
         ;; Blog Idea
