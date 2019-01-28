@@ -3090,7 +3090,6 @@ Things to Drop:
 #+BEGIN_SRC emacs-lisp
 #+END_SRC
 
-
 ***** TODO Cool Quote to Remember (personal, zeomega)
  - %u  :: inactive datestamp when quote was captured
  - %i  :: region selected when capture is called
