@@ -3663,8 +3663,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 ***** Emacs Refiling Targets
 
-
-
+-          C-c C-w  :: offer a picklist and refile the headline(s)
+-     C-u  C-c C-w  :: offer a picklist and jump to where you would refile this
+- C-u C-u  C-c C-w  :: just jump to where the last refiling was stored
+-     C-0  C-c C-w  :: clear the refiling target cache
 
 #+BEGIN_SRC emacs-lisp
   (setq org-refile-targets
