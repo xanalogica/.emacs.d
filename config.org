@@ -3714,7 +3714,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
     )
   )
 
-  (setq org-refile-use-outline-path nil)  ; Do NOT sdShow full filepaths for refiling
+  (setq org-refile-use-outline-path nil)  ; Do NOT show full filepaths for refiling
   (setq org-outline-path-complete-in-steps nil)  ; Refile in a single go
   (setq org-refile-allow-creating-parent-nodes 'confirm)
 
