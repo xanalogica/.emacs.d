@@ -3055,7 +3055,6 @@ Things that should be in one place are:
     - zm  All Management Meeting
     - zt  Sr. Mgmt client focused
 
-
 Things to Drop:
   - zc  (C-Suite Mgmt Meeting)
   - j   a dated journale entry
