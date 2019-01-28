@@ -3663,7 +3663,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 **** Emacs Refiling Targets
 
-
 #+BEGIN_SRC emacs-lisp
   (setq org-refile-targets
     '( ; file(s) to look inside of                  ; destination headings
