@@ -3682,6 +3682,12 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
       ("~/.emacs.d/config.org" :tag . "REFILETARGETS")
         ;; not really for refiling -to- but for jumping to easily
+      ("~/.emacs.d/config.org" :tag . "CAPTURETARGETS")
+
+
+***** Emacs Capture Templates and Targets                                   :CAPTURETARGETS:
+
+
 
       ("~/Dropbox/Documents/AboutMyBlog.org" :tag . "REFILING")
         ;; Blog Idea
