@@ -3311,7 +3311,7 @@ org-refile-targets
 - C-c C-w  :: org-refile
 - C-u C-c C-w  :: jump to a heading
 
-****** Emacs Capture Templates and Targets :CAPTURETARGETS:
+****** Emacs Capture Templates and Targets                                 :CAPTURETARGETS:
 
 #+BEGIN_SRC emacs-lisp :noweb yes
   (setq org-capture-templates
