@@ -3313,7 +3313,6 @@ org-refile-targets
 
 ****** Emacs Capture Templates and Targets
 
-
 #+BEGIN_SRC emacs-lisp :noweb yes
   (setq org-capture-templates
     '(
