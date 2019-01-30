@@ -4554,15 +4554,15 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (setq groups/zeomega-scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
       (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
-      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
-      (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
-      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
-      (:name "Corporate Events" :and (:tag "EVENT" "ZEOMEGA"))
-      (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
-      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
-      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
-      (:name "To Continually Learn New Things" :and (:tag "STUDY" :tag "ZEOMEGA"))
-      (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
+;;      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
+;;      (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
+;;      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
+;;      (:name "Corporate Events" :and (:tag "EVENT" "ZEOMEGA"))
+;;      (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
+;;      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
+;;      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
+;;      (:name "To Continually Learn New Things" :and (:tag "STUDY" :tag "ZEOMEGA"))
+;;      (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
     )
