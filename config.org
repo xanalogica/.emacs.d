@@ -4555,7 +4555,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     '(
       (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
       (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
-      (:name "To Not Worry about Money" :and (:tag "FINANCE" :tag "ZEOMEGA"))
+      (:name "Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
       (:name "To Take Care of Life's Little Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
       (:name "To Experience Life's Magic" :and (:tag "EVENT" "ZEOMEGA"))
       (:name "To Explore the World" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
