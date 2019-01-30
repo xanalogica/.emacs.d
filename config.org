@@ -4345,7 +4345,7 @@ types:
        )
 
        ("zd" "Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
+         "+TAGS=ZEOMEGA"  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
            (org-super-agenda-groups groups/zeomega-tech-directions)
