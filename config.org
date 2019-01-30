@@ -4481,6 +4481,8 @@ list of items, usually for the daily/weekly agenda, made by the
 
 ****** Segmented View for "Scheduled Tasks"
 
+This agenda view represents "things I have scheduled to get done"
+
 #+BEGIN_SRC emacs-lisp
   (setq groups/scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
