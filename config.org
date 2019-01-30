@@ -4528,6 +4528,36 @@ org-tags-view, org-todo-list, org-search-view, etc.
   )
 #+END_SRC
 
+****** Segmented View for "Scheduled Tasks"
+
+This agenda view represents "things I have scheduled to get done, either
+because they have a DEADLINE, or because they are tagged :HOT: meaning I need
+to work on them *today*.
+
+The primary use of this package is for the daily/weekly agenda, made by the
+org-agenda-list command, but it also works for other agenda views, like
+org-tags-view, org-todo-list, org-search-view, etc.
+
+#+BEGIN_SRC emacs-lisp
+  (setq groups/scheduled-tasks  ;; presentation definition using org-super-agenda
+    '(
+      (:name "Tasks Scheduled for TODAY" :tag "HOT")
+      (:name "Maintain Physical and Mental Health" :tag "HEALTH")
+      (:name "To Not Worry about Money" :tag "FINANCE")
+      (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
+      (:name "To Take Care of Life's Little Chores" :tag "CHORE")
+      (:name "To Experience Life's Magic" :tag "EVENT")
+      (:name "To Explore the World" :tag "TRAVEL")
+      (:name "To Stay in Touch with Others" :tag "PEOPLE")
+      (:name "To Share My Knowledge with Others" :tag "WRITING")
+      (:name "To Continually Learn New Things" :tag "STUDY")
+
+      ;; After the last group, the agenda will display items that didn't
+      ;; match any of these groups, with the default order position of 99
+    )
+  )
+#+END_SRC
+
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
