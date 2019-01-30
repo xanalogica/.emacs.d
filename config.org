@@ -4586,7 +4586,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     '(
 ;;      (:children t)
 ;;      (:auto-parent t)
-;;      (:auto-property "DIRECTION")
+      (:auto-property "DIRECTION")
 ;;      (:auto-todo t)
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
 ;;      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
