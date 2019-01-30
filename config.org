@@ -4334,7 +4334,7 @@ types:
          "+ALLTAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Technology Directions")
-           (org-super-agenda-groups groups/zeomega-tech-directions)
+;;           (org-super-agenda-groups groups/zeomega-tech-directions)
 
            (org-agenda-prefix-format "  ")  ;; remove Category
            (org-agenda-remove-tags t)
