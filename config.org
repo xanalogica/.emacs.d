@@ -4358,23 +4358,6 @@ types:
          )
          ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
-
-
-
-
-       ("zd" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
-         "+TechDirection-NOAGENDA=1"  ;; entry match-expression[4]
-;;         "+TAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
-         ( ;; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Technology Directions")
-           (org-super-agenda-groups groups/zeomega-tech-directions)
-
-           (org-agenda-prefix-format "  ")  ;; remove Category
-           (org-agenda-remove-tags t)
-;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
-         )
-         ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
-       )
     )
   )
 #+END_SRC
