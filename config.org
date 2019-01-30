@@ -4167,8 +4167,6 @@ F Captured Info Needing Filing
     60)	; The default number of days displayed in the Agenda view.
   (setq org-deadline-warning-days
     60)	; show deadlines when due within next 60-days in Agenda and sparse views
-  (setq org-agenda-span
-    30)
   (setq org-agenda-show-all-dates
     t)
   (setq org-agenda-with-colors
