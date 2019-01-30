@@ -4483,7 +4483,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
 This agenda view represents "things I have scheduled to get done, either
 because they have a DEADLINE, or because they are tagged :HOT: meaning I need
-to work on them today.
+to work on them *today*.
 
 #+BEGIN_SRC emacs-lisp
   (setq groups/scheduled-tasks  ;; presentation definition using org-super-agenda
