@@ -4330,13 +4330,6 @@ types:
          ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
 
-
-
-
-
-groups/zeomega-scheduled-tasks
-
-
        ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+ALLTAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
