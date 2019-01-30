@@ -4549,7 +4549,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "To Experience Life's Magic" :tag ("EVENT" "ZEOMEGA"))
       (:name "To Explore the World" :tag ("TRAVEL" "ZEOMEGA"))
       (:name "To Stay in Touch with Others" :tag ("PEOPLE" "ZEOMEGA"))
-      (:name "To Share My Knowledge with Others" :tag "WRITING")
+      (:name "To Share My Knowledge with Others" :tag ("WRITING" "ZEOMEGA"))
       (:name "To Continually Learn New Things" :tag "STUDY")
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
