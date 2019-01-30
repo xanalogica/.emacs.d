@@ -4563,7 +4563,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ;;      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
 ;;      (:name "To Continually Learn New Things" :and (:tag "STUDY" :tag "ZEOMEGA"))
       (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
-      (:name "Discard Pile" :anything :discard)
+      (:name "Discard Pile" :discard (:anything t))
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
     )
