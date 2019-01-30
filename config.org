@@ -4585,7 +4585,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (setq groups/zeomega-tech-directions  ;; presentation definition using org-super-agenda
     '(
 ;;      (:children t)
-      (:auto-parent t)
+;;      (:auto-parent t)
 ;;      (:auto-property "DIRECTION")
 ;;      (:auto-todo t)
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
