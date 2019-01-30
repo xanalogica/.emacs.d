@@ -4542,7 +4542,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (setq groups/zeomega-scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
       (:name "Tasks Scheduled for TODAY" :tag ("HOT" "ZEOMEGA"))
-      (:name "Maintain Physical and Mental Health" :tag "HEALTH")
+      (:name "Maintain Physical and Mental Health" :tag ("HEALTH" "ZEOMEGA"))
       (:name "To Not Worry about Money" :tag ("FINANCE" "ZEOMEGA"))
       (:name "To Take Care of Life's Little Chores" :tag ("CHORE" "ZEOMEGA"))
       (:name "To Experience Life's Magic" :tag ("EVENT" "ZEOMEGA"))
