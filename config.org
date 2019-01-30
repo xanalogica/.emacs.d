@@ -4554,7 +4554,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (setq groups/zeomega-scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
       (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
-;;      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
+      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
 ;;      (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
 ;;      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
 ;;      (:name "Corporate Events" :and (:tag "EVENT" "ZEOMEGA"))
