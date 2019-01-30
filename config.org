@@ -4318,6 +4318,25 @@ types:
          ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
        )
 
+       ("zP" "Agenda for Current Period" agenda  ;; key[1] desc[2] type[3]
+         nil  ;; entry match-expression[4]
+         ( ; [5] list of settings local to this custom agenda view
+           (org-agenda-overriding-header "Agenda for Each Day")
+           (org-super-agenda-groups groups/scheduled-tasks)
+
+           (org-agenda-remove-tags t)
+           (org-agenda-span 14)         ;; show me 14-days at a time
+         )
+         ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
+       )
+
+
+
+
+
+groups/zeomega-scheduled-tasks
+
+
        ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+ALLTAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
