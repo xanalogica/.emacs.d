@@ -4600,17 +4600,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
   )
 #+END_SRC
 
-
-
-
-
-           (org-super-agenda-groups groups/zeomega-tech-directions)
-
-
-
-
-
-
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
