@@ -4570,7 +4570,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
   )
 #+END_SRC
 
-****** Segmented View for "ZeOmega Scheduled Tasks"
+****** Segmented View for "ZeOmega Technology Directions"
 
 This agenda view represents "things I have scheduled to get done, either
 because they have a DEADLINE, or because they are tagged :HOT: meaning I need
