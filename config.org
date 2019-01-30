@@ -4164,9 +4164,9 @@ F Captured Info Needing Filing
 
 #+BEGIN_SRC emacs-lisp :exports code
   (setq org-agenda-span
-    60)	; The default number of days displayed in the Agenda view.
+    60)	;; The default number of days displayed in the Agenda view.
   (setq org-deadline-warning-days
-    60)	; show deadlines when due within next 60-days in Agenda and sparse views
+    60)	;; show deadlines when due within next 60-days in Agenda and sparse views
   (setq org-agenda-show-all-dates
     t)
   (setq org-agenda-with-colors
