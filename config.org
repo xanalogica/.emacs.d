@@ -4348,7 +4348,8 @@ types:
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
-           (org-super-agenda-groups groups/backlog-tasks)
+           (org-super-agenda-groups groups/zeomega-tech-directions)
+;;           (org-super-agenda-groups groups/backlog-tasks)
 
            (org-agenda-remove-tags t)
 
