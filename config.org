@@ -4541,7 +4541,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 #+BEGIN_SRC emacs-lisp
   (setq groups/zeomega-scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
-      (:name "Tasks Scheduled for TODAY" :tag "HOT")
+      (:name "Tasks Scheduled for TODAY" :tag ("HOT" "ZEOMEGA"))
       (:name "Maintain Physical and Mental Health" :tag "HEALTH")
       (:name "To Not Worry about Money" :tag "FINANCE")
       (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
