@@ -4485,6 +4485,10 @@ This agenda view represents "things I have scheduled to get done, either
 because they have a DEADLINE, or because they are tagged :HOT: meaning I need
 to work on them *today*.
 
+The primary use of this package is for the daily/weekly agenda, made by the
+org-agenda-list command, but it also works for other agenda views, like
+org-tags-view, org-todo-list, org-search-view, etc.
+
 #+BEGIN_SRC emacs-lisp
   (setq groups/scheduled-tasks  ;; presentation definition using org-super-agenda
     '(
