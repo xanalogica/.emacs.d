@@ -4331,7 +4331,7 @@ types:
        )
 
        ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
-         "+ALLTAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
+         "+TAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Technology Directions")
 ;;           (org-super-agenda-groups groups/zeomega-tech-directions)
