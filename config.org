@@ -4558,11 +4558,11 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
       (:name "Work Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
       (:name "Corporate Events" :and (:tag "EVENT" "ZEOMEGA"))
-      (:name "To Explore the World" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
-      (:name "To Stay in Touch with Others" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
-      (:name "To Share My Knowledge with Others" :and (:tag "WRITING" :tag "ZEOMEGA"))
+      (:name "Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
+      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
       (:name "To Continually Learn New Things" :and (:tag "STUDY" :tag "ZEOMEGA"))
-      (:name "To Have a Fantastic Career" :tag "ZEOMEGA")
+      (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
     )
