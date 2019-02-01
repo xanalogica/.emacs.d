@@ -5617,6 +5617,13 @@ bbdb:S.*Allen
 ** Function to Display a Refiling Target
 
 #+BEGIN_SRC emacs-lisp
+  (defun jeff/notion-help() (interactive)
+    "Present Notion Quick Reference"
+
+    (if (file-exists-p "~/.emacs.d/init.el")
+        (load-file "~/.emacs.d/init.el"))
+  )
+  
   (org-refile 4)
 #+END_SRC
 
