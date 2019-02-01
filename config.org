@@ -5631,7 +5631,7 @@ bbdb:S.*Allen
           )
         )
       )
-      (org-refile 4 nil "Notion Window Manager")
+      (org-refile 4 nil (list headline file nil pos)
     )
   )
   (jeff/notion-help)
