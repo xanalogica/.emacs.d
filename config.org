@@ -5620,19 +5620,19 @@ bbdb:S.*Allen
   (defun jeff/notion-help ()
     "Present My Notion Quick Reference"
 
-    (let*
-      (
-        (file "~/Dropbox/Documents/Technology.org")
-        (headline "Notion Quick Reference")
-        (pos
-          (save-excursion
-            (find-file file)
-            (org-find-exact-headline-in-buffer headline)
-          )
-        )
-      )
-      (org-refile 4 nil (list headline file nil pos))
-    )
+;;    (let*
+;;      (
+;;        (file "~/Dropbox/Documents/Technology.org")
+;;        (headline "Notion Quick Reference")
+;;        (pos
+;;          (save-excursion
+;;            (find-file file)
+;;            (org-find-exact-headline-in-buffer headline)
+;;          )
+;;        )
+;;      )
+;;      (org-refile 4 nil (list headline file nil pos))
+;;    )
   )
 #+END_SRC
 
