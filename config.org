@@ -5620,7 +5620,7 @@ bbdb:S.*Allen
   (defun jeff/notion-help (file headline) (interactive)
     "Present My Notion Quick Reference"
 
-;;    (load-file "~/.emacs.d/init.el"))
+;;    (load-file "~/.emacs.d/init.el")
 
     (let
       (
