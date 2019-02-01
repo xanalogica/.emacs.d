@@ -5618,7 +5618,7 @@ bbdb:S.*Allen
 
 #+BEGIN_SRC emacs-lisp
   (defun jeff/notion-help() (interactive)
-    "Present Notion Quick Reference"
+    "Present My Notion Quick Reference"
 
     (if (file-exists-p "~/.emacs.d/init.el")
         (load-file "~/.emacs.d/init.el"))
