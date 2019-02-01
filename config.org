@@ -5624,6 +5624,9 @@ bbdb:S.*Allen
 
     (let
       (
+        (pos
+          (save-excursion
+            (find-file "~/Dropbox/Document/Technology.org")
       )
     )
 
