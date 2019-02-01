@@ -5621,7 +5621,7 @@ bbdb:S.*Allen
     "Present My Notion Quick Reference"
     (interactive)
 
-    (let
+    (let*
       (
         (file "~/Dropbox/Documents/Technology.org")
         (headline "Notion Quick Reference")
