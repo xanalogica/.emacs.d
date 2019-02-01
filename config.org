@@ -5627,7 +5627,10 @@ bbdb:S.*Allen
         (pos
           (save-excursion
             (find-file "~/Dropbox/Documents/Technology.org")
+            (org-find-exact-headline-in-buffer "Notion Quick Reference")
+          )
       )
+
     )
 
     (org-refile 4 nil "Notion Window Manager")
