@@ -5629,6 +5629,7 @@ bbdb:S.*Allen
             (find-file "~/Dropbox/Documents/Technology.org")
             (org-find-exact-headline-in-buffer "Notion Quick Reference")
           )
+        )
       )
 
     )
