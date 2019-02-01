@@ -5616,8 +5616,9 @@ bbdb:S.*Allen
 
 ** Function to Display a Refiling Target
 
-
-
+#+BEGIN_SRC emacs-lisp
+  (org-refile 4)
+#+END_SRC
 
 * Just Notes, No Configuration
 ;;;
