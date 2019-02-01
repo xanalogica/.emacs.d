@@ -3999,7 +3999,7 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (use-package org-collector
-  )
+;;;  )
 #+END_SRC
 
     :load-path "~/.emacs.d/lisp/orgnav/" ;; use my Git checkout
