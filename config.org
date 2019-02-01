@@ -5624,6 +5624,7 @@ bbdb:S.*Allen
     (let
       (
         (file "~/Dropbox/Documents/Technology.org")
+        (headline "Notion Quick Reference")
         (pos
           (save-excursion
             (find-file file)
@@ -5634,7 +5635,7 @@ bbdb:S.*Allen
       (org-refile 4 nil (list headline file nil pos))
     )
   )
-  (jeff/notion-help  "Notion Quick Reference")
+  (jeff/notion-help  )
 #+END_SRC
 
 * Just Notes, No Configuration
