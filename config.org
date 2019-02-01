@@ -5617,8 +5617,9 @@ bbdb:S.*Allen
 ** Function to Display a Refiling Target
 
 #+BEGIN_SRC emacs-lisp
-  (defun jeff/notion-help (file headline) (interactive)
+  (defun jeff/notion-help (file headline)
     "Present My Notion Quick Reference"
+    (interactive)
 
     (let
       (
