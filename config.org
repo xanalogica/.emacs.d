@@ -5621,9 +5621,8 @@ bbdb:S.*Allen
     "Present My Notion Quick Reference"
 
     (load-file "~/.emacs.d/init.el"))
+    (org-refile 4)
   )
-  
-  (org-refile 4)
 #+END_SRC
 
 * Just Notes, No Configuration
