@@ -5626,7 +5626,7 @@ bbdb:S.*Allen
       (
         (pos
           (save-excursion
-            (find-file "~/Dropbox/Documents/Technology.org")
+            (find-file file)
             (org-find-exact-headline-in-buffer "Notion Quick Reference")
           )
         )
@@ -5634,7 +5634,7 @@ bbdb:S.*Allen
       (org-refile 4 nil (list headline file nil pos)
     )
   )
-  (jeff/notion-help)
+  (jeff/notion-help ""~/Dropbox/Documents/Technology.org"")
 #+END_SRC
 
 * Just Notes, No Configuration
