@@ -5619,7 +5619,6 @@ bbdb:S.*Allen
 #+BEGIN_SRC emacs-lisp
   (defun jeff/notion-help ()
     "Present My Notion Quick Reference"
-    (interactive)
 
     (let*
       (
