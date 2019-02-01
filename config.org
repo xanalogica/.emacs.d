@@ -5635,7 +5635,6 @@ bbdb:S.*Allen
       (org-refile 4 nil (list headline file nil pos))
     )
   )
-  (jeff/notion-help  )
 #+END_SRC
 
 * Just Notes, No Configuration
