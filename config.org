@@ -5627,14 +5627,14 @@ bbdb:S.*Allen
         (pos
           (save-excursion
             (find-file file)
-            (org-find-exact-headline-in-buffer "Notion Quick Reference")
+            (org-find-exact-headline-in-buffer headline)
           )
         )
       )
       (org-refile 4 nil (list headline file nil pos)
     )
   )
-  (jeff/notion-help "~/Dropbox/Documents/Technology.org")
+  (jeff/notion-help "~/Dropbox/Documents/Technology.org""Notion Quick Reference")
 #+END_SRC
 
 * Just Notes, No Configuration
