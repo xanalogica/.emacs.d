@@ -5631,10 +5631,8 @@ bbdb:S.*Allen
           )
         )
       )
-
+      (org-refile 4 nil "Notion Window Manager")
     )
-
-    (org-refile 4 nil "Notion Window Manager")
   )
   (jeff/notion-help)
 #+END_SRC
