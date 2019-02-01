@@ -5634,7 +5634,7 @@ bbdb:S.*Allen
       (org-refile 4 nil (list headline file nil pos)
     )
   )
-  (jeff/notion-help "~/Dropbox/Documents/Technology.org""Notion Quick Reference")
+  (jeff/notion-help "~/Dropbox/Documents/Technology.org" "Notion Quick Reference")
 #+END_SRC
 
 * Just Notes, No Configuration
