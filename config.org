@@ -4265,7 +4265,7 @@ types:
        ("za" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Agenda for Each Day")
+           (org-agenda-overriding-header "ZeOmega Agenda for Each Day")
            (org-super-agenda-groups groups/zeomega-scheduled-tasks)
 
            (org-agenda-remove-tags t)
