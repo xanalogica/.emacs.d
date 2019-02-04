@@ -4240,7 +4240,8 @@ F Captured Info Needing Filing
 
 #+END_SRC
 
-***** My Custom Org-Agenda Views (defined on C-c a <KEY>)
+***** Emacs Agenda Definitions :REFILETARGETS:
+(defined on C-c a <KEY>)
 
 types:
  - agenda     - scheduled tasks
