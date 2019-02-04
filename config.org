@@ -3684,7 +3684,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; not really for refiling -to- but for jumping to easily
       ("~/.emacs.d/config.org" :tag . "CAPTURETARGETS")
         ;; not really for refiling -to- but for jumping to easily
-      ("~/.emacs.d/config.org" :tag . "AGENDADEFN")
+      ("~/.emacs.d/config.org" :tag . "AGENDADEFS")
         ;; not really for refiling -to- but for jumping to easily
 
       ("~/Dropbox/Documents/AboutMyBlog.org" :tag . "REFILING")
