@@ -4375,7 +4375,7 @@ types:
 ;;;           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
 ;;;           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
          )
-         ("/tmp/ZeOmega BacklogTasks.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/ZeOmegaBacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
     )
   )
