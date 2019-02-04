@@ -4284,7 +4284,7 @@ types:
            (org-agenda-remove-tags t)
            (org-agenda-span 14)         ;; show me 14-days at a time
          )
-         ("/tmp/ScheduledTasks.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
 
        ("B" "Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
