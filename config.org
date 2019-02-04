@@ -4242,7 +4242,7 @@ F Captured Info Needing Filing
 
 #+END_SRC
 
-***** Emacs Agenda Definitions                                              :REFILETARGETS:
+***** Emacs Agenda Definitions (~/.emacs.d/config.org)                      :REFILE-DEFS:
 (defined on C-c a <KEY>)
 
 types:
