@@ -4260,7 +4260,7 @@ types:
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
     '(
-       ("F" "Captured Items Needing Filing" tags  ;; key[1] desc[2] type[3]
+       ("F" "Find :UNFILED: entries" tags  ;; key[1] desc[2] type[3]
          "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Captured Items Needing Filing")
