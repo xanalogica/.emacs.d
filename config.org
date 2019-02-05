@@ -4600,7 +4600,7 @@ org-agenda-list command, but it also works for other agenda views, like
 org-tags-view, org-todo-list, org-search-view, etc.
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/zeomega-tech-directions  ;; presentation definition using org-super-agenda
+  (setq groups/zeomega-tech-directions  ;; presentation defn using org-super-agenda
     '(
 ;;      (:children t)
 ;;      (:auto-parent t)
