@@ -4543,7 +4543,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ****** Segmented View for "Shopping List(s)"
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/shopping-lists  ;; presentation definition using org-super-agenda
+  (setq groups/shopping-lists  ;; presentation defn using org-super-agenda
     '(
        (:name "Technology Items"
         :tag "TECH"  ;; for shopping at Fry's Electronics, etc.
