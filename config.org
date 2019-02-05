@@ -4260,20 +4260,6 @@ types:
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
     '(
-       ("B" "Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
-         ( ; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Backlog of Unscheduled Tasks")
-           (org-super-agenda-groups groups/backlog-tasks)
-
-           (org-agenda-remove-tags t)
-
-;;;           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
-;;;           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
-         )
-         ("/tmp/BacklogTasks.pdf")  ;; file(s)-to-export[6]
-       )
-
        ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
