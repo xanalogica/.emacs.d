@@ -4482,7 +4482,7 @@ list of items, usually for the daily/weekly agenda, made by the
 ****** Segmented View for "Personal Backlog (Unscheduled) Tasks"
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/persona-backlog-tasks  ;; presentation defn using org-super-agenda
+  (setq groups/personal-backlog-tasks  ;; presentation defn using org-super-agenda
     '(
        (:discard (:scheduled t :deadline t))  ;; skip task that ARE scheduled
        (:name "Unplanned Shopping" :tag "SHOP")
