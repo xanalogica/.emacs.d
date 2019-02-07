@@ -4642,6 +4642,10 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (
         (value (org-entry-get pom property))
         (values (and value (split-string value)))
+      )
+      (mapcar #'org-entry-restore-space values)
+    )
+  )
 
 
 ;;        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
