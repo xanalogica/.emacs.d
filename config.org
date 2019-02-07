@@ -4653,7 +4653,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
               value
               ";"        ;; separator
               t          ;; omit nulls
-              "[ ]+"      ;; trimming RE
+              "[ ]+"     ;; trimming RE
             )
           )
         )
