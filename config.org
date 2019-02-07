@@ -4649,7 +4649,9 @@ org-tags-view, org-todo-list, org-search-view, etc.
         )
         (values
           (and value
-            (split-string value)
+            (split-string
+              value
+            )
           )
         )
         (values (mapcar #'org-entry-restore-space values))
