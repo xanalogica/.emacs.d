@@ -4604,7 +4604,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     '(
 ;;      (:children t)
 ;;      (:auto-parent t)
-      (:auto-map jeff--map-by-direction)
+      (:auto-map jeff--auto-group-by-direction)
 ;;      (:auto-property "DIRECTION")
 ;;      (:auto-todo t)
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
