@@ -4644,7 +4644,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
         (value
           (org-entry-get
             marker
-            property
+            "Direction"
           )
         )
         (values (and value (split-string value)))
