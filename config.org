@@ -4633,7 +4633,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-  (defun jeff-map-by-direction (item)
+  (defun jeff--map-by-direction (item)
     (-when-let*
       (
         (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
