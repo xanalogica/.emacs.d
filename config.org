@@ -4605,13 +4605,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ;;      (:children t)
 ;;      (:auto-parent t)
       (:auto-map jeff--map-by-direction)
-
-
-(let ((org-super-agenda-groups
-       '((:auto-map org-super-agenda--dir-name))))
-  (org-agenda-list))
-
-
 ;;      (:auto-property "DIRECTION")
 ;;      (:auto-todo t)
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
