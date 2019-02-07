@@ -4651,6 +4651,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
           (and value
             (split-string
               value
+              ";"
             )
           )
         )
