@@ -4629,9 +4629,12 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (
     (org-super-agenda-groups
       '(
-        (:auto-map (lambda (item)
-                      (-when-let* ((marker (or (get-text-property 0 'org-marker item)
-                                               (get-text-property 0 'org-hd-marker item)))
+        (:auto-map
+          (lambda (item)
+            (-when-let* (
+              (marker (or (get-text-property 0 'org-marker item)
+              (get-text-property 0 'org-hd-marker item))
+              )
                                    (file-path (->> marker marker-buffer buffer-file-name))
                                    (directory-name (->> file-path file-name-directory directory-file-name file-name-nondirectory)))
                         (concat "Directory: " directory-name)))))))
