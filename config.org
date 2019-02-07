@@ -4640,7 +4640,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
               (concat "Directory: " directory-name)
             )
-          )
+          ) ;; end of lambda
 )
 )
 )
