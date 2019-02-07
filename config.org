@@ -4638,7 +4638,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
   ) ;; end of lambda
 
 org-entry-get
-
+org-entry-get-multivalued-property
 
 ;;  :key-form (org-entry-get (org-super-agenda--get-marker item)
 ;;                           (car args)
