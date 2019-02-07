@@ -4637,7 +4637,16 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   ) ;; end of lambda
 
-
+  (defun XXjeff--auto-group-by-direction (item)
+    (-when-let*
+      (
+        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
+        (file-path (->> marker marker-buffer buffer-file-name))
+        (directory-name (->> file-path file-name-directory directory-file-name file-name-nondirectory))
+      )
+      (concat "Directory: " directory-name)
+    )
+  ) ;; end of lambda
 
 #+END_SRC
 
