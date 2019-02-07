@@ -4640,6 +4640,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (defun jeff--auto-group-by-direction (item)
     (-when-let*
       (
+        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
         (value (org-entry-get pom property))
         (values (and value (split-string value)))
         (values (mapcar #'org-entry-restore-space values))
@@ -4649,7 +4650,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
   )
 
 
-;;        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
 ;;        (file-path (->> marker marker-buffer buffer-file-name))
 ;;        (directory-name (->> file-path file-name-directory directory-file-name file-name-nondirectory))
       )
