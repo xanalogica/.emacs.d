@@ -4634,7 +4634,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
             (-when-let* (
               (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item))
               )
-                                   (file-path (->> marker marker-buffer buffer-file-name))
+              (file-path (->> marker marker-buffer buffer-file-name))
                                    (directory-name (->> file-path file-name-directory directory-file-name file-name-nondirectory)))
                         (concat "Directory: " directory-name)))))))
   (org-agenda-list))
