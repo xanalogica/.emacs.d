@@ -4640,8 +4640,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (defun jeff--auto-group-by-direction (item)
     (-when-let*
       (
-        (old (org-entry-get pom property))
-        (values (and old (split-string old)))
+        (value (org-entry-get pom property))
+        (values (and value (split-string value)))
 
 
 ;;        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
