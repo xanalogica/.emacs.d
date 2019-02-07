@@ -4604,7 +4604,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     '(
 ;;      (:children t)
 ;;      (:auto-parent t)
-      (:auto-map jeff-map-by-direction)
+      (:auto-map jeff--map-by-direction)
 
 
 (let ((org-super-agenda-groups
