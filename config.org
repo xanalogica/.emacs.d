@@ -4625,7 +4625,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-  (lambda (item)
+  (defun jeff-map-by-direction (item)
     (-when-let*
       (
         (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
@@ -4635,17 +4635,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (concat "Directory: " directory-name)
     )
   ) ;; end of lambda
-
-(let
-  (
-    (org-super-agenda-groups
-      '(
-        (:auto-map
-        )
-      )
-    )
-  )
-  (org-agenda-list))
 
 #+END_SRC
 
