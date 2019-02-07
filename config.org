@@ -4637,6 +4637,9 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   ) ;; end of lambda
 
+org-entry-get
+
+
 ;;  :key-form (org-entry-get (org-super-agenda--get-marker item)
 ;;                           (car args)
 ;;                           org-super-agenda-properties-inherit)
