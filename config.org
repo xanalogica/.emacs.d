@@ -4625,11 +4625,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-(let
-  (
-    (org-super-agenda-groups
-      '(
-        (:auto-map
           (lambda (item)
             (-when-let*
               (
@@ -4641,6 +4636,15 @@ org-tags-view, org-todo-list, org-search-view, etc.
               (concat "Directory: " directory-name)
             )
           ) ;; end of lambda
+
+
+
+
+(let
+  (
+    (org-super-agenda-groups
+      '(
+        (:auto-map
         )
       )
     )
