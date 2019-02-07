@@ -4637,6 +4637,13 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   ) ;; end of lambda
 
+;;  :key-form (org-entry-get (org-super-agenda--get-marker item)
+;;                           (car args)
+;;                           org-super-agenda-properties-inherit)
+;;  :header-form (format "%s: %s" (car args) key))
+
+
+
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
