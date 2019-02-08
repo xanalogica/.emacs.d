@@ -4716,7 +4716,10 @@ named for each DIRECTION value.
           (while directions
             (setq direction (pop directions))
 
-            (ht-set! groups value (cons item (ht-get groups value)))
+            (ht-set!
+              groups
+              direction
+              (cons item (ht-get groups value)))
           )
         )
         (push item non-matching)  ;; else no DIRECTION property
