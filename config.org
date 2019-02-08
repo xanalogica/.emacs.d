@@ -4666,10 +4666,12 @@ org-tags-view, org-todo-list, org-search-view, etc.
         )
       )
 
+      (values (mapcar #'org-entry-restore-space values))
+
+
 
     (-when-let*
       (
-        (values (mapcar #'org-entry-restore-space values))
       )
       (format "Direction: %s" (car values))
 
