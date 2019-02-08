@@ -4627,42 +4627,42 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-  (defun XXjeff--auto-group-by-direction (item)
-    (-when-let*
-      (
-        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
-        (file-path (->> marker marker-buffer buffer-file-name))
-        (directory-name (->> file-path file-name-directory directory-file-name file-name-nondirectory))
-      )
-      (concat "Directory: " directory-name)
-    )
-  ) ;; end of lambda
+;;  (defun XXjeff--auto-group-by-direction (item)
+;;    (-when-let*
+;;      (
+;;        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
+;;        (file-path (->> marker marker-buffer buffer-file-name))
+;;        (directory-name (->> file-path file-name-directory directory-file-name file-name-nondirectory))
+;;      )
+;;      (concat "Directory: " directory-name)
+;;    )
+;;  ) ;; end of lambda
 
-  (defun YYjeff--auto-group-by-direction (item)
-    (-when-let*
-      (
-        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
-        (value
-          (org-entry-get
-            marker
-            "DIRECTION"
-          )
-        )
-        (values
-          (and value
-            (split-string
-              value
-              ";"        ;; separator
-              t          ;; omit nulls
-              "[ ]+"     ;; trimming RE
-            )
-          )
-        )
-        (values (mapcar #'org-entry-restore-space values))
-      )
-      (format "Direction: %s" (car values))
-    )
-  )
+;;  (defun YYjeff--auto-group-by-direction (item)
+;;    (-when-let*
+;;      (
+;;        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
+;;        (value
+;;          (org-entry-get
+;;            marker
+;;            "DIRECTION"
+;;          )
+;;        )
+;;        (values
+;;          (and value
+;;            (split-string
+;;              value
+;;              ";"        ;; separator
+;;              t          ;; omit nulls
+;;              "[ ]+"     ;; trimming RE
+;;            )
+;;          )
+;;        )
+;;        (values (mapcar #'org-entry-restore-space values))
+;;      )
+;;      (format "Direction: %s" (car values))
+;;    )
+;;  )
 
 
 ;;        (file-path (->> marker marker-buffer buffer-file-name))
@@ -4753,8 +4753,6 @@ named for each DIRECTION value.
   (add-to-list
     'org-super-agenda-auto-selector-keywords ':auto-direction)
 #+END_SRC
-
-
 
 
 (org-super-agenda--group-items )
