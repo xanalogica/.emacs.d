@@ -4741,7 +4741,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 Define a new auto-grouping keyword/function for Org-Super-Agenda called
 :auto-direction, that examines the multi-valued property DIRECTION of each
-agenda item and *copies* that item under a distinct agenda heading
+agenda item and *copies* that item under each distinct agenda heading
+named for each DIRECTION value.
 
 #+BEGIN_SRC emacs-lisp
   ;; keyword is 'auto-direction
