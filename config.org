@@ -4674,7 +4674,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
         (ht-set! groups value (cons item (ht-get groups value)))
       )
 
-
 ;;    (-when-let*
 ;;      (
 ;;      )
