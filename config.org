@@ -4640,7 +4640,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     "Divide ALL-ITEMS into groups based on their DIRECTION property."
 
     (setq non-matching nil)
-      (setq groups (ht-create))
+    (setq groups (ht-create))
     (while all-items
       (setq item (pop all-items))
 
