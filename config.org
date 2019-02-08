@@ -4670,10 +4670,10 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 
 
-    (-when-let*
-      (
-      )
-      (format "Direction: %s" (car values))
+;;    (-when-let*
+;;      (
+;;      )
+;;      (format "Direction: %s" (car values))
 
 
 
