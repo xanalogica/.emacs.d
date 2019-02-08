@@ -4627,15 +4627,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-  ;; keyword is 'auto-direction
-
-  (setq org-super-agenda-group-types
-    (plist-put org-super-agenda-group-types
-      ':auto-direction
-      'jeff--auto-group-by-direction
-    )
-  )
-
   (defun jeff--auto-group-by-direction (all-items &rest args)
     "Divide ALL-ITEMS into groups based on their DIRECTION property."
 
@@ -4749,6 +4740,15 @@ org-tags-view, org-todo-list, org-search-view, etc.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+  ;; keyword is 'auto-direction
+
+  (setq org-super-agenda-group-types
+    (plist-put org-super-agenda-group-types
+      ':auto-direction
+      'jeff--auto-group-by-direction
+    )
+  )
+
 
 #+END_SRC
 
