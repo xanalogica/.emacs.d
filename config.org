@@ -4709,7 +4709,8 @@ named for each DIRECTION value.
             )
           )
           (directions values
-            (mapcar #'org-entry-restore-space directions))
+            (mapcar #'org-entry-restore-space directions)
+          )
 
       (while values
         (setq value (pop values))
