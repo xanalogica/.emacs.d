@@ -4673,6 +4673,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 #+END_SRC
 
+(org-super-agenda--group-items )
+
 (setq org-super-agenda-unmatched-name "Other items")
 
 
