@@ -4715,9 +4715,6 @@ named for each DIRECTION value.
         )
         (push item non-matching)  ;; else no DIRECTION property
       )
-
-;;      (format "Direction: %s" (car values))
-
     )
 
     (setq ngroups nil)
