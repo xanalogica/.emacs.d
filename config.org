@@ -4713,16 +4713,11 @@ named for each DIRECTION value.
               (mapcar #'org-entry-restore-space directions)
             )
           )
+          (while values
+            (setq value (pop values))
 
-      (while values
-        (setq value (pop values))
-
-        (ht-set! groups value (cons item (ht-get groups value)))
-      )
-
-
-
-
+            (ht-set! groups value (cons item (ht-get groups value)))
+          )
 
         )
         (push item non-matching)
