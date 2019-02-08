@@ -4668,6 +4668,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
       (setq values (mapcar #'org-entry-restore-space values))
 
+      (while values
+      )
 
 
 ;;    (-when-let*
