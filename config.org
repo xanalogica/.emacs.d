@@ -4646,7 +4646,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (push item non-matching)
     )
 
-    (list ':auto-direction all-items)
+    (list ':auto-direction non-matching)
 
   )
 
