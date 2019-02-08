@@ -4641,6 +4641,9 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
     (setq non-matching nil)
     (while all-items
+      (setq item (pop all-items))
+
+
     )
 
 
