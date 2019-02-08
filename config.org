@@ -4682,7 +4682,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (push item non-matching)
     )
 
-
+    (setq ngroups nil)
     (setq keys (sort (ht-keys groups) 'string<))
     (while keys
       (setq key (pop keys))
