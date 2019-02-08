@@ -4719,7 +4719,7 @@ named for each DIRECTION value.
             (ht-set!
               groups
               direction
-              (cons item (ht-get groups value)))
+              (cons item (ht-get groups direction)))
           )
         )
         (push item non-matching)  ;; else no DIRECTION property
