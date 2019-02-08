@@ -4717,7 +4717,7 @@ named for each DIRECTION value.
     )
 
     (setq ngroups nil)
-    (setq keys (sort (ht-keys groups) 'string<))
+    (setq directions (sort (ht-keys groups) 'string<))
     (dolist (direction directions)
 ;;    (while directions
 ;;      (setq direction (pop directions))
