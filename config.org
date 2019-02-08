@@ -4745,8 +4745,6 @@ agenda item and *copies* that item under each distinct agenda heading
 named for each DIRECTION value.
 
 #+BEGIN_SRC emacs-lisp
-  ;; keyword is 'auto-direction
-
   (setq org-super-agenda-group-types
     (plist-put org-super-agenda-group-types
       ':auto-direction
