@@ -4698,8 +4698,8 @@ named for each DIRECTION value.
 
       (if propvalue
         (let*
-          (setq values
-            (and value
+          (directions
+            (and propvalue
               (split-string
                 value
                 ";"        ;; separator
