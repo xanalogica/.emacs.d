@@ -4707,9 +4707,6 @@ named for each DIRECTION value.
                 )
               )
             )
-;;            (directions
-;;              (mapcar #'org-entry-restore-space directions)
-;;            )
           )
           (while directions  ;; (dolist (direction diretions) ...)
             (setq direction (pop directions))
