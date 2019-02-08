@@ -4687,7 +4687,10 @@ org-tags-view, org-todo-list, org-search-view, etc.
     (while keys
       (setq key (pop keys))
 
-      (push ?  ngroups)
+      (push
+
+        ngroups
+      )
     )
 
     (list ':auto-direction non-matching)
