@@ -4720,6 +4720,8 @@ named for each DIRECTION value.
     (setq keys (sort (ht-keys groups) 'string<))
     (while keys
       (setq key (pop keys))
+;;    (while keys
+;;      (setq key (pop keys))
 
       (push
         (list :name (format "Direction: %s" key)
