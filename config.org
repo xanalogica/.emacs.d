@@ -4684,6 +4684,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
     (setq keys (sort (ht-keys groups) 'string<))
     (while keys
+      (setq key (pop keys))
     )
 
     (list ':auto-direction non-matching)
