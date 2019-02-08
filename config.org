@@ -4691,8 +4691,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
         (list :name "blah"
          :items (nreverse (ht-get groups key))
         )
-
-
         ngroups
       )
     )
