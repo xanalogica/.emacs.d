@@ -4696,6 +4696,11 @@ named for each DIRECTION value.
 
       (setq propvalue (org-entry-get marker "DIRECTION"))
 
+      (if propvalue
+        (place-into-groups propvalue)
+)
+
+
       (setq values
         (and value
           (split-string
