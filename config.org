@@ -4627,7 +4627,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-  ;; keyword is 
+  ;; keyword is 'auto-direction
 
   (setq org-super-agenda-group-types
     (plist-put org-super-agenda-group-types
