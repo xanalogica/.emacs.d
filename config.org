@@ -4726,7 +4726,7 @@ named for each DIRECTION value.
       (setq key (pop keys))
 
       (push
-        (list :name "blah"
+        (list :name (format "Direction: %s" (car key))
          :items (nreverse (ht-get groups key))
         )
         ngroups
