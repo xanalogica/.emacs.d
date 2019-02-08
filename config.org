@@ -4697,13 +4697,7 @@ named for each DIRECTION value.
       (setq propvalue (org-entry-get marker "DIRECTION"))
 
       (if propvalue
-        (progn
-
-
-        )
-        (push item non-matching)
-      )
-
+        (let*
 
       (setq values
         (and value
@@ -4723,6 +4717,15 @@ named for each DIRECTION value.
 
         (ht-set! groups value (cons item (ht-get groups value)))
       )
+
+
+
+
+
+        )
+        (push item non-matching)
+      )
+
 
 ;;    (-when-let*
 ;;      (
