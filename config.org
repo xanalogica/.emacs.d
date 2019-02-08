@@ -4671,7 +4671,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (while values
         (setq value (pop values))
 
-        (ht-set! groups value item)
+        (ht-set! groups value (cons item (ht-get groups value)))
       )
 
 
