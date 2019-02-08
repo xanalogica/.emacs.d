@@ -4739,7 +4739,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 #+END_SRC
 
-Define a new auto-grouping keyword/function for Org-Super-Agenda
+Define a new auto-grouping keyword/function for Org-Super-Agenda called
+:auto-direction, that examines the multi-valued property DIRECTION
 
 #+BEGIN_SRC emacs-lisp
   ;; keyword is 'auto-direction
