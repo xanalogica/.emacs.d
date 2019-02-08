@@ -4709,7 +4709,7 @@ named for each DIRECTION value.
                 )
               )
             )
-            (directions values
+            (directions
               (mapcar #'org-entry-restore-space directions)
             )
           )
