@@ -4639,9 +4639,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
   )
 
-
-
-
          (add-to-list 'org-super-agenda-auto-selector-keywords ,keyword)))))
 
 
