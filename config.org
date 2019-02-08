@@ -4696,7 +4696,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
 
     (list ':auto-direction non-matching ngroups)
-
   )
 
   (add-to-list
