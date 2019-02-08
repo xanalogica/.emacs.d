@@ -4714,7 +4714,7 @@ named for each DIRECTION value.
 ;;            )
           )
           (while directions
-            (setq value (pop directions))
+            (setq direction (pop directions))
 
             (ht-set! groups value (cons item (ht-get groups value)))
           )
