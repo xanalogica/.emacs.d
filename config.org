@@ -4676,6 +4676,10 @@ org-tags-view, org-todo-list, org-search-view, etc.
 (org-super-agenda--group-items )
 (org-super-agenda--def-auto-group )
 
+  groups 'key' should be each distinct direction
+
+
+
 (setq org-super-agenda-unmatched-name "Other items")
 
 
