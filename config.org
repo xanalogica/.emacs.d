@@ -4267,6 +4267,7 @@ types:
            (org-super-agenda-groups groups/items-needing-filing)
 
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-files '("~/Dropbox/Documents/index.org"))
          )
          ("/tmp/NeedsRefiling.pdf")  ;; file(s)-to-export[6]
@@ -4279,6 +4280,7 @@ types:
            (org-super-agenda-groups groups/recurring-tasks)
 
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
          )
          ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
        )
@@ -4290,6 +4292,7 @@ types:
            (org-super-agenda-groups groups/shopping-lists)
 
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
            (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
          )
          ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
@@ -4302,6 +4305,7 @@ types:
            (org-super-agenda-groups groups/personal-scheduled-tasks)
 
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
            (org-agenda-span 14)         ;; show me 14-days at a time
          )
          ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
@@ -4314,6 +4318,7 @@ types:
            (org-super-agenda-groups groups/zeomega-scheduled-tasks)
 
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
            (org-agenda-span 14)         ;; show me 14-days at a time
          )
          ("/tmp/ZeOmegaScheduledTasks.pdf")  ;; file(s)-to-export[6]
@@ -4328,6 +4333,7 @@ types:
 
            (org-agenda-prefix-format "  ")  ;; remove Category
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
            (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
          )
          ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
