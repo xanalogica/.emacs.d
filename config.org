@@ -4629,7 +4629,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
   (setq org-super-agenda-group-types
     (plist-put org-super-agenda-group-types
-      :map-direction
+      :auto-direction
       'jeff--auto-group-by-direction
     )
   )
