@@ -4741,23 +4741,7 @@ named for each DIRECTION value.
     'org-super-agenda-auto-selector-keywords ':auto-direction)
 #+END_SRC
 
-
-(org-super-agenda--group-items )
-(org-super-agenda--def-auto-group )
-   group 'key' should be each distinct direction
-
-
-
 (setq org-super-agenda-unmatched-name "Other items")
-
-
-org-entry-get
-org-entry-get-multivalued-property
-
-;;  :key-form (org-entry-get (org-super-agenda--get-marker item)
-;;                           (car args)
-;;                           org-super-agenda-properties-inherit)
-;;  :header-form (format "%s: %s" (car args) key))
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
