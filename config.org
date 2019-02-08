@@ -4675,8 +4675,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 (org-super-agenda--group-items )
 (org-super-agenda--def-auto-group )
-
-  group 'key' should be each distinct direction
+   group 'key' should be each distinct direction
 
 
 
