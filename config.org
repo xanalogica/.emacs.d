@@ -4633,6 +4633,10 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
+  (defun jeff--auto-group-by-direction (item)
+)
+
+
 
 
          (add-to-list 'org-super-agenda-auto-selector-keywords ,keyword)))))
