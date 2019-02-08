@@ -4655,20 +4655,20 @@ org-tags-view, org-todo-list, org-search-view, etc.
         )
       )
 
+      (setq values
+        (and value
+          (split-string
+            value
+            ";"        ;; separator
+            t          ;; omit nulls
+            "[ ]+"     ;; trimming RE
+          )
+        )
+      )
 
 
     (-when-let*
       (
-        (values
-          (and value
-            (split-string
-              value
-              ";"        ;; separator
-              t          ;; omit nulls
-              "[ ]+"     ;; trimming RE
-            )
-          )
-        )
         (values (mapcar #'org-entry-restore-space values))
       )
       (format "Direction: %s" (car values))
