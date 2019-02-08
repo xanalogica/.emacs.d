@@ -4710,8 +4710,6 @@ named for each DIRECTION value.
           )
 
           (dolist (direction diretions)
-            (setq direction (pop directions))
-
 
 ;;          (while directions  ;; (dolist (direction diretions) ...)
 ;;            (setq direction (pop directions))
