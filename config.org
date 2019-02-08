@@ -4644,7 +4644,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     (while all-items
       (setq item (pop all-items))
 
-      (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
+      (setq marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
 
 
 
