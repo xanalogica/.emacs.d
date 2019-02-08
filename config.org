@@ -4719,9 +4719,6 @@ named for each DIRECTION value.
     (setq ngroups nil)
     (setq directions (sort (ht-keys groups) 'string<))
     (dolist (direction directions)
-;;    (while directions
-;;      (setq direction (pop directions))
-
       (push
         (list :name (format "Direction: %s" direction)
          :items (nreverse (ht-get groups direction))
