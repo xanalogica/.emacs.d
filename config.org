@@ -4697,10 +4697,8 @@ named for each DIRECTION value.
       (setq propvalue (org-entry-get marker "DIRECTION"))
 
       (if propvalue
-
-
-
-
+        (
+        )
         (push item non-matching)
       )
 
