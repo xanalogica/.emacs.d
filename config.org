@@ -4666,7 +4666,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
         )
       )
 
-      (values (mapcar #'org-entry-restore-space values))
+      (setq values (mapcar #'org-entry-restore-space values))
 
 
 
