@@ -4702,7 +4702,7 @@ named for each DIRECTION value.
                 (split-string propvalue
                   ";"        ;; separator
                   t          ;; omit empty strings
-                  "[ ]+"     ;; trimming RE
+                  "[ ]+"     ;; trimming leading/trailing RE
                 )
               )
             )
