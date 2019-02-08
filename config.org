@@ -4718,8 +4718,7 @@ named for each DIRECTION value.
 
     (setq ngroups nil)
     (setq keys (sort (ht-keys groups) 'string<))
-    (while keys
-      (setq key (pop keys))
+    (dolist key keys
 ;;    (while keys
 ;;      (setq key (pop keys))
 
