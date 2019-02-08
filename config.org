@@ -4698,17 +4698,16 @@ named for each DIRECTION value.
 
       (if propvalue
         (let*
-
-      (setq values
-        (and value
-          (split-string
-            value
-            ";"        ;; separator
-            t          ;; omit nulls
-            "[ ]+"     ;; trimming RE
+          (setq values
+            (and value
+              (split-string
+                value
+                ";"        ;; separator
+                t          ;; omit nulls
+                "[ ]+"     ;; trimming RE
+              )
+            )
           )
-        )
-      )
 
       (setq values (mapcar #'org-entry-restore-space values))
 
