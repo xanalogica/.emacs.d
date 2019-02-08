@@ -4688,9 +4688,6 @@ named for each DIRECTION value.
     (setq groups (ht-create))
 
     (dolist (item all-items)
-;;    (while all-items       ;; (dolist (item allitems) ...)
-;;      (setq item (pop all-items))
-
       (setq marker
        (or (get-text-property 0 'org-marker item)
            (get-text-property 0 'org-hd-marker item)))
