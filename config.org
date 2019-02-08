@@ -4655,7 +4655,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   ) ;; end of lambda
 
-  (defun jeff--auto-group-by-direction (item)
+  (defun YYjeff--auto-group-by-direction (item)
     (-when-let*
       (
         (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
