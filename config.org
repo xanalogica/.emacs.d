@@ -4646,6 +4646,33 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 
 
+    (-when-let*
+      (
+        (marker (or (get-text-property 0 'org-marker item) (get-text-property 0 'org-hd-marker item)))
+        (value
+          (org-entry-get
+            marker
+            "DIRECTION"
+          )
+        )
+        (values
+          (and value
+            (split-string
+              value
+              ";"        ;; separator
+              t          ;; omit nulls
+              "[ ]+"     ;; trimming RE
+            )
+          )
+        )
+        (values (mapcar #'org-entry-restore-space values))
+      )
+      (format "Direction: %s" (car values))
+
+
+
+
+
 
 
       (push item non-matching)
