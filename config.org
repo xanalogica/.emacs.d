@@ -4688,7 +4688,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (setq key (pop keys))
 
       (push ?  ngroups)
-
     )
 
     (list ':auto-direction non-matching)
