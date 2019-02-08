@@ -4710,9 +4710,7 @@ named for each DIRECTION value.
           )
 
           (dolist (direction directions)
-            (ht-set!
-              groups
-              direction
+            (ht-set! groups direction
               (cons item (ht-get groups direction)))
           )
         )
