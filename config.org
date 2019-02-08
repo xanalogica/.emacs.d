@@ -4694,12 +4694,7 @@ named for each DIRECTION value.
        (or (get-text-property 0 'org-marker item)
            (get-text-property 0 'org-hd-marker item)))
 
-      (setq propvalue
-        (org-entry-get
-          marker
-          "DIRECTION"
-        )
-      )
+      (setq propvalue (org-entry-get marker "DIRECTION"))
 
       (setq values
         (and value
