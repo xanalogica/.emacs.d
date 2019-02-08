@@ -4724,7 +4724,7 @@ named for each DIRECTION value.
 
       (push
         (list :name (format "Direction: %s" direction)
-         :items (nreverse (ht-get groups key))
+         :items (nreverse (ht-get groups direction))
         )
         ngroups
       )
