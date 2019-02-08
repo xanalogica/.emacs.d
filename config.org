@@ -4648,7 +4648,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
        (or (get-text-property 0 'org-marker item)
            (get-text-property 0 'org-hd-marker item)))
 
-      (value
+      (setq value
         (org-entry-get
           marker
           "DIRECTION"
