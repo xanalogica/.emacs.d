@@ -4639,6 +4639,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
   (defun jeff--auto-group-by-direction (all-items &rest args)
     "Divide ALL-ITEMS into groups based on their DIRECTION property."
 
+    (list ':auto-direction all-items)
+
   )
 
   (add-to-list
