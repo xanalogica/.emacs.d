@@ -4698,18 +4698,20 @@ named for each DIRECTION value.
 
       (if propvalue
         (let*
-          (directions
-            (and propvalue
-              (split-string
-                propvalue
-                ";"        ;; separator
-                t          ;; omit nulls
-                "[ ]+"     ;; trimming RE
+          (
+            (directions
+              (and propvalue
+                (split-string
+                  propvalue
+                  ";"        ;; separator
+                  t          ;; omit nulls
+                  "[ ]+"     ;; trimming RE
+                )
               )
             )
-          )
-          (directions values
-            (mapcar #'org-entry-restore-space directions)
+            (directions values
+              (mapcar #'org-entry-restore-space directions)
+            )
           )
 
       (while values
