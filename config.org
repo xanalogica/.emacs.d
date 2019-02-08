@@ -4698,9 +4698,7 @@ named for each DIRECTION value.
 
       (if propvalue
         (place-into-groups item propvalue)
-
-
-
+        (push item non-matching)
       )
 
 
@@ -4728,7 +4726,6 @@ named for each DIRECTION value.
 ;;      )
 ;;      (format "Direction: %s" (car values))
 
-      (push item non-matching)
     )
 
     (setq ngroups nil)
