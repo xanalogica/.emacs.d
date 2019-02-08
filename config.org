@@ -4627,11 +4627,11 @@ org-tags-view, org-todo-list, org-search-view, etc.
     )
   )
 
-(setq org-super-agenda-group-types
-  (plist-put org-super-agenda-group-types
-              ,keyword #',fn-name
+  (setq org-super-agenda-group-types
+    (plist-put org-super-agenda-group-types
+                ,keyword #',fn-name
+    )
   )
-)
 
 
 
