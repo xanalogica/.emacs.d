@@ -4355,6 +4355,7 @@ types:
 ;;           (org-super-agenda-groups groups/backlog-tasks)
 
            (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
 
 ;;;           (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
 ;;;           (org-agenda-add-entry-text-maxlines 5)  ;; experimental
@@ -4740,8 +4741,6 @@ named for each DIRECTION value.
   (add-to-list
     'org-super-agenda-auto-selector-keywords ':auto-direction)
 #+END_SRC
-
-(setq org-super-agenda-unmatched-name "Other items")
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
