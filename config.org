@@ -4716,10 +4716,6 @@ named for each DIRECTION value.
         (push item non-matching)  ;; else no DIRECTION property
       )
 
-
-;;    (-when-let*
-;;      (
-;;      )
 ;;      (format "Direction: %s" (car values))
 
     )
