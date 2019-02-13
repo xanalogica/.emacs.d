@@ -4626,7 +4626,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
       (:name "Corporate Events      :EVENT:" :and (:tag "EVENT" :tag "ZEOMEGA"))
       (:name "Corporate Travel      :TRAVEL:" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
-      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
+      (:name "Engage with People    :PEOPLE:" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
 
       (:name "To Share My Knowledge" :and (:tag "TOSHARE" :tag "ZEOMEGA"))
       (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
