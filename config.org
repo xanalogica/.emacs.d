@@ -4619,7 +4619,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ;;      (:auto-direction :order 99)
 
 ;;      (:auto-property "DIRECTION")
-;;      (:auto-todo t)
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
       (:name "Administrative Chores  :CHORE:"
          :and (:tag "CHORE" :tag "ZEOMEGA"))
