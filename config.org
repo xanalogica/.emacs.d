@@ -4622,7 +4622,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
 ;;      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
 ;;      (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
-;;      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
+      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
 ;;      (:name "Corporate Events" :and (:tag "EVENT" :tag "ZEOMEGA"))
 ;;      (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
 ;;      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
