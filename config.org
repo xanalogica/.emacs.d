@@ -4620,8 +4620,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
 
 ;;      (:auto-property "DIRECTION")
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
-      (:name "Administrative Chores  :CHORE:"
-         :and (:tag "CHORE" :tag "ZEOMEGA"))
       (:name "Administrative Chores  :ADMIN:"
          :and (:tag "ADMIN" :tag "ZEOMEGA"))
 
