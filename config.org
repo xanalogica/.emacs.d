@@ -4621,8 +4621,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ;;      (:auto-property "DIRECTION")
 ;;      (:auto-todo t)
 ;;      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
-      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
-      (:name "Administrative Chores" :and (:tag "ADMIN" :tag "ZEOMEGA"))
+      (:name "Administrative Chores :CHORE:" :and (:tag "CHORE" :tag "ZEOMEGA"))
+      (:name "Administrative Chores :ADMIN:" :and (:tag "ADMIN" :tag "ZEOMEGA"))
 
       (:name "Corporate Events" :and (:tag "EVENT" :tag "ZEOMEGA"))
       (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
