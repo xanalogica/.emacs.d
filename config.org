@@ -4628,8 +4628,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Corporate Travel      :TRAVEL:" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
       (:name "Engage with People    :PEOPLE:" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
 
-      (:name "To Share My Knowledge" :and (:tag "TOSHARE" :tag "ZEOMEGA"))
-      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge :TOSHARE:" :and (:tag "TOSHARE" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge :WRITING:" :and (:tag "WRITING" :tag "ZEOMEGA"))
 
       (:name "Things I Need to Study" :and (:tag "TOSTUDY" :tag "ZEOMEGA"))
       (:name "Things I Need to Study" :and (:tag "STUDY" :tag "ZEOMEGA"))
