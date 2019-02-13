@@ -4687,8 +4687,6 @@ named for each DIRECTION value.
   (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
     "Divide ALL-ITEMS into groups based on their DIRECTION property."
 
-;;     (:order-multi (99 (:auto-multiproperty "DIRECTION")))
-
     (setq non-matching nil)
     (setq groups (ht-create))
 
