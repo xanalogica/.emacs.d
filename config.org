@@ -4626,15 +4626,22 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Administrative Chores  :ADMIN:"
          :and (:tag "ADMIN" :tag "ZEOMEGA"))
 
-      (:name "Corporate Events       :EVENT:" :and (:tag "EVENT" :tag "ZEOMEGA"))
-      (:name "Corporate Travel       :TRAVEL:" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
-      (:name "Engage with People     :PEOPLE:" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
+      (:name "Corporate Events       :EVENT:"
+         :and (:tag "EVENT" :tag "ZEOMEGA"))
+      (:name "Corporate Travel       :TRAVEL:"
+         :and (:tag "TRAVEL" :tag "ZEOMEGA"))
+      (:name "Engage with People     :PEOPLE:"
+         :and (:tag "PEOPLE" :tag "ZEOMEGA"))
 
-      (:name "To Share My Knowledge  :TOSHARE:" :and (:tag "TOSHARE" :tag "ZEOMEGA"))
-      (:name "To Share My Knowledge  :WRITING:" :and (:tag "WRITING" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge  :TOSHARE:"
+         :and (:tag "TOSHARE" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge  :WRITING:"
+         :and (:tag "WRITING" :tag "ZEOMEGA"))
 
-      (:name "Things I Need to Study :TOSTUDY:" :and (:tag "TOSTUDY" :tag "ZEOMEGA"))
-      (:name "Things I Need to Study :STUDY:" :and (:tag "STUDY" :tag "ZEOMEGA"))
+      (:name "Things I Need to Study :TOSTUDY:"
+         :and (:tag "TOSTUDY" :tag "ZEOMEGA"))
+      (:name "Things I Need to Study :STUDY:"
+         :and (:tag "STUDY" :tag "ZEOMEGA"))
 
       (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
 
