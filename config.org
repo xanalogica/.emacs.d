@@ -4624,7 +4624,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Administrative Chores :CHORE:" :and (:tag "CHORE" :tag "ZEOMEGA"))
       (:name "Administrative Chores :ADMIN:" :and (:tag "ADMIN" :tag "ZEOMEGA"))
 
-      (:name "Corporate Events" :and (:tag "EVENT" :tag "ZEOMEGA"))
+      (:name "Corporate Events      :EVENT:" :and (:tag "EVENT" :tag "ZEOMEGA"))
       (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
       (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
 
