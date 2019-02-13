@@ -4610,9 +4610,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
 #+BEGIN_SRC emacs-lisp
   (setq groups/zeomega-tech-directions  ;; presentation defn using org-super-agenda
     '(
-;;      (:children t)
-;;      (:auto-parent t)
-;;      (:auto-map jeff--auto-group-by-direction)
 ;;      (:order 99 )
 
       (:order-multi (99 (:auto-direction t)))
