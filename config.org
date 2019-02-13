@@ -4615,8 +4615,8 @@ org-tags-view, org-todo-list, org-search-view, etc.
 ;;      (:auto-map jeff--auto-group-by-direction)
 ;;      (:order 99 )
 
-;;      (:order-multi (99 (:auto-direction t)))
-      (:auto-direction :order 99)
+      (:order-multi (99 (:auto-direction t)))
+;;      (:auto-direction :order 99)
 
 ;;      (:auto-property "DIRECTION")
 ;;      (:auto-todo t)
