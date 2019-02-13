@@ -4732,7 +4732,7 @@ named for each DIRECTION value.
       )
     )
 
-    (list ':auto-direction non-matching ngroups)
+    (list ':auto-multiprop non-matching ngroups)
   )
 
   (setq org-super-agenda-group-types
