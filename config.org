@@ -4624,12 +4624,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Discard Pile" :discard (:not (:tag "ZEOMEGA")))
     )
   )
-
-;;      )
-;;      (concat "Directory: " directory-name)
-;;    )
-;;  ) ;; end of lambda
-
 #+END_SRC
 
 Define a new auto-grouping keyword/function for Org-Super-Agenda called
