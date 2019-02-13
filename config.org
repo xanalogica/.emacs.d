@@ -4743,7 +4743,7 @@ named for each DIRECTION value.
   )
 
   (add-to-list
-    'org-super-agenda-auto-selector-keywords ':auto-direction)
+    'org-super-agenda-auto-selector-keywords ':auto-multiprop)
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
