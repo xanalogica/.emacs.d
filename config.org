@@ -4717,7 +4717,7 @@ named for each DIRECTION value.
               (cons item (ht-get groups direction)))
           )
         )
-        (push item non-matching)  ;; else no DIRECTION property
+        (push item non-matching)  ;; else no PROPNAME property
       )
     )
 
