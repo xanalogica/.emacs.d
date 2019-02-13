@@ -4683,13 +4683,13 @@ named for each DIRECTION value.
 
   (setq org-super-agenda-group-types
     (plist-put org-super-agenda-group-types
-      ':auto-multiprop
+      ':auto-multiproperty
       'jeff--auto-group-by-multiprop
     )
   )
 
   (add-to-list
-    'org-super-agenda-auto-selector-keywords ':auto-multiprop)
+    'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
