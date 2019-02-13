@@ -4684,7 +4684,7 @@ agenda item and *copies* that item under each distinct agenda heading
 named for each DIRECTION value.
 
 #+BEGIN_SRC emacs-lisp
-  (defun jeff--auto-group-by-direction (all-items &rest args)
+  (defun jeff--auto-group-by-direction (all-items propname &rest args)
     "Divide ALL-ITEMS into groups based on their DIRECTION property."
 
 ;;     (:order-multi (99 (:auto-multiproperty "DIRECTION")))
