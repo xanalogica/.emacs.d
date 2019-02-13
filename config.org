@@ -4332,7 +4332,7 @@ types:
 ;;           (org-super-agenda-groups groups/zeomega-tech-directions)
 
            (org-agenda-prefix-format "  ")  ;; remove Category
-;;           (org-agenda-remove-tags t)
+           (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
          )
