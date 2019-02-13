@@ -4738,7 +4738,7 @@ named for each DIRECTION value.
   (setq org-super-agenda-group-types
     (plist-put org-super-agenda-group-types
       ':auto-direction
-      'jeff--auto-group-by-direction
+      'jeff--auto-group-by-multiprop
     )
   )
 
