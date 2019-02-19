@@ -3733,7 +3733,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
-        ;; Android
+        ;; Android Technology
         ;; Artificial Intellience
         ;; Docker
         ;; Emacs
