@@ -3746,9 +3746,9 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
         ;; ClicBank Entries
+        ;; ETL Subsystem
 ;; Hadoop for ZeOmega
         ;; Black Duck Software
-;; ETL
 ;; client: Florida Blue
 ;; client: Premera
 ;; client: Mass
