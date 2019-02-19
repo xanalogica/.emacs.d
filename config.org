@@ -3739,11 +3739,11 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Emacs
         ;; Exo-Cortex
         ;; Gadgets
+        ;; Hadoop Technology
         ;; Python
         ;; SysAdmin
         ;; Annex
 
-;; Hadoop Software
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
