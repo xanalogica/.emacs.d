@@ -3709,7 +3709,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Exercise: Running
 
       ("~/Dropbox/Documents/Personal.org"    :tag . "REFILING")
-        ;; People
+        ;; People (a list)
 ;; James
 ;; Sheila
 ;; Steve Smegner
