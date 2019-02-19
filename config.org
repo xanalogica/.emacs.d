@@ -3731,7 +3731,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 ; Artificial Intellience
 ; Machine Learning
-; Video Displays
+; Video Display Selection
 ; Ultrawide Displays
 ; Hadoop Software
 ; Video Gaming
