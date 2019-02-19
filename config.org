@@ -3749,10 +3749,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; ETL Subsystem
         ;; Hadoop Subsystem
         ;; Black Duck Software
+;; System Platform
 ;; client: Florida Blue
 ;; client: Premera
 ;; client: Mass
-;; System Platform
 ;; People: Roopesh
 ;; People: Harshad
 ;; People: Pavan
