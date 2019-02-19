@@ -3743,6 +3743,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 ;; Android
 ;; Artificial Intellience
+;; Exo-Cortex
 ;; Machine Learning
 ;; Video Display Selection
 ;; Ultrawide Display Selection
