@@ -3699,14 +3699,14 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Finance.org"     :tag . "REFILING")
       ("~/Dropbox/Documents/Glossary.org"    :tag . "REFILING")
       ("~/Dropbox/Documents/Health.org"      :tag . "REFILING")
-        ;; Exercise Habits
-        ;; Sleep Habits
-        ;; Martial Arts
-        ;; Dietary Habits
-        ;; Mental Habits and Stress Reducers
-        ;; Conflict Resolution
         ;; Collaboration Techniques
+        ;; Conflict Resolution
+        ;; Dietary Habits
+        ;; Exercise Habits
         ;; Exercise: Running
+        ;; Martial Arts
+        ;; Mental Habits and Stress Reducers
+        ;; Sleep Habits
 
       ("~/Dropbox/Documents/Personal.org"    :tag . "REFILING")
         ;; People (a list)
