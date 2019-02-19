@@ -3732,6 +3732,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ; Machine Learning
 ; Displays
 ; Ultrawide Displays
+; Hadoop
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
