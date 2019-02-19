@@ -3729,6 +3729,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; SysAdmin
         ;; Annex
 
+; Artificial Intellience
 ; Machine Learning
 ; Displays
 ; Ultrawide Displays
