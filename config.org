@@ -3737,12 +3737,12 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Artificial Intellience
         ;; Docker
         ;; Emacs
+        ;; Exo-Cortex
         ;; Gadgets
         ;; Python
         ;; SysAdmin
         ;; Annex
 
-;; Exo-Cortex
 ;; Machine Learning
 ;; Video Display Selection
 ;; Ultrawide Display Selection
