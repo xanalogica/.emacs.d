@@ -3732,29 +3732,29 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; SysAdmin
         ;; Annex
 
-; Android
-; Artificial Intellience
-; Machine Learning
-; Video Display Selection
-; Ultrawide Display Selection
-; Hadoop Software
-; Video Gaming
-; Laptop Selection
+;; Android
+;; Artificial Intellience
+;; Machine Learning
+;; Video Display Selection
+;; Ultrawide Display Selection
+;; Hadoop Software
+;; Video Gaming
+;; Laptop Selection
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
-; Sentinel Entries
-; ClicBank Entries
-; Hadoop for ZeOmega
-; Black Duck
-; ETL
-; client: Florida Blue
-; client: Premera
-; client: Mass
-; System Platform
-; People: Roopesh
-; People: Harshad
-; People: Pavan
+;; Sentinel Entries
+;; ClicBank Entries
+;; Hadoop for ZeOmega
+;; Black Duck
+;; ETL
+;; client: Florida Blue
+;; client: Premera
+;; client: Mass
+;; System Platform
+;; People: Roopesh
+;; People: Harshad
+;; People: Pavan
     )
   )
 
