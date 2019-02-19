@@ -3755,6 +3755,10 @@ used, equivalent to the value `((nil . (:level . 1))'.
   ;; (org-agenda-files :todo . "KEYWORD") ;; by TODO keyword
   ;; (org-agenda-files :regexp . "REGEXP") ;; by regex on headline itself
 
+****** DONE fix Emacs errors
+:LOGBOOK:
+- Refiled on [2019-02-18 Mon 17:15]
+:END:
 **** Yanking Text under Org-Mode
 
 #+BEGIN_SRC emacs-lisp
