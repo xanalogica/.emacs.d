@@ -3740,6 +3740,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ; Sentinel Entries
 ; ClicBank Entries
 ; Hadoop
+; Black Duck
+; ETL
 ; client: Florida Blue
 ; client: Premera
 ; client: Mass
