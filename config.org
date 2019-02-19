@@ -3746,7 +3746,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; Video Display Selection
 ;; Ultrawide Display Selection
 ;; Hadoop Software
-;; Video Gaming
 ;; Laptop Selection
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
