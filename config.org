@@ -3705,6 +3705,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Dietary Habits
         ;; Mental Habits and Stress Reducers
 ;; Conflict Resolution
+;; Collaboration Techniques
 
 ;; Running Shoes
 
