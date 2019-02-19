@@ -3747,7 +3747,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Sentinel Entries
         ;; ClicBank Entries
 ;; Hadoop for ZeOmega
-;; Black Duck Software
+        ;; Black Duck Software
 ;; ETL
 ;; client: Florida Blue
 ;; client: Premera
