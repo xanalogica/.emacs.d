@@ -3707,8 +3707,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Conflict Resolution
         ;; Collaboration Techniques
         ;; Exercise: Running
-
-;; Running Shoes
+        ;; Running Shoes
 
       ("~/Dropbox/Documents/Personal.org"    :tag . "REFILING")
         ;; People
