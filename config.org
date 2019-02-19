@@ -3709,20 +3709,20 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Sleep Habits
 
       ("~/Dropbox/Documents/Personal.org"    :tag . "REFILING")
-        ;; People (a list)
-        ;; Songs
+        ;; Automotive
+        ;; Birthdays
         ;; Books
+        ;; Christmas
+        ;; Church
         ;; Events
         ;; FunPlaces
-        ;; Christmas
         ;; Halloween
-        ;; Valentine
-        ;; Birthdays
-        ;; Automotive
         ;; HomeDecor
         ;; Movies
-        ;; Church
+        ;; People (a list)
         ;; Riverhood
+        ;; Songs
+        ;; Valentine
 
 ;; Experiences to Have
 
