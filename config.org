@@ -3731,9 +3731,11 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 ; Artificial Intellience
 ; Machine Learning
-; Displays
+; Video Displays
 ; Ultrawide Displays
 ; Hadoop Software
+; Video Gaming
+; 
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
