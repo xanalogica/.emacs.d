@@ -3734,6 +3734,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
         ;; Android
+        ;; Artificial Intellience
         ;; Docker
         ;; Emacs
         ;; Gadgets
@@ -3741,7 +3742,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; SysAdmin
         ;; Annex
 
-;; Artificial Intellience
 ;; Exo-Cortex
 ;; Machine Learning
 ;; Video Display Selection
