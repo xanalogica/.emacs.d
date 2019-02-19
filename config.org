@@ -3738,8 +3738,11 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
-        ;; ClicBank Entries
+; ClicBank Entries
 ; Hadoop
+; client: Florida Blue
+; client: Premera
+; client: Mass
     )
   )
 
