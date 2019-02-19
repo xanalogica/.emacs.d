@@ -3741,6 +3741,8 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Gadgets
         ;; Hadoop Technology
         ;; Python
+        ;; Video Television Display Selection
+        ;; Video Ultrawide Display Selection
         ;; SysAdmin
         ;; Annex
 
