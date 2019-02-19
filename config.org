@@ -3741,7 +3741,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; SysAdmin
         ;; Annex
 
-;; Android
 ;; Artificial Intellience
 ;; Exo-Cortex
 ;; Machine Learning
