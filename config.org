@@ -3732,7 +3732,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ; Artificial Intellience
 ; Machine Learning
 ; Video Display Selection
-; Ultrawide Displays
+; Ultrawide Display Selection
 ; Hadoop Software
 ; Video Gaming
 ; Laptop Selection
