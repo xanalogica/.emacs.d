@@ -3743,10 +3743,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; SysAdmin
         ;; Annex
 
-;; Video Display Selection
-;; Ultrawide Display Selection
 ;; Hadoop Software
-;; Laptop Selection
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
