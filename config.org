@@ -3734,18 +3734,18 @@ used, equivalent to the value `((nil . (:level . 1))'.
       ("~/Dropbox/Documents/Quotes.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/Technology.org"  :tag . "REFILING")
         ;; Android Technology
+        ;; Annex
         ;; Artificial Intellience
         ;; Docker
         ;; Emacs
         ;; Exo-Cortex
         ;; Gadgets
         ;; Hadoop Technology
+        ;; Laptop Selection
         ;; Python
+        ;; SysAdmin
         ;; Video Television Display Selection
         ;; Video Ultrawide Display Selection
-        ;; Laptop Selection
-        ;; SysAdmin
-        ;; Annex
 
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
