@@ -3743,6 +3743,7 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Python
         ;; Video Television Display Selection
         ;; Video Ultrawide Display Selection
+        ;; Laptop Selection
         ;; SysAdmin
         ;; Annex
 
