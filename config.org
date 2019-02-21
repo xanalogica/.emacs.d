@@ -5733,6 +5733,31 @@ bbdb:S.*Allen
   )
 #+END_SRC
 
+** Function to Extract Initiatives for Local Direction and Insert into Buffer
+
+#+BEGIN_SRC emacs-lisp
+  (defun jeff/notion-help ()
+    "Present My Notion Quick Reference"
+
+    (let*
+      (
+        (file "~/Dropbox/Documents/Technology.org")
+        (headline "Notion Static Tiling Window Manager Quick Reference")
+        (pos
+          (save-excursion
+            (find-file file)
+            (org-find-exact-headline-in-buffer headline)
+          )
+        )
+      )
+      (org-refile 4 nil (list headline file nil pos))
+      (org-narrow-to-subtree)
+      (org-cycle 12)
+    )
+  )
+#+END_SRC
+
+
 * Just Notes, No Configuration
 ;;;
 ;;; (consider a "presentation" settings file)
