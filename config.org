@@ -5736,7 +5736,7 @@ bbdb:S.*Allen
 ** Function to Extract Initiatives for Local Direction and Insert into Buffer
 
 #+BEGIN_SRC emacs-lisp
-  (defun jeff/notion-help ()
+  (defun jeff/insert-initiatives ()
     "Present My Notion Quick Reference"
 
     (let*
