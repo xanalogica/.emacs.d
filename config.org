@@ -5765,7 +5765,7 @@ bbdb:S.*Allen
           (org-element-property :name (org-element-at-point))
         )
       )
-      (setq patt (format "%S" (org-element-at-point)))
+      (setq patt (format "%S" patt))
       (setq patt (regexp-quote patt))
       (setq match (format "+INITIATIVE+DIRECTION={%s}" patt))
 
