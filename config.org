@@ -5789,7 +5789,7 @@ bbdb:S.*Allen
 
       (if (region-active-p)
         (progn
-          (delete-region $from $to)
+          (delete-region (region-beginning) (region-end))
         )
         (insert result) ; if no region active, just insert
       )
