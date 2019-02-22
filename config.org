@@ -5826,6 +5826,10 @@ bbdb:S.*Allen
                     "Packages up each matching headline into a link"
 
                     (call-interactively 'org-store-link)
+                    (with-temp-buffer
+                      (org-insert-last-stored-link 1)
+                      (setq result (buffer-string))
+                    )
 
                   )
 
