@@ -5752,9 +5752,6 @@ bbdb:S.*Allen
       (setq patt
         (org-element-property :title (org-element-at-point))
       )
-;;      (setq patt
-;;        (org-element-at-point)
-;;      )
     )
 
 ;;      (setq patt (format "%S" patt))
