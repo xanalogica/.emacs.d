@@ -5744,130 +5744,129 @@ bbdb:S.*Allen
 ;;;;      (
 ;;;;      )
 
-      (save-mark-and-excursion
-        (org-back-to-heading t)
+    (save-mark-and-excursion
+      (org-back-to-heading t)
 
-        (while ;; move upward until we find a :DIRECTION: tagged headline
-          (not (member "DIRECTION"
-            (org-element-property :tags (org-element-at-point))))
-          (outline-up-heading 1)
-        )
-;;        (setq result (make-link-to-here)) ;; capture a link to that headline
-        (setq patt
-          (org-element-property :title (org-element-at-point))
-        )
-;;        (setq patt
-;;          (org-element-at-point)
-;;        )
+      (while ;; move upward until we find a :DIRECTION: tagged headline
+        (not (member "DIRECTION"
+          (org-element-property :tags (org-element-at-point))))
+        (outline-up-heading 1)
       )
+;;      (setq result (make-link-to-here)) ;; capture a link to that headline
+      (setq patt
+        (org-element-property :title (org-element-at-point))
+      )
+;;      (setq patt
+;;        (org-element-at-point)
+;;      )
+    )
 ;;      (setq patt (format "%S" patt))
 
       (setq patt "RD-41")
 
-;;      (setq patt (org-make-org-heading-search-string patt))
-      (setq patt (regexp-quote patt))
-      (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
+;;    (setq patt (org-make-org-heading-search-string patt))
+    (setq patt (regexp-quote patt))
+    (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
 
-      ;;TBD fix construction of match expression                     
-;;      (setq match "+INITIATIVE+DIRECTION={RD-46}")
+    ;;TBD fix construction of match expression                     
+;;    (setq match "+INITIATIVE+DIRECTION={RD-46}")
 
-;;      (setq patt "[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][RD-41 Improve Jiva Deployability]]")
+;;    (setq patt "[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][RD-41 Improve Jiva Deployability]]")
 
-;;      (setq patt "\\[\\[file:directions.org::\\*%5B%5Bhttps:\/")
+;;    (setq patt "\\[\\[file:directions.org::\\*%5B%5Bhttps:\/")
 
-;;      (setq patt "RD-41 Improve Jiva Deployability")           ;; WORKS
-;;      (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
+;;    (setq patt "RD-41 Improve Jiva Deployability")           ;; WORKS
+;;    (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
-      (setq matcher (org-make-tags-matcher matchexpr)
-            match   (car matcher)
-            matcher (cdr matcher)
-      )
-;;      (org-compile-prefix-format 'tags)
-;;      (org-set-sorting-strategy 'tags)
+    (setq matcher (org-make-tags-matcher matchexpr)
+          match   (car matcher)
+          matcher (cdr matcher)
+    )
+;;    (org-compile-prefix-format 'tags)
+;;    (org-set-sorting-strategy 'tags)
 
-      (setq files  (org-agenda-files)
-            rtnall nil
-      )
+    (setq files  (org-agenda-files)
+          rtnall nil
+    )
 
-      (while (setq file (pop files))
-        (catch 'nextfile
-          (org-check-agenda-file file)
+    (while (setq file (pop files))
+      (catch 'nextfile
+        (org-check-agenda-file file)
 
-          (setq buffer
-            (if (file-exists-p file)
-              (org-get-agenda-file-buffer file)
-              (error "No such file %s" file)
-            )
+        (setq buffer
+          (if (file-exists-p file)
+            (org-get-agenda-file-buffer file)
+            (error "No such file %s" file)
           )
-
-          (if (not buffer) ;; If file does not exist, error message to agenda
-            (setq rtn
-              (list
-                (format "ORG-AGENDA-ERROR: No such org-file %s" file)
-              )
-              rtnall (append rtnall rtn)
-            )
-
-            (with-current-buffer buffer
-              (unless (derived-mode-p 'org-mode)
-                (error "Agenda file %s is not in Org mode" file)
-              )
-
-              (save-excursion
-                (save-restriction
-                  (if (eq buffer org-agenda-restrict)
-                    (narrow-to-region
-                      org-agenda-restrict-begin
-                      org-agenda-restrict-end
-                    )
-                    (widen)
-                  )
-
-                  (setq rtn
-
-                    (org-map-entries
-                      'make-link-to-here           ;; FUNC
-                      matchexpr                    ;; MATCH
-                      'file                        ;; SCOPE 'agenda
-                      'archive                     ;; SKIP
-                      'comment                     ;; SKIP
-                    )
-
-;;                    (org-scan-tags  ;; versus org-map-entries
-;;                      'make-link-to-here           ;; ACTION
-;;                      matcher                      ;; MATCHER
-;;                      org--matcher-tags-todo-only  ;; TODO-ONLY
-;;                    )
-
-                  )
-
-                  (setq rtnall (append rtnall rtn))
-
-                ) ; end of save-restriction
-              ) ; end of save-excursion
-            ) ; end of with-current-buffer
-          ) ; end of if
-        ) ; end of catch
-      ) ; end of while
-
-      (save-excursion
-        (if (region-active-p)
-          (delete-region (region-beginning) (region-end)))
-
-        (insert (format "%s\n" match))
-        (when rtnall
-          (setq output nil)
-          (while (setq rtn (pop rtnall))
-            (setq output
-              (concat output "- " rtn)
-            )
-          )
-          (insert output)
         )
-      )
 
-;;;;    ) ; end of let*
+        (if (not buffer) ;; If file does not exist, error message to agenda
+          (setq rtn
+            (list
+              (format "ORG-AGENDA-ERROR: No such org-file %s" file)
+            )
+            rtnall (append rtnall rtn)
+          )
+
+          (with-current-buffer buffer
+            (unless (derived-mode-p 'org-mode)
+              (error "Agenda file %s is not in Org mode" file)
+            )
+
+            (save-excursion
+              (save-restriction
+                (if (eq buffer org-agenda-restrict)
+                  (narrow-to-region
+                    org-agenda-restrict-begin
+                    org-agenda-restrict-end
+                  )
+                  (widen)
+                )
+
+                (setq rtn
+
+                  (org-map-entries
+                    'make-link-to-here           ;; FUNC
+                    matchexpr                    ;; MATCH
+                    'file                        ;; SCOPE 'agenda
+                    'archive                     ;; SKIP
+                    'comment                     ;; SKIP
+                  )
+
+;;                  (org-scan-tags  ;; versus org-map-entries
+;;                    'make-link-to-here           ;; ACTION
+;;                    matcher                      ;; MATCHER
+;;                    org--matcher-tags-todo-only  ;; TODO-ONLY
+;;                  )
+
+                )
+
+                (setq rtnall (append rtnall rtn))
+
+              ) ; end of save-restriction
+            ) ; end of save-excursion
+          ) ; end of with-current-buffer
+        ) ; end of if
+      ) ; end of catch
+    ) ; end of while
+
+    (save-excursion
+      (if (region-active-p)
+        (delete-region (region-beginning) (region-end)))
+
+      (insert (format "%s\n" match))
+      (when rtnall
+        (setq output nil)
+        (while (setq rtn (pop rtnall))
+          (setq output
+            (concat output "- " rtn)
+          )
+        )
+        (insert output)
+      )
+    )
+
   ) ; end of defun
 
   ;;TBD: build a function that operates on each agenda file
