@@ -5772,7 +5772,7 @@ bbdb:S.*Allen
 ;;        (setq result (format "%S" headline))
       )
 
-      (org-insert-last-stored-link 1)
+;;      (org-insert-last-stored-link 1)
       (insert result)
     )
   )
