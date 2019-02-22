@@ -5770,7 +5770,6 @@ bbdb:S.*Allen
 
         (setq result (make-link-to-here))
 
-
         (call-interactively 'org-store-link)
 
         (with-temp-buffer
