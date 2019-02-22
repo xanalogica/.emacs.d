@@ -5762,7 +5762,6 @@ bbdb:S.*Allen
 ;        (setq here (org-element-context))
 ;        (setq ancestors (org-element-lineage here))
 
-
         (setq result (format "%S" here))
       )
 
