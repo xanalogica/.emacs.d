@@ -5791,7 +5791,6 @@ bbdb:S.*Allen
       (while (setq file (pop files))
         (catch 'nextfile
           (org-check-agenda-file file)
-
         )
       )
 
