@@ -5773,7 +5773,7 @@ bbdb:S.*Allen
       )
 
 ;;      (org-insert-last-stored-link 1)
-      (insert result)
+;;      (insert result)
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
