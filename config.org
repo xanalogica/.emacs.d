@@ -5814,6 +5814,13 @@ bbdb:S.*Allen
 
               (save-excursion
                 (save-restriction
+                  (if (eq buffer org-agenda-restrict)
+                    (narrow-to-region
+                      org-agenda-restrict-begin
+                      org-agenda-restrict-end
+                    )
+                    (widen)
+                  )
 
 
                 ) ; end of save-restriction
