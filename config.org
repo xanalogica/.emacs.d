@@ -5776,7 +5776,7 @@ bbdb:S.*Allen
         )
       )
 
-+INITIATIVE+DIRECTION=""
++INITIATIVE+DIRECTION="[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][epic:RD-41 Improve Jiva Deployability]]"
 
 
 
