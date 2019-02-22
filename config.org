@@ -5791,6 +5791,16 @@ bbdb:S.*Allen
       (while (setq file (pop files))
         (catch 'nextfile
           (org-check-agenda-file file)
+
+          (setq buffer
+            (if (file-exists-p file)
+              (org-get-agenda-file-buffer file)
+              (error "No such file %s" file)
+            )
+          )
+
+
+
         )
       )
 
