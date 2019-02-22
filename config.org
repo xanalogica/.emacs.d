@@ -5865,6 +5865,17 @@ bbdb:S.*Allen
 
     )
   )
+
+                    (call-interactively 'org-store-link)
+                    (with-temp-buffer
+                      (org-insert-last-stored-link 1)
+                      (setq retval (buffer-string))
+                    )
+                    retval
+
+
+
+
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
 
