@@ -5814,8 +5814,8 @@ bbdb:S.*Allen
 
 
 
-        )
-      )
+        ) ; end of catch
+      ) ; end of while
 
       (save-excursion
         (if (region-active-p)
