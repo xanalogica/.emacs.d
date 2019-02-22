@@ -5819,8 +5819,8 @@ bbdb:S.*Allen
                     )
                   )
 
-                  (push rtn rtnall)
-;;                  (setq rtnall (append rtnall rtn)) ;; CHANGE TO A PUSH      
+;;                  (push rtn rtnall)
+                  (setq rtnall (append rtnall rtn)) ;; CHANGE TO A PUSH      
 
                 ) ; end of save-restriction
               ) ; end of save-excursion
