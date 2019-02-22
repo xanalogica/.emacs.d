@@ -5769,7 +5769,7 @@ bbdb:S.*Allen
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
 
         (with-temp-buffer
-          (org-store-link 1)
+          (org-store-link)
           (org-insert-last-stored-link 1)
           (setq result (buffer-string))
         )
