@@ -5842,7 +5842,7 @@ bbdb:S.*Allen
           (delete-region (region-beginning) (region-end))
         )
         (when rtnall
-          (insert (org-agenda-finalize-entries rtnall 'tags) "\n")
+;;          (insert (org-agenda-finalize-entries rtnall 'tags) "\n")
           (insert (format "%S" rtnall))
 ;;        (insert result)
         )
