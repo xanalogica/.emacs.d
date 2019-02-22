@@ -5866,16 +5866,16 @@ bbdb:S.*Allen
     )
   )
 
-(defun make-link-to-here ()
-  "blah"
+  (defun make-link-to-here ()
+    "blah"
 
-  (call-interactively 'org-store-link)
-  (with-temp-buffer
-    (org-insert-last-stored-link 1)
-    (setq retval (buffer-string))
+    (call-interactively 'org-store-link)
+    (with-temp-buffer
+      (org-insert-last-stored-link 1)
+      (setq retval (buffer-string))
+    )
+    retval
   )
-  retval
-)
 
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
