@@ -5760,7 +5760,6 @@ bbdb:S.*Allen
 
         (setq here (org-element-property :tags headline)
 
-
         (setq result (format "%S" here))
       )
 
