@@ -5773,7 +5773,6 @@ bbdb:S.*Allen
           (org-insert-last-stored-link 1)
           (setq result (buffer-string))
         )
-
       )
 
       (insert result)
