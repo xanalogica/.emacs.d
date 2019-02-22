@@ -5781,7 +5781,7 @@ bbdb:S.*Allen
           (delete-region (region-beginning) (region-end))
         )
         (insert result) ; if no region active, just insert
-      ) ;; end of save-excursion
+      )
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
