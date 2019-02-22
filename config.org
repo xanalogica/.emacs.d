@@ -5767,7 +5767,7 @@ bbdb:S.*Allen
 
         ; Step 2: Capture a Link to that Headline
 
-(org-store-link)
+(org-store-link 0)
 (org-insert-link)
 
 
