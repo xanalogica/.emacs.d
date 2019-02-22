@@ -5783,8 +5783,8 @@ bbdb:S.*Allen
         (delete-region (region-beginning) (region-end)))
 
       (insert (format "%s\n" match))
-      (dolist (rtn rtnall)
-        (insert (format "- %s" rtn)))
+      (dolist (link rtnall)
+        (insert (format "- %s" link)))
 
     ) ; end of save-excursion
 
