@@ -5757,6 +5757,14 @@ bbdb:S.*Allen
       (save-mark-and-excursion
         (org-back-to-heading t)
         (setq headline (org-element-at-point))
+
+        (while
+          (progn
+          )
+        )
+
+
+
         (unless (member "DIRECTION" (org-element-property :tags headline))
           (outline-up-heading 1)
           (setq headline (org-element-at-point))
