@@ -5776,8 +5776,6 @@ bbdb:S.*Allen
         )
       )
 
-;;      (setq result (format "%S" (org-store-link-functions)))
-
       (if (region-active-p)
         (progn
           (delete-region (region-beginning) (region-end))
