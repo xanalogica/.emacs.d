@@ -5780,6 +5780,8 @@ bbdb:S.*Allen
         )
       )
 
+      (setq result (format "%S" (org-store-link-functions)))
+
       (insert result)
     )
   )
