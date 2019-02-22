@@ -5755,6 +5755,7 @@ bbdb:S.*Allen
 ;;;      (org-narrow-to-subtree)
 ;;;      (org-cycle 12)
 
+      (insert "Hello World")
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
