@@ -5758,7 +5758,7 @@ bbdb:S.*Allen
       (setq here (org-element-context))
       (setq ancestors (org-element-lineage here))
 
-      (setq thing (org-entry-get (point) "INITIATIVE" t))
+      (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 
       ;; does 'here' have a :DIRECTION: tag?
       ;; if so, exit loop
