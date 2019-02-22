@@ -5778,9 +5778,7 @@ bbdb:S.*Allen
 
       (save-excursion
         (if (region-active-p)
-          (progn
-            (delete-region (region-beginning) (region-end))
-          )
+          (delete-region (region-beginning) (region-end))
         )
         (insert result) ; if no region active, just insert
       ) ;; end of save-excursion
