@@ -5811,9 +5811,6 @@ bbdb:S.*Allen
 
             )
           ) ; end of if
-
-
-
         ) ; end of catch
       ) ; end of while
 
