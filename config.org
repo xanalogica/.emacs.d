@@ -5755,7 +5755,7 @@ bbdb:S.*Allen
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
       (save-mark-and-excursion
-
+        (org-back-to-heading t)
 
 
 
@@ -5780,7 +5780,6 @@ bbdb:S.*Allen
 ;        (setq here (org-element-context))
 ;        (setq ancestors (org-element-lineage here))
 
-;        (org-back-to-heading t)
 ;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 ;; (org-element-type thing)
 ;; (org-element-property :parent thing)
