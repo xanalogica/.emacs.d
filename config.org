@@ -5767,6 +5767,8 @@ bbdb:S.*Allen
       )
       (setq patt (regexp-quote patt))
 
+
+
       ;;TBD fix construction of match expression                     
 ;;      (setq match "+INITIATIVE+DIRECTION={RD-46}")
 
