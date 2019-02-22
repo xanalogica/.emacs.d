@@ -5782,6 +5782,8 @@ bbdb:S.*Allen
             matcher (cdr matcher)
       )
 
+
+
       (save-excursion
         (if (region-active-p)
           (delete-region (region-beginning) (region-end))
