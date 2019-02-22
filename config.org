@@ -5768,15 +5768,15 @@ bbdb:S.*Allen
 ;;;;          matcher (cdr matcher)
 ;;;;    )
 
-                (setq rtnall
-                  (org-map-entries
-                    'make-link-to-here  ;; FUNC
-                    matchexpr           ;; MATCH
-                    'agenda             ;; SCOPE
-                    'archive            ;; SKIP
-                    'comment            ;; SKIP
-                  )
-                )
+    (setq rtnall
+      (org-map-entries
+        'make-link-to-here  ;; FUNC
+        matchexpr           ;; MATCH
+        'agenda             ;; SCOPE
+        'archive            ;; SKIP
+        'comment            ;; SKIP
+      )
+    )
 
     (save-excursion
       (if (region-active-p)
