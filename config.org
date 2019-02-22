@@ -5755,7 +5755,7 @@ bbdb:S.*Allen
       (save-mark-and-excursion
         (org-back-to-heading t)
 
-        (while ;; move upward until we find a :DIRECTION: tagged headline
+        (while ;; move upward until we find a :DIRECTION:-tagged headline
           (not (member "DIRECTION"
             (org-element-property :tags (org-element-at-point))))
           (outline-up-heading 1)
