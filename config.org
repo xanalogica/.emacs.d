@@ -5796,8 +5796,6 @@ bbdb:S.*Allen
 
   ) ; end of defun
 
-  ;;TBD: build a function that operates on each agenda file
-
   (defun make-link-to-here ()
     "Construct an Org-Mode style of link to point."
 
