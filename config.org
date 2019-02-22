@@ -5770,7 +5770,7 @@ bbdb:S.*Allen
       )
 ;;      (setq patt (format "%S" patt))
 
-      (setq patt "Improve Jiva Deployability")
+      (setq patt "\[epic:RD-41]] Improve Jiva Deployability")
 
       (setq patt (org-make-org-heading-search-string patt))
       (setq patt (regexp-quote patt))
