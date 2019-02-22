@@ -5784,6 +5784,11 @@ bbdb:S.*Allen
       (org-compile-prefix-format 'tags)
       (org-set-sorting-strategy 'tags)
 
+      (setq files (org-agenda-files nil 'ifmode)
+	    rtnall nil)
+
+
+
       (save-excursion
         (if (region-active-p)
           (delete-region (region-beginning) (region-end))
