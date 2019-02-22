@@ -5826,8 +5826,6 @@ bbdb:S.*Allen
                     (org-scan-tags 'agenda matcher org--matcher-tags-todo-only)
                   )
 
-
-
                 ) ; end of save-restriction
               ) ; end of save-excursion
             ) ; end of with-current-buffer
