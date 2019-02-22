@@ -5764,9 +5764,6 @@ bbdb:S.*Allen
 
 ;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 
-
-
-
         (setq result (format "%S" here))
       )
 
