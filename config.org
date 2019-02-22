@@ -5772,7 +5772,6 @@ bbdb:S.*Allen
                   (org-map-entries
                     'make-link-to-here           ;; FUNC
                     matchexpr                    ;; MATCH
-;;;;                    'file                        ;; SCOPE 'agenda
                     'agenda                      ;; SCOPE 'agenda
                     'archive                     ;; SKIP
                     'comment                     ;; SKIP
