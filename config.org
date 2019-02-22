@@ -5762,14 +5762,12 @@ bbdb:S.*Allen
             (setq headline (org-element-at-point))
             (nil (member "DIRECTION" (org-element-property :tags headline)))
           )
-
-
+          (outline-up-heading 1)
         )
 
 
 
         (unless 
-          (outline-up-heading 1)
           (setq headline (org-element-at-point))
         )
 
