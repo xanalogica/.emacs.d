@@ -5850,7 +5850,6 @@ bbdb:S.*Allen
         (when rtnall
 ;;          (insert (org-agenda-finalize-entries rtnall 'tags) "\n")
 
-
           (setq output nil)
           (while (setq rtnall (pop rtnalls))
 
