@@ -5756,6 +5756,7 @@ bbdb:S.*Allen
 ;;        (org-element-at-point)
 ;;      )
     )
+
 ;;      (setq patt (format "%S" patt))
       (setq patt "RD-46")
 
