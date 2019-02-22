@@ -5769,7 +5769,7 @@ bbdb:S.*Allen
 
         (org-store-link 1)
 
-;;        (setq result (format "%S" headline))
+        (setq result (format "%S" headline))
       )
 
 ;;      (org-insert-last-stored-link 1)
