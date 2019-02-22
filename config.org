@@ -5783,6 +5783,7 @@ bbdb:S.*Allen
         (delete-region (region-beginning) (region-end)))
 
       (insert (format "%s\n" match))
+
       (when rtnall
         (setq output nil)
         (while (setq rtn (pop rtnall))
@@ -5792,6 +5793,7 @@ bbdb:S.*Allen
         )
         (insert output)
       )
+
     ) ; end of save-excursion
 
   ) ; end of defun
