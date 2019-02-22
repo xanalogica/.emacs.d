@@ -5754,13 +5754,13 @@ bbdb:S.*Allen
 
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
+      (org-back-to-heading t)
 ;      (setq here (org-element-at-point))
       (setq here (org-element-context))
       (setq ancestors (org-element-lineage here))
 
 ;;      (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 
-      (org-back-to-heading t)
 
 
 
