@@ -5759,15 +5759,6 @@ bbdb:S.*Allen
 
         (while
           (not (member "DIRECTION" (org-element-property :tags (org-element-at-point))))
-
-
-          (progn
-            (setq headline )
-            
-          )
-
-
-
 ;;          (progn
 ;;            (setq headline (org-element-at-point))
 ;;            (not (member "DIRECTION" (org-element-property :tags headline)))
