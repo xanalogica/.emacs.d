@@ -5752,10 +5752,10 @@ bbdb:S.*Allen
 ;;;        )
       )
 
-      ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
-
       (save-mark-and-excursion
         (org-back-to-heading t)
+
+        ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
         (while
           (progn
