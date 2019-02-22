@@ -5792,8 +5792,7 @@ bbdb:S.*Allen
               (list
                 (format "ORG-AGENDA-ERROR: No such org-file %s" file)
               )
-              (push rtn rtnall)
-;;              rtnall (append rtnall rtn)
+              rtnall (append rtnall rtn)
             )
 
             (with-current-buffer buffer
