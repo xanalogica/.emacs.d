@@ -5821,7 +5821,6 @@ bbdb:S.*Allen
                 )
 
                 (setq rtn
-
                   (org-map-entries
                     'make-link-to-here           ;; FUNC
                     matchexpr                    ;; MATCH
