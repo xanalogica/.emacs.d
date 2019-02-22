@@ -5756,7 +5756,7 @@ bbdb:S.*Allen
 
       (save-mark-and-excursion
         (outline-up-heading 1)
-        (setq here (org-element-at-point))
+        (setq headline (org-element-at-point))
 
         (setq result (format "%S" here))
       )
