@@ -5864,6 +5864,9 @@ bbdb:S.*Allen
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
 
+1. fix code that builds MATCH expression
+2. remove repeated prompts in collection of links
+
 ;; +INITIATIVE+DIRECTION="[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][RD-41 Improve Jiva Deployability]]"
 ;; +INITIATIVE+DIRECTION={RD-41}
 (org-tags-iew TODO-ONLY MATCHSTRING)
