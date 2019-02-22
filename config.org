@@ -5768,7 +5768,8 @@ bbdb:S.*Allen
 ;;          (org-element-at-point)
 ;;        )
       )
-      (setq patt (format "%S" patt))
+;;      (setq patt (format "%S" patt))
+      (setq patt (org-make-org-heading-search-string patt))
       (setq patt (regexp-quote patt))
       (setq match (format "+INITIATIVE+DIRECTION={%s}" patt))
 
