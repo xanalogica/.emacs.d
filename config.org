@@ -5771,6 +5771,9 @@ bbdb:S.*Allen
         (org-store-link 1)
 
         (call-interactively
+          (lambda (arg)
+            (org-store-link 1)
+          )
         )
 
 
