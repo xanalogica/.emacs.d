@@ -5809,8 +5809,8 @@ bbdb:S.*Allen
 
             (with-current-buffer buffer
 
-
-
+            )
+          ) ; end of if
 
 
 
