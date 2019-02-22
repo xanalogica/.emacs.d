@@ -5802,10 +5802,6 @@ bbdb:S.*Allen
 2. remove repeated prompts in collection of links
 
 
-        ;; does 'here' have a :DIRECTION: tag?
-        ;; if so, exit loop
-        ;; if not, set here to :parent and loop
-
 ;        (setq here (org-element-context))
 ;        (setq ancestors (org-element-lineage here))
 
