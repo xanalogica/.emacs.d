@@ -5764,6 +5764,9 @@ bbdb:S.*Allen
         (setq patt
           (org-element-property :name (org-element-at-point))
         )
+        (setq patt
+          (org-element-at-point)
+        )
       )
       (setq patt (format "%S" patt))
       (setq patt (regexp-quote patt))
