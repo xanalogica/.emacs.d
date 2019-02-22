@@ -5788,6 +5788,8 @@ bbdb:S.*Allen
      ))
 
       (if (region-active-p)
+        (progn
+        )
 
       )
 
