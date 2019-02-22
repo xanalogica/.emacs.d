@@ -5764,7 +5764,7 @@ bbdb:S.*Allen
           )
           (outline-up-heading 1)
         )
-;;        (setq result (format "%S" headline))
+        (setq result (format "%S" headline))
 
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
 
