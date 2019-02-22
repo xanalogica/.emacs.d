@@ -5827,6 +5827,8 @@ bbdb:S.*Allen
                   (setq rtn
 
                     (org-map-entries
+                      'make-link-to-here           ;; FUNC
+
                     )
 
 ;;                    (org-scan-tags  ;; versus org-map-entries
