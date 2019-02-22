@@ -5757,7 +5757,7 @@ bbdb:S.*Allen
 
         ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
-        (while
+        (while ;; move upward until we find a :DIRECTION: tagged headline
           (not (member "DIRECTION"
             (org-element-property :tags (org-element-at-point))))
           (outline-up-heading 1)
