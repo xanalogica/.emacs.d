@@ -5778,15 +5778,6 @@ bbdb:S.*Allen
                   )
                 )
 
-;;;;                (setq rtnall (append rtnall rtn))
-
-;;;;              ) ; end of save-restriction
-;;;;            ) ; end of save-excursion
-;;;;          ) ; end of with-current-buffer
-;;;;        ) ; end of if
-;;;;      ) ; end of catch
-;;;;    ) ; end of while
-
     (save-excursion
       (if (region-active-p)
         (delete-region (region-beginning) (region-end)))
