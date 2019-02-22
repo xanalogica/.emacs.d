@@ -5766,7 +5766,7 @@ bbdb:S.*Allen
         )
 ;;        (setq result (format "%S" headline))
 
-        ; Step 2: Capture a Link to that Headline We're Now Pointing To
+        ; Step 2: Capture a Link to the Headline We're Now Pointing To
 
         (with-temp-buffer
           (org-store-link 1)
