@@ -5755,7 +5755,6 @@ bbdb:S.*Allen
       (save-mark-and-excursion
         (org-back-to-heading t)
 
-        ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
         (while ;; move upward until we find a :DIRECTION: tagged headline
           (not (member "DIRECTION"
             (org-element-property :tags (org-element-at-point))))
