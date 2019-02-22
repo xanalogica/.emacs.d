@@ -5760,6 +5760,10 @@ bbdb:S.*Allen
 
 ;;      (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 
+      (org-back-to-heading t)
+
+
+
       ;; does 'here' have a :DIRECTION: tag?
       ;; if so, exit loop
       ;; if not, set here to :parent and loop
