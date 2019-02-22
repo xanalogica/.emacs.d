@@ -5782,7 +5782,7 @@ bbdb:S.*Allen
             matcher (cdr matcher)
       )
       (org-compile-prefix-format 'tags)
-
+      (org-set-sorting-strategy 'tags)
 
       (save-excursion
         (if (region-active-p)
