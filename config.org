@@ -5761,7 +5761,7 @@ bbdb:S.*Allen
           (not (member "DIRECTION"
             (org-element-property :tags (org-element-at-point))))
           (outline-up-heading 1)
-        ) ; end of while
+        )
 
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
         (setq result (make-link-to-here))
