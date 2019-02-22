@@ -5822,6 +5822,9 @@ bbdb:S.*Allen
                     (widen)
                   )
 
+                  (defun link-to-header (x)
+                  )
+
                   (setq rtn
                     (org-scan-tags
                       'agenda                      ;; ACTION
