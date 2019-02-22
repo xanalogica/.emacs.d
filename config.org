@@ -5756,8 +5756,8 @@ bbdb:S.*Allen
 
       (save-mark-and-excursion
         (outline-up-heading 1)
-
         (setq here (org-element-at-point))
+
 ;        (setq here (org-element-context))
 ;        (setq ancestors (org-element-lineage here))
 
