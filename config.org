@@ -5750,6 +5750,7 @@ bbdb:S.*Allen
           )
         )
       )
+
       (org-refile 4 nil (list headline file nil pos))
       (org-narrow-to-subtree)
       (org-cycle 12)
