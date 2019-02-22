@@ -5753,8 +5753,9 @@ bbdb:S.*Allen
       )
 
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
-      (setq here (org-element-at-point))
 
+      (setq here (org-element-at-point))
+      ;; does 'here' have a :DIRECTION: tag?
 
 
 
