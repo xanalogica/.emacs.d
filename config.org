@@ -5822,7 +5822,7 @@ bbdb:S.*Allen
                     (widen)
                   )
 
-                  (defun link-to-header (x)
+                  (defun link-to-header ()
                     "Packages up each matching headline into a link"
 
                   )
