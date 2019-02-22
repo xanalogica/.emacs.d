@@ -5757,7 +5757,7 @@ bbdb:S.*Allen
 
     )
   )
-  (global-set-key (kbd "C-c P") 'org-cliplink)
+  (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
 
 
