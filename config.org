@@ -5856,6 +5856,7 @@ bbdb:S.*Allen
               (concat "- " rtn "\n")
             )
           )
+          (insert output)
 
 ;;          (insert (format "%S" rtnall))
 ;;        (insert result)
