@@ -5867,7 +5867,7 @@ bbdb:S.*Allen
         )
       )
 
-    )
+;;;;    ) ; end of let*
   ) ; end of defun
 
   ;;TBD: build a function that operates on each agenda file
