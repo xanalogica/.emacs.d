@@ -5760,7 +5760,8 @@ bbdb:S.*Allen
             (org-element-property :tags (org-element-at-point))))
           (outline-up-heading 1)
         )
-        (setq result (make-link-to-here)) ;; capture a link to that headline
+;;        (setq result (make-link-to-here)) ;; capture a link to that headline
+        (setq result ???)
       )
 
       ;;TBD fix construction of match expression                     
