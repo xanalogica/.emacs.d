@@ -5767,7 +5767,7 @@ bbdb:S.*Allen
       (setq match "+INITIATIVE+DIRECTION={RD-46}")
 
       (setq patt "[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][epic:RD-41 Improve Jiva Deployability]]")
-      (setq patt "\\[\\[file:directions.org::\\*")
+      (setq patt "\\[\\[file:directions.org::\\*%5B")
       (setq match (format "+INITIATIVE+DIRECTION={%s};" patt))
 
       (setq matcher (org-make-tags-matcher match)
