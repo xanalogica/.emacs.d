@@ -5796,15 +5796,15 @@ bbdb:S.*Allen
 ;;;;              (error "Agenda file %s is not in Org mode" file)
 ;;;;            )
 
-            (save-excursion
-              (save-restriction
-                (if (eq buffer org-agenda-restrict)
-                  (narrow-to-region
-                    org-agenda-restrict-begin
-                    org-agenda-restrict-end
-                  )
-                  (widen)
-                )
+;;;;            (save-excursion
+;;;;              (save-restriction
+;;;;                (if (eq buffer org-agenda-restrict)
+;;;;                  (narrow-to-region
+;;;;                    org-agenda-restrict-begin
+;;;;                    org-agenda-restrict-end
+;;;;                  )
+;;;;                  (widen)
+;;;;                )
 
                 (setq rtn
                   (org-map-entries
