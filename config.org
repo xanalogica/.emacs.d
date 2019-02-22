@@ -5823,6 +5823,8 @@ bbdb:S.*Allen
                   )
 
                   (defun link-to-header (x)
+                    "Packages up each matching headline into a link"
+
                   )
 
                   (setq rtn
