@@ -5767,6 +5767,15 @@ bbdb:S.*Allen
 
 
 
+        (setq result (format "%S" here))
+      )
+
+      (insert result)
+    )
+  )
+  (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
+#+END_SRC
+
         ;; does 'here' have a :DIRECTION: tag?
         ;; if so, exit loop
         ;; if not, set here to :parent and loop
@@ -5780,14 +5789,7 @@ bbdb:S.*Allen
 ;;;        (org-narrow-to-subtree)
 ;;;        (org-cycle 12)
 
-        (setq result (format "%S" here))
-      )
 
-      (insert result)
-    )
-  )
-  (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
-#+END_SRC
 
 
 * Just Notes, No Configuration
