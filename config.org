@@ -5792,7 +5792,8 @@ bbdb:S.*Allen
         (catch 'nextfile
           (org-check-agenda-file file)
 
-
+        )
+      )
 
 
       (save-excursion
