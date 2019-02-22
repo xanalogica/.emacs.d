@@ -5769,13 +5769,6 @@ bbdb:S.*Allen
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
 
         (setq result (make-link-to-here))
-
-;;        (call-interactively 'org-store-link)
-
-;;        (with-temp-buffer
-;;          (org-insert-last-stored-link 1)
-;;          (setq result (buffer-string))
-;;        )
       )
 
       (setq match "+INITIATIVE+DIRECTION={RD-41}")
