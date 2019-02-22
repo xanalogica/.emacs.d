@@ -5740,10 +5740,6 @@ bbdb:S.*Allen
     "Locate initiatives pointing to this direction and insert links to them."
     (interactive)
 
-;;;;    (let*
-;;;;      (
-;;;;      )
-
     (save-mark-and-excursion
       (org-back-to-heading t)
 
