@@ -5790,7 +5790,7 @@ bbdb:S.*Allen
       (if (region-active-p)
         (progn
         )
-        (insert result)
+        (insert result) ; if no region active, just insert
       )
 
 
