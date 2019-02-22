@@ -5824,9 +5824,9 @@ bbdb:S.*Allen
 
                   (setq rtn
                     (org-scan-tags
-                      'agenda
-                      matcher
-                      org--matcher-tags-todo-only
+                      'agenda                      ;; ACTION
+                      matcher                      ;; MATCHER
+                      org--matcher-tags-todo-only  ;; TODO-ONLY
                     )
                   )
 
