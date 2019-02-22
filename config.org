@@ -5769,7 +5769,7 @@ bbdb:S.*Allen
 
       (setq result (format "%S" here))
 
-      (insert "Hello World")
+      (insert result)
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
