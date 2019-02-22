@@ -5785,7 +5785,8 @@ bbdb:S.*Allen
       (org-set-sorting-strategy 'tags)
 
       (setq files (org-agenda-files nil 'ifmode)
-	    rtnall nil)
+	    rtnall nil
+      )
 
 
 
