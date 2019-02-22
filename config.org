@@ -5776,7 +5776,6 @@ bbdb:S.*Allen
           )
         )
 
-
 ;;        (org-store-link-props
 ;;          :type "head"
 ;;          :link (format "head:*%s" (nth 4 (org-heading-components)))
