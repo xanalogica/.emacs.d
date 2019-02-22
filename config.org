@@ -5767,10 +5767,6 @@ bbdb:S.*Allen
 
 
 
-;;        (unless 
-;;          (setq headline (org-element-at-point))
-;;        )
-
         (setq result (format "%S" headline))
       )
 
