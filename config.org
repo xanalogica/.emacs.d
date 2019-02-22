@@ -5789,9 +5789,6 @@ bbdb:S.*Allen
 ;;;        (org-narrow-to-subtree)
 ;;;        (org-cycle 12)
 
-
-
-
 * Just Notes, No Configuration
 ;;;
 ;;; (consider a "presentation" settings file)
