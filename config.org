@@ -5768,7 +5768,7 @@ bbdb:S.*Allen
 
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
 
-        (org-store-link 4)
+        (org-store-link 1)
         (with-temp-buffer
           (org-insert-last-stored-link 1)
           (setq result (buffer-string))
