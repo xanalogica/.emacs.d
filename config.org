@@ -5776,10 +5776,9 @@ bbdb:S.*Allen
         )
       )
 
-When matching properties, a number of different operators can be used to test the value of a property. Here is a complex example:
++INITIATIVE+DIRECTION=""
 
-+work-boss+PRIORITY="A"+Coffee="unlimited"+Effort<2
-         +With={Sarah|Denny}+SCHEDULED>="<2008-10-11>"
+
 
 
 
