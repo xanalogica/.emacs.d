@@ -5798,15 +5798,15 @@ bbdb:S.*Allen
         (insert (format "- %s" rtn))
       )
 
-      (when rtnall
-        (setq output nil)
-        (while (setq rtn (pop rtnall))
-          (setq output
-            (concat output "- " rtn)
-          )
-        )
-        (insert output)
-      )
+;;      (when rtnall
+;;        (setq output nil)
+;;        (while (setq rtn (pop rtnall))
+;;          (setq output
+;;            (concat output "- " rtn)
+;;          )
+;;        )
+;;        (insert output)
+;;      )
 
     ) ; end of save-excursion
 
