@@ -5782,7 +5782,7 @@ bbdb:S.*Allen
       (delete-region (region-beginning) (region-end)))
 
     (insert (format "%s\n" match))
-    (dolist (link rtnall)
+    (dolist (link links)
       (insert (format "- %s" link)))
 
   ) ; end of defun
