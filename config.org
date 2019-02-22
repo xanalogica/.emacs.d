@@ -5832,6 +5832,7 @@ bbdb:S.*Allen
                       matcher                      ;; MATCHER
                       org--matcher-tags-todo-only  ;; TODO-ONLY
                     )
+
                   )
 
                   (setq rtnall (append rtnall rtn))
