@@ -5762,7 +5762,7 @@ bbdb:S.*Allen
         )
 ;;        (setq result (make-link-to-here)) ;; capture a link to that headline
         (setq patt
-          (org-element-property :name (org-element-at-point))
+          (org-element-property :title (org-element-at-point))
         )
         (setq patt
           (org-element-at-point)
