@@ -5771,7 +5771,7 @@ bbdb:S.*Allen
 ;;          (setq headline (org-element-at-point))
 ;;        )
 
-        (setq result (format "%S" here))
+        (setq result (format "%S" headline))
       )
 
       (insert result)
