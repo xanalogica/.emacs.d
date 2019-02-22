@@ -5870,15 +5870,14 @@ bbdb:S.*Allen
   "blah"
 
   (call-interactively 'org-store-link)
-
+  (with-temp-buffer
+    (org-insert-last-stored-link 1)
+    (setq retval (buffer-string))
+  )
+  retval
 )
 
 
-                    (with-temp-buffer
-                      (org-insert-last-stored-link 1)
-                      (setq retval (buffer-string))
-                    )
-                    retval
 
 
 
