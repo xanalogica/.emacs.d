@@ -5771,7 +5771,7 @@ bbdb:S.*Allen
         (org-store-link 1)
 ;;        (with-temp-buffer
           (org-insert-last-stored-link 1)
-          (setq result (buffer-string))
+;;          (setq result (buffer-string))
 ;;        )
 
       )
