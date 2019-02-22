@@ -5755,7 +5755,7 @@ bbdb:S.*Allen
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
       (setq here (org-element-at-point))
-      (setq ancestors (org-element-lineage))
+      (setq ancestors (org-element-lineage here))
 
       ;; does 'here' have a :DIRECTION: tag?
       ;; if so, exit loop
