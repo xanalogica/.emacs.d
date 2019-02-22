@@ -5830,6 +5830,8 @@ bbdb:S.*Allen
                       'make-link-to-here           ;; FUNC
                       matcher                      ;; MATCH
                       'file                        ;; SCOPE 'agenda
+                      'archive                     ;; SKIP
+                      'comment                     ;; SKIP
                     )
 
 ;;                    (org-scan-tags  ;; versus org-map-entries
