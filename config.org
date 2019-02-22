@@ -5829,7 +5829,6 @@ bbdb:S.*Allen
                     'archive                     ;; SKIP
                     'comment                     ;; SKIP
                   )
-
                 )
 
                 (setq rtnall (append rtnall rtn))
