@@ -5790,12 +5790,11 @@ bbdb:S.*Allen
       (if (region-active-p)
         (progn
         )
-
+        (insert result)
       )
 
 
 
-      (insert result)
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
