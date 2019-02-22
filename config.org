@@ -5794,6 +5794,9 @@ bbdb:S.*Allen
 ;;;;        (insert output)
 ;;;;      )
 
+      ( dolist
+
+
       (when rtnall
         (setq output nil)
         (while (setq rtn (pop rtnall))
