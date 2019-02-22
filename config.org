@@ -5764,15 +5764,16 @@ bbdb:S.*Allen
           )
           (outline-up-heading 1)
         )
+;;        (setq result (format "%S" headline))
 
         ; Step 2: Capture a Link to that Headline
 
         (org-store-link 1)
         (with-temp-buffer
           (org-insert-last-stored-link 1)
+          (setq result 
         )
 
-        (setq result (format "%S" headline))
       )
 
 ;;      (insert result)
