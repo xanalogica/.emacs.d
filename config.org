@@ -5748,10 +5748,10 @@ bbdb:S.*Allen
           (org-element-property :tags (org-element-at-point))))
         (outline-up-heading 1)
       )
-;;      (setq result (make-link-to-here)) ;; capture a link to that headline
-      (setq patt
-        (org-element-property :title (org-element-at-point))
-      )
+      (setq result (make-link-to-here)) ;; capture a link to that headline
+;;      (setq patt
+;;        (org-element-property :title (org-element-at-point))
+;;      )
     )
 
 ;;      (setq patt (format "%S" patt))
