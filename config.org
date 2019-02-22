@@ -5826,12 +5826,14 @@ bbdb:S.*Allen
 
                   (setq rtn
 
-
-                    (org-scan-tags  ;; versus org-map-entries
-                      'make-link-to-here           ;; ACTION
-                      matcher                      ;; MATCHER
-                      org--matcher-tags-todo-only  ;; TODO-ONLY
+                    (org-map-entries
                     )
+
+;;                    (org-scan-tags  ;; versus org-map-entries
+;;                      'make-link-to-here           ;; ACTION
+;;                      matcher                      ;; MATCHER
+;;                      org--matcher-tags-todo-only  ;; TODO-ONLY
+;;                    )
 
                   )
 
