@@ -5830,12 +5830,6 @@ bbdb:S.*Allen
                     'comment                     ;; SKIP
                   )
 
-;;                  (org-scan-tags  ;; versus org-map-entries
-;;                    'make-link-to-here           ;; ACTION
-;;                    matcher                      ;; MATCHER
-;;                    org--matcher-tags-todo-only  ;; TODO-ONLY
-;;                  )
-
                 )
 
                 (setq rtnall (append rtnall rtn))
