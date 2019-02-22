@@ -5770,7 +5770,8 @@ bbdb:S.*Allen
 
         (org-store-link 1)
 
-
+        (call-interactively
+        )
 
 
 ;;        (org-store-link-props
