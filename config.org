@@ -5835,7 +5835,7 @@ bbdb:S.*Allen
           (setq output nil)
           (while (setq rtn (pop rtnall))
             (setq output
-              (concat output "- " rtn "\n")
+              (concat output "- " rtn)
             )
           )
           (insert output)
