@@ -5777,7 +5777,7 @@ bbdb:S.*Allen
 ;;      (setq patt "\\[\\[file:directions.org::\\*%5B%5Bhttps:\/")
 
 ;;      (setq patt "RD-41 Improve Jiva Deployability")           ;; WORKS
-;;      (setq match (format "+INITIATIVE+DIRECTION={%s}" patt))
+;;      (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
       (setq matcher (org-make-tags-matcher match)
             match   (car matcher)
