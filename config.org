@@ -5754,6 +5754,10 @@ bbdb:S.*Allen
 
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
+      (setq here (org-element-at-point))
+
+
+
 
 
 ;;;      (org-refile 4 nil (list headline file nil pos))
