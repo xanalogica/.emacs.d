@@ -5770,11 +5770,11 @@ bbdb:S.*Allen
 
                 (setq rtnall
                   (org-map-entries
-                    'make-link-to-here           ;; FUNC
-                    matchexpr                    ;; MATCH
-                    'agenda                      ;; SCOPE
-                    'archive                     ;; SKIP
-                    'comment                     ;; SKIP
+                    'make-link-to-here  ;; FUNC
+                    matchexpr           ;; MATCH
+                    'agenda             ;; SCOPE
+                    'archive            ;; SKIP
+                    'comment            ;; SKIP
                   )
                 )
 
