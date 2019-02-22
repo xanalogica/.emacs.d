@@ -5784,7 +5784,7 @@ bbdb:S.*Allen
           )
           (insert result) ; if no region active, just insert
         )
-      )
+      ) ;; end of save-excursion
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
