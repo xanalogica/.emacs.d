@@ -5763,10 +5763,10 @@ bbdb:S.*Allen
     (setq patt (regexp-quote patt))
     (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
-    (setq matcher (org-make-tags-matcher matchexpr)
-          match   (car matcher)
-          matcher (cdr matcher)
-    )
+;;;;    (setq matcher (org-make-tags-matcher matchexpr)
+;;;;          match   (car matcher)
+;;;;          matcher (cdr matcher)
+;;;;    )
 
     (setq files  (org-agenda-files)
           rtnall nil
