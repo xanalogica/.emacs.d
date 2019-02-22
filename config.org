@@ -5818,8 +5818,7 @@ bbdb:S.*Allen
 
                 ) ; end of save-restriction
               ) ; end of save-excursion
-            )
-
+            ) ; end of with-current-buffer
           ) ; end of if
         ) ; end of catch
       ) ; end of while
