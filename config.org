@@ -5828,7 +5828,7 @@ bbdb:S.*Allen
 
                     (org-map-entries
                       'make-link-to-here           ;; FUNC
-                      matcher                      ;; MATCHER
+                      matcher                      ;; MATCH
 
                     )
 
