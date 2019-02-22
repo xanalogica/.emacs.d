@@ -5768,7 +5768,6 @@ bbdb:S.*Allen
 ;;;;          matcher (cdr matcher)
 ;;;;    )
 
-;;;;                (setq rtn
                 (setq rtnall
                   (org-map-entries
                     'make-link-to-here           ;; FUNC
