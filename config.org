@@ -5825,7 +5825,7 @@ bbdb:S.*Allen
                   (defun link-to-header ()
                     "Packages up each matching headline into a link"
 
-                    "hello"
+                    (call-interactively 'org-store-link)
                   )
 
                   (setq rtn
