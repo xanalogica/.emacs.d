@@ -5783,13 +5783,13 @@ bbdb:S.*Allen
 ;;;;          )
 ;;;;        )
 
-        (if (not buffer) ;; If file does not exist, error message to agenda
-          (setq rtn
-            (list
-              (format "ORG-AGENDA-ERROR: No such org-file %s" file)
-            )
-            rtnall (append rtnall rtn)
-          )
+;;;;        (if (not buffer) ;; If file does not exist, error message to agenda
+;;;;          (setq rtn
+;;;;            (list
+;;;;              (format "ORG-AGENDA-ERROR: No such org-file %s" file)
+;;;;            )
+;;;;            rtnall (append rtnall rtn)
+;;;;          )
 
           (with-current-buffer buffer
             (unless (derived-mode-p 'org-mode)
