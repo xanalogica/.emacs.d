@@ -5737,7 +5737,7 @@ bbdb:S.*Allen
 
 #+BEGIN_SRC emacs-lisp
   (defun jeff/insert-initiatives ()
-    "Present My Notion Quick Reference"
+    "Locate initiatives pointing to this direction and insert links to them."
 
     (let*
       (
