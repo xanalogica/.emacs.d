@@ -5802,9 +5802,6 @@ bbdb:S.*Allen
 2. remove repeated prompts in collection of links
 
 
-;        (setq here (org-element-context))
-;        (setq ancestors (org-element-lineage here))
-
 ;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 ;; (org-element-type thing)
 ;; (org-element-property :parent thing)
