@@ -5769,7 +5769,7 @@ bbdb:S.*Allen
 ;;;      (org-narrow-to-subtree)
 ;;;      (org-cycle 12)
 
-      (setq result (format "%S" ancestors))
+      (setq result (format "%S" here))
 
       (insert result)
     )
