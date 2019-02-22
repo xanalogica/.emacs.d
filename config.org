@@ -5826,7 +5826,7 @@ bbdb:S.*Allen
 
                   (setq rtn
                     (org-scan-tags
-                      'make-link-to-here
+                      'make-link-to-here           ;; ACTION
                       matcher                      ;; MATCHER
                       org--matcher-tags-todo-only  ;; TODO-ONLY
                     )
