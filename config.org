@@ -5760,7 +5760,7 @@ bbdb:S.*Allen
         (while
           (progn
             (setq headline (org-element-at-point))
-            (is-nil-p (member "DIRECTION" (org-element-property :tags headline)))
+            (not (member "DIRECTION" (org-element-property :tags headline)))
           )
           (outline-up-heading 1)
         )
