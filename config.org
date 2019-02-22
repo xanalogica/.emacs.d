@@ -5776,9 +5776,6 @@ bbdb:S.*Allen
         )
       )
 
-;; +INITIATIVE+DIRECTION="[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][RD-41 Improve Jiva Deployability]]"
-;; +INITIATIVE+DIRECTION={RD-41}
-
       (save-excursion
         (if (region-active-p)
           (delete-region (region-beginning) (region-end))
@@ -5790,6 +5787,9 @@ bbdb:S.*Allen
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
+
+;; +INITIATIVE+DIRECTION="[[file:directions.org::*%5B%5Bhttps://karmic.zeomega.com/browse/RD-41%5D%5Bepic:RD-41%5D%5D%20Improve%20Jiva%20Deployability][RD-41 Improve Jiva Deployability]]"
+;; +INITIATIVE+DIRECTION={RD-41}
 
         ;; does 'here' have a :DIRECTION: tag?
         ;; if so, exit loop
