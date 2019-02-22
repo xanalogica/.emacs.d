@@ -5822,6 +5822,11 @@ bbdb:S.*Allen
                     (widen)
                   )
 
+                  (setq rtn
+                    (org-scan-tags 'agenda matcher org--matcher-tags-todo-only)
+                  )
+
+
 
                 ) ; end of save-restriction
               ) ; end of save-excursion
