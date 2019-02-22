@@ -5877,11 +5877,6 @@ bbdb:S.*Allen
   retval
 )
 
-
-
-
-
-
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
 
