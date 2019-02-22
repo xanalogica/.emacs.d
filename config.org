@@ -5762,7 +5762,6 @@ bbdb:S.*Allen
         (setq here (org-element-context))
         (setq ancestors (org-element-lineage here))
 
-;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 
         (setq result (format "%S" here))
       )
@@ -5777,6 +5776,7 @@ bbdb:S.*Allen
         ;; if so, exit loop
         ;; if not, set here to :parent and loop
 
+;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 ;; (org-element-type thing)
 ;; (org-element-property :parent thing)
 ;; 'headline
