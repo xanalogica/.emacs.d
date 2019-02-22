@@ -5812,8 +5812,11 @@ bbdb:S.*Allen
                 (error "Agenda file %s is not in Org mode" file)
               )
 
+              (save-excursion
+                (save-restriction
 
-
+                ) ; end of save-restriction
+              ) ; end of save-excursion
             )
 
           ) ; end of if
