@@ -5742,14 +5742,6 @@ bbdb:S.*Allen
 
     (let*
       (
-;;;        (file "~/Dropbox/Documents/Technology.org")
-;;;        (headline "Notion Static Tiling Window Manager Quick Reference")
-;;;        (pos
-;;;          (save-excursion
-;;;            (find-file file)
-;;;            (org-find-exact-headline-in-buffer headline)
-;;;          )
-;;;        )
       )
 
       (save-mark-and-excursion
