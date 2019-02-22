@@ -5843,8 +5843,9 @@ bbdb:S.*Allen
         )
         (when rtnall
           (insert (org-agenda-finalize-entries rtnall 'tags) "\n")
-        )
+          (insert (format "%S" rtnall))
 ;;        (insert result)
+        )
       )
 
     )
