@@ -5768,11 +5768,11 @@ bbdb:S.*Allen
 
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
 
-        (call-interactively
-          (lambda (arg)
-            (org-store-link 1)
-          )
-        )
+        (call-interactively 'org-store-link)
+;;          (lambda (arg)
+;;            (org-store-link 1)
+;;          )
+;;        )
 
 ;;        (org-store-link-props
 ;;          :type "head"
