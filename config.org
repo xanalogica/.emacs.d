@@ -5823,7 +5823,11 @@ bbdb:S.*Allen
                   )
 
                   (setq rtn
-                    (org-scan-tags 'agenda matcher org--matcher-tags-todo-only)
+                    (org-scan-tags
+                      'agenda
+                      matcher
+                      org--matcher-tags-todo-only
+                    )
                   )
 
                   (setq rtnall
