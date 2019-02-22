@@ -5795,6 +5795,7 @@ bbdb:S.*Allen
 ;;;;      )
 
       (dolist (rtn rtnall)
+        (insert (format "- %s" rtn))
       )
 
       (when rtnall
