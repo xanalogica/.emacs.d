@@ -5776,6 +5776,11 @@ bbdb:S.*Allen
         )
       )
 
+      (setq matcher (org-make-tags-matcher match)
+            match   (car matcher)
+            matcher (cdr matcher)
+      )
+
       (save-excursion
         (if (region-active-p)
           (delete-region (region-beginning) (region-end))
