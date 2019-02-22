@@ -5757,7 +5757,6 @@ bbdb:S.*Allen
 ;;      )
     )
 ;;      (setq patt (format "%S" patt))
-
       (setq patt "RD-46")
 
     (setq patt (regexp-quote patt))
