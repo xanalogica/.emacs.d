@@ -5769,6 +5769,7 @@ bbdb:S.*Allen
 
         (org-store-link 1)
         (with-temp-buffer
+        )
 
         (setq result (format "%S" headline))
       )
