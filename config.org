@@ -5808,6 +5808,11 @@ bbdb:S.*Allen
             )
 
             (with-current-buffer buffer
+              (unless (derived-mode-p 'org-mode)
+                (error "Agenda file %s is not in Org mode" file)
+              )
+
+
 
             )
 
