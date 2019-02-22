@@ -5778,15 +5778,12 @@ bbdb:S.*Allen
       )
     )
 
-;;    (save-excursion
-      (if (region-active-p)
-        (delete-region (region-beginning) (region-end)))
+    (if (region-active-p)
+      (delete-region (region-beginning) (region-end)))
 
-      (insert (format "%s\n" match))
-      (dolist (link rtnall)
-        (insert (format "- %s" link)))
-
-;;    ) ; end of save-excursion
+    (insert (format "%s\n" match))
+    (dolist (link rtnall)
+      (insert (format "- %s" link)))
 
   ) ; end of defun
 
