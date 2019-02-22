@@ -5841,7 +5841,6 @@ bbdb:S.*Allen
         (if (region-active-p)
           (delete-region (region-beginning) (region-end))
         )
-
         (when rtnall
           (insert (org-agenda-finalize-entries rtnall 'tags) "\n")
         )
