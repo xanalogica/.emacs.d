@@ -5763,7 +5763,7 @@ bbdb:S.*Allen
         (setq result (make-link-to-here)) ;; capture a link to that headline
       )
 
-      (setq match "+INITIATIVE+DIRECTION={RD-41}")
+      (setq match "+INITIATIVE+DIRECTION={RD-46}")
       (setq matcher (org-make-tags-matcher match)
             match   (car matcher)
             matcher (cdr matcher)
