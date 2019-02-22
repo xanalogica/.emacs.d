@@ -5755,6 +5755,7 @@ bbdb:S.*Allen
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
       (setq here (org-element-at-point))
+
       ;; does 'here' have a :DIRECTION: tag?
       ;; if so, exit loop
       ;; if not, set here to :parent and loop
