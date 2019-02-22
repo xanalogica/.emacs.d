@@ -5828,9 +5828,9 @@ bbdb:S.*Allen
                     (call-interactively 'org-store-link)
                     (with-temp-buffer
                       (org-insert-last-stored-link 1)
-                      (setq result (buffer-string))
+                      (setq retval (buffer-string))
                     )
-
+                    retval
                   )
 
                   (setq rtn
