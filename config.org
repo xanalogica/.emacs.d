@@ -5785,10 +5785,6 @@ bbdb:S.*Allen
           (insert result) ; if no region active, just insert
         )
       )
-
-
-
-
     )
   )
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
