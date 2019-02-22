@@ -5768,9 +5768,9 @@ bbdb:S.*Allen
 ;;;;          matcher (cdr matcher)
 ;;;;    )
 
-    (setq files  (org-agenda-files)
-          rtnall nil
-    )
+;;;;    (setq files  (org-agenda-files)
+;;;;          rtnall nil
+;;;;    )
 
     (while (setq file (pop files))
       (catch 'nextfile
