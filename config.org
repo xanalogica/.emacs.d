@@ -5812,7 +5812,7 @@ bbdb:S.*Allen
                     'make-link-to-here           ;; FUNC
                     matchexpr                    ;; MATCH
 ;;;;                    'file                        ;; SCOPE 'agenda
-                    'agenda                        ;; SCOPE 'agenda
+                    'agenda                      ;; SCOPE 'agenda
                     'archive                     ;; SKIP
                     'comment                     ;; SKIP
                   )
