@@ -5868,10 +5868,12 @@ bbdb:S.*Allen
 
 (defun make-link-to-here ()
   "blah"
+
+  (call-interactively 'org-store-link)
+
 )
 
 
-                    (call-interactively 'org-store-link)
                     (with-temp-buffer
                       (org-insert-last-stored-link 1)
                       (setq retval (buffer-string))
