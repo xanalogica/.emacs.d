@@ -5755,36 +5755,31 @@ bbdb:S.*Allen
       ; Step 1: Ascend tree to find nearest headline with :DIRECTION: tag
 
       (save-mark-and-excursion
+        (org-back-to-heading t)
+;        (setq here (org-element-at-point))
+        (setq here (org-element-context))
+        (setq ancestors (org-element-lineage here))
 
-
-
-      )
-
-
-      (org-back-to-heading t)
-;      (setq here (org-element-at-point))
-      (setq here (org-element-context))
-      (setq ancestors (org-element-lineage here))
-
-;;      (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
+;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
 
 
 
 
-      ;; does 'here' have a :DIRECTION: tag?
-      ;; if so, exit loop
-      ;; if not, set here to :parent and loop
+        ;; does 'here' have a :DIRECTION: tag?
+        ;; if so, exit loop
+        ;; if not, set here to :parent and loop
 
 ;; (org-element-type thing)
 ;; (org-element-property :parent thing)
 ;; 'headline
 
 
-;;;      (org-refile 4 nil (list headline file nil pos))
-;;;      (org-narrow-to-subtree)
-;;;      (org-cycle 12)
+;;;        (org-refile 4 nil (list headline file nil pos))
+;;;        (org-narrow-to-subtree)
+;;;        (org-cycle 12)
 
-      (setq result (format "%S" here))
+        (setq result (format "%S" here))
+      )
 
       (insert result)
     )
