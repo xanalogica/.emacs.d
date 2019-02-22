@@ -5824,17 +5824,6 @@ bbdb:S.*Allen
                     (widen)
                   )
 
-;;                  (defun link-to-header ()
-;;                    "Packages up each matching headline into a link"
-;;
-;;                    (call-interactively 'org-store-link)
-;;                    (with-temp-buffer
-;;                      (org-insert-last-stored-link 1)
-;;                      (setq retval (buffer-string))
-;;                    )
-;;                    retval
-;;                  )
-
                   (setq rtn
                     (org-scan-tags
                       'make-link-to-here
