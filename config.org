@@ -5782,8 +5782,8 @@ bbdb:S.*Allen
             (delete-region (region-beginning) (region-end))
 ;;            (goto-char (region-beginning))
           )
-          (insert result) ; if no region active, just insert
         )
+        (insert result) ; if no region active, just insert
       ) ;; end of save-excursion
     )
   )
