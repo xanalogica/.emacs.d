@@ -5773,7 +5773,7 @@ bbdb:S.*Allen
 ;;      (org-set-sorting-strategy 'tags)
 
       (setq files  (org-agenda-files)
-	        rtnall nil
+            rtnall nil
       )
 
       (while (setq file (pop files))
