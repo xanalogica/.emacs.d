@@ -5845,6 +5845,7 @@ bbdb:S.*Allen
 
       (save-excursion
         (if (region-active-p)  (delete-region (region-beginning) (region-end)))
+
         (when rtnall
           (setq output nil)
           (while (setq rtn (pop rtnall))
