@@ -5760,7 +5760,6 @@ bbdb:S.*Allen
 
       (setq patt "RD-46")
 
-;;    (setq patt (org-make-org-heading-search-string patt))
     (setq patt (regexp-quote patt))
     (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
