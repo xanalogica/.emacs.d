@@ -5758,7 +5758,7 @@ bbdb:S.*Allen
         (outline-up-heading 1)
         (setq headline (org-element-at-point))
 
-        (setq headline (org-element-property :tags headline)
+        (setq here (org-element-property :tags headline)
 
 
         (setq result (format "%S" here))
