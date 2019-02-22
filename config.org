@@ -5770,12 +5770,12 @@ bbdb:S.*Allen
 
         (setq result (make-link-to-here))
 
-        (call-interactively 'org-store-link)
+;;        (call-interactively 'org-store-link)
 
-        (with-temp-buffer
-          (org-insert-last-stored-link 1)
-          (setq result (buffer-string))
-        )
+;;        (with-temp-buffer
+;;          (org-insert-last-stored-link 1)
+;;          (setq result (buffer-string))
+;;        )
       )
 
       (setq match "+INITIATIVE+DIRECTION={RD-41}")
