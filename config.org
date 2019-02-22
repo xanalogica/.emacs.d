@@ -5776,7 +5776,7 @@ bbdb:S.*Allen
         )
       )
 
-      (setq match "+INITIATIVE+DIRECTION={RD-41}"
+      (setq match "+INITIATIVE+DIRECTION={RD-41}")
       (setq matcher (org-make-tags-matcher match)
             match   (car matcher)
             matcher (cdr matcher)
