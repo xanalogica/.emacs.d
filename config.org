@@ -5758,6 +5758,9 @@ bbdb:S.*Allen
         (outline-up-heading 1)
         (setq headline (org-element-at-point))
 
+
+
+
         (setq result (format "%S" here))
       )
 
