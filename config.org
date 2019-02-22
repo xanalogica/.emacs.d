@@ -5829,7 +5829,7 @@ bbdb:S.*Allen
 
                   (setq rtn
                     (org-scan-tags
-                      'agenda                      ;; ACTION
+                      'link-to-header ;; 'agenda                      ;; ACTION
                       matcher                      ;; MATCHER
                       org--matcher-tags-todo-only  ;; TODO-ONLY
                     )
