@@ -5838,7 +5838,7 @@ bbdb:S.*Allen
         (if (region-active-p)
           (delete-region (region-beginning) (region-end)))
 
-        (insert match)
+        (insert (format "%s\n" match))
         (when rtnall
           (setq output nil)
           (while (setq rtn (pop rtnall))
