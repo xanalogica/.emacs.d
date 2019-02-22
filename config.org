@@ -5789,10 +5789,15 @@ bbdb:S.*Allen
 
       (if (region-active-p)
         (progn
+          (delete-region $from $to)
         )
         (insert result) ; if no region active, just insert
       )
 
+     (save-excursion
+
+        (goto-char $from)
+        (insert outputStr) )) ) )
 
 
     )
