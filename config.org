@@ -5779,7 +5779,7 @@ bbdb:S.*Allen
 ;;      (setq patt "RD-41 Improve Jiva Deployability")           ;; WORKS
 ;;      (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
-      (setq matcher (org-make-tags-matcher match)
+      (setq matcher (org-make-tags-matcher matchexpr)
             match   (car matcher)
             matcher (cdr matcher)
       )
