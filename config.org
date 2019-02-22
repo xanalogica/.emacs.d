@@ -5867,7 +5867,7 @@ bbdb:S.*Allen
   )
 
   (defun make-link-to-here ()
-    "blah"
+    "Construct an Org-Mode style of link to point."
 
     (call-interactively 'org-store-link)
     (with-temp-buffer
