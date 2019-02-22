@@ -5756,6 +5756,8 @@ bbdb:S.*Allen
 
       (setq here (org-element-at-point))
       ;; does 'here' have a :DIRECTION: tag?
+      ;; if so, exit loop
+      ;; if not, set here to :parent and loop
 
 
 
