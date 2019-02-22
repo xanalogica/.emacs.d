@@ -5762,6 +5762,7 @@ bbdb:S.*Allen
       ;; if not, set here to :parent and loop
 
 ;; (org-element-type thing)
+;; (org-element-property :parent thing)
 
 
 ;;;      (org-refile 4 nil (list headline file nil pos))
