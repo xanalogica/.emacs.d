@@ -5766,7 +5766,7 @@ bbdb:S.*Allen
 
 ;;      (setq patt (org-make-org-heading-search-string patt))
       (setq patt (regexp-quote patt))
-      (setq match (format "+INITIATIVE+DIRECTION={%s}" patt))
+      (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
 
       ;;TBD fix construction of match expression                     
