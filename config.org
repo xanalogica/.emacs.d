@@ -5778,7 +5778,7 @@ bbdb:S.*Allen
       )
     )
 
-    (save-excursion
+;;    (save-excursion
       (if (region-active-p)
         (delete-region (region-beginning) (region-end)))
 
@@ -5786,7 +5786,7 @@ bbdb:S.*Allen
       (dolist (link rtnall)
         (insert (format "- %s" link)))
 
-    ) ; end of save-excursion
+;;    ) ; end of save-excursion
 
   ) ; end of defun
 
