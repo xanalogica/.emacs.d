@@ -5770,11 +5770,6 @@ bbdb:S.*Allen
 
         (call-interactively 'org-store-link)
 
-;;        (org-store-link-props
-;;          :type "head"
-;;          :link (format "head:*%s" (nth 4 (org-heading-components)))
-;;          :description (nth 4 (org-heading-components)))
-
         (with-temp-buffer
           (org-insert-last-stored-link 1)
           (setq result (buffer-string))
