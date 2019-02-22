@@ -5769,6 +5769,10 @@ bbdb:S.*Allen
         ; Step 2: Capture a Link to Headline At Which We're Now Pointing
 
         (org-store-link 1)
+
+
+
+
 ;;        (org-store-link-props
 ;;          :type "head"
 ;;          :link (format "head:*%s" (nth 4 (org-heading-components)))
