@@ -5765,7 +5765,7 @@ bbdb:S.*Allen
 
       ;;TBD fix construction of match expression                     
       (setq match "+INITIATIVE+DIRECTION={RD-46}")
-      (setq match (format "+INITIATIVE+DIRECTION=%S" result))
+      (setq match (format "+INITIATIVE+DIRECTION=%S;" result))
 
       (setq matcher (org-make-tags-matcher match)
             match   (car matcher)
