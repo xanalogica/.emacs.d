@@ -5772,16 +5772,16 @@ bbdb:S.*Allen
 ;;;;          rtnall nil
 ;;;;    )
 
-    (while (setq file (pop files))
-      (catch 'nextfile
-        (org-check-agenda-file file)
+;;;;    (while (setq file (pop files))
+;;;;      (catch 'nextfile
+;;;;        (org-check-agenda-file file)
 
-        (setq buffer
-          (if (file-exists-p file)
-            (org-get-agenda-file-buffer file)
-            (error "No such file %s" file)
-          )
-        )
+;;;;        (setq buffer
+;;;;          (if (file-exists-p file)
+;;;;            (org-get-agenda-file-buffer file)
+;;;;            (error "No such file %s" file)
+;;;;          )
+;;;;        )
 
         (if (not buffer) ;; If file does not exist, error message to agenda
           (setq rtn
