@@ -5781,6 +5781,7 @@ bbdb:S.*Allen
             match   (car matcher)
             matcher (cdr matcher)
       )
+      (setq result match)
 
       (save-excursion
         (if (region-active-p)
