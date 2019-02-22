@@ -5781,7 +5781,7 @@ bbdb:S.*Allen
             match   (car matcher)
             matcher (cdr matcher)
       )
-
+      (org-compile-prefix-format 'tags)
 
 
       (save-excursion
