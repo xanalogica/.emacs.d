@@ -5826,6 +5826,10 @@ bbdb:S.*Allen
                     (org-scan-tags 'agenda matcher org--matcher-tags-todo-only)
                   )
 
+                  (setq rtnall
+                    (append rtnall rtn)
+                  )
+
                 ) ; end of save-restriction
               ) ; end of save-excursion
             ) ; end of with-current-buffer
