@@ -5776,6 +5776,7 @@ bbdb:S.*Allen
         )
       )
 
+      (setq match ""
       (setq matcher (org-make-tags-matcher match)
             match   (car matcher)
             matcher (cdr matcher)
