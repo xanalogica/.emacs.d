@@ -5762,7 +5762,7 @@ bbdb:S.*Allen
       )
 ;;      (setq patt (format "%S" patt))
 
-      (setq patt "epic:RD-41]")
+      (setq patt "epic:RD-41\]")
 
 ;;      (setq patt (org-make-org-heading-search-string patt))
       (setq patt (regexp-quote patt))
