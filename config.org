@@ -5829,7 +5829,7 @@ bbdb:S.*Allen
                     (org-map-entries
                       'make-link-to-here           ;; FUNC
                       matcher                      ;; MATCH
-                      'file                        ;; SCOPE
+                      'file                        ;; SCOPE 'agenda
                     )
 
 ;;                    (org-scan-tags  ;; versus org-map-entries
