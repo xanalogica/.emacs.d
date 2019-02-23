@@ -5782,7 +5782,7 @@ bbdb:S.*Allen
     "Construct an Org-Mode style of link to point."
 
     (setq
-      cpltxt
+      link
         (concat
           "file:"
           (buffer-name) ;; cpltxt
