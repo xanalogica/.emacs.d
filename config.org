@@ -5842,7 +5842,7 @@ bbdb:S.*Allen
                 "NONE"
               )
           ) ; end of setq
-)
+        ) ; end of when
 )
 )
 (when (string-match "::\\'" cpltxt)
