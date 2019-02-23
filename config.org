@@ -5756,6 +5756,7 @@ bbdb:S.*Allen
 ;;      (setq patt "RD-46")
 
 ;;    (setq patt (regexp-quote patt))
+;;    (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
     (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
 ;;;;    (setq matcher (org-make-tags-matcher matchexpr)
