@@ -5841,7 +5841,7 @@ bbdb:S.*Allen
                 (nth 4 (ignore-errors (org-heading-components)))
                 "NONE"
               )
-)
+          ) ; end of setq
 )
 )
 )
