@@ -5781,11 +5781,11 @@ bbdb:S.*Allen
   (defun make-link-to-here ()
     "Construct an Org-Mode style of link to point."
 
-    (let*
-      (
+;;;;    (let*
+;;;;      (
 ;;;;        (element  (org-element-at-point))
 ;;;;        (name     (org-element-property :name element))
-      )
+;;;;      )
 
       (setq cpltxt
         (if
@@ -5814,7 +5814,7 @@ bbdb:S.*Allen
         desc
           (nth 4 (ignore-errors (org-heading-components)))
       ) ; end of setq
-    ) ; end of let*
+;;;;    ) ; end of let*
 
     (when
       (string-match "::\\'" cpltxt)
