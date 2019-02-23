@@ -5785,7 +5785,7 @@ bbdb:S.*Allen
       link
         (concat
           "file:"
-          (buffer-name) ;; cpltxt
+          (buffer-name)
           "::"
           (org-make-org-heading-search-string txt)
         ) ; end of concat
