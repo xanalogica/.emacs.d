@@ -5839,7 +5839,12 @@ bbdb:S.*Allen
               (or
                 name
                 (nth 4 (ignore-errors (org-heading-components)))
-"NONE")))))
+                "NONE"
+)
+)
+)
+)
+)
 (when (string-match "::\\'" cpltxt)
 (setq cpltxt (substring cpltxt 0 -2)))
 (setq link cpltxt)
