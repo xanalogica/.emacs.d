@@ -3744,9 +3744,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 
       ("~/Dropbox/Documents/techdocs.wiki/codequality.org" :tag . "REFILING")
--rw-r--r-- 1 jrush jrush 38787 Feb 22 21:48 
-
-
 
 rw-r--r-- 1 jrush jrush   512 Feb 21 17:25 architecture.org
 drwxr-xr-x 2 jrush jrush  4096 Feb 13 19:59 archives
