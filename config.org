@@ -5850,7 +5850,7 @@ bbdb:S.*Allen
       (setq cpltxt (substring cpltxt 0 -2))
     )
     (setq link cpltxt)
-)
+  )
 )
 )
 )
