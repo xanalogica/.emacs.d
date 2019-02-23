@@ -5786,7 +5786,7 @@ bbdb:S.*Allen
 
 ;;;    (call-interactively 'org-store-link)
 
-    	   (setq cpltxt (concat "file:"
+    (setq cpltxt (concat "file:"
 				(abbreviate-file-name
 				 (buffer-file-name (buffer-base-buffer)))))
 
