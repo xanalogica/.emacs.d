@@ -5788,8 +5788,8 @@ bbdb:S.*Allen
 
     (setq cpltxt
       (concat "file:"
-			 (abbreviate-file-name
-			  (buffer-file-name (buffer-base-buffer)))
+        (abbreviate-file-name
+        (buffer-file-name (buffer-base-buffer)))
 			 "::" (match-string 1))
 		 link cpltxt)
 
