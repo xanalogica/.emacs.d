@@ -5798,7 +5798,7 @@ bbdb:S.*Allen
             nil
           )
           ( ; clause 2
-            name
+            name            ;; if it has a name, use it
           )
 
           ( ; clause 3
