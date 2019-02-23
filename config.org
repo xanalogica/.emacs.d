@@ -5824,15 +5824,17 @@ bbdb:S.*Allen
             (null txt)
             (string-match "\\S-" txt)
           )
-          (setq cpltxt
-            (concat
-              cpltxt
-              "::"
-              (condition-case nil
-                (org-make-org-heading-search-string txt)
-                (error "")
-              ) ; end of condition-case
-            ) ; end of concat
+          (setq
+            cpltxt
+              (concat
+                cpltxt
+                "::"
+                (condition-case nil
+                  (org-make-org-heading-search-string txt)
+                  (error "")
+                ) ; end of condition-case
+              ) ; end of concat
+
             desc
               (or name
 (nth 4 (ignore-errors (org-heading-components)))
