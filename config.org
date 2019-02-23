@@ -5873,8 +5873,10 @@ bbdb:S.*Allen
       ) ; end of setq txt
 
       (setq cpltxt
-        (if (and (buffer-name)
-          (not (string-match "Untitled" (buffer-name))))
+        (if
+          (and
+            (buffer-name)
+            (not (string-match "Untitled" (buffer-name))))
 			 (buffer-name)
 		       (url-view-url t))
 	      link (url-view-url t))
