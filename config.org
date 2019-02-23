@@ -5794,7 +5794,8 @@ bbdb:S.*Allen
       (setq txt
         (cond
           ( ; clause 1
-            (org-at-heading-p) nil
+            (org-at-heading-p)
+            nil
           )
           ( ; clause 2
             name
