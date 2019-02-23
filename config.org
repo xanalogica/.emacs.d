@@ -5781,18 +5781,6 @@ bbdb:S.*Allen
   (defun make-link-to-here ()
     "Construct an Org-Mode style of link to point."
 
-;;;;    (setq cpltxt
-;;;;      (if
-;;;;        (and
-;;;;          (buffer-name)
-;;;;          (not (string-match "Untitled" (buffer-name)))
-;;;;        )
-;;;;        (buffer-name)
-;;;;        (url-view-url t)
-;;;;      )
-;;;;      link (url-view-url t)
-;;;;    )
-
     (setq
       cpltxt
         (concat
