@@ -5798,11 +5798,6 @@ bbdb:S.*Allen
     (setq retval cpltxt)
 
 
-
-
-
-
-
 ;;    (org-in-regexp "[^<]<<\\([^<>]+\\)>>[^>]" 1)
 ;;    (setq cpltxt
 ;;      (concat "file:"
