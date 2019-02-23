@@ -5810,7 +5810,7 @@ bbdb:S.*Allen
             (
               (org-at-heading-p) nil
             )
-			  (name)
+            (name)
 			  ((org-region-active-p)
 			   (buffer-substring (region-beginning) (region-end)))))
 	       (when (or (null txt) (string-match "\\S-" txt))
