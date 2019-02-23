@@ -5772,7 +5772,7 @@ bbdb:S.*Allen
     (if (region-active-p)
       (delete-region (region-beginning) (region-end)))
 
-    (insert (format "%s\n" matchexpr))
+;;    (insert (format "%s\n" matchexpr))
     (dolist (link links)
       (insert (format "- %s\n" link)))
 
