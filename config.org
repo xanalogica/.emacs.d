@@ -5810,15 +5810,15 @@ bbdb:S.*Allen
 ;;;;          (string-match "\\S-" txt)
 ;;;;        )
         (setq
-          cpltxt
-            (concat
-              cpltxt
-              "::"
-              (condition-case nil
-                (org-make-org-heading-search-string txt)
-                (error "")
-              ) ; end of condition-case
-            ) ; end of concat
+;;;;          cpltxt
+;;;;            (concat
+;;;;              cpltxt
+;;;;              "::"
+;;;;              (condition-case nil
+;;;;                (org-make-org-heading-search-string txt)
+;;;;                (error "")
+;;;;              ) ; end of condition-case
+;;;;            ) ; end of concat
 
           desc
             (or
@@ -5830,11 +5830,11 @@ bbdb:S.*Allen
 ;;;;      ) ; end of when
     ) ; end of let*
 
-    (when
-      (string-match "::\\'" cpltxt)
-      (setq cpltxt (substring cpltxt 0 -2))
-    )
-    (setq link cpltxt)
+;;;;    (when
+;;;;      (string-match "::\\'" cpltxt)
+;;;;      (setq cpltxt (substring cpltxt 0 -2))
+;;;;    )
+;;;    (setq link cpltxt)
 
 ;;;;    (setq retval desc)
     desc
