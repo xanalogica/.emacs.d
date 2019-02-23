@@ -5797,6 +5797,7 @@ bbdb:S.*Allen
       )
       link cpltxt
     )
+    (setq retval cpltxt)
 
 ;;    (setq link
 ;;      (condition-case nil
