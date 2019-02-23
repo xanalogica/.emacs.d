@@ -3742,6 +3742,33 @@ used, equivalent to the value `((nil . (:level . 1))'.
         ;; Video Television Display Selection
         ;; Video Ultrawide Display Selection
 
+
+      ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
+
+
+
+rw-r--r-- 1 jrush jrush   512 Feb 21 17:25 architecture.org
+drwxr-xr-x 2 jrush jrush  4096 Feb 13 19:59 archives
+-rw-r--r-- 1 jrush jrush 38787 Feb 22 21:48 codequality.org
+-rw-r--r-- 1 jrush jrush 16021 Feb 21 17:40 corefunctions.org
+-rw-r--r-- 1 jrush jrush  3493 Feb 21 17:44 datalifecycle.org
+-rw-r--r-- 1 jrush jrush 27997 Feb 22 22:00 deployment.org
+-rw-r--r-- 1 jrush jrush 47224 Feb 22 21:58 directions.org
+-rw-r--r-- 1 jrush jrush 14156 Feb 21 17:29 glossary.org
+drwxr-xr-x 2 jrush jrush  4096 Aug  8  2018 graphics
+-rw-r--r-- 1 jrush jrush  6863 Feb 21 17:29 home.org
+-rw-r--r-- 1 jrush jrush  5923 Feb 21 17:30 nBaremetal.org
+-rw-r--r-- 1 jrush jrush  9747 Feb 21 17:34 operations.org
+-rw-r--r-- 1 jrush jrush 13879 Feb 22 21:54 rulesengine.org
+-rw-r--r-- 1 jrush jrush  4178 Feb 21 17:34 vision.org
+jr
+
+
+
+
+
+
+
       ("~/Dropbox/Documents/Travel.org"      :tag . "REFILING")
       ("~/Dropbox/Documents/ZeOmega.org"     :tag . "REFILING")
         ;; Sentinel Entries
