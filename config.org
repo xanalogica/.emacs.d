@@ -5751,7 +5751,11 @@ bbdb:S.*Allen
           (org-element-property :tags (org-element-at-point))))
         (outline-up-heading 1)
       )
-      (setq patt (jeff/get-link-desc)) ;; capture org-link desc of headline
+      (setq patt
+        (nth 4 (ignore-errors (org-heading-components)))
+      )
+
+;;      (setq patt (jeff/get-link-desc)) ;; capture org-link desc of headline
       ; (setq patt (format "%S" patt))
       ; (setq patt "RD-46")
       ; (setq patt (make-link-to-here)) ;; capture an org-link to the headline
