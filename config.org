@@ -5799,8 +5799,8 @@ bbdb:S.*Allen
 ;;;;            (org-region-active-p)  ;; if region is active, use it as anchor
 ;;;;            (buffer-substring (region-beginning) (region-end))
 ;;;;          )
-        ) ; end of cond
-      ) ; end of setq txt
+;;;;        ) ; end of cond
+;;;;      ) ; end of setq txt
 
       (setq cpltxt
         (if
