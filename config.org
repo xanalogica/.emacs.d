@@ -5802,12 +5802,6 @@ bbdb:S.*Allen
 2. remove repeated prompts in collection of links
 
 
-;;        (setq thing (org-entry-get (point) "ISSUE-TYPE" t))
-;; (org-element-type thing)
-;; (org-element-property :parent thing)
-;; 'headline
-
-
 ;;;        (org-refile 4 nil (list headline file nil pos))
 ;;;        (org-narrow-to-subtree)
 ;;;        (org-cycle 12)
