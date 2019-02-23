@@ -5822,10 +5822,10 @@ bbdb:S.*Allen
 ;;    ) ; end of setq
 
 
-    (with-temp-buffer
-      (org-insert-last-stored-link 1)
-      (setq retval (buffer-string))
-    )
+;;;;    (with-temp-buffer
+;;;;      (org-insert-last-stored-link 1)
+;;;;      (setq retval (buffer-string))
+;;;;    )
     retval
   )
 
