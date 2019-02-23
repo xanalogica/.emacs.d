@@ -5795,7 +5795,6 @@ bbdb:S.*Allen
       )
     )
 
-
     (setq retval cpltxt)
 
 
