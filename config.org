@@ -5881,7 +5881,6 @@ bbdb:S.*Allen
           (buffer-name)
           (url-view-url t)
         )
-        cpltxt (url-view-url t)
       )
 
       (when
