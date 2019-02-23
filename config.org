@@ -5794,7 +5794,8 @@ bbdb:S.*Allen
         "::"
         (match-string 1)
       )
-		 link cpltxt)
+      link cpltxt
+    )
 
 
 
