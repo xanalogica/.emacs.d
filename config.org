@@ -5817,7 +5817,7 @@ bbdb:S.*Allen
               (buffer-substring (region-beginning) (region-end))
             )
           ) ; end of cond
-)
+        ) ; end of setq txt
               (when (or (null txt) (string-match "\\S-" txt))
               (setq cpltxt
               (concat cpltxt "::"
