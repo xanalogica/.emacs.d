@@ -5799,25 +5799,25 @@ bbdb:S.*Allen
         link (url-view-url t)
       )
 
-        (setq
-          cpltxt
-            (concat
-              "file:"
-              cpltxt
-              "::"
-              (condition-case nil
-                (org-make-org-heading-search-string txt)
-                (error "")
-              ) ; end of condition-case
-            ) ; end of concat
+      (setq
+        cpltxt
+          (concat
+            "file:"
+            cpltxt
+            "::"
+            (condition-case nil
+              (org-make-org-heading-search-string txt)
+              (error "")
+            ) ; end of condition-case
+          ) ; end of concat
 
-          desc
-            (or
+        desc
+          (or
 ;;;;              name
-              (nth 4 (ignore-errors (org-heading-components)))
+            (nth 4 (ignore-errors (org-heading-components)))
 ;;;;              "NONE"
-            )
-        ) ; end of setq
+          )
+      ) ; end of setq
 ;;;;      ) ; end of when
     ) ; end of let*
 
