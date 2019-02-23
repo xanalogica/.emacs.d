@@ -5749,9 +5749,6 @@ bbdb:S.*Allen
         (outline-up-heading 1)
       )
       (setq patt (make-link-to-here)) ;; capture an org-link to the headline
-;;      (setq patt
-;;        (org-element-property :title (org-element-at-point))
-;;      )
     )
 
 ;;      (setq patt (format "%S" patt))
