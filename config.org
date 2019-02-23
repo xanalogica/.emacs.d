@@ -3753,7 +3753,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 
 
--rw-r--r-- 1 jrush jrush 27997 Feb 22 22:00 
 -rw-r--r-- 1 jrush jrush  9747 Feb 21 17:34 operations.org
 -rw-r--r-- 1 jrush jrush 13879 Feb 22 21:54 rulesengine.org
 
