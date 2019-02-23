@@ -5801,7 +5801,8 @@ bbdb:S.*Allen
       (condition-case nil
         (prog1 (org-id-store-link)
           (setq desc
-            (or (plist-get org-store-link-plist :description) "")))
+            (or (plist-get org-store-link-plist :description) ""))
+        ) ; end of prog1
 (error
 ;; Probably before first headline, link only to file
 (concat "file:"
