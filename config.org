@@ -5758,7 +5758,6 @@ bbdb:S.*Allen
 
     (setq patt (regexp-quote patt))
     (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
-    (insert (format "%s\n" matchexpr))
 
     (setq links
       (org-map-entries
