@@ -5802,7 +5802,7 @@ bbdb:S.*Allen
           )
 
           ( ; clause 3
-            (org-region-active-p)
+            (org-region-active-p)  ;; if region is active, use it
             (buffer-substring (region-beginning) (region-end))
           )
         ) ; end of cond
