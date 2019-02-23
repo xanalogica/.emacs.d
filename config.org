@@ -5890,6 +5890,7 @@ bbdb:S.*Allen
         (setq
           cpltxt
             (concat
+              "file:"
               cpltxt
               "::"
               (condition-case nil
