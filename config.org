@@ -5840,11 +5840,8 @@ bbdb:S.*Allen
     )
     (setq link cpltxt)
 
-    (org-make-link-string link desc)
-
-
-
-    (setq retval cpltxt)
+    (setq retval (org-make-link-string link desc))
+;;    (setq retval cpltxt)
 
 
 
