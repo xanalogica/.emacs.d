@@ -5786,6 +5786,7 @@ bbdb:S.*Allen
 ;;;;        (element  (org-element-at-point))
 ;;;;        (name     (org-element-property :name element))
       )
+
       (setq cpltxt
         (if
           (and
