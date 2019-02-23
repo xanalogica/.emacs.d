@@ -5808,7 +5808,8 @@ bbdb:S.*Allen
         (setq txt
           (cond
             (
-              (org-at-heading-p) nil)
+              (org-at-heading-p) nil
+            )
 			  (name)
 			  ((org-region-active-p)
 			   (buffer-substring (region-beginning) (region-end)))))
