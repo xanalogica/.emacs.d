@@ -3744,7 +3744,6 @@ used, equivalent to the value `((nil . (:level . 1))'.
 
 
       ("~/Dropbox/Documents/techdocs.wiki/codequality.org" :tag . "REFILING")
-
       ("~/Dropbox/Documents/techdocs.wiki/corefunctions.org" :tag . "REFILING")
       ("~/Dropbox/Documents/techdocs.wiki/datalifecycle.org" :tag . "REFILING")
       ("~/Dropbox/Documents/techdocs.wiki/deployment.org" :tag . "REFILING")
