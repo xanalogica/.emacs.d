@@ -5809,10 +5809,10 @@ bbdb:S.*Allen
         (nth 4 (ignore-errors (org-heading-components)))
     ) ; end of setq
 
-    (when
-      (string-match "::\\'" cpltxt)
-      (setq cpltxt (substring cpltxt 0 -2))
-    )
+;;;;    (when
+;;;;      (string-match "::\\'" cpltxt)
+;;;;      (setq cpltxt (substring cpltxt 0 -2))
+;;;;    )
     (setq link cpltxt)
 
     (org-make-link-string link desc)
