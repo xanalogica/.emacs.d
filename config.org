@@ -5811,7 +5811,8 @@ bbdb:S.*Allen
           ;; Probably before first headline, link only to file
           (concat "file:"
             (abbreviate-file-name
-              (buffer-file-name (buffer-base-buffer))))))
+              (buffer-file-name (buffer-base-buffer)))))
+      ) ; end of condition-case
     ) ; end of setq
 
 
