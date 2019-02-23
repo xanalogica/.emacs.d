@@ -5807,11 +5807,13 @@ bbdb:S.*Allen
             )
           )
         ) ; end of prog1
-(error
-;; Probably before first headline, link only to file
-(concat "file:"
-(abbreviate-file-name
-(buffer-file-name (buffer-base-buffer))))))))
+        (error
+          ;; Probably before first headline, link only to file
+          (concat "file:"
+            (abbreviate-file-name
+              (buffer-file-name (buffer-base-buffer))))))
+    ) ; end of setq
+
 
 
 
