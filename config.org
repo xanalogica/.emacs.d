@@ -5919,23 +5919,6 @@ bbdb:S.*Allen
     (setq retval desc)
     (setq retval (org-make-link-string link desc))
 
-;;    (setq retval cpltxt)
-
-
-
-;;    (org-in-regexp "[^<]<<\\([^<>]+\\)>>[^>]" 1)
-;;    (setq cpltxt
-;;      (concat "file:"
-;;        (abbreviate-file-name
-;;          (buffer-file-name (buffer-base-buffer))
-;;        )
-;;        "::"
-;;        (match-string 1)
-;;      )
-;;      link cpltxt
-;;    )
-
-
 ;;    (setq link
 ;;      (condition-case nil
 ;;        (prog1 (org-id-store-link)
