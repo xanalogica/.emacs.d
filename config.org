@@ -5836,8 +5836,8 @@ bbdb:S.*Allen
     )
     (setq link cpltxt)
 
-    (setq retval desc)
-    retval
+;;;;    (setq retval desc)
+    desc
   )
 
 
