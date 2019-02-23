@@ -5795,7 +5795,8 @@ bbdb:S.*Allen
       )
     )
 
-    (when (org-xor org-context-in-file-links
+    (when
+      (org-xor org-context-in-file-links
 			  (equal arg '(4)))
 	     (let* ((element (org-element-at-point))
 		    (name (org-element-property :name element)))
