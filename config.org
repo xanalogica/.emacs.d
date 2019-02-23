@@ -5787,10 +5787,7 @@ bbdb:S.*Allen
           "file:"
           (buffer-name) ;; cpltxt
           "::"
-;;;;          (condition-case nil
-            (org-make-org-heading-search-string txt)
-;;;;            (error "")
-;;;;          ) ; end of condition-case
+          (org-make-org-heading-search-string txt)
         ) ; end of concat
 
       desc
