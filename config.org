@@ -5786,6 +5786,10 @@ bbdb:S.*Allen
 
 ;;;    (call-interactively 'org-store-link)
 
+    ((org-in-regexp "[^<]<<\\([^<>]+\\)>>[^>]" 1)
+
+
+
     (setq cpltxt
       (concat "file:"
         (abbreviate-file-name
