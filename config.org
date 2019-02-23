@@ -5791,7 +5791,7 @@ bbdb:S.*Allen
         "file:"
         (abbreviate-file-name
           (buffer-file-name (buffer-base-buffer))
-)
+        )
 )
 )
 
