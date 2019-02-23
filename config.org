@@ -5783,10 +5783,7 @@ bbdb:S.*Allen
 
     (setq
       link
-        (concat
-          "file:"
-          (buffer-name)
-          "::"
+        (concat "file:" (buffer-name) "::"
           (org-make-org-heading-search-string txt)
         ) ; end of concat
 
