@@ -5799,11 +5799,6 @@ bbdb:S.*Allen
         link (url-view-url t)
       )
 
-;;;;      (when
-;;;;        (or
-;;;;          (null txt)
-;;;;          (string-match "\\S-" txt)
-;;;;        )
         (setq
           cpltxt
             (concat
