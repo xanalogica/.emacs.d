@@ -5798,14 +5798,6 @@ bbdb:S.*Allen
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
 #+END_SRC
 
-1. fix code that builds MATCH expression
-2. remove repeated prompts in collection of links
-
-
-;;;        (org-refile 4 nil (list headline file nil pos))
-;;;        (org-narrow-to-subtree)
-;;;        (org-cycle 12)
-
 * Just Notes, No Configuration
 ;;;
 ;;; (consider a "presentation" settings file)
