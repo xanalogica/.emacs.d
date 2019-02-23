@@ -5793,14 +5793,14 @@ bbdb:S.*Allen
             (org-at-heading-p)
             nil
           )
-          ( ; clause 2
-            name            ;; if element has a name, use it as anchor
-          )
+;;;;          ( ; clause 2
+;;;;            name            ;; if element has a name, use it as anchor
+;;;;          )
 
-          ( ; clause 3
-            (org-region-active-p)  ;; if region is active, use it as anchor
-            (buffer-substring (region-beginning) (region-end))
-          )
+;;;;          ( ; clause 3
+;;;;            (org-region-active-p)  ;; if region is active, use it as anchor
+;;;;            (buffer-substring (region-beginning) (region-end))
+;;;;          )
         ) ; end of cond
       ) ; end of setq txt
 
