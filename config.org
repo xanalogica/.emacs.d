@@ -5832,7 +5832,6 @@ bbdb:S.*Allen
             )
         ) ; end of setq
       ) ; end of when
-
     ) ; end of let*
 
     (when
