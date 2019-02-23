@@ -5796,7 +5796,9 @@ bbdb:S.*Allen
           ( ; clause 1
             (org-at-heading-p) nil
           )
-          (name)
+          (
+            name
+          )
 
           ( ; clause 2
             (org-region-active-p)
