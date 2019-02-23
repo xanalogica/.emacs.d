@@ -5775,7 +5775,7 @@ bbdb:S.*Allen
 
     (insert (format "%s\n" matchexpr))
     (dolist (link links)
-      (insert (format "- %s" link "\n")))
+      (insert (format "- %s\n" link)))
 
   ) ; end of defun
 
