@@ -5848,8 +5848,6 @@ bbdb:S.*Allen
   (defun make-link-to-here ()
     "Construct an Org-Mode style of link to point."
 
-;;;    (call-interactively 'org-store-link)
-
     (let*
       (
         (element  (org-element-at-point))
@@ -5881,6 +5879,7 @@ bbdb:S.*Allen
           (buffer-name)
           (url-view-url t)
         )
+        cpltxt (url-view-url t)
       )
 
       (when
@@ -5960,6 +5959,8 @@ bbdb:S.*Allen
 ;;      ) ; end of condition-case
 ;;    ) ; end of setq
 
+
+;;;    (call-interactively 'org-store-link)
 
 ;;;;    (with-temp-buffer
 ;;;;      (org-insert-last-stored-link 1)
