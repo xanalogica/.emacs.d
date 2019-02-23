@@ -5798,7 +5798,7 @@ bbdb:S.*Allen
           )
           (name)
 
-          (
+          ( ; clause 2
             (org-region-active-p)
             (buffer-substring (region-beginning) (region-end))
           )
