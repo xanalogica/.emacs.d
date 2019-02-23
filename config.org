@@ -5820,7 +5820,10 @@ bbdb:S.*Allen
         ) ; end of setq txt
 
         (when
-          (or (null txt) (string-match "\\S-" txt))
+          (or
+            (null txt)
+            (string-match "\\S-" txt)
+          )
               (setq cpltxt
               (concat cpltxt "::"
               (condition-case nil
