@@ -5755,7 +5755,7 @@ bbdb:S.*Allen
         (nth 4 (ignore-errors (org-heading-components)))
       )
 
-;;      (setq patt (jeff/get-link-desc)) ;; capture org-link desc of headline
+      ; (setq patt (jeff/get-link-desc)) ;; capture org-link desc of headline
       ; (setq patt (format "%S" patt))
       ; (setq patt "RD-46")
       ; (setq patt (make-link-to-here)) ;; capture an org-link to the headline
