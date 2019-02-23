@@ -5757,7 +5757,6 @@ bbdb:S.*Allen
       ; (setq patt (make-link-to-here)) ;; capture an org-link to the headline
     )
 
-
 ;;    (setq patt (regexp-quote patt))
     (setq matchexpr (format "+INITIATIVE+DIRECTION={%s}" patt))
 
