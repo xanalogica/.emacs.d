@@ -5818,7 +5818,7 @@ bbdb:S.*Allen
 ;;;;        (or
 ;;;;          (null txt)
 ;;;;          (string-match "\\S-" txt)
-        )
+;;;;        )
         (setq
           cpltxt
             (concat
