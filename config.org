@@ -5800,7 +5800,7 @@ bbdb:S.*Allen
         org-context-in-file-links
         (equal arg '(4))
       )
-	     (let* ((element (org-element-at-point))
+      (let* ((element (org-element-at-point))
 		    (name (org-element-property :name element)))
 	       (setq txt (cond
 			  ((org-at-heading-p) nil)
