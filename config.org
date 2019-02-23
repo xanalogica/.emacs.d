@@ -5847,7 +5847,8 @@ bbdb:S.*Allen
     )
     (when
       (string-match "::\\'" cpltxt)
-(setq cpltxt (substring cpltxt 0 -2)))
+      (setq cpltxt (substring cpltxt 0 -2))
+    )
 (setq link cpltxt)
 )
 )
