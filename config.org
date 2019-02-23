@@ -5783,8 +5783,8 @@ bbdb:S.*Allen
 
     (let*
       (
-        (element  (org-element-at-point))
-        (name     (org-element-property :name element))
+;;;;        (element  (org-element-at-point))
+;;;;        (name     (org-element-property :name element))
       )
 ;;;;      (setq txt
 ;;;;        (cond
