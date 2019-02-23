@@ -5799,7 +5799,7 @@ bbdb:S.*Allen
 
     (setq link
       (condition-case nil
-			  (prog1 (org-id-store-link)
+        (prog1 (org-id-store-link)
 			    (setq desc (or (plist-get org-store-link-plist
 						      :description)
 					   "")))
