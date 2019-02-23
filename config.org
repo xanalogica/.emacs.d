@@ -5789,7 +5789,6 @@ bbdb:S.*Allen
       desc
         (nth 4 (ignore-errors (org-heading-components)))
     ) ; end of setq
-;;;    (setq link cpltxt)
 
     (org-make-link-string link desc)
   )
