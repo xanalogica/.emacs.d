@@ -5797,7 +5797,8 @@ bbdb:S.*Allen
       link cpltxt
     )
 
-	   (setq link (condition-case nil
+    (setq link
+      (condition-case nil
 			  (prog1 (org-id-store-link)
 			    (setq desc (or (plist-get org-store-link-plist
 						      :description)
