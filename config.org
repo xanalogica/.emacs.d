@@ -5796,11 +5796,11 @@ bbdb:S.*Allen
           ( ; clause 1
             (org-at-heading-p) nil
           )
-          (
+          ( ; clause 2
             name
           )
 
-          ( ; clause 2
+          ( ; clause 3
             (org-region-active-p)
             (buffer-substring (region-beginning) (region-end))
           )
