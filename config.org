@@ -5734,6 +5734,9 @@ bbdb:S.*Allen
 #+END_SRC
 
 ** Function to Extract Initiatives for Local Direction and Insert into Buffer
+:PROPERTIES:
+:ID:       578ae4e4-df98-4859-9c68-ac5c64d4e45b
+:END:
 
 #+BEGIN_SRC emacs-lisp
   (defun jeff/insert-initiatives ()
