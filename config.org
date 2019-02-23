@@ -5842,14 +5842,6 @@ bbdb:S.*Allen
     (nth 4 (ignore-errors (org-heading-components)))
   )
 
-
-
-
-
-
-
-
-
   (defun make-link-to-here ()
     "Construct an Org-Mode style of link to point."
 
