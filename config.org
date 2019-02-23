@@ -5824,7 +5824,11 @@ desc (or name
 "NONE")))))
 (when (string-match "::\\'" cpltxt)
 (setq cpltxt (substring cpltxt 0 -2)))
-(setq link cpltxt)))))
+(setq link cpltxt)
+)
+)
+)
+)
 
 
 
