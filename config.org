@@ -5798,11 +5798,11 @@ bbdb:S.*Allen
             nil
           )
           ( ; clause 2
-            name            ;; if element has a name, use it
+            name            ;; if element has a name, use it as anchor
           )
 
           ( ; clause 3
-            (org-region-active-p)  ;; if region is active, use it
+            (org-region-active-p)  ;; if region is active, use it as anchor
             (buffer-substring (region-beginning) (region-end))
           )
         ) ; end of cond
