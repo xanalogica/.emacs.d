@@ -5833,7 +5833,8 @@ bbdb:S.*Allen
                 (error "")
               ) ; end of condition-case
             ) ; end of concat
-            desc (or name
+            desc
+              (or name
 (nth 4 (ignore-errors (org-heading-components)))
 "NONE")))))
 (when (string-match "::\\'" cpltxt)
