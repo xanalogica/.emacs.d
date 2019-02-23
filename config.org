@@ -5793,7 +5793,7 @@ bbdb:S.*Allen
           (buffer-file-name (buffer-base-buffer))
         )
       )
-)
+    )
 
 
     (setq retval cpltxt)
