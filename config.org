@@ -5822,9 +5822,9 @@ bbdb:S.*Allen
 
           desc
             (or
-              name
+;;;;              name
               (nth 4 (ignore-errors (org-heading-components)))
-              "NONE"
+;;;;              "NONE"
             )
         ) ; end of setq
 ;;;;      ) ; end of when
