@@ -5787,6 +5787,7 @@ bbdb:S.*Allen
 ;;;    (call-interactively 'org-store-link)
 
 
+    (setq retval cpltxt)
 
 
 
@@ -5806,7 +5807,6 @@ bbdb:S.*Allen
 ;;      link cpltxt
 ;;    )
 
-    (setq retval cpltxt)
 
 ;;    (setq link
 ;;      (condition-case nil
