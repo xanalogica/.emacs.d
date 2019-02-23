@@ -5824,12 +5824,12 @@ bbdb:S.*Allen
               ) ; end of condition-case
             ) ; end of concat
 
-          desc
-            (or
-              name
-              (nth 4 (ignore-errors (org-heading-components)))
-              "NONE"
-            )
+;;;;          desc
+;;;;            (or
+;;;;              name
+;;;;              (nth 4 (ignore-errors (org-heading-components)))
+;;;;              "NONE"
+;;;;            )
         ) ; end of setq
       ) ; end of when
     ) ; end of let*
