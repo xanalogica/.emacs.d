@@ -5843,7 +5843,7 @@ bbdb:S.*Allen
               )
           ) ; end of setq
         ) ; end of when
-      )
+      ) ; end of let*
 ;;;;    ) ; end of when
     (when
       (string-match "::\\'" cpltxt)
