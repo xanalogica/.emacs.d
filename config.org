@@ -5812,19 +5812,19 @@ bbdb:S.*Allen
             )
             (name)
               ((org-region-active-p)
-			   (buffer-substring (region-beginning) (region-end)))))
-	       (when (or (null txt) (string-match "\\S-" txt))
-		 (setq cpltxt
-		       (concat cpltxt "::"
-			       (condition-case nil
-				   (org-make-org-heading-search-string txt)
-				 (error "")))
-		       desc (or name
-				(nth 4 (ignore-errors (org-heading-components)))
-				"NONE")))))
-	   (when (string-match "::\\'" cpltxt)
-	     (setq cpltxt (substring cpltxt 0 -2)))
-	   (setq link cpltxt)))))
+              (buffer-substring (region-beginning) (region-end)))))
+              (when (or (null txt) (string-match "\\S-" txt))
+              (setq cpltxt
+              (concat cpltxt "::"
+              (condition-case nil
+               (org-make-org-heading-search-string txt)
+(error "")))
+desc (or name
+(nth 4 (ignore-errors (org-heading-components)))
+"NONE")))))
+(when (string-match "::\\'" cpltxt)
+(setq cpltxt (substring cpltxt 0 -2)))
+(setq link cpltxt)))))
 
 
 
