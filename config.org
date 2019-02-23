@@ -5795,7 +5795,40 @@ bbdb:S.*Allen
       )
     )
 
+
+	   (when (org-xor org-context-in-file-links
+			  (equal arg '(4)))
+	     (let* ((element (org-element-at-point))
+		    (name (org-element-property :name element)))
+	       (setq txt (cond
+			  ((org-at-heading-p) nil)
+			  (name)
+			  ((org-region-active-p)
+			   (buffer-substring (region-beginning) (region-end)))))
+	       (when (or (null txt) (string-match "\\S-" txt))
+		 (setq cpltxt
+		       (concat cpltxt "::"
+			       (condition-case nil
+				   (org-make-org-heading-search-string txt)
+				 (error "")))
+		       desc (or name
+				(nth 4 (ignore-errors (org-heading-components)))
+				"NONE")))))
+	   (when (string-match "::\\'" cpltxt)
+	     (setq cpltxt (substring cpltxt 0 -2)))
+	   (setq link cpltxt)))))
+
+
+
+
+
+
+
+
+
     (setq retval cpltxt)
+
+
 
 
 ;;    (org-in-regexp "[^<]<<\\([^<>]+\\)>>[^>]" 1)
