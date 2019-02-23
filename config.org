@@ -5840,7 +5840,7 @@ bbdb:S.*Allen
                 name
                 (nth 4 (ignore-errors (org-heading-components)))
                 "NONE"
-)
+              )
 )
 )
 )
