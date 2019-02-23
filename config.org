@@ -5789,9 +5789,9 @@ bbdb:S.*Allen
     (org-in-regexp "[^<]<<\\([^<>]+\\)>>[^>]" 1)
     (setq cpltxt
       (concat "file:"
-        (abbreviate-file-name
+;;        (abbreviate-file-name
           (buffer-file-name (buffer-base-buffer))
-        )
+;;        )
         "::"
         (match-string 1)
       )
