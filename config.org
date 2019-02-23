@@ -5786,8 +5786,6 @@ bbdb:S.*Allen
   (defun jeff/get-link-desc ()
     "Construct an Org-Mode style of link to point."
 
-;;;    (call-interactively 'org-store-link)
-
     (let*
       (
         (element  (org-element-at-point))
