@@ -5755,7 +5755,7 @@ bbdb:S.*Allen
       (setq patt (jeff/get-link-desc)) ;; capture an org-link to the headline
     )
 
-;;      (setq patt (format "%S" patt))
+      (setq patt (format "%S" patt))
 ;;      (setq patt "RD-46")
 
 ;;    (setq patt (regexp-quote patt))
