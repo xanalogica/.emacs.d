@@ -5785,6 +5785,22 @@ bbdb:S.*Allen
     "Construct an Org-Mode style of link to point."
 
     (call-interactively 'org-store-link)
+
+
+	   (setq cpltxt
+		 (concat "file:"
+			 (abbreviate-file-name
+			  (buffer-file-name (buffer-base-buffer)))
+			 "::" (match-string 1))
+		 link cpltxt))
+
+
+
+
+
+
+
+
     (with-temp-buffer
       (org-insert-last-stored-link 1)
       (setq retval (buffer-string))
