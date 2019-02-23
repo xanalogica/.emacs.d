@@ -5802,7 +5802,7 @@ bbdb:S.*Allen
 ;;;;          (condition-case nil
             (org-make-org-heading-search-string txt)
 ;;;;            (error "")
-          ) ; end of condition-case
+;;;;          ) ; end of condition-case
         ) ; end of concat
 
       desc
