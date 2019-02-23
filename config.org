@@ -5877,7 +5877,7 @@ bbdb:S.*Allen
           (and
             (buffer-name)
             (not (string-match "Untitled" (buffer-name)))
-)
+          )
 
 			 (buffer-name)
 		       (url-view-url t))
