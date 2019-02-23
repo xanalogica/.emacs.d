@@ -5824,12 +5824,12 @@ bbdb:S.*Allen
               ) ; end of condition-case
             ) ; end of concat
 
-;;;;          desc
-;;;;            (or
-;;;;              name
-;;;;              (nth 4 (ignore-errors (org-heading-components)))
-;;;;              "NONE"
-;;;;            )
+          desc
+            (or
+              name
+              (nth 4 (ignore-errors (org-heading-components)))
+              "NONE"
+            )
         ) ; end of setq
       ) ; end of when
     ) ; end of let*
@@ -5839,6 +5839,9 @@ bbdb:S.*Allen
       (setq cpltxt (substring cpltxt 0 -2))
     )
     (setq link cpltxt)
+
+    (org-make-link-string link desc)
+
 
 
     (setq retval cpltxt)
