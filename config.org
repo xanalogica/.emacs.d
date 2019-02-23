@@ -5816,7 +5816,7 @@ bbdb:S.*Allen
               (org-region-active-p)
               (buffer-substring (region-beginning) (region-end))
             )
-) ; end of cond
+          ) ; end of cond
 )
               (when (or (null txt) (string-match "\\S-" txt))
               (setq cpltxt
