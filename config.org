@@ -5884,9 +5884,6 @@ bbdb:S.*Allen
         link (url-view-url t)
       )
 
-
-
-
       (when
         (or
           (null txt)
