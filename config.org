@@ -5881,7 +5881,7 @@ bbdb:S.*Allen
           (buffer-name)
           (url-view-url t)
         )
-        link (url-view-url t)
+;;        link (url-view-url t)
       )
 
 
