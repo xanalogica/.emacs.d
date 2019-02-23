@@ -5917,39 +5917,9 @@ bbdb:S.*Allen
 
     (setq retval link)
     (setq retval desc)
-    (setq retval (org-make-link-string link desc))
+    (setq retval )
 
-;;    (setq link
-;;      (condition-case nil
-;;        (prog1 (org-id-store-link)
-;;          (setq desc
-;;            (or
-;;              (plist-get org-store-link-plist :description)
-;;              ""
-;;            )
-;;          )
-;;        ) ; end of prog1
-;;
-;;        (error
-;;          ;; Probably before first headline, link only to file
-;;          (concat "file:"
-;;            (abbreviate-file-name
-;;              (buffer-file-name (buffer-base-buffer))
-;;            )
-;;          )
-;;        )
-;;
-;;      ) ; end of condition-case
-;;    ) ; end of setq
-
-
-;;;    (call-interactively 'org-store-link)
-
-;;;;    (with-temp-buffer
-;;;;      (org-insert-last-stored-link 1)
-;;;;      (setq retval (buffer-string))
-;;;;    )
-    retval
+    (org-make-link-string link desc)
   )
 
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
