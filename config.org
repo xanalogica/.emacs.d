@@ -5783,9 +5783,117 @@ bbdb:S.*Allen
 
   ) ; end of defun
 
+  (defun jeff/get-link-desc ()
+    "Construct an Org-Mode style of link to point."
 
-(jeff/get-link-desc)
+;;;    (call-interactively 'org-store-link)
 
+    (let*
+      (
+        (element  (org-element-at-point))
+        (name     (org-element-property :name element))
+      )
+      (setq txt
+        (cond
+          ( ; clause 1
+            (org-at-heading-p)
+            nil
+          )
+          ( ; clause 2
+            name            ;; if element has a name, use it as anchor
+          )
+
+          ( ; clause 3
+            (org-region-active-p)  ;; if region is active, use it as anchor
+            (buffer-substring (region-beginning) (region-end))
+          )
+        ) ; end of cond
+      ) ; end of setq txt
+
+      (when
+        (or
+          (null txt)
+          (string-match "\\S-" txt)
+        )
+        (setq
+          cpltxt
+            (concat
+              cpltxt
+              "::"
+              (condition-case nil
+                (org-make-org-heading-search-string txt)
+                (error "")
+              ) ; end of condition-case
+            ) ; end of concat
+
+          desc
+            (or
+              name
+              (nth 4 (ignore-errors (org-heading-components)))
+              "NONE"
+            )
+        ) ; end of setq
+      ) ; end of when
+    ) ; end of let*
+
+    (when
+      (string-match "::\\'" cpltxt)
+      (setq cpltxt (substring cpltxt 0 -2))
+    )
+    (setq link cpltxt)
+
+
+    (setq retval link)
+    (setq retval desc)
+    (setq retval (org-make-link-string link desc))
+
+;;    (setq retval cpltxt)
+
+
+
+;;    (org-in-regexp "[^<]<<\\([^<>]+\\)>>[^>]" 1)
+;;    (setq cpltxt
+;;      (concat "file:"
+;;        (abbreviate-file-name
+;;          (buffer-file-name (buffer-base-buffer))
+;;        )
+;;        "::"
+;;        (match-string 1)
+;;      )
+;;      link cpltxt
+;;    )
+
+
+;;    (setq link
+;;      (condition-case nil
+;;        (prog1 (org-id-store-link)
+;;          (setq desc
+;;            (or
+;;              (plist-get org-store-link-plist :description)
+;;              ""
+;;            )
+;;          )
+;;        ) ; end of prog1
+;;
+;;        (error
+;;          ;; Probably before first headline, link only to file
+;;          (concat "file:"
+;;            (abbreviate-file-name
+;;              (buffer-file-name (buffer-base-buffer))
+;;            )
+;;          )
+;;        )
+;;
+;;      ) ; end of condition-case
+;;    ) ; end of setq
+
+
+;;;;    (with-temp-buffer
+;;;;      (org-insert-last-stored-link 1)
+;;;;      (setq retval (buffer-string))
+;;;;    )
+    retval
+  )
 
 
 
