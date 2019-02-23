@@ -5780,7 +5780,7 @@ bbdb:S.*Allen
   ) ; end of defun
 
   (defun jeff/get-link-desc ()
-    "Construct an Org-Mode style of link to point."
+    "Obtain the description of headline to which we are positioned."
 
     (let*
       (
