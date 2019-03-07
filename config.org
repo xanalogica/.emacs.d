@@ -4385,7 +4385,7 @@ types:
          ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
        )
 
-       ("zM" "Meetings About Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
+       ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Technology Initiatives")
