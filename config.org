@@ -4388,7 +4388,7 @@ types:
        ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:MEETING:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Meetings")
+           (org-agenda-overriding-header "ZeOmega Meetings")
 ;;           (org-super-agenda-groups groups/zeomega-tech-directions)
 
            (org-agenda-prefix-format "  ")  ;; remove Category
