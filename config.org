@@ -4386,7 +4386,7 @@ types:
        )
 
        ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
-         "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
+         "+TAGS={:MEETING:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Technology Initiatives")
 ;;           (org-super-agenda-groups groups/zeomega-tech-directions)
