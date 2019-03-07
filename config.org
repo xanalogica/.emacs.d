@@ -4382,7 +4382,7 @@ types:
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
          )
-         ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
        )
 
        ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
