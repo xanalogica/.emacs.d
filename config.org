@@ -4395,7 +4395,7 @@ types:
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
          )
-         ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/Meetings.pdf")  ;; file(s)-to-export[6]
        )
 
 
