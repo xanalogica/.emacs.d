@@ -4711,7 +4711,7 @@ named for each DIRECTION value.
       )
     )
 
-    (list ':auto-multiprop non-matching ngroups)
+    (list ':auto-multiproperty non-matching ngroups)
   )
 
   (setq org-super-agenda-group-types
