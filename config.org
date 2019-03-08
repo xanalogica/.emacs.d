@@ -4372,9 +4372,6 @@ types:
          ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
        )
 
-
-
-
        ("zC" "ZeOmega Clients" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:CLIENT:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
