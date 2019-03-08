@@ -4372,6 +4372,25 @@ types:
          ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
        )
 
+
+
+
+       ("zI" "Initiatives of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
+         "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
+         ( ;; [5] list of settings local to this custom agenda view
+           (org-agenda-overriding-header "Technology Initiatives")
+;;           (org-super-agenda-groups groups/zeomega-tech-directions)
+
+           (org-agenda-prefix-format "  ")  ;; remove Category
+           (org-agenda-remove-tags t)
+;;           (org-super-agenda-unmatched-name "Other Items")
+         )
+         ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
+       )
+
+
+
+
        ("zI" "Initiatives of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
