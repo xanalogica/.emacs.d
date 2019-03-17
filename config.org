@@ -4689,10 +4689,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Questions to Ponder    :QUESTION:" :and (:tag "QUESTION" :tag "ZEOMEGA"))
 
 
-
-
-
-
       (:name "Other ZeOmega Tasks"              :tag "ZEOMEGA")
 
       (:name "Discard Pile" :discard (:not (:tag "ZEOMEGA")))
