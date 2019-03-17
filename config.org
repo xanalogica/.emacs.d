@@ -4375,8 +4375,6 @@ types:
          "+TAGS={:CLIENT:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "ZeOmega Clients")
-;;           (org-super-agenda-groups groups/zeomega-tech-directions)
-
            (org-agenda-prefix-format "  ")  ;; remove Category
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
