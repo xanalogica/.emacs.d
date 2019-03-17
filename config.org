@@ -4331,7 +4331,7 @@ types:
          ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
        )
 
-       ("pR" "Riverhood Events" agenda  ;; key[1] desc[2] type[3]
+       ("pR" "Riverhood Events" tags ;; key[1] desc[2] type[3]
          "+RIVERHOOD"  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Riverhood Events")
