@@ -4337,7 +4337,7 @@ types:
            (org-agenda-overriding-header "Riverhood Events")
 ;;           (org-super-agenda-groups groups/personal-scheduled-tasks)
 
-           (org-agenda-remove-tags t)
+;;           (org-agenda-remove-tags t)
            (org-super-agenda-unmatched-name "Other Items")
            (org-agenda-span 14)         ;; show me 14-days at a time
          )
