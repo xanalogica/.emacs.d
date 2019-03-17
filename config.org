@@ -4332,7 +4332,7 @@ types:
        )
 
        ("pR" "Riverhood Events" tags ;; key[1] desc[2] type[3]
-         "+RIVERHOOD+2NDSUN"  ;; entry match-expression[4]
+         "+RIVERHOOD+EVENT"  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Riverhood Events")
 ;;           (org-super-agenda-groups groups/personal-scheduled-tasks)
