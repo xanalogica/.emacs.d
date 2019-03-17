@@ -4339,7 +4339,7 @@ types:
 
 ;;           (org-agenda-remove-tags t)
            (org-super-agenda-unmatched-name "Other Items")
-           (org-agenda-span 14)         ;; show me 14-days at a time
+;;           (org-agenda-span 14)         ;; show me 14-days at a time
          )
          ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
