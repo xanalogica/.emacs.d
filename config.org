@@ -4342,7 +4342,7 @@ types:
            (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-span 14)         ;; show me 14-days at a time
          )
-         ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
+         ("/tmp/RiverhoodEvents.pdf")  ;; file(s)-to-export[6]
        )
 
        ("pa" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
