@@ -4678,8 +4678,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 ;;      (:auto-direction :order 99)
 
-      (:name "Tasks To Work On TODAY"           :and (:tag "HOT" :tag "ZEOMEGA"))
-
+      (:name "Tasks To Work On TODAY :HOT:"      :and (:tag "HOT" :tag "ZEOMEGA"))
       (:name "Administrative Chores  :ADMIN:"    :and (:tag "ADMIN" :tag "ZEOMEGA"))
       (:name "Corporate Events       :EVENT:"    :and (:tag "EVENT" :tag "ZEOMEGA"))
       (:name "Corporate Travel       :TRAVEL:"   :and (:tag "TRAVEL" :tag "ZEOMEGA"))
