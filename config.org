@@ -4438,6 +4438,7 @@ types:
                '(
                  "~/Dropbox/Documents/archives/ZeOmega.org_archive"
                )
+               org-agenda-files
              )
            )
 
