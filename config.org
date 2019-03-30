@@ -4418,7 +4418,6 @@ types:
          ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
        )
 
-
 ;;; add close date to entry
 ;;; 
 
