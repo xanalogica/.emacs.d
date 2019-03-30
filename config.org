@@ -4428,6 +4428,11 @@ types:
            (org-agenda-overriding-header "Finished Tasks for ZeOmega")
 
 ;;           (org-agenda-prefix-format "  ")  ;; remove Category
+
+
+           (org-agenda-prefix-format "  %-17:c%?-20t% s")
+
+
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
