@@ -4432,7 +4432,7 @@ types:
            (org-agenda-view-columns-initially t)
            (org-columns-default-format "%CLOSED(CLOSE DATE) %CATEGORY %1PRIORITY %25ITEM")
 
-           (org-agenda-skip-archived-trees to nil)
+           (org-agenda-skip-archived-trees nil)
 
 ;;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
 ;;;(add-to-list 'org-agenda-files (org-element-property :path x))
