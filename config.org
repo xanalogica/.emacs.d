@@ -4420,7 +4420,7 @@ types:
 
 
        ("zF" "Finished Tasks for ZeOmega" tags  ;; key[1] desc[2] type[3]
-         "+ZEOMEGA+TODO="DONE\"  ;; entry match-expression[4]
+         "+ZEOMEGA+TODO=\"DONE\"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Finished Tasks for ZeOmega")
 
