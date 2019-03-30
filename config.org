@@ -4429,6 +4429,10 @@ types:
 
 ;;           (org-agenda-prefix-format "  ")  ;; remove Category
            (org-agenda-prefix-format "  %-17:c %s %?-20t % s")
+
+(org-columns-default-format "%TIMESTAMP %3PRIORITY
+
+
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
