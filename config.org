@@ -4434,8 +4434,10 @@ types:
            (org-agenda-skip-archived-trees nil)
 
            (org-agenda-files
-             '(
-               "~/Dropbox/Documents/archives/ZeOmega.org_archive"
+             (append
+               '(
+                 "~/Dropbox/Documents/archives/ZeOmega.org_archive"
+               )
              )
            )
 
