@@ -4435,7 +4435,7 @@ types:
 
            (org-agenda-files
              '(
-               "~/Dropbox/Documents/techdocs.wiki/directions.org"
+               "~/Dropbox/Documents/archives/ZeOmega.org_archive"
              )
            )
 
