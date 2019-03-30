@@ -4423,6 +4423,7 @@ types:
 ;;; how to add time brackets
 ;;; add archive files to search space
 ;;; do NOT indent task titles
+;;; sort tasks by CLOSE date
 
        ("zF" "Finished Tasks for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+ZEOMEGA+TODO=\"DONE\""  ;; entry match-expression[4]
