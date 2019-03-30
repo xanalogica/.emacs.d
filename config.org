@@ -4432,6 +4432,9 @@ types:
 
 (org-columns-default-format "%TIMESTAMP %3PRIORITY %25ITEM")
 
+;; CATEGORY TIMESTAMP PRIORITY ITEM
+
+
 
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
