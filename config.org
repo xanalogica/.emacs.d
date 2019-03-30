@@ -4419,6 +4419,7 @@ types:
        )
 
 ;;; add close date to entry
+;;; add category/file of where entry is
 ;;; 
 
        ("zF" "Finished Tasks for ZeOmega" tags  ;; key[1] desc[2] type[3]
