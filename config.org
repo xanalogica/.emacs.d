@@ -4437,10 +4437,6 @@ types:
 ;;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
 ;;;(add-to-list 'org-agenda-files (org-element-property :path x))
 
-;; CATEGORY TIMESTAMP PRIORITY ITEM
-
-
-
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
