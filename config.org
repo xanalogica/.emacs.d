@@ -4429,7 +4429,7 @@ types:
 
            (org-agenda-prefix-format "  %-17:c %s %?-20t % s")
            (org-agenda-view-columns-initially t)
-           (org-columns-default-format "%CLOSED(CLOSE DATE) %CATEGORY %1PRIORITY %25ITEM")
+           (org-columns-default-format "%CLOSED(Close Date) %CATEGORY(Category) %1PRIORITY %25ITEM(Task Description)")
 
            (org-agenda-skip-archived-trees nil)
 
