@@ -4427,15 +4427,11 @@ types:
          "+ZEOMEGA+TODO=\"DONE\""  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Finished Tasks for ZeOmega")
+
            (org-agenda-prefix-format "  %-17:c %s %?-20t % s")
            (org-agenda-view-columns-initially t)
-(org-columns-default-format "%CLOSED(CLOSE DATE) %CATEGORY %1PRIORITY %25ITEM")
-
-         (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
-
-
-
-
+           (org-columns-default-format "%CLOSED(CLOSE DATE) %CATEGORY %1PRIORITY %25ITEM")
+           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
 
 ;; CATEGORY TIMESTAMP PRIORITY ITEM
 
