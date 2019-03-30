@@ -4436,6 +4436,9 @@ types:
 ;;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
 ;;;(add-to-list 'org-agenda-files (org-element-property :path x))
 
+
+
+
            (org-agenda-remove-tags t)
 ;;           (org-super-agenda-unmatched-name "Other Items")
 ;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
