@@ -4419,6 +4419,10 @@ types:
        )
 
 
+
+;;; add close date to entry
+;;; 
+
        ("zF" "Finished Tasks for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+ZEOMEGA+TODO=\"DONE\""  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
