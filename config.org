@@ -4430,7 +4430,7 @@ types:
 
 ;;           (org-agenda-prefix-format "  ")  ;; remove Category
            (org-agenda-prefix-format "  %-17:c %s %?-20t % s")
-
+           (org-agenda-view-columns-initially t)
 (org-columns-default-format "%TIMESTAMP %3PRIORITY %25ITEM")
 
 ;; CATEGORY TIMESTAMP PRIORITY ITEM
