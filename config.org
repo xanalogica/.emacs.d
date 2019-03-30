@@ -4429,8 +4429,8 @@ types:
            (org-agenda-prefix-format "  %-17:c %s %?-20t % s")
            (org-agenda-view-columns-initially t)
            (org-columns-default-format "%CLOSED(Close Date) %CATEGORY(Category) %1PRIORITY %25ITEM(Task Description)")
-           (org-agenda-sorting-strategy '(tsia-up))
-;;           (org-agenda-sorting-strategy '(todo-state-up))
+;;           (org-agenda-sorting-strategy '(tsia-up))
+           (org-agenda-sorting-strategy '(todo-state-up))
 
            (org-agenda-skip-archived-trees nil)
 
