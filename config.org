@@ -4431,7 +4431,11 @@ types:
            (org-agenda-prefix-format "  %-17:c %s %?-20t % s")
            (org-agenda-view-columns-initially t)
            (org-columns-default-format "%CLOSED(CLOSE DATE) %CATEGORY %1PRIORITY %25ITEM")
+
            (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
+
+(add-to-list 'org-agenda-files (org-element-property :path x))
+
 
 ;; CATEGORY TIMESTAMP PRIORITY ITEM
 
