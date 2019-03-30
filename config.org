@@ -4422,6 +4422,7 @@ types:
 ;;; add category/file of where entry is
 ;;; how to add time brackets
 ;;; add archive files to search space
+;;; do NOT indent task titles
 
        ("zF" "Finished Tasks for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+ZEOMEGA+TODO=\"DONE\""  ;; entry match-expression[4]
