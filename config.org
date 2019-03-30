@@ -4433,7 +4433,7 @@ types:
            (org-agenda-view-columns-initially t)
 (org-columns-default-format "%CLOSED(CLOSE DATE) %CATEGORY %1PRIORITY %25ITEM")
 
-;;           (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
+(org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
 
 
 
