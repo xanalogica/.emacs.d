@@ -4419,7 +4419,6 @@ types:
        )
 
 
-
 ;;; add close date to entry
 ;;; 
 
