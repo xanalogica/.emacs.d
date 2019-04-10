@@ -4039,12 +4039,10 @@ the information you want to see.
 https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
 
 #+BEGIN_SRC emacs-lisp
-  (use-package general
-    :load-path "~/.emacs.d/lisp/general/" ;; use my Git checkout
+  (use-package org-collector
+    :load-path "~/.emacs.d/lisp/org-collector/" ;; use my Git checkout
   )
 #+END_SRC
-
-
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (use-package org-collector
