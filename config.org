@@ -4036,6 +4036,8 @@ The ~org-collector~ package provides an extended functionality over the
 ~column view~ feature of Org-Mode.  It allows query expressions to filter out
 the information you want to see.
 
+https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
+
 #+BEGIN_SRC emacs-lisp
 ;;;  (use-package org-collector
 ;;;  )
