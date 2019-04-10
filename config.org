@@ -4044,10 +4044,6 @@ https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
   )
 #+END_SRC
 
-#+BEGIN_SRC emacs-lisp
-;;;  (use-package org-collector
-;;;  )
-#+END_SRC
 
     :load-path "~/.emacs.d/lisp/orgnav/" ;; use my Git checkout
     :bind (:map org-mode-map
