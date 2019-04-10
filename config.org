@@ -4032,6 +4032,9 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 *** org-collector for columnview tables
 
+The ~org-collector~ package provides an extended functionality over the
+~column view~ feature of Org-Mode.  It allows query expressions.
+
 #+BEGIN_SRC emacs-lisp
 ;;;  (use-package org-collector
 ;;;  )
