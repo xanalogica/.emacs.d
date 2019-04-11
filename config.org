@@ -4045,13 +4045,16 @@ https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
 #+END_SRC
 
 **** Blah 1
+:PROPERTIES:
+:amount:   1.25
+:END:
 
-#+BEGIN: propview :cols (ITEM amount)
-| ITEM                                  | amount |
-|---------------------------------------+--------|
-| "org-collector for columnview tables" |      0 |
-|---------------------------------------+--------|
-|                                       |        |
+#+BEGIN: propview :cols (ITEM AMOUNT)
+| ITEM     | amount |
+|----------+--------|
+| "Blah 1" |      0 |
+|----------+--------|
+|          |        |
 #+END:
 
 
