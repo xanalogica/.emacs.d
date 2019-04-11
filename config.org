@@ -4057,9 +4057,6 @@ https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
 |          |        |
 #+END:
 
-
-
-
 *** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
 #+BEGIN_SRC DISABLEDemacs-lisp
   (defun wicked/org-update-checkbox-count (&optional all)
