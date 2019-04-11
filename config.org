@@ -4050,9 +4050,9 @@ https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
 :END:
 
 #+BEGIN: propview :cols (ITEM AMOUNT)
-| ITEM     | amount |
+| ITEM     | AMOUNT |
 |----------+--------|
-| "Blah 1" |      0 |
+| "Blah 1" |   1.25 |
 |----------+--------|
 |          |        |
 #+END:
