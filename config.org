@@ -2639,7 +2639,7 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 )))
 
 *** org-mode
-#+BEGIN_SRC
+#+BEGIN_SRC emacs-lisp
   (setq org-image-actual-width nil)
 #+END_SRC
 
