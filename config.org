@@ -2639,6 +2639,10 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 )))
 
 *** org-mode
+
+When set to nil, try to get the width from an #+ATTR.* keyword
+and fall back on the original width if none is found.
+
 #+BEGIN_SRC emacs-lisp
   (setq org-image-actual-width nil)
 #+END_SRC
