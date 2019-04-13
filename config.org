@@ -2640,6 +2640,8 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 
 *** org-mode
 
+Presentation of Content in Org-Mode
+
 When set to nil, try to get the width from an #+ATTR.* keyword
 and fall back on the original width if none is found.
 
