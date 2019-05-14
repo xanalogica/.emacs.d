@@ -4261,7 +4261,7 @@ F Captured Info Needing Filing
     :height 1.25
   )
   (setq org-agenda-dim-blocked-tasks
-    nil)
+    t)
 #+END_SRC
 
 [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html#Face-Attributes][Face Attributes - GNU Emacs Lisp Reference Manual]]
