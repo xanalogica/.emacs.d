@@ -4337,7 +4337,11 @@ in it.
 ****** Agenda: Find Entries Tagged :UNFILED: So I Can Move Them Where They Belong
 
 This agenda collects all headlines tagged :UNFILED: regardless of whether they
-are a TODO or non-TODO and presents it as a simple list.
+are a TODO or non-TODO and presents it as a set of lists broken into the
+follow kinds:
+
+
+
 
 Note that this applies to any headline tagged :UNFILED: and that it does not
 have to be a TODO headline.
