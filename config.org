@@ -4466,14 +4466,6 @@ have to be a TODO headline.
 
 ****** Agenda: 
 
-#+BEGIN_SRC emacs-lisp :exports code :noweb yes
-  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
-  (setq org-agenda-custom-commands
-    '(
-       <<define-agenda-F-FindUnfiledEntries>>
-       <<define-agenda-R-FindRecurringTasks>>
-       <<define-agenda-$-FindItemsToPurchase>>
-
        ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:MEETING:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
@@ -4484,6 +4476,19 @@ have to be a TODO headline.
          )
          ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
        )
+
+
+
+
+
+#+BEGIN_SRC emacs-lisp :exports code :noweb yes
+  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
+  (setq org-agenda-custom-commands
+    '(
+       <<define-agenda-F-FindUnfiledEntries>>
+       <<define-agenda-R-FindRecurringTasks>>
+       <<define-agenda-$-FindItemsToPurchase>>
+
 
 ;;; do NOT indent task titles
 ;;; sort tasks by CLOSE date
