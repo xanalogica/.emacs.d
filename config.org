@@ -4563,6 +4563,11 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
+
+
+
+
+
 ****** Segmented View for "Captured Info Needing Filing"
 
 #+BEGIN_SRC emacs-lisp
