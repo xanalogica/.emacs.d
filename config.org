@@ -4341,6 +4341,7 @@ types:
 ****** Agenda: Find TODOs Tagged as Recurring Tasks
 
 #+BEGIN_SRC emacs-lisp :exports code
+
 #+END_SRC
 
 ****** blah
