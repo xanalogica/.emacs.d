@@ -4344,6 +4344,8 @@ follow kinds:
  - Collected Tasks
  - Collected Notes
 
+I also have a recurring task to periodically review this agenda view and move
+entries to where they belong.
 
 
 #+NAME: define-agenda-F-FindUnfiledEntries
