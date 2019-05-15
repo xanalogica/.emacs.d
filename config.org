@@ -4345,17 +4345,17 @@ have to be a TODO headline.
 
 #+NAME: define-agenda-R-FindRecurringTasks
 #+BEGIN_SRC emacs-lisp :exports code
-       ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
-         ( ; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Recurring/Habitual Tasks")
-           (org-super-agenda-groups groups/recurring-tasks)
+  ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
+    nil  ;; entry match-expression[4]
+    ( ; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Recurring/Habitual Tasks")
+      (org-super-agenda-groups groups/recurring-tasks)
 
-           (org-agenda-remove-tags t)
-           (org-super-agenda-unmatched-name "Other Items")
-         )
-         ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
-       )
+      (org-agenda-remove-tags t)
+      (org-super-agenda-unmatched-name "Other Items")
+    )
+    ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
+  )
 #+END_SRC
 
 ****** blah
