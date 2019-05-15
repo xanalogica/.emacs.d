@@ -4340,6 +4340,8 @@ This agenda collects all headlines tagged :UNFILED: regardless of whether they
 are a TODO or non-TODO and presents it as a set of lists broken into the
 follow kinds:
 
+ - Collected Links
+ - Collected Tasks
 
 
 
