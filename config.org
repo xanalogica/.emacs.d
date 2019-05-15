@@ -4384,6 +4384,24 @@ I need a section in index.org and ZeOmega.org for organizational tasks.
 Also note my use of the SuperAgenda Emacs module to empower my presentation
 of the collected headlines.
 
+#+BEGIN_SRC emacs-lisp
+  (setq groups/items-needing-filing  ;; presentation definition using org-super-agenda
+    '(
+       (:name "Collected Links"
+         :tag "LINK"
+       )
+
+       (:name "Collected Tasks"
+         :todo t
+       )
+
+       (:name "Collected Notes"
+         :anything t  ;; place all (prefiltered) entries under this heading
+       )
+     )
+  )
+#+END_SRC
+
 
 
 
@@ -4649,26 +4667,6 @@ list of items, usually for the daily/weekly agenda, made by the
 
 
 
-
-****** Segmented View for "Captured Info Needing Filing"
-
-#+BEGIN_SRC emacs-lisp
-  (setq groups/items-needing-filing  ;; presentation definition using org-super-agenda
-    '(
-       (:name "Collected Links"
-         :tag "LINK"
-       )
-
-       (:name "Collected Tasks"
-         :todo t
-       )
-
-       (:name "Collected Notes"
-         :anything t  ;; place all (prefiltered) entries under this heading
-       )
-     )
-  )
-#+END_SRC
 
 ****** Segmented View for "Habitual/Recurring Tasks"
 
