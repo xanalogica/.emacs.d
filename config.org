@@ -4360,7 +4360,6 @@ have to be a TODO headline.
 
 ****** blah
 
-
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
