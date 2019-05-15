@@ -4537,18 +4537,6 @@ have to be a TODO headline.
 
 ****** Agenda: 
 
-
-
-
-#+BEGIN_SRC emacs-lisp :exports code :noweb yes
-  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
-  (setq org-agenda-custom-commands
-    '(
-       <<define-agenda-F-FindUnfiledEntries>>
-       <<define-agenda-R-FindRecurringTasks>>
-       <<define-agenda-$-FindItemsToPurchase>>
-
-
        ("zb" "Backlog of Unscheduled ZeOmega Tasks" todo  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
@@ -4564,7 +4552,17 @@ have to be a TODO headline.
          )
          ("/tmp/ZeOmegaBacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
-    )
+
+
+
+#+BEGIN_SRC emacs-lisp :exports code :noweb yes
+  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
+  (setq org-agenda-custom-commands
+    '(
+       <<define-agenda-F-FindUnfiledEntries>>
+       <<define-agenda-R-FindRecurringTasks>>
+       <<define-agenda-$-FindItemsToPurchase>>
+     )
   )
 #+END_SRC
 
