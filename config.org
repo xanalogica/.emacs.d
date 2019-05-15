@@ -4362,7 +4362,18 @@ have to be a TODO headline.
 
 #+NAME: define-agenda-$-FindItemsToPurchase
 #+BEGIN_SRC emacs-lisp :exports code
+  ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
+    "+SHOP"  ;; entry match-expression[4]
+    ( ;; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Shopping List(s)")
+      (org-super-agenda-groups groups/shopping-lists)
 
+      (org-agenda-remove-tags t)
+      (org-super-agenda-unmatched-name "Other Items")
+      (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
+    )
+    ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
+  )
 #+END_SRC
 
 
@@ -4373,19 +4384,6 @@ have to be a TODO headline.
        <<define-agenda-F-FindUnfiledEntries>>
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
-
-       ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
-         "+SHOP"  ;; entry match-expression[4]
-         ( ;; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Shopping List(s)")
-           (org-super-agenda-groups groups/shopping-lists)
-
-           (org-agenda-remove-tags t)
-           (org-super-agenda-unmatched-name "Other Items")
-           (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
-         )
-         ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
-       )
 
        ("pR" "Riverhood Events" tags ;; key[1] desc[2] type[3]
          "+RIVERHOOD+EVENT"  ;; entry match-expression[4]
