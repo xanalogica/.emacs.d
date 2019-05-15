@@ -4364,8 +4364,8 @@ have to be a TODO headline.
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
     '(
-       <<declare-agenda-F-FindUnfiledEntries>>
-;;       <<declare-agenda-R-FindRecurringTasks>>
+       <<define-agenda-F-FindUnfiledEntries>>
+;;       <<define-agenda-R-FindRecurringTasks>>
 
        ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
          "+SHOP"  ;; entry match-expression[4]
