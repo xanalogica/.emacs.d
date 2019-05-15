@@ -4345,8 +4345,6 @@ follow kinds:
  - Collected Notes
 
 
-Note that this applies to any headline tagged :UNFILED: and that it does not
-have to be a TODO headline.
 
 #+NAME: define-agenda-F-FindUnfiledEntries
 #+BEGIN_SRC emacs-lisp :exports code
