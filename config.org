@@ -4358,7 +4358,7 @@ have to be a TODO headline.
   )
 #+END_SRC
 
-****** blah
+****** Agenda: Find Items I Want to Purchase
 
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
