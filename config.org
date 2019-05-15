@@ -4321,6 +4321,8 @@ types:
  - ...        - a user-defined function
 
 ***** blah
+***** blah
+***** blah
 
 
 #+BEGIN_SRC emacs-lisp :exports code
