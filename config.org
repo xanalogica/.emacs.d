@@ -4393,17 +4393,6 @@ have to be a TODO headline.
        )
 
 ****** Agenda: 
-****** Agenda: 
-
-
-
-#+BEGIN_SRC emacs-lisp :exports code :noweb yes
-  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
-  (setq org-agenda-custom-commands
-    '(
-       <<define-agenda-F-FindUnfiledEntries>>
-       <<define-agenda-R-FindRecurringTasks>>
-       <<define-agenda-$-FindItemsToPurchase>>
 
        ("pa" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
@@ -4417,6 +4406,18 @@ have to be a TODO headline.
          )
          ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
        )
+
+****** Agenda: 
+
+
+
+#+BEGIN_SRC emacs-lisp :exports code :noweb yes
+  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
+  (setq org-agenda-custom-commands
+    '(
+       <<define-agenda-F-FindUnfiledEntries>>
+       <<define-agenda-R-FindRecurringTasks>>
+       <<define-agenda-$-FindItemsToPurchase>>
 
        ("za" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
