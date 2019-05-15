@@ -4321,7 +4321,7 @@ types:
  - (func)     - a user-defined function
 
 The following global Emacs structure contains a list of defined agenda views.
-To refresh the definition, just press C-cC-c while positioned in it.
+To refresh the definition, just press C-c C-c while positioned in it.
 
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
   (setq org-agenda-custom-commands
