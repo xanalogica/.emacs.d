@@ -4362,6 +4362,7 @@ have to be a TODO headline.
 
 #+NAME: define-agenda-R-FindRecurringTasks
 #+BEGIN_SRC emacs-lisp :exports code
+
 #+END_SRC
 
 
