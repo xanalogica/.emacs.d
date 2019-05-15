@@ -4357,9 +4357,6 @@ each and every headline.  This lets me more easily move entries around.
   * Business Unclassified Entries       :UNFILED:
 #+END_SRC
 
-Also note my use of the SuperAgenda Emacs module to empower my presentation
-of the collected headlines.
-
 
 ??? and the NOSEARCH tag
 which means ???.
@@ -4383,6 +4380,9 @@ I need a section in index.org and ZeOmega.org for organizational tasks.
     ("/tmp/NeedsRefiling.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
+
+Also note my use of the SuperAgenda Emacs module to empower my presentation
+of the collected headlines.
 
 
 
