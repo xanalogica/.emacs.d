@@ -4381,7 +4381,7 @@ I need a section in index.org and ZeOmega.org for organizational tasks.
   )
 #+END_SRC
 
-Also note my use of the SuperAgenda Emacs module to empower my presentation
+Also note above my use of the SuperAgenda Emacs module to empower my presentation
 of the collected headlines.
 
 #+BEGIN_SRC emacs-lisp
