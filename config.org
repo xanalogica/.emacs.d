@@ -4324,7 +4324,7 @@ types:
 
 #+NAME: declare-agenda-F
 #+BEGIN_SRC emacs-lisp :exports code
-       ("F" "Find :UNFILED: entries" tags  ;; key[1] desc[2] type[3]
+       ("F" "ZZZ Find :UNFILED: entries" tags  ;; key[1] desc[2] type[3]
          "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
            (org-agenda-overriding-header "Items Needing Proper Filing")
