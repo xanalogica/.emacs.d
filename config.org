@@ -4323,7 +4323,6 @@ types:
 The following global Emacs structure contains a list of defined agenda views.
 
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
-  ; type: (customfn)
   (setq org-agenda-custom-commands
     '(
        <<define-agenda-F-FindUnfiledEntries>>
