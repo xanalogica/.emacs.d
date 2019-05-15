@@ -4350,7 +4350,7 @@ a headline with a :UNFILED: tag and not have to explicitly place such a tag on
 each and every headline.
 
 #+BEGIN_SRC org
-
+  * Finance Unclassified Entries :UNFILED:
 
 #+END_SRC
 
