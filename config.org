@@ -4346,18 +4346,7 @@ types:
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
   (setq org-agenda-custom-commands
     '(
-       ("F" "Find :UNFILED: entries" tags  ;; key[1] desc[2] type[3]
-         "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
-         ( ;; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "Items Needing Proper Filing")
-           (org-super-agenda-groups groups/items-needing-filing)
-
-           (org-agenda-remove-tags t)
-           (org-super-agenda-unmatched-name "Other Items")
-;;           (org-agenda-files '("~/Dropbox/Documents/index.org"))
-         )
-         ("/tmp/NeedsRefiling.pdf")  ;; file(s)-to-export[6]
-       )
+       <<declare-agenda-F>>
 
        ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
