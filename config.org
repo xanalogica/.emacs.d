@@ -4355,8 +4355,6 @@ each and every headline.
   * Personal Unclassified Entries       :UNFILED:
     * TODO Oh yeah do this
   * Business Unclassified Entries       :UNFILED:
-
-
 #+END_SRC
 
 
