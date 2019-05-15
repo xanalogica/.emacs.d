@@ -4322,6 +4322,21 @@ types:
 
 ****** Agenda View: Find Entries Tagged :UNFILED: So I Can Move Them Where They Belong
 
+#+BEGIN_SRC emacs-lisp :exports code
+       ("F" "Find :UNFILED: entries" tags  ;; key[1] desc[2] type[3]
+         "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
+         ( ;; [5] list of settings local to this custom agenda view
+           (org-agenda-overriding-header "Items Needing Proper Filing")
+           (org-super-agenda-groups groups/items-needing-filing)
+
+           (org-agenda-remove-tags t)
+           (org-super-agenda-unmatched-name "Other Items")
+;;           (org-agenda-files '("~/Dropbox/Documents/index.org"))
+         )
+         ("/tmp/NeedsRefiling.pdf")  ;; file(s)-to-export[6]
+       )
+#+END_SRC
+
 
 ****** blah
 ****** blah
