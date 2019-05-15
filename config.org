@@ -4349,6 +4349,9 @@ direct *and* inherited tags.  This allows me to collect unfiled entries under
 a headline with a :UNFILED: tag and not have to explicitly place such a tag on
 each and every headline.
 
+#+BEGIN_SRC
+#+END_SRC
+
 
 
 ??? and the NOSEARCH tag
