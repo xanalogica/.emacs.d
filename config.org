@@ -4351,6 +4351,7 @@ each and every headline.
 
 #+BEGIN_SRC org
   * Finance Unclassified Entries        :UNFILED:
+    * Cool Link                         :LINK:
   * Personal Unclassified Entries       :UNFILED:
   * Business Unclassified Entries       :UNFILED:
 
