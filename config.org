@@ -4360,6 +4360,8 @@ have to be a TODO headline.
 
 ****** Agenda: Find Items I Want to Purchase
 
+#+NAME: define-agenda-R-FindRecurringTasks
+#+BEGIN_SRC emacs-lisp :exports code
 
 
 
