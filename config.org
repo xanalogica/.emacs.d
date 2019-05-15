@@ -4318,12 +4318,12 @@ types:
  - todo-tree  - (current file only)
  - tags-tree  - (current file only)
  - occur-tree - (current file only)
- - ...        - a user-defined function
+ - (func)     - a user-defined function
 
 The following global Emacs structure contains a list of defined agenda views.
 
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
-  ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
+  ; type: (customfn)
   (setq org-agenda-custom-commands
     '(
        <<define-agenda-F-FindUnfiledEntries>>
