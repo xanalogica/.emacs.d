@@ -4342,7 +4342,7 @@ follow kinds:
 
  - Collected Links
  - Collected Tasks
-
+ - Collected Notes
 
 
 Note that this applies to any headline tagged :UNFILED: and that it does not
