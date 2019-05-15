@@ -4464,7 +4464,7 @@ have to be a TODO headline.
          ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
        )
 
-
+****** Agenda: 
 
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
   ; type: agenda|todo|search|tags|tags-todo|todo-tree|tags-tree|occur-tree|(customfn)
