@@ -4351,8 +4351,8 @@ each and every headline.
 
 #+BEGIN_SRC org
   * Finance Unclassified Entries        :UNFILED:
-  * Personal Unclassified Entries        :UNFILED:
-  * Business Unclassified Entries        :UNFILED:
+  * Personal Unclassified Entries       :UNFILED:
+  * Business Unclassified Entries       :UNFILED:
 
 
 #+END_SRC
