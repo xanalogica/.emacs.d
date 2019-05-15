@@ -4325,7 +4325,7 @@ types:
 Note that this applies to any headline tagged :UNFILED: and that it does not
 have to be a TODO headline.
 
-#+NAME: declare-agenda-FindUnfiledEntries
+#+NAME: define-agenda-FindUnfiledEntries
 #+BEGIN_SRC emacs-lisp :exports code
   ("F" "Find :UNFILED: entries" tags  ;; key[1] desc[2] type[3]
     "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
