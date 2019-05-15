@@ -4336,6 +4336,9 @@ in it.
 
 ****** Agenda: Find Entries Tagged :UNFILED: So I Can Move Them Where They Belong
 
+This agenda collects all headlines tagged :UNFILED: regardless of whether they
+are a TODO or non-TODO
+
 Note that this applies to any headline tagged :UNFILED: and that it does not
 have to be a TODO headline.
 
