@@ -4344,7 +4344,11 @@ follow kinds:
  - Collected Tasks
  - Collected Notes
 
-Note the use of the +ALLTAGS query expression, which ??? and the NOSEARCH tag
+Note the use of the +ALLTAGS query expression, which means 
+
+
+
+??? and the NOSEARCH tag
 which means ???.
 
 I also have a recurring task to periodically review this agenda view and move
