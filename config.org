@@ -4381,6 +4381,12 @@ I need a section in index.org and ZeOmega.org for organizational tasks.
   )
 #+END_SRC
 
+
+
+
+
+
+
 ****** Agenda: Find TODOs Tagged as Recurring Tasks
 
 #+NAME: define-agenda-R-FindRecurringTasks
