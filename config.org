@@ -4357,7 +4357,8 @@ each and every headline.  This lets me more easily move entries around.
   * Business Unclassified Entries       :UNFILED:
 #+END_SRC
 
-Also note my use of the SuperAgenda Emacs module 
+Also note my use of the SuperAgenda Emacs module to empower my presentation
+of the collected headlines.
 
 
 ??? and the NOSEARCH tag
