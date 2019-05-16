@@ -4708,9 +4708,6 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
   )
 #+END_SRC
 
-
-
-
 ****** Agenda: Find Work Backlog (Unscheduled Tasks)
 
 This agenda view represents work headlines marked TODO that have not yet been
