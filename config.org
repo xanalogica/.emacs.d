@@ -4757,7 +4757,8 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 Define a new auto-grouping keyword/function for Org-Super-Agenda called
 :auto-direction, that examines the multi-valued property DIRECTION of each
 agenda item and *copies* that item under each distinct agenda heading
-named for each DIRECTION value.
+named for each DIRECTION value.  Yes, this means an item can appear under
+multiple DIRECTIONs in an agenda, which is what I want.
 
 #+BEGIN_SRC emacs-lisp
   (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
