@@ -4595,8 +4595,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
   )
 #+END_SRC
 
-
-
 ****** Agenda: Find Work (Scheduled) Tasks
 
 #+NAME: define-agenda-pa-WorkScheduledTasks
