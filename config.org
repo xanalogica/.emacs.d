@@ -4502,6 +4502,12 @@ with a leading "[ ]" checkbox so I can print them and check them off.
   )
 #+END_SRC
 
+Also note my use above of the Org-SuperAgenda Emacs module to empower my
+presentation of the collected headlines.  The above reference uses the
+following elisp variable to further filter the headlines and then segregate
+the headlines into technology and other.  I may add more sections later.
+
+
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/shopping-lists
     '(
