@@ -4676,6 +4676,9 @@ SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 ****** Agenda: Find Work Backlog (Unscheduled Tasks)
 
+This agenda view represents headlines marked TODO that have not yet been
+SCHEDULED to start or given a DEADLINE due within the next 14-days.
+
 #+NAME: define-agenda-pb-PersonalTaskBacklog
 #+BEGIN_SRC emacs-lisp :exports code
        ("zb" "Backlog of Unscheduled ZeOmega Tasks" todo  ;; key[1] desc[2] type[3]
