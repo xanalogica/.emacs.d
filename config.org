@@ -4438,9 +4438,8 @@ sections:
  - Long-Term Recurring Tasks: Other items
 
 Short-term is defined as those headlines declared as Org-Mode 'habits', with
-long-team meaning it recurs but isn't strictly an Org-Mode 'habit'.
-
-See [[https://orgmode.org/manual/Tracking-your-habits.html][The Org Manual: Tracking your habits]] for an explanation of the difference.
+long-team meaning it recurs but isn't strictly an Org-Mode 'habit'.  See [[https://orgmode.org/manual/Tracking-your-habits.html][The
+Org Manual: Tracking your habits]] for an explanation of the difference.
 
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/recurring-tasks
