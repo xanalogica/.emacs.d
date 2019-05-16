@@ -4361,6 +4361,9 @@ each and every headline.  This lets me more easily move entries around.
 I also use a custom :NOSEARCH: tag to skip including some :UNFILED: entries in
 this agenda view.
 
+
+[[file:~/Dropbox/Documents/index.org::*Organize%20All%20:UNFILED:%20Entries%20Each%20Month][Organize All :UNFILED: Entries Each Month]]
+
 I defined a recurring task to periodically review this agenda view and move
 entries to where they belong. ???????????????????????? where ????????????????
 (I need a section in index.org and ZeOmega.org for organizational tasks.)
