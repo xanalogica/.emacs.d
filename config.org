@@ -4685,17 +4685,15 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 
-       (:name "Unplanned Shopping        :SHOP:"     :tag "SHOP")
-       (:name "Unplanned SysAdmin Tasks  :SYSADMIN:" :tag "SYSADMIN")
-       (:name "Unplanned Chores          :CHORE:"    :tag "CHORE")
-       (:name "Unplanned Financials      :FINANCE:"  :tag "FINANCE")
-       (:name "Unplanned Health Matters  :HEALTH:"   :tag "HEALTH")
-
+       (:name "Unplanned Shopping             :SHOP:"      :tag "SHOP")
+       (:name "Unplanned SysAdmin Tasks       :SYSADMIN:"  :tag "SYSADMIN")
+       (:name "Unplanned Chores               :CHORE:"     :tag "CHORE")
+       (:name "Unplanned Financials           :FINANCE:"   :tag "FINANCE")
+       (:name "Unplanned Health Matters       :HEALTH:"    :tag "HEALTH")
        (:name "Unscheduled Christmas Tasks    :CHRISTMAS:" :tag "CHRISTMAS")
        (:name "Unscheduled Church Activities  :CHURCH:"    :tag "CHURCH")
        (:name "Unscheduled Writings           :WRITING:"   :tag "WRITING")
        (:name "Unscheduled Items to Study     :STUDY:"     :tag "STUDY")
-
        (:name "Unplanned Social Activities    :PEOPLE:"    :tag "PEOPLE")
        (:name "Unplanned Travel               :TRAVEL:"    :tag "TRAVEL")
        (:name "Unplanned Events               :EVENT:"     :tag "EVENT")
