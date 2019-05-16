@@ -4734,7 +4734,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 
 #+BEGIN_SRC emacs-lisp
-  (setq agendagroups/zeomega-backlog  ;; presentation defn using org-super-agenda
+  (setq agendagroups/zeomega-backlog-tasks
     '(
        (:discard (:not (:tag "ZEOMEGA")))     ;; skip non-work tasks
        (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
