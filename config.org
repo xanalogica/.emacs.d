@@ -4733,8 +4733,6 @@ SCHEDULED to start or given a DEADLINE due within the next 14-days.
 #+END_SRC
 
 
-****** Segmented View for "ZeOmega Technology Directions"
-
 This agenda view represents "things I have scheduled to get done, either
 because they have a DEADLINE, or because they are tagged :HOT: meaning I need
 to work on them *today*.
