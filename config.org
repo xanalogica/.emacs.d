@@ -4560,7 +4560,7 @@ to work on them *today*.  Those that are scheduled, I limit to the next
 #+BEGIN_SRC emacs-lisp :exports code
   ("pa" "Personal Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
 
-    ;; Only TODOs scheduled or with deadlines will show because this
+    ;; Only headlines scheduled or with deadlines will show because this
     ;; is an agenda view of type 'agenda' above.  Non-scheduled headlines
     ;; will not appear.
 
