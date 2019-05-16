@@ -4700,8 +4700,9 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Unplanned Events               :EVENT:"     :tag "EVENT")
 
        (:name "(To Be Organized)"
+         :order 0
          :anything t  ;; place all remaining entries under this heading
-         :order 0)
+         )
        )
      )
   )
