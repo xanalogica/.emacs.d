@@ -4332,7 +4332,7 @@ in it.
        <<define-agenda-$-FindItemsToPurchase>>
        <<define-agenda-pR-FindRiverhoodEvents>>
        <<define-agenda-pa-PersonalScheduledTasks>>
-       <<define-agenda-pa-WorkScheduledTasks>>
+       <<define-agenda-za-WorkScheduledTasks>>
      )
   )
 #+END_SRC
