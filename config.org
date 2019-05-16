@@ -4628,6 +4628,8 @@ following elisp variable to segregate the headlines into various sections.
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/zeomega-scheduled-tasks  ;; presentation defn using org-super-agenda
     '(
+      (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+
       (:name "Tasks To Work On TODAY"              :and (:tag "HOT"     :tag "ZEOMEGA"))
       (:name "Corporate Financial Tasks"           :and (:tag "FINANCE" :tag "ZEOMEGA"))
       (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH"  :tag "ZEOMEGA"))
@@ -4641,8 +4643,6 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Discard Pile"                        :discard (:anything t))
 
 
-
-      (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
 
       (:name "Tasks Scheduled for Today            :HOT:"     :tag "HOT")
       (:name "Maintain Physical and Mental Health  :HEALTH:"  :tag "HEALTH")
