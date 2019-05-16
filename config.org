@@ -4653,8 +4653,8 @@ following elisp variable to segregate the headlines into various sections.
 
 ****** Agenda: Find Personal Backlog (Unscheduled Tasks)
 
-This agenda view represents headlines marked TODO that have not yet been
-SCHEDULED to start or given a DEADLINE due within the next 14-days.
+This agenda view represents personal headlines marked TODO that have not yet
+been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 #+NAME: define-agenda-pb-PersonalTaskBacklog
 #+BEGIN_SRC emacs-lisp :exports code
