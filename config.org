@@ -4653,6 +4653,15 @@ following elisp variable to segregate the headlines into various sections.
   )
 #+END_SRC
 
+
+
+
+
+
+
+
+
+
 ****** Agenda: 
 
        ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
