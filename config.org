@@ -4621,6 +4621,10 @@ to work on them *today*.  Those that are scheduled, I limit to the next
   )
 #+END_SRC
 
+Also note my use above of the Org-SuperAgenda Emacs module to empower my
+presentation of the collected headlines.  The above reference uses the
+following elisp variable to segregate the headlines into various sections.
+
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/zeomega-scheduled-tasks  ;; presentation defn using org-super-agenda
     '(
