@@ -4551,7 +4551,7 @@ I don't have it hooked into org-super-agenda yet.
 
 ****** Agenda: Find Personal (Scheduled) Tasks
 
-This agenda view represents "work things I have *scheduled* to get done,
+This agenda view represents "personal things I have *scheduled* to get done,
 meaning they have a DEADLINE, or they have a SCHEDULED start date today or in
 the past.  The look-forward period for DEADLINES is the next 14-days.
 
