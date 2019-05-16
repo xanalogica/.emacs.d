@@ -4429,6 +4429,7 @@ the headlines into short-term and long-term variants of topic-specific
 sections:
 
  - Short-Term Habitual Tasks: Finance
+ - Short-Term Habitual Tasks: Health
 
 
 #+BEGIN_SRC emacs-lisp
