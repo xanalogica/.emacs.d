@@ -4747,10 +4747,10 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
        (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
        (:name "To Share My Knowledge  :TOSHARE:"  :tag "TOSHARE")
-       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
-       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
        (:name "Things I Need to Study :TOSTUDY:"  :tag "TOSTUDY")
        (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
+       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
+       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
     )
   )
 #+END_SRC
