@@ -4432,6 +4432,10 @@ sections:
  - Short-Term Habitual Tasks: Health
  - Short-Term Habitual Tasks: Other Items
 
+ - Long-Term Recurring Tasks: Finance
+ - Long-Term Recurring Tasks: Health
+ - Long-Term Recurring Tasks: Tech
+ - Long-Term Recurring Tasks: Other items
 
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/recurring-tasks
