@@ -4507,7 +4507,7 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
        )
 
        (:name "My Shopping List"
-         :anything t  ;; place all (prefiltered) entries under this heading
+         :anything t  ;; place all remaining entries under this heading
        )
 
       ;; After the last group, the agenda will display items that didn't
