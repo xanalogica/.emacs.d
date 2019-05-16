@@ -4607,7 +4607,7 @@ following elisp variable to segregate the headlines into various sections.
 
 This agenda view represents "work things I have *scheduled* to get done,
 meaning they have a DEADLINE, or they have a SCHEDULED start date today or in
-the past.  Those that are scheduled, I limit to the next 14-days.
+the past.  The look-forward period for DEADLINES is the next 14-days.
 
 #+NAME: define-agenda-za-WorkScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code
