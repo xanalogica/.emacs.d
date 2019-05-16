@@ -4614,6 +4614,34 @@ following elisp variable to segregate the headlines into various sections.
   )
 #+END_SRC
 
+This agenda view represents "things I have scheduled to get done, either
+because they have a DEADLINE, or because they are tagged :HOT: meaning I need
+to work on them *today*.
+
+The primary use of this package is for the daily/weekly agenda, made by the
+org-agenda-list command, but it also works for other agenda views, like
+org-tags-view, org-todo-list, org-search-view, etc.
+
+#+BEGIN_SRC emacs-lisp
+  (setq groups/zeomega-scheduled-tasks  ;; presentation defn using org-super-agenda
+    '(
+      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
+      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
+      (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
+      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
+      (:name "Corporate Events" :and (:tag "EVENT" :tag "ZEOMEGA"))
+      (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
+      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
+      (:name "Things I Need to Study" :and (:tag "STUDY" :tag "ZEOMEGA"))
+      (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
+      (:name "Discard Pile" :discard (:anything t))
+      ;; After the last group, the agenda will display items that didn't
+      ;; match any of these groups, with the default order position of 99
+    )
+  )
+#+END_SRC
+
 
 
 
@@ -4829,36 +4857,6 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
-
-****** Segmented View for "ZeOmega Scheduled Tasks"
-
-This agenda view represents "things I have scheduled to get done, either
-because they have a DEADLINE, or because they are tagged :HOT: meaning I need
-to work on them *today*.
-
-The primary use of this package is for the daily/weekly agenda, made by the
-org-agenda-list command, but it also works for other agenda views, like
-org-tags-view, org-todo-list, org-search-view, etc.
-
-#+BEGIN_SRC emacs-lisp
-  (setq groups/zeomega-scheduled-tasks  ;; presentation defn using org-super-agenda
-    '(
-      (:name "Tasks To Work On TODAY" :and (:tag "HOT" :tag "ZEOMEGA"))
-      (:name "Corporate Financial Tasks" :and (:tag "FINANCE" :tag "ZEOMEGA"))
-      (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH" :tag "ZEOMEGA"))
-      (:name "Administrative Chores" :and (:tag "CHORE" :tag "ZEOMEGA"))
-      (:name "Corporate Events" :and (:tag "EVENT" :tag "ZEOMEGA"))
-      (:name "Corporate Travel" :and (:tag "TRAVEL" :tag "ZEOMEGA"))
-      (:name "Engage with People" :and (:tag "PEOPLE" :tag "ZEOMEGA"))
-      (:name "To Share My Knowledge" :and (:tag "WRITING" :tag "ZEOMEGA"))
-      (:name "Things I Need to Study" :and (:tag "STUDY" :tag "ZEOMEGA"))
-      (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
-      (:name "Discard Pile" :discard (:anything t))
-      ;; After the last group, the agenda will display items that didn't
-      ;; match any of these groups, with the default order position of 99
-    )
-  )
-#+END_SRC
 
 ****** Segmented View for "ZeOmega Technology Directions"
 
