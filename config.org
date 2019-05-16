@@ -4551,6 +4551,10 @@ I don't have it hooked into org-super-agenda yet.
 
 ****** Agenda: Find Personal (Scheduled) Tasks
 
+This agenda view represents "things I have scheduled to get done, either
+because they have a DEADLINE, or because they are tagged :HOT: meaning I need
+to work on them *today*.
+
 #+NAME: define-agenda-pa-PersonalScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code
   ("pa" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
@@ -4566,10 +4570,6 @@ I don't have it hooked into org-super-agenda yet.
     ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
-
-This agenda view represents "things I have scheduled to get done, either
-because they have a DEADLINE, or because they are tagged :HOT: meaning I need
-to work on them *today*.
 
 The primary use of this package is for the daily/weekly agenda, made by the
 org-agenda-list command, but it also works for other agenda views, like
