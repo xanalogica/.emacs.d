@@ -4335,7 +4335,7 @@ in it.
        <<define-agenda-za-WorkScheduledTasks>>
 
        <<define-agenda-pb-PersonalTaskBacklog>>
-       <<define-agenda-pb-PersonalTaskBacklog>>
+       <<define-agenda-pb-WorkTaskBacklog>>
 
 
      )
