@@ -4422,8 +4422,6 @@ This agenda
 #+END_SRC
 
 
-****** Segmented View for "Habitual/Recurring Tasks"
-
 #+BEGIN_SRC emacs-lisp
   (setq groups/recurring-tasks  ;; presentation definition using org-super-agenda
     '(
