@@ -4476,7 +4476,7 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
 
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
-      (:discard (:anything t))
+      (:discard (:anything t))  ;; discard entries not caught by above
     )
   )
 #+END_SRC
