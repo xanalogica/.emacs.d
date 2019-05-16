@@ -4396,7 +4396,7 @@ following elisp variable to segregate the headlines into sections.
        )
 
        (:name "Collected Notes"
-         :anything t  ;; place all (prefiltered) entries under this heading
+         :anything t  ;; place remaining entries under this heading
        )
      )
   )
