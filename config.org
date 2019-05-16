@@ -4685,9 +4685,9 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 
-       (:name "Unplanned Shopping :SHOP:"             :tag "SHOP")
-       (:name "Unplanned SysAdmin Tasks :SYSADMIN:"       :tag "SYSADMIN")
-       (:name "Unplanned Chores :CHORE:"               :tag "CHORE")
+       (:name "Unplanned Shopping        :SHOP:"     :tag "SHOP")
+       (:name "Unplanned SysAdmin Tasks  :SYSADMIN:" :tag "SYSADMIN")
+       (:name "Unplanned Chores          :CHORE:"    :tag "CHORE")
 
        (:name "Unplanned ZeOmega Work"         :tag "ZEOMEGA")
 
