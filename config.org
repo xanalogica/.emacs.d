@@ -4547,7 +4547,7 @@ I run called "Riverhood".
 
 I don't have it hooked into org-super-agenda yet.
 
-****** Agenda: Find Personal Agenda (Scheduled) Tasks
+****** Agenda: Find Personal (Scheduled) Tasks
 
 #+NAME: define-agenda-pa-PersonalScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code
