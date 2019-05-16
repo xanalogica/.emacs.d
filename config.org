@@ -4683,6 +4683,8 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:discard (:tag "ZEOMEGA"))  ;; only personal tasks, not work ones
        (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
 
+       (:order-multi (99 (:auto-multiproperty "DIRECTION")))
+
        (:name "Unplanned Shopping"             :tag "SHOP")
        (:name "Unplanned SysAdmin Tasks"       :tag "SYSADMIN")
        (:name "Unplanned Chores"               :tag "CHORE")
