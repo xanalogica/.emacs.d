@@ -4557,7 +4557,7 @@ I don't have it hooked into org-super-agenda yet.
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Personal Agenda for Each Day")
-      (org-super-agenda-groups groups/personal-scheduled-tasks)
+      (org-super-agenda-groups agendagroups/personal-scheduled-tasks)
 
       (org-agenda-remove-tags t)
       (org-super-agenda-unmatched-name "Other Items")
