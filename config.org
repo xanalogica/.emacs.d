@@ -4403,12 +4403,6 @@ following elisp variable to segregate the headlines into sections.
   )
 #+END_SRC
 
-
-
-
-
-
-
 ****** Agenda: Find TODOs Tagged as Recurring Tasks
 
 #+NAME: define-agenda-R-FindRecurringTasks
