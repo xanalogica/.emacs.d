@@ -4373,7 +4373,7 @@ entries to where they belong.
       (org-super-agenda-groups agendagroups/items-needing-filing)
 
       (org-agenda-remove-tags t)
-      (org-super-agenda-unmatched-name "Other Items")
+;;      (org-super-agenda-unmatched-name "Other Items")
 ;;      (org-agenda-files '("~/Dropbox/Documents/index.org"))
     )
     ("/tmp/NeedsRefiling.pdf")  ;; file(s)-to-export[6]
