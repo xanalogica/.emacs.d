@@ -4636,6 +4636,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "Things I Need to Study" :and (:tag "STUDY" :tag "ZEOMEGA"))
       (:name "Other ZeOmega Tasks" :tag "ZEOMEGA")
       (:name "Discard Pile" :discard (:anything t))
+
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
     )
