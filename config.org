@@ -4632,7 +4632,7 @@ following elisp variable to segregate the headlines into various sections.
 
 ;;;   (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
-      (:name "Tasks Scheduled for Today            :HOT:"    :and (:tag "HOT"     :tag "ZEOMEGA"))
+      (:name "Tasks Scheduled for Today            :HOT:"    :tag "HOT")
 
       (:name "Corporate Financial Tasks"           :and (:tag "FINANCE" :tag "ZEOMEGA"))
       (:name "Maintain Physical and Mental Health" :and (:tag "HEALTH"  :tag "ZEOMEGA"))
