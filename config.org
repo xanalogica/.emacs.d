@@ -4565,7 +4565,7 @@ I don't have it hooked into org-super-agenda yet.
   )
 #+END_SRC
 
-****** Agenda: Find Work Agenda (Scheduled) Tasks
+****** Agenda: Find Work (Scheduled) Tasks
 
 #+NAME: define-agenda-pa-WorkScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code
