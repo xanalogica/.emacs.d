@@ -4331,6 +4331,9 @@ in it.
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
        <<define-agenda-pR-FindRiverhoodEvents>>
+#+NAME: define-agenda-pa-PersonalScheduledTasks
+#+NAME: define-agenda-pa-WorkScheduledTasks
+
      )
   )
 #+END_SRC
