@@ -4736,6 +4736,116 @@ SCHEDULED to start or given a DEADLINE due within the next 14-days.
 #+END_SRC
 
 
+****** Segmented View for "ZeOmega Technology Directions"
+
+This agenda view represents "things I have scheduled to get done, either
+because they have a DEADLINE, or because they are tagged :HOT: meaning I need
+to work on them *today*.
+
+The primary use of this package is for the daily/weekly agenda, made by the
+org-agenda-list command, but it also works for other agenda views, like
+org-tags-view, org-todo-list, org-search-view, etc.
+
+#+BEGIN_SRC emacs-lisp
+  (setq groups/zeomega-backlog  ;; presentation defn using org-super-agenda
+    '(
+      (:order-multi (99 (:auto-multiproperty "DIRECTION")))
+;;      (:auto-direction :order 99)
+
+      (:name "Tasks To Work On Today :HOT:"      :and (:tag "HOT" :tag "ZEOMEGA"))
+      (:name "Administrative Chores  :ADMIN:"    :and (:tag "ADMIN" :tag "ZEOMEGA"))
+      (:name "Problems to Resolve    :PROBLEM:"  :and (:tag "PROBLEM" :tag "ZEOMEGA"))
+      (:name "Corporate Events       :EVENT:"    :and (:tag "EVENT" :tag "ZEOMEGA"))
+      (:name "Corporate Travel       :TRAVEL:"   :and (:tag "TRAVEL" :tag "ZEOMEGA"))
+      (:name "Engage with People     :PEOPLE:"   :and (:tag "PEOPLE" :tag "ZEOMEGA"))
+      (:name "To Share My Knowledge  :TOSHARE:"  :and (:tag "TOSHARE" :tag "ZEOMEGA"))
+      (:name "Things I Need to Study :TOSTUDY:"  :and (:tag "TOSTUDY" :tag "ZEOMEGA"))
+      (:name "Questions to Ponder    :QUESTION:" :and (:tag "QUESTION" :tag "ZEOMEGA"))
+      (:name "Other ZeOmega Tasks"               :tag "ZEOMEGA")
+      (:name "Discard Pile" :discard      (:not (:tag "ZEOMEGA")))
+    )
+  )
+#+END_SRC
+
+Define a new auto-grouping keyword/function for Org-Super-Agenda called
+:auto-direction, that examines the multi-valued property DIRECTION of each
+agenda item and *copies* that item under each distinct agenda heading
+named for each DIRECTION value.
+
+#+BEGIN_SRC emacs-lisp
+  (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
+    "Divide ALL-ITEMS into groups based on their DIRECTION property."
+
+    (setq non-matching nil)
+    (setq groups (ht-create))
+
+    (dolist (item all-items)
+      (setq marker
+       (or (get-text-property 0 'org-marker item)
+           (get-text-property 0 'org-hd-marker item)))
+
+      (setq propvalue (org-entry-get marker propname))
+      (if propvalue
+        (let*
+          (
+            (directions
+              (and propvalue
+                (split-string propvalue
+                  ";"        ;; separator
+                  t          ;; omit empty strings
+                  "[ ]+"     ;; trim leading/trailing whitespace
+                )
+              )
+            )
+          )
+
+          (dolist (direction directions)
+            (ht-set! groups direction
+              (cons item (ht-get groups direction)))
+          )
+        )
+        (push item non-matching)  ;; else no PROPNAME property
+      )
+    )
+
+    (setq ngroups nil)
+    (setq directions (sort (ht-keys groups) 'string<))
+    (dolist (direction directions)
+      (push
+        (list :name (format "Direction: %s" direction)
+         :items (nreverse (ht-get groups direction))
+        )
+        ngroups
+      )
+    )
+
+    (list ':auto-multiproperty non-matching ngroups)
+  )
+
+  (setq org-super-agenda-group-types
+    (plist-put org-super-agenda-group-types
+      ':auto-multiproperty
+      'jeff--auto-group-by-multiprop
+    )
+  )
+
+  (add-to-list
+    'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
+#+END_SRC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ****** Agenda: 
 
@@ -4875,103 +4985,6 @@ list of items, usually for the daily/weekly agenda, made by the
         :overline "green"
       )
   )
-#+END_SRC
-
-****** Segmented View for "ZeOmega Technology Directions"
-
-This agenda view represents "things I have scheduled to get done, either
-because they have a DEADLINE, or because they are tagged :HOT: meaning I need
-to work on them *today*.
-
-The primary use of this package is for the daily/weekly agenda, made by the
-org-agenda-list command, but it also works for other agenda views, like
-org-tags-view, org-todo-list, org-search-view, etc.
-
-#+BEGIN_SRC emacs-lisp
-  (setq groups/zeomega-backlog  ;; presentation defn using org-super-agenda
-    '(
-      (:order-multi (99 (:auto-multiproperty "DIRECTION")))
-;;      (:auto-direction :order 99)
-
-      (:name "Tasks To Work On Today :HOT:"      :and (:tag "HOT" :tag "ZEOMEGA"))
-      (:name "Administrative Chores  :ADMIN:"    :and (:tag "ADMIN" :tag "ZEOMEGA"))
-      (:name "Problems to Resolve    :PROBLEM:"  :and (:tag "PROBLEM" :tag "ZEOMEGA"))
-      (:name "Corporate Events       :EVENT:"    :and (:tag "EVENT" :tag "ZEOMEGA"))
-      (:name "Corporate Travel       :TRAVEL:"   :and (:tag "TRAVEL" :tag "ZEOMEGA"))
-      (:name "Engage with People     :PEOPLE:"   :and (:tag "PEOPLE" :tag "ZEOMEGA"))
-      (:name "To Share My Knowledge  :TOSHARE:"  :and (:tag "TOSHARE" :tag "ZEOMEGA"))
-      (:name "Things I Need to Study :TOSTUDY:"  :and (:tag "TOSTUDY" :tag "ZEOMEGA"))
-      (:name "Questions to Ponder    :QUESTION:" :and (:tag "QUESTION" :tag "ZEOMEGA"))
-      (:name "Other ZeOmega Tasks"               :tag "ZEOMEGA")
-      (:name "Discard Pile" :discard      (:not (:tag "ZEOMEGA")))
-    )
-  )
-#+END_SRC
-
-Define a new auto-grouping keyword/function for Org-Super-Agenda called
-:auto-direction, that examines the multi-valued property DIRECTION of each
-agenda item and *copies* that item under each distinct agenda heading
-named for each DIRECTION value.
-
-#+BEGIN_SRC emacs-lisp
-  (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
-    "Divide ALL-ITEMS into groups based on their DIRECTION property."
-
-    (setq non-matching nil)
-    (setq groups (ht-create))
-
-    (dolist (item all-items)
-      (setq marker
-       (or (get-text-property 0 'org-marker item)
-           (get-text-property 0 'org-hd-marker item)))
-
-      (setq propvalue (org-entry-get marker propname))
-      (if propvalue
-        (let*
-          (
-            (directions
-              (and propvalue
-                (split-string propvalue
-                  ";"        ;; separator
-                  t          ;; omit empty strings
-                  "[ ]+"     ;; trim leading/trailing whitespace
-                )
-              )
-            )
-          )
-
-          (dolist (direction directions)
-            (ht-set! groups direction
-              (cons item (ht-get groups direction)))
-          )
-        )
-        (push item non-matching)  ;; else no PROPNAME property
-      )
-    )
-
-    (setq ngroups nil)
-    (setq directions (sort (ht-keys groups) 'string<))
-    (dolist (direction directions)
-      (push
-        (list :name (format "Direction: %s" direction)
-         :items (nreverse (ht-get groups direction))
-        )
-        ngroups
-      )
-    )
-
-    (list ':auto-multiproperty non-matching ngroups)
-  )
-
-  (setq org-super-agenda-group-types
-    (plist-put org-super-agenda-group-types
-      ':auto-multiproperty
-      'jeff--auto-group-by-multiprop
-    )
-  )
-
-  (add-to-list
-    'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
 #+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
