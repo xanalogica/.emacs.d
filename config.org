@@ -4821,20 +4821,6 @@ named for each DIRECTION value.
     'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
 #+END_SRC
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ****** Agenda: 
 
        ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
