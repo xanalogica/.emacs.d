@@ -4430,6 +4430,7 @@ sections:
 
  - Short-Term Habitual Tasks: Finance
  - Short-Term Habitual Tasks: Health
+ - Short-Term Habitual Tasks: Other Items
 
 
 #+BEGIN_SRC emacs-lisp
