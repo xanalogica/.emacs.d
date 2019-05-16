@@ -4691,10 +4691,10 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Unplanned Financials      :FINANCE:"  :tag "FINANCE")
        (:name "Unplanned Health Matters  :HEALTH:"   :tag "HEALTH")
 
-       (:name "Unscheduled Christmas Tasks"    :tag "CHRISTMAS")
-       (:name "Unscheduled Church Activities"  :tag "CHURCH")
-       (:name "Unscheduled Writings"           :tag "WRITING")
-       (:name "Unscheduled Items to Study"     :tag "STUDY")
+       (:name "Unscheduled Christmas Tasks    :CHRISTMAS:" :tag "CHRISTMAS")
+       (:name "Unscheduled Church Activities  :CHURCH:"    :tag "CHURCH")
+       (:name "Unscheduled Writings           :WRITING:"   :tag "WRITING")
+       (:name "Unscheduled Items to Study     :STUDY:"     :tag "STUDY")
 
        (:name "Unplanned Social Activities"    :tag "PEOPLE")
        (:name "Unplanned Travel"               :tag "TRAVEL")
