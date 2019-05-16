@@ -4654,7 +4654,7 @@ following elisp variable to segregate the headlines into various sections.
 ****** Agenda: Find Personal Backlog (Unscheduled Tasks)
 
 This agenda view represents headlines marked TODO that have not yet been
-SCHEDULED or given a DEADLINE.
+SCHEDULED or given a DEADLINE within the next 14-days.
 
 
 
