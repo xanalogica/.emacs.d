@@ -4585,7 +4585,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Maintain Physical/Mental Health  :HEALTH:"  :tag "HEALTH")
       (:name "To Not Worry about Money             :FINANCE:" :tag "FINANCE")
 ;;;      (:name "To Have a Fantastic Career           :ZEOMEGA:" :tag "ZEOMEGA")
-      (:name "To Take Care of Life's Little Chores :CHORE:"   :tag "CHORE")
+      (:name "To Take Care of Life's Chores :CHORE:"   :tag "CHORE")
       (:name "To Experience Life's Magic           :EVENT:"   :tag "EVENT")
       (:name "To Explore the World                 :TRAVEL:"  :tag "TRAVEL")
       (:name "To Engage with People                :PEOPLE:"  :tag "PEOPLE")
