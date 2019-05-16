@@ -4581,6 +4581,9 @@ following elisp variable to segregate the headlines into various sections.
     '(
       (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
 
+      ;; Only items scheduled or with deadlines will show because this
+      ;; is an agenda view of type 'agenda'.
+
       (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
       (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
       (:name "To Not Worry about Money        :FINANCE:" :tag "FINANCE")
