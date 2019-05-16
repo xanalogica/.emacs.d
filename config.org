@@ -4333,11 +4333,8 @@ in it.
        <<define-agenda-pR-FindRiverhoodEvents>>
        <<define-agenda-pa-PersonalScheduledTasks>>
        <<define-agenda-za-WorkScheduledTasks>>
-
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-pb-WorkTaskBacklog>>
-
-
      )
   )
 #+END_SRC
