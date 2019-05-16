@@ -4523,7 +4523,9 @@ that relate to specific shopping venues.
   )
 #+END_SRC
 
-****** Agenda: Find Riverhood Events
+****** 
+
+******* Agenda: Find Riverhood Events
 
 This agenda collects event headlines, whether TODO or not, related to a group
 I run called "Riverhood".
