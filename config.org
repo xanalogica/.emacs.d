@@ -4330,6 +4330,8 @@ in it.
        <<define-agenda-F-FindUnfiledEntries>>
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
+       <<define-agenda-pR-FindRiverhoodEvents>>
+
      )
   )
 #+END_SRC
