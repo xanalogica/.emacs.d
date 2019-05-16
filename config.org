@@ -4732,7 +4732,6 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
   )
 #+END_SRC
 
-
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/zeomega-backlog-tasks
     '(
