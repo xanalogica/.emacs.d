@@ -4709,10 +4709,6 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
          :order 0
        )
 
-
-       (:order 0)
-
-
        ;; After the last group, the agenda will display items that didn't
        ;; match any of these groups, with the default order position of 99
      )
