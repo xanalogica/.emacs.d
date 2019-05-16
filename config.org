@@ -4572,9 +4572,11 @@ to work on them *today*.  Those that are scheduled, I limit to the next
   )
 #+END_SRC
 
-The primary use of this package is for the daily/weekly agenda, made by the
-org-agenda-list command, but it also works for other agenda views, like
-org-tags-view, org-todo-list, org-search-view, etc.
+Also note my use above of the Org-SuperAgenda Emacs module to empower my
+presentation of the collected headlines.  The above reference uses the
+following elisp variable to further filter the headlines and then segregate
+the headlines into technology and other.  I may add more sections later
+that relate to specific shopping venues.
 
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/personal-scheduled-tasks
