@@ -4576,7 +4576,7 @@ org-agenda-list command, but it also works for other agenda views, like
 org-tags-view, org-todo-list, org-search-view, etc.
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/personal-scheduled-tasks  ;; presentation defn using org-super-agenda
+  (setq agendagroups/personal-scheduled-tasks  ;; presentation defn using org-super-agenda
     '(
       (:name "Tasks Scheduled for TODAY" :tag "HOT")
       (:name "Maintain Physical and Mental Health" :tag "HEALTH")
