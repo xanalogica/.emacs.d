@@ -4600,7 +4600,7 @@ following elisp variable to segregate the headlines into various sections.
 
 ****** Agenda: Find Work-Related (Scheduled) Tasks
 
-This agenda view represents "things I have scheduled to get done, either
+This agenda view represents "work things I have scheduled to get done, either
 because they have a DEADLINE, or because they are tagged :HOT: meaning I need
 to work on them *today*.  Those that are scheduled, I limit to the next
 14-days.
