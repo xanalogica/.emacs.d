@@ -4743,14 +4743,14 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 ;;       (:auto-direction :order 99)
 
 ;;;       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
+       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
+       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
        (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
        (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
        (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
        (:name "To Share My Knowledge  :TOSHARE:"  :tag "TOSHARE")
        (:name "Things I Need to Study :TOSTUDY:"  :tag "TOSTUDY")
        (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
-       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
-       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
     )
   )
 #+END_SRC
