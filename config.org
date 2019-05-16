@@ -4547,7 +4547,7 @@ I run called "Riverhood".
 
 I don't have it hooked into org-super-agenda yet.
 
-****** Agenda: 
+****** Agenda: Find Personal Agenda (Scheduled) Tasks
 
        ("pa" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
