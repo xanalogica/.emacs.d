@@ -4423,7 +4423,7 @@ This agenda
 
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/recurring-tasks
+  (setq agendagroups/recurring-tasks
     '(
       (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
