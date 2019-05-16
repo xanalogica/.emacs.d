@@ -4761,9 +4761,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
        (:name "To Share My Knowledge  :TOSHARE:"  :tag "TOSHARE")
        (:name "Things I Need to Study :TOSTUDY:"  :tag "TOSTUDY")
        (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
-       (:name "Other ZeOmega Tasks"               :tag "ZEOMEGA")
-
-       (:name "Discard Pile" :discard      (:not (:tag "ZEOMEGA")))
     )
   )
 #+END_SRC
