@@ -4447,10 +4447,7 @@ sections:
       )
 
       (:name "Short-Term Habitual Tasks: Other items"
-        :and (
-          :habit t
-          :not (:tag "RECUR")
-        )
+        :and (:habit t :not (:tag "RECUR"))
       )
 
       (:name "Long-Term Recurring Tasks: Finance"
