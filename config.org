@@ -4714,10 +4714,10 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 #+NAME: define-agenda-zb-WorkTaskBacklog
 #+BEGIN_SRC emacs-lisp :exports code
-  ("zb" "Backlog of Unscheduled ZeOmega Tasks" todo  ;; key[1] desc[2] type[3]
+  ("zb" "ZeOmega Backlog (Unscheduled Tasks)" todo  ;; key[1] desc[2] type[3]
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
-      (org-agenda-overriding-header "ZeOmega Backlog of Unscheduled Tasks")
+      (org-agenda-overriding-header "ZeOmega Backlog (Unscheduled Tasks)")
       (org-super-agenda-groups agendagroups/zeomega-backlog-tasks)
 ;;      (org-super-agenda-groups groups/backlog-tasks)
 
