@@ -4562,7 +4562,7 @@ to work on them *today*.  Those that are scheduled, I limit to the next
 
     ;; Only headlines scheduled or with deadlines will show because this
     ;; is an agenda view of type 'agenda' above.  Non-scheduled headlines
-    ;; will not appear.
+    ;; will not appear.  Whether the headline has a TODO or not is irrelevent.
 
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
