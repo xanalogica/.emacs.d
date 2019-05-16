@@ -4439,11 +4439,7 @@ sections:
       (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
       (:name "Short-Term Habitual Tasks: Finance"
-        :and (
-          :habit t
-          :not (:tag "RECUR")
-          :tag "FINANCE"
-        )
+        :and (:habit t :not (:tag "RECUR") :tag "FINANCE")
       )
 
       (:name "Short-Term Habitual Tasks: Health"
