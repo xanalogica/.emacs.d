@@ -4500,9 +4500,21 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
+  (setq groups/shopping-lists  ;; presentation defn using org-super-agenda
+    '(
+       (:name "Technology Items"
+        :tag "TECH"  ;; for shopping at Fry's Electronics, etc.
+       )
 
+       (:name "My Shopping List"
+         :anything t  ;; place all (prefiltered) entries under this heading
+       )
+
+      ;; After the last group, the agenda will display items that didn't
+      ;; match any of these groups, with the default order position of 99
+    )
+  )
 #+END_SRC
-
 
 ****** Agenda: 
 
@@ -4783,25 +4795,6 @@ org-tags-view, org-todo-list, org-search-view, etc.
       (:name "To Stay in Touch with Others" :tag "PEOPLE")
       (:name "To Share My Knowledge with Others" :tag "WRITING")
       (:name "To Continually Learn New Things" :tag "STUDY")
-
-      ;; After the last group, the agenda will display items that didn't
-      ;; match any of these groups, with the default order position of 99
-    )
-  )
-#+END_SRC
-
-****** Segmented View for "Shopping List(s)"
-
-#+BEGIN_SRC emacs-lisp
-  (setq groups/shopping-lists  ;; presentation defn using org-super-agenda
-    '(
-       (:name "Technology Items"
-        :tag "TECH"  ;; for shopping at Fry's Electronics, etc.
-       )
-
-       (:name "My Shopping List"
-         :anything t  ;; place all (prefiltered) entries under this heading
-       )
 
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
