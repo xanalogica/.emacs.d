@@ -4667,7 +4667,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
       (org-super-agenda-groups agendagroups/personal-backlog-tasks)
 
       (org-agenda-remove-tags t)
-      (org-super-agenda-unmatched-name "Other Items")
+      (org-super-agenda-unmatched-name "Disorganized Tasks")
 
 ;;;      (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
 ;;;      (org-agenda-add-entry-text-maxlines 5)  ;; experimental
