@@ -4651,9 +4651,6 @@ following elisp variable to segregate the headlines into various sections.
   )
 #+END_SRC
 
-
-
-
 ****** Agenda: 
 
        ("pb" "Personal Backlog of Unscheduled Tasks" todo  ;; key[1] desc[2] type[3]
