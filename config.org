@@ -4404,7 +4404,8 @@ following elisp variable to segregate the headlines into sections.
 
 ****** Agenda: Find TODOs Tagged as Recurring Tasks
 
-This agenda collects all TODO headlines and
+This agenda collects all TODO headlines that either are scheduled to start of
+have a deadline to fnish.
 
 #+NAME: define-agenda-R-FindRecurringTasks
 #+BEGIN_SRC emacs-lisp :exports code
