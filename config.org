@@ -4632,15 +4632,15 @@ following elisp variable to segregate the headlines into various sections.
 
 ;;;   (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
-      (:name "Tasks Scheduled for Today            :HOT:"       :tag "HOT")
+      (:name "Tasks Scheduled for Today       :HOT:"       :tag "HOT")
 ;;;      (:name "Maintain Physical/Mental Health  :HEALTH:" :tag "HEALTH")
-      (:name "Corporate Financial Tasks            :FINANCE:"   :tag "FINANCE")
-      (:name "Administrative Chores                :CHORE:"     :tag "CHORE")
-      (:name "To Attend Corporate Events           :EVENT:"     :tag "EVENT")
-      (:name "To Travel for Business               :TRAVEL:"    :tag "TRAVEL")
-      (:name "To Engage with People                :PEOPLE:"    :tag "PEOPLE")
-      (:name "To Share Knowledge with Others       :WRITING:"   :tag "WRITING")
-      (:name "To Continually Learn                 :STUDY:"     :tag "STUDY")
+      (:name "Corporate Financial Tasks       :FINANCE:"   :tag "FINANCE")
+      (:name "Administrative Chores           :CHORE:"     :tag "CHORE")
+      (:name "To Attend Corporate Events      :EVENT:"     :tag "EVENT")
+      (:name "To Travel for Business          :TRAVEL:"    :tag "TRAVEL")
+      (:name "To Engage with People           :PEOPLE:"    :tag "PEOPLE")
+      (:name "To Share Knowledge with Others  :WRITING:"   :tag "WRITING")
+      (:name "To Continually Learn            :STUDY:"     :tag "STUDY")
     )
   )
 #+END_SRC
