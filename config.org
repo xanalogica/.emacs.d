@@ -4481,10 +4481,6 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
   )
 #+END_SRC
 
-
-
-
-
 ****** Agenda: Find Items I Want to Purchase
 
 #+NAME: define-agenda-$-FindItemsToPurchase
@@ -4502,6 +4498,16 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
     ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
+
+
+
+
+
+
+
+
+
+
 
 ****** Agenda: 
 
