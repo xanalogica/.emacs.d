@@ -4500,7 +4500,7 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/shopping-lists  ;; presentation defn using org-super-agenda
+  (setq agendagroups/shopping-lists  ;; presentation defn using org-super-agenda
     '(
        (:name "Technology Items"
         :tag "TECH"  ;; for shopping at Fry's Electronics, etc.
