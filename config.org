@@ -4443,11 +4443,7 @@ sections:
       )
 
       (:name "Short-Term Habitual Tasks: Health"
-        :and (
-          :habit t
-          :not (:tag "RECUR")
-          :tag "HEALTH"
-        )
+        :and (:habit t :not (:tag "RECUR") :tag "HEALTH")
       )
 
       (:name "Short-Term Habitual Tasks: Other items"
