@@ -4638,8 +4638,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Administrative Chores                :CHORE:"     :tag "CHORE")
       (:name "Corporate Events                     :EVENT:"     :tag "EVENT")
       (:name "Corporate Travel                     :TRAVEL:"    :tag "TRAVEL")
-      (:name "Engage with People                   :PEOPLE:"    :tag "PEOPLE")
-
+      (:name "To Engage with People                :PEOPLE:"    :tag "PEOPLE")
       (:name "To Share My Knowledge"               :and (:tag "WRITING" :tag "ZEOMEGA"))
 
       (:name "Things I Need to Study"              :and (:tag "STUDY"   :tag "ZEOMEGA"))
