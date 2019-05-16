@@ -4492,7 +4492,7 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
       (org-super-agenda-groups agendagroups/shopping-lists)
 
       (org-agenda-remove-tags t)
-      (org-super-agenda-unmatched-name "Other Items")
+;;;      (org-super-agenda-unmatched-name "Other Items")
       (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
     )
     ("/tmp/ShoppingLists.pdf")  ;; file(s)-to-export[6]
