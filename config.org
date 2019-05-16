@@ -4567,6 +4567,10 @@ I don't have it hooked into org-super-agenda yet.
 
 ****** Agenda: Find Work Agenda (Scheduled) Tasks
 
+#+NAME: define-agenda-pa-WorkScheduledTasks
+#+BEGIN_SRC emacs-lisp :exports code
+
+
        ("za" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
