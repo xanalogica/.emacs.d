@@ -4691,7 +4691,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 ;;;       (:name "Unplanned ZeOmega Work"         :tag "ZEOMEGA")
 
-       (:name "Unplanned Financials"           :tag "FINANCE")
+       (:name "Unplanned Financials      :FINANCE:"  :tag "FINANCE")
        (:name "Unplanned Health Matters"       :tag "HEALTH")
 
        (:name "Unscheduled Christmas Tasks"    :tag "CHRISTMAS")
