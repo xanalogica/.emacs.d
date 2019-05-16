@@ -4527,6 +4527,10 @@ that relate to specific shopping venues.
 This agenda collects headlines, whether TODO or not, related to a group I run
 called "Riverhook".
 
+#+NAME: define-agenda-pR-FindRiverhoodEvents
+#+BEGIN_SRC emacs-lisp :exports code
+
+
        ("pR" "Riverhood Events" tags ;; key[1] desc[2] type[3]
          "+RIVERHOOD+EVENT"  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
