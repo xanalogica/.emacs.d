@@ -4380,7 +4380,7 @@ entries to where they belong.
   )
 #+END_SRC
 
-Also note above my use of the Org-SuperAgenda Emacs module to empower my
+Also note my use above of the Org-SuperAgenda Emacs module to empower my
 presentation of the collected headlines.  The above reference uses the
 following elisp variable to segregate the headlines into sections.
 
