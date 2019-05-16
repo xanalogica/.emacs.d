@@ -4742,7 +4742,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 ;;       (:auto-direction :order 99)
 
-       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
+;;;       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
        (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
        (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
        (:name "Corporate Events       :EVENT:"    :tag "EVENT")
