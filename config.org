@@ -4681,6 +4681,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
   (setq agendagroups/personal-backlog-tasks
     '(
 ;;; doesn't this pull in ZeOmega tasks ???
+       (:discard (:tag "ZEOMEGA"))
        (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
 
        (:name "Unplanned Shopping"             :tag "SHOP")
