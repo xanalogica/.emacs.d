@@ -4582,7 +4582,7 @@ following elisp variable to segregate the headlines into various sections.
       (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
 
       (:name "Tasks Scheduled for Today            :HOT:"     :tag "HOT")
-      (:name "Maintain Physical and Mental Health  :HEALTH:"  :tag "HEALTH")
+      (:name "Maintain Physical/Mental Health  :HEALTH:"  :tag "HEALTH")
       (:name "To Not Worry about Money             :FINANCE:" :tag "FINANCE")
 ;;;      (:name "To Have a Fantastic Career           :ZEOMEGA:" :tag "ZEOMEGA")
       (:name "To Take Care of Life's Little Chores :CHORE:"   :tag "CHORE")
