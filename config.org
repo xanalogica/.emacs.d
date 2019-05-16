@@ -4583,12 +4583,12 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Maintain Physical and Mental Health :HEALTH:"  :tag "HEALTH")
       (:name "To Not Worry about Money :FINANCE:"             :tag "FINANCE")
       (:name "To Have a Fantastic Career :ZEOMEGA:"           :tag "ZEOMEGA")
-      (:name "To Take Care of Life's Little Chores" :tag "CHORE")
-      (:name "To Experience Life's Magic"           :tag "EVENT")
-      (:name "To Explore the World"                 :tag "TRAVEL")
-      (:name "To Stay in Touch with Others"         :tag "PEOPLE")
-      (:name "To Share My Knowledge with Others"    :tag "WRITING")
-      (:name "To Continually Learn New Things"      :tag "STUDY")
+      (:name "To Take Care of Life's Little Chores :CHORE:" :tag "CHORE")
+      (:name "To Experience Life's Magic :EVENT:"           :tag "EVENT")
+      (:name "To Explore the World :TRAVEL:"                 :tag "TRAVEL")
+      (:name "To Stay in Touch with Others :PEOPLE:"         :tag "PEOPLE")
+      (:name "To Share My Knowledge with Others :WRITING:"    :tag "WRITING")
+      (:name "To Continually Learn New Things :STUDY:"      :tag "STUDY")
 
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
