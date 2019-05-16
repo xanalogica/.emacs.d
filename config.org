@@ -4571,18 +4571,18 @@ I don't have it hooked into org-super-agenda yet.
 
 #+NAME: define-agenda-pa-WorkScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code
-       ("za" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
-         nil  ;; entry match-expression[4]
-         ( ; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "ZeOmega Agenda for Each Day")
-           (org-super-agenda-groups groups/zeomega-scheduled-tasks)
+  ("za" "Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
+    nil  ;; entry match-expression[4]
+    ( ; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "ZeOmega Agenda for Each Day")
+      (org-super-agenda-groups groups/zeomega-scheduled-tasks)
 
-           (org-agenda-remove-tags t)
-           (org-super-agenda-unmatched-name "Other Items")
-           (org-agenda-span 14)         ;; show me 14-days at a time
-         )
-         ("/tmp/ZeOmegaScheduledTasks.pdf")  ;; file(s)-to-export[6]
-       )
+      (org-agenda-remove-tags t)
+      (org-super-agenda-unmatched-name "Other Items")
+      (org-agenda-span 14)         ;; show me 14-days at a time
+    )
+    ("/tmp/ZeOmegaScheduledTasks.pdf")  ;; file(s)-to-export[6]
+  )
 #+END_SRC
 
 ****** Agenda: 
