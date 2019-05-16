@@ -4678,7 +4678,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/personal-backlog-tasks  ;; presentation defn using org-super-agenda
+  (setq agendagroups/personal-backlog-tasks  ;; presentation defn using org-super-agenda
     '(
        (:discard (:scheduled t :deadline t))  ;; skip task that ARE scheduled
        (:name "Unplanned Shopping" :tag "SHOP")
