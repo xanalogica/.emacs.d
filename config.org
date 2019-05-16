@@ -4426,7 +4426,8 @@ Also note my use above of the Org-SuperAgenda Emacs module to empower my
 presentation of the collected headlines.  The above reference uses the
 following elisp variable to further filter the headlines and then segregate
 the headlines into short-term and long-term variants of topic-specific
-sections.
+sections:
+
 
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/recurring-tasks
