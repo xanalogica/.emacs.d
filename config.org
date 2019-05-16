@@ -4358,7 +4358,8 @@ each and every headline.  This lets me more easily move entries around.
   * Business Unclassified Entries       :UNFILED:
 #+END_SRC
 
-I also sometimes use a custom :NOSEARCH: tag to skip including 
+I also sometimes use a custom :NOSEARCH: tag to skip including some :UNFILED:
+entries in this agenda view.
 
 
 I also have a recurring task to periodically review this agenda view and move
