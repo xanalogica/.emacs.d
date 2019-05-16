@@ -4352,7 +4352,7 @@ each and every headline.  This lets me more easily move entries around.
 #+TITLE: Example of My Tagging Hierarchy
 #+BEGIN_SRC org
   * Finance Unclassified Entries        :UNFILED:
-    * Cool Link                         :LINK:
+    * http://CoolLink                         :LINK:
   * Personal Unclassified Entries       :UNFILED:
     * TODO Oh yeah do this
   * Business Unclassified Entries       :UNFILED:
