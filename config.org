@@ -4335,8 +4335,6 @@ in it.
        <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-zb-WorkTaskBacklog>>
-  #+NAME: define-agenda-zb-WorkTaskBacklog
-
    )
   )
 #+END_SRC
