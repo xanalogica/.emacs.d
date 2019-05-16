@@ -4683,19 +4683,19 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 ;;; doesn't this pull in ZeOmega tasks ???
        (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
 
-       (:name "Unplanned Shopping" :tag "SHOP")
+       (:name "Unplanned Shopping"       :tag "SHOP")
        (:name "Unplanned SysAdmin Tasks" :tag "SYSADMIN")
-       (:name "Unplanned Chores" :tag "CHORE")
+       (:name "Unplanned Chores"         :tag "CHORE")
 
-       (:name "Unplanned ZeOmega Work" :tag "ZEOMEGA")
+       (:name "Unplanned ZeOmega Work"   :tag "ZEOMEGA")
 
-       (:name "Unplanned Financials" :tag "FINANCE")
+       (:name "Unplanned Financials"     :tag "FINANCE")
        (:name "Unplanned Health Matters" :tag "HEALTH")
 
-       (:name "Unscheduled Christmas Tasks" :tag "CHRISTMAS")
-       (:name "Unscheduled Church Activities" :tag "CHURCH")
-       (:name "Unscheduled Writings" :tag "WRITING")
-       (:name "Unscheduled Items to Study" :tag "STUDY")
+       (:name "Unscheduled Christmas Tasks"    :tag "CHRISTMAS")
+       (:name "Unscheduled Church Activities"  :tag "CHURCH")
+       (:name "Unscheduled Writings"           :tag "WRITING")
+       (:name "Unscheduled Items to Study"     :tag "STUDY")
 
        (:name "Unplanned Social Activities" :tag "PEOPLE")
        (:name "Unplanned Travel" :tag "TRAVEL")
