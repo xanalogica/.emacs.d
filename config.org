@@ -4676,6 +4676,8 @@ SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 ****** Agenda: Find Work Backlog (Unscheduled Tasks)
 
+#+NAME: define-agenda-pb-PersonalTaskBacklog
+#+BEGIN_SRC emacs-lisp :exports code
        ("zb" "Backlog of Unscheduled ZeOmega Tasks" todo  ;; key[1] desc[2] type[3]
          nil  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
@@ -4691,7 +4693,7 @@ SCHEDULED to start or given a DEADLINE due within the next 14-days.
          )
          ("/tmp/ZeOmegaBacklogTasks.pdf")  ;; file(s)-to-export[6]
        )
-
+#+END_SRC
 
 
 
