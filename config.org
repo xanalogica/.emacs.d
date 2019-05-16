@@ -4385,7 +4385,7 @@ presentation of the collected headlines.  The above reference uses the
 following elisp variable to segregate the headlines into sections.
 
 #+BEGIN_SRC emacs-lisp
-  (setq agendagroups/items-needing-filing  ;; presentation definition using org-super-agenda
+  (setq agendagroups/items-needing-filing
     '(
        (:name "Collected Links"
          :tag "LINK"
