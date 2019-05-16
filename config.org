@@ -4629,6 +4629,7 @@ following elisp variable to segregate the headlines into various sections.
   (setq agendagroups/zeomega-scheduled-tasks  ;; presentation defn using org-super-agenda
     '(
       (:discard (:not (:tag "ZEOMEGA")))  ;; skip non-work-related tasks
+
       (:discard (:not (:scheduled t :deadline t)))  ;; skip tasks not yet scheduled
 
       (:name "Tasks To Work On TODAY"              :and (:tag "HOT"     :tag "ZEOMEGA"))
