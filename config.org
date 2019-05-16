@@ -4437,6 +4437,9 @@ sections:
  - Long-Term Recurring Tasks: Tech
  - Long-Term Recurring Tasks: Other items
 
+Short-term is defined as those headlines declared as Org-Mode 'habits', with
+long-team meaning it recurs but isn't strictly an Org-Mode 'habit'.
+
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/recurring-tasks
     '(
