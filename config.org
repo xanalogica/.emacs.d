@@ -4762,7 +4762,7 @@ named for each DIRECTION value.
 
 #+BEGIN_SRC emacs-lisp
   (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
-    "Divide ALL-ITEMS into groups based on their DIRECTION property."
+    "Divide ALL-ITEMS into groups based on their DIRECTION property, if present."
 
     (setq non-matching nil)
     (setq groups (ht-create))
