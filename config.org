@@ -4331,7 +4331,6 @@ in it.
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
        <<define-agenda-pR-FindRiverhoodEvents>>
-
      )
   )
 #+END_SRC
