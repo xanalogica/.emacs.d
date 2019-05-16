@@ -4412,7 +4412,7 @@ This agenda
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Recurring/Habitual Tasks")
-      (org-super-agenda-groups groups/recurring-tasks)
+      (org-super-agenda-groups agendagroups/recurring-tasks)
 
       (org-agenda-remove-tags t)
       (org-super-agenda-unmatched-name "Other Items")
