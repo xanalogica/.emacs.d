@@ -4334,8 +4334,10 @@ in it.
        <<define-agenda-pa-PersonalScheduledTasks>>
        <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-pb-PersonalTaskBacklog>>
-       <<define-agenda-pb-WorkTaskBacklog>>
-     )
+       <<define-agenda-zb-WorkTaskBacklog>>
+  #+NAME: define-agenda-zb-WorkTaskBacklog
+
+   )
   )
 #+END_SRC
 
