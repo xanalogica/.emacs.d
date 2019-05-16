@@ -4416,7 +4416,7 @@ have a deadline to fnish.
       (org-super-agenda-groups agendagroups/recurring-tasks)
 
       (org-agenda-remove-tags t)
-      (org-super-agenda-unmatched-name "Other Items")
+;;      (org-super-agenda-unmatched-name "Other Items")
     )
     ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
   )
