@@ -4525,7 +4525,7 @@ that relate to specific shopping venues.
 ****** Agenda: 
 
 This agenda collects headlines, whether TODO or not, related to a group I run
-called "Riverhook".
+called "Riverhood".
 
 #+NAME: define-agenda-pR-FindRiverhoodEvents
 #+BEGIN_SRC emacs-lisp :exports code
