@@ -4749,8 +4749,7 @@ org-tags-view, org-todo-list, org-search-view, etc.
        (:discard (:not (:tag "ZEOMEGA")))     ;; skip non-work tasks
        (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
 
-
-      (:order-multi (99 (:auto-multiproperty "DIRECTION")))
+       (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 ;;      (:auto-direction :order 99)
 
       (:name "Tasks To Work On Today :HOT:"      :and (:tag "HOT" :tag "ZEOMEGA"))
