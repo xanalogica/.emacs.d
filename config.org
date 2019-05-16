@@ -4685,6 +4685,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 
+       (:name "Refilings to Organize          :REFILING:"  :tag "REFILING")
        (:name "Unplanned Shopping             :SHOP:"      :tag "SHOP")
        (:name "Unplanned SysAdmin Tasks       :SYSADMIN:"  :tag "SYSADMIN")
        (:name "Unplanned Chores               :CHORE:"     :tag "CHORE")
@@ -4697,7 +4698,6 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Unplanned Social Activities    :PEOPLE:"    :tag "PEOPLE")
        (:name "Unplanned Travel               :TRAVEL:"    :tag "TRAVEL")
        (:name "Unplanned Events               :EVENT:"     :tag "EVENT")
-       (:name "Refilings to Organize          :REFILING:"  :tag "REFILING")
 
        (:name "(To Be Organized)"
          :anything t  ;; place all remaining entries under this heading
