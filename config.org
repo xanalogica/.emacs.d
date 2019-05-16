@@ -4613,6 +4613,11 @@ to work on them *today*.  Those that are scheduled, I limit to the next
 #+NAME: define-agenda-za-WorkScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code
   ("za" "ZeOmega Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
+
+    ;; Only headlines scheduled or with deadlines will show because this
+    ;; is an agenda view of type 'agenda' above.  Non-scheduled headlines
+    ;; will not appear.  Whether the headline has a TODO or not is irrelevent.
+
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "ZeOmega Agenda for Each Day")
