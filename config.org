@@ -4676,6 +4676,39 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
   )
 #+END_SRC
 
+
+#+BEGIN_SRC emacs-lisp
+  (setq groups/personal-backlog-tasks  ;; presentation defn using org-super-agenda
+    '(
+       (:discard (:scheduled t :deadline t))  ;; skip task that ARE scheduled
+       (:name "Unplanned Shopping" :tag "SHOP")
+       (:name "Unplanned SysAdmin Tasks" :tag "SYSADMIN")
+       (:name "Unplanned Chores" :tag "CHORE")
+
+       (:name "Unplanned ZeOmega Work" :tag "ZEOMEGA")
+
+       (:name "Unplanned Financials" :tag "FINANCE")
+       (:name "Unplanned Health Matters" :tag "HEALTH")
+
+       (:name "Unscheduled Christmas Tasks" :tag "CHRISTMAS")
+       (:name "Unscheduled Church Activities" :tag "CHURCH")
+       (:name "Unscheduled Writings" :tag "WRITING")
+       (:name "Unscheduled Items to Study" :tag "STUDY")
+
+       (:name "Unplanned Social Activities" :tag "PEOPLE")
+       (:name "Unplanned Travel" :tag "TRAVEL")
+       (:name "Unplanned Events" :tag "EVENT")
+       (:name "Refilings to Organize" :tag "REFILING")
+
+       ;; After the last group, the agenda will display items that didn't
+       ;; match any of these groups, with the default order position of 99
+     )
+  )
+#+END_SRC
+
+
+
+
 ****** Agenda: Find Work Backlog (Unscheduled Tasks)
 
 This agenda view represents work headlines marked TODO that have not yet been
@@ -4841,43 +4874,6 @@ list of items, usually for the daily/weekly agenda, made by the
       )
   )
 #+END_SRC
-
-
-
-
-
-
-****** Segmented View for "Personal Backlog (Unscheduled) Tasks"
-
-#+BEGIN_SRC emacs-lisp
-  (setq groups/personal-backlog-tasks  ;; presentation defn using org-super-agenda
-    '(
-       (:discard (:scheduled t :deadline t))  ;; skip task that ARE scheduled
-       (:name "Unplanned Shopping" :tag "SHOP")
-       (:name "Unplanned SysAdmin Tasks" :tag "SYSADMIN")
-       (:name "Unplanned Chores" :tag "CHORE")
-
-       (:name "Unplanned ZeOmega Work" :tag "ZEOMEGA")
-
-       (:name "Unplanned Financials" :tag "FINANCE")
-       (:name "Unplanned Health Matters" :tag "HEALTH")
-
-       (:name "Unscheduled Christmas Tasks" :tag "CHRISTMAS")
-       (:name "Unscheduled Church Activities" :tag "CHURCH")
-       (:name "Unscheduled Writings" :tag "WRITING")
-       (:name "Unscheduled Items to Study" :tag "STUDY")
-
-       (:name "Unplanned Social Activities" :tag "PEOPLE")
-       (:name "Unplanned Travel" :tag "TRAVEL")
-       (:name "Unplanned Events" :tag "EVENT")
-       (:name "Refilings to Organize" :tag "REFILING")
-
-       ;; After the last group, the agenda will display items that didn't
-       ;; match any of these groups, with the default order position of 99
-     )
-  )
-#+END_SRC
-
 
 ****** Segmented View for "ZeOmega Technology Directions"
 
