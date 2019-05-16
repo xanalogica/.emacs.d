@@ -4483,6 +4483,9 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
 
 ****** Agenda: Find Items I Want to Purchase
 
+This agenda collects TODO headlines tagged as :SHOP: and formats them
+with a leading "[ ]" checkbox so I can print them and check them off.
+
 #+NAME: define-agenda-$-FindItemsToPurchase
 #+BEGIN_SRC emacs-lisp :exports code
   ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
