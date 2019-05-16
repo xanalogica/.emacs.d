@@ -4574,7 +4574,7 @@ to work on them *today*.  Those that are scheduled, I limit to the next
 
 Also note my use above of the Org-SuperAgenda Emacs module to empower my
 presentation of the collected headlines.  The above reference uses the
-following elisp variable to further filter the headlines and then segregate
+following elisp variable to segregate
 the headlines into technology and other.  I may add more sections later
 that relate to specific shopping venues.
 
