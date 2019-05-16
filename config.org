@@ -4705,7 +4705,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Refilings to Organize"          :tag "REFILING")
 
 
-(:order 0)
+       (:order 0)
 
 
        ;; After the last group, the agenda will display items that didn't
