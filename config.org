@@ -4689,7 +4689,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Unplanned SysAdmin Tasks  :SYSADMIN:" :tag "SYSADMIN")
        (:name "Unplanned Chores          :CHORE:"    :tag "CHORE")
 
-       (:name "Unplanned ZeOmega Work"         :tag "ZEOMEGA")
+;;;       (:name "Unplanned ZeOmega Work"         :tag "ZEOMEGA")
 
        (:name "Unplanned Financials"           :tag "FINANCE")
        (:name "Unplanned Health Matters"       :tag "HEALTH")
