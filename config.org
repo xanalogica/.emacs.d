@@ -4428,6 +4428,8 @@ following elisp variable to further filter the headlines and then segregate
 the headlines into short-term and long-term variants of topic-specific
 sections:
 
+ - Short-Term Habitual Tasks: Finance
+
 
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/recurring-tasks
