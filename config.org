@@ -4370,7 +4370,7 @@ entries to where they belong.
     "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Items Needing Proper Filing")
-      (org-super-agenda-groups groups/items-needing-filing)
+      (org-super-agenda-groups agendagroups/items-needing-filing)
 
       (org-agenda-remove-tags t)
       (org-super-agenda-unmatched-name "Other Items")
@@ -4385,7 +4385,7 @@ presentation of the collected headlines.  The above reference uses the
 following elisp variable to segregate the headlines into sections.
 
 #+BEGIN_SRC emacs-lisp
-  (setq groups/items-needing-filing  ;; presentation definition using org-super-agenda
+  (setq agendagroups/items-needing-filing  ;; presentation definition using org-super-agenda
     '(
        (:name "Collected Links"
          :tag "LINK"
