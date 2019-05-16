@@ -4529,8 +4529,6 @@ called "Riverhook".
 
 #+NAME: define-agenda-pR-FindRiverhoodEvents
 #+BEGIN_SRC emacs-lisp :exports code
-
-
        ("pR" "Riverhood Events" tags ;; key[1] desc[2] type[3]
          "+RIVERHOOD+EVENT"  ;; entry match-expression[4]
          ( ; [5] list of settings local to this custom agenda view
@@ -4544,6 +4542,7 @@ called "Riverhook".
          )
          ("/tmp/RiverhoodEvents.pdf")  ;; file(s)-to-export[6]
        )
+#+END_SRC
 
 ****** Agenda: 
 
