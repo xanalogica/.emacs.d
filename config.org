@@ -4349,6 +4349,7 @@ direct *and* inherited tags.  This allows me to collect unfiled entries under
 a headline with a :UNFILED: tag and not have to tediously place such a tag on
 each and every headline.  This lets me more easily move entries around.
 
+#+TITLE: Example of My Tagging Hierarchy
 #+BEGIN_SRC org
   * Finance Unclassified Entries        :UNFILED:
     * Cool Link                         :LINK:
