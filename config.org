@@ -4339,6 +4339,28 @@ in it.
   )
 #+END_SRC
 
+****** Segment My Agenda Views into Topics Using Super-Agenda
+
+The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
+list of items, usually for the daily/weekly agenda, made by the
+~org-agenda-list~ command, but it also works for other agenda views, like
+~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-super-agenda
+    :load-path "~/.emacs.d/lisp/org-super-agenda/"  ;; use my Git checkout
+
+    :config
+      (org-super-agenda-mode)  ;; enable it globally
+
+      (set-face-attribute 'org-super-agenda-header nil
+        :foreground "green"
+        :weight 'bold
+        :overline "green"
+      )
+  )
+#+END_SRC
+
 ****** Agenda: Find Entries Tagged :UNFILED: So I Can Move Them Where They Belong
 
 This agenda collects all headlines tagged :UNFILED: regardless of whether they
@@ -4948,27 +4970,6 @@ try:
 
 consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
 
-***** Segment My Agenda Views into Topics Using Super-Agenda
-
-The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
-list of items, usually for the daily/weekly agenda, made by the
-~org-agenda-list~ command, but it also works for other agenda views, like
-~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package org-super-agenda
-    :load-path "~/.emacs.d/lisp/org-super-agenda/"  ;; use my Git checkout
-
-    :config
-      (org-super-agenda-mode)  ;; enable it globally
-
-      (set-face-attribute 'org-super-agenda-header nil
-        :foreground "green"
-        :weight 'bold
-        :overline "green"
-      )
-  )
-#+END_SRC
 
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
