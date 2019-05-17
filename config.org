@@ -4492,7 +4492,7 @@ This agenda collects TODO headlines tagged as :SHOP: and formats them
 with a leading "[ ]" checkbox so I can print them and check them off.
 
 #+NAME: define-agenda-$-FindItemsToPurchase
-#+BEGIN_SRC emacs-lisp :exports code
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
     "+SHOP"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
