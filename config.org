@@ -4558,7 +4558,7 @@ meaning they have a DEADLINE, or they have a SCHEDULED start date today or in
 the past.  The look-forward period for DEADLINES is the next 14-days.
 
 #+NAME: define-agenda-pa-PersonalScheduledTasks
-#+BEGIN_SRC emacs-lisp :exports code
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("pa" "Personal Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
 
     ;; Only headlines scheduled or with deadlines will show because this
