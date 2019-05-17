@@ -4339,7 +4339,7 @@ in it.
   )
 #+END_SRC
 
-***** Segment My Agenda Views into Topics Using Super-Agenda
+****** Segment My Agenda Views into Topics Using Super-Agenda
 
 The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
 list of items, usually for the daily/weekly agenda, made by the
