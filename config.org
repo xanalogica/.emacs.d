@@ -2882,7 +2882,7 @@ e     Export views to associated files.
                  ("TWEETS"    . nil)
                  ("PAPERS"    . nil)
                  ("YAMMER"    . nil)
-                 ("BLOGPOST"  . nil)
+                 ("BLOG"      . nil)
            (:endgrouptag)
 
            (:startgrouptag)
