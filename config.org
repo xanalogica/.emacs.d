@@ -2877,7 +2877,7 @@ e     Export views to associated files.
            (:endgrouptag)
 
            (:startgrouptag)
-              ("WRITING")
+              ("WRITE")
               (:grouptags)
                  ("TWEETS"    . nil)
                  ("PAPERS"    . nil)
