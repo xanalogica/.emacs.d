@@ -4403,7 +4403,6 @@ scheduled for me to work on it.
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Archivable TODOs")
 
-
 ;;; Instead of a single list, this can also be a set of list for specific
 ;;; contents, with a context symbol in the car of the list, any of
 ;;; `agenda', `todo', `tags', `search' for the corresponding agenda views.
