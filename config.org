@@ -4383,7 +4383,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
       (org-agenda-remove-tags t)
 ;;      (org-super-agenda-unmatched-name "Other Items")
-      (org-agenda-span 2)         ;; show me 2days at a time
+      (org-agenda-span 2)         ;; show me 2-days at a time
       (org-agenda-files '("~/Dropbox/Documents/Inbox.org"))
     )
     ("/tmp/InboxWronglyScheduled.pdf")  ;; file(s)-to-export[6]
