@@ -4373,10 +4373,10 @@ list of items, usually for the daily/weekly agenda, made by the
 
 ****** Agenda: Find Incorrect INBOX Entries with a SCHEDULED Keyword
 
-There seems to be a bug in the Orgzly Android app, in that each
-time a new entry is created, it adds a SCHEDULED date of the day
-it was created.  This messes up my agenda views, making me think that
-every such entry has been scheduled for me to work on it.
+There seems to be a bug in the Orgzly Android app, in that each time a new
+entry is created, it adds a SCHEDULED date of the day it was created.  This
+messes up my agenda views, making me think that every such entry has been
+scheduled for me to work on it.
 
 #+NAME: define-agenda-1-FindScheduledInboxEntries
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
