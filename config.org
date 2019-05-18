@@ -4337,6 +4337,7 @@ in it.
   (setq org-agenda-custom-commands
     '(
        <<define-agenda-1-FindScheduledInboxEntries>>
+       <<define-agenda-2-FindArchivableEntries>>
        <<define-agenda-F-FindUnfiledEntries>>
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
