@@ -4336,6 +4336,7 @@ in it.
 #+BEGIN_SRC emacs-lisp :exports code :noweb yes
   (setq org-agenda-custom-commands
     '(
+       <<define-agenda-1-FindScheduledInboxEntries>>
        <<define-agenda-F-FindUnfiledEntries>>
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
