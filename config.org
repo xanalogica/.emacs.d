@@ -4385,7 +4385,7 @@ list of items, usually for the daily/weekly agenda, made by the
 ;;      (org-super-agenda-unmatched-name "Other Items")
 ;;      (org-agenda-files '("~/Dropbox/Documents/index.org"))
     )
-    ("/tmp/NeedsRefiling.pdf")  ;; file(s)-to-export[6]
+    ("/tmp/InboxScheduled.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
 
