@@ -4371,6 +4371,23 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
+****** Agenda: Find Incorrect INBOX Entries with a SCHEDULED Keyword
+
+#+NAME: define-agenda-1-FindScheduledInboxEntries
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("1" "Find Mis-Scheduled Inbox entries" agenda  ;; key[1] desc[2] type[3]
+    nil  ;; entry match-expression[4]
+    ( ;; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Mis-Scheduled Inbox Items")
+
+      (org-agenda-remove-tags t)
+      (org-agenda-span 2)         ;; show me 2-days at a time
+      (org-agenda-files '("~/Dropbox/Documents/Inbox.org"))
+    )
+    ("/tmp/InboxWronglyScheduled.pdf")  ;; file(s)-to-export[6]
+  )
+#+END_SRC
+
 ****** Agenda: Find INBOX Entries with a SCHEDULED Keyword
 
 #+NAME: define-agenda-1-FindScheduledInboxEntries
@@ -4387,6 +4404,12 @@ list of items, usually for the daily/weekly agenda, made by the
     ("/tmp/InboxWronglyScheduled.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
+
+
+
+
+
+
 
 
 ****** Agenda: Find Entries Tagged :UNFILED: So I Can Move Them Where They Belong
