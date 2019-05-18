@@ -4378,7 +4378,7 @@ list of items, usually for the daily/weekly agenda, made by the
   ("1" "Find Scheduled Inbox entries" agenda  ;; key[1] desc[2] type[3]
     nil  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
-      (org-agenda-overriding-header "Mis-Scheduled Inbox Items")
+      (org-agenda-overriding-header "Misscheduled Inbox Items")
 
       (org-agenda-remove-tags t)
       (org-agenda-span 2)         ;; show me 2-days at a time
