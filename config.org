@@ -4338,7 +4338,7 @@ in it.
     '(
        <<define-agenda-1-FindScheduledInboxEntries>>
        <<define-agenda-2-FindArchivableEntries>>
-       <<define-agenda-F-FindUnfiledEntries>>
+       <<define-agenda-3-FindUnfiledEntries>>
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
        <<define-agenda-pR-FindRiverhoodEvents>>
