@@ -4774,7 +4774,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
        (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
        (:name "To Share My Knowledge  :SHARE:"    :tag "SHARE")
-       (:name "Things I Need to Study :STUDY:"    :tag "STUDY" :tag "LINK")
+       (:name "Things I Need to Study :STUDY:"    (:or (:tag "STUDY" :tag "LINK"))
        (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
 
        (:name "(To Be Organized)"
