@@ -2871,7 +2871,7 @@ e     Export views to associated files.
            (:startgrouptag)
               ("SYSADMIN")
               (:grouptags)
-                 ("GADGETS"   . nil)
+                 ("GADGET"   . nil)
                  ("SWCONFIG"  . nil)
                  ("HOSTING"   . nil)
            (:endgrouptag)
