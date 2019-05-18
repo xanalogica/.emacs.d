@@ -4382,7 +4382,7 @@ scheduled for me to work on it.
 #+NAME: define-agenda-1-FindScheduledInboxEntries
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("1" "Find Mis-Scheduled Inbox entries" agenda  ;; key[1] desc[2] type[3]
-    "+TODO=DONE"  ;; entry match-expression[4]
+    nil  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Mis-Scheduled Inbox Items")
 
@@ -4399,7 +4399,7 @@ scheduled for me to work on it.
 #+NAME: define-agenda-2-FindArchivableEntries
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("2" "Find Archivable entries" todo  ;; key[1] desc[2] type[3]
-    nil  ;; entry match-expression[4]
+    "+TODO=DONE"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Archivable TODOs")
 
