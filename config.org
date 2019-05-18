@@ -4370,6 +4370,8 @@ list of items, usually for the daily/weekly agenda, made by the
   )
 #+END_SRC
 
+****** Agenda: Find INBOX Entries with a SCHEDULED Keyword
+
 ****** Agenda: Find Entries Tagged :UNFILED: So I Can Move Them Where They Belong
 
 This agenda collects all headlines tagged :UNFILED: regardless of whether they
