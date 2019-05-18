@@ -4448,6 +4448,7 @@ entries to where they belong.
       (org-agenda-overriding-header "Items Needing Proper Filing")
       (org-super-agenda-groups agendagroups/items-needing-filing)
 
+      (org-agenda-sorting-strategy '(category-up priority-down alpha-up))
       (org-agenda-remove-tags t)
 ;;      (org-super-agenda-unmatched-name "Other Items")
 ;;      (org-agenda-files '("~/Dropbox/Documents/index.org"))
