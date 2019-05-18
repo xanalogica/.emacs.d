@@ -4405,7 +4405,7 @@ scheduled for me to work on it.
       (org-agenda-remove-tags t)
 ;;      (org-agenda-files '("~/Dropbox/Documents/Inbox.org"))
     )
-    ("/tmp/InboxWronglyScheduled.pdf")  ;; file(s)-to-export[6]
+    ("/tmp/ArchivableEntries.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
 
