@@ -4393,7 +4393,7 @@ scheduled for me to work on it.
   )
 #+END_SRC
 
-****** Agenda: Find Finished Entries Needing to be Archive
+****** Agenda: Find Finished Entries Needing to be Archived
 
 #+NAME: define-agenda-1-FindScheduledInboxEntries
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
