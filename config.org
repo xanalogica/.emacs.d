@@ -2920,6 +2920,16 @@ e     Export views to associated files.
 - YAMMER	:: ideas for thing to post about on Yammer!
 - my own training
 
+- adopt imperative tag words to encourage my mind to actually do them
+
+STUDY
+BLOG
+WRITE
+YAMMER
+SPEAK
+
+
+
 - ADMIN
 - CAPITAL
 - INITIATIVE
