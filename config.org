@@ -4375,7 +4375,7 @@ list of items, usually for the daily/weekly agenda, made by the
 
 #+NAME: define-agenda-1-FindScheduledInboxEntries
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("1" "Find Scheduled Inbox entries" tags  ;; key[1] desc[2] type[3]
+  ("1" "Find Scheduled Inbox entries" agenda  ;; key[1] desc[2] type[3]
     "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Items Needing Proper Filing")
