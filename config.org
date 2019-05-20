@@ -2935,6 +2935,9 @@ e     Export views to associated files.
   Technology.  I do something apply a priority tag to them but generally don't
   further subdivide or organize them.
 
+  On my Android, I have the Orgzly app installed and watching my Dropbox
+  collection of .org files.  So wherever I am I a
+
 
 
 BLOG
