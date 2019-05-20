@@ -2922,7 +2922,13 @@ e     Export views to associated files.
 
 - adopt imperative tag words to encourage my mind to actually do them
 
-STUDY
+- STUDY
+
+  This tag is for topics, websites, books etc. that I want to find time to
+  study more closely.
+
+
+
 BLOG
 WRITE
 YAMMER
