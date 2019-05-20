@@ -2925,7 +2925,8 @@ e     Export views to associated files.
 - STUDY
 
   This tag is for topics, websites, books etc. that I want to find time to
-  study more closely.
+  study more closely.  Sometimes it is found with the :LINK: tag if it is
+  website.
 
 
 
