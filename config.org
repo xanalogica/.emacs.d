@@ -2935,7 +2935,8 @@ e     Export views to associated files.
   that they should be scattered among my notes under various topics.  For
   example, I have :STUDY: headlines under Finance, under Philosophy and under
   Technology.  I do sometimes apply a priority tag to them but generally don't
-  further subdivide or organize them.
+  further subdivide or organize them.  I do SCHEDULE them if I want to nudge
+  myself to get around to doing so.
 
   On my Android, I have the Orgzly app installed and always watching my Dropbox
   collection of .org files.  And I have defined a named search in Orgzly titled
