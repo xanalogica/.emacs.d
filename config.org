@@ -2924,7 +2924,7 @@ e     Export views to associated files.
   since have switched to imperative tag words, like STUDY, WRITE, TRAVEL to
   encourage my mind to actually do them.
 
-- STUDY :: 
+- STUDY ::
 
   This tag is for topics, websites, books etc. that I want to find time to
   study more closely.  Sometimes it is found with the :LINK: tag if it is
