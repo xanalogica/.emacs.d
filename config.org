@@ -2944,9 +2944,9 @@ e     Export views to associated files.
 
   #+NAME: Orgzly: Things to Study
   #+BEGIN_EXAMPLE
+    tn.study i.TODO o.scheduled o.priority o.notebook
   #+END_EXAMPLE
 
-    tn.study i.TODO o.scheduled o.priority o.notebook
 
 BLOG
 WRITE
