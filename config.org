@@ -2921,6 +2921,7 @@ e     Export views to associated files.
 - my own training
 
 - adopt imperative tag words to encourage my mind to actually do them
+  and avoid passive tags like TOSTUDY or THINGSTOSTUDY.
 
 - STUDY
 
