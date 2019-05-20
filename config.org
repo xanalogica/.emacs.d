@@ -2926,7 +2926,7 @@ e     Export views to associated files.
 
   This tag is for topics, websites, books etc. that I want to find time to
   study more closely.  Sometimes it is found with the :LINK: tag if it is
-  website URL.
+  website URL, or :VIDEO: or :BOOK:.
 
   I don't collect my :STUDY: items in one file or place, but rather believe
   that they should be scattered among my notes under various topics.  For
