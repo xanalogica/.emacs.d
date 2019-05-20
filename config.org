@@ -2943,7 +2943,7 @@ e     Export views to associated files.
   have spare time.  The query string is:
 
   #+NAME: Things to Study
-  #+BEGIN_SRC Orgzly
+  #+BEGIN_SRC text
     tn.study i.TODO o.scheduled o.priority o.notebook
   #+END_EXAMPLE
 
