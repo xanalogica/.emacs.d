@@ -2928,6 +2928,9 @@ e     Export views to associated files.
   study more closely.  Sometimes it is found with the :LINK: tag if it is
   website URL.
 
+  I don't collect my :STUDY: items in one file or place, but rather believe
+  that they should be scattered among my notes under various topics.
+
 
 
 BLOG
