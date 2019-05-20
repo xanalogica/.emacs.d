@@ -2920,9 +2920,9 @@ e     Export views to associated files.
 - YAMMER	:: ideas for thing to post about on Yammer!
 - my own training
 
-- I initially started with passive tag words like TOSTUDY or THINGSTOSTUDY
-  but since have switched to imperative tag words, like STUDY, WRITE, TRAVEL
-  to encourage my mind to actually do them.
+- I initially started with passive tag words like TOSTUDY or THINGSTOSTUDY but
+  since have switched to imperative tag words, like STUDY, WRITE, TRAVEL to
+  encourage my mind to actually do them.
 
 - STUDY
 
