@@ -2937,10 +2937,11 @@ e     Export views to associated files.
   Technology.  I do something apply a priority tag to them but generally don't
   further subdivide or organize them.
 
-  On my Android, I have the Orgzly app installed and watching my Dropbox
-  collection of .org files.  And I have defined a named search in Orgzly
-  titled "Things to Study" so I can at any time pull up and study
-  something when I have spare time.  The query string is:
+  On my Android, I have the Orgzly app installed and always watching my
+           Dropbox collection of .org files.  And I have defined a named
+           search in Orgzly titled "Things to Study" so I can at any time pull
+           up and study something when I have spare time.  The query string
+           is:
 
   #+NAME: Orgzly: Things to Study
   #+BEGIN_EXAMPLE
