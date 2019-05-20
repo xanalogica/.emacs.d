@@ -2942,8 +2942,8 @@ e     Export views to associated files.
   "Things to Study" so I can at any time pull up and study something when I
   have spare time.  The query string is:
 
-  #+NAME: Orgzly: Things to Study
-  #+BEGIN_EXAMPLE
+  #+NAME: Things to Study
+  #+BEGIN_SRC Orgzly
     tn.study i.TODO o.scheduled o.priority o.notebook
   #+END_EXAMPLE
 
