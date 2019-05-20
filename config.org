@@ -2929,7 +2929,9 @@ e     Export views to associated files.
   website URL.
 
   I don't collect my :STUDY: items in one file or place, but rather believe
-  that they should be scattered among my notes under various topics.
+  that they should be scattered among my notes under various topics.  For
+  example, I have :STUDY: headlines under Finance, under Philosophy and under
+  Technology.
 
 
 
