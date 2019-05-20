@@ -2936,7 +2936,8 @@ e     Export views to associated files.
   further subdivide or organize them.
 
   On my Android, I have the Orgzly app installed and watching my Dropbox
-  collection of .org files.  So wherever I am I a
+  collection of .org files.  And I have defined a named search in Orgzly
+  titled "Things to Study" with the query "tn.study o.priority".
 
 
 
