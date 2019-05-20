@@ -2942,8 +2942,6 @@ e     Export views to associated files.
   titled "Things to Study" with the query "tn.study o.priority" so I can at
   any time pull up and study something when I have spare time.
 
-
-
 BLOG
 WRITE
 YAMMER
