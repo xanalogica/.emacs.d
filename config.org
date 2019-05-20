@@ -2934,7 +2934,7 @@ e     Export views to associated files.
   I don't collect my :STUDY: items in one file or place, but rather believe
   that they should be scattered among my notes under various topics.  For
   example, I have :STUDY: headlines under Finance, under Philosophy and under
-  Technology.  I do something apply a priority tag to them but generally don't
+  Technology.  I do sometimes apply a priority tag to them but generally don't
   further subdivide or organize them.
 
   On my Android, I have the Orgzly app installed and always watching my Dropbox
