@@ -4947,7 +4947,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
-****** Agenda: 
+****** Agenda: List Clients for ZeOmega
 
        ("zC" "ZeOmega Clients" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:CLIENT:}+ZEOMEGA"  ;; entry match-expression[4]
