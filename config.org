@@ -4375,7 +4375,7 @@ in it.
        <<define-agenda-zD-TechDirections>>
        <<define-agenda-zC-ZeOmegaClients>>
        <<define-agenda-zI-TechInitiatives>>
- )
+     )
   )
 #+END_SRC
 
