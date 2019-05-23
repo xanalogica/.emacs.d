@@ -4978,17 +4978,17 @@ multiple DIRECTIONs in an agenda, which is what I want.
 ;;       (:auto-direction :order 99)
 
 ;;;       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
-       (:name "Refilings to Organize  :REFILING:" :tag "REFILING")
-       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
-       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
-       (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
-       (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
-       (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
-       (:name "To Share My Knowledge  :SHARE:"    :tag "SHARE")
-       (:name "Things I Need to Study :STUDY:"    :tag ("STUDY" "LINK"))
-       (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
+;;;;       (:name "Refilings to Organize  :REFILING:" :tag "REFILING")
+;;;;       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
+;;;;       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
+;;;;       (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
+;;;;       (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
+;;;;       (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
+;;;;       (:name "To Share My Knowledge  :SHARE:"    :tag "SHARE")
+;;;;       (:name "Things I Need to Study :STUDY:"    :tag ("STUDY" "LINK"))
+;;;;       (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
 
-       (:name "(To Be Organized)"
+       (:name "Initiatives Not Associated With a Direction)"
          :anything t  ;; place all remaining entries under this heading
          :order 0
        )
