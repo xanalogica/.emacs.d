@@ -4373,7 +4373,8 @@ in it.
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-zb-WorkTaskBacklog>>
        <<define-agenda-zD-TechDirections>>
-   )
+       <<define-agenda-zC-ZeOmegaClients>>
+ )
   )
 #+END_SRC
 
