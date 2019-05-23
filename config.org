@@ -4286,7 +4286,7 @@ F Captured Info Needing Filing
   (setq org-agenda-menu-show-matcher
     nil)
   (setq org-agenda-menu-two-columns
-    t)
+    nil)
 ;;;  (setq org-tags-match-list-sublevels
 ;;;    nil) ;; do NOT match inherited tags in headline sublevels
 
