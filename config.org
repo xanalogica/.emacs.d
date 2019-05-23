@@ -4993,7 +4993,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
 ;;      (org-super-agenda-unmatched-name "Other Items")
     )
     ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
-       )
+  )
 #+END_SRC
 
 ****** Agenda: 
