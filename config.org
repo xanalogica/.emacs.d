@@ -4369,8 +4369,9 @@ in it.
        <<define-agenda-$-FindItemsToPurchase>>
        <<define-agenda-pR-FindRiverhoodEvents>>
        <<define-agenda-pa-PersonalScheduledTasks>>
-       <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-pb-PersonalTaskBacklog>>
+
+       <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-zb-WorkTaskBacklog>>
        <<define-agenda-zD-TechDirections>>
        <<define-agenda-zC-ZeOmegaClients>>
