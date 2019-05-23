@@ -4827,7 +4827,6 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "ZeOmega Backlog (Unscheduled Tasks)")
       (org-super-agenda-groups agendagroups/zeomega-backlog-tasks)
-;;      (org-super-agenda-groups groups/backlog-tasks)
 
       (org-agenda-remove-tags t)
       (org-super-agenda-unmatched-name "Misc ZeOmega Tasks")
