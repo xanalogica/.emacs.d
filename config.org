@@ -4971,8 +4971,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/zeomega-initiatives
     '(
-       (:discard (:not (:tag "ZEOMEGA")))     ;; skip non-work tasks
-       (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
+;;;;       (:discard (:not (:tag "ZEOMEGA")))     ;; skip non-work tasks
+;;;;       (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
 
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 ;;       (:auto-direction :order 99)
