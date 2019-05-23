@@ -4966,6 +4966,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 ****** Agenda: List Technology Initiatives for ZeOmega
 
+#+NAME: define-agenda-zC-ZeOmegaClients
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
        ("zI" "Initiatives of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
          ( ;; [5] list of settings local to this custom agenda view
@@ -4976,6 +4978,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
          )
          ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
        )
+#+END_SRC
 
 ****** Agenda: 
 
