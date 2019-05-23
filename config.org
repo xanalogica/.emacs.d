@@ -4958,11 +4958,41 @@ multiple DIRECTIONs in an agenda, which is what I want.
     "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Technology Initiatives")
+      (org-super-agenda-groups agendagroups/zeomega-initiatives)
 
 ;;      (org-agenda-prefix-format "  ")  ;; remove Category
       (org-agenda-remove-tags t)
     )
     ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
+  )
+#+END_SRC
+
+
+#+BEGIN_SRC emacs-lisp
+  (setq agendagroups/zeomega-backlog-tasks
+    '(
+       (:discard (:not (:tag "ZEOMEGA")))     ;; skip non-work tasks
+       (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
+
+       (:order-multi (99 (:auto-multiproperty "DIRECTION")))
+;;       (:auto-direction :order 99)
+
+;;;       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
+       (:name "Refilings to Organize  :REFILING:" :tag "REFILING")
+       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
+       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
+       (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
+       (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
+       (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
+       (:name "To Share My Knowledge  :SHARE:"    :tag "SHARE")
+       (:name "Things I Need to Study :STUDY:"    :tag ("STUDY" "LINK"))
+       (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
+
+       (:name "(To Be Organized)"
+         :anything t  ;; place all remaining entries under this heading
+         :order 0
+       )
+    )
   )
 #+END_SRC
 
