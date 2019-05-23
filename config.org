@@ -4375,8 +4375,8 @@ in it.
        <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-zb-WorkTaskBacklog>>
        <<define-agenda-zD-TechDirections>>
-       <<define-agenda-zC-ZeOmegaClients>>
        <<define-agenda-zI-TechInitiatives>>
+       <<define-agenda-zC-ZeOmegaClients>>
        <<define-agenda-zM-MyZeOmegaMeetings>>
      )
   )
