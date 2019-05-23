@@ -4975,7 +4975,6 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
       (org-agenda-prefix-format "  ")  ;; remove Category
       (org-agenda-remove-tags t)
-;;      (org-super-agenda-unmatched-name "Other Items")
     )
     ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
   )
