@@ -4930,6 +4930,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 ****** Agenda: List Technology Directions for ZeOmega
 
+#+NAME: define-agenda-zb-WorkTaskBacklog
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
        ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
          "+TAGS={:DIRECTION:}+ZEOMEGA"  ;; entry match-expression[4]
 ;;         "+TAGS={TechDirection}-NOSEARCH=1"  ;; entry match-expression[4]
@@ -4943,6 +4945,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
          )
          ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
        )
+#+END_SRC
 
 ****** Agenda: 
 
