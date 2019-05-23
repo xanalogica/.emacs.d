@@ -4984,15 +4984,15 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 #+NAME: define-agenda-zM-MyZeOmegaMeetings
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-       ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
-         "+TAGS={:MEETING:}+ZEOMEGA"  ;; entry match-expression[4]
-         ( ;; [5] list of settings local to this custom agenda view
-           (org-agenda-overriding-header "ZeOmega Meetings")
-           (org-agenda-prefix-format "  ")  ;; remove Category
-           (org-agenda-remove-tags t)
-;;           (org-super-agenda-unmatched-name "Other Items")
-         )
-         ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
+  ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
+    "+TAGS={:MEETING:}+ZEOMEGA"  ;; entry match-expression[4]
+    ( ;; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "ZeOmega Meetings")
+      (org-agenda-prefix-format "  ")  ;; remove Category
+      (org-agenda-remove-tags t)
+;;      (org-super-agenda-unmatched-name "Other Items")
+    )
+    ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
        )
 #+END_SRC
 
