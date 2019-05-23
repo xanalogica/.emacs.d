@@ -4994,6 +4994,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
          )
          ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
        )
+#+END_SRC
 
 ****** Agenda: 
 
