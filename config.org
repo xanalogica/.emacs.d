@@ -5077,15 +5077,6 @@ You can also describe a 'set' of Agenda commands:
  - (tags "match" settings files)
  - (tags-todo "match" settings files)
 
-
- (setq org-agenda-custom-commands
-   \\='(("h" . "HOME + Name tag searches") ; describe prefix "h"
-     ("hl" tags "+HOME+Lisa")
-     ("hp" tags "+HOME+Peter")
-     ("hk" tags "+HOME+Kim")))"
-
-
-
 ****** Agenda: 
 
 ;;; do NOT indent task titles
