@@ -4369,7 +4369,7 @@ in it.
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
 
-   (("h" . "HOME + Name tag searches") ; describe prefix "h"
+       ("h" . "HOME + Name tag searches") ; describe prefix "h"
 
 
 
