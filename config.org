@@ -5003,7 +5003,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
 ;;;;       (:name "Things I Need to Study :STUDY:"    :tag ("STUDY" "LINK"))
 ;;;;       (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
 
-       (:name "Initiatives Not Associated With a :DIRECTION:"
+       (:name "Initiatives Not Associated With a DIRECTION"
          :anything t  ;; place all remaining entries under this heading
          :order 0
        )
