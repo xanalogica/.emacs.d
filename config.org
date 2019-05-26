@@ -5048,6 +5048,14 @@ multiple DIRECTIONs in an agenda, which is what I want.
 #+END_SRC
 
 You can also describe a 'set' of Agenda commands:
+ - (agenda \"\" settings)
+ - (alltodo \"\" settings)
+ - (stuck \"\" settings)
+ - (todo \"match\" settings files)
+ - (search \"match\" settings files)
+ - (tags \"match\" settings files)
+ - (tags-todo \"match\" settings files)
+
 
   ("zZ" "Agenda Blocks"  ;; key[1] desc[2]
     (                      ;; type[3]
@@ -5059,13 +5067,6 @@ You can also describe a 'set' of Agenda commands:
 
 
        So valid commands for a set are:
-       (agenda \"\" settings)
-       (alltodo \"\" settings)
-       (stuck \"\" settings)
-       (todo \"match\" settings files)
-       (search \"match\" settings files)
-       (tags \"match\" settings files)
-       (tags-todo \"match\" settings files)
 
 Each command can carry a list of options, and another set of options can be
 given for the whole set of commands.  Individual command options take
