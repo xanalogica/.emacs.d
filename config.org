@@ -5029,6 +5029,20 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
+
+****** Agenda Blocks (mixed agendas in one view)
+
+(setq org-agenda-custom-commands
+      '(("h" "Agenda and Home-related tasks"
+         ((agenda "")
+          (tags-todo "home")
+          (tags "garden")))
+        ("o" "Agenda and Office-related tasks"
+         ((agenda "")
+          (tags-todo "work")
+          (tags "office")))))
+
+
 ****** Agenda: 
 
 ;;; do NOT indent task titles
