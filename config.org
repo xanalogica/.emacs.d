@@ -5047,7 +5047,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
-  ("zZ" "Agenda and Home-related tasks"
+  ("zZ" "Agenda Blocks"
        (
          (agenda "")
          (tags-todo "home")
