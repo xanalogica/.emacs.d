@@ -4374,7 +4374,7 @@ in it.
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-pR-FindRiverhoodEvents>>
 
-       ("z" . "Personal Agendas") ; describe prefix "p"
+       ("z" . "Personal Agendas") ; describe prefix "z"
        <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-zb-WorkTaskBacklog>>
        <<define-agenda-zD-TechDirections>>
