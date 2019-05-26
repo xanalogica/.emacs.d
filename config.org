@@ -4374,7 +4374,7 @@ in it.
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-pR-FindRiverhoodEvents>>
 
-       ("z" . "ZeOmegae Agendas") ; describe prefix "z"
+       ("z" . "ZeOmega Agendas") ; describe prefix "z"
        <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-zb-WorkTaskBacklog>>
        <<define-agenda-zD-TechDirections>>
