@@ -4370,11 +4370,11 @@ in it.
        <<define-agenda-$-FindItemsToPurchase>>
 
        ("p" . "Personal Agendas") ; describe prefix "p"
-
        <<define-agenda-pa-PersonalScheduledTasks>>
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-pR-FindRiverhoodEvents>>
 
+       ("z" . "Personal Agendas") ; describe prefix "p"
        <<define-agenda-za-WorkScheduledTasks>>
        <<define-agenda-zb-WorkTaskBacklog>>
        <<define-agenda-zD-TechDirections>>
