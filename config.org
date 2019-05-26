@@ -4963,6 +4963,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
     (                                            ;; type[3] => set of agendas
       (tags
         "+TAGS={:DOCUMENT:}+ZEOMEGA"
+        ( ;; [5] list of settings local to this custom agenda view
+        )
       )
       (tags  ;; type[3a]
         "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
