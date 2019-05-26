@@ -5050,6 +5050,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 (setq org-agenda-custom-commands
   '(
+
      ("h" "Agenda and Home-related tasks"
          ((agenda "")
           (tags-todo "home")
