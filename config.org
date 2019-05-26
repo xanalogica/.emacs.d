@@ -5055,7 +5055,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
          ((agenda "")
           (tags-todo "home")
           (tags "garden")))
-        ("o" "Agenda and Office-related tasks"
+     
+   ("o" "Agenda and Office-related tasks"
          ((agenda "")
           (tags-todo "work")
           (tags "office")))
