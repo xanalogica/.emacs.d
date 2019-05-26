@@ -4975,9 +4975,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
       (tags
         "+TAGS={:DOCUMENT:}+ZEOMEGA"
       )
-
-
-
+    )
+  )
 #+END_SRC
 
   ("zZ" "Directions of Technology for ZeOmega"
