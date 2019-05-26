@@ -5033,7 +5033,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
 ****** Agenda Blocks (mixed agendas in one view)
 
 
-#+NAME: define-agenda-zZ-TechDirections
+#+NAME: define-agenda-zZ-AgendaBlocks
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
     "+TAGS={:DIRECTION:}+ZEOMEGA"  ;; entry match-expression[4]
