@@ -4959,7 +4959,9 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 #+NAME: define-agenda-zI-TechInitiatives
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("zI" "Initiatives of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
+  ("zI" "Initiatives of Technology for ZeOmega"
+
+ tags  ;; key[1] desc[2] type[3]
     "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Technology Initiatives")
@@ -4970,6 +4972,14 @@ multiple DIRECTIONs in an agenda, which is what I want.
     )
     ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
   )
+
+
+      (tags
+        "+TAGS={:DOCUMENT:}+ZEOMEGA"
+      )
+
+
+
 #+END_SRC
 
 
@@ -5067,14 +5077,6 @@ You can also describe a 'set' of Agenda commands:
  - (tags "match" settings files)
  - (tags-todo "match" settings files)
 
-
-  ("zZ" "Agenda Blocks"  ;; key[1] desc[2]
-    (                      ;; type[3]
-      (agenda "")
-      (tags-todo "home")
-      (tags "garden")
-    )
-  )
 
  (setq org-agenda-custom-commands
    \\='(("h" . "HOME + Name tag searches") ; describe prefix "h"
