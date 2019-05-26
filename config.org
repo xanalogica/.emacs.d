@@ -4965,6 +4965,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
         "+TAGS={:DOCUMENT:}+ZEOMEGA"
         ( ;; [5] list of settings local to this custom agenda view
           (org-agenda-overriding-header "Common Technology Documents")
+          (org-agenda-prefix-format "  ")  ;; remove Category
           (org-agenda-remove-tags t)
         )
       )
@@ -4974,7 +4975,6 @@ multiple DIRECTIONs in an agenda, which is what I want.
           (org-agenda-overriding-header "Technology Initiatives")
           (org-super-agenda-groups agendagroups/zeomega-initiatives)
 
-;;          (org-agenda-prefix-format "  ")  ;; remove Category
           (org-agenda-remove-tags t)
         )
         ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
