@@ -5055,6 +5055,32 @@ multiple DIRECTIONs in an agenda, which is what I want.
     )
   )
 
+
+       So valid commands for a set are:
+       (agenda \"\" settings)
+       (alltodo \"\" settings)
+       (stuck \"\" settings)
+       (todo \"match\" settings files)
+       (search \"match\" settings files)
+       (tags \"match\" settings files)
+       (tags-todo \"match\" settings files)
+
+Each command can carry a list of options, and another set of options can be
+given for the whole set of commands.  Individual command options take
+precedence over the general options.
+
+When using several characters as key to a command, the first characters
+are prefix commands.  For the dispatcher to display useful information, you
+should provide a description for the prefix, like
+
+ (setq org-agenda-custom-commands
+   \\='((\"h\" . \"HOME + Name tag searches\") ; describe prefix \"h\"
+     (\"hl\" tags \"+HOME+Lisa\")
+     (\"hp\" tags \"+HOME+Peter\")
+     (\"hk\" tags \"+HOME+Kim\")))"
+
+
+
 ****** Agenda: 
 
 ;;; do NOT indent task titles
