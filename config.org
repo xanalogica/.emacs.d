@@ -5066,10 +5066,6 @@ You can also describe a 'set' of Agenda commands:
   )
 
 
-Each command can carry a list of options, and another set of options can be
-given for the whole set of commands.  Individual command options take
-precedence over the general options.
-
 When using several characters as key to a command, the first characters
 are prefix commands.  For the dispatcher to display useful information, you
 should provide a description for the prefix, like
