@@ -4972,8 +4972,6 @@ multiple DIRECTIONs in an agenda, which is what I want.
         )
         ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
       )
-
-
       (tags
         "+TAGS={:DOCUMENT:}+ZEOMEGA"
       )
