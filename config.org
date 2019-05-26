@@ -4962,7 +4962,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
   ("zI" "Initiatives of Technology for ZeOmega"  ;; key[1] desc[2]
     (                               ;; type[3] => a set of agendas
       (tags  ;; type[3a]
-        "+TAGS={:DOCUMENT:}+ZEOMEGA"
+        "+TAGS={:DOCUMENT:}+ZEOMEGA"  ;; entry match-expression[4]
         ( ;; [5] list of settings local to this custom agenda view
           (org-agenda-overriding-header "Common Technology Documents")
 ;;          (org-agenda-prefix-format "  ")  ;; remove Category
