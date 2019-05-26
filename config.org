@@ -5066,7 +5066,7 @@ You can also describe a 'set' of Agenda commands:
   )
 
  (setq org-agenda-custom-commands
-   \\='((\"h\" . \"HOME + Name tag searches\") ; describe prefix \"h\"
+   \\='(("h" . "HOME + Name tag searches") ; describe prefix "h"
      ("hl" tags "+HOME+Lisa")
      ("hp" tags "+HOME+Peter")
      ("hk" tags "+HOME+Kim")))"
