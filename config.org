@@ -4961,6 +4961,9 @@ multiple DIRECTIONs in an agenda, which is what I want.
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("zI" "Initiatives of Technology for ZeOmega"  ;; key[1] desc[2]
     (                                            ;; type[3] => set of agendas
+      (tags
+        "+TAGS={:DOCUMENT:}+ZEOMEGA"
+      )
       (tags  ;; type[3a]
         "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
         ( ;; [5] list of settings local to this custom agenda view
@@ -4971,9 +4974,6 @@ multiple DIRECTIONs in an agenda, which is what I want.
           (org-agenda-remove-tags t)
         )
         ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
-      )
-      (tags
-        "+TAGS={:DOCUMENT:}+ZEOMEGA"
       )
     )
   )
