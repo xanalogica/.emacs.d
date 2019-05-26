@@ -4381,6 +4381,8 @@ in it.
        <<define-agenda-zI-TechInitiatives>>
        <<define-agenda-zC-ZeOmegaClients>>
        <<define-agenda-zM-MyZeOmegaMeetings>>
+
+       <<define-agenda-zZ-AgendaBlocks>>
      )
   )
 #+END_SRC
