@@ -5038,7 +5038,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
   ("zD" "Directions of Technology for ZeOmega"
     (  type[3] => set of agendas
-      (tags  ;; key[1] desc[2] type[3]
+      (tags
         "+TAGS={:DIRECTION:}+ZEOMEGA"  ;; entry match-expression[4]
         ( ;; [5] list of settings local to this custom agenda view
           (org-agenda-overriding-header "Technology Directions")
@@ -5049,6 +5049,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
         )
         ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
       )
+      (tags
     )
   )
 #+END_SRC
