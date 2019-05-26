@@ -4963,15 +4963,15 @@ multiple DIRECTIONs in an agenda, which is what I want.
     (                                            ;; type[3] => set of agendas
       (tags  ;; type[3a]
         "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
-    ( ;; [5] list of settings local to this custom agenda view
-      (org-agenda-overriding-header "Technology Initiatives")
-      (org-super-agenda-groups agendagroups/zeomega-initiatives)
+        ( ;; [5] list of settings local to this custom agenda view
+          (org-agenda-overriding-header "Technology Initiatives")
+          (org-super-agenda-groups agendagroups/zeomega-initiatives)
 
-;;      (org-agenda-prefix-format "  ")  ;; remove Category
-      (org-agenda-remove-tags t)
-    )
-    ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
-  )
+;;          (org-agenda-prefix-format "  ")  ;; remove Category
+          (org-agenda-remove-tags t)
+        )
+        ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
+      )
 
 
       (tags
