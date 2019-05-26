@@ -5060,9 +5060,11 @@ multiple DIRECTIONs in an agenda, which is what I want.
      )
 
      ("o" "Agenda and Office-related tasks"
-         ((agenda "")
-          (tags-todo "work")
-          (tags "office"))
+       (
+         (agenda "")
+         (tags-todo "work")
+         (tags "office")
+       )
      )
    )
 )
