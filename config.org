@@ -4979,12 +4979,6 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
-  ("zZ" "Directions of Technology for ZeOmega"
-    (  ;; type[3] => set of multiple agendas displayed together
-      (tags
-
-
-
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/zeomega-initiatives
     '(
