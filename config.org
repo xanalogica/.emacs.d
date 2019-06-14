@@ -4763,6 +4763,7 @@ following elisp variable to segregate the headlines into various sections.
     '(
       (:discard (:not (:tag "ZEOMEGA")))  ;; skip non-work-related tasks
       (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
+      (:discard (:tag "COMMENT"))  ;; skip pending items in Inbox.org
 
 ;;; create a section for DONE tasks, directing me to archive them.
 
