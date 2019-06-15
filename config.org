@@ -2961,7 +2961,7 @@ e     Export views to associated files.
 
 
 BLOG
-WRITE
+WRITE     COMPOSE
 YAMMER
 SPEAK
 
