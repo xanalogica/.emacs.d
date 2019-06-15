@@ -4719,7 +4719,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "To Experience Life's Magic      :EVENT:"   :tag "EVENT")
       (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
       (:name "To Engage with People           :PEOPLE:"  :tag "PEOPLE")
-      (:name "To Share Knowledge with Others  :COMPOSE:" :tag "COMPOSE")
+      (:name "To Share Knowledge with Others  :SHARE:"     :tag ("SHARE" "COMPOSE"))
       (:name "To Continually Learn            :STUDY:"   :tag ("STUDY" "LINK"))
 
       ;; After the last group, the agenda will display items that didn't
