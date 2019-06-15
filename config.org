@@ -2960,7 +2960,7 @@ e     Export views to associated files.
   #+END_EXAMPLE
 
 
-BLOG
+BLOG      COMPOSE
 WRITE     COMPOSE
 YAMMER
 SPEAK
