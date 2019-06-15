@@ -2962,8 +2962,8 @@ e     Export views to associated files.
 
 BLOG      COMPOSE
 WRITE     COMPOSE
-YAMMER
-SPEAK
+YAMMER    COMPOSE
+SPEAK     COMPOSE
 
 - ADMIN
 - CAPITAL
