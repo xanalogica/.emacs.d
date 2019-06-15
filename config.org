@@ -4820,7 +4820,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:name "Unplanned Health Matters       :HEALTH:"    :tag "HEALTH")
        (:name "Unscheduled Christmas Tasks    :CHRISTMAS:" :tag "CHRISTMAS")
        (:name "Unscheduled Church Activities  :CHURCH:"    :tag "CHURCH")
-       (:name "Unscheduled Writings           :WRITE:"     :tag "WRITE")
+       (:name "Unscheduled Writings           :COMPOSE:"   :tag "COMPOSE")
        (:name "Unscheduled Items to Study     :STUDY:"     :tag ("STUDY" "LINK"))
        (:name "Unplanned Social Activities    :PEOPLE:"    :tag "PEOPLE")
        (:name "Unplanned Travel               :TRAVEL:"    :tag "TRAVEL")
