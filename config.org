@@ -5155,6 +5155,10 @@ try:
 consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
 
 
+****** TODO call Eric's sister re getting my colo box                      :HOT:
+:LOGBOOK:
+- Refiled on [2019-06-14 Fri 21:30]
+:END:
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
