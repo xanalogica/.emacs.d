@@ -5063,9 +5063,9 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 ****** Agenda: Find Things I Want to Study
 
-#+NAME: define-agenda-ps-ThingsToStudy
+#+NAME: define-agenda-s-ThingsToStudy
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("ps" "Things to Study" tags  ;; key[1] desc[2] type[3]
+  ("s" "Things to Study" tags  ;; key[1] desc[2] type[3]
     "+TAGS={:STUDY:}"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Things to Study")
