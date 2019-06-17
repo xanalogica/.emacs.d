@@ -5105,6 +5105,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Emacs Editor              :EMACS:"      :tag "EMACS")
       (:name "Python Programming        :PYTHON:"     :tag "PYTHON")
       (:name "Mathematics               :MATH:"       :tag "MATH")
+      (:name "Linux                     :LINUX:"      :tag "LINUX")
 
 ;;;      (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
 ;;;      (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
