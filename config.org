@@ -4104,9 +4104,9 @@ https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
   )
 #+END_SRC
 
-**** Blah 1
+**** Blah 12
 :PROPERTIES:
-:amount:   1.25
+:amount:   2.25
 :END:
 
 #+BEGIN: propview :cols (ITEM AMOUNT)
