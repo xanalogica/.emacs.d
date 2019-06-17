@@ -5060,6 +5060,9 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
+****** Agenda: Things to Study
+
+
 
 ****** Agenda Blocks (mixed agendas in one view)
 
