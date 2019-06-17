@@ -5120,8 +5120,6 @@ following elisp variable to segregate the headlines into various sections.
   )
 #+END_SRC
 
-ZeOmega
-  Microservices
 Personal
   Philosophy
   Emacs
