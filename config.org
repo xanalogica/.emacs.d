@@ -5126,7 +5126,6 @@ following elisp variable to segregate the headlines into various sections.
 
 Personal
   Philosophy
-  Linux
 Glossary
 
 ****** Agenda Blocks (mixed agendas in one view)
