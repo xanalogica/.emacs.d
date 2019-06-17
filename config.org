@@ -5095,6 +5095,7 @@ following elisp variable to segregate the headlines into various sections.
 ;;; create a section for DONE tasks, directing me to archive them.
 
       (:name "Finance Learning :FINANCE:"  :tag "FINANCE")
+      (:name "Health Matters   :HEALTH:"   :tag "HEALTH")
 
 
 ;;;      (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
