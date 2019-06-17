@@ -4091,6 +4091,9 @@ protocol (org-protocol://); emacsclient then parses the request and tells
 Emacs to capture or store stuff at the relevant places in your Org files.
 
 *** Generating Tables from Org-Properties (org-collector for columnview tables)
+:PROPERTIES:
+:amount:   2.25
+:END:
 
 The ~org-collector~ package provides an extended functionality over the
 ~column view~ feature of Org-Mode.  It allows query expressions to filter out
