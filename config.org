@@ -5070,6 +5070,8 @@ multiple DIRECTIONs in an agenda, which is what I want.
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Things to Study")
 
+      (org-super-agenda-unmatched-name "Other Items")
+
       (org-agenda-prefix-format "  ")  ;; remove Category
       (org-agenda-remove-tags t)
 ;;      (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
