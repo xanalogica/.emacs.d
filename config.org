@@ -5238,11 +5238,6 @@ CRON job can auto-commit all changes at the top of the hour.
 )
 #+END_SRC
 
-
-
-
-
-
 ** Global Key Mappings
 #+BEGIN_SRC emacs-lisp
   (global-unset-key	[C-z]
