@@ -4090,8 +4090,8 @@ These bookmarklets enable your Firefox to talk to emacsclient via a new
 protocol (org-protocol://); emacsclient then parses the request and tells
 Emacs to capture or store stuff at the relevant places in your Org files.
 
-*** org-collector for columnview tables
-Generating Tables from Org-Properties
+*** Generating Tables from Org-Properties (org-collector for columnview tables)
+
 
 The ~org-collector~ package provides an extended functionality over the
 ~column view~ feature of Org-Mode.  It allows query expressions to filter out
