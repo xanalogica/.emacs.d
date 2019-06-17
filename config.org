@@ -5096,7 +5096,6 @@ following elisp variable to segregate the headlines into various sections.
 
       (:name "Financial Learning        :FINANCE:"    :tag "FINANCE")
       (:name "Health Matters            :HEALTH:"     :tag "HEALTH")
-      (:name "Cognitive Practices       :MENTAL:"     :tag "MENTAL")
       (:name "Messaging Tech            :MSGTECH:"    :tag "MSGTECH")
       (:name "Docker Containers         :DOCKER:"     :tag "DOCKER")
       (:name "Kubernetes Orchestration  :K8S:"        :tag "K8S")
@@ -5107,6 +5106,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Mathematics               :MATH:"       :tag "MATH")
       (:name "Linux                     :LINUX:"      :tag "LINUX")
       (:name "AI/ML                     :AIML:"       :tag "AIML")
+      (:name "Cognitive Practices       :MENTAL:"     :tag "MENTAL")
 
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
