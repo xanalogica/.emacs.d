@@ -4091,6 +4091,9 @@ protocol (org-protocol://); emacsclient then parses the request and tells
 Emacs to capture or store stuff at the relevant places in your Org files.
 
 *** org-collector for columnview tables
+Generating Tables from Org-Properties
+
+
 
 The ~org-collector~ package provides an extended functionality over the
 ~column view~ feature of Org-Mode.  It allows query expressions to filter out
@@ -4110,11 +4113,11 @@ https://github.com/yyr/org-mode/blob/master/contrib/lisp/org-collector.el
 :END:
 
 #+BEGIN: propview :cols (ITEM AMOUNT)
-| ITEM     | AMOUNT |
-|----------+--------|
-| "Blah 1" |   1.25 |
-|----------+--------|
-|          |        |
+| ITEM      | AMOUNT |
+|-----------+--------|
+| "Blah 12" |   2.25 |
+|-----------+--------|
+|           |        |
 #+END:
 
 *** Make org-mode Checkboxes Work in Headlines, not just Bulleted Items
@@ -5235,13 +5238,10 @@ CRON job can auto-commit all changes at the top of the hour.
 )
 #+END_SRC
 
-*** Generating Tables from Org-Properties
-org-mode/contrib/lisp/org-collector.el
 
-#+BEGIN_SRC emacs-lisp
-#+END_SRC
 
-## (require 'org-collector)   CANNOT FIND THIS!
+
+
 
 ** Global Key Mappings
 #+BEGIN_SRC emacs-lisp
