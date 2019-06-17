@@ -5073,7 +5073,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
       (org-agenda-remove-tags t)
 ;;      (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
     )
-    ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
+    ("/tmp/ThingsToStudy.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
 
