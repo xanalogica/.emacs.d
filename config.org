@@ -5060,9 +5060,22 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
-****** Agenda: Things to Study
+****** Agenda: Find Things I Want to Study
 
+#+NAME: define-agenda-zD-TechDirections
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
+    "+TAGS={:DIRECTION:}+ZEOMEGA"  ;; entry match-expression[4]
+    ( ;; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Technology Directions")
 
+      (org-agenda-prefix-format "  ")  ;; remove Category
+      (org-agenda-remove-tags t)
+;;      (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
+    )
+    ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
+  )
+#+END_SRC
 
 ****** Agenda Blocks (mixed agendas in one view)
 
