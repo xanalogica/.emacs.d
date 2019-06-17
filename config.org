@@ -5081,6 +5081,36 @@ multiple DIRECTIONs in an agenda, which is what I want.
   )
 #+END_SRC
 
+Also note my use above of the Org-SuperAgenda Emacs module to empower my
+presentation of the collected headlines.  The above reference uses the
+following elisp variable to segregate the headlines into various sections.
+
+#+BEGIN_SRC emacs-lisp
+  (setq agendagroups/personal-scheduled-tasks
+    '(
+      (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+      (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
+      (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+
+;;; create a section for DONE tasks, directing me to archive them.
+
+      (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
+      (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
+      (:name "To Not Worry About Money        :FINANCE:" :tag "FINANCE")
+;;;      (:name "To Have a Fantastic Career           :ZEOMEGA:" :tag "ZEOMEGA")
+      (:name "To Take Care of Life's Chores   :CHORE:"   :tag "CHORE")
+      (:name "To Experience Life's Magic      :EVENT:"   :tag "EVENT")
+      (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
+      (:name "To Engage with People           :PEOPLE:"  :tag "PEOPLE")
+      (:name "To Share Knowledge with Others  :COMPOSE:" :tag ("SHARE" "COMPOSE"))
+      (:name "To Continually Learn            :STUDY:"   :tag ("STUDY" "LINK"))
+
+      ;; After the last group, the agenda will display items that didn't
+      ;; match any of these groups, with the default order position of 99
+    )
+  )
+#+END_SRC
+
 ****** Agenda Blocks (mixed agendas in one view)
 
 #+NAME: define-agenda-zZ-AgendaBlocks
