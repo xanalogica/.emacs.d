@@ -5125,7 +5125,6 @@ following elisp variable to segregate the headlines into various sections.
 
 Personal
   Philosophy
-  Math
   Linux
 Glossary
 
