@@ -5098,6 +5098,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Health Matters       :HEALTH:"   :tag "HEALTH")
       (:name "Cognitive Practices  :MENTAL:"   :tag "MENTAL")
       (:name "Messaging Tech       :MSGTECH:"  :tag "MSGTECH")
+      (:name "Docker Containers    :DOCKER:"   :tag "DOCKER")
 
 ;;;      (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
 ;;;      (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
