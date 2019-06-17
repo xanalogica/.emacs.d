@@ -5114,10 +5114,6 @@ following elisp variable to segregate the headlines into various sections.
   )
 #+END_SRC
 
-Personal
-  Philosophy
-Glossary
-
 ****** Agenda Blocks (mixed agendas in one view)
 
 #+NAME: define-agenda-zZ-AgendaBlocks
