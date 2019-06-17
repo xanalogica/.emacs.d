@@ -5102,6 +5102,7 @@ following elisp variable to segregate the headlines into various sections.
       (:name "Kubernetes Orchestration  :K8S:"        :tag "K8S")
       (:name "Data Storage              :DATASTORE:"  :tag "DATASTORE")
       (:name "Microservices             :USVCS:"      :tag "USVCS")
+      (:name "Emacs Editor              :EMACS:"      :tag "EMACS")
 
 ;;;      (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
 ;;;      (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
