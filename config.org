@@ -5071,6 +5071,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
       (org-agenda-overriding-header "Things to Study")
 
       (org-super-agenda-unmatched-name "Other Items")
+      (org-super-agenda-groups agendagroups/things-to-study)
 
       (org-agenda-prefix-format "  ")  ;; remove Category
       (org-agenda-remove-tags t)
