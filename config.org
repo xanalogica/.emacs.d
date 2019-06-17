@@ -5086,7 +5086,7 @@ presentation of the collected headlines.  The above reference uses the
 following elisp variable to segregate the headlines into various sections.
 
 #+BEGIN_SRC emacs-lisp
-  (setq agendagroups/personal-scheduled-tasks
+  (setq agendagroups/things-to-study
     '(
       (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
       (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
