@@ -4382,12 +4382,12 @@ in it.
        <<define-agenda-3-FindUnfiledEntries>>
        <<define-agenda-R-FindRecurringTasks>>
        <<define-agenda-$-FindItemsToPurchase>>
+       <<define-agenda-s-ThingsToStudy>>
 
        ("p" . "Personal Agendas") ; describe prefix "p"
        <<define-agenda-pa-PersonalScheduledTasks>>
        <<define-agenda-pb-PersonalTaskBacklog>>
        <<define-agenda-pR-FindRiverhoodEvents>>
-       <<define-agenda-ps-ThingsToStudy>>
 
        ("z" . "ZeOmega Agendas") ; describe prefix "z"
        <<define-agenda-za-WorkScheduledTasks>>
