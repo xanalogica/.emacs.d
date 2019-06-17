@@ -5094,12 +5094,13 @@ following elisp variable to segregate the headlines into various sections.
 
 ;;; create a section for DONE tasks, directing me to archive them.
 
-      (:name "Finance Learning          :FINANCE:"  :tag "FINANCE")
-      (:name "Health Matters            :HEALTH:"   :tag "HEALTH")
-      (:name "Cognitive Practices       :MENTAL:"   :tag "MENTAL")
-      (:name "Messaging Tech            :MSGTECH:"  :tag "MSGTECH")
-      (:name "Docker Containers         :DOCKER:"   :tag "DOCKER")
-      (:name "Kubernetes Orchestration  :K8S:"      :tag "K8S")
+      (:name "Finance Learning          :FINANCE:"    :tag "FINANCE")
+      (:name "Health Matters            :HEALTH:"     :tag "HEALTH")
+      (:name "Cognitive Practices       :MENTAL:"     :tag "MENTAL")
+      (:name "Messaging Tech            :MSGTECH:"    :tag "MSGTECH")
+      (:name "Docker Containers         :DOCKER:"     :tag "DOCKER")
+      (:name "Kubernetes Orchestration  :K8S:"        :tag "K8S")
+      (:name "Data Storage              :DATASTORE:"  :tag "DATASTORE")
 
 ;;;      (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
 ;;;      (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
