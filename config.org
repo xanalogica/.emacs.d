@@ -5088,9 +5088,9 @@ following elisp variable to segregate the headlines into various sections.
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/things-to-study
     '(
-      (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
-      (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
-      (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+;;;      (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+;;;      (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
+;;;      (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
 
 ;;; create a section for DONE tasks, directing me to archive them.
 
