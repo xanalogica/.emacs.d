@@ -5111,6 +5111,25 @@ following elisp variable to segregate the headlines into various sections.
   )
 #+END_SRC
 
+ZeOmega
+  Microservices
+  Messaging
+  Data Storage
+  Docker
+  Kubernetes
+  Rancher
+  SQL Server
+Personal
+  Health
+  Finance
+  Philosophy
+  Emacs
+  Python
+  Cognitive
+  Math
+  Linux
+Glossary
+
 ****** Agenda Blocks (mixed agendas in one view)
 
 #+NAME: define-agenda-zZ-AgendaBlocks
