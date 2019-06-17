@@ -4092,7 +4092,6 @@ Emacs to capture or store stuff at the relevant places in your Org files.
 
 *** Generating Tables from Org-Properties (org-collector for columnview tables)
 
-
 The ~org-collector~ package provides an extended functionality over the
 ~column view~ feature of Org-Mode.  It allows query expressions to filter out
 the information you want to see.
