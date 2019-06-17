@@ -5118,7 +5118,6 @@ following elisp variable to segregate the headlines into various sections.
 
 ZeOmega
   Microservices
-  Messaging
   Data Storage
   Docker
   Kubernetes
