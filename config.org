@@ -5123,7 +5123,6 @@ following elisp variable to segregate the headlines into various sections.
 
 Personal
   Philosophy
-  Emacs
   Python
   Cognitive
   Math
