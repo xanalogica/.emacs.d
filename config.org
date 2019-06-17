@@ -5124,8 +5124,6 @@ ZeOmega
   Rancher
   SQL Server
 Personal
-  Health
-  Finance
   Philosophy
   Emacs
   Python
