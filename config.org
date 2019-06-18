@@ -6276,8 +6276,9 @@ bbdb:S.*Allen
           )
           ( ; clause 3
             (org-region-active-p)  ;; if region is active, use it as anchor
-            (buffer-substring
-
+            (buffer-substring (region-beginning) (region-end))
+          )
+        ) ; end of cond
 
       link
         (concat "file:" (buffer-name) "::"
