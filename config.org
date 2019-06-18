@@ -6261,7 +6261,7 @@ bbdb:S.*Allen
 
   ) ; end of defun
 
-  (defun make-link-to-here ()
+  (defun make-link-to-here (txt)
     "Construct an Org-Mode style of link to point."
 
     (setq
