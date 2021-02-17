@@ -1,20 +1,27 @@
-# -*- eval: (git-auto-commit-mode 1) -*-
+# -*- eval: (git-auto-commit-mode 0); -*-
+
 #+TITLE:	My Emacs Configuration
 #+SUBTITLE:	Structured Using Org-Babel
 #+OPTIONS:	toc:4 h:4
 #+STARTUP:	overview
 #+PROPERTY:	header-args  :results silent
-
 This is an ongoing copy of my Emacs configuration, annotated with
 explanations.  I've learned a lot from other people's configuration and I
 wanted to share what I've ended up with.
 
 Other Emacs files I've studied:
 
-- https://github.com/redguardtoo/emacs.d
-- https://github.com/purcell/emacs.d/blob/master/README.md
+  - https://github.com/redguardtoo/emacs.d
+  - https://github.com/purcell/emacs.d/blob/master/README.md
+  - This is a VERY good example of a custom org-mode .emacs.d file.
+    https://github.com/mwfogleman/.emacs.d/
+  - ~/.emacs.d/michael.org]] (local copy)
 
-* Getting Help
+  - https://github.com/jagot/emacs/blob/master/home/.emacs.d/init.org
+  - https://github.com/bbatsov/emacs.d/blob/master/init.el
+  - https://github.com/weavejester/dotfiles/blob/master/emacs.d/init.el
+
+* Getting Help with Emacs
 :PROPERTIES:
 :VISIBILITY: children
 :END:
@@ -90,7 +97,7 @@ To use org-mode for organizing your Emacs configuration, a very minimum amount
 of configuration goes into the user's =~/.emacs.d/init.el= file.
 
 #+NAME: ~/.emacs.d/init.el
-#+BEGIN_SRC example
+#+BEGIN_EXAMPLE
   ; -*-mode: Emacs-Lisp; auto-recompile:f; outline-minor-mode:t-*-
 
   ; **********************************************************************
@@ -114,23 +121,31 @@ of configuration goes into the user's =~/.emacs.d/init.el= file.
   (require 'org)
   (org-babel-load-file
       "~/.emacs.d/config.org" nil)  ;; Tangle into .el and load
-#+END_SRC
+#+END_EXAMPLE
 
+* About Packages, Casks, Pallets and Repositories (oh my!)
+- want to auto pull a package if I reference it in here
+- want to keep all setup related to a package near where that package is imported
+- but want to group the various packages why the type of thing they do (UI, ...)
 
-* My Actual Configuration
+- Package module
+- Cask module
+- Pallet module
+- use-package
+
+* My Actual Configuration Starts Here
 :PROPERTIES:
 :CUSTOM_ID: babel-init
 :VISIBILITY: children
 :END:
 <<babel-init>>
 
-This is a VERY good example of a custom org-mode .emacs.d file.
-https://github.com/mwfogleman/.emacs.d/
-
-[[~/.emacs.d/michael.org]] (local copy)
-
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
+
+  ;; this makes garbage collection less frequent, which speeds up init by about 2 seconds.
+  (setq gc-cons-threshold 80000000)
+  ;;(setq gc-cons-threshold 800000)  ;; original value
 #+END_SRC
 
 ** Install the 'use-package' module to more efficiently organize package settings
@@ -143,20 +158,56 @@ and tidy.
 - [[https://www.masteringemacs.org/article/spotlight-use-package-a-declarative-configuration-tool][Spotlight: use-package, a declarative configuration tool - Mastering Emacs]]
 - [[http://cachestocaches.com/2015/8/getting-started-use-package/][Getting Started with Use-Package]]
 
-;; Make sure I have 'use-package' installed in my Emacs
-;;;  (unless (package-installed-p 'use-package)
-;;;    (package-refresh-contents)       ;; refresh catalog of remote registry
-;;;    (package-install 'use-package))  ;;   and install 'use-package' module
+#+BEGIN_SRC emacs-lisp
+  ;; Make sure I have 'use-package' installed in my Emacs
+  (unless (package-installed-p 'use-package)
+    (package-refresh-contents)       ;; refresh catalog of remote registry
+    (package-install 'use-package)   ;;   and install 'use-package' module
+  )
 
-;;;  (eval-when-compile
-;;;    (require 'use-package))
+  (eval-when-compile
+    ;;; (add-to-list 'load-path "~/.emacs.d/lisp/use-package")
+    (require 'use-package)
+  )
+  (setq use-package-verbose t)  ;; to assist debugging configuration
+  (setq use-package-compute-statistics t)  ;; M-x use-package-report
+#+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-  (add-to-list 'load-path
-      "~/.emacs.d/lisp/use-package")
-  (require 'use-package)
-  (setq use-package-verbose t)  ;; to assist debugging configuration
+  (quelpa
+    '(quelpa-use-package
+       :fetcher git
+       :url "https://github.com/quelpa/quelpa-use-package.git"
+     )
+  )
+  (require 'quelpa-use-package)
 #+END_SRC
+
+
+| diminish                | Initialized | 2019-12-03 Tue 20:17 | 0.00 |
+| bind-key                | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| general                 | Configured  | 2019-12-03 Tue 20:17 | 0.02 |
+| pallet                  | Configured  | 2019-12-03 Tue 20:17 | 0.21 |
+| hydra                   | Configured  | 2019-12-03 Tue 20:17 | 0.01 |
+| epa-file                | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| org-crypt               | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| ox-jira                 | Configured  | 2019-12-03 Tue 20:17 | 0.12 |
+| ob-browser              | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| yasnippet               | Configured  | 2019-12-03 Tue 20:17 | 0.05 |
+| orgnav                  | Initialized | 2019-12-03 Tue 20:17 | 0.00 |
+| yafolding               | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| highlight-indent-guides | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| rst                     | Configured  | 2019-12-03 Tue 20:17 | 0.02 |
+| yaml-mode               | Initialized | 2019-12-03 Tue 20:17 | 0.00 |
+| python                  | Initialized | 2019-12-03 Tue 20:17 | 0.00 |
+| org-cliplink            | Configured  | 2019-12-03 Tue 20:17 | 0.07 |
+| org-protocol            | Configured  | 2019-12-03 Tue 20:17 | 0.00 |
+| org-collector           | Configured  | 2019-12-03 Tue 20:17 | 0.01 |
+| org-super-agenda        | Declared    | 2019-12-03 Tue 20:17 | 0.00 |
+| origami                 | Initialized | 2019-12-03 Tue 20:17 | 0.00 |
+| org-mime                | Initialized | 2019-12-03 Tue 20:17 | 0.00 |
+| org-notmuch             | Configured  | 2019-12-03 Tue 20:17 | 0.01 |
+| atomic-chrome           | Configured  | 2019-12-03 Tue 20:17 | 1.12 |
 
 ** Optionally, use ~diminish~ package to hide selected minor-modes from my modeline
 
@@ -188,9 +239,9 @@ symbols is in
 [[https://github.com/jwiegley/use-package/blob/master/use-package-bind-key.el]]
 
 #+BEGIN_SRC emacs-lisp
-;;;  (use-package bind-key
-;;;    :ensure t  ;; this package is essential for my configuration to work
-;;;  )
+  (use-package bind-key
+    :ensure t  ;; this package is essential for my configuration to work
+  )
 #+END_SRC
 
 ** Optionally, use ~general~ Elisp package for easier key definitions
@@ -203,6 +254,11 @@ primarily for making key definition more clear and concise.  It adds the
   (use-package general
     :load-path "~/.emacs.d/lisp/general/" ;; use my Git checkout
   )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (quelpa '(org-special-block-extras :fetcher github :repo
+    "alhassy/org-special-block-extras"))
 #+END_SRC
 
 ** Hotkey for Quickly Reloading This Configuration After Changes
@@ -298,20 +354,11 @@ I keep my backups under =~/.emacs.d/backups/=.
     (cons "." "~/.emacs.d/backups/"))   ;; Specify where to store backups of all files.
 #+END_SRC
 
-*** Undo
-
-The ~undo-tree~ emacs package is great for visualizing the undo tree.
+*** Hydra UI
 
 #+BEGIN_SRC emacs-lisp
-  (global-undo-tree-mode 1)  ;;turn on everywhere
-
-;;;  (global-set-key (kbd "C-z") 'undo)
-
-;;;  (defalias 'redo 'undo-tree-redo)
-;;;  (global-set-key (kbd "C-S-z") 'redo)
-
-  ;;; C-x u to run undo-tree-visualize
-
+  (use-package hydra
+    :ensure hydra)
 #+END_SRC
 
 *** Content Encryption
@@ -627,12 +674,72 @@ https://emacs.stackexchange.com/questions/35305/how-to-get-rid-of-the-unsaved-ti
 
 study: ps-print.el
 
+*** Exporting
+
+#+BEGIN_SRC DISABLEDemacs-lisp
+  (require 'org)
+  (require 'org-latex)
+  (require 'ox-latex)
+
+  (setq org-latex-packages-alist
+    (quote (("" "color" t) ("" "minted" t) ("" "parskip" t)))
+    org-latex-pdf-process
+    (quote (
+      "pdflatex -interaction nonstopmode -shell-escape -output-directory %o %f"
+      "bibtex $(basename %b)"
+      "pdflatex -interaction nonstopmode -shell-escape -output-directory %o %f"
+      "pdflatex -interaction nonstopmode -shell-escape -output-directory %o %f"
+    ))
+  )
+
+  (add-to-list 'org-latex-classes
+    `("copernicus_discussions"
+       "\\documentclass{copernicus_discussions}
+       [NO-DEFAULT-PACKAGES]
+       [PACKAGES]
+       [EXTRA]"
+       ("\\section{%s}" . "\\section*{%s}")
+       ("\\subsection{%s}" "\\newpage" "\\subsection*{%s}" "\\newpage")
+       ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+       ("\\paragraph{%s}" . "\\paragraph*{%s}")
+       ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
+     )
+  )
+#+END_SRC
 
 *** Exporting an Org-mode File to Other Formats
 **** to LaTeX (.pdf)
 
-#+BEGIN_SRC DISABLEemacs-lisp :no-expand
-  ;;;NP (require 'org-latex)
+;;;NP (require 'org-latex)
+
+#+BEGIN_SRC emacs-lisp :no-expand
+
+  ;; Academic Paper version 6 format
+;;  (add-to-list 'org-latex-classes
+;;      '("article" "\\documentclass[11pt]{article}"
+;;         ("\\section{%s}" . "\\section*{%s}")
+;;         ("\\subsection{%s}" . "\\subsection*{%s}")
+;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;         ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;         ("\\subparagraph{%s}" . "\\subparagraph*{%s}")
+;;       )
+
+;;      '("report" "\\documentclass[11pt]{report}"
+;;         ("\\part{%s}" . "\\part*{%s}")
+;;         ("\\chapter{%s}" . "\\chapter*{%s}")
+;;         ("\\section{%s}" . "\\section*{%s}")
+;;         ("\\subsection{%s}" . "\\subsection*{%s}")
+;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;       )
+
+;;      '("book" "\\documentclass[11pt]{book}"
+;;         ("\\part{%s}" . "\\part*{%s}")
+;;         ("\\chapter{%s}" . "\\chapter*{%s}")
+;;         ("\\section{%s}" . "\\section*{%s}")
+;;         ("\\subsection{%s}" . "\\subsection*{%s}")
+;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;       )
+;;  )
 #+END_SRC
 
 Currently, in order for a user to use minted for colored latex export of
@@ -987,6 +1094,12 @@ end_src
 **** to LibreOffice (.odt) and Microsoft Office (.docx)
 
 #+BEGIN_SRC emacs-lisp
+  (use-package ox-jira
+    :load-path "~/.emacs.d/lisp/ox-jira.el/" ;; use my Git checkout
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
   ;;;  (require 'ox-odt)
   (setq org-odt-data-dir "/usr/share/emacs/25.3/etc/org")
   (setq org-odt-preferred-output-format "docx")
@@ -1024,6 +1137,38 @@ Example: [[yt:A3JAlWM8qRM]]
                       path (or desc "video"))))))
 #+END_SRC
 
+*** Exporting HTML/CSS into a Graphic
+
+https://github.com/krisajenkins/ob-browser
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ob-browser
+    :load-path "~/.emacs.d/lisp/ob-browser/" ;; use my Git checkout
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'exec-path "~/bin")
+  (setenv "PATH" (mapconcat 'identity exec-path ":"))
+#+END_SRC
+
+#+BEGIN_SRC browser :out /tmp/demo.png
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      </head>
+      <body>
+          <div class="row">
+              <div class="span6 offset1">
+                  <h1>Rendered PNG</h1>
+
+                  <button class="btn btn-primary">You Can't Press This</button>
+              </div>
+          </div>
+      </body>
+  </html>
+#+END_SRC
 
 ** Keystroke Input
 :PROPERTIES:
@@ -1116,20 +1261,21 @@ activate it for individual modes.
 
 #+BEGIN_SRC emacs-lisp
 ;;;  (require 'yasnippet)
-  (use-package yasnippet)
+;;;;;  (use-package yasnippet)
 ;;; (require 'yasnippet-snippets)   ;; a rich collection of pre-written snippets
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
-  (yas-global-mode 0)
+;;;;;  (yas-global-mode 0)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
 ;;; (yas-recompile-all)
-  (yas-reload-all)   ;; rescan snippet definitions into memory
-  (add-hook 'text-mode-hook #'yas-minor-mode)
-  (add-hook 'python-mode-hook #'yas-minor-mode)
-  (add-hook 'org-mode-hook #'yas-minor-mode)
+;;;;;  (yas-reload-all)   ;; rescan snippet definitions into memory
+;;;;;  (add-hook 'text-mode-hook #'yas-minor-mode)
+;;;;;  (add-hook 'python-mode-hook #'yas-minor-mode)
+;;;;;  (add-hook 'org-mode-hook #'yas-minor-mode)
+;;;;;  (add-hook #'org-mode-hook #'org-special-block-extras-mode)
 #+END_SRC
 
 **** My Catalog of Template Definitions
@@ -1243,6 +1389,29 @@ Two commands are defined in this mode:
  - Ivy    ivy + counsel
  - projectile
 
+#+BEGIN_SRC emacs-lisp
+(use-package counsel
+  :ensure t
+  :config
+    (global-set-key (kbd "M-x") 'counsel-M-x)
+    (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+    ;;; (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+    ;;; (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+    ;;; (global-set-key (kbd "<f1> l") 'counsel-find-library)
+    ;;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+    ;;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+
+    ;;; (global-set-key (kbd "C-c g") 'counsel-git)
+    ;;; (global-set-key (kbd "C-c j") 'counsel-git-grep)
+    ;;; (global-set-key (kbd "C-c a") 'counsel-ag)
+    ;;; (global-set-key (kbd "C-x l") 'counsel-locate)
+
+    ;;; (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+
+    ;;; (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
+)
+#+END_SRC
+
 **** Places to Use Completion Engines:
 - open files   C-x C-f :: find-file -> ido-find-file
    - can use bookmarks instead
@@ -1273,20 +1442,7 @@ git-grep
 ;;; (setq ivy-use-virtual-buffers t)
 ;;; (setq ivy-count-format "(%d/%d) ")
 
-(global-set-key (kbd "C-s") 'swiper)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-;;; (global-set-key (kbd "<f1> f") 'counsel-describe-function)
-;;; (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-;;; (global-set-key (kbd "<f1> l") 'counsel-find-library)
-;;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-;;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
-
-;;; (global-set-key (kbd "C-c g") 'counsel-git)
-;;; (global-set-key (kbd "C-c j") 'counsel-git-grep)
-;;; (global-set-key (kbd "C-c k") 'counsel-ag)
-;;; (global-set-key (kbd "C-x l") 'counsel-locate)
-;;; (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+  (global-set-key (kbd "C-s") 'swiper)
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp :exports none
@@ -1363,7 +1519,10 @@ For better visibility while navigating, highlight the current line using the
 built-in feature of Emacs.
 
 #+BEGIN_SRC emacs-lisp
-  (global-hl-line-mode 1)
+  (global-hl-line-mode +1)
+
+  ;;; hl-line-face
+  (set-face-attribute 'hl-line nil :inherit nil :background "darkred")
 #+END_SRC
 
 **** Changing the ... Org-mode Ellipsis to a Triangle Symbol
@@ -1541,6 +1700,12 @@ For my Gentoo Linux distribution I run, I had to emerge (install):
 There is also a newer approach called *custom themes* but custom themes do not
 replace color themes, as each approach has its advantages.
 
+#+BEGIN_SRC emacs-lisp
+  (use-package grandshell-theme
+    :ensure t  ;; this package IS essential to my basic Emacs look
+  )
+#+END_SRC
+
 #+BEGIN_SRC DISABLEDemacs-lisp
 ;;;  (require 'color-theme)
 ;;  (setq color-theme-is-global t)
@@ -1696,7 +1861,6 @@ replace color themes, as each approach has its advantages.
 #+END_SRC
 
 *** Among Windows/Frames
-
 *** Across Content: [[https://www.emacswiki.org/emacs/BookMarks][bookmarks]] and links
 
 **** Org-Mode Bookmarks
@@ -1784,11 +1948,20 @@ NEED: Show matching headlines in THIS file.
 
 #+BEGIN_SRC emacs-lisp
   (org-add-link-type
-    "tag"
+    "tags"
       (lambda (tag)
-       "Display a list of TODO headlines with tag TAG.
-        With prefix argument, also display headlines without a TODO keyword."
-        (org-tags-view (null current-prefix-arg) tag)
+       "Display a list of TODO headlines with tag TAG, regardless of TODO or non-TODO."
+        (org-tags-view (null 1) tag)
+      )
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (org-add-link-type
+    "todos"
+      (lambda (tag)
+       "Display a list of TODO headlines with tag TAG."
+        (org-tags-view (null nil) tag)
       )
   )
 #+END_SRC
@@ -1797,24 +1970,65 @@ NEED: Show matching headlines in THIS file.
   (org-add-link-type
     "tags-in-file"
       (lambda (tag)
-       "Display a list of TODO headlines with tag TAG.
-        With prefix argument, also display headlines without a TODO keyword."
+       "Display a list of TODO headlines in the current file with tag TAG, regardless of TODO or non-TODO."
         (let
           (
             (org-agenda-files (list (buffer-file-name) ))
             (org-agenda-remove-tags t)
           )
-          (org-tags-view (null current-prefix-arg) tag)
-;;;          (org-tags-view nil tag)
+          (org-tags-view (null 1) tag)
         )
       )
   )
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp
+  (org-add-link-type
+    "todos-in-file"
+      (lambda (tag)
+       "Display a list of TODO headlines with tag TAG."
+        (let
+          (
+            (org-agenda-files (list (buffer-file-name) ))
+            (org-agenda-remove-tags t)
+          )
+          (org-tags-view (null nil) tag)
+        )
+      )
+  )
+#+END_SRC
 
 (setq org-agenda-custom-commands
       '(("b" "Buffer summary"
      ((todo "TODO" ((org-agenda-files (list (buffer-file-name)))))))))
+
+*** Among Indented Text Like Python and YAML Specifically
+
+The https://gitlab.com/emacs-stuff/indent-tools/ Elisp package is focused on
+making life easier with indented forms of text, specifically Python and YAML.
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/lisp/indent-tools")
+  (require 'indent-tools)
+
+  ;;;(use-package indent-tools
+  ;;;  :load-path "~/.emacs.d/lisp/indent-tools/" ;; use my Git checkout
+  ;;;  :ensure t  ;; this package is essential for my configuration to work
+  ;;;  :defer nil
+  ;;;  ;;; :bind (
+  ;;;  ;;;   :map python-mode-map
+  ;;;  ;;;     ("C-c >" . indent-tools-hydra/body)
+  ;;;  )
+  ;;;)
+  ;;;(global-set-key (kbd "C-c >") 'indent-tools-hydra/body)
+#+END_SRC
+
+*** Back to a Previous Position
+
+#+BEGIN_SRC emacs-lisp
+  (define-key org-mode-map (kbd "C-c &")
+    'org-mark-ring-goto)
+#+END_SRC
 
 ** Buffer Modes for Various Languages
 - C-h m			:: help for the mode
@@ -1823,6 +2037,21 @@ NEED: Show matching headlines in THIS file.
   (setq default-major-mode
     'text-mode)	; Make text-mode the default for new buffers.
 #+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (use-package yafolding)
+
+  (use-package highlight-indent-guides
+    :load-path "~/.emacs.d/lisp/highlight-indent-guides/" ;; use my Git checkout
+    :config
+      (setq highlight-indent-guides-method 'character)  ;; fill|column|character
+      (setq highlight-indent-guides-auto-character-face-perc 15)
+    :hook
+      (prog-mode . highlight-indent-guides-mode)
+  )
+#+END_SRC
+
+yafolding-toggle-element
 
 The major mode for a file is chosen from its *file extension*, whose
 correspondence is controlled by the variable =auto-mode-alist=.
@@ -1995,6 +2224,44 @@ bug: "Symbol's chain of function indirections contains a loop: outline-show-all"
 ;;;  (global-set-key "\C-ceb" 'evernote-browser)
 #+END_SRC
 
+*** YAML Mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package yaml-mode
+    :ensure t  ;; this package is essential for my configuration to work
+    ;;;:defer nil
+    :mode (("\\.yaml$" . yaml-mode)
+           ("\\.yml$" . yaml-mode))
+    :bind (
+      :map yaml-mode-map
+        ("C-m"   . newline-and-indent)
+        ("<tab>"   . yafolding-toggle-element)
+        ("C-c >" . indent-tools-hydra/body)
+    )
+    :hook
+      (yaml-mode . highlight-indent-guides-mode)
+  )
+
+;;;  (require 'yaml-mode)
+
+;;;  (add-to-list 'auto-mode-alist
+;;;      '("\\.yaml\\'" . yaml-mode)
+;;;  )
+
+;;;  (add-to-list 'auto-mode-alist
+;;;      '("\\.yml\\'" . yaml-mode)
+;;;  )
+
+;;;  (add-hook 'yaml-mode-hook
+;;;    (lambda ()
+;;;      (define-key yaml-mode-map "\C-m" 'newline-and-indent)
+;;;      (define-key yaml-mode-map "\t" 'yafolding-toggle-element)
+;;;      (define-key yaml-mode-map "\C-c>" 'indent-tools-hydra/body)
+;;;      (highlight-indent-guides-mode 1)
+;;;    )
+;;;  )
+#+END_SRC
+
 *** python-mode
 **** auto-complete
 **** compliance
@@ -2043,46 +2310,54 @@ There are three Python modes supported by Emacs:
 
 **** cpython setup
 
+;; The package is "python" but the mode is "python-mode":
 #+BEGIN_SRC emacs-lisp
-;;  (require `python-mode)
-  (use-package python-mode)
+  (use-package python
+    :mode
+      ("\\.py\\'" . python-mode)
+    :interpreter
+      ("python" . python-mode)
+  )
 #+END_SRC
 
 Identify which file extensions represent actual Python source code.
 
 #+BEGIN_SRC emacs-lisp
-  (add-to-list 'auto-mode-alist
-      '("\\.py\\'"        . python-mode)
-  )
-  (add-to-list 'auto-mode-alist
-      '("\\.tac\\'"       . python-mode)
-  )
+;;;  (add-to-list 'auto-mode-alist
+;;;      '("\\.py\\'"        . python-mode)
+;;;  )
+;;;  (add-to-list 'auto-mode-alist
+;;;      '("\\.tac\\'"       . python-mode)
+;;;  )
 #+END_SRC
 
 Declare that seeing -*- python at start of file means python-mode.
 
 #+BEGIN_SRC emacs-lisp
-  (add-to-list 'interpreter-mode-alist
-      '("python"          . python-mode)
-  )
+;;;  (add-to-list 'interpreter-mode-alist
+;;;      '("python"          . python-mode)
+;;;  )
 #+END_SRC
 
 Select which package to use, either "python-mode.el" or "python.el".
 
 #+BEGIN_SRC emacs-lisp
-  (autoload 'python-mode                ;; name of function to create
-      "python-mode"                     ;; filename of .el source implementation
-      "Python editing mode."            ;; docstring for new function
-      t                                 ;; indicate the autoload can be interactive
-  )
+;;;  (autoload 'python-mode                ;; name of function to create
+;;;      "python-mode"                     ;; filename of .el source implementation
+;;;      "Python editing mode."            ;; docstring for new function
+;;;      t                                 ;; indicate the autoload can be interactive
+;;;  )
 #+END_SRC
 
 ;;; (define-key inferior-python-mode-map "\C-c\t" 'python-complete-symbol)
 
 #+BEGIN_SRC emacs-lisp
+  (add-hook 'python-mode-hook 'highlight-indent-guides-mode)
   (add-hook 'python-mode-hook
       (lambda ()
           ;; other customizations go here
+
+          (define-key python-mode-map (kbd "C-c >") 'indent-tools-hydra/body)
 
           ;; (setq autopair-handle-action-fns
           ;;   (list #'autopair-default-handle-action
@@ -2623,13 +2898,44 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 
 
 
+*** beancount-mode
+
+  (add-to-list 'load-path "/path/to/beancount/src/elisp")
+  (require 'beancount)
+  (add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
+
+rush@pop-os:~/Z/jiva/jiva-platform/analytics-ruleengine$ locate beancount.el
+/usr/share/emacs/site-lisp/elpa/beancount-2.2.3.0/beancount.el
+/usr/share/emacs/site-lisp/elpa/beancount-2.2.3.0/beancount.elc
+/usr/share/emacs/site-lisp/elpa-src/beancount-2.2.3.0/beancount.el
+
+#+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path "/usr/share/emacs/site-lisp/elpa/beancount-2.2.3.0/")
+  (require 'beancount)
+  (add-to-list 'auto-mode-alist '("\\.beancount\\'" . beancount-mode))
+
+;;  (use-package beancount
+;;    :mode
+;;      ("\\.beancount\\'" . beancount-mode)
+;;    :interpreter
+;;      ("beancount" . beancount-mode)
+;;    :load-path "/usr/share/emacs/site-lisp/elpa/beancount-2.2.3.0/"
+;;  )
+
+  (add-hook 'beancount-mode-hook #'outline-minor-mode)
+
+;;  (define-key beancount-mode-map (key "C-c C-n")
+;;    #'outline-next-visible-heading)
+;;  (define-key beancount-mode-map (key "C-c C-p")
+;;    #'outline-previous-visible-heading)
+#+END_SRC
+
 *** org-mode
 **** Capturing Content
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-c P") 'org-cliplink)
 #+END_SRC
 **** Filing Content
-
 **** TODO fix huge size of the 'clocked in' time on the modeline
 
 #+BEGIN_SRC emacs-lisp
@@ -2642,12 +2948,53 @@ which doesn't exist on my system.  The correct program to invoke is =xelatex=.
 #+BEGIN_SRC emacs-lisp
 ;;;  (require 'org-bullets)
 ;;;  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+  (use-package org-bullets
+    :init
+      (setq org-bullets-bullet-list '("●" "○" "●" "○" "●" "◉" "○" "◆"))
+    :config
+      (add-hook 'org-mode-hook
+        (lambda ()
+          (org-bullets-mode 1)
+        )
+      )
+  )
 #+END_SRC
 
 '(org-file-apps (quote (
     ("\\.pdf\\'" . "evince %s")
     ("\\.doc\\'" . "libreoffice %s")
 )))
+
+**** Pop Up a Reference Sheet for My Settings
+
+#+BEGIN_SRC emacs-lisp
+  (defun jrush/popup-refguide() (interactive)
+    "Pop up my reference guide."
+
+    (find-file-read-only-other-frame "~/Dropbox/Documents/refsheet.org")
+
+;;;    (if (file-exists-p "~/Dropbox/Documents/refsheet.org")
+
+;;;    (let
+;;;      ((buf (get-buffer "*Reference Sheet*")))
+;;;      (if (not buf)
+;;;        (with-current-buffer (generate-new-buffer "*Reference Sheet*")
+;;;          (insert-file-contents "~/Dropbox/Documents/refsheet.org")
+;;;          (org-mode)
+;;;        )
+;;;      )
+;;;    )
+
+;;;    (display-buffer-pop-up-frame
+;;;      "*Reference Sheet*"
+;;;      (
+;;;      )
+;;;    )
+
+  )
+  (global-set-key (kbd "C-h z") 'jrush/popup-refguide)
+#+END_SRC
 
 *** org-mode
 
@@ -2660,20 +3007,18 @@ and fall back on the original width if none is found.
   (setq org-image-actual-width nil)
 #+END_SRC
 
-
-
-
 **** Locations/Directories
 
 #+BEGIN_SRC emacs-lisp
   (setq org-directory
-      "~/notes")
+      "~/Dropbox/Documents")
 
   (setq org-default-notes-file
-      "~/notes/tosort.org")
+      "~/Dropbox/Documents/tosort.org")
 
   (setq org-attach-directory
-      "~/notes/data/")
+      "~/Dropbox/Documents/")
+
 
 ;;;  (setq org-archive-location
 ;;;;;      "archives/%s_archive::** Finished Tasks"
@@ -2688,7 +3033,7 @@ and fall back on the original width if none is found.
 
 **** File Extensions for org-mode
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC DISABLEDemacs-lisp
   (add-to-list 'auto-mode-alist
       '("\\.org" . org-mode)
   )
@@ -2835,85 +3180,113 @@ e     Export views to associated files.
   (setq org-tags-column 80)
 
   (setq org-tag-alist
-     '(
-                             ;; *** FOR WHOM the task is being performed ***
-           ("ZEOMEGA"  . nil)
-           ("DFWUUG"   . nil)
-           ("PYTHON"   . nil)
-           ("ZF"       . ?f)
+    '(
+                          ;; *** FOR WHOM the task is being performed ***
+      ("ZEOMEGA"  . nil)
+      ("DFWUUG"   . nil)
+      ("PYTHON"   . nil)
+      ;;; ("ZF"       . ?f)
 
-        (:startgroup . nil)  ;; *** TO WHOM the task is related ***
-           ("DEEPAK"   . nil)
-           ("MOHAN"    . nil)
-           ("MURTHY"   . nil)
-           ("RAJU"     . nil)
-           ("ROOPESH"  . nil)
-           ("SADA"     . nil)
-           ("SAM"      . nil)
-           ("SUNAYANA" . nil)
-        (:endgroup . nil)
+      (:startgrouptag)("PEOPLE")
+        (:grouptags)("{PPL_.+}")("PEOPLE")
+      (:endgrouptag)
 
-        (:startgroup . ?l)  ;; *** WHERE (location) the task is to be performed ***
-           ("@home"	. ?h)    ;; at home
-           ("@computer"	. ?c)    ;; at a computer someplace
-           ("@zeomega"	. ?z)    ;; in the ZeOmega office
-           ("@lunch"	. nil)   ;; over lunch
-           ("@phone"	. nil)   ;; quiet spot near a phone
-        (:endgroup . nil)
+      (:startgrouptag)("CLIENTS")
+        (:grouptags)("{CL_.+}")
+      (:endgrouptag)
 
-        (:startgroup . ?t)  ;; *** WHEN (time) the task is to be performed ***
-           ("@daytime"	. ?d)    ;; during daytime business hours
-           ("@nitetime"	. ?n)    ;; during the night
-        (:endgroup . nil)
+;;;      (:startgrouptag)("TO_ACT")
+;;;        (:grouptags)("{TO_.+}")
+;;;      (:endgrouptag)
+
+      (:startgrouptag)("EVENTS")
+        (:grouptags)("{EVT_.+}")
+      (:endgrouptag)
+
+      (:startgrouptag)("HEALTH")
+        (:grouptags)("FITNESS")("MEDICAL")("DIET")
+      (:endgrouptag)
+
+      (:startgrouptag)("FINANCE")
+        (:grouptags)("TAX")("INVESTMENT")("INCOME")
+      (:endgrouptag)
+
+      (:startgrouptag)("PLACE")
+        (:grouptags)("DINE")("BUY")("PLACE")
+      (:endgrouptag)
+
+      (:startgrouptag)("PROBLEM")
+        (:grouptags)("ISSUE")
+      (:endgrouptag)
+
+      (:startgrouptag)("TECHNOLOGY")
+        (:grouptags)("KUBERNETES")
+      (:endgrouptag)
+
+      (:startgrouptag)("KUBERNETES")
+        (:grouptags)("HELMCHART")
+      (:endgrouptag)
+
+;;;        (:startgroup . nil)  ;; *** TO WHOM the task is related ***
+;;;           ("DEEPAK"   . nil)
+;;;           ("MOHAN"    . nil)
+;;;           ("MURTHY"   . nil)
+;;;           ("RAJU"     . nil)
+;;;           ("ROOPESH"  . nil)
+;;;           ("SADA"     . nil)
+;;;           ("SAM"      . nil)
+;;;           ("SUNAYANA" . nil)
+;;;        (:endgroup . nil)
+
+;;;        (:startgroup . ?l)  ;; *** WHERE (location) the task is to be performed ***
+;;;           ("@home"	. ?h)    ;; at home
+;;;           ("@computer"	. ?c)    ;; at a computer someplace
+;;;           ("@zeomega"	. ?z)    ;; in the ZeOmega office
+;;;           ("@lunch"	. nil)   ;; over lunch
+;;;           ("@phone"	. nil)   ;; quiet spot near a phone
+;;;        (:endgroup . nil)
+
+;;;        (:startgroup . ?t)  ;; *** WHEN (time) the task is to be performed ***
+;;;           ("@daytime"	. ?d)    ;; during daytime business hours
+;;;           ("@nitetime"	. ?n)    ;; during the night
+;;;        (:endgroup . nil)
 
                             ;; *** NATURE of the task being performed ***
-        ("PROBLEM"	. ?p)    ;; unplanned task that popped up
-        ("TECHDEBT"	. ?t)    ;; reworking of existing software
-        ("INFODEBT"	. ?i)    ;; getting my information organized
-        ("QUOTE"	. ?q)
-        ("MINDCRAFT"	. ?q)    ;; mental skills like memorization techniques
+;;;        ("PROBLEM"	. ?p)    ;; unplanned task that popped up
+;;;        ("TECHDEBT"	. ?t)    ;; reworking of existing software
+;;;        ("INFODEBT"	. ?i)    ;; getting my information organized
+;;;        ("QUOTE"	. ?q)
+;;;        ("MINDCRAFT"	. ?q)    ;; mental skills like memorization techniques
 
-        (:startgrouptag)
-           ("LEARNING")
-           (:grouptags)
-              ("STUDY"     . nil)
-           (:endgrouptag)
+;;;        (:startgrouptag)
+;;;           ("LEARNING")
+;;;           (:grouptags)
+;;;              ("STUDY"     . nil)
+;;;           (:endgrouptag)
 
-           (:startgrouptag)
-              ("SYSADMIN")
-              (:grouptags)
-                 ("GADGET"   . nil)
-                 ("SWCONFIG"  . nil)
-                 ("HOSTING"   . nil)
-           (:endgrouptag)
+;;;           (:startgrouptag)
+;;;              ("SYSADMIN")
+;;;              (:grouptags)
+;;;                 ("GADGET"   . nil)
+;;;                 ("SWCONFIG"  . nil)
+;;;                 ("HOSTING"   . nil)
+;;;           (:endgrouptag)
 
-           (:startgrouptag)
-              ("WRITE")
-              (:grouptags)
-                 ("TWEETS"    . nil)
-                 ("PAPERS"    . nil)
-                 ("YAMMER"    . nil)
-                 ("BLOG"      . nil)
-           (:endgrouptag)
+;;;           (:startgrouptag)
+;;;              ("WRITE")
+;;;              (:grouptags)
+;;;                 ("TWEETS"    . nil)    *DELETE*
+;;;                 ("PAPERS"    . nil)    *DELETE*
+;;;                 ("YAMMER"    . nil)
+;;;                 ("BLOG"      . nil)    *DELETE*
+;;;           (:endgrouptag)
 
-           (:startgrouptag)
-              ("HEALTH")
-              (:grouptags)
-                 ("FITNESS"   . nil)
-                 ("MEDICAL"   . nil)
-           (:endgrouptag)
-
-           (:startgrouptag)
-              ("FINANCE")
-              (:grouptags)
-                 ("TAXES"        . nil)   ;; things that consume money
-                 ("INVESTMENTS"  . nil)   ;; things that generate money
-           (:endgrouptag)
-       )
+    )
   )
 #+END_SRC
 
 - CLIENTS	:: notes about our clients
+- EVENT	:: a specific dated event, of a timeline
 - EVENTS	:: planning for all events, parent of below tags
 - GUIDES	:: writeups about organizational topics
 - HOLIDAYS	:: planning for various recurring holidays
@@ -2921,7 +3294,8 @@ e     Export views to associated files.
 - KPIS	        :: everything related to the ZeOmega KPI system
 - LINKS	:: org-mode links to useful information
 - ME		:: notes about myself
-- MEETING       :: notes taken during a meeting
+- MEETINGS      :: collection subtree for all meetings of a kind
+- MEETING       :: notes taken *during* a meeting
 - MULTI	:: efficiency multipliers
 - PAPERS	:: ideas for papers to write
 - PEOPLE	:: notes about various people I want to remember
@@ -2957,13 +3331,7 @@ e     Export views to associated files.
   #+NAME: Orgzly: Things to Study
   #+BEGIN_SRC text
     tn.study i.TODO o.scheduled o.priority o.notebook
-  #+END_EXAMPLE
-
-
-BLOG      COMPOSE
-WRITE     COMPOSE
-YAMMER    COMPOSE
-SPEAK     COMPOSE
+  #+END_SRC
 
 - ADMIN
 - CAPITAL
@@ -3135,6 +3503,42 @@ Things to Drop:
 
 
 #+BEGIN_SRC emacs-lisp
+  (require 'org-id)
+
+  (defun org-id-new (&optional prefix)
+    "Create a new globally unique ID.
+
+  An ID consists of two parts separated by a colon:
+  - a prefix
+  - a unique part that will be created according to `org-id-method'.
+
+  PREFIX can specify the prefix, the default is given by the variable
+  `org-id-prefix'.  However, if PREFIX is the symbol `none', don't use any
+  prefix even if `org-id-prefix' specifies one.
+
+  So a typical ID could look like \"Org-4nd91V40HI\"."
+    (let* ((prefix (if (eq prefix 'none)
+                       ""
+                     (concat (or prefix org-id-prefix) "-")))
+           unique)
+      (if (equal prefix "-") (setq prefix ""))
+      (cond
+       ((memq org-id-method '(uuidgen uuid))
+        (setq unique (org-trim (shell-command-to-string org-id-uuid-program)))
+        (unless (org-uuidgen-p unique)
+          (setq unique (org-id-uuid))))
+       ((eq org-id-method 'org)
+        (let* ((etime (org-reverse-string (org-id-time-to-b36)))
+               (postfix (if org-id-include-domain
+                            (progn
+                              (require 'message)
+                              (concat "@" (message-make-fqdn))))))
+          (setq unique (concat etime postfix))))
+       (t (error "Invalid `org-id-method'")))
+      (concat prefix unique)))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
   (push "~/.emacs.d/lisp/org-cliplink" load-path)
   (use-package org-cliplink)
 #+END_SRC
@@ -3153,6 +3557,27 @@ Things to Drop:
 
 ***** TODO Information to Produce (whitepaper, blog post, diagram)
 #+BEGIN_SRC emacs-lisp
+#+END_SRC
+
+
+***** TODO Blog Post
+ - %u  :: inactive datestamp when quote was captured
+ - %i  :: region selected when capture is called
+ - %^g :: prompt for tags, with completion on tags in target file
+ - %?  :: after completing the template, leave the cursor here
+
+#+NAME: capture--blog-post
+#+BEGIN_SRC text
+  "a Blog Post" entry
+  (file+headline "~/Dropbox/Documents/Blog/content.org"
+                 "My Blog Posts")
+
+  (file "~/Dropbox/Documents/Blog/blog-entry-template.org")
+  ;;; "* %^{Title} %^g\n\n#+BEGIN_QUOTE\n%i%?\n#+END_QUOTE\n"
+
+  :prepend t         ;; put newest quote at the top of the section
+  :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+  :empty-lines 1     ;; enforce count of blank lines before and after
 #+END_SRC
 
 ***** TODO Cool Quote to Remember (personal, zeomega)
@@ -3228,6 +3653,22 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
 #+END_SRC
 
+***** TODO A ZeOmega General Meeting
+#+NAME: capture--zeomega-meeting
+#+BEGIN_SRC text
+  "ZeOmega Meeting" entry
+  (file+headline "~/Dropbox/Documents/ZeOmega.org" "Meetings")
+
+  (file "~/.emacs.d/templates/zeomega-meeting.org")
+
+  :prepend t         ;; put newest quote at the top of the section
+  :kill-buffer t     ;; if file was opened just to collect data, close the buffer after
+  :empty-lines 1     ;; enforce count of blank lines before and after
+  :clock-in t        ;; begin tracking the time to fill in this entry
+  :clock-resume t    ;; and end tracking upon returning to what I was doing
+  :clock-keep nil    ;; be sure the clock does not keep running after I return
+  :unnarrowed t      ;; do not narrow the target buffer
+#+END_SRC
 
 ***** TODO ZeOmega Hadoop/Financial
 #+NAME: capture--hadoop-financial
@@ -3311,6 +3752,21 @@ org-babel-load-file() doesn't seem to respect the =:tangle no= srcblock header o
   :empty-lines-after  1 ;; enforce count of blank lines after
 #+END_SRC
 
+#+NAME: capture--about-generic
+#+BEGIN_SRC text
+  "Captured Annotation" entry
+  (file+headline "~/Dropbox/Documents/index.org"
+                 "Index Unclassified Entries"
+  )
+
+  "** %^{Note Title} %^G\n:PROPERTIES:\n:CREATED: %U\n:END:\n%A\n%i\n%?"
+
+  :prepend nil          ;; put newest entry at the bottom of the section
+  :kill-buffer t        ;; if file was opened just to collect data, close the buffer after
+  :empty-lines-before 0 ;; enforce count of blank lines before
+  :empty-lines-after  1 ;; enforce count of blank lines after
+#+END_SRC
+
 #+NAME: capture--tasks-generic
 #+BEGIN_SRC text
   "Captured Tasks" entry
@@ -3381,10 +3837,15 @@ org-refile-targets
        ("n"
           <<capture--notes-generic>>
        )
+       ("a"
+          <<capture--about-generic>>
+       )
        ("t"
           <<capture--tasks-generic>>
        )
-
+       ("b"
+          <<capture--blog-post>>
+       )
        ("B"
           <<capture--health-bloodpressure-measurements>>
        )
@@ -3394,9 +3855,49 @@ org-refile-targets
        ("q"
           <<capture--cool-quote>>
        )
-;;       ("z"
-;;          "ZeOmega Capture Templates"
-;;       )
+       ("z"
+          "ZeOmega Capture Templates"
+       )
+         ("zM"
+            <<capture--zeomega-meeting>>
+         )
+         ("zm"
+            "Specific Meetings"
+         )
+         ("zmd" "1:1 Meeting with Doug" entry
+           (file+headline "~/Dropbox/Documents/ZeOmega.org" "Meetings: 1:1 w/Doug")
+           (file "~/.emacs.d/templates/zeomega-meeting.org")
+           :prepend t       ;; put newest quote at the top of the section
+           :kill-buffer t   ;; if file was opened just to collect data, close the buffer after
+           :empty-lines 1   ;; enforce count of blank lines before and after
+           :clock-in t      ;; begin tracking the time to fill in this entry
+           :clock-resume t  ;; and end tracking upon returning to what I was doing
+           :unnarrowed t    ;; do not narrow the target buffer
+           :clock-keep nil  ;; be sure the clock does not keep running after I return
+         )
+         ("zmh" "1:1 Meeting with Harshad" entry
+           (file+headline "~/Dropbox/Documents/ZeOmega.org" "Meetings: 1:1 w/Harshad")
+           (file "~/.emacs.d/templates/zeomega-meeting.org")
+           :prepend t       ;; put newest quote at the top of the section
+           :kill-buffer t   ;; if file was opened just to collect data, close the buffer after
+           :empty-lines 1   ;; enforce count of blank lines before and after
+           :clock-in t      ;; begin tracking the time to fill in this entry
+           :clock-resume t  ;; and end tracking upon returning to what I was doing
+           :unnarrowed t    ;; do not narrow the target buffer
+           :clock-keep nil  ;; be sure the clock does not keep running after I return
+         )
+         ("zmp" "1:1 Meeting with Pavan" entry
+           (file+headline "~/Dropbox/Documents/ZeOmega.org" "Meetings: 1:1 w/Pavan")
+           (file "~/.emacs.d/templates/zeomega-meeting.org")
+           :prepend t       ;; put newest quote at the top of the section
+           :kill-buffer t   ;; if file was opened just to collect data, close the buffer after
+           :empty-lines 1   ;; enforce count of blank lines before and after
+           :clock-in t      ;; begin tracking the time to fill in this entry
+           :clock-resume t  ;; and end tracking upon returning to what I was doing
+           :unnarrowed t    ;; do not narrow the target buffer
+           :clock-keep nil  ;; be sure the clock does not keep running after I return
+         )
+
 ;;          ("zf"
 ;;             <<capture--hadoop-financial>>
 ;;          )
@@ -3815,13 +4316,19 @@ used, equivalent to the value `((nil . (:level . 1))'.
 ;; People: Harshad
 ;; People: Pavan
 
-      ("~/Dropbox/Documents/techdocs.wiki/architecture.org" :tag . "REFILING")
-      ("~/Dropbox/Documents/techdocs.wiki/codequality.org" :tag . "REFILING")
-      ("~/Dropbox/Documents/techdocs.wiki/corefunctions.org" :tag . "REFILING")
-      ("~/Dropbox/Documents/techdocs.wiki/datalifecycle.org" :tag . "REFILING")
-      ("~/Dropbox/Documents/techdocs.wiki/deployment.org" :tag . "REFILING")
-      ("~/Dropbox/Documents/techdocs.wiki/operations.org" :tag . "REFILING")
-      ("~/Dropbox/Documents/techdocs.wiki/rulesengine.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/about-cicd.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/rulesengine.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/clicbank.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/codequality.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/corefunctions.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/deployment.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/datalifecycle.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/operations.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/architecture.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/clustercomputing-hadoop.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/officetools.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/multicloud.org" :tag . "REFILING")
+      ("~/Dropbox/Documents/techdocs/aiml.org" :tag . "REFILING")
     )
   )
 
@@ -3855,9 +4362,42 @@ used, equivalent to the value `((nil . (:level . 1))'.
   (setq org-yank-adjusted-subtrees t)  ;; adjust trees into hierarchy during yank
 #+END_SRC
 
+**** Enabling Display of Entities Inline
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-pretty-entities t)
+#+END_SRC
+
 *** org-babel (Multiple Programming Languages) Setup
 Set Up Org-Babel for Using Literate Org-Based Configuration Markup.  These are
 the languages I expect to embed into an org-mode document.
+
+#+BEGIN_SRC emacs-lisp
+  (org-babel-lob-ingest "~/.emacs.d/library.org")
+#+END_SRC
+
+*** REST Client
+[[https://github.com/pashky/restclient.el][GitHub - pashky/restclient.el: HTTP REST client tool for emacs]]
+
+This is a tool to manually explore and test HTTP REST webservices.  Runs
+queries from a plain-text query sheet, displays results as a pretty-printed
+XML, JSON and even images.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package restclient
+    :load-path "~/.emacs.d/lisp/restclient/" ;; use my Git checkout
+    :ensure nil    ;; do NOT install from ELPA but look for it already on my machine
+    :demand t      ;; force loading to occur immediately, even if conditions exist to defer
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (use-package restclient
+    :load-path "~/.emacs.d/lisp/ob-restclient/" ;; use my Git checkout
+    :ensure nil    ;; do NOT install from ELPA but look for it already on my machine
+    :demand t      ;; force loading to occur immediately, even if conditions exist to defer
+  )
+#+END_SRC
 
 #+BEGIN_SRC emacs-lisp
   (org-babel-do-load-languages
@@ -3866,17 +4406,22 @@ the languages I expect to embed into an org-mode document.
       '(
           (emacs-lisp . t)
           (shell      . t)
+          (http       . t)
           (python     . t)
+          (restclient . t)
 ;;;          (R          . t)      ;; causes org-babel-header-args-safe-fn to become invalid function
           (org        . t)
+          (calc       . t)
           (ditaa      . t)
           (dot        . t)
           (gnuplot    . t)
           (ledger     . t)
           (sql        . t)
+;;;          (json       . t)
           (sqlite     . t)
        )
   )
+  (setq org-babel-python-command "python3")
 #+END_SRC
 
 Evaluation of any code embedded in documents has a security risk.  Sometimes
@@ -3886,11 +4431,48 @@ based on the language being embedded.
 
 #+BEGIN_SRC emacs-lisp
   (defun my-org-confirm-babel-evaluate (lang body)
-      (not (string= lang "ditaa"))          ; don't ask for ditaa
-      (not (string= lang "emacs-lisp"))     ; don't ask for emacs-lisp
+    (not
+      (or
+        (string= lang "ditaa")          ; don't ask for ditaa
+        (string= lang "emacs-lisp")     ; don't ask for emacs-lisp
+        (string= lang "elisp")          ; don't ask for emacs-lisp
+        (string= lang "python")         ; don't ask for python
+      )
+    )
   )
   (setq org-confirm-babel-evaluate
       'my-org-confirm-babel-evaluate)
+  ;;; (setq org-confirm-babel-evaluate
+  ;;;      nil)
+#+END_SRC
+
+*** Using the SciMax org-babel Python for async execution of Python source blocks
+
+#+BEGIN_SRC emacs-lisp
+;;  (use-package scimax-org-babel-python
+;;    :ensure t  ;; this package is essential for my configuration to work
+;;  )
+;;  (add-to-list 'org-ctrl-c-ctrl-c-hook 'org-babel-async-execute:python)
+
+;;  (use-package scimax-ob)
+
+;;  (setq org-babel-async-python-show-results t)
+;;  (setq org-babel-async-python-show-line-numbers t)
+
+;;  ;; Use the current window for C-c ' source editing
+;;  (setq org-src-window-setup 'current-window
+;;    org-support-shift-select t)
+
+;;  (setq python-indent-guess-indent-offset nil)
+#+END_SRC
+
+Error (use-package): Failed to install
+  scimax-org-babel-python:
+    Package ‘scimax-org-babel-python-’ is unavailable
+
+#+BEGIN_SRC python
+  print "Hello"
+  a=x=3
 #+END_SRC
 
 *** org-protocol
@@ -4228,6 +4810,10 @@ For short capture tasks, empty CLOCK drawers may occur.  This removes them.
 :END:
 **** My Agenda Settings
 
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-window-setup 'other-frame)
+#+END_SRC
+
 P Agenda for Current Period -> Planned Tasks
  - missing agenda title from first line; has a date instead
  - org-agenda-type is nil
@@ -4284,8 +4870,14 @@ F Captured Info Needing Filing
     t)
   (setq org-agenda-with-colors
     t)
+
   (setq org-agenda-start-on-weekday
     nil)
+  (setq org-agenda-show-future-repeats
+    nil)
+  (setq org-agenda-prefer-last-repeat
+    nil)
+
   (setq org-agenda-time-leading-zero
     t)
   (setq org-agenda-timegrid-use-ampm
@@ -4317,7 +4909,28 @@ F Captured Info Needing Filing
     t)
 #+END_SRC
 
-[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html#Face-Attributes][Face Attributes - GNU Emacs Lisp Reference Manual]]
+****** About Blocked Tasks
+
+****** About TODO Dependencies
+
+1. When TODO dependencies are *enforced* with the
+   ~org-enforce-todo-dependencies~ setting, then a parent TODO cannot be
+   marked *DONE* if any of its children TODO entries are not marked *DONE*.
+
+   This means work must be completed bottom-to-top in the overall tree of
+   tasks.
+
+2. If a parent has an :ORDERED: property, children TODO entries cannot be
+   marked *DONE* unless all of the parent's prior siblings have benned marked
+   *DONE*.
+
+   This means work must be completed from left-to-right in the overall tree of
+   tasks.
+
+3. If a parent is blocked from being marked *DONE* due to ordered siblings of
+   its own, the parent's children will also be blocked.
+
+****** [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Attributes.html#Face-Attributes][Face Attributes - GNU Emacs Lisp Reference Manual]]
 
 ***** My Choice of Date Format for Org-Agenda
 
@@ -4387,7 +5000,11 @@ in it.
        ("p" . "Personal Agendas") ; describe prefix "p"
        <<define-agenda-pa-PersonalScheduledTasks>>
        <<define-agenda-pb-PersonalTaskBacklog>>
-       <<define-agenda-pR-FindRiverhoodEvents>>
+       <<define-agenda-pC-Covid19Timeline>>
+       <<define-agenda-pD-PersonalDirections>>
+       <<define-agenda-pI-PersonalInitiatives>>
+       <<define-agenda-pT-PersonalTimeline>>
+       <<define-agenda-pd-PersonalDocuments>>
 
        ("z" . "ZeOmega Agendas") ; describe prefix "z"
        <<define-agenda-za-WorkScheduledTasks>>
@@ -4395,7 +5012,9 @@ in it.
        <<define-agenda-zD-TechDirections>>
        <<define-agenda-zI-TechInitiatives>>
        <<define-agenda-zC-ZeOmegaClients>>
-       <<define-agenda-zM-MyZeOmegaMeetings>>
+       <<define-agenda-zM-ZeOmegaMeetings>>
+       <<define-agenda-zT-ZeOmegaTimeline>>
+       <<define-agenda-zd-TechDocuments>>
 
        <<define-agenda-zZ-AgendaBlocks>>
      )
@@ -4403,25 +5022,194 @@ in it.
 #+END_SRC
 
 ****** Segment My Agenda Views into Topics Using Super-Agenda
+******* Define My Custom Group Function First
 
-The primary use of the github:[[https://github.com/alphapapa/org-super-agenda][org-super-agenda]] package is to post-process the
+Define a new auto-grouping keyword/function for Org-Super-Agenda called
+:auto-direction, that examines the multi-valued property DIRECTION of each
+agenda item and *copies* that item under each distinct agenda heading
+named for each DIRECTION value.  Yes, this means an item can appear under
+multiple DIRECTIONs in an agenda, which is what I want.
+
+#+BEGIN_SRC emacs-lisp
+  (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
+    "Divide ALL-ITEMS into groups based on their DIRECTION property, if present."
+
+    (setq non-matching nil)
+    (setq groups (ht-create))
+
+    (dolist (item all-items)
+      (setq marker
+       (or (get-text-property 0 'org-marker item)
+           (get-text-property 0 'org-hd-marker item)))
+
+      (setq propvalue (org-entry-get marker propname))
+      (if propvalue
+        (let*
+          (
+            (directions
+              (and propvalue
+                (split-string propvalue
+                  ";"        ;; separator
+                  t          ;; omit empty strings
+                  "[ ]+"     ;; trim leading/trailing whitespace
+                )
+              )
+            )
+          )
+
+          (dolist (direction directions)
+            (ht-set! groups direction
+              (cons item (ht-get groups direction)))
+          )
+        )
+        (push item non-matching)  ;; else no PROPNAME property
+      )
+    )
+
+    (setq ngroups nil)
+    (setq directions (sort (ht-keys groups) 'string<))
+    (dolist (direction directions)
+      (push
+        (list :name (format "Direction: %s" direction)
+         :items (nreverse (ht-get groups direction))
+        )
+        ngroups
+      )
+    )
+
+    (list ':auto-multiproperty non-matching ngroups)
+  )
+#+END_SRC
+
+******* Now Initialize the org-super-agenda package
+
+The primary use of the [[https://github.com/alphapapa/org-super-agenda][org-super-agenda]]^{github} package is to post-process the
 list of items, usually for the daily/weekly agenda, made by the
 ~org-agenda-list~ command, but it also works for other agenda views, like
 ~org-tags-view~, ~org-todo-list~, ~org-search-view~, etc.
 
 #+BEGIN_SRC emacs-lisp
+  (featurep 'ts)
+#+END_SRC
+
+
+load-path is a variable defined in ‘C source code’.
+Its value is
+("~/.emacs.d/lisp/origami/" "~/.emacs.d/lisp/org-super-agenda/" "~/.emacs.d/lisp/org-collector/" "~/.emacs.d/lisp/org-cliplink" "~/.emacs.d/lisp/highlight-indent-guides/" "~/.emacs.d/lisp/indent-tools" "~/.emacs.d/lisp/orgnav/" "~/.emacs.d/lisp/ob-browser/" "~/.emacs.d/lisp/ox-jira.el/" "~/.emacs.d/lisp/general/" "/home/jrush/.emacs.d/.cask/26.3/elpa/atomic-chrome-2.0.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/beacon-1.3.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/counsel-0.13.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/docker-tramp-0.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/git-annex-1.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/git-auto-commit-mode-4.6.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/gitlab-0.8.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/gitlab-ci-mode-20190824.12.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/grandshell-theme-1.3" "/home/jrush/.emacs.d/.cask/26.3/elpa/ht-2.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/htmlize-1.55" "/home/jrush/.emacs.d/.cask/26.3/elpa/hydra-0.15.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/ledger-mode-4.0.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/lv-0.15.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/magit-todos-1.5.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/hl-todo-3.1.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/org-bullets-0.2.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/org-magit-0.2.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/magit-2.90.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/magit-popup-2.13.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/git-commit-2.90.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/ghub-3.3.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/org-mime-20120112" "/home/jrush/.emacs.d/.cask/26.3/elpa/org-special-block-extras-1" "/home/jrush/.emacs.d/.cask/26.3/elpa/dash-functional-2.17.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/pallet-0.9.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/cask-0.8.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/pcre2el-1.8" "/home/jrush/.emacs.d/.cask/26.3/elpa/pdf-tools-0.90" "/home/jrush/.emacs.d/.cask/26.3/elpa/pip-requirements-0.5" "/home/jrush/.emacs.d/.cask/26.3/elpa/pkg-info-0.6" "/home/jrush/.emacs.d/.cask/26.3/elpa/py-autopep8-2016.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/py-import-check-0.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/pyenv-mode-0.1.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/pythonic-0.1.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/request-0.3.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/swiper-0.13.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/ivy-0.13.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/tablist-1.0" "/home/jrush/.emacs.d/.cask/26.3/elpa/treepy-0.1.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/ts-0.2" "/home/jrush/.emacs.d/.cask/26.3/elpa/undo-tree-0.7.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/use-package-2.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/bind-key-2.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/websocket-1.12" "/home/jrush/.emacs.d/.cask/26.3/elpa/with-editor-2.9.3" "/home/jrush/.emacs.d/.cask/26.3/elpa/async-1.9.4" "/home/jrush/.emacs.d/.cask/26.3/elpa/yafolding-0.4.1" "/home/jrush/.emacs.d/.cask/26.3/elpa/yaml-mode-0.0.14" "/home/jrush/.emacs.d/.cask/26.3/elpa/yasnippet-0.14.0" "~/.emacs.d/lisp/" "/etc/emacs" "/usr/local/share/emacs/26.3/site-lisp" "/usr/local/share/emacs/site-lisp" "/usr/share/emacs/site-lisp/dictionaries-common" "/usr/share/emacs/26.3/site-lisp" "/usr/share/emacs/site-lisp" "/usr/share/emacs/26.3/lisp" "/usr/share/emacs/26.3/lisp/vc" "/usr/share/emacs/26.3/lisp/url" "/usr/share/emacs/26.3/lisp/textmodes" "/usr/share/emacs/26.3/lisp/progmodes" "/usr/share/emacs/26.3/lisp/play" "/usr/share/emacs/26.3/lisp/org" "/usr/share/emacs/26.3/lisp/nxml" "/usr/share/emacs/26.3/lisp/net" "/usr/share/emacs/26.3/lisp/mh-e" "/usr/share/emacs/26.3/lisp/mail" "/usr/share/emacs/26.3/lisp/leim" "/usr/share/emacs/26.3/lisp/language" "/usr/share/emacs/26.3/lisp/international" "/usr/share/emacs/26.3/lisp/image" "/usr/share/emacs/26.3/lisp/gnus" "/usr/share/emacs/26.3/lisp/eshell" "/usr/share/emacs/26.3/lisp/erc" "/usr/share/emacs/26.3/lisp/emulation" "/usr/share/emacs/26.3/lisp/emacs-lisp" "/usr/share/emacs/26.3/lisp/cedet" "/usr/share/emacs/26.3/lisp/calendar" "/usr/share/emacs/26.3/lisp/calc" "/usr/share/emacs/26.3/lisp/obsolete")
+
+  Configured        :config has been processed (the package is loaded!)
+  Initialized       :init has been processed (load status unknown)
+  Prefaced          :preface has been processed
+  Declared          the use-package declaration was seen
+
+bind-key                  Configured    2020-06-19 Fri 02:11    0.00
+general                   Configured    2020-06-19 Fri 02:11    0.02
+pallet                    Configured    2020-06-19 Fri 02:11    0.13
+hydra                     Configured    2020-06-19 Fri 02:11    0.01
+epa-file                  Configured    2020-06-19 Fri 02:11    0.00
+org-crypt                 Configured    2020-06-19 Fri 02:11    0.00
+ox-jira                   Configured    2020-06-19 Fri 02:11    0.10
+ob-browser                Configured    2020-06-19 Fri 02:11    0.00
+yasnippet                 Configured    2020-06-19 Fri 02:11    0.04
+counsel                   Configured    2020-06-19 Fri 02:11    0.05
+grandshell-theme          Configured    2020-06-19 Fri 02:11    0.00
+yafolding                 Configured    2020-06-19 Fri 02:11    0.00
+highlight-indent-guides   Configured    2020-06-19 Fri 02:11    0.00
+rst                       Configured    2020-06-19 Fri 02:11    0.01
+org-cliplink              Configured    2020-06-19 Fri 02:11    0.01
+org-protocol              Configured    2020-06-19 Fri 02:11    0.00
+org-collector             Configured    2020-06-19 Fri 02:11    0.01
+origami                   Configured    2020-06-19 Fri 02:12    0.00
+org-notmuch               Configured    2020-06-19 Fri 02:11    0.00
+atomic-chrome             Configured    2020-06-19 Fri 02:11    0.02
+cal-iso                   Configured    2020-06-19 Fri 02:12    0.00
+
+orgnav                    Initialized   2020-06-19 Fri 02:11    0.00
+yaml-mode                 Initialized   2020-06-19 Fri 02:11    0.00
+python                    Initialized   2020-06-19 Fri 02:11    0.00
+org-mime                  Initialized   2020-06-19 Fri 02:11    0.00
+
+org-super-agenda          Declared      2020-06-19 Fri 02:23    0.00
+
+#+BEGIN_SRC emacs-lisp
   (use-package org-super-agenda
-    :load-path "~/.emacs.d/lisp/org-super-agenda/"  ;; use my Git checkout
+    :load-path "~/.emacs.d/lisp/org-super-agenda/"  ;; extend load-path to include my Git checkout of org-super-agenda
+    :ensure nil    ;; do NOT install from ELPA but look for it already on my machine
+;;;    :pin manual    ;; ignore upstream updates and use my Git checked out version
 
-    :config
-      (org-super-agenda-mode)  ;; enable it globally
+    :demand t      ;; force loading to occur immediately, even if conditions exist to defer
+;;;    :defer nil
 
-      (set-face-attribute 'org-super-agenda-header nil
-        :foreground "green"
-        :weight 'bold
-        :overline "green"
-      )
+    :requires (dash ht s ts)
+    :defines org-super-agenda-group-types
+    :functions org-super-agenda-mode
+
+    :init ;; code executed BEFORE package is loaded
+      (message "+++++++++++++ The :init executed.")
+
+;;;    :mode (
+;;;      ("\\.org" . org-mode)
+;;;      ("\\.org\\'" . org-mode)
+;;;      ("\\.org\\." . org-mode)
+;;;      ("\\.org_archive\\'" . org-mode)
+;;;    )
+
+;;;    :catch (lambda (keyword err)
+;;;        (message (error-message-string err)))
+
+    :config ;; code executed AFTER package is loaded
+      (message "+++++++++++++ The :config started up after package was loaded.")
+      (org-super-agenda-mode t)  ;; enable it globally   DID NOT RUN!
+;;;
+;;;      ;;; (error "oops")
+;;;
+;;;      (set-face-attribute 'org-super-agenda-header nil
+;;;        :foreground "green"
+;;;        :weight 'bold
+;;;        :overline "green"
+;;;      )
+;;;
+;;;      ;; wire in my new :auto-multiproperty grouping
+;;;      (setq org-super-agenda-group-types
+;;;        (plist-put org-super-agenda-group-types
+;;;          ':auto-multiproperty
+;;;          'jeff--auto-group-by-multiprop
+;;;        )
+;;;      )
+;;;      (add-to-list    ;; DID NOT RUN!
+;;;        'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
   )
+  (require 'org-super-agenda)
+  (org-super-agenda-mode t)
+
+  (set-face-attribute 'org-super-agenda-header nil
+    :foreground "green"
+    :weight 'bold
+    :overline "green"
+  )
+
+  ;; wire in my new :auto-multiproperty grouping
+  (setq org-super-agenda-group-types
+    (plist-put org-super-agenda-group-types
+      ':auto-multiproperty
+      'jeff--auto-group-by-multiprop
+    )
+  )
+  (add-to-list    ;; DID NOT RUN!
+    'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
+
+#+END_SRC
+
+To see the expansion, place your cursor immediately after the (use-package
+...) expression and then enter: M-x pp-macroexpand-last-sexp
+
+#+BEGIN_SRC emacs-lisp
+;;;  (setq org-super-agenda-group-types
+;;;    (plist-put org-super-agenda-group-types
+;;;      ':auto-multiproperty
+;;;      'jeff--auto-group-by-multiprop
+;;;    )
+;;;  )
 #+END_SRC
 
 ****** Agenda: Find Incorrect INBOX Entries with a SCHEDULED Keyword
@@ -4438,7 +5226,9 @@ scheduled for me to work on it.
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Mis-Scheduled Inbox Items")
 
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+;;;      (org-agenda-hide-tags-regexp "UNFILED")
+
       (org-agenda-span 2)         ;; show me 2-days at a time
       (org-agenda-files '("~/Dropbox/Documents/Inbox.org"))
     )
@@ -4456,7 +5246,9 @@ scheduled for me to work on it.
       (org-agenda-overriding-header "Archivable TODOs")
 
       (org-agenda-sorting-strategy '(category-up priority-down alpha-up))
-      (org-agenda-remove-tags t)
+
+      (org-agenda-remove-tags nil)
+;;;      (org-agenda-hide-tags-regexp "UNFILED")
     )
     ("/tmp/ArchivableEntries.pdf")  ;; file(s)-to-export[6]
   )
@@ -4498,10 +5290,19 @@ entries to where they belong.
     "+ALLTAGS={UNFILED}-NOSEARCH=1"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Items Needing Proper Filing")
-      (org-super-agenda-groups agendagroups/items-needing-filing)
 
       (org-agenda-sorting-strategy '(category-up priority-down alpha-up))
-      (org-agenda-remove-tags t)
+      (org-super-agenda-groups
+        '(
+           (:name "Collected Links" :tag "LINK")
+           (:name "Collected Tasks" :todo t)
+           (:name "Collected Notes" :anything t)  ;; place remaining entries under this heading
+         )
+      )
+
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "UNFILED")
+
 ;;      (org-super-agenda-unmatched-name "Other Items")
 ;;      (org-agenda-files '("~/Dropbox/Documents/index.org"))
     )
@@ -4513,11 +5314,11 @@ Also note my use above of the Org-SuperAgenda Emacs module to empower my
 presentation of the collected headlines.  The above reference uses the
 following elisp variable to segregate the headlines into sections.
 
-#+BEGIN_SRC emacs-lisp
+#+BEGIN_SRC emacs-lispxxx
   (setq agendagroups/items-needing-filing
     '(
        (:name "Collected Links"
-         :tag "LINK"
+         :tags "LINK"
        )
 
        (:name "Collected Tasks"
@@ -4538,13 +5339,15 @@ have a deadline to fnish.
 
 #+NAME: define-agenda-R-FindRecurringTasks
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("R" "Recurring/Habits" todo  ;; key[1] desc[2] type[3]
+  ("R" "Recurring/habits" todo  ;; key[1] desc[2] type[3]
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Recurring/Habitual Tasks")
       (org-super-agenda-groups agendagroups/recurring-tasks)
 
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+;;;      (org-agenda-hide-tags-regexp "BUY")
+
 ;;;      (org-super-agenda-unmatched-name "Other Items")
     )
     ("/tmp/MyHabits.pdf")  ;; file(s)-to-export[6]
@@ -4612,18 +5415,20 @@ Org Manual: Tracking your habits]] for an explanation of the difference.
 
 ****** Agenda: Find Items I Want to Purchase
 
-This agenda collects TODO headlines tagged as :SHOP: and formats them
+This agenda collects TODO headlines tagged as :BUY: and formats them
 with a leading "[ ]" checkbox so I can print them and check them off.
 
 #+NAME: define-agenda-$-FindItemsToPurchase
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("$" "Shopping List(s)" tags-todo  ;; key[1] desc[2] type[3]
-    "+SHOP"  ;; entry match-expression[4]
+  ("$" "$hopping list(s)" tags-todo  ;; key[1] desc[2] type[3]
+    "+BUY"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Shopping List(s)")
       (org-super-agenda-groups agendagroups/shopping-lists)
 
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "BUY")
+
 ;;;      (org-super-agenda-unmatched-name "Other Items")
       (org-agenda-prefix-format " [ ] %-12:c")  ;; add checkbox for printed shopping list
     )
@@ -4651,6 +5456,153 @@ that relate to specific shopping venues.
   )
 #+END_SRC
 
+****** Agenda: Find ZeOmega Work Events as a Timeline
+
+This agenda collects event headlines, whether TODO or not, related to a group
+the tag "ZEOMEGA".
+
+#+NAME: define-agenda-zT-ZeOmegaTimeline
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("zT" "<T>imeline at ZeOmega" tags ;; key[1] desc[2] type[3]
+    "+EVENT+ZEOMEGA-PERSONAL"  ;; entry match-expression[4]
+    ( ; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "ZeOmega Work Events")
+      (org-super-agenda-groups
+        '(
+;;;          (:auto-ts)
+;;;          (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+;;;          (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
+;;;          (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+
+;;;          (:name "To Not Worry About Money        :FINANCE:" :tag "FINANCE")
+;;;          (:name "To Take Care of Life's Chores   :CHORE:"   :tag "CHORE")
+;;;          (:name "To Experience Life's Magic      :EVENT:"   :tag "EVENT")
+;;;          (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
+;;;          (:name "To Engage with People           :PEOPLE:"  :tag "PEOPLE")
+;;;          (:name "To Share Knowledge with Others  :COMPOSE:" :tag ("SHARE" "COMPOSE"))
+;;;          (:name "To Continually Learn            :STUDY:"   :tag ("STUDY" "LINK"))
+
+          ;; After the last group, the agenda will display items that didn't
+          ;; match any of these groups, with the default order position of 99
+         )
+      )
+      (org-agenda-sorting-strategy '(tsia-down alpha-up))
+
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "ZEOMEGA\\|EVENT")
+
+      (org-agenda-prefix-format "  ")  ;; remove Category
+      (org-super-agenda-unmatched-name "Other Items")
+    )
+    ("/tmp/ZeOmegaTimeline.pdf")  ;; file(s)-to-export[6]
+  )
+#+END_SRC
+
+****** Agenda: Find Personal Life Events as a Timeline
+
+This agenda collects event headlines, whether TODO or not, related to a group
+the tag "COVID".
+
+#+NAME: define-agenda-pT-PersonalTimeline
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("pT" "<T>imeline for my life" tags ;; key[1] desc[2] type[3]
+    "+EVENT+PERSONAL-COVID-ZEOMEGA"  ;; entry match-expression[4]
+    ( ; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Personal Life Events")
+      (org-super-agenda-groups
+        '(
+;;;          (:auto-ts)
+;;;          (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+;;;          (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
+;;;          (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+
+          (:name "Birthdays       :BIRTH:"                   :tag "BIRTH")
+          (:name "Deathdays       :DEATH:"                   :tag "DEATH")
+          (:name "Housing Changes :MOVED:"                   :tag "MOVED")
+          (:name "Travels         :TRAVEL:"                  :tag "TRAVEL")
+          (:name "Marital Changes"                           :tag ("WEDDING" "DIVORCE" "ENGAGEMENT"))
+;;;          (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
+;;;          (:name "To Engage with People           :PEOPLE:"  :tag "PEOPLE")
+;;;          (:name "To Share Knowledge with Others  :COMPOSE:" :tag ("SHARE" "COMPOSE"))
+;;;          (:name "To Continually Learn            :STUDY:"   :tag ("STUDY" "LINK"))
+
+          ;; After the last group, the agenda will display items that didn't
+          ;; match any of these groups, with the default order position of 99
+         )
+      )
+
+      (org-agenda-sorting-strategy '(tsia-down alpha-up))
+
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "PERSONAL\\|REFILING")
+
+      (org-agenda-prefix-format "  ")  ;; remove Category
+      (org-super-agenda-unmatched-name "Other Items")
+    )
+    ("/tmp/PersonalTimeline.pdf")  ;; file(s)-to-export[6]
+  )
+#+END_SRC
+
+****** Agenda: Find Covid-19 Events as a Timeline
+
+This agenda collects event headlines, whether TODO or not, related to a group
+the tag "COVID".
+
+#+NAME: define-agenda-pC-Covid19Timeline
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("pC" "<T>imeline for COVID-19" tags ;; key[1] desc[2] type[3]
+    "+COVID+EVENT"  ;; entry match-expression[4]
+    ( ; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Covid-19 Events")
+      (org-super-agenda-groups
+        '(
+;;;           (:auto-ts)
+;;;          (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+;;;          (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
+;;;          (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+
+;;;          (:name "Tasks Scheduled for Today       :HOT:"     :tag "HOT")
+;;;          (:name "Maintain Physical/Mental Health :HEALTH:"  :tag "HEALTH")
+;;;          (:name "To Not Worry About Money        :FINANCE:" :tag "FINANCE")
+;;;          (:name "To Take Care of Life's Chores   :CHORE:"   :tag "CHORE")
+;;;          (:name "To Experience Life's Magic      :EVENT:"   :tag "EVENT")
+;;;          (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
+;;;          (:name "To Engage with People           :PEOPLE:"  :tag "PEOPLE")
+;;;          (:name "To Share Knowledge with Others  :COMPOSE:" :tag ("SHARE" "COMPOSE"))
+;;;          (:name "To Continually Learn            :STUDY:"   :tag ("STUDY" "LINK"))
+
+          ;; After the last group, the agenda will display items that didn't
+          ;; match any of these groups, with the default order position of 99
+         )
+      )
+
+      (org-agenda-sorting-strategy '(tsia-down alpha-up))
+
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "COVID\\|EVENT")
+
+      (org-agenda-prefix-format "  ")  ;; remove Category
+      (org-super-agenda-unmatched-name "Other Items")
+    )
+    ("/tmp/Covid-19Events.pdf")  ;; file(s)-to-export[6]
+  )
+
+;;; (add-hook 'org-load-hook
+;;;   (lambda ()
+;;;     (setq org-agenda-custom-commands
+;;;    '(("L" "my view"
+;;;       ((todo
+;;;         "TODO"
+;;;         ((org-agenda-overriding-header "=== TODO tasks without scheduled date ===")
+;;;          (org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled))
+;;;          (org-agenda-prefix-format '((todo . " %1c ")))))
+;;;        (agenda
+;;;         ""
+;;;         ((org-agenda-overriding-header "=== Scheduled tasks ===")
+;;;          (org-agenda-span 22)
+;;;          (org-agenda-prefix-format '((agenda . " %1c %?-12t% s")))))))))))
+#+END_SRC
+
 ****** Agenda: Find Riverhood Events
 
 This agenda collects event headlines, whether TODO or not, related to a group
@@ -4663,7 +5615,6 @@ I run called "Riverhood".
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Riverhood Events")
 ;;      (org-super-agenda-groups agendagroups/personal-scheduled-tasks)
-
       (org-agenda-prefix-format "  ")  ;; remove Category
 ;;      (org-agenda-remove-tags t)
       (org-super-agenda-unmatched-name "Other Items")
@@ -4681,9 +5632,25 @@ This agenda view represents "personal things I have *scheduled* to get done,
 meaning they have a DEADLINE, or they have a SCHEDULED start date today or in
 the past.  The look-forward period for DEADLINES is the next 14-days.
 
-#+NAME: define-agenda-pa-PersonalScheduledTasks
+#+NAME: define-agenda-pa-PersonalScheduledTasksNEWWAY
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("pa" "Personal Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
+  ("pa" "<a>genda (personal) for next two weeks" ;; key[1] desc[2]
+
+    ( ; type[3] a custom function instead of 'agenda'/'org-agenda-list'
+      (org-ql-block
+        '(and
+           (or
+             (deadline 14)
+             (scheduled 14)
+           )
+           (not (tags "ZEOMEGA"))
+         )
+         (
+           (org-ql-block-header "PERSONAL AGENDA VIA ORG-QL")
+         )
+      )
+      (agenda)
+    )
 
     ;; Only headlines scheduled or with deadlines will show because this
     ;; is an agenda view of type 'agenda' above.  Non-scheduled headlines
@@ -4694,9 +5661,45 @@ the past.  The look-forward period for DEADLINES is the next 14-days.
       (org-agenda-overriding-header "Personal Agenda for Each Day")
       (org-super-agenda-groups agendagroups/personal-scheduled-tasks)
 
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "FINANCE\\|HABIT\\|RECUR")
+
       (org-super-agenda-unmatched-name "Other Items")
+
+      ;;(org-agenda-start-on-weekday nil)
       (org-agenda-span 14)         ;; show me 14-days at a time
+      ;;(org-agenda-start-day  "-3d")
+    )
+    ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
+  )
+
+
+  ("ces" "Custom: Agenda and Emacs SOMEDAY [#A] items"
+  )
+
+#+END_SRC
+
+#+NAME: define-agenda-pa-PersonalScheduledTasks
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("pa" "<a>genda (personal) for next two weeks" agenda  ;; key[1] desc[2] type[3]
+
+    ;; Only headlines scheduled or with deadlines will show because this
+    ;; is an agenda view of type 'agenda' above.  Non-scheduled headlines
+    ;; will not appear.  Whether the headline has a TODO or not is irrelevent.
+
+    nil  ;; entry match-expression[4]
+    ( ; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Personal Agenda for Each Day")
+      (org-super-agenda-groups agendagroups/personal-scheduled-tasks)
+
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "FINANCE\\|HABIT\\|RECUR")
+
+      (org-super-agenda-unmatched-name "Other Items")
+
+      ;;(org-agenda-start-on-weekday nil)
+      (org-agenda-span 14)         ;; show me 14-days at a time
+      ;;(org-agenda-start-day  "-3d")
     )
     ("/tmp/PersonalScheduledTasks.pdf")  ;; file(s)-to-export[6]
   )
@@ -4709,9 +5712,9 @@ following elisp variable to segregate the headlines into various sections.
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/personal-scheduled-tasks
     '(
-      (:discard (:tag "ZEOMEGA"))  ;; skip work-related tasks
+      (:discard (:tag "ZEOMEGA"))     ;; skip work-related tasks
       (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
-      (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+      (:discard (:tag "COMMENT"))     ;; skip commented items in Inbox.org
 
 ;;; create a section for DONE tasks, directing me to archive them.
 
@@ -4720,11 +5723,11 @@ following elisp variable to segregate the headlines into various sections.
       (:name "To Not Worry About Money        :FINANCE:" :tag "FINANCE")
 ;;;      (:name "To Have a Fantastic Career           :ZEOMEGA:" :tag "ZEOMEGA")
       (:name "To Take Care of Life's Chores   :CHORE:"   :tag "CHORE")
-      (:name "To Experience Life's Magic      :EVENT:"   :tag "EVENT")
-      (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
       (:name "To Engage with People           :PEOPLE:"  :tag "PEOPLE")
       (:name "To Share Knowledge with Others  :COMPOSE:" :tag ("SHARE" "COMPOSE"))
-      (:name "To Continually Learn            :STUDY:"   :tag ("STUDY" "LINK"))
+      (:name "To Continually Learn            :STUDY:"   :tag "TO_STUDY")
+      (:name "To Experience Life's Magic      :EVENT:"   :tag "EVENT")
+      (:name "To Explore the World            :TRAVEL:"  :tag "TRAVEL")
 
       ;; After the last group, the agenda will display items that didn't
       ;; match any of these groups, with the default order position of 99
@@ -4740,7 +5743,7 @@ the past.  The look-forward period for DEADLINES is the next 14-days.
 
 #+NAME: define-agenda-za-WorkScheduledTasks
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("za" "ZeOmega Agenda for Next Two Weeks" agenda  ;; key[1] desc[2] type[3]
+  ("za" "<a>genda (ZeOmega) for next two weeks" agenda  ;; key[1] desc[2] type[3]
 
     ;; Only headlines scheduled or with deadlines will show because this
     ;; is an agenda view of type 'agenda' above.  Non-scheduled headlines
@@ -4749,10 +5752,12 @@ the past.  The look-forward period for DEADLINES is the next 14-days.
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "ZeOmega Agenda for Each Day")
-      (org-super-agenda-groups agendagroups/zeomega-scheduled-tasks)
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "ZEOMEGA\\|REFILING")
 
-      (org-agenda-remove-tags t)
+      (org-super-agenda-groups agendagroups/zeomega-scheduled-tasks)
       (org-super-agenda-unmatched-name "Other Items")
+
       (org-agenda-span 14)         ;; show me 14-days at a time
     )
     ("/tmp/ZeOmegaScheduledTasks.pdf")  ;; file(s)-to-export[6]
@@ -4767,19 +5772,20 @@ following elisp variable to segregate the headlines into various sections.
   (setq agendagroups/zeomega-scheduled-tasks  ;; presentation defn using org-super-agenda
     '(
       (:discard (:not (:tag "ZEOMEGA")))  ;; skip non-work-related tasks
-      (:discard (:category "INBOX"))  ;; skip pending items in Inbox.org
-      (:discard (:tag "COMMENT"))  ;; skip commented items in Inbox.org
+      (:discard (:category "INBOX"))      ;; skip pending items in Inbox.org
+      (:discard (:tag "COMMENT"))         ;; skip commented items in Inbox.org
 
-;;; create a section for DONE tasks, directing me to archive them.
+;;; create a section for DONE tasks in ZeOmega, directing me to archive them.
 
       (:name "Tasks Scheduled for Today       :HOT:"       :tag "HOT")
       (:name "Corporate Financial Tasks       :FINANCE:"   :tag "FINANCE")
       (:name "Administrative Chores           :CHORE:"     :tag "CHORE")
-      (:name "To Attend Corporate Events      :EVENT:"     :tag "EVENT")
-      (:name "To Travel for Business          :TRAVEL:"    :tag "TRAVEL")
       (:name "To Engage with People           :PEOPLE:"    :tag "PEOPLE")
       (:name "To Share Knowledge with Others  :SHARE:"     :tag ("SHARE" "COMPOSE"))
-      (:name "To Continually Learn            :STUDY:"     :tag ("STUDY" "LINK"))
+      (:name "To Attend Corporate Events      :EVENT:"     :tag "EVENT")
+      (:name "To Continually Learn            :STUDY:"     :tag ("TO_STUDY"))
+      (:name "To Travel for Business          :TRAVEL:"    :tag "TRAVEL")
+      (:name "Completed Tasks"                             :todo "DONE")
     )
   )
 #+END_SRC
@@ -4791,13 +5797,15 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 #+NAME: define-agenda-pb-PersonalTaskBacklog
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("pb" "Personal Backlog (Unscheduled Tasks)" todo  ;; key[1] desc[2] type[3]
+  ("pb" "<b>acklog (personal) of unscheduled tasks" todo  ;; key[1] desc[2] type[3]
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Personal Backlog (Unscheduled Tasks)")
       (org-super-agenda-groups agendagroups/personal-backlog-tasks)
 
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+;;;      (org-agenda-hide-tags-regexp "DIRECTION\\|PERSONAL")
+
 ;;;      (org-super-agenda-unmatched-name "Disorganized Tasks")
 
       (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
@@ -4817,7 +5825,7 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
 
        (:name "Refilings to Organize          :REFILING:"  :tag "REFILING")
-       (:name "Unplanned Shopping             :SHOP:"      :tag "SHOP")
+       (:name "Unplanned Shopping             :BUY:"      :tag "BUY")
        (:name "Unplanned SysAdmin Tasks       :SYSADMIN:"  :tag "SYSADMIN")
        (:name "Unplanned Chores               :CHORE:"     :tag "CHORE")
        (:name "Unplanned Financials           :FINANCE:"   :tag "FINANCE")
@@ -4845,13 +5853,15 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 #+NAME: define-agenda-zb-WorkTaskBacklog
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("zb" "ZeOmega Backlog (Unscheduled Tasks)" todo  ;; key[1] desc[2] type[3]
+  ("zb" "<b>acklog (ZeOmega) of unscheduled tasks" todo  ;; key[1] desc[2] type[3]
     nil  ;; entry match-expression[4]
     ( ; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "ZeOmega Backlog (Unscheduled Tasks)")
       (org-super-agenda-groups agendagroups/zeomega-backlog-tasks)
 
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+;;;      (org-agenda-hide-tags-regexp "DIRECTION\\|PERSONAL")
+
       (org-super-agenda-unmatched-name "Misc ZeOmega Tasks")
 
 ;;;      (org-agenda-add-entry-text-descriptive-links nil)  ;; experimental
@@ -4872,14 +5882,14 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
 
 ;;;       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
        (:name "Refilings to Organize  :REFILING:" :tag "REFILING")
-       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
-       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
+       (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
        (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
        (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
-       (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
        (:name "To Share My Knowledge  :SHARE:"    :tag "SHARE")
        (:name "Things I Need to Study :STUDY:"    :tag ("STUDY" "LINK"))
        (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
+       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
+       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
 
        (:name "(To Be Organized)"
          :anything t  ;; place all remaining entries under this heading
@@ -4889,87 +5899,140 @@ been SCHEDULED to start or given a DEADLINE due within the next 14-days.
   )
 #+END_SRC
 
-Define a new auto-grouping keyword/function for Org-Super-Agenda called
-:auto-direction, that examines the multi-valued property DIRECTION of each
-agenda item and *copies* that item under each distinct agenda heading
-named for each DIRECTION value.  Yes, this means an item can appear under
-multiple DIRECTIONs in an agenda, which is what I want.
+****** Agenda: List Personal Life Directions
 
-#+BEGIN_SRC emacs-lisp
-  (defun jeff--auto-group-by-multiprop (all-items propname &rest args)
-    "Divide ALL-ITEMS into groups based on their DIRECTION property, if present."
+#+NAME: define-agenda-pD-PersonalDirections
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("pD" "<D>irections in my life" tags  ;; key[1] desc[2] type[3]
+    "+TAGS={:DIRECTION:}+PERSONAL"  ;; entry match-expression[4]
+    ( ;; [5] list of settings local to this custom agenda view
+      (org-agenda-overriding-header "Life Directions")
 
-    (setq non-matching nil)
-    (setq groups (ht-create))
-
-    (dolist (item all-items)
-      (setq marker
-       (or (get-text-property 0 'org-marker item)
-           (get-text-property 0 'org-hd-marker item)))
-
-      (setq propvalue (org-entry-get marker propname))
-      (if propvalue
-        (let*
-          (
-            (directions
-              (and propvalue
-                (split-string propvalue
-                  ";"        ;; separator
-                  t          ;; omit empty strings
-                  "[ ]+"     ;; trim leading/trailing whitespace
-                )
-              )
-            )
-          )
-
-          (dolist (direction directions)
-            (ht-set! groups direction
-              (cons item (ht-get groups direction)))
-          )
-        )
-        (push item non-matching)  ;; else no PROPNAME property
-      )
+      (org-agenda-prefix-format "  ")  ;; remove Category
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "DIRECTION\\|PERSONAL")
     )
-
-    (setq ngroups nil)
-    (setq directions (sort (ht-keys groups) 'string<))
-    (dolist (direction directions)
-      (push
-        (list :name (format "Direction: %s" direction)
-         :items (nreverse (ht-get groups direction))
-        )
-        ngroups
-      )
-    )
-
-    (list ':auto-multiproperty non-matching ngroups)
+    ("/tmp/DirectionsPersonal.pdf")  ;; file(s)-to-export[6]
   )
-
-  (setq org-super-agenda-group-types
-    (plist-put org-super-agenda-group-types
-      ':auto-multiproperty
-      'jeff--auto-group-by-multiprop
-    )
-  )
-
-  (add-to-list
-    'org-super-agenda-auto-selector-keywords ':auto-multiproperty)
 #+END_SRC
 
 ****** Agenda: List Technology Directions for ZeOmega
 
 #+NAME: define-agenda-zD-TechDirections
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("zD" "Directions of Technology for ZeOmega" tags  ;; key[1] desc[2] type[3]
+  ("zD" "<D>irections in technology at ZeOmega" tags  ;; key[1] desc[2] type[3]
     "+TAGS={:DIRECTION:}+ZEOMEGA"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Technology Directions")
 
       (org-agenda-prefix-format "  ")  ;; remove Category
-      (org-agenda-remove-tags t)
-;;      (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "DIRECTION\\|ZEOMEGA")
     )
-    ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
+    ("/tmp/DirectionsTechnology.pdf")  ;; file(s)-to-export[6]
+  )
+#+END_SRC
+
+****** Agenda: List Personal Life Documents
+
+#+NAME: define-agenda-pd-PersonalDocuments
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("pd" "<d>ocuments in my life"     ;; key[1] desc[2]
+    (                                ;; type[3] => a set of agendas
+      (tags  ;; type[3a]
+        "+TAGS={:DOCUMENT:}-ZEOMEGA"  ;; entry match-expression[4]
+        ( ;; [5] list of settings local to this custom agenda view
+          (org-agenda-overriding-header "Useful Personal Documents")
+;;          (org-agenda-prefix-format "  ")  ;; remove Category
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "DOCUMENT\\|PERSONAL\\|REFILING")
+        )
+        ("/tmp/PersonalDocuments.pdf")  ;; file(s)-to-export[6]
+      )
+    )
+  )
+#+END_SRC
+
+****** Agenda: List Personal Life Initiatives
+
+#+NAME: define-agenda-pI-PersonalInitiatives
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("pI" "<I>nitiatives in my life"  ;; key[1] desc[2]
+    (                                ;; type[3] => a set of agendas
+      (tags  ;; type[3a]
+        "+TAGS={:INITIATIVE:}-ZEOMEGA"  ;; entry match-expression[4]
+        ( ;; [5] list of settings local to this custom agenda view
+          (org-agenda-overriding-header "\nACTIVE Personal Initiatives")
+          (org-super-agenda-groups agendagroups/personal-scheduled-initiatives)
+
+          (org-agenda-sorting-strategy '(todo-state-up priority-down deadline-up))
+
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "INITIATIVE\\|PERSONAL\\|REFILING\\|DIRECTION")
+        )
+      )
+      (tags  ;; type[3a]
+        "+TAGS={:INITIATIVE:}-ZEOMEGA"  ;; entry match-expression[4]
+        ( ;; [5] list of settings local to this custom agenda view
+          (org-agenda-overriding-header "\nPLANNED Personal Initiatives")
+          (org-super-agenda-groups agendagroups/personal-initiatives)
+
+          (org-agenda-sorting-strategy '(todo-state-down priority-down deadline-up))
+
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "INITIATIVE\\|PERSONAL\\|REFILING\\|DIRECTION")
+        )
+        ("/tmp/InitiativesPersonal.pdf")  ;; file(s)-to-export[6]
+      )
+    )
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq agendagroups/personal-scheduled-initiatives
+    '(
+       (:name "Initiatives Started"
+         :scheduled t
+         :deadline t
+
+         :order 0
+       )
+       (:discard (:anything t)) ;; discard all unscheduled initiatives
+    )
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq agendagroups/personal-initiatives
+    '(
+       (:order-multi (99 (:auto-multiproperty "DIRECTION")))
+
+       (:name "Initiatives Not Associated With a DIRECTION"
+         :anything t  ;; place all remaining entries under this heading
+         :order 0
+       )
+    )
+  )
+#+END_SRC
+
+****** Agenda: List Technology Documents for ZeOmega
+
+#+NAME: define-agenda-zd-TechDocuments
+#+BEGIN_SRC emacs-lisp :exports code :tangle no
+  ("zd" "<d>ocuments in technology at ZeOmega"  ;; key[1] desc[2]
+    (                               ;; type[3] => a set of agendas
+      (tags  ;; type[3a]
+        "+TAGS={:DOCUMENT:}+ZEOMEGA"  ;; entry match-expression[4]
+        ( ;; [5] list of settings local to this custom agenda view
+          (org-agenda-overriding-header "Common Technology Documents")
+;;          (org-agenda-prefix-format "  ")  ;; remove Category
+
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "DOCUMENT\\|ZEOMEGA\\|REFILING")
+        )
+        ("/tmp/TechnologyDocuments.pdf")  ;; file(s)-to-export[6]
+      )
+    )
   )
 #+END_SRC
 
@@ -4977,26 +6040,43 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 #+NAME: define-agenda-zI-TechInitiatives
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("zI" "Initiatives of Technology for ZeOmega"  ;; key[1] desc[2]
+  ("zI" "<I>nitiatives in technology at ZeOmega"  ;; key[1] desc[2]
     (                               ;; type[3] => a set of agendas
       (tags  ;; type[3a]
-        "+TAGS={:DOCUMENT:}+ZEOMEGA"  ;; entry match-expression[4]
+        "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
         ( ;; [5] list of settings local to this custom agenda view
-          (org-agenda-overriding-header "Common Technology Documents")
-;;          (org-agenda-prefix-format "  ")  ;; remove Category
-          (org-agenda-remove-tags t)
+          (org-agenda-overriding-header "\nACTIVE Technology Initiatives")
+          (org-super-agenda-groups agendagroups/zeomega-scheduled-initiatives)
+
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "INITIATIVE\\|ZEOMEGA\\|REFILING")
         )
       )
       (tags  ;; type[3a]
         "+TAGS={:INITIATIVE:}+ZEOMEGA"  ;; entry match-expression[4]
         ( ;; [5] list of settings local to this custom agenda view
-          (org-agenda-overriding-header "\nTechnology Initiatives")
+          (org-agenda-overriding-header "\nPLANNED Technology Initiatives")
           (org-super-agenda-groups agendagroups/zeomega-initiatives)
 
-          (org-agenda-remove-tags t)
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "INITIATIVE\\|ZEOMEGA\\|REFILING")
         )
-        ("/tmp/TechInitiatives.pdf")  ;; file(s)-to-export[6]
+        ("/tmp/InitiativesTechnology.pdf")  ;; file(s)-to-export[6]
       )
+    )
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq agendagroups/zeomega-scheduled-initiatives
+    '(
+       (:name "Initiatives Started"
+         :scheduled t
+         :deadline t
+
+         :order 0
+       )
+       (:discard (:anything t)) ;; discard all unscheduled initiatives
     )
   )
 #+END_SRC
@@ -5004,22 +6084,7 @@ multiple DIRECTIONs in an agenda, which is what I want.
 #+BEGIN_SRC emacs-lisp
   (setq agendagroups/zeomega-initiatives
     '(
-;;;;       (:discard (:not (:tag "ZEOMEGA")))     ;; skip non-work tasks
-;;;;       (:discard (:scheduled t :deadline t))  ;; skip tasks that ARE scheduled
-
        (:order-multi (99 (:auto-multiproperty "DIRECTION")))
-;;       (:auto-direction :order 99)
-
-;;;       (:name "Tasks To Work On Today :HOT:"      :tag "HOT")
-;;;;       (:name "Refilings to Organize  :REFILING:" :tag "REFILING")
-;;;;       (:name "Corporate Events       :EVENT:"    :tag "EVENT")
-;;;;       (:name "Corporate Travel       :TRAVEL:"   :tag "TRAVEL")
-;;;;       (:name "Problems to Resolve    :PROBLEM:"  :tag "PROBLEM")
-;;;;       (:name "Engage with People     :PEOPLE:"   :tag "PEOPLE")
-;;;;       (:name "Administrative Chores  :ADMIN:"    :tag "ADMIN")
-;;;;       (:name "To Share My Knowledge  :SHARE:"    :tag "SHARE")
-;;;;       (:name "Things I Need to Study :STUDY:"    :tag ("STUDY" "LINK"))
-;;;;       (:name "Questions to Ponder    :QUESTION:" :tag "QUESTION")
 
        (:name "Initiatives Not Associated With a DIRECTION"
          :anything t  ;; place all remaining entries under this heading
@@ -5033,49 +6098,77 @@ multiple DIRECTIONs in an agenda, which is what I want.
 
 #+NAME: define-agenda-zC-ZeOmegaClients
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("zC" "ZeOmega Clients" tags  ;; key[1] desc[2] type[3]
-    "+TAGS={:CLIENT:}+ZEOMEGA"  ;; entry match-expression[4]
+  ("zC" "<C>lients of ZeOmega" tags  ;; key[1] desc[2] type[3]
+    "+TAGS={:CLIENT:}+ZEOMEGA-MEETING"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "ZeOmega Clients")
 
       (org-agenda-prefix-format "  ")  ;; remove Category
-      (org-agenda-remove-tags t)
+
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "CLIENT\\|ZEOMEGA")
     )
     ("/tmp/ZeOmegaClients.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
 
-****** Agenda: Find My ZeOmega Meeting Headlines
+****** Agenda: Find My ZeOmega Meetings
 
-#+NAME: define-agenda-zM-MyZeOmegaMeetings
+- MEETINGS -or- MEETING?
+- should datestamp be at beginning or end?
+- can I refine my search to client meetings?
+
+#+NAME: define-agenda-zM-ZeOmegaMeetings
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("zM" "Meetings for ZeOmega" tags  ;; key[1] desc[2] type[3]
+  ("zM" "<M>eetings at ZeOmega" tags  ;; key[1] desc[2] type[3]
     "+TAGS={:MEETING:}+ZEOMEGA"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "ZeOmega Meetings")
+      (org-agenda-sorting-strategy '(tsia-down alpha-up))
+
+      (org-super-agenda-groups '(
+      (:name "One-on-One Meetings"      :regexp "1:1")
+      (:name "Recurring Meetings"       :tag "RECUR")
+      (:name "Client/Partner Meetings"  :tag "CLIENTMTG")
+
+        ;; After the last group, the agenda will display items that didn't
+        ;; match any of these groups, with the default order position of 99
+      ))
+      (org-super-agenda-unmatched-name "Other Meetings")
 
       (org-agenda-prefix-format "  ")  ;; remove Category
-      (org-agenda-remove-tags t)
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "MEETING\\|REFILING\\|ZEOMEGA")
     )
     ("/tmp/ZeOmegaMeetings.pdf")  ;; file(s)-to-export[6]
   )
 #+END_SRC
 
+(defcustom org-agenda-hide-tags-regexp nil
+  "Regular expression used to filter away specific tags in agenda views.
+This means that these tags will be present, but not be shown in the agenda
+line.  Secondary filtering will still work on the hidden tags.
+Nil means don't hide any tags."
+  :group 'org-agenda-line-format
+  :type '(choice
+	  (const  :tag "Hide none" nil)
+	  (string :tag "Regexp   ")))
+
 ****** Agenda: Find Things I Want to Study
 
 #+NAME: define-agenda-s-ThingsToStudy
 #+BEGIN_SRC emacs-lisp :exports code :tangle no
-  ("s" "Things to Study" tags  ;; key[1] desc[2] type[3]
-    "+TAGS={:STUDY:}"  ;; entry match-expression[4]
+  ("s" "<s>tudy these things" tags  ;; key[1] desc[2] type[3]
+    "+TAGS={:TO_STUDY:}"  ;; entry match-expression[4]
     ( ;; [5] list of settings local to this custom agenda view
       (org-agenda-overriding-header "Things to Study")
 
-      (org-super-agenda-unmatched-name "Other Items")
       (org-super-agenda-groups agendagroups/things-to-study)
+      (org-super-agenda-unmatched-name "Other Items")
 
       (org-agenda-prefix-format "  ")  ;; remove Category
-      (org-agenda-remove-tags t)
-;;      (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
+      (org-agenda-remove-tags nil)
+      (org-agenda-hide-tags-regexp "TO_STUDY\\|ZEOMEGA\\|REFILING")
     )
     ("/tmp/ThingsToStudy.pdf")  ;; file(s)-to-export[6]
   )
@@ -5120,8 +6213,9 @@ following elisp variable to segregate the headlines into various sections.
           (org-agenda-overriding-header "Technology Directions")
 
           (org-agenda-prefix-format "  ")  ;; remove Category
-          (org-agenda-remove-tags t)
-;;          (org-agenda-files '("~/Dropbox/Documents/techdocs.wiki/directions.org"))
+
+          (org-agenda-remove-tags nil)
+          (org-agenda-hide-tags-regexp "DIRECTION\\|ZEOMEGA")
         )
         ("/tmp/TechDirections.pdf")  ;; file(s)-to-export[6]
       )
@@ -5205,10 +6299,6 @@ try:
 consider: a timeline view of non-TODO entries with datestamps only (like planning a trip)
 
 
-****** TODO call Eric's sister re getting my colo box                      :HOT:
-:LOGBOOK:
-- Refiled on [2019-06-14 Fri 21:30]
-:END:
 ***** Optionally, Enable Folding of Super-Agenda Sections for Easier Navigation
 
 [[https://github.com/gregsexton/origami.el][GitHub - gregsexton/origami.el: A folding minor mode for Emacs]]
@@ -5216,13 +6306,24 @@ consider: a timeline view of non-TODO entries with datestamps only (like plannin
 I use this folding minor mode in my org-agenda views to help make sense of
 complex sets of information.
 
+- origami-mode (bind your choice of keys to origami-mode-map)
+  - try this on Python source
+  - try the built-in hs-mode on Python source
+- global-origami-mode
+
+C-x $  (set-selective-display)
+
 #+BEGIN_SRC emacs-lisp
   (use-package origami
     :load-path "~/.emacs.d/lisp/origami/" ;; use my Git checkout
 
     :general
       (:keymaps 'org-super-agenda-header-map
-        "TAB" #'origami-toggle-node)  ;; actually C-i, not TAB
+        "TAB" #'origami-toggle-node  ;; actually C-i, not TAB
+;;;        "?" #'origami-open-all-nodes
+;;;        "!" #'origami-close-all-nodes
+;;;        "x" #'origami-show-only-node
+      )
 
 ;;;    :config ;; code to run after package has been loaded
 ;;;
@@ -5239,9 +6340,15 @@ complex sets of information.
 ;;;          (when (re-search-forward (rx-to-string `(seq bol " " ,it)) nil t)
 ;;;            (origami-show-node (current-buffer) (point)))))
 ;;;
-    :hook ((org-agenda-mode . origami-mode))
+    :hook ((org-agenda-mode . origami-mode)
 ;;;           (org-agenda-finalize . ap/org-super-agenda-origami-fold-default))
+          )
   )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-sidebar
+    :quelpa (org-sidebar :fetcher github :repo "alphapapa/org-sidebar"))
 #+END_SRC
 
 *** Timing-Related
@@ -5430,20 +6537,26 @@ Configure the basic mail settings.
 Using =org-mime= to send HTML email using Org-mode HTML export.
 
 #+BEGIN_SRC emacs-lisp
-;;  (require 'org-mime)
-  (use-package org-mime)
+  (use-package org-mime
+    :ensure nil  ;; this package is NOT essential for my configuration to work
 
-  ; Next you need to tell org-mime which Emacs mail agent you use.
-  (setq org-mime-library 'mml)
+    :config
+      ;; Next you need to tell org-mime which Emacs mail agent you use.
+      (setq org-mime-library 'mml)
 
-  ; enable a subset of Org-mode behavior inside Message buffers
-  (add-hook 'message-mode-hook 'turn-on-orgstruct++)
-  (add-hook 'message-mode-hook 'turn-on-orgtbl)
+    :hook
+      ;; inside Message buffers, enable a subset of Org-Mode behavior
+      (message-mode . turn-on-orgstruct++)
+      (message-mode . turn-on-orgtbl)
+      ;; inside Message buffers, assign a key to convert the Org-Mode formatted message body into MIME-encoded HTML
+      (message-mode . (lambda ()
+        (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
+  )
 
   ; assign a key to convert the Org-Mode formatted message body into MIME-encoded HTML
-  (add-hook 'message-mode-hook
-    (lambda ()
-      (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
+;;;  (add-hook 'message-mode-hook
+;;;    (lambda ()
+;;;      (local-set-key "\C-c\M-o" 'org-mime-htmlize)))
 
 #+END_SRC
 
@@ -6147,6 +7260,190 @@ bbdb:S.*Allen
 #+END_SRC
 
 
+** Publishing Org Files into Other Formats, Carrying Along Graphics and Other Files
+
+Org includes a publishing management system that allows you to configure
+automatic HTML conversion of *projects* composed of interlinked Org files.
+You can also configure Org to automatically upload your exported HTML pages
+and related attachments, such as images and source code files, to a web
+server.
+
+All projects are centrally defined in the ~org-publish-project-alist~, with
+paths to the Org file source and paths to where to write the resulting
+outputs.  Projects can be arranged into a graph by using the :components
+property, where publishing a senior-level project causes all the related ones
+to be published as well.
+
+A publish operation is initiated by the key sequence:
+
+  : M-x org-publish-project RET <your project name> RET
+
+#+BEGIN_SRC elisp
+  (org-publish-project "techdocs-remote" t)
+#+END_SRC
+
+#+BEGIN_SRC elisp
+  (require 'ox-publish)
+  ;;;(setq org-export-html-postamble nil)
+  (setq org-html-postamble nil)
+  (setq org-publish-project-alist
+     '(
+         ;; Publish as HTML all the Org-mode files into Publishing Directory
+         ("techdocs-papers-local"
+            :base-directory "~/Dropbox/Documents/techdocs/"
+            :publishing-directory "~/Dropbox/Documents/sites/techdocs/"
+
+            :base-extension "org"
+            :exclude ".*\\.org"
+            :include (
+               "index.org"
+               "rulesengine-speedup.org"
+               "clustercomputing-hadoop.org"
+               "officetools.org"
+               "multicloud.org"
+               "howto-dockerfiles.org"
+               "whykubernetes.org"
+               "devguide.org"
+               "opsguide.org"
+               "careintel.org"
+               "aiml.org"
+            )
+            :recursive t
+
+            ;; :preparation-function ?
+            :publishing-function org-html-publish-to-html
+            ;; :completion-function ?
+
+            :headline-levels 4             ; Just the default for this project.
+            :auto-preamble t
+            :auto-sitemap t
+            :sitemap-title "Sitemap of PTE Whitepapers"
+            :sitemap-ignore-case t
+            ;;; :sitemap-style 'tree
+            ;;; :sitemap-file-entry-format "%t %d"
+         )
+
+         ;; Copy Diagrams (and Folders) into Publishing Directory
+         ("techdocs-statics-local"
+            :base-directory "~/Dropbox/Documents/techdocs/"
+            :publishing-directory "~/Dropbox/Documents/sites/techdocs/"
+            ;; :publishing-directory "/ssh:jrush@techdocs.zeomega.org:~/html/techdocs/"
+
+            :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+            ;; :exclude ?
+            :recursive t
+
+            ;; :preparation-function ?
+            :publishing-function org-publish-attachment
+            ;; :completion-function ?
+
+         )
+
+         ;; Publish Component
+         ("techdocs-local"
+            :components ("techdocs-papers-local" "techdocs-statics-local")
+         )
+
+         ;; Publish as HTML all the Org-mode files into Publishing Directory
+         ("techdocs-papers-remote"
+            :base-directory "~/Dropbox/Documents/techdocs/"
+            ;;:publishing-directory "~/Dropbox/Documents/sites/techdocs/"
+            :publishing-directory "/ssh:techdocs:~/public_html/"
+
+            :base-extension "org"
+            :exclude ".*\\.org"
+            :include (
+               "index.org"
+               "rulesengine-speedup.org"
+               "clustercomputing-hadoop.org"
+               "officetools.org"
+               "multicloud.org"
+               "howto-dockerfiles.org"
+               "whykubernetes.org"
+               "devguide.org"
+               "opsguide.org"
+               "careintel.org"
+               "aiml.org"
+            )
+            :recursive t
+
+            ;; :preparation-function ?
+            :publishing-function org-html-publish-to-html
+            ;; :completion-function ?
+
+            :headline-levels 4             ; Just the default for this project.
+            :auto-preamble t
+            :auto-sitemap t
+            :sitemap-title "Sitemap of PTE Whitepapers"
+            :sitemap-ignore-case t
+            ;;; :sitemap-style 'tree
+            ;;; :sitemap-file-entry-format "%t %d"
+         )
+
+         ;; Copy Diagrams (and Folders) into Publishing Directory
+         ("techdocs-statics-remote"
+            :base-directory "~/Dropbox/Documents/techdocs/"
+            ;;:publishing-directory "~/Dropbox/Documents/sites/techdocs/"
+            :publishing-directory "/ssh:techdocs:~/public_html/"
+
+            :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+            ;; :exclude ?
+            :recursive t
+
+            ;; :preparation-function ?
+            :publishing-function org-publish-attachment
+            ;; :completion-function ?
+         )
+
+         ;; Publish Component
+         ("techdocs-remote"
+            :components ("techdocs-papers-remote" "techdocs-statics-remote")
+         )
+
+     )
+  )
+#+END_SRC
+
+:PROPERTIES:
+   :EXPORT_TITLE: Title of the document when subtree is exported
+:END:
+
+   source https://git.zeomega.com/jiva-platform/techdocs
+     - index.org
+     - remember.org
+     - css/
+       - stylesheet.css
+     - graphics/
+
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+
+* Undo
+
+The ~undo-tree~ emacs package is great for visualizing the undo tree.
+
+#+BEGIN_SRC emacs-lisp
+  (global-undo-tree-mode 1)  ;;turn on everywhere
+
+;;;  (global-set-key (kbd "C-z") 'undo)
+
+;;;  (defalias 'redo 'undo-tree-redo)
+;;;  (global-set-key (kbd "C-S-z") 'redo)
+
+  ;;; C-x u to run undo-tree-visualize
+
+#+END_SRC
+
+
 * My ELisp Development Projects
 :PROPERTIES:
 :VISIBILITY: children
@@ -6292,6 +7589,205 @@ bbdb:S.*Allen
   )
 
   (global-set-key (kbd "C-c I") 'jeff/insert-initiatives)
+#+END_SRC
+
+
+** Writing My Own New Major Mode
+- [[https://www.emacswiki.org/emacs/ModeTutorial][EmacsWiki: Mode Tutorial]]
+
+*** Basic Mode Setup
+- [[https://www.emacswiki.org/emacs/ModeTutorial][EmacsWiki: Mode Tutorial]]
+
+#+BEGIN_SRC emacs-lisp
+
+  ;; allow the user to run their own code when mode is run
+  (defvar pgm-mode-hook nil)
+
+  ;; create a default keymap and insert any key definitions we need
+  (defvar pgm-mode-map
+    (let
+      (
+        ;; if very few key entries, consider using 'make-sparse-keymap'
+        (map (make-keymap))
+      )
+      (define-key map "\C-j" 'newline-and-indent)
+      ;; key ?? to show buffer containing generated code
+      ;; TAB to fold/unfold hierarchy sections
+      ;; key ?? to parse existing source into pdecisions
+      map
+    )
+    "Keymap for WPDL major mode"
+  )
+
+  (defun pgm-mode ()
+    "Major mode for defining abstract programs"
+    (interactive)
+    (kill-all-local-variables)
+    ;; (set-syntax-table wpdl-mode-syntax-table)
+    (use-local-map pgm-mode-map)
+
+    ;; Specify the font-lock (syntax highlighting) default keywords
+    ;; (set
+    ;;    (make-local-variable 'font-lock-defaults)
+    ;;    '(wpdl-font-lock-keywords)
+    ;; )
+
+    ;; Register our line indentation function.
+    ;;  (set
+    ;;    (make-local-variable 'indent-line-function)
+    ;;    'wpdl-indent-line
+    ;;  )
+
+    (setq major-mode 'pgm-mode)
+    (setq mode-name "PGM")
+    (run-hooks 'pgm-mode-hook)
+  )
+
+  ;;;###autoload
+  (add-to-list 'auto-mode-alist
+    '("\\.pgm\\'" . pgm-mode)
+  )
+
+
+(provide 'pgm-mode)
+#+END_SRC
+
+
+** Adding an Org-Bable Executor for Source Block Types 'yaml' and 'text'
+
+When using source blocks representing configuration files (yaml and text),
+I need an org-babel-execute function for each that:
+
+ 1) just returns the content if no :file header-arg is present
+ 2) if :file header-arg *is* present, write content to file and return the filename
+
+#+BEGIN_SRC emacs-lisp
+  (defun org-babel-execute:yaml (body params)
+    "Return a block of YAML code with Babel.
+This function is called by `org-babel-execute-src-block'."
+    (let*
+      (
+;;        (org-babel-python-command
+;;          (or (cdr (assq :python params))
+;;            org-babel-python-command)
+;;        )
+
+;;        (session
+;;          (org-babel-python-initiate-session
+;;            (cdr (assq :session params)))
+;;        )
+
+;;        (result-params
+;;          (cdr (assq :result-params params))
+;;        )
+
+;;        (result-type
+;;          (cdr (assq :result-type params))
+;;        )
+
+;;        (return-val
+;;          (when (and (eq result-type 'value) (not session))
+;;            (cdr (assq :return params)))
+;;        )
+
+;;        (preamble
+;;          (cdr (assq :preamble params))
+;;        )
+
+;;        (full-body
+;;          (org-babel-expand-body:generic
+;;            (concat body (if return-val (format "\nreturn %s" return-val) ""))
+;;            params (org-babel-variable-assignments:python params)
+;;          )
+;;        )
+
+;;        (result
+;;          (org-babel-python-evaluate
+;;            session full-body result-type result-params preamble
+;;          )
+;;        )
+      )
+      body
+;;      (org-babel-reassemble-table
+;;        result
+;;        (org-babel-pick-name
+;;          (cdr (assq :colname-names params))
+;;          (cdr (assq :colnames params))
+;;        )
+;;        (org-babel-pick-name
+;;          (cdr (assq :rowname-names params))
+;;          (cdr (assq :rownames params))
+;;        )
+;;      )
+    )
+  )
+
+  (defun org-babel-execute:text (body params)
+    "Return a block of TEXT code with Babel.
+This function is called by `org-babel-execute-src-block'."
+    (let*
+      (
+;;        (org-babel-python-command
+;;          (or (cdr (assq :python params))
+;;            org-babel-python-command)
+;;        )
+
+;;        (session
+;;          (org-babel-python-initiate-session
+;;            (cdr (assq :session params)))
+;;        )
+
+;;        (result-params
+;;          (cdr (assq :result-params params))
+;;        )
+
+;;        (result-type
+;;          (cdr (assq :result-type params))
+;;        )
+
+;;        (return-val
+;;          (when (and (eq result-type 'value) (not session))
+;;            (cdr (assq :return params)))
+;;        )
+
+;;        (preamble
+;;          (cdr (assq :preamble params))
+;;        )
+
+;;        (full-body
+;;          (org-babel-expand-body:generic
+;;            (concat body (if return-val (format "\nreturn %s" return-val) ""))
+;;            params (org-babel-variable-assignments:python params)
+;;          )
+;;        )
+
+;;        (result
+;;          (org-babel-python-evaluate
+;;            session full-body result-type result-params preamble
+;;          )
+;;        )
+      )
+      body
+;;      (org-babel-reassemble-table
+;;        result
+;;        (org-babel-pick-name
+;;          (cdr (assq :colname-names params))
+;;          (cdr (assq :colnames params))
+;;        )
+;;        (org-babel-pick-name
+;;          (cdr (assq :rowname-names params))
+;;          (cdr (assq :rownames params))
+;;        )
+;;      )
+    )
+  )
+
+  (defun my-org-confirm-babel-evaluate (lang body)
+    (not
+      (member lang '("yaml" "text"))
+    )
+  )
+  (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 #+END_SRC
 
 * Just Notes, No Configuration
@@ -6640,10 +8136,67 @@ that you have just finished typing.
 	C-x q					kbd-macro-query
 
 ** Guide to Remote Editing (CLEAN UP THIS MESS)
+
+The following is faster than the default of 'scp'.
+
+#+BEGIN_SRC elisp
+  (setq tramp-default-method "ssh")
+#+END_SRC
+
 ;;* Tramp: Remote file access via rsh/ssh
 ;;  <URL:ftp://ls6.cs.uni-dortmund.de/pub/tramp.tar.gz>
 ;; The Tramp package extends emacs to edit files remotely access via the network protocols
 
+The below is how to add support for "docker exec" to Tramp.  First, install
+the docker-tramp package.
+
+tramp version: ???
+docker-tramp version: ???
+
+#+BEGIN_SRC elisp
+  (use-package dockerfile-mode
+    :mode ("Dockerfile\\'" . dockerfile-mode))
+#+END_SRC
+
+#+BEGIN_SRC elisp
+  (setq tramp-verbose 7)
+
+  ;; Open files in Docker containers like so: /docker:drunk_bardeen:/etc/passwd
+  (push
+    (cons
+      "docker"
+      '(
+        (tramp-login-program "docker")
+        (tramp-login-args (("exec" "-it") ("%h") ("/bin/bash")))
+        (tramp-remote-shell "/bin/bash")
+        (tramp-remote-shell-args ("-i") ("-c"))
+       )
+    )
+    tramp-methods)
+
+  (defadvice tramp-completion-handle-file-name-all-completions
+    (around dotemacs-completion-docker activate)
+    "(tramp-completion-handle-file-name-all-completions \"\" \"/docker:\" returns
+      a list of active Docker container names, followed by colons."
+
+    (if (equal (ad-get-arg 1) "/docker:")
+      (let*
+        (
+          (dockernames-raw
+            (shell-command-to-string "docker ps | awk '$NF != \"NAMES\" { print $NF \":\" }'")
+          )
+
+          (dockernames
+            (cl-remove-if-not #'(lambda (dockerline) (string-match ":$" dockerline))
+              (split-string dockernames-raw "\n")
+            )
+          )
+        )
+        (setq ad-return-value dockernames)
+      )
+      ad-do-it)
+  )
+#+END_SRC
 
 ; You can make comments auto-fill when they get too long:
 ;   "comment-multi-line"
@@ -6911,4 +8464,289 @@ after.
 
 *** Easter Monday
 <%%(= 1 (calendar-days-from-easter))>
+
+
+* Buffer Management View
+
+(requires an old version of dash)
+#+BEGIN_SRC emacs-lispER
+  (use-package bufler
+    :quelpa (
+      bufler :fetcher github :repo "alphapapa/bufler.el"
+      :files (:defaults (:exclude "helm-bufler.el")))
+  )
+#+END_SRC
+
+* Downloading
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-download)
+
+  ;; Drag-and-drop to `dired`
+  (add-hook 'dired-mode-hook 'org-download-enable)
+#+END_SRC
+
+* Clone Mode
+
+#+BEGIN_SRC elisp
+  (defface text-clone-overlay-face '((t :background "yellow"))
+    "Face for marking regions to be cloned.")
+
+  (defvar-local text-clone-overlay nil
+    "Store for the region to be cloned.")
+
+  (defun text-clone-mark-region (b e)
+    "Mark region from B to E for cloning."
+    (interactive "r")
+    (if text-clone-overlay
+        (move-overlay text-clone-overlay b e)
+      (setq text-clone-overlay (make-overlay b e))
+      (overlay-put text-clone-overlay 'face 'text-clone-overlay-face)))
+
+  (defun text-clone-copy (point)
+    "Copy the clone overlay region and create text-clone at POINT."
+    (interactive "d")
+    (let ((b (overlay-start text-clone-overlay))
+      (e (overlay-end text-clone-overlay)))
+      (when (and (>= point b)
+             (< point e))
+        (user-error "Point within cloned region"))
+      (let ((str (buffer-substring b e)))
+        (insert str)
+        (save-excursion
+      (goto-char point)
+      (text-clone-create b e)))))
+
+  (defvar-local text-clone-list nil
+    "List of text clones in current buffer.")
+
+  (defun text-clone-list (&optional begin end)
+    "Get clones in region from begin to end."
+    (let* ((cnt -1)
+       (ols (cl-loop for ol being the overlays
+                if (overlay-get ol 'text-clones)
+                do (overlay-put ol 'text-clone-index (cl-incf cnt))
+                and collect ol))
+       ret)
+      (dolist (ol ols)
+        (setq ret (cons
+           (append
+            (list
+             (overlay-start ol)
+             (overlay-end ol))
+            (mapcar
+             (lambda (clone)
+               (overlay-get clone 'text-clone-index))
+            (overlay-get ol 'text-clones)))
+           ret)))
+      (nreverse ret)))
+
+  (defun text-clone-save ()
+    "Add `text-clone-list' as local variable."
+    (save-excursion
+      (add-file-local-variable 'text-clone-list (text-clone-list))))
+
+  (defun text-clone-read ()
+    "Create text clones according to `text-clone-list'."
+    (let (clones)
+      (dolist (clone text-clone-list)
+        (let ((ol (make-overlay (car clone) (cadr clone))))
+      (overlay-put ol 'text-clones (nthcdr 2 clone))
+      (setq clones (cons ol clones))))
+      (setq clones (nreverse clones))
+      (dolist (clone clones)
+        (overlay-put clone
+         'text-clones
+         (mapcar (lambda (idx)
+           (nth idx clones))
+             (overlay-get clone 'text-clones)))
+        (overlay-put clone 'modification-hooks '(text-clone--maintain))
+        (overlay-put clone 'evaporate t))))
+
+  (define-minor-mode text-clone-mode
+    "Make text clones permanent in their file."
+    nil
+    nil
+    nil
+    (if text-clone-mode
+        (progn
+      (add-hook 'after-change-major-mode-hook #'text-clone-read t t)
+      (add-hook 'before-save-hook #'text-clone-save t t))
+      (save-excursion (add-file-local-variable 'text-clone-list nil))
+      (remove-hook 'before-save-hook #'text-clone-save t)
+      (remove-hook 'after-change-major-mode-hook #'text-clone-read t)))
+
+  (add-hook 'org-mode-hook #'text-clone-mode)
+#+END_SRC
+
+est 1
+blah blah blah
+
+  (defface text-clone-overlay-face '((t :background "yellow"))
+    "Face for marking regions to be cloned.")
+
+  (defvar-local text-clone-overlay nil
+    "Store for the region to be cloned.")
+
+  (defun text-clone-mark-region (b e)
+    "Mark region from B to E for cloning."
+    (interactive "r")
+    (if text-clone-overlay
+        (move-overlay text-clone-overlay b e)
+      (setq text-clone-overlay (make-overlay b e))
+      (overlay-put text-clone-overlay 'face 'text-clone-overlay-face)))
+
+  (defun text-clone-copy (point)
+    "Copy the clone overlay region and create text-clone at POINT."
+    (interactive "d")
+    (let ((b (overlay-start text-clone-overlay))
+      (e (overlay-end text-clone-overlay)))
+      (when (and (>= point b)
+             (< point e))
+        (user-error "Point within cloned region"))
+      (let ((str (buffer-substring b e)))
+        (insert str)
+        (save-excursion
+      (goto-char point)
+      (text-clone-create b e)))))
+
+  (defvar-local text-clone-list nil
+    "List of text clones in current buffer.")
+
+  (defun text-clone-list (&optional begin end)
+    "Get clones in region from begin to end."
+    (let* ((cnt -1)
+       (ols (cl-loop for ol being the overlays
+                if (overlay-get ol 'text-clones)
+                do (overlay-put ol 'text-clone-index (cl-incf cnt))
+                and collect ol))
+       ret)
+      (dolist (ol ols)
+        (setq ret (cons
+           (append
+            (list
+             (overlay-start ol)
+             (overlay-end ol))
+            (mapcar
+             (lambda (clone)
+               (overlay-get clone 'text-clone-index))
+            (overlay-get ol 'text-clones)))
+           ret)))
+      (nreverse ret)))
+
+  (defun text-clone-save ()
+    "Add `text-clone-list' as local variable."
+    (save-excursion
+      (add-file-local-variable 'text-clone-list (text-clone-list))))
+
+  (defun text-clone-read ()
+    "Create text clones according to `text-clone-list'."
+    (let (clones)
+      (dolist (clone text-clone-list)
+        (let ((ol (make-overlay (car clone) (cadr clone))))
+      (overlay-put ol 'text-clones (nthcdr 2 clone))
+      (setq clones (cons ol clones))))
+      (setq clones (nreverse clones))
+      (dolist (clone clones)
+        (overlay-put clone
+         'text-clones
+         (mapcar (lambda (idx)
+           (nth idx clones))
+             (overlay-get clone 'text-clones)))
+        (overlay-put clone 'modification-hooks '(text-clone--maintain))
+        (overlay-put clone 'evaporate t))))
+
+  (define-minor-mode text-clone-mode
+    "Make text clones permanent in their file."
+    nil
+    nil
+    nil
+    (if text-clone-mode
+        (progn
+      (add-hook 'after-change-major-mode-hook #'text-clone-read t t)
+      (add-hook 'before-save-hook #'text-clone-save t t))
+      (save-excursion (add-file-local-variable 'text-clone-list nil))
+      (remove-hook 'before-save-hook #'text-clone-save t)
+      (remove-hook 'after-change-major-mode-hook #'text-clone-read t)))
+
+  (add-hook 'org-mode-hook #'text-clone-mode)
+#+END_SRC
+
+** The Org Query Language (org-ql)
+- [[https://github.com/alphapapa/org-ql#installation][GitHub - alphapapa/org-ql: An Org-mode query language, including search comma...]]
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-ql
+    :quelpa (
+      org-ql
+        :fetcher github
+        :repo "alphapapa/org-ql"
+        :files (
+          :defaults (
+            :exclude "helm-org-ql.el"
+          )
+        )
+    )
+  )
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (use-package helm-org-ql
+    :quelpa (helm-org-ql :fetcher github :repo "alphapapa/org-ql"
+                       :files ("helm-org-ql.el")))
+#+END_SRC
+
+** Test1
+blah lbah This is a test.  And so is this.  blah
+Test
+Test
+** Test2
+blah lbah This is a test.  And so is this.  blah
+Test
+Test
+
+* Useful Function to Rename the Current File and Buffer
+
+#+BEGIN_SRC elisp
+  (defun rename-file-and-buffer ()
+    "Rename the current buffer and file it is visiting."
+    (interactive)
+    (let ((filename (buffer-file-name)))
+      (if (not (and filename (file-exists-p filename)))
+          (message "Buffer is not visiting a file!")
+        (let ((new-name (read-file-name "New name: " filename)))
+          (cond
+           ((vc-backend filename) (vc-rename-file filename new-name))
+           (t
+            (rename-file filename new-name t)
+            (set-visited-file-name new-name t t)))))))
+#+END_SRC
+
+#+BEGIN_SRC elisp
+  (global-set-key (kbd "C-c r")  #'rename-file-and-buffer)
+#+END_SRC
+
+* Atomic-Chrome
+
+#+BEGIN_SRC emacs-lisp
+  (use-package atomic-chrome
+    :ensure t  ;; this package is essential for my configuration to work
+    :config
+      (atomic-chrome-start-server)
+  )
+;;;  (require 'atomic-chrome)
+#+END_SRC
+
+* Anki Editor -- Maintain Anki Knowledgebase in Org-Mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package anki-editor
+    :load-path "~/.emacs.d/lisp/anki-editor/" ;; use my Git checkout
+  )
+
+  (setq anki-editor-create-decks t)
+  (setq anki-editor-ignored-org-tags
+        '("export" "noexport" "REFILING" "HEALTHZZZ")
+  )
+#+END_SRC
 
